@@ -14,10 +14,12 @@ curl -X GET https://api.predicthq.com/v1/events/ \
 ```python
 import requests
 
+access_token = "ACCESS_TOKEN"
+
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN"
+      "Authorization": f"Bearer {access_token}"
     }
 )
 
