@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Try for Free](https://signup.predicthq.com)
 * [Control Center Support](https://www.predicthq.com/support)
 * [API Explorer](https://control.predicthq.com/explorer)
 
