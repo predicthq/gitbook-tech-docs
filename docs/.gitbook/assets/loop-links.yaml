@@ -1,0 +1,470 @@
+
+"openapi": "3.0.2"
+"info":
+  "title": "Loop Public API (Technical Design)"
+  "version": "1.0"
+  "description": "PredictHQ Loop (Loop Links) API Design.\n\nPlease note that this is a design and the API is not yet available to test against."
+  "contact":
+    "name": "Robert Kern"
+    "email": "robert@predicthq.com"
+"servers":
+  -
+    "url": "https://api.predicthq.com/v1/loop"
+    "description": "Anticipated URL"
+"paths":
+  "/links":
+    "get":
+      "summary": "Search Loop Links"
+      "tags":
+        - "links"
+      "responses":
+        "200":
+          "description": "OK"
+          "content":
+            "application/json":
+              "schema":
+                "type": "object"
+                "properties":
+                  "count":
+                    "type": "integer"
+                    "minimum": 0
+                    "description": "Total number of results"
+                  "links":
+                    "type": "array"
+                    "items":
+                      "title": "LoopLink"
+                      "type": "object"
+                      "description": "Loop Link for public API responses."
+                      "properties":
+                        "link_id":
+                          "type": "string"
+                        "create_dt":
+                          "type": "string"
+                          "format": "date-time"
+                        "update_dt":
+                          "type": "string"
+                          "format": "date-time"
+                          "description": "Testing - Retrieve list of Loop Links for the Org.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+                        "expire_dt":
+                          "type": "string"
+                          "format": "date-time"
+                        "user_id":
+                          "type": "string"
+                        "name":
+                          "type": "string"
+                        "links":
+                          "title": "Link"
+                          "type": "object"
+                          "properties":
+                            "event":
+                              "type": "string"
+                              "format": "uri"
+                              "example": "https://loop.phq.link/event/dTsdDk2wUvVFl2JPjGhr"
+                            "event_feedback":
+                              "type": "string"
+                              "format": "uri"
+                              "example": "https://loop.phq.link/event-feedback/dTsdDk2wUvVFl2JPjGhr"
+                            "venue":
+                              "type": "string"
+                              "example": "https://loop.phq.link/venue/dTsdDk2wUvVFl2JPjGhr"
+                              "format": "uri"
+                        "metadata":
+                          "type": "object"
+                        "status":
+                          "type": "string"
+                          "enum":
+                            - "active"
+                            - "expired"
+                            - "deleted"
+                      "required":
+                        - "link_id"
+                        - "create_dt"
+                        - "name"
+                        - "links"
+                        - "status"
+              "examples":
+                "example-1":
+                  "value":
+                    "count": 1
+                    "links":
+                      -
+                        "link_id": "m4Dk4g4DRA8Yqbp2PC54"
+                        "create_dt": "2021-11-01T11:12:34"
+                        "update_dt": "2021-11-01T11:12:34"
+                        "expire_dt": "2021-11-01T11:12:34"
+                        "name": "Hotel A"
+                        "links":
+                          "event": "https://loop.phq.link/event/m4Dk4g4DRA8Yqbp2PC54"
+                          "event_feedback": "https://loop.phq.link/event-feedback/m4Dk4g4DRA8Yqbp2PC54"
+                        "metadata":
+                          "hotel_id": "123456789"
+                        "status": "active"
+      "description": "Retrieve list of Loop Links for the Org.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+      "parameters":
+        -
+          "schema":
+            "type": "string"
+          "in": "query"
+          "name": "q"
+          "description": "Full-text search"
+        -
+          "schema":
+            "type": "array"
+            "items":
+              "type": "string"
+          "in": "query"
+          "name": "link_id"
+          "description": "Comma separated list of link_id"
+          "style": "form"
+          "explode": false
+        -
+          "schema":
+            "type": "array"
+            "items":
+              "type": "string"
+          "in": "query"
+          "name": "user_id"
+          "description": "Comma separated list of user_id"
+          "style": "form"
+          "explode": false
+        -
+          "schema":
+            "type": "array"
+            "items":
+              "type": "string"
+              "enum":
+                - "created"
+                - "-created"
+                - "updated"
+                - "-updated"
+                - "expires"
+                - "-expires"
+                - "name"
+                - "-name"
+          "in": "query"
+          "name": "sort"
+          "description": "Comma separated list of sort options"
+          "style": "form"
+          "explode": false
+        -
+          "schema":
+            "type": "number"
+          "in": "query"
+          "name": "limit"
+          "description": "Pagination page size"
+        -
+          "schema":
+            "type": "number"
+          "in": "query"
+          "name": "offset"
+          "description": "Pagination page offset"
+      "operationId": "search-links"
+    "post":
+      "summary": "Create Loop Link"
+      "responses":
+        "201":
+          "description": "Created"
+          "content":
+            "application/json":
+              "schema":
+                "title": "LoopLink"
+                "type": "object"
+                "description": "Loop Link for public API responses."
+                "properties":
+                  "link_id":
+                    "type": "string"
+                  "create_dt":
+                    "type": "string"
+                    "format": "date-time"
+                  "update_dt":
+                    "type": "string"
+                    "format": "date-time"
+                    "description": "Testing - Retrieve list of Loop Links for the Org.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+                  "expire_dt":
+                    "type": "string"
+                    "format": "date-time"
+                  "user_id":
+                    "type": "string"
+                  "name":
+                    "type": "string"
+                  "links":
+                    "title": "Link"
+                    "type": "object"
+                    "properties":
+                      "event":
+                        "type": "string"
+                        "format": "uri"
+                        "example": "https://loop.phq.link/event/dTsdDk2wUvVFl2JPjGhr"
+                      "event_feedback":
+                        "type": "string"
+                        "format": "uri"
+                        "example": "https://loop.phq.link/event-feedback/dTsdDk2wUvVFl2JPjGhr"
+                      "venue":
+                        "type": "string"
+                        "example": "https://loop.phq.link/venue/dTsdDk2wUvVFl2JPjGhr"
+                        "format": "uri"
+                  "metadata":
+                    "type": "object"
+                  "status":
+                    "type": "string"
+                    "enum":
+                      - "active"
+                      - "expired"
+                      - "deleted"
+                "required":
+                  - "link_id"
+                  - "create_dt"
+                  - "name"
+                  - "links"
+                  - "status"
+              "examples":
+                "example-1":
+                  "value":
+                    "link_id": "ber7ntO0ZHuFVCfrSNsN"
+                    "create_dt": "2021-11-01T11:12:34"
+                    "update_dt": "2021-11-01T11:12:34"
+                    "expire_dt": "2021-11-01T11:12:34"
+                    "name": "Hotel A"
+                    "links":
+                      "event": "https://loop.phq.link/event/ber7ntO0ZHuFVCfrSNsN"
+                      "event_feedback": "https://loop.phq.link/event-feedback/ber7ntO0ZHuFVCfrSNsN"
+                    "metadata":
+                      "hotel_id": "123456789"
+                    "status": "active"
+      "description": "Create a new Loop Link.\n\nScopes:\n- `loop-links:create` (User can create links)\n- `loop` (Opaque token - can create links)"
+      "requestBody":
+        "content":
+          "application/json":
+            "schema":
+              "title": "UserSuppliedLoopLink"
+              "type": "object"
+              "description": "Loop Link supplied by user for creating/replacing link."
+              "x-examples":
+                "example-1":
+                  "expire_dt": "2023-01-01T14:15:22Z"
+                  "name": "My Hotel"
+                  "metadata":
+                    "hotel_id": "123456789"
+              "properties":
+                "expire_dt":
+                  "type": "string"
+                  "format": "date-time"
+                "name":
+                  "type": "string"
+                "metadata":
+                  "type": "object"
+              "required":
+                - "name"
+        "description": ""
+      "tags":
+        - "links"
+      "operationId": "create-link"
+    "parameters": []
+  "/links/{link_id}":
+    "parameters":
+      -
+        "schema":
+          "type": "string"
+        "name": "link_id"
+        "in": "path"
+        "required": true
+        "description": "Loop Link ID"
+    "get":
+      "summary": "Retrieve Loop Link"
+      "tags":
+        - "links"
+      "responses":
+        "200":
+          "description": "OK"
+          "content":
+            "application/json":
+              "schema":
+                "title": "LoopLink"
+                "type": "object"
+                "description": "Loop Link for public API responses."
+                "properties":
+                  "link_id":
+                    "type": "string"
+                  "create_dt":
+                    "type": "string"
+                    "format": "date-time"
+                  "update_dt":
+                    "type": "string"
+                    "format": "date-time"
+                    "description": "Testing - Retrieve list of Loop Links for the Org.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+                  "expire_dt":
+                    "type": "string"
+                    "format": "date-time"
+                  "user_id":
+                    "type": "string"
+                  "name":
+                    "type": "string"
+                  "links":
+                    "title": "Link"
+                    "type": "object"
+                    "properties":
+                      "event":
+                        "type": "string"
+                        "format": "uri"
+                        "example": "https://loop.phq.link/event/dTsdDk2wUvVFl2JPjGhr"
+                      "event_feedback":
+                        "type": "string"
+                        "format": "uri"
+                        "example": "https://loop.phq.link/event-feedback/dTsdDk2wUvVFl2JPjGhr"
+                      "venue":
+                        "type": "string"
+                        "example": "https://loop.phq.link/venue/dTsdDk2wUvVFl2JPjGhr"
+                        "format": "uri"
+                  "metadata":
+                    "type": "object"
+                  "status":
+                    "type": "string"
+                    "enum":
+                      - "active"
+                      - "expired"
+                      - "deleted"
+                "required":
+                  - "link_id"
+                  - "create_dt"
+                  - "name"
+                  - "links"
+                  - "status"
+      "description": "Retrieve Loop Link by ID.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+      "operationId": "get-link"
+    "put":
+      "summary": "Replace Loop Link"
+      "responses":
+        "200":
+          "description": "OK"
+      "description": "Replace Loop Link.\n\nScopes:\n- `loop-links:update` (User can update their own links)\n- `loop-links:update:org` (User can update links for all users in the Org)\n- `loop` (Opaque token - can update links for all users in the Org)"
+      "tags":
+        - "links"
+      "requestBody":
+        "content":
+          "application/json":
+            "schema":
+              "title": "UserSuppliedLoopLink"
+              "type": "object"
+              "description": "Loop Link supplied by user for creating/replacing link."
+              "x-examples":
+                "example-1":
+                  "expire_dt": "2023-01-01T14:15:22Z"
+                  "name": "My Hotel"
+                  "metadata":
+                    "hotel_id": "123456789"
+              "properties":
+                "expire_dt":
+                  "type": "string"
+                  "format": "date-time"
+                "name":
+                  "type": "string"
+                "metadata":
+                  "type": "object"
+              "required":
+                - "name"
+      "operationId": "replace-link"
+    "delete":
+      "summary": "Delete Loop Link"
+      "operationId": "delete-link"
+      "responses":
+        "204":
+          "description": "No Content"
+      "description": "Delete Loop Link.\n\nScopes:\n- `loop-links:delete` (User can delete their own links)\n- `loop-links:delete:org` (User can delete links for all users in the Org)\n- `loop` (Opaque token - can delete links for all users in the Org)"
+      "tags":
+        - "links"
+"components":
+  "schemas":
+    "LoopLink":
+      "title": "LoopLink"
+      "type": "object"
+      "description": "Loop Link for public API responses."
+      "properties":
+        "link_id":
+          "type": "string"
+        "create_dt":
+          "type": "string"
+          "format": "date-time"
+        "update_dt":
+          "type": "string"
+          "format": "date-time"
+          "description": "Testing - Retrieve list of Loop Links for the Org.\n\nScopes:\n- `loop-links:read` (User can read their own links)\n- `loop-links:read:org` (User can read links for all users in the Org)\n- `loop` (Opaque token - can read links for all users in the Org)"
+        "expire_dt":
+          "type": "string"
+          "format": "date-time"
+        "user_id":
+          "type": "string"
+        "name":
+          "type": "string"
+        "links":
+          "title": "Link"
+          "type": "object"
+          "properties":
+            "event":
+              "type": "string"
+              "format": "uri"
+              "example": "https://loop.phq.link/event/dTsdDk2wUvVFl2JPjGhr"
+            "event_feedback":
+              "type": "string"
+              "format": "uri"
+              "example": "https://loop.phq.link/event-feedback/dTsdDk2wUvVFl2JPjGhr"
+            "venue":
+              "type": "string"
+              "example": "https://loop.phq.link/venue/dTsdDk2wUvVFl2JPjGhr"
+              "format": "uri"
+        "metadata":
+          "type": "object"
+        "status":
+          "type": "string"
+          "enum":
+            - "active"
+            - "expired"
+            - "deleted"
+      "required":
+        - "link_id"
+        - "create_dt"
+        - "name"
+        - "links"
+        - "status"
+    "Link":
+      "title": "Link"
+      "type": "object"
+      "properties":
+        "event":
+          "type": "string"
+          "format": "uri"
+          "example": "https://loop.phq.link/event/dTsdDk2wUvVFl2JPjGhr"
+        "event_feedback":
+          "type": "string"
+          "format": "uri"
+          "example": "https://loop.phq.link/event-feedback/dTsdDk2wUvVFl2JPjGhr"
+        "venue":
+          "type": "string"
+          "example": "https://loop.phq.link/venue/dTsdDk2wUvVFl2JPjGhr"
+          "format": "uri"
+    "UserSuppliedLoopLink":
+      "title": "UserSuppliedLoopLink"
+      "type": "object"
+      "description": "Loop Link supplied by user for creating/replacing link."
+      "x-examples":
+        "example-1":
+          "expire_dt": "2023-01-01T14:15:22Z"
+          "name": "My Hotel"
+          "metadata":
+            "hotel_id": "123456789"
+      "properties":
+        "expire_dt":
+          "type": "string"
+          "format": "date-time"
+        "name":
+          "type": "string"
+        "metadata":
+          "type": "object"
+      "required":
+        - "name"
+  "securitySchemes":
+    "PHQToken":
+      "type": "http"
+      "scheme": "bearer"
+"tags":
+  -
+    "name": "links"

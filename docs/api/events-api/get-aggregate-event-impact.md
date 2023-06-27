@@ -1,0 +1,2 @@
+# Get Aggregate Event Impact
+
