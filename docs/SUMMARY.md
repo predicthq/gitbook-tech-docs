@@ -33,7 +33,6 @@
   * [Search Events](api/events/search-events.md)
   * [Get Event Counts](api/events/get-event-counts.md)
   * [Get Calendar of Events](api/events/get-calendar-of-events.md)
-  * [Get Aggregate Event Impact](api/events/get-aggregate-event-impact.md)
 * [Broadcasts](api/broadcasts/README.md)
   * [Search Broadcasts](api/broadcasts/search-broadcasts.md)
   * [Get Broadcasts Count](api/broadcasts/get-broadcasts-count.md)
