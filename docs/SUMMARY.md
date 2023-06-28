@@ -26,6 +26,7 @@
   * [Snowflake](predicthq-api/bulk-data-delivery/snowflake.md)
   * [AWS Data Exchange](predicthq-api/bulk-data-delivery/aws-data-exchange.md)
   * [Keep Data In-Sync via API](predicthq-api/bulk-data-delivery/keep-data-in-sync-via-api.md)
+  * [Data Exporter](predicthq-api/bulk-data-delivery/data-exporter.md)
 
 ## API Reference <a href="#api" id="api"></a>
 
@@ -78,5 +79,4 @@
 
 ## Tools
 
-* [Data Exporter](tools/data-exporter.md)
 * [Tableau Data Connector](tools/tableau-data-connector.md)
