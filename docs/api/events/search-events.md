@@ -1,3 +1,7 @@
+---
+description: Search for events happening in a location
+---
+
 # Search Events
 
 Use the below parameters to search and filter all events that are available to your account.
@@ -11,7 +15,7 @@ Your plan’s visibility window is shown in your [plan summary](https://account.
 {% endhint %}
 
 {% hint style="info" %}
-Result Limit
+**Result Limit**
 
 Please note the number of results returned will be limited to your subscription's result limit. If more results exist, the `overflow` field will be set to true to indicate the count number has been capped to your pagination limit.
 
