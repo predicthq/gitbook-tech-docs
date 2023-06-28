@@ -1,5 +1,5 @@
 # Get Event Counts
 
-{% swagger src="../../.gitbook/assets/loop-links.yaml" path="/links" method="get" expanded="true" fullWidth="true" %}
-[loop-links.yaml](../../.gitbook/assets/loop-links.yaml)
+{% swagger src="../../.gitbook/assets/openapi (2).yaml" path="/v1/events" method="get" %}
+[openapi (2).yaml](<../../.gitbook/assets/openapi (2).yaml>)
 {% endswagger %}

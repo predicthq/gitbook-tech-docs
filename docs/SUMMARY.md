@@ -25,7 +25,7 @@
 * [Bulk Data Delivery](predicthq-api/bulk-data-delivery/README.md)
   * [Snowflake](predicthq-api/bulk-data-delivery/snowflake.md)
   * [AWS Data Exchange](predicthq-api/bulk-data-delivery/aws-data-exchange.md)
-  * [Using our API to Keep Data In-Sync](predicthq-api/bulk-data-delivery/using-our-api-to-keep-data-in-sync.md)
+  * [Keep Data In-Sync via API](predicthq-api/bulk-data-delivery/keep-data-in-sync-via-api.md)
 
 ## API Reference <a href="#api" id="api"></a>
 

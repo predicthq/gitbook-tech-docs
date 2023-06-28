@@ -1,0 +1,187 @@
+openapi: 3.0.0
+info:
+  title: PredictHQ API
+  version: 1.0.0
+servers:
+  - url: https://api.predicthq.com
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+tags:
+  - name: accounts
+  - name: broadcasts
+  - name: events
+  - name: oauth2
+  - name: places
+  - name: features
+paths:
+  /v1/events:
+    get:
+      tags:
+        - events
+      summary: Retrieve All Events
+      description: >-
+        Use the below parameters to search and filter all events that are
+        available to your account.
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{oauth2_access_token}}
+        - schema:
+            type: number
+          in: query
+          name: phq_attendance.gt
+          description: PHQ Attendance greater than
+        - schema:
+            type: number
+          in: query
+          name: phq_attendance.gte
+          description: PHQ Attendance greater than or equal to
+        - schema:
+            type: number
+          in: query
+          name: phq_attendance.lt
+          description: PHQ Attendance less than
+        - schema:
+            type: number
+          in: query
+          name: phq_attendance.lte
+          description: PHQ Attendance less than or equal to
+        - schema:
+            type: string
+            format: date-time
+          in: query
+          name: active.gt
+          description: Event active date greater than
+        - schema:
+            type: string
+            format: date-time
+          in: query
+          name: active.gte
+          description: Event active date greater than or equal to
+        - schema:
+            type: string
+            format: date-time
+          in: query
+          name: active.lt
+          description: Event active date less than
+        - schema:
+            type: string
+            format: date-time
+          in: query
+          name: active.lte
+          description: Event active date less than or equal to
+        - schema:
+            type: number
+            default: 10
+          in: query
+          name: limit
+          description: Pagination page size
+        - schema:
+            type: number
+            default: 0
+          in: query
+          name: offset
+          description: Pagination page offset
+        - schema:
+            type: string
+          in: query
+          name: aviation_rank_level
+          description: |
+            A comma-separated list of numbers between 1 and 5, corresponding to the PredictHQ Aviation Rank levels.
+            
+            Possible values:
+            
+            - 1 - Minor (rank between 0 and 20).
+            - 2 - Moderate (rank between 21 and 40).
+            - 3 - Important (rank between 41 and 60).
+            - 4 - Significant (rank between 61 and 80).
+            - 5 - Major (rank between 81 and 100).
+            
+            Note when filtering on `aviation_rank_level` events that do not have an aviation_rank will not be returned.
+            
+            E.g. `?aviation_rank_level=4,5`
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/places:
+    get:
+      tags:
+        - places
+      summary: Search Places
+      description: >
+        Use the below parameters to search and filter all places. Places are
+        sorted by relevance (location or text query proximity).
+
+
+        A search requires at least one of the `q`, `id`, `country` or `location`
+        parameters.
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{oauth2_access_token}}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/features:
+    post:
+      tags:
+        - features
+      summary: Requesting Features with Phq Rank
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                active:
+                  gte: '2019-11-16'
+                  lte: '2019-11-30'
+                location:
+                  place_id:
+                    - 5224323
+                phq_attendance_concerts:
+                  stats:
+                    - sum
+                    - count
+                    - min
+                    - max
+                    - avg
+                    - median
+                    - std_dev
+                  phq_rank:
+                    gt: 20
+                    lt: 100
+                phq_viewership_sports:
+                  stats:
+                    - sum
+                    - count
+                    - min
+                    - max
+                    - avg
+                    - median
+                    - std_dev
+                  phq_rank:
+                    gt: 50
+                    lt: 80
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: Bearer {{oauth2_access_token}}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
