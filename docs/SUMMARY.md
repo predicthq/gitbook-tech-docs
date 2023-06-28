@@ -72,6 +72,7 @@
     * [Search Feedback](api/loop/loop-feedback/search-feedback.md)
 * [Places](api/places/README.md)
   * [Search Places](api/places/search-places.md)
+  * [Get Place Hierarchies](api/places/get-place-hierarchies.md)
 * [Account](api/account/README.md)
   * [Get Account Details](api/account/get-account-details.md)
 
