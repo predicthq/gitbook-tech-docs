@@ -4,40 +4,95 @@
 
 ### HTTP Request
 
-```
-GET https://api.predicthq.com/v1/XXX/
+<pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/sink
+</code></pre>
+
+### Path Parameters
+
+<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>analysis_id</td><td>An existing Beam Analysis ID.</td></tr></tbody></table>
+
+### Request Body
+
+You can upload the demand data for your analysis in any of the following formats:
+
+{% tabs %}
+{% tab title="CSV" %}
+The request body should contain comma separated values representing multiple data points with the columns named `date` and `demand` as in the following example:
+
+```csv
+date,demand
+2023-01-01,12.235
+2023-01-02,11.4
+2023-01-03,12.14
 ```
 
-### Query Parameters
+The following request headers must be set:
+
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>text/csv</code></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Line-delimited JSON" %}
+The request body should contain a list JSON objects representing multiple data points, one data point per line using the following format:
+
+```json
+{"date": "2023-01-01", "demand": 12.235}
+{"date": "2023-01-02", "demand": 11.4}
+{"date": "2023-01-03", "demand": 12.14}
+```
+
+The following request headers must be set:
+
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/x-ldjson</code></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="JSON" %}
+The request body should contain a JSON object representing a single data point, only a single data point can be uploaded per request using the following example:
+
+```json
+{
+  "date": "2023-01-01",
+  "demand": 12.235
+}
+```
+
+The following request headers must be set:
+
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
 
 ## Response
 
-### Response Fields
-
-<details>
-
-<summary>Example response</summary>
-
-Below is an example response:
-
-```json
-...
-```
-
-</details>
+If successful, the HTTP response code will be `202 Accepted`.
 
 ## Examples
 
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-xxx
+curl -X POST https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink \
+     -H "Content-Type: text/csv" \
+     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     --data @data.csv
 ```
 {% endtab %}
 
 {% tab title="python" %}
 ```python
-xxx
+import requests
+
+response = requests.post(
+    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink",
+    headers={
+        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Content-Type": "text/csv"
+    },
+    data=open("data.csv")
+)
+
+print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
+
+[^1]: An existing Beam Analysis ID.
