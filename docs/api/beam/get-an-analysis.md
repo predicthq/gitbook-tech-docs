@@ -15,6 +15,40 @@
 
 ### Response Fields
 
+<table><thead><tr><th width="219">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string</td><td>Name of the Analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><code>create_dt</code><br>string</td><td><p>The creation date time for the Analysis in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> format.</p><p><br>E.g. <code>2022-04-26T11:46:24+00:00</code></p></td></tr><tr><td><code>update_dt</code><br>string</td><td><p>The last update date time for the Analysis in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> format.</p><p><br>E.g. <code>2022-04-26T11:46:24+00:00</code></p></td></tr><tr><td><code>processed_dt</code><br>string</td><td><p>The date time the Analysis was last processed in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a> format.</p><p><br>E.g. <code>2022-04-26T11:46:25+00:00</code></p></td></tr><tr><td><code>user_id</code><br>string</td><td><p>The ID of the user who created the Analysis. This is present for Analyses created in Control Center. For Analyses created via the API this field will not be populated.</p><p><br>E.g. <code>hjqkKozgS8mm</code></p></td></tr><tr><td><code>access_type</code><br>string</td><td><p>Indicates whether or not your subscription has access to the provided location.</p><p></p><p>We allow creating Analyses for any location, even locations outside of your subscription. However, for locations outside of your subscription the <code>access_type</code> will be set as <code>limited</code> and certain functionality might not be available.</p><p></p><p>Possible values:</p><ul><li><code>full</code></li><li><code>limited</code></li></ul><p>E.g. <code>full</code></p></td></tr><tr><td><code>location</code><br>object</td><td><p>Location of the Analysis.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "location": {
+    "geopoint": {
+      "lat": "-36.849761",
+      "lon": "174.7628903"
+    },
+    "radius": 1.2,
+    "unit": "km"
+  }
+}
+</code></pre></td></tr><tr><td><code>rank</code><br>object</td><td><p>Specifies which rank type was set to use when calculating event impacts and anomaly detection.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "rank": {
+    "type": "phq",
+    "levels": {
+      "phq": {
+        "min": 51
+      }
+    }
+  }
+}
+</code></pre></td></tr><tr><td><code>tz</code><br>string</td><td>The time zone of the Analysis in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. <br><br>E.g. <code>Pacific/Auckland</code></td></tr><tr><td><code>readiness_checks</code><br>object</td><td><p>Beam performs a number of validation checks on the data provided. The results of some of those checks are stored in this field.</p><p></p><p>We don't recommend relying on the values in this field as the structure may change without warning. Instead, refer to the <code>readiness_status</code> field to determine whether or not the Analysis is ready.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "readiness_checks": {
+    "date_range": {
+      "start": "2017-01-01",
+      "end": "2017-12-31"
+    },
+    "validation_response": {
+      "missing_data_percentage": 0.0,
+      "consecutive_nan": 0
+    }
+  }
+}
+</code></pre></td></tr><tr><td><code>readiness_status</code><br>string</td><td><p>The value of this field determines whether or not the Analysis is ready for correlation.</p><p></p><p>When you upload data for an Analysis the <code>readiness_status</code> will be set to <code>pending</code> until processing has completed.<br><br>Possible values:</p><ul><li><code>pending</code></li><li><code>failed</code></li><li><code>ready</code></li></ul><p>E.g. <code>ready</code></p></td></tr><tr><td><code>status</code><br>string</td><td><p>Status of the Analysis.<br><br>Possible values:</p><ul><li><code>draft</code></li><li><code>active</code></li></ul><p>E.g. <code>active</code></p></td></tr></tbody></table>
+
 <details>
 
 <summary>Example response</summary>
