@@ -16,6 +16,8 @@ GET https://api.predicthq.com/v1/beam/analyses
 
 ### Response Fields
 
+<table><thead><tr><th width="190">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>count</code><br>number</td><td>Total number of results found.</td></tr><tr><td><code>analyses</code><br>array</td><td><p>List of results where each item is an Analysis.</p><p><br>Please refer to the response fields section in <a href="get-an-analysis.md#response-fields">Get an Analysis</a> for the structure of each record.</p></td></tr></tbody></table>
+
 <details>
 
 <summary>Example response</summary>
