@@ -7,6 +7,10 @@
 <pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/sink
 </code></pre>
 
+### Request Headers
+
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><p></p><ul><li><code>text/csv</code></li><li><code>application/x-ldjson</code></li><li><code>application/json</code></li></ul></td></tr></tbody></table>
+
 ### Path Parameters
 
 <table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>analysis_id</td><td>An existing Beam Analysis ID.</td></tr></tbody></table>

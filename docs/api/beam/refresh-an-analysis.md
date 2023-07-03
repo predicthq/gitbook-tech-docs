@@ -1,10 +1,10 @@
-# Delete an Analysis
+# Refresh an Analysis
 
 ## Request
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">DELETE https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>
+<pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/refresh
 </code></pre>
 
 ### Path Parameters
@@ -20,7 +20,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X DELETE https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID \
+curl -X POST https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
@@ -30,11 +30,11 @@ curl -X DELETE https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID \
 ```python
 import requests
 
-response = requests.delete(
-    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID",
+response = requests.post(
+    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
-      "Accept": "application/json"
+        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Accept": "application/json"
     }
 )
 

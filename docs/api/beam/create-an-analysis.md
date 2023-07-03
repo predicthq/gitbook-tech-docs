@@ -8,9 +8,13 @@
 POST https://api.predicthq.com/v1/beam/analyses
 ```
 
-### Query Parameters
+### Request Headers
 
-<table><thead><tr><th width="217">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><strong>name</strong><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><strong>location.*</strong><br>object<br><em>required</em></td><td><p>This should be the location of your data. We will use this location for our time series modelling and to correlate with events in the specified area.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
+
+### Request Body
+
+<table><thead><tr><th width="217">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>name</strong><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><strong>location.*</strong><br>object<br><em>required</em></td><td><p>This should be the location of your data. We will use this location for our time series modelling and to correlate with events in the specified area.</p><pre class="language-json"><code class="lang-json">{
   "geopoint": {
     "lat": "-36.849761",
     "lon": "174.7628903"
