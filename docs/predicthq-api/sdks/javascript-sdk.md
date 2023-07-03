@@ -8,13 +8,15 @@ description: >-
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>NPM</strong></td><td></td><td></td><td><a href="https://www.npmjs.com/package/predicthq">https://www.npmjs.com/package/predicthq</a></td></tr><tr><td><strong>GitHub</strong></td><td></td><td></td><td><a href="https://github.com/predicthq/sdk-js">https://github.com/predicthq/sdk-js</a></td></tr></tbody></table>
 
-## Installation
+## Example
+
+### Installation
 
 ```bash
 npm install predicthq
 ```
 
-## Setup the SDK
+### Setup the SDK
 
 ```javascript
 import Client from 'predicthq'
@@ -24,7 +26,7 @@ import Client from 'predicthq'
 const client = new Client({access_token: 'ACCESS_TOKEN'})
 ```
 
-## Search Events
+### Search Events
 
 Perform a basic search of events using the `title` parameter.
 

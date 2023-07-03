@@ -24,7 +24,7 @@ description: Replace an existing Analysis using this endpoint.
 {% hint style="info" %}
 This endpoint accepts the same request body fields as the Create an Analysis endpoint. Please refer to the [Create an Analysis](create-an-analysis.md#request-body) documentation for request body parameters.
 
-Remember this is a PUT endpoint which means you must provide all supported fields or you may lose data - you are effectively replacing the existing record with a new record containing all the fields you provide. We recommend first getting the existing Analysis and pre-populating the request body with the current values, then change the fields you need to change.
+Remember this is a PUT endpoint which means you must provide all supported fields or you may lose data - you are effectively replacing the existing record with a new record containing all the fields you provide. We recommend first getting the existing record and pre-populating the request body with the current values, then change the fields you need to change.
 
 If you wish to update a smaller number of fields please use the [PATCH endpoint](partially-update-an-analysis.md).
 {% endhint %}

@@ -8,13 +8,15 @@ description: >-
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>PyPi</strong></td><td>Get the PredictHQ Python SDK on PyPi.</td><td></td><td><a href="https://pypi.org/project/predicthq/">https://pypi.org/project/predicthq/</a></td></tr><tr><td><strong>GitHub</strong></td><td>View the code on GitHub.</td><td></td><td><a href="https://github.com/predicthq/sdk-py">https://github.com/predicthq/sdk-py</a></td></tr></tbody></table>
 
-## Installation
+## Example
+
+### Installation
 
 ```bash
 pip install predicthq
 ```
 
-## Setup the SDK
+### Setup the SDK
 
 ```python
 from predicthq import Client
@@ -24,7 +26,7 @@ from predicthq import Client
 phq = Client(access_token="$ACCESS_TOKEN")
 ```
 
-## Search Events
+### Search Events
 
 Perform a basic search of events using the `q`, `rank_level` and `country` parameters.
 

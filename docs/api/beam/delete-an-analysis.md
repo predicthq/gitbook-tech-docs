@@ -21,7 +21,6 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tab title="curl" %}
 ```bash
 curl -X DELETE https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID \
-     -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
 {% endtab %}
@@ -33,8 +32,7 @@ import requests
 response = requests.delete(
     url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
-      "Accept": "application/json"
+      "Authorization": "Bearer $ACCESS_TOKEN"
     }
 )
 
