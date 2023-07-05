@@ -1,3 +1,7 @@
+---
+description: Search for Live TV broadcasts happening in a location.
+---
+
 # Search Broadcasts
 
 {% hint style="info" %}

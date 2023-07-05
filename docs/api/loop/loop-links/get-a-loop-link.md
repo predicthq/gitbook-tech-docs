@@ -1,3 +1,7 @@
+---
+description: Get an existing Loop Link.
+---
+
 # Get a Loop Link
 
 ## Request

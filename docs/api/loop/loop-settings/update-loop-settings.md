@@ -1,3 +1,7 @@
+---
+description: Update your Loop Settings.
+---
+
 # Update Loop Settings
 
 ## Request

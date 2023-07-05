@@ -1,4 +1,8 @@
-# Get Events for a Saved Location
+---
+description: Search for events happening in an existing Saved Location.
+---
+
+# Search Events for a Saved Location
 
 ## Request
 

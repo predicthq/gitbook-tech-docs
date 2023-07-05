@@ -1,3 +1,7 @@
+---
+description: Partially update an existing Analysis.
+---
+
 # Partially Update an Analysis
 
 ## Request

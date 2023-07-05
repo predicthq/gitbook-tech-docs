@@ -1,3 +1,7 @@
+---
+description: Search for an existing Analysis.
+---
+
 # Search Analyses
 
 ## Request

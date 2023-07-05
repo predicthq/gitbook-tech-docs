@@ -1,5 +1,5 @@
 ---
-description: Replace an existing Analysis using this endpoint.
+description: Update (replace) an existing Analysis.
 ---
 
 # Update an Analysis

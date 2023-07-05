@@ -1,3 +1,9 @@
+---
+description: >-
+  Take the guesswork out of working out a suitable radius around your business
+  when searching for events.
+---
+
 # Get Suggested Radius
 
 The Suggested Radius API returns a radius that can be used to find attended events around a given location. When looking for events around a business location (such as a store, a hotel, or another business location) a key question is how far should you look for events. For example, should you look at events in a 0.5-mile radius, a 2-mile radius, or a 10-mile radius from your location? The Suggested Radius API answers this question by returning a radius based on a number of factors that can be used to retrieve events around a location. This radius returned by the API is commonly used as follows:

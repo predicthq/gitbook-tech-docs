@@ -1,3 +1,7 @@
+---
+description: Get the count of events by category, label and more.
+---
+
 # Get Event Counts
 
 ## Request

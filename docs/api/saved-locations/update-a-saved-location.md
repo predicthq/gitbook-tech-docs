@@ -1,10 +1,14 @@
+---
+description: Update (replace) an existing Saved Location.
+---
+
 # Update a Saved Location
 
 ## Request
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>
+<pre class="language-apacheconf"><code class="lang-apacheconf">PUT https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>
 </code></pre>
 
 ### Path Parameters

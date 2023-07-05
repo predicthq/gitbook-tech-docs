@@ -1,3 +1,7 @@
+---
+description: Create a new Saved Location to begin seeing insights.
+---
+
 # Create a Saved Location
 
 ## Request

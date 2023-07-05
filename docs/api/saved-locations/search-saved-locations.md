@@ -1,3 +1,7 @@
+---
+description: Search for an existing Saved Location.
+---
+
 # Search Saved Locations
 
 ## Request

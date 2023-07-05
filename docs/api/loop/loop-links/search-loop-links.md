@@ -1,3 +1,7 @@
+---
+description: Search existing Loop Links.
+---
+
 # Search Loop Links
 
 ## Request

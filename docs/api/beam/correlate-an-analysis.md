@@ -1,3 +1,9 @@
+---
+description: >-
+  Retrieve results of the correlation of our event data with your transactional
+  demand data.
+---
+
 # Correlate an Analysis
 
 ## Request

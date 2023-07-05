@@ -1,3 +1,7 @@
+---
+description: Search for a Place.
+---
+
 # Search Places
 
 The Places API gives you a read-only interface to PredictHQ's places data. A place represents a [Geonames](http://www.geonames.org/) Feature, which can be either an Area, an Administrative Feature, or a Populated Place.

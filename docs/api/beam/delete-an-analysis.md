@@ -1,3 +1,7 @@
+---
+description: Delete an existing Analysis.
+---
+
 # Delete an Analysis
 
 ## Request

@@ -1,7 +1,5 @@
 ---
-description: >-
-  Retrieve a list of event feedback conversations submitted by your
-  organization.
+description: Search feedback conversations submitted by your organization.
 ---
 
 # Search Feedback

@@ -56,7 +56,7 @@
   * [Create a Saved Location](api/saved-locations/create-a-saved-location.md)
   * [Search Saved Locations](api/saved-locations/search-saved-locations.md)
   * [Get a Saved Location](api/saved-locations/get-a-saved-location.md)
-  * [Get Events for a Saved Location](api/saved-locations/get-events-for-a-saved-location.md)
+  * [Search Events for a Saved Location](api/saved-locations/search-events-for-a-saved-location.md)
   * [Update a Saved Location](api/saved-locations/update-a-saved-location.md)
   * [Delete a Saved Location](api/saved-locations/delete-a-saved-location.md)
 * [Loop](api/loop/README.md)

@@ -1,3 +1,7 @@
+---
+description: Update (replace) an existing Loop Link.
+---
+
 # Update a Loop Link
 
 ## Request

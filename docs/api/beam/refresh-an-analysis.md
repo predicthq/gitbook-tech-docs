@@ -1,3 +1,7 @@
+---
+description: Rerun the Beam correlation and analysis process.
+---
+
 # Refresh an Analysis
 
 ## Request

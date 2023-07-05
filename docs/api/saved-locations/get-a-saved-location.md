@@ -1,3 +1,7 @@
+---
+description: Get an existing Saved Location.
+---
+
 # Get a Saved Location
 
 ## Request

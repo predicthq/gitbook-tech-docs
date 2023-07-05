@@ -1,3 +1,7 @@
+---
+description: Delete an existing Loop Link.
+---
+
 # Delete a Loop Link
 
 ## Request

@@ -1,3 +1,7 @@
+---
+description: Create a new Loop Link to begin submitting events and feedback.
+---
+
 # Create a Loop Link
 
 ## Request

@@ -1,3 +1,7 @@
+---
+description: Get the list of hierarchies for a Place.
+---
+
 # Get Place Hierarchies
 
 {% hint style="info" %}

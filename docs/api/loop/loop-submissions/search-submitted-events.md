@@ -1,5 +1,5 @@
 ---
-description: Retrieve a list of events submitted by your organization.
+description: Search events submitted by your organization.
 ---
 
 # Search Submitted Events

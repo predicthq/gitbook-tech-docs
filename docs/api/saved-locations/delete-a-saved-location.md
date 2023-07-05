@@ -1,3 +1,7 @@
+---
+description: Delete an existing Saved Location.
+---
+
 # Delete a Saved Location
 
 ## Request

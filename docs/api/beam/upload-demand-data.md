@@ -1,3 +1,7 @@
+---
+description: Upload your demand data as CSV, line-delimited JSON or JSON.
+---
+
 # Upload Demand Data
 
 ## Request

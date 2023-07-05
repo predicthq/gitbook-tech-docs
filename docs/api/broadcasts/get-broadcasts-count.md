@@ -1,3 +1,7 @@
+---
+description: Get the count of Live TV broadcasts by category, label and more.
+---
+
 # Get Broadcasts Count
 
 ## Request
