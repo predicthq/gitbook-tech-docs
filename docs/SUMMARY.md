@@ -33,7 +33,6 @@
 * [Events](api/events/README.md)
   * [Search Events](api/events/search-events.md)
   * [Get Event Counts](api/events/get-event-counts.md)
-  * [Get Calendar of Events](api/events/get-calendar-of-events.md)
 * [Broadcasts](api/broadcasts/README.md)
   * [Search Broadcasts](api/broadcasts/search-broadcasts.md)
   * [Get Broadcasts Count](api/broadcasts/get-broadcasts-count.md)
@@ -77,8 +76,6 @@
 * [Places](api/places/README.md)
   * [Search Places](api/places/search-places.md)
   * [Get Place Hierarchies](api/places/get-place-hierarchies.md)
-* [Account](api/account/README.md)
-  * [Get Account Details](api/account/get-account-details.md)
 
 ## Tools
 
