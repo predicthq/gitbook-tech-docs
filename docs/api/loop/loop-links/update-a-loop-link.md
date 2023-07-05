@@ -4,9 +4,12 @@
 
 ### HTTP Request
 
-```
-GET https://api.predicthq.com/v1/XXX/
-```
+<pre class="language-apacheconf"><code class="lang-apacheconf">PUT https://api.predicthq.com/v1/loop/links/<a data-footnote-ref href="#user-content-fn-1">$link_id</a>
+</code></pre>
+
+### Path Parameters
+
+<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>link_id</td><td>An existing Loop Link ID.</td></tr></tbody></table>
 
 ### Request Headers
 
@@ -68,3 +71,5 @@ print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
+
+[^1]: An existing Loop Link ID.
