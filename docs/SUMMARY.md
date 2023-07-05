@@ -7,7 +7,6 @@
 ## Getting Started
 
 * [API Quickstart](getting-started/api-quickstart.md)
-* [Glossary](getting-started/glossary.md)
 * [Guides](getting-started/guides.md)
 
 ## PredictHQ API
