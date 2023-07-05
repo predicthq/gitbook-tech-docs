@@ -8,36 +8,63 @@
 GET https://api.predicthq.com/v1/XXX/
 ```
 
-### Query Parameters
+### Request Headers
+
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
+
+### Request Body
+
+{% hint style="info" %}
+This endpoint accepts the same request body fields as the Create a Loop Link endpoint. Please refer to the [Create a Loop Link](create-a-loop-link.md#request-body) documentation for request body parameters.
+
+Remember this is a PUT endpoint which means you must provide all supported fields or you may lose data - you are effectively replacing the existing record with a new record containing all the fields you provide. We recommend first getting the existing record and pre-populating the request body with the current values, then change the fields you need to change.
+{% endhint %}
 
 ## Response
 
-### Response Fields
-
-<details>
-
-<summary>Example response</summary>
-
-Below is an example response:
-
-```json
-...
-```
-
-</details>
+If successful, the HTTP response code will be `204 No Content`.
 
 ## Examples
 
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-xxx
+curl -X PUT https://api.predicthq.com/v1/loop/links/$LINK_ID \
+     -H "Accept: application/json" \
+     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     --data @<(cat <<EOF
+    {
+        "name": "Hotel A",
+        "expire_dt": "2024-12-31T00:00:00",
+        "metadata": {
+            "hotel_id": "123456789"
+        }
+    }
+    EOF
+    )
 ```
 {% endtab %}
 
 {% tab title="python" %}
 ```python
-xxx
+import requests
+
+response = requests.put(
+    url="https://api.predicthq.com/v1/loop/links/$LINK_ID",
+    headers={
+        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Accept": "application/json"
+    },
+    json={
+        "name": "Hotel A",
+        "expire_dt": "2024-12-31T00:00:00",
+        "metadata": {
+            "hotel_id": "123456789"
+        }
+    }
+)
+
+print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
