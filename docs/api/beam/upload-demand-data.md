@@ -13,7 +13,7 @@ description: Upload your demand data as CSV, line-delimited JSON or JSON.
 
 ### Path Parameters
 
-<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>analysis_id</td><td>An existing Beam Analysis ID.</td></tr></tbody></table>
+<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>analysis_id</code></td><td>An existing Beam Analysis ID.</td></tr></tbody></table>
 
 ### Request Headers
 

@@ -13,7 +13,7 @@ description: Delete an existing Loop Link.
 
 ### Path Parameters
 
-<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>link_id</td><td>An existing Loop Link ID.</td></tr></tbody></table>
+<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>link_id</code></td><td>An existing Loop Link ID.</td></tr></tbody></table>
 
 ## Response
 

@@ -13,7 +13,7 @@ description: Delete an existing Saved Location.
 
 ### Path Parameters
 
-<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>location_id</td><td>An existing Saved Location ID.</td></tr></tbody></table>
+<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>location_id</code></td><td>An existing Saved Location ID.</td></tr></tbody></table>
 
 ## Response
 
