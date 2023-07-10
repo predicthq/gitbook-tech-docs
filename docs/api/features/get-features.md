@@ -63,26 +63,26 @@ POST https://api.predicthq.com/v1/features/
 }
 </code></pre></td></tr></tbody></table>
 
-### Available Features
+#### Available Features
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
 PHQ Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
-<table><thead><tr><th width="396">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_academic_graduation</code></td><td></td></tr><tr><td><code>phq_attendance_academic_social</code></td><td></td></tr><tr><td><code>phq_attendance_community</code></td><td></td></tr><tr><td><code>phq_attendance_concerts</code></td><td></td></tr><tr><td><code>phq_attendance_conferences</code></td><td></td></tr><tr><td><code>phq_attendance_expos</code></td><td></td></tr><tr><td><code>phq_attendance_festivals</code></td><td></td></tr><tr><td><code>phq_attendance_performing_arts</code></td><td></td></tr><tr><td><code>phq_attendance_sports</code></td><td></td></tr><tr><td><code>phq_attendance_school_holidays</code></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="702">Feature</th></tr></thead><tbody><tr><td><code>phq_attendance_academic_graduation</code></td></tr><tr><td><code>phq_attendance_academic_social</code></td></tr><tr><td><code>phq_attendance_community</code></td></tr><tr><td><code>phq_attendance_concerts</code></td></tr><tr><td><code>phq_attendance_conferences</code></td></tr><tr><td><code>phq_attendance_expos</code></td></tr><tr><td><code>phq_attendance_festivals</code></td></tr><tr><td><code>phq_attendance_performing_arts</code></td></tr><tr><td><code>phq_attendance_sports</code></td></tr><tr><td><code>phq_attendance_school_holidays</code></td></tr></tbody></table>
 
 ## Configuration
 
 You can configure PHQ Attendance features using the options below.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
     "median"
   ]
 }
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g. </p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g. </p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
     "gt": 50,
     "lt": 80
