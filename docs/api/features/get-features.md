@@ -20,7 +20,7 @@ POST https://api.predicthq.com/v1/features/
 
 ### Request Body
 
-<table><thead><tr><th width="248">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>active</code><br>object</td><td><p>The date range to calculate features for. This is named "active" because it includes events that are active within the date range. A multi-day event might start or end outside the specified date range - the days the event is active within the specified range will be included in the calculations.</p><p></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>Note that all dates here are in local time (not UTC). Features API works on specific locations.</p><p></p><p>Please also note that the maximum supported date range is 90 days. If you require features over a wider date range please make multiple API requests.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="223">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>active</code><br>object</td><td><p>The date range to calculate features for. This is named "active" because it includes events that are active within the date range. A multi-day event might start or end outside the specified date range - the days the event is active within the specified range will be included in the calculations.</p><p></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>Note that all dates here are in local time (not UTC). Features API works on specific locations.</p><p></p><p>Please also note that the maximum supported date range is 90 days. If you require features over a wider date range please make multiple API requests.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "active": {
     "gte": "2019-11-28",
     "lte": "2019-11-29"
@@ -156,7 +156,7 @@ You can configure PHQ Impact features using the options below.
 
 ### Response Fields
 
-<table><thead><tr><th width="203">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>results</code><br>array</td><td><p>List of results where each item is a Feature.</p><p><br>Please refer to the Feature Response Fields section below for the structure of each record.</p></td></tr></tbody></table>
+<table><thead><tr><th width="203">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>results</code><br>array</td><td><p>List of results where each item is a Feature.</p><p><br>Please refer to the Feature Response Fields section below for the structure of each record.<br><br>Note that pagination is not required in this API.</p></td></tr></tbody></table>
 
 #### Feature Response Fields
 
