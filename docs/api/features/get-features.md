@@ -323,9 +323,9 @@ curl -X POST https://api.predicthq.com/v1/features/ \
         },
         "location": {
             "geo": {
-                "lon": -71.49978,
-                "lat": 41.75038,
-                "radius": "30mi"
+                "lat": "37.78428",
+                "lon": "-122.40075",
+                "radius": "2.6mi"
             }
         },
         "phq_attendance_conferences": {
@@ -359,9 +359,9 @@ data = {
     },
     "location": {
         "geo": {
-            "lon": -71.49978,
-            "lat": 41.75038,
-            "radius": "30mi"
+            "lat": "37.78428",
+            "lon": "-122.40075",
+            "radius": "2.6mi"
         }
     },
     "phq_attendance_conferences": {
