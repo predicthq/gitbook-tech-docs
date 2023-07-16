@@ -16,7 +16,7 @@ POST https://api.predicthq.com/v1/features/
 
 ### Request Headers
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Receive results in JSON or CSV by specifying the appropriate <code>Content-Type</code> header.</p><p></p><p>Supported values:</p><ul><li><code>application/json</code></li><li><code>text/csv</code></li></ul></td></tr></tbody></table>
 
 ### Request Body
 
@@ -222,11 +222,13 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 {% endtabs %}
 
-<details>
+### Response Format
 
-<summary>Example response</summary>
+You can receive responses formatted as JSON (default) or CSV. Use the `Content-Type` header when performing your request to define which format you would like to receive.
 
-Below is an example response:
+{% tabs %}
+{% tab title="JSON" %}
+With the `Content-Type` header set to `application/json` you will receive the results as JSON like the example below:
 
 ```json
 {
@@ -304,8 +306,32 @@ Below is an example response:
   ]
 }
 ```
+{% endtab %}
 
-</details>
+{% tab title="CSV" %}
+With the `Content-Type` header set to `text/csv` you will receive the results as CSV like the example below:
+
+```csv
+date,phq_attendance_concerts_stats_count,phq_attendance_concerts_stats_sum,phq_attendance_conferences_stats_min,phq_attendance_conferences_stats_max,phq_attendance_sports_stats_count,phq_attendance_sports_stats_sum,phq_attendance_sports_stats_min,phq_attendance_sports_stats_max,phq_attendance_sports_stats_avg,phq_attendance_sports_stats_median,phq_attendance_sports_stats_std_dev,phq_rank_public_holidays_rank_levels_1,phq_rank_public_holidays_rank_levels_2,phq_rank_public_holidays_rank_levels_3,phq_rank_public_holidays_rank_levels_4,phq_rank_public_holidays_rank_levels_5
+2019-11-16,43,24546,11,1000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-17,25,13440,11,146,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-18,6,2021,11,700,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-19,10,6047,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-20,14,59704,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-21,21,60851,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-22,35,25760,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-23,29,25425,11,394,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-24,18,23410,11,500,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-25,6,5122,11,1000,1,18064,18064,18064,18064.0,18064.0,0.0,0,0,0,0,0
+2019-11-26,8,6861,11,1000,0,0,0,0,0.0,0.0,,0,0,0,0,0
+2019-11-27,12,6225,11,500,1,18064,18064,18064,18064.0,18064.0,0.0,0,0,0,0,0
+```
+
+The same data represented as a table:
+
+<table><thead><tr><th width="139">date</th><th width="335">phq_attendance_concerts_stats_count</th><th width="322">phq_attendance_concerts_stats_sum</th><th width="344">phq_attendance_conferences_stats_min</th><th width="350">phq_attendance_conferences_stats_max</th><th width="309">phq_attendance_sports_stats_count</th><th width="303">phq_attendance_sports_stats_sum</th><th width="299">phq_attendance_sports_stats_min</th><th width="300">phq_attendance_sports_stats_max</th><th width="306">phq_attendance_sports_stats_avg</th><th width="331">phq_attendance_sports_stats_median</th><th width="328">phq_attendance_sports_stats_std_dev</th><th width="337" data-type="number">phq_rank_public_holidays_rank_levels_1</th><th width="347" data-type="number">phq_rank_public_holidays_rank_levels_2</th><th width="358" data-type="number">phq_rank_public_holidays_rank_levels_3</th><th width="353" data-type="number">phq_rank_public_holidays_rank_levels_4</th><th width="341" data-type="number">phq_rank_public_holidays_rank_levels_5</th></tr></thead><tbody><tr><td>2019-11-16</td><td>43</td><td>24546</td><td>11</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-17</td><td>25</td><td>13440</td><td>11</td><td>146</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-18</td><td>6</td><td>2021</td><td>11</td><td>700</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-19</td><td>10</td><td>6047</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-20</td><td>14</td><td>59704</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-21</td><td>21</td><td>60851</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-22</td><td>35</td><td>25760</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-23</td><td>29</td><td>25425</td><td>11</td><td>394</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-24</td><td>18</td><td>23410</td><td>11</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-25</td><td>6</td><td>5122</td><td>11</td><td>1000</td><td>1</td><td>18064</td><td>18064</td><td>18064</td><td>18064.0</td><td>18064.0</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-26</td><td>8</td><td>6861</td><td>11</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-27</td><td>12</td><td>6225</td><td>11</td><td>500</td><td>1</td><td>18064</td><td>18064</td><td>18064</td><td>18064.0</td><td>18064.0</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
 
 ## Examples
 

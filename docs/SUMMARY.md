@@ -30,8 +30,12 @@
       * [Find Events by Place ID](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id.md)
       * [Find Events by IATA Code](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-iata-code.md)
       * [Find Events by Country Code](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-country-code.md)
+      * [Find Events by Placekey](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-placekey.md)
     * [Understanding Place Hierarchies](getting-started/guides/geolocation-guides/understanding-place-hierarchies.md)
     * [Working with Polygons](getting-started/guides/geolocation-guides/working-with-polygons.md)
+    * [Join Events using Placekey](getting-started/guides/geolocation-guides/join-events-using-placekey.md)
+  * [Working with Multi-day and Umbrella Events](getting-started/guides/working-with-multi-day-and-umbrella-events.md)
+  * [Working with Recurring Events](getting-started/guides/working-with-recurring-events.md)
 
 ## PredictHQ API
 
