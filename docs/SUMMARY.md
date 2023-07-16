@@ -7,7 +7,31 @@
 ## Getting Started
 
 * [API Quickstart](getting-started/api-quickstart.md)
-* [Guides](getting-started/guides.md)
+* [PredictHQ Data](getting-started/predicthq-data/README.md)
+  * [Event Categories](getting-started/predicthq-data/event-categories/README.md)
+    * [Attendance-Based Events](getting-started/predicthq-data/event-categories/attendance-based-events.md)
+    * [Non-Attendance-Based Events](getting-started/predicthq-data/event-categories/non-attendance-based-events.md)
+    * [Unscheduled Events](getting-started/predicthq-data/event-categories/unscheduled-events.md)
+    * [Live TV Events](getting-started/predicthq-data/event-categories/live-tv-events.md)
+  * [Entities](getting-started/predicthq-data/entities.md)
+  * [Ranks](getting-started/predicthq-data/ranks/README.md)
+    * [PHQ Rank](getting-started/predicthq-data/ranks/phq-rank.md)
+    * [Local Rank](getting-started/predicthq-data/ranks/local-rank.md)
+    * [Aviation Rank](getting-started/predicthq-data/ranks/aviation-rank.md)
+  * [Predicted Attendance](getting-started/predicthq-data/predicted-attendance.md)
+  * [Predicted End Times](getting-started/predicthq-data/predicted-end-times.md)
+  * [Predicted Event Spend](getting-started/predicthq-data/predicted-event-spend.md)
+  * [Impact Patterns](getting-started/predicthq-data/impact-patterns.md)
+* [Guides](getting-started/guides/README.md)
+  * [Geolocation Guides](getting-started/guides/geolocation-guides/README.md)
+    * [Overview](getting-started/guides/geolocation-guides/overview.md)
+    * [Searching by Location](getting-started/guides/geolocation-guides/searching-by-location/README.md)
+      * [Find Events by Latitude/Longitude and Radius](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius.md)
+      * [Find Events by Place ID](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id.md)
+      * [Find Events by IATA Code](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-iata-code.md)
+      * [Find Events by Country Code](getting-started/guides/geolocation-guides/searching-by-location/find-events-by-country-code.md)
+    * [Understanding Place Hierarchies](getting-started/guides/geolocation-guides/understanding-place-hierarchies.md)
+    * [Working with Polygons](getting-started/guides/geolocation-guides/working-with-polygons.md)
 
 ## PredictHQ API
 
@@ -24,8 +48,8 @@
 * [Bulk Data Delivery](predicthq-api/bulk-data-delivery/README.md)
   * [Snowflake](predicthq-api/bulk-data-delivery/snowflake.md)
   * [AWS Data Exchange](predicthq-api/bulk-data-delivery/aws-data-exchange.md)
-  * [Keep Data In-Sync via API](predicthq-api/bulk-data-delivery/keep-data-in-sync-via-api.md)
-  * [Data Exporter](predicthq-api/bulk-data-delivery/data-exporter.md)
+  * [Keep Data Updated via API](predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md)
+  * [Export Data via Control Center](predicthq-api/bulk-data-delivery/export-data-via-control-center.md)
 
 ## API Reference <a href="#api" id="api"></a>
 
