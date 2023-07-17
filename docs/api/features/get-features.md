@@ -164,7 +164,7 @@ Other than the date, the structure of each result here will depend on how you co
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Attendance features are stats-based.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Attendance features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -192,7 +192,7 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 
 {% tab title="PHQ Viewership Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Viewership features are stats-based.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Viewership features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -207,7 +207,7 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Impact features are stats-based.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Impact features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -406,7 +406,6 @@ data = {
     "phq_rank_public_holidays": True
 }
 
-
 response = requests.post(
     url="https://api.predicthq.com/v1/features/",
     headers={
@@ -417,6 +416,39 @@ response = requests.post(
 )
 
 print(response.json())
+```
+{% endtab %}
+
+{% tab title="python sdk" %}
+```python
+from predicthq import Client
+
+phq = Client(access_token="$ACCESS_TOKEN")
+
+for feature in phq.features.obtain_features(
+        active__gte="2019-11-16",
+        active__lte="2019-11-27",
+        location__geo={
+            "lat": "37.78428",
+            "lon": "-122.40075",
+            "radius": "2.6mi"
+        },
+        phq_attendance_conferences__stats=["min", "max"],
+        phq_attendance_sports__stats=["count", "std_dev", "median"],
+        phq_attendance_sports__phq_rank={
+            "gt": 50
+        },
+        phq_attendance_concerts=True,
+        phq_rank_public_holidays=True
+):
+    print(feature.date, feature.phq_attendance_conferences.stats.min, 
+        feature.phq_attendance_conferences.stats.max,
+        feature.phq_attendance_sports.stats.count,
+        feature.phq_attendance_sports.stats.std_dev,
+        feature.phq_attendance_sports.stats.median,
+        feature.phq_attendance_concerts.stats.count,
+        feature.phq_attendance_concerts.stats.sum,
+        feature.phq_rank_public_holidays.rank_levels)
 ```
 {% endtab %}
 {% endtabs %}

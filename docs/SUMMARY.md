@@ -45,6 +45,7 @@
   * [Understanding Relevance Field in Event Results](getting-started/guides/understanding-relevance-field-in-event-results.md)
   * [Integrate with Loop Links](getting-started/guides/integrate-with-loop-links.md)
   * [Working with Location-Based Subscriptions](getting-started/guides/working-with-location-based-subscriptions.md)
+  * [Increase Accuracy with the Features API](getting-started/guides/increase-accuracy-with-the-features-api.md)
 
 ## PredictHQ API
 
