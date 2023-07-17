@@ -1,2 +1,0 @@
-# Get Calendar of Events
-
