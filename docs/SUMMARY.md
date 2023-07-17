@@ -36,6 +36,13 @@
     * [Join Events using Placekey](getting-started/guides/geolocation-guides/join-events-using-placekey.md)
   * [Working with Multi-day and Umbrella Events](getting-started/guides/working-with-multi-day-and-umbrella-events.md)
   * [Working with Recurring Events](getting-started/guides/working-with-recurring-events.md)
+  * [Live TV Event Guides](getting-started/guides/live-tv-event-guides/README.md)
+    * [Find Broadcasts by County Place ID](getting-started/guides/live-tv-event-guides/find-broadcasts-by-county-place-id.md)
+    * [Find Broadcasts by Latitude and Longitude](getting-started/guides/live-tv-event-guides/find-broadcasts-by-latitude-and-longitude.md)
+    * [Find all Broadcasts for an Event](getting-started/guides/live-tv-event-guides/find-all-broadcasts-for-an-event.md)
+    * [Find Broadcasts for Specific Sport Types](getting-started/guides/live-tv-event-guides/find-broadcasts-for-specific-sport-types.md)
+    * [Aggregating Live TV Events](getting-started/guides/live-tv-event-guides/aggregating-live-tv-events.md)
+  * [Understanding Relevance Field in Event Results](getting-started/guides/understanding-relevance-field-in-event-results.md)
 
 ## PredictHQ API
 
