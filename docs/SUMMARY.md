@@ -43,6 +43,8 @@
     * [Find Broadcasts for Specific Sport Types](getting-started/guides/live-tv-event-guides/find-broadcasts-for-specific-sport-types.md)
     * [Aggregating Live TV Events](getting-started/guides/live-tv-event-guides/aggregating-live-tv-events.md)
   * [Understanding Relevance Field in Event Results](getting-started/guides/understanding-relevance-field-in-event-results.md)
+  * [Integrate with Loop Links](getting-started/guides/integrate-with-loop-links.md)
+  * [Working with Location-Based Subscriptions](getting-started/guides/working-with-location-based-subscriptions.md)
 
 ## PredictHQ API
 
