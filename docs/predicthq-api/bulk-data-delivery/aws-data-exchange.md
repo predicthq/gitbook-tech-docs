@@ -8,7 +8,9 @@ This means with very little setup, you can incorporate the data into your models
 
 The sample data sets are not limited in terms of columns or fields making them valuable for business and data science evaluations. However, these data sets are limited to a specific location and restricted time window that might not suit your use case. These samples therefore represent a small fraction of the data we have available. We also offer Private Listings which are filtered to match your PredictHQ license.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>PredictHQ Samples on AWS Data Exchange</td><td></td><td></td><td><a href="https://aws.amazon.com/marketplace/seller-profile?id=b82dc088-06e8-4b0c-9068-42e35f9a099b">https://aws.amazon.com/marketplace/seller-profile?id=b82dc088-06e8-4b0c-9068-42e35f9a099b</a></td></tr></tbody></table>
+{% embed url="https://aws.amazon.com/marketplace/seller-profile?id=b82dc088-06e8-4b0c-9068-42e35f9a099b" %}
+PredictHQ Samples on AWS Data Exchange
+{% endembed %}
 
 ## Private Listings
 
