@@ -8,7 +8,7 @@ description: >-
 
 The Demand Surge API can be used to quickly scan a period of 90 days for abnormal increases in attendance for a given area. The API calculates the mean attendance for your requested location across 90 days, then returns all the dates where attendance is a certain number of standard deviations over the mean. This is represented by the `min_surge_intensity` parameter, which corresponds to the number of standard deviations the API will look for.
 
-Once identified, demand surges can be further explored in our [Events](https://docs.predicthq.com/resources/events) or [Features](https://docs.predicthq.com/resources/features) APIs, to find the names, descriptions and details of the events that constitute the surges.
+Once identified, demand surges can be further explored in our [Events](../events/search-events.md) or [Features](../features/get-features.md) APIs, to find the names, descriptions and details of the events that constitute the surges.
 
 ## Request
 

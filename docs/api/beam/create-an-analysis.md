@@ -28,7 +28,7 @@ POST https://api.predicthq.com/v1/beam/analyses
   "radius": 1.2,
   "unit": "km"
 }
-</code></pre><p>We recommend using the <a href="https://docs.predicthq.com/resources/suggested-radius">Suggested Radius API</a> to find a suitable radius for your location/industry.<br><br><strong>Possible radius units:</strong><br><code>mi</code> - Miles<br><code>m</code> - Meters<br><code>km</code> - Kilometers</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p>We recommend using the <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to find a suitable radius for your location/industry.<br><br><strong>Possible radius units:</strong><br><code>mi</code> - Miles<br><code>m</code> - Meters<br><code>km</code> - Kilometers</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
 </code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><code>aviation</code> - Aviation Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{

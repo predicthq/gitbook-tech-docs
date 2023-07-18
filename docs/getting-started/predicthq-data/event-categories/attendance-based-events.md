@@ -32,13 +32,13 @@ Labels for a sports event provide more information about the type, league, and e
 
 #### Date & Time
 
-<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="https://docs.predicthq.com/categoryinfo/predicted-end-time">Predicted end time</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
 #### Location
 
-Sports events are usually [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope), meaning the latitude and longitude of the event represents the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://control.predicthq.com/search/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
+Sports events are usually point events, meaning the latitude and longitude of the event represents the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://control.predicthq.com/search/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
 
 #### Entities
 
@@ -87,7 +87,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Conferences events are [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope), meaning the latitude and longitude of the event represents the location of the event’s venue. The smaller size conferences are usually held in a hotel, and the large conferences in convention centers.
+Conferences events are point events, meaning the latitude and longitude of the event represents the location of the event’s venue. The smaller size conferences are usually held in a hotel, and the large conferences in convention centers.
 
 #### Entities
 
@@ -136,7 +136,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Expos events are [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope), meaning the latitude and longitude of the event represents the location of the event’s venue. Expos are usually held in venues that can fit a large number of attendees such as a convention center.
+Expos events are point events, meaning the latitude and longitude of the event represents the location of the event’s venue. Expos are usually held in venues that can fit a large number of attendees such as a convention center.
 
 #### Entities
 
@@ -179,7 +179,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Concerts events are [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope), meaning the latitude and longitude of the event represents the location of the event’s venue.
+Concerts events are point events, meaning the latitude and longitude of the event represents the location of the event’s venue.
 
 #### Entities
 
@@ -228,7 +228,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-A festival event can be a [point event](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) or an [area event](https://docs.predicthq.com/categoryinfo/general-category-information/#point-event). The latitude and longitude of a point event represents the location of the venue where the festival takes place. The latitude and longitude of an area event is the geometric center of the area of the festival - either the area impacted by the festival, or an area where the festival takes place since its location is not fixed. An example of a festival without a fixed location is the [Norwich St. Patrick’s Day Parade and Festival](https://control.predicthq.com/search/events/w5PNZxwvKAKLGXGrae).
+A festival event can be a point event or an area event. The latitude and longitude of a point event represents the location of the venue where the festival takes place. The latitude and longitude of an area event is the geometric center of the area of the festival - either the area impacted by the festival, or an area where the festival takes place since its location is not fixed. An example of a festival without a fixed location is the [Norwich St. Patrick’s Day Parade and Festival](https://control.predicthq.com/search/events/w5PNZxwvKAKLGXGrae).
 
 #### Entities
 
@@ -287,7 +287,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Performing-arts events are [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) meaning the latitude and longitude of the event is for the location of the event’s venue. Venues for these events are usually theatres, playgrounds, or clubs, etc.
+Performing-arts events are point events meaning the latitude and longitude of the event is for the location of the event’s venue. Venues for these events are usually theatres, playgrounds, or clubs, etc.
 
 #### Entities
 
@@ -333,7 +333,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-A community event is a [point events](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) meaning the latitude and longitude of the event represents the location of the event’s venue.
+A community event is a point events meaning the latitude and longitude of the event represents the location of the event’s venue.
 
 #### Entities
 
@@ -416,7 +416,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Academic events are tracked as an event with a [scope](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, Academic events can apply to an entire campus or a specific location, e.g. an academic session applies to the whole campus, and a point event, e.g. graduation happens at a specific location. Use labels to distinguish these different types of events. `graduation` and `social` event are point events, `academic-session`, `holiday`, `exam` impact the whole area of the campus.
+Academic events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, Academic events can apply to an entire campus or a specific location, e.g. an academic session applies to the whole campus, and a point event, e.g. graduation happens at a specific location. Use labels to distinguish these different types of events. `graduation` and `social` event are point events, `academic-session`, `holiday`, `exam` impact the whole area of the campus.
 
 #### Entities
 

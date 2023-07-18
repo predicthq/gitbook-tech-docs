@@ -25,13 +25,13 @@ We have two different types of broadcast information. Major sports league viewer
 
 **7 MAJOR SPORTS LEAGUES**
 
-All televised sports games from the following 7 sports leagues are covered in our live TV events, the broadcasts may have status of either [`scheduled`](https://docs.predicthq.com/categoryinfo/live-tv-events/#scheduled) or [`cancelled`](https://docs.predicthq.com/categoryinfo/live-tv-events/#cancelled):
+All televised sports games from the following 7 sports leagues are covered in our live TV events, the broadcasts may have status of either `scheduled` or `cancelled`:
 
 `NFL`, `NBA`, `NHL`, `MLB`, `MLS`, `D1 NCAA Basketball`, `D1 NCAA Football`
 
 **TOP VIEWERSHIP SPORTS**
 
-Live TV Events extends coverage to some popular sports games beyond the above seven leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either [`predicted`](https://docs.predicthq.com/categoryinfo/live-tv-events/#predicted) or [`cancelled`](https://docs.predicthq.com/categoryinfo/live-tv-events/#cancelled)
+Live TV Events extends coverage to some popular sports games beyond the above seven leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
 
 Top viewership sports are typically one-off events or are finals of their respective competitions, such as the 2019 NCAA Women's Basketball Final:
 
@@ -56,7 +56,7 @@ Broadcasts have three possible status values:
 * **`predicted`**\
   For these broadcasts where we predict their televised time and location (county). It means we don’t have detailed TV schedule information for the sports event. These events have high viewership and are assumed to be televised nationally (in all counties), they are typically one-off events or are finals of their respective competitions.\
   \
-  We calculate viewership per county based on many factors including the amount of sports fans in different counties. This information is not as precise as those with the `scheduled` broadcast status but should give a reasonably accurate prediction of who will be watching these large events. Customers may want to use the `broadcast_status` [parameter](https://docs.predicthq.com/resources/broadcasts/#param-broadcast\_status) to indicate the confidence of a broadcast airing; they may build this as a feature or to treat scheduled broadcasts differently from predicted.
+  We calculate viewership per county based on many factors including the amount of sports fans in different counties. This information is not as precise as those with the `scheduled` broadcast status but should give a reasonably accurate prediction of who will be watching these large events. Customers may want to use the `broadcast_status` parameter to indicate the confidence of a broadcast airing; they may build this as a feature or to treat scheduled broadcasts differently from predicted.
 * **`cancelled`**\
   The broadcast is no longer scheduled to be televised.
 
@@ -70,7 +70,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](https://docs.predicthq.com/resources/places/#retrieve-places-hierarchies) can be used to search in the API or in Control Center. The results will be returned on the county level where the place is located. For example, users can search the broadcast in Bell City, Los Angeles, all broadcasts in Los Angeles County that match other criteria will be returned in the result.
+Places in any [hierarchy level](../../../api/places/get-place-hierarchies.md) can be used to search in the API or in Control Center. The results will be returned on the county level where the place is located. For example, users can search the broadcast in Bell City, Los Angeles, all broadcasts in Los Angeles County that match other criteria will be returned in the result.
 
 ## Ranking
 

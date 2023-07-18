@@ -2,9 +2,9 @@
 
 For this example we want to find all broadcasts televised in the county that corresponds to a geopoint (latitude and longitude coordinates).
 
-The `location.origin` [parameter](https://docs.predicthq.com/resources/broadcasts/#param-location.origin) allows us to filter broadcasts by a geopoint, such as the location of a store. The Broadcasts API returns broadcasts for the county the geopoint is located in. For our example, we have a store located in Union Square, San Francisco, which has a latitude of `37.7879` and longitude of `-122.4097`. So we will use `location.origin=37.7879,-122.4097`. Using these coordinates will return broadcasts for San Francisco County - the county which Union Square is in.
+The `location.origin` parameter allows us to filter broadcasts by a geopoint, such as the location of a store. The Broadcasts API returns broadcasts for the county the geopoint is located in. For our example, we have a store located in Union Square, San Francisco, which has a latitude of `37.7879` and longitude of `-122.4097`. So we will use `location.origin=37.7879,-122.4097`. Using these coordinates will return broadcasts for San Francisco County - the county which Union Square is in.
 
-We can also use the `sort` [parameter](https://docs.predicthq.com/resources/broadcasts/#param-sort) to order the broadcasts returned by the API. For our example, we will use `sort=-start` to return the most recently televised broadcasts first.
+We can also use the `sort` parameter to order the broadcasts returned by the API. For our example, we will use `sort=-start` to return the most recently televised broadcasts first.
 
 ```python
 import requests

@@ -145,11 +145,11 @@ A snippet of the results is shown below:
 
 One thing to be aware of is that nearby hexagons may have codes that are not very similar. This occurs when Placekey grid cells are near the edges of larger (i.e., lower resolution) hexagons in H3’s spatial hierarchy. This can mean that sometimes using the first x characters of a Placekey will not result in getting all nearby events.
 
-To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](https://docs.predicthq.com/resources/events/#search-events) on the events API. Use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py) to convert a Placekey to latitude and longitude.
+To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](find-events-by-latitude-longitude-and-radius.md) on the events API. Use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py) to convert a Placekey to latitude and longitude.
 
 ## Find Events Near a Location in Snowflake
 
-PredictHQ’s Events data shared through [Snowflake Secure Data Sharing](https://docs.predicthq.com/start/snowflake) includes Placekey, as a separate column, reflecting the physical location where the event is held. There are a few approaches you could take to use this column when it comes to joining your dataset in Snowflake.
+PredictHQ’s Events data shared through [Snowflake Secure Data Sharing](../../../../predicthq-api/bulk-data-delivery/snowflake.md) includes Placekey, as a separate column, reflecting the physical location where the event is held. There are a few approaches you could take to use this column when it comes to joining your dataset in Snowflake.
 
 You can simply join PredictHQ’s event tables with your data on the entire Placekey column. This makes sense if your POI data consists of venues where events can be held. If you want to find events happening near the location of your POI locations, you need to join your data with PredictHQ’s Event tables on a [substring](https://docs.snowflake.com/en/sql-reference/functions/substr.html) of the @where part of the Placekey column.
 

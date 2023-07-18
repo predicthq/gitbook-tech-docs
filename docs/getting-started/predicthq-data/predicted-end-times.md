@@ -34,9 +34,9 @@ We use a combination of methods which are largely determined by the availability
 
 The events endpoint of the PredictHQ API has been updated with changes for the Predicted End times feature:
 
-* You can sort events on the predicted end time value by using the [`sort`](https://docs.predicthq.com/resources/events/#param-sort) parameter with a value of `predicted_end` or `-predicted_end`.
-* You can filter on predicted end times by specifying a date range with the [`predicted_end.*`](https://docs.predicthq.com/resources/events/#param-predicted\_end) parameter.
-* Predicted end time is returned as the [`predicted_end`](https://docs.predicthq.com/resources/events/#prop-predicted\_end) field in the events response data. This field will only be present if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
+* You can sort events on the predicted end time value by using the `sort` parameter with a value of `predicted_end` or `-predicted_end`.
+* You can filter on predicted end times by specifying a date range with the `predicted_end.*` parameter.
+* Predicted end time is returned as the `predicted_end` field in the events response data. This field will only be present if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
 
 **Note**: Predicted end time and all other start and end times are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a null time zone.
 

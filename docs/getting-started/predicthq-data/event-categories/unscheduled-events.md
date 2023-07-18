@@ -210,7 +210,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Health warnings events are area events. It may [scope](https://docs.predicthq.com/resources/events/#prop-scope) to a city, a region or a country depending on the impact. The latitude and longitude relates to the center of the impacted area.
+Health warnings events are area events. It may scope to a city, a region or a country depending on the impact. The latitude and longitude relates to the center of the impacted area.
 
 #### Entities
 
@@ -261,7 +261,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Terror events are tracked as an event with a [scope](https://docs.predicthq.com/resources/events/#prop-scope) of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://control.predicthq.com/search/events/VGG78MrBvgZ4dartjv).
+Terror events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://control.predicthq.com/search/events/VGG78MrBvgZ4dartjv).
 
 #### Entities
 

@@ -1,6 +1,6 @@
 # Working with Multi-day and Umbrella Events
 
-PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [7 attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The [phq\_attendance](https://docs.predicthq.com/resources/events/#prop-phq\_attendance) field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
+PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [7 attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
 
 For example, the phq\_attendance for a big event like the [2019 Tour de France](https://events.predicthq.com/events/fXHXPzTVW5K9ZWxFnb) is 12,000,000 which represents the total attendance for the full duration of 22 days. It is not the daily attendance. The daily attendance for that event is closer to 545,000 people. To avoid overcounting attendees for multi-day events, phq\_attendance must be adjusted to the daily level (if not already).
 
@@ -12,7 +12,7 @@ PredictHQ also handles cases where one event (child) belongs to another (parent)
 
 ### Handling Attendance for Multi-Day Events
 
-The [Features API](https://docs.predicthq.com/start/features-api) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, there is additional logic for how phq\_attendance is distributed to each day. We encourage customers to use the Features API to find aggregations on attendance like the sum of daily attendance.
+The [Features API](../../../api/features/get-features.md) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, there is additional logic for how phq\_attendance is distributed to each day. We encourage customers to use the Features API to find aggregations on attendance like the sum of daily attendance.
 
 Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend.The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
@@ -36,7 +36,7 @@ For example below is an event with phq\_attendance of 63,000 that has a 7 day du
 
 Umbrella events refer to the case where we have a parent event that contains one or more child events. For example, the [United States Formula 1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) has child events for [the qualification](https://events.predicthq.com/events/hZ5fGHaxHKgJTBpqyQ), 3 practice events, [a concert](https://events.predicthq.com/events/N4LWVHvicH5YiCHQKe) that occurs at the Grand Prix, and the [actual race event](https://events.predicthq.com/events/5uRg7CqGu7DTtu4Rfk) (there are 12 child events in total). The parent event is for the entire Grand Prix that runs from the 1st of November to the 3rd of November 2019. Both the parent and child events are part of the wider Umbrella event.
 
-Child events are indicated by the presence of the [parent\_event](https://docs.predicthq.com/resources/events/#prop-parent\_event) field. Child events will have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is 5uRg7CqGu7DTtu4Rfk and the Formula 1 parent event is w7dYyrFwTUQGYE6euv. The Formula 1 race child event has the following parent event info:
+Child events are indicated by the presence of the `parent_event` field. Child events will have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is `5uRg7CqGu7DTtu4Rfk` and the Formula 1 parent event is `w7dYyrFwTUQGYE6euv`. The Formula 1 race child event has the following parent event info:
 
 ```json
 {
@@ -76,7 +76,7 @@ Once you take into account Umbrella events and remove double counting, the real 
 
 ### **Using the Parent Filter in the Events API for Umbrella Events**
 
-See the documentation on the [parent filter](https://docs.predicthq.com/resources/events/#param-parent) for umbrella events.
+See the documentation on the [parent filter](../../../api/events/search-events.md#query-parameters) for umbrella events.
 
 You can use this filter with the events API to only get parent events or only retrieve child events from the Events API.
 

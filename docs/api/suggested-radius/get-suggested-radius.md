@@ -8,8 +8,8 @@ description: >-
 
 The Suggested Radius API returns a radius that can be used to find attended events around a given location. When looking for events around a business location (such as a store, a hotel, or another business location) a key question is how far should you look for events. For example, should you look at events in a 0.5-mile radius, a 2-mile radius, or a 10-mile radius from your location? The Suggested Radius API answers this question by returning a radius based on a number of factors that can be used to retrieve events around a location. This radius returned by the API is commonly used as follows:
 
-* When querying the[ Events API](https://docs.predicthq.com/resources/events) using the `within` parameter.
-* When calling the [Features API](https://docs.predicthq.com/resources/features) with a latitude, longitude, and radius to get aggregated features back for a location.
+* When querying the[ Events API](../events/search-events.md) using the `within` parameter.
+* When calling the [Features API](../features/get-features.md) with a latitude, longitude, and radius to get aggregated features back for a location.
 * For retrieving events in a data lake by setting the radius around a store or location to the suggested radius.
 * In-demand forecasting when building event-based features for a location, use this radius when calculating features for a location.
 * For use with our Beam product when performing a correlation analysis

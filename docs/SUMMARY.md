@@ -46,8 +46,6 @@
     * [Find Broadcasts for Specific Sport Types](getting-started/guides/live-tv-event-guides/find-broadcasts-for-specific-sport-types.md)
     * [Aggregating Live TV Events](getting-started/guides/live-tv-event-guides/aggregating-live-tv-events.md)
     * [Live TV Events Data Science Guides](getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md)
-  * [Understanding Relevance Field in Event Results](getting-started/guides/understanding-relevance-field-in-event-results.md)
-  * [Integrate with Loop Links](getting-started/guides/integrate-with-loop-links.md)
   * [Event Data Science Guides](getting-started/guides/event-data-science-guides/README.md)
     * [Attendance-Based Events Data Science Guides](getting-started/guides/event-data-science-guides/attendance-based-events-data-science-guides.md)
     * [Non-Attendance-Based Events Data Science Guides](getting-started/guides/event-data-science-guides/non-attendance-based-events-data-science-guides.md)
@@ -59,6 +57,8 @@
     * [Demand Forecasting Data Science Guides](getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md)
   * [Beam Guides](getting-started/guides/beam-guides/README.md)
     * [Beam Data Science Guide](getting-started/guides/beam-guides/beam-data-science-guide.md)
+  * [Integrate with Loop Links](getting-started/guides/integrate-with-loop-links.md)
+  * [Understanding Relevance Field in Event Results](getting-started/guides/understanding-relevance-field-in-event-results.md)
   * [Working with Venues](getting-started/guides/working-with-venues.md)
 
 ## PredictHQ API

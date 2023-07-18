@@ -12,9 +12,9 @@ Our customers find that factoring events into their demand forecasting improves 
 
 The goal of the Feature Engineering Guide notebook is to help data science teams understand and get hands-on experience querying different event-based features from PredictHQ's Features API. This guide outlines, with clear and simple examples, recommended features per event category. Data science teams can use these examples to create features easily and include them in their own demand forecasting models or any other applicable models.
 
-See also the [API reference guide for the Features API](https://docs.predicthq.com/resources/features) for more info on the Features API. For an overview of categories see the [categories page](https://www.predicthq.com/intelligence/data-enrichment/event-categories). For more details on categories see the documentation on [PredictHQ's event categories](https://docs.predicthq.com/categoryinfo/introduction) for background on the categories. This guide uses [PredictHQ's SDK](https://docs.predicthq.com/sdks/python) to access the Features API.
+See also the [API reference guide for the Features API](../../../api/features/get-features.md) for more info on the Features API. For an overview of categories see the [categories page](../../predicthq-data/event-categories/). This guide uses [PredictHQ's SDK](../../../predicthq-api/sdks/python-sdk.md) to access the Features API.
 
-We also provide other [data science guides](https://docs.predicthq.com/datascience/introduction) that go into more detail on different categories, for example, [Attendance Based Events](https://docs.predicthq.com/categoryinfo/attended-events). Each of these guides consists of a set of notebooks. Refer to these guides if you want to do more in-depth research on specific categories.
+We also provide other data science guides that go into more detail on different categories, for example, [Attendance Based Events](../event-data-science-guides/attendance-based-events-data-science-guides.md). Each of these guides consists of a set of notebooks. Refer to these guides if you want to do more in-depth research on specific categories.
 
 ### How to use event-based features in your models
 

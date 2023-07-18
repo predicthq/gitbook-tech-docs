@@ -1,6 +1,6 @@
 # Beam Data Science Guide
 
-This notebook is designed to provide you with the context you need to get started with the [Beam API ](https://docs.predicthq.com/resources/beam)and use it effectively.
+This notebook is designed to provide you with the context you need to get started with the [Beam API ](../../../api/beam/)and use it effectively.
 
 [Beam](https://www.predicthq.com/beam) is PredictHQ's automated correlation engine to accurately reveal the events that drive demand for your business. As well as showing you the correlation between events and your demand data. Beam can also decompose your demand data which can help improve your demand forecasting accuracy. For more information on Beam see the [Beam Overview](https://www.predicthq.com/support/beam-overview).
 

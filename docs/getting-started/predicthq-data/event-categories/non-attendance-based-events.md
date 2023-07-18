@@ -30,7 +30,7 @@ Note: datetime is used with the local timezone. E.g. New York is celebrating New
 
 #### Location
 
-Public holidays have a [scope](https://docs.predicthq.com/resources/events/#prop-scope) that is at the area level. The scope is either at the region or country level. The latitude and longitude is pointing to the center of the region or country.
+Public holidays have a scope that is at the area level. The scope is either at the region or country level. The latitude and longitude is pointing to the center of the region or country.
 
 #### Entities
 
@@ -62,7 +62,7 @@ Public holidays have no PHQ Attendance available as the rank/impact only reflect
 
 School holiday events represent the general date range in an area where the schools are closed for the term/semester break. E.g. [Easter School Holidays](https://control.predicthq.com/search/events/tbZtoYD9mnArGQs5RW) in Bavaria, Germany is from March 27th, 2021 to April 11th, 2021.
 
-**Note**: The School holidays category covers the holiday dates in primary schools and secondary schools. School holidays for higher education institutions are under the [Academic Events](https://docs.predicthq.com/categoryinfo/attended-events/#academic-events) category.
+**Note**: The School holidays category covers the holiday dates in primary schools and secondary schools. School holidays for higher education institutions are under the [Academic Events](attendance-based-events.md#academic) category.
 
 **LABELS**
 
@@ -76,7 +76,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-School holiday is an area event, it [scopes](https://docs.predicthq.com/resources/events/#prop-scope) to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
+School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
 
 Note that school holiday events in the United States use polygons. Whereas school holidays in other countries do not use polygons.
 
@@ -113,10 +113,10 @@ Here are some examples of the school holidays for the United Kingdom:
 To find school holidays that impact your location you can use the standard features of our events API - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the [places parameter](https://docs.predicthq.com/resources/events/#param-place) in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
-* Alternatively, if you are downloading the data into a data lake you can use our [location scopes](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) from the place\_hierarchies field with the [places hierarchy endpoint](https://docs.predicthq.com/resources/places/#retrieve-places-hierarchies) to retrieve events that impact a geographic location.
+* You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](../../../api/places/get-place-hierarchies.md) to retrieve events that impact a geographic location.
 
-See also the [FAQs for district-level school holidays](https://docs.predicthq.com/categoryinfo/non-attended-events/#faqs-for-district-level-school-holidays)
+See also the [FAQs for district-level school holidays](non-attendance-based-events.md#faqs-for-district-level-school-holidays)
 
 #### School Holidays in the United States
 
@@ -140,9 +140,9 @@ Our school holidays granularity changed in October 2021 to move from the state l
 
 We rank our school holidays based on student numbers in the school district.
 
-Our school holiday events for the US contain polygon information showing the boundary of the school district. Polygon information is returned on the [geo](https://docs.predicthq.com/resources/events/#prop-geo) field.
+Our school holiday events for the US contain polygon information showing the boundary of the school district. Polygon information is returned on the geo field.
 
-School holidays for the US have polygons showing the school district boundary. See our [guide to polygons](https://docs.predicthq.com/guides/geo-info-and-polygons/#geometry-and-polygons) for more details.
+School holidays for the US have polygons showing the school district boundary. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
 
 Here are some examples of the school holidays for the United States:
 
@@ -156,11 +156,9 @@ Here are some examples of the school holidays for the United States:
 To find school holidays that impact your location you can use the standard features of our events API and Control Center to find events that impact your location - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the [places parameter](https://docs.predicthq.com/resources/events/#param-place) in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
-* You can search in Control Center for a location (this uses the[ places parameter](https://docs.predicthq.com/resources/events/#param-place) behind the scenes) to find school holidays for a location.
-* Alternatively, if you are downloading the data into a data lake you can use our [location scopes](https://docs.predicthq.com/categoryinfo/general-category-information/#location-scope) from the [place\_hierarchies field](https://docs.predicthq.com/resources/events/#prop-place\_hierarchies) with the [places hierarchy endpoint](https://docs.predicthq.com/resources/places/#retrieve-places-hierarchies) to retrieve events that impact a geographic location.
-
-See also the [FAQs for district-level school holidays](https://docs.predicthq.com/categoryinfo/non-attended-events/#faqs-for-district-level-school-holidays)
+* You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* You can search in Control Center for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
+* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](../../../api/places/get-place-hierarchies.md) to retrieve events that impact a geographic location.
 
 #### FAQs for district-level school holidays
 
@@ -169,14 +167,14 @@ These Frequently asked questions apply to district level school holidays (for th
 1. **Does the data include private school holidays as well?** The data set does not cover private schools. Private schools select their own calendars and are not necessarily governed by school district dates. That being said, some private schools might follow similar calendars.
 2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data will recognize changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. The weekend after a school holiday is included if the holiday ends on a Friday or Sunday.
-4. **What location is given to the event?** A school holiday is an area event, it [scopes](https://docs.predicthq.com/resources/events/#prop-scope) to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality. For the US we have polygons (see the [polygons doc](https://docs.predicthq.com/guides/geo-info-and-polygons) for more info) showing the area of the school district.
+4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality. For the US we have polygons (see the [polygons doc](../../guides/geolocation-guides/overview.md) for more info) showing the area of the school district.
 5. **Teacher Only Days -** We do not currently include teacher-only days.
 
 #### Geoscoping
 
-The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](https://docs.predicthq.com/guides/geo-info-and-polygons/#place-hierarchy). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey will have a scope for Surrey and a scope for Greater London as they are near Greater London.
+The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey will have a scope for Surrey and a scope for Greater London as they are near Greater London.
 
-If you use the [place.scope](https://docs.predicthq.com/resources/events/#param-place) parameter and query for Greater London in this example you will get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
+If you use the `place.scope` parameter and query for Greater London in this example you will get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
 
 #### Entities
 
@@ -241,7 +239,7 @@ Note: Datetime is used with the local timezone E.g. Boston is celebrating Valent
 
 #### Location
 
-An Observance is an area event, it [scopes](https://docs.predicthq.com/resources/events/#prop-scope) to either region or country level, i.e. the whole country or region is observing this day. The latitude and longitude is pointing to the center of the region or country.
+An Observance is an area event, it scopes to either region or country level, i.e. the whole country or region is observing this day. The latitude and longitude is pointing to the center of the region or country.
 
 #### Entities
 
@@ -287,7 +285,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-Politics events [scope](https://docs.predicthq.com/resources/events/#prop-scope) to a country level. For example [Election for the President of the United States of America](https://control.predicthq.com/search/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude is pointing to the center of the covered area. The place scope will identify the full area of coverage.
+Politics events scope to a country level. For example [Election for the President of the United States of America](https://control.predicthq.com/search/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude is pointing to the center of the covered area. The place scope will identify the full area of coverage.
 
 #### Entities
 
@@ -327,7 +325,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Daylight savings is an area event, it [scopes](https://docs.predicthq.com/resources/events/#prop-scope) to either region or country level, i.e. the whole country or region starts or ends daylight savings on this day. The latitude and longitude is pointing to the center of the region or country.
+Daylight savings is an area event, it scopes to either region or country level, i.e. the whole country or region starts or ends daylight savings on this day. The latitude and longitude is pointing to the center of the region or country.
 
 #### Entities
 

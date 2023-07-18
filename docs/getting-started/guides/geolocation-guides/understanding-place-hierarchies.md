@@ -1,7 +1,7 @@
 # Understanding Place Hierarchies
 
 {% hint style="info" %}
-Places associated with our events are [Geonames](https://www.geonames.org/) Features, which can be either an Area, an Administrative Feature, or a Populated Place. Use our [Places API](https://docs.predicthq.com/resources/places/) to explore Places data used in our events.
+Places associated with our events are [Geonames](https://www.geonames.org/) Features, which can be either an Area, an Administrative Feature, or a Populated Place. Use our [Places API](../../../api/places/search-places.md) to explore Places data used in our events.
 {% endhint %}
 
 The `place_hierarchies` field contains Place ids for an event. The structure is an array of array of ids; ids are strings. For example:
@@ -14,7 +14,7 @@ The `place_hierarchies` field contains Place ids for an event. The structure is 
 
 The array of ids is ordered, representing a parent-to-child hierarchy of places. In the above example, the id 6295630 is the parent place of 6255149; and 6255149 is the parent place of 6252001, and so on. The last id in the list is the place in which the event occurs: 5786882 in the example.
 
-Details for each Place, such as its name can be retrieved from the [Places API](https://docs.predicthq.com/resources/places/#search-places). For the above hierarchy, calling the Places API with `?id=6295630,6255149,6252001,5815135,5799783,5786882` returns:
+Details for each Place, such as its name can be retrieved from the [Places API](../../../api/places/search-places.md). For the above hierarchy, calling the Places API with `?id=6295630,6255149,6252001,5815135,5799783,5786882` returns:
 
 ```json
 {

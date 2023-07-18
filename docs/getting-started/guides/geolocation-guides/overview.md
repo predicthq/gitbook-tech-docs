@@ -2,9 +2,9 @@
 
 Geographic information for an event describes where the event is located and the geographic area impacted. This page introduces geographic information available in events:
 
-<table><thead><tr><th width="346">FIELD</th><th>DESCRIPTION</th></tr></thead><tbody><tr><td><a href="https://docs.predicthq.com/resources/events/#prop-location"><code>location</code></a></td><td>Latitude and longitude coordinates of the event's location.</td></tr><tr><td><a href="https://docs.predicthq.com/resources/events/#prop-geo"><code>geo</code></a></td><td>Geometric data for the area impacted by the event.</td></tr><tr><td><a href="https://docs.predicthq.com/resources/events/#prop-place_hierarchies"><code>place_hierarchies</code></a> and <a href="https://docs.predicthq.com/resources/events/#prop-scope"><code>scope</code></a></td><td>Place where the event is located.</td></tr></tbody></table>
+<table><thead><tr><th width="346">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>location</code></td><td>Latitude and longitude coordinates of the event's location.</td></tr><tr><td><code>geo</code></td><td>Geometric data for the area impacted by the event.</td></tr><tr><td><code>place_hierarchies</code> and <code>scope</code></td><td>Place where the event is located.</td></tr></tbody></table>
 
-Events also have the `formatted_address` field for [venue entities](https://docs.predicthq.com/resources/events/#prop-entities) with the street address of an event where it is present.
+Events also have the `formatted_address` field for [venue entities](../../predicthq-data/entities.md) with the street address of an event where it is present.
 
 ## **Points and Areas**
 
@@ -20,9 +20,9 @@ Our APIs offer spatial search parameters to discover all events that impact your
 
 ## Basic Location
 
-The [`location`](https://docs.predicthq.com/resources/events/#prop-location) field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`.
+The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`.
 
-For a point event, its `location` coordinates are where the event occurs. This may be the location of a [venue](https://docs.predicthq.com/categoryinfo/general-category-information/#entities). For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has the location value `[-122.38926979999997, 37.7785951]`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
+For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has the location value `[-122.38926979999997, 37.7785951]`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
 
 For an area event, its `location` coordinates are the center of the area where the event occurs. For example, a nation-wide public holiday in the USA, such as [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n), has the location value `[ -95.712891, 37.09024 ]` which is the centroid of the Geonames Place for the country of USA.
 
@@ -30,7 +30,7 @@ Area events cover either a Geonames Place, as in the Thanksgiving Day example ab
 
 ## GeoJSON
 
-The [`geo`](https://docs.predicthq.com/resources/events/#prop-geo) field contains geometry information about an event's location in [GeoJSON](https://geojson.org/) format. Point events will have a Point-type geometry, with the coordinates of the event's location (same as the `location` field). Area events may have Polygon or MultiPolygon-type geometries representing the specific area impacted by the event.
+The `geo` field contains geometry information about an event's location in [GeoJSON](https://geojson.org/) format. Point events will have a Point-type geometry, with the coordinates of the event's location (same as the `location` field). Area events may have Polygon or MultiPolygon-type geometries representing the specific area impacted by the event.
 
 Where an area event has a Point-type geometry, it means the event applies to the Geonames Place of the event.
 
@@ -67,7 +67,7 @@ Below is an example of an [event with a MultiPolygon geometry](https://events.pr
 
 <figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt=""><figcaption></figcaption></figure>
 
-We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](https://docs.predicthq.com/datascience/severe-weather-events) notebook.
+We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](../event-data-science-guides/severe-weather-events-data-science-guides.md) notebook.
 
 ### Simplified Polygons
 

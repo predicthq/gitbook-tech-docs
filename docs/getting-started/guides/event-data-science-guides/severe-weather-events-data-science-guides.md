@@ -1,6 +1,6 @@
 # Severe Weather Events Data Science Guides
 
-For background on the severe weather category please see also the [Severe Weather category information documentation](https://docs.predicthq.com/categoryinfo/unscheduled-events/#severe-weather).
+For background on the severe weather category please see also the [Severe Weather category information documentation](../../predicthq-data/event-categories/unscheduled-events.md#severe-weather).
 
 This How to Series consist of the following three Jupyter  notebooks, allows you to quickly extract the data (Part 1), explore the data (Part 2) and experiment with different aggregations (Part 3):
 
