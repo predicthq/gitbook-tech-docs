@@ -13,7 +13,9 @@ Events with a start and end date and time. PredictHQ models predict attendances 
 * Community
 * Academic (certain types of Academic events)
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Learn more about Attendance-Based Events</td><td></td><td></td><td><a href="attendance-based-events.md">attendance-based-events.md</a></td></tr></tbody></table>
+{% content-ref url="attendance-based-events.md" %}
+[attendance-based-events.md](attendance-based-events.md)
+{% endcontent-ref %}
 
 ## Non-Attendance-Based Events
 
@@ -26,7 +28,9 @@ These are events with a start and end date, but are more fluid in impact, such a
 * Daylight Savings
 * Academic
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Learn more about Non-Attendance-Based Events</td><td></td><td></td><td><a href="non-attendance-based-events.md">non-attendance-based-events.md</a></td></tr></tbody></table>
+{% content-ref url="non-attendance-based-events.md" %}
+[non-attendance-based-events.md](non-attendance-based-events.md)
+{% endcontent-ref %}
 
 ## Unscheduled Events
 
@@ -38,7 +42,9 @@ Live coverage of breaking events such as severe weather and terrorism. The API u
 * Terror Attacks
 * Health Warnings
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Learn more about Unscheduled Events</td><td></td><td></td><td><a href="unscheduled-events.md">unscheduled-events.md</a></td></tr></tbody></table>
+{% content-ref url="unscheduled-events.md" %}
+[unscheduled-events.md](unscheduled-events.md)
+{% endcontent-ref %}
 
 ## Live TV Events
 
@@ -46,4 +52,6 @@ Televised events that include 7 of the top US leagues and the high viewership sp
 
 * Live TV Events
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Learn more about Live TV Events</td><td></td><td></td><td><a href="live-tv-events.md">live-tv-events.md</a></td></tr></tbody></table>
+{% content-ref url="live-tv-events.md" %}
+[live-tv-events.md](live-tv-events.md)
+{% endcontent-ref %}
