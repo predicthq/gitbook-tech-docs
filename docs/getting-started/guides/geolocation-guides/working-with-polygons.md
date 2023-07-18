@@ -1,6 +1,6 @@
 # Working with Polygons
 
-Our Events API uses polygons data in the `geo.geometry` field when [searching](https://docs.predicthq.com/guides/geo-info-and-polygons/#finding-events-that-impact-a-location) to provide you with spatially relevant results. Once you have events with polygons, you can use them in your own systems. To do so, your systems will need to support GeoJSON and provide geospatial functionality.
+Our Events API uses polygons data in the `geo.geometry` field when [searching](overview.md) to provide you with spatially relevant results. Once you have events with polygons, you can use them in your own systems. To do so, your systems will need to support GeoJSON and provide geospatial functionality.
 
 Many datastores support GeoJSON and geospatial queries:
 
@@ -14,9 +14,9 @@ Many datastores support GeoJSON and geospatial queries:
 
 So far on this page, we have provided details on how to use our API to query for events with `geo` data (including polygons) that impact a given location. This section provides details for customers wanting to download our events' and do a geospatial operation on their polygons in the `geo` field. These operations could include filtering which polygons are impacting an area based on an offline sample of data or visualize them inside a Jupyter notebook. This section could be useful depending on what you're trying to do with the `geo` data, for instance, if you are a Data Scientists performing R\&D the following instructions might come in handy. You can always use our [data exporter](https://www.predicthq.com/support/getting-started-with-data-exporter) to bulk download events data to CSV or JSONL format.
 
-There are many tools and libraries available to help you process and visualize our polygon events. We have some examples in our [Data Exploration notebook](https://docs.predicthq.com/datascience/severe-weather-events) notebook which use [GeoPandas](https://geopandas.org/) and [Folium](https://python-visualization.github.io/folium/) libraries in Python to analyze and visualize polygons from our Severe-Weather Events.
+There are many tools and libraries available to help you process and visualize our polygon events. We have some examples in our [Data Exploration notebook](../event-data-science-guides/severe-weather-events-data-science-guides.md) notebook which use [GeoPandas](https://geopandas.org/) and [Folium](https://python-visualization.github.io/folium/) libraries in Python to analyze and visualize polygons from our Severe-Weather Events.
 
-You can use [Shapely](https://github.com/Toblerity/Shapely) to parse the event's geometry field and load it as a sheply object. In the following example, we would take a sample event with polygon and load it's geometry field into a shapely Polygon. We also go through this example in our severe-weather datascience docs, so please check out [Appendix 2: Parsing geojson with Shapely](https://docs.predicthq.com/datascience/severe-weather-events-part1/#appendix-2) if you prefer a more interactive example.
+You can use [Shapely](https://github.com/Toblerity/Shapely) to parse the event's geometry field and load it as a sheply object. In the following example, we would take a sample event with polygon and load it's geometry field into a shapely Polygon. We also go through this example in our severe-weather datascience docs, so please check out [Appendix 2: Parsing geojson with Shapely](../event-data-science-guides/severe-weather-events-data-science-guides.md) if you prefer a more interactive example.
 
 ```python
 from shapely.geometry import shape

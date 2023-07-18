@@ -91,7 +91,7 @@ The Loop Links platform sends automated emails in the following cases:
 * When a submitted event is rejected
 * When there is a reply or comment on event feedback
 
-The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. It can be updated by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](https://docs.predicthq.com/guides/loop-links-integration-guide#loop-links-technical-details) for more information.
+The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. It can be updated by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) for more information.
 
 **Note that users cannot reply to these emails. In order to reply to them you need to use the event feedback page for the event in question and send a response in the feedback.**
 
