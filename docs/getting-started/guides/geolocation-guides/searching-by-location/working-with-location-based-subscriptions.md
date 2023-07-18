@@ -22,7 +22,7 @@ Within Control Center on the [plans page](https://control.predicthq.com/settings
 
 If you add more locations than you have purchased you will have access to the additional locations for a limited time and will need to upgrade your subscription to purchase more or remove the locations you added. The PredictHQ team will contact you to discuss options.
 
-<figure><img src="../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
 
 ## How to use the APIs with Location-based Access
 

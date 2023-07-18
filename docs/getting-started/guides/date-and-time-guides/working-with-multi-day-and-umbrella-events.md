@@ -6,7 +6,7 @@ For example, the phq\_attendance for a big event like the [2019 Tour de France](
 
 PredictHQ also handles cases where one event (child) belongs to another (parent). This type of event is called an Umbrella event. Umbrella events are often multi-day events but can also be single-day events with multiple sessions if the same attendees are expected, for example the games of a rugby sevens tournament. When looking at daily attendance or event counts it’s important to use either parent events or child events, but not both.
 
-<figure><img src="../../.gitbook/assets/umbrella-events.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/umbrella-events.png" alt=""><figcaption></figcaption></figure>
 
 ## Multi-Day Events
 
@@ -16,7 +16,7 @@ The [Features API](https://docs.predicthq.com/start/features-api) has advanced l
 
 Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend.The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
-<figure><img src="../../.gitbook/assets/chart-sports.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/chart-sports.png" alt="" width="375"><figcaption></figcaption></figure>
 
 However, if you still need to calculate daily attendance manually please see the details in the section below. For example, if you download events data into a data lake and calculate features on top of the data lake then you will need to handle multi-day events attendance.
 
@@ -28,7 +28,7 @@ For the categories below, dividing phq\_attendance by the total number of days i
 
 For example below is an event with phq\_attendance of 63,000 that has a 7 day duration. Dividing the attendance equally would result in the following daily attendance.
 
-<figure><img src="../../.gitbook/assets/chart-equal-dist.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/chart-equal-dist.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <table><thead><tr><th width="184">Category</th><th>Using phq_attendance</th></tr></thead><tbody><tr><td>Concerts</td><td>Reflects daily attendance. These events tend to be 1 day or less.</td></tr><tr><td>Performing Arts</td><td>Reflects daily attendance. These events tend to be 1 day or less.</td></tr><tr><td>Conferences</td><td>Reflects daily attendance, not total attendance. Use the same phq_attendance for each day.</td></tr><tr><td>Expos</td><td>Divide phq_attendance by the total number of days. Friday, Saturday, and Sunday have greater attendance and can be given a slightly higher weight.</td></tr><tr><td>Sports</td><td>Divide phq_attendance by the total number of days. Friday, Saturday, and Sunday as well as the final day have greater attendance and can be given a slightly higher weight.</td></tr><tr><td>Festivals</td><td>Divide phq_attendance by the total number of days. Friday, Saturday, and Sunday have greater attendance and can be given a slightly higher weight.</td></tr><tr><td>Community</td><td>Divide phq_attendance by the total number of days. Friday, Saturday, and Sunday have greater attendance and can be given a slightly higher weight.</td></tr></tbody></table>
 
@@ -60,7 +60,7 @@ When using attended events in demand forecasting, a common approach is to look a
 
 Looking at the earlier [US F1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) example, the parent event spanning 3 days has a phq\_attendance of 258,000. If you were to divide the attendance of the parent event by 3 you get a daily attendance of 86,000. The actual race event running for around 3 hours on the 3rd of November has a phq\_attendance of 120,000. Therefore, if you count the race event and the daily attendance for the parent event you’ll get 86,000 + 120,000 = 206,000, which is more than the real attendance on the 3rd. So you will overcount the attendance.
 
-<figure><img src="../../.gitbook/assets/example-of-umbrella.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/example-of-umbrella.svg" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 In this example the child event attendance is different from the parent attendance divided by the number of days. Child event attendance may sometimes reflect more detailed attendance on the individual days of an event.
@@ -68,11 +68,11 @@ In this example the child event attendance is different from the parent attendan
 
 Another example of why you should use Umbrella events can be seen when looking at the daily attendance for events in Las Vegas in 2019. In the example below there is the [World Rugby Sevens tournament](https://events.predicthq.com/events/iKKgf8suq5D5w89boJ) from the 1st of March 2019 to the 3rd of March 2019. The parent event is for the entire tournament and there are many child events for individual games and rounds in the tournament. By not accounting for Umbrella events you get a massive spike in attendance at that time. A peak of 1.4 million is seen around the 2nd of March because both the parent event and child events are being counted.
 
-<figure><img src="../../.gitbook/assets/graph-umbrella-events-double-counted.png" alt=""><figcaption><p>Example showing attendance being counted multiple times due to not handling Umbrella Events</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/graph-umbrella-events-double-counted.png" alt=""><figcaption><p>Example showing attendance being counted multiple times due to not handling Umbrella Events</p></figcaption></figure>
 
 Once you take into account Umbrella events and remove double counting, the real attendance on that day is closer to 400,000.
 
-<figure><img src="../../.gitbook/assets/graph-umbrella-events-removed.png" alt=""><figcaption><p>Example showing correct attendance due to correct handling of Umbrella Events</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/graph-umbrella-events-removed.png" alt=""><figcaption><p>Example showing correct attendance due to correct handling of Umbrella Events</p></figcaption></figure>
 
 ### **Using the Parent Filter in the Events API for Umbrella Events**
 

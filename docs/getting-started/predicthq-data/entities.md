@@ -1,5 +1,9 @@
 # Entities
 
+Entities are things with defined attributes, such as performers, music bands, venues, sports teams and more. Our entities system is integral to our verification, enrichment, deduplication and ranking processes. Entities allow us to accurately estimate attendance and impact given that they are stable as opposed to a moving object such as ticket sales.
+
+For example, a concert will take place in or at a venue entity, where people will watch a performer entity. Our system will factor in the popularity of a performer like Beyoncé when we rank her concert. A Beyoncé concert would likely rank much higher than a lesser known artist.
+
 ## **Venue**
 
 A venue is a physical location where an event happens. It could be an indoor area, e.g. xx hotel - conference room; or an entire building, e.g. xx stadium; or an outdoor area, e.g. xx park.
