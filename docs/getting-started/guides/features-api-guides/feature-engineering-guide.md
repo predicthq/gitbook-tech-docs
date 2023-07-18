@@ -14,7 +14,7 @@ The goal of the Feature Engineering Guide notebook is to help data science teams
 
 See also the [API reference guide for the Features API](../../../api/features/get-features.md) for more info on the Features API. For an overview of categories see the [categories page](../../predicthq-data/event-categories/). This guide uses [PredictHQ's SDK](../../../predicthq-api/sdks/python-sdk.md) to access the Features API.
 
-We also provide other data science guides that go into more detail on different categories, for example, [Attendance Based Events](../event-data-science-guides/attendance-based-events-data-science-guides.md). Each of these guides consists of a set of notebooks. Refer to these guides if you want to do more in-depth research on specific categories.
+We also provide other data science guides that go into more detail on different categories, for example, [Attendance Based Events](../events-api-guides/attendance-based-events-data-science-guides.md). Each of these guides consists of a set of notebooks. Refer to these guides if you want to do more in-depth research on specific categories.
 
 ### How to use event-based features in your models
 

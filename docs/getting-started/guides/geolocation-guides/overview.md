@@ -67,7 +67,7 @@ Below is an example of an [event with a MultiPolygon geometry](https://events.pr
 
 <figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt=""><figcaption></figcaption></figure>
 
-We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](../event-data-science-guides/severe-weather-events-data-science-guides.md) notebook.
+We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](../events-api-guides/severe-weather-events-data-science-guides.md) notebook.
 
 ### Simplified Polygons
 
