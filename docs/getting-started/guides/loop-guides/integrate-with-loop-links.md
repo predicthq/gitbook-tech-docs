@@ -19,7 +19,7 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to Control 
 
 This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It will go straight to PredictHQ.
 
-To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](../../api/loop/loop-links/create-a-loop-link.md) for details on creating Loop Links.
+To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](../../../api/loop/loop-links/create-a-loop-link.md) for details on creating Loop Links.
 
 ## Overview
 
@@ -45,11 +45,11 @@ These buttons link to the screens shown in the following section.
 
 Below is a fictitious example app with examples of adding buttons for the two types of Loop Feedback
 
-<figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/example-app-with-loop-links.png" alt=""><figcaption></figcaption></figure>
 
 The diagram below shows how your app will integrate with the Loop Links event pages:
 
-<figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/loop-links-integrated-example.png" alt=""><figcaption></figcaption></figure>
 
 The heading at the top of the Loop pages defaults to your organization name in Control Center. You can update it to change it via the API.
 
@@ -72,7 +72,7 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 * Approved events show as visible to the customer as active events
 * Users receive an email when an event is approved or rejected
 
-<figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/loop-submit-missing-event.png" alt=""><figcaption></figcaption></figure>
 
 ### Providing Feedback on Events
 
@@ -81,7 +81,7 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 * Feedback is approved or rejected
 * Users will receive an email if there are any questions about their feedback
 
-<figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
 
 ## Loop Links Automated Emails
 
@@ -101,13 +101,13 @@ See below for some example emails:
 {% tab title="Approved Submission Email" %}
 See an example below of the email template for approved events:
 
-<figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/approved-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Reply to Submission/Feedback Email" %}
 See an example below of the email template for rejected events and replies to event feedback:
 
-<figure><img src="../../.gitbook/assets/reply-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/reply-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -153,7 +153,7 @@ To **provide feedback on an existing event** - open the /event-feedback/ Loop Li
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
-Note that the event ID to use is the `id` field from the [Events API](../../api/events/search-events.md). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. A feedback link or icon is added next to the event to allow users to provide feedback.
+Note that the event ID to use is the `id` field from the [Events API](../../../api/events/search-events.md). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. A feedback link or icon is added next to the event to allow users to provide feedback.
 
 #### To pre-fill the user's email address
 
