@@ -38,7 +38,7 @@ Below is a CSV of all supported airport codes and their respective `place_id`.
 
 ### Response Fields
 
-<table><thead><tr><th width="242">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>aviation_rank</code><br>number, null</td><td>A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. Aviation Rank indicates how much an event will impact flight bookings by considering both domestic and international travel. It can be mapped to the predicted increase in demand based on people flying to an event. Therefore, events with higher Aviation Rank are expected to result in more people taking flights than lower Aviation Rank events.<br><br>Aviation Rank is calculated for events in the categories <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>sports</code>, <code>festivals</code>, <code>performing-arts</code>, <code>observances</code>, <code>public-holidays</code>, and <code>school-holidays</code>.<br><br>If <code>aviation_rank</code> is not intended to be available for an event or we couldn't calculate it, this field will be <code>null</code>.<br>E.g. <code>85</code></td></tr><tr><td><code>cancelled</code><br>string, null</td><td>The date the event was set to cancelled in the system in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All dates are in UTC.<br><br>This field will only be present for events with <code>deleted_reason</code> set to <code>cancelled</code>, and will have a <code>null</code> value if <code>cancelled</code> date is not available.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>category</code><br>string</td><td><p>The category of the event<br><strong>Possible values:</strong></p><ul><li><code>academic</code></li><li><code>school-holidays</code></li><li><code>public-holidays</code></li><li><code>observances</code></li><li><code>politics</code></li><li><code>conferences</code></li><li><code>expos</code></li><li><code>concerts</code></li><li><code>festivals</code></li><li><code>performing-arts</code></li><li><code>sports</code></li><li><code>community</code></li><li><code>daylight-savings</code></li><li><code>airport-delays</code></li><li><code>severe-weather</code></li><li><code>disasters</code></li><li><code>terror</code></li><li><code>health-warnings</code></li></ul><p>E.g. <code>concerts</code></p></td></tr><tr><td><code>country</code><br>string</td><td>The country code in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.<br>Note that the <code>country</code> value will usually be present but in some cases where the event location is not within a country (e.g. an earthquake in the middle of the ocean) it can be empty.<br><br>E.g. <code>NZ</code></td></tr><tr><td><code>deleted_reason</code><br>string</td><td><p>The reason why the event was deleted.<br><br>Note that this field is only present for events with state <code>deleted</code>.<br><br><strong>Possible values:</strong></p><ul><li><code>cancelled</code></li><li><code>duplicate</code></li><li><code>invalid</code></li><li><code>postponed</code></li></ul><p>E.g. <code>duplicate</code></p></td></tr><tr><td><code>description</code><br>string</td><td>A description of the event.<br>E.g. <code>See Katy Perry in concert [...]</code></td></tr><tr><td><code>duplicate_of_id</code><br>string</td><td>The <code>id</code> of the active event this event is a duplicate of.<br><br>Note that this field is only present for deleted events with <code>deleted_reason</code> set to <code>duplicate</code>.<br><br>E.g. <code>z13B3870YOgv</code></td></tr><tr><td><code>duration</code><br>number</td><td>The duration of the event in seconds.<br><br>E.g. <code>3600</code></td></tr><tr><td><code>end</code><br>string</td><td>The end date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All end dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>entities</code><br>array</td><td><p>An array of entities linked to the event.<br><br><strong>Possible types:</strong></p><ul><li><code>event-group</code></li><li><code>venue</code></li></ul><p>E.g. </p><pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th width="375">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>aviation_rank</code><br>number, null</td><td>A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. Aviation Rank indicates how much an event will impact flight bookings by considering both domestic and international travel. It can be mapped to the predicted increase in demand based on people flying to an event. Therefore, events with higher Aviation Rank are expected to result in more people taking flights than lower Aviation Rank events.<br><br>Aviation Rank is calculated for events in the categories <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>sports</code>, <code>festivals</code>, <code>performing-arts</code>, <code>observances</code>, <code>public-holidays</code>, and <code>school-holidays</code>.<br><br>If <code>aviation_rank</code> is not intended to be available for an event or we couldn't calculate it, this field will be <code>null</code>.<br>E.g. <code>85</code></td></tr><tr><td><code>cancelled</code><br>string, null</td><td>The date the event was set to cancelled in the system in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All dates are in UTC.<br><br>This field will only be present for events with <code>deleted_reason</code> set to <code>cancelled</code>, and will have a <code>null</code> value if <code>cancelled</code> date is not available.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>category</code><br>string</td><td><p>The category of the event<br><strong>Possible values:</strong></p><ul><li><code>academic</code></li><li><code>school-holidays</code></li><li><code>public-holidays</code></li><li><code>observances</code></li><li><code>politics</code></li><li><code>conferences</code></li><li><code>expos</code></li><li><code>concerts</code></li><li><code>festivals</code></li><li><code>performing-arts</code></li><li><code>sports</code></li><li><code>community</code></li><li><code>daylight-savings</code></li><li><code>airport-delays</code></li><li><code>severe-weather</code></li><li><code>disasters</code></li><li><code>terror</code></li><li><code>health-warnings</code></li></ul><p>E.g. <code>concerts</code></p></td></tr><tr><td><code>country</code><br>string</td><td>The country code in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.<br>Note that the <code>country</code> value will usually be present but in some cases where the event location is not within a country (e.g. an earthquake in the middle of the ocean) it can be empty.<br><br>E.g. <code>NZ</code></td></tr><tr><td><code>deleted_reason</code><br>string</td><td><p>The reason why the event was deleted.<br><br>Note that this field is only present for events with state <code>deleted</code>.<br><br><strong>Possible values:</strong></p><ul><li><code>cancelled</code></li><li><code>duplicate</code></li><li><code>invalid</code></li><li><code>postponed</code></li></ul><p>E.g. <code>duplicate</code></p></td></tr><tr><td><code>description</code><br>string</td><td>A description of the event.<br>E.g. <code>See Katy Perry in concert [...]</code></td></tr><tr><td><code>duplicate_of_id</code><br>string</td><td>The <code>id</code> of the active event this event is a duplicate of.<br><br>Note that this field is only present for deleted events with <code>deleted_reason</code> set to <code>duplicate</code>.<br><br>E.g. <code>z13B3870YOgv</code></td></tr><tr><td><code>duration</code><br>number</td><td>The duration of the event in seconds.<br><br>E.g. <code>3600</code></td></tr><tr><td><code>end</code><br>string</td><td>The end date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All end dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>entities</code><br>array</td><td><p>An array of entities linked to the event.<br><br><strong>Possible types:</strong></p><ul><li><code>event-group</code></li><li><code>venue</code></li></ul><p>E.g. </p><pre class="language-json"><code class="lang-json">[
   {
     "entity_id": "328DxFUbRKvaiJJGyT2gReF",
     "type": "venue",
@@ -78,7 +78,14 @@ Below is a CSV of all supported airport codes and their respective `place_id`.
     "2641170"
   ]
 ]
-</code></pre></td></tr><tr><td><code>placekey</code><br>string</td><td><p>The Placekey (See <a href="https://www.placekey.io/">placekey.io</a>) reflects the location of an event in the format <code>what@where</code>. Placekey is part of the geo field for an event.<br><br><strong>Possible formats</strong></p><ul><li><code>{address}-{poi}@{where}</code></li><li><code>{address)@{where}</code></li><li><code>@where</code></li></ul><p>E.g. <code>222-229@8t2-fgc-z2k</code> or <code>@7f7-mcy-ndv</code><br><br>Note that Placekey applies to our <a href="https://www.predicthq.com/intelligence/data-enrichment/event-categories">attended event categories</a>. Some events do not contain a Placekey.</p></td></tr><tr><td><code>postponed</code><br>string, null</td><td>The date the event was set to postponed in the system in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br>All dates are in UTC.<br><br>This field will only be present for events with <code>deleted_reason</code> set to <code>postponed</code>, and will have a <code>null</code> value if <code>postponed</code> date is not available.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>predicted_end</code><br>string</td><td>The predicted end date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>Predicted end dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>This field will only be present if an actual <code>end</code> time is <em>not</em> available for an event and we have a predicted end time.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>rank</code><br>number</td><td>A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event independent of its geographical location.<br><br>E.g. <code>83</code></td></tr><tr><td><code>relevance</code><br>number, null</td><td><p>Relative relevance of the event to the event search.</p><p><br>See the relevance parameter for information on how relevance is calculated.</p><p><br>E.g. <code>2.9654586</code></p></td></tr><tr><td><code>scope</code><br>string</td><td><p>The geographical scope the events apply to.<br><strong>Possible values:</strong></p><ul><li><code>locality</code></li><li><code>localadmin</code></li><li><code>county</code></li><li><code>region</code></li><li><code>country</code></li></ul><p>E.g. <code>locality</code></p></td></tr><tr><td><code>start</code><br>string</td><td>The start date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All start dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>If an event has a start time of midnight (in the event time zone) this is an indication that the actual time may be unknown. You may wish to omit the time when displaying these events.<br><br>E.g. <code>2018-12-19T06:00:00Z</code></td></tr><tr><td><code>state</code><br>string</td><td><p>The publication state of the event.<br><strong>Possible values:</strong></p><ul><li><code>active</code>: the event is published and valid.</li><li><code>deleted</code>: the event was removed, either because it was cancelled or is a duplicate.</li><li><code>predicted</code>: events that have an unconfirmed start time i.e for which the exact time the event begins is not yet known.</li></ul></td></tr><tr><td><code>timezone</code><br>string, null</td><td>The time zone of the event in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. This is helpful so you know which time zone to convert the dates to (if needed).<br><br>If the time zone is <code>null</code>, the <code>start</code> and <code>end</code> date should be regarded as time zone agnostic and already being in local time. Our <code>start</code> and <code>end</code> filters take this into account when specifying a lower and higher bound on dates.<br><br>E.g. <code>Pacific/Auckland</code></td></tr><tr><td><code>title</code><br>string</td><td>The title of the event.<br><br>E.g. <code>Katy Perry</code></td></tr><tr><td><code>updated</code><br>string</td><td>The last modification date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format. All dates are in UTC.<br><br>E.g. <code>2018-05-01T05:00:00Z</code></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>placekey</code><br>string</td><td><p>The Placekey (See <a href="https://www.placekey.io/">placekey.io</a>) reflects the location of an event in the format <code>what@where</code>. Placekey is part of the geo field for an event.<br><br><strong>Possible formats</strong></p><ul><li><code>{address}-{poi}@{where}</code></li><li><code>{address)@{where}</code></li><li><code>@where</code></li></ul><p>E.g. <code>222-229@8t2-fgc-z2k</code> or <code>@7f7-mcy-ndv</code><br><br>Note that Placekey applies to our <a href="https://www.predicthq.com/intelligence/data-enrichment/event-categories">attended event categories</a>. Some events do not contain a Placekey.</p></td></tr><tr><td><code>postponed</code><br>string, null</td><td>The date the event was set to postponed in the system in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br>All dates are in UTC.<br><br>This field will only be present for events with <code>deleted_reason</code> set to <code>postponed</code>, and will have a <code>null</code> value if <code>postponed</code> date is not available.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>predicted_end</code><br>string</td><td>The predicted end date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>Predicted end dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>This field will only be present if an actual <code>end</code> time is <em>not</em> available for an event and we have a predicted end time.<br><br>E.g. <code>2018-12-19T10:00:00Z</code></td></tr><tr><td><code>predicted_event_spend</code><br>number</td><td>The total Predicted Event Spend.<br><br>E.g. <code>11806680</code></td></tr><tr><td><code>predicted_event_spend_industries</code><br>object</td><td><p>The Predicted Event Spend per industry.<br></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "predicted_event_spend_industries": {
+    "accommodation": 5016960,
+    "hospitality": 4924000,
+    "transportation": 1865720
+  }
+}
+</code></pre></td></tr><tr><td><code>rank</code><br>number</td><td>A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event independent of its geographical location.<br><br>E.g. <code>83</code></td></tr><tr><td><code>relevance</code><br>number, null</td><td><p>Relative relevance of the event to the event search.</p><p><br>See the relevance parameter for information on how relevance is calculated.</p><p><br>E.g. <code>2.9654586</code></p></td></tr><tr><td><code>scope</code><br>string</td><td><p>The geographical scope the events apply to.<br><strong>Possible values:</strong></p><ul><li><code>locality</code></li><li><code>localadmin</code></li><li><code>county</code></li><li><code>region</code></li><li><code>country</code></li></ul><p>E.g. <code>locality</code></p></td></tr><tr><td><code>start</code><br>string</td><td>The start date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All start dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>If an event has a start time of midnight (in the event time zone) this is an indication that the actual time may be unknown. You may wish to omit the time when displaying these events.<br><br>E.g. <code>2018-12-19T06:00:00Z</code></td></tr><tr><td><code>state</code><br>string</td><td><p>The publication state of the event.<br><strong>Possible values:</strong></p><ul><li><code>active</code>: the event is published and valid.</li><li><code>deleted</code>: the event was removed, either because it was cancelled or is a duplicate.</li><li><code>predicted</code>: events that have an unconfirmed start time i.e for which the exact time the event begins is not yet known.</li></ul></td></tr><tr><td><code>timezone</code><br>string, null</td><td>The time zone of the event in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. This is helpful so you know which time zone to convert the dates to (if needed).<br><br>If the time zone is <code>null</code>, the <code>start</code> and <code>end</code> date should be regarded as time zone agnostic and already being in local time. Our <code>start</code> and <code>end</code> filters take this into account when specifying a lower and higher bound on dates.<br><br>E.g. <code>Pacific/Auckland</code></td></tr><tr><td><code>title</code><br>string</td><td>The title of the event.<br><br>E.g. <code>Katy Perry</code></td></tr><tr><td><code>updated</code><br>string</td><td>The last modification date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format. All dates are in UTC.<br><br>E.g. <code>2018-05-01T05:00:00Z</code></td></tr></tbody></table>
 
 <details>
 
@@ -88,81 +95,181 @@ Below is an example of a single result.
 
 ```json
 {
-    "count": 1,
-    "overflow": false,
-    "next": null,
-    "previous": null,
-    "results": [
+  "count": 1,
+  "overflow": false,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "relevance": 0.0,
+      "id": "5uRg7CqGu7DTtu4Rfk",
+      "parent_event": {
+        "parent_event_id": "w7dYyrFwTUQGYE6euv"
+      },
+      "title": "Formula 1 2019 - United States Grand Prix 2019 - Race",
+      "description": "The 2019 United States Grand Prix (officially known as the Formula 1 Emirates United States Grand Prix 2019) was a Formula One motor race held on 3 November 2019 at the Circuit of the Americas in Austin, Texas, United States. The race was the 19th round of the 2019 Formula One World Championship (1 - 3 Nov) and marked the 49th running of the United States Grand Prix.",
+      "category": "sports",
+      "labels": [
+        "auto-racing",
+        "f1",
+        "sport"
+      ],
+      "rank": 92,
+      "local_rank": 100,
+      "phq_attendance": 120000,
+      "entities": [
         {
-            "relevance": 0.0,
-            "id": "5uRg7CqGu7DTtu4Rfk",
-            "parent_event": {
-                "parent_event_id": "w7dYyrFwTUQGYE6euv"
-            },
-            "title": "Formula 1 2019 - United States Grand Prix 2019 - Race",
-            "description": "The 2019 United States Grand Prix (officially known as the Formula 1 Emirates United States Grand Prix 2019) was a Formula One motor race held on 3 November 2019 at the Circuit of the Americas in Austin, Texas, United States. The race was the 19th round of the 2019 Formula One World Championship (1 - 3 Nov) and marked the 49th running of the United States Grand Prix.",
-            "category": "sports",
-            "labels": [
-                "auto-racing",
-                "f1",
-                "sport"
-            ],
-            "rank": 92,
-            "local_rank": 100,
-            "aviation_rank": 93,
-            "phq_attendance": 120000,
-            "entities": [
-                {
-                    "entity_id": "MasUgUJtWz3kQFVgCG6rJU",
-                    "name": "Circuit of the Americas",
-                    "type": "venue",
-                    "formatted_address": "9201 Circuit of the Americas Boulevard\nAustin, TX 78617\nUnited States of America"
-                }
-            ],
-            "duration": 7200,
-            "start": "2019-11-03T19:10:00Z",
-            "end": "2019-11-03T21:10:00Z",
-            "updated": "2022-11-10T19:50:36Z",
-            "first_seen": "2019-07-04T22:14:31Z",
-            "timezone": "America/Chicago",
-            "location": [
-                -97.63585109999997,
-                30.1345808
-            ],
-            "geo": {
-                "geometry": {
-                    "coordinates": [
-                        -97.63585109999997,
-                        30.1345808
-                    ],
-                    "type": "Point"
-                },
-                "placekey": "222-229@8t2-fgc-z2k"
-            },
-            "scope": "locality",
-            "country": "US",
-            "place_hierarchies": [
-                [
-                    "6295630",
-                    "6255149",
-                    "6252001",
-                    "4736286",
-                    "4737316",
-                    "4689116"
-                ],
-                [
-                    "6295630",
-                    "6255149",
-                    "6252001",
-                    "4736286",
-                    "4737316",
-                    "4671654"
-                ]
-            ],
-            "state": "active",
-            "private": false
+          "entity_id": "dh6tCwHCRjZUNmzaviVw5g",
+          "name": "Carlos Sainz Jr",
+          "type": "person"
+        },
+        {
+          "entity_id": "fqGj7EdaKsDPGFUgsYhYWq",
+          "name": "Kevin Magnussen",
+          "type": "person"
+        },
+        {
+          "entity_id": "e5rtDESKg4fLpHzmTcdAxy",
+          "name": "Alexander Albon",
+          "type": "person"
+        },
+        {
+          "entity_id": "DtXbSrLe9Mb9BQfjzt8q3Q",
+          "name": "Sergio Perez",
+          "type": "person"
+        },
+        {
+          "entity_id": "32wsZ6AhQTmehuPV9KwqgCY",
+          "name": "Lewis Hamilton",
+          "type": "person"
+        },
+        {
+          "entity_id": "hdqmJpv6pbCNT5RMLjiQr8",
+          "name": "Lando Norris",
+          "type": "person"
+        },
+        {
+          "entity_id": "dXA6AvcgEg7W5SJdjcgAAG",
+          "name": "Lance Stroll",
+          "type": "person"
+        },
+        {
+          "entity_id": "sn3aet9XXYWPu2RmNMVsAG",
+          "name": "Daniil Kvyat",
+          "type": "person"
+        },
+        {
+          "entity_id": "hKiTqaaffAzV4wGntE6LH8",
+          "name": "Robert Kubica",
+          "type": "person"
+        },
+        {
+          "entity_id": "eG36WTqRtMwvjHM7SLHwiG",
+          "name": "Antonio Giovinazzi",
+          "type": "person"
+        },
+        {
+          "entity_id": "JpFCtMes9vVbXxKduZ9jTd",
+          "name": "Nicholas Latifi",
+          "type": "person"
+        },
+        {
+          "entity_id": "fS2HcqsbnzuCtXgUqch6Py",
+          "name": "Max Verstappen",
+          "type": "person"
+        },
+        {
+          "entity_id": "dMezEeCcEa9T7RscX4aBmg",
+          "name": "Valtteri Bottas",
+          "type": "person"
+        },
+        {
+          "entity_id": "DhfPt6zSSUjUrWWfCpukkY",
+          "name": "Sebastian Vettel",
+          "type": "person"
+        },
+        {
+          "entity_id": "fdX7zyHMKYjAjJhSKhAvaG",
+          "name": "Charles Leclerc",
+          "type": "person"
+        },
+        {
+          "entity_id": "XS7dVfwZBETRejm7en3Adg",
+          "name": "Pierre Gasly",
+          "type": "person"
+        },
+        {
+          "entity_id": "33RfRSKSNRfuAzAYWEV8mR8",
+          "name": "George Russell",
+          "type": "person"
+        },
+        {
+          "entity_id": "e5rv77Gws6cKNCmJra5VFy",
+          "name": "Daniel Ricciardo",
+          "type": "person"
+        },
+        {
+          "entity_id": "7NT7S5KqiwqdKZiwsydzz8",
+          "name": "Nico Hulkenberg",
+          "type": "person"
+        },
+        {
+          "entity_id": "MasUgUJtWz3kQFVgCG6rJU",
+          "name": "Circuit of the Americas",
+          "type": "venue",
+          "formatted_address": "9201 Circuit of the Americas Boulevard\nAustin, TX 78617\nUnited States of America"
         }
-    ]
+      ],
+      "duration": 7200,
+      "start": "2019-11-03T19:10:00Z",
+      "end": "2019-11-03T21:10:00Z",
+      "updated": "2023-06-02T16:21:48Z",
+      "first_seen": "2019-07-04T22:14:31Z",
+      "timezone": "America/Chicago",
+      "location": [
+        -97.63585109999997,
+        30.1345808
+      ],
+      "geo": {
+        "geometry": {
+          "coordinates": [
+            -97.63585109999997,
+            30.1345808
+          ],
+          "type": "Point"
+        },
+        "placekey": "zzw-222@8t2-fgg-gtv"
+      },
+      "scope": "locality",
+      "country": "US",
+      "place_hierarchies": [
+        [
+          "6295630",
+          "6255149",
+          "6252001",
+          "4736286",
+          "4737316",
+          "4689116"
+        ],
+        [
+          "6295630",
+          "6255149",
+          "6252001",
+          "4736286",
+          "4737316",
+          "4671654"
+        ]
+      ],
+      "state": "active",
+      "private": false,
+      "predicted_event_spend": 11806680,
+      "predicted_event_spend_industries": {
+        "accommodation": 5016960,
+        "hospitality": 4924000,
+        "transportation": 1865720
+      }
+    }
+  ]
 }
 ```
 
