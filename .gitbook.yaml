@@ -1,0 +1,16 @@
+root: ./docs/
+
+redirects:  
+    tools/data-exporter: predicthq-api/bulk-data-delivery/export-data-via-control-center.md
+    sdks/python: predicthq-api/sdks/python-sdk.md
+    sdks/javascript: predicthq-api/sdks/javascript-sdk.md
+    start/api-quickstart: getting-started/api-quickstart.md
+    resources/broadcasts: api/broadcasts/search-broadcasts.md
+    resources/events: api/events/search-events.md
+    resources/features: api/features/get-features.md
+    resources/places: api/places/search-places.md
+    resources/demand-surge: api/demand-surge/get-demand-surges.md
+    resources/suggested-radius: api/suggested-radius/get-suggested-radius.md
+    resources/beam: api/beam/search-analyses.md
+    resources/saved-locations: api/saved-locations/search-saved-locations.md
+    resources/loop: api/loop/loop-links/search-loop-links.md
