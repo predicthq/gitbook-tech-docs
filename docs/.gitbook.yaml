@@ -1,5 +1,3 @@
-root: ./docs/
-
 redirects:  
     tools/data-exporter: predicthq-api/bulk-data-delivery/export-data-via-control-center.md
     sdks/python: predicthq-api/sdks/python-sdk.md
