@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Control Center Support](https://www.predicthq.com/support)
 * [API Explorer](https://control.predicthq.com/explorer)
+* [Loop](https://loop.predicthq.com)
 
 ## Getting Started
 
