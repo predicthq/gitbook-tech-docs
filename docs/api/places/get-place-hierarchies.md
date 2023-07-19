@@ -132,3 +132,9 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
+
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Understanding Place Hierarchies](../../getting-started/guides/geolocation-guides/understanding-place-hierarchies.md)

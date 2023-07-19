@@ -452,3 +452,12 @@ for feature in phq.features.obtain_features(
 ```
 {% endtab %}
 {% endtabs %}
+
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Increase Accuracy with the Features API](../../getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api.md)
+* [Feature Engineering Guide](../../getting-started/guides/features-api-guides/feature-engineering-guide.md)
+* [Demand Forecasting Data Science Guides](../../getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md)
+* [Aggregating Live TV Events](../../getting-started/guides/live-tv-event-guides/aggregating-live-tv-events.md)

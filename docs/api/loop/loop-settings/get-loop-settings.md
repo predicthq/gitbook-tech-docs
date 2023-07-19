@@ -63,3 +63,9 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
+
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Integrate with Loop Links](../../../getting-started/guides/loop-guides/integrate-with-loop-links.md)

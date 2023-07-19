@@ -89,3 +89,9 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
+
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Find Events by Latitude/Longitude and Radius](../../getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius.md)

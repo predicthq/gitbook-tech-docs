@@ -177,4 +177,10 @@ print(response.text)
 {% endtab %}
 {% endtabs %}
 
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Working with Location-Based Subscriptions](../../getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions.md)
+
 [^1]: An existing Saved Location ID.

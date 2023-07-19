@@ -76,4 +76,10 @@ print(response.status_code)
 {% endtab %}
 {% endtabs %}
 
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Integrate with Loop Links](../../../getting-started/guides/loop-guides/integrate-with-loop-links.md)
+
 [^1]: An existing Loop Link ID.

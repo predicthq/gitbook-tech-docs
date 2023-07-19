@@ -220,3 +220,8 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
+## Guides
+
+Below are some guides relevant to this API:
+
+* [Live TV Event Guides](../../getting-started/guides/live-tv-event-guides/)
