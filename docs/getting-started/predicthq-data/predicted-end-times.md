@@ -19,7 +19,7 @@ Example Use Cases
 
 We use a combination of methods which are largely determined by the availability of historical data. For sports types with historical data, we use machine learning methods including linear regression and quantile regression. These models use features such as gender, season, and leagues. For sports types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College and International types, where applicable.
 
-| SPORTS              | PROFESSIONAL   | COLLEGE        | INTERNATIONAL  |
+| Sport               | Professional   | College        | International  |
 | ------------------- | -------------- | -------------- | -------------- |
 | Ice-hockey          | Model-based    | Research-based | Model-based    |
 | Rugby               | Model-based    | Model-based    | Model-based    |
