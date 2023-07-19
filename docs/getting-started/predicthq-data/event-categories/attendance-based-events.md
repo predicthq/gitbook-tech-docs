@@ -249,7 +249,7 @@ Festival events have Local Rank available.
 * An annual large festival, especially when it overlaps with a weekend will result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend.
 * A local community festival is less likely to cause travel by flight.
 
-For example, the [New Orleans Jazz and Heritage Festival](https://events.int.phq.io/aggregate/vhvgnsTLQFwNq79gGJvHCu) has an Aviation Rank of 78 while [An Old Time Christmas](https://control.predicthq.com/search/events/ToZHJ3MHBrQGsw45Rx) (a seasonal light show) has an Aviation Rank of 0.
+For example, the [New Orleans Jazz and Heritage Festival](https://control.predicthq.com/search/events/ToZHJ3MHBrQGsw45Rx) has an Aviation Rank of 78 while [An Old Time Christmas](https://control.predicthq.com/search/events/ToZHJ3MHBrQGsw45Rx) (a seasonal light show) has an Aviation Rank of 0.
 
 **PHQ Attendance**
 
