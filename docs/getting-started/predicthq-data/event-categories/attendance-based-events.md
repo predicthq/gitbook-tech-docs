@@ -21,14 +21,14 @@ Labels for a sports event provide more information about the type, league, and e
     The most common sports types in PredictHQ dataset are: `soccer`, `basketball`, `ice-hockey`, `rugby`, `baseball`.
 2.  **Sports League**
 
-    The most popular sports leagues in PredictHQ dataset are: `NFL`, `MLB`, `NHL`, `NBA`.
+    The most popular sports leagues in the PredictHQ dataset are: `NFL`, `MLB`, `NHL`, `NBA`.
 3.  **Sports Games Environment**
 
     The general environment where the sports game is held, or the purpose of the sports game, for example:
 
     * `closed-doors`: When the sports game has no physical audience in attendance. This is most commonly due to COVID-19 restrictions.
     * `outdoors`: Where the sports game is held in an outdoor area.
-    * `fundraise`: A community related sports game for a fundraising purpose.
+    * `fundraise`: A community-related sports game for fundraising purposes.
 
 #### Date & Time
 
@@ -38,7 +38,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Sports events are usually point events, meaning the latitude and longitude of the event represents the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://control.predicthq.com/search/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
+Sports events are usually point events, meaning the latitude and longitude of the event represent the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://control.predicthq.com/search/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
 
 #### Entities
 
@@ -67,11 +67,11 @@ Sports events have PHQ Attendance available.
 
 ### Conferences
 
-A formal meeting or forum relating to a certain topic between a group of people with shared interests. A major conference, especially an industry related one, may last for several days and occur with regular frequency. An example of an annually occurring conference is the [ASH Annual Meeting](https://control.predicthq.com/search/events/2RxTdCucMNcLZSsEqW).
+A formal meeting or forum relating to a certain topic between a group of people with shared interests. A major conference, especially an industry-related one, may last for several days and occur with regular frequency. An example of an annually occurring conference is the [ASH Annual Meeting](https://control.predicthq.com/search/events/2RxTdCucMNcLZSsEqW).
 
 **LABELS**
 
-Labels for a conferences event provide more information about the event. The most common 5 labels are:
+Labels for a conference event provide more information about the event. The most common 5 labels are:
 
 1. `business`: The conferences for a commercial purpose, for example, [Dreamforce](https://control.predicthq.com/search/events/HAnRjF9RUX8yFnWuGv) by Salesforce.
 2. `education`: The conferences for an educational purpose, for example, [Young Social Innovators of the Year Awards](https://control.predicthq.com/search/events/XoEPm68yHWWNw9ysDp).
@@ -91,17 +91,17 @@ Conferences events are point events, meaning the latitude and longitude of the e
 
 #### Entities
 
-Conferences events have event group entities and venue entities available.
+Conference events have event group entities and venue entities available.
 
 #### Ranking
 
 **PHQ Rank**
 
-Conferences events have PHQ Rank available.
+Conference events have PHQ Rank available.
 
 **Local Rank**
 
-Conferences events have Local Rank available.
+Conference events have Local Rank available.
 
 **Aviation Rank**
 
