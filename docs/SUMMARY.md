@@ -63,6 +63,7 @@
     * [Beam Data Science Guide](getting-started/guides/beam-guides/beam-data-science-guide.md)
   * [Loop Guides](getting-started/guides/loop-guides/README.md)
     * [Integrate with Loop Links](getting-started/guides/loop-guides/integrate-with-loop-links.md)
+  * [Guide to Protecting PredictHQ Data](getting-started/guides/guide-to-protecting-predicthq-data.md)
 
 ## PredictHQ API
 
