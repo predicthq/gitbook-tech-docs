@@ -88,6 +88,16 @@ Below is a CSV of all supported airport codes and their respective `place_id`.
 }
 </code></pre></td></tr><tr><td><code>rank</code><br>number</td><td>A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event independent of its geographical location.<br><br>E.g. <code>83</code></td></tr><tr><td><code>relevance</code><br>number, null</td><td><p>Relative relevance of the event to the event search.</p><p><br>See the relevance parameter for information on how relevance is calculated.</p><p><br>E.g. <code>2.9654586</code></p></td></tr><tr><td><code>scope</code><br>string</td><td><p>The geographical scope the events apply to.<br><strong>Possible values:</strong></p><ul><li><code>locality</code></li><li><code>localadmin</code></li><li><code>county</code></li><li><code>region</code></li><li><code>country</code></li></ul><p>E.g. <code>locality</code></p></td></tr><tr><td><code>start</code><br>string</td><td>The start date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format.<br><br>All start dates are in UTC <strong>if the event time zone is provided</strong>, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a <code>null</code> time zone.<br><br>If an event has a start time of midnight (in the event time zone) this is an indication that the actual time may be unknown. You may wish to omit the time when displaying these events.<br><br>E.g. <code>2018-12-19T06:00:00Z</code></td></tr><tr><td><code>state</code><br>string</td><td><p>The publication state of the event.<br><strong>Possible values:</strong></p><ul><li><code>active</code>: the event is published and valid.</li><li><code>deleted</code>: the event was removed, either because it was cancelled or is a duplicate.</li><li><code>predicted</code>: events that have an unconfirmed start time i.e for which the exact time the event begins is not yet known.</li></ul></td></tr><tr><td><code>timezone</code><br>string, null</td><td>The time zone of the event in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. This is helpful so you know which time zone to convert the dates to (if needed).<br><br>If the time zone is <code>null</code>, the <code>start</code> and <code>end</code> date should be regarded as time zone agnostic and already being in local time. Our <code>start</code> and <code>end</code> filters take this into account when specifying a lower and higher bound on dates.<br><br>E.g. <code>Pacific/Auckland</code></td></tr><tr><td><code>title</code><br>string</td><td>The title of the event.<br><br>E.g. <code>Katy Perry</code></td></tr><tr><td><code>updated</code><br>string</td><td>The last modification date of the event in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format. All dates are in UTC.<br><br>E.g. <code>2018-05-01T05:00:00Z</code></td></tr></tbody></table>
 
+### JSON Schema
+
+{% file src="../../.gitbook/assets/events-response-schema.json" %}
+Search Events Response JSON Schema
+{% endfile %}
+
+{% file src="../../.gitbook/assets/event-schema.json" %}
+Single Event JSON Schema
+{% endfile %}
+
 <details>
 
 <summary>Example response</summary>

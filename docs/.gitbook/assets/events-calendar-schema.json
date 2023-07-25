@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/events-calendar-schema.json",
+  "type": "object",
+  "required": ["count", "next", "previous", "results"],
+  "properties": {
+    "count": {
+      "type": "integer",
+      "description": "The total number of results.",
+      "minimum": 0
+    },
+    "previous": {
+      "type": ["string", "null"],
+      "description": "A URL to the previous page, or `null` if this is the first page."
+    },
+    "next": {
+      "type": ["string", "null"],
+      "description": "A URL to the next page, or `null` if this is the last page."
+    },
+    "results": {
+      "type": "array",
+      "description": "An array of records",
+      "items": {
+        "$ref": "#/definitions/EventCalendarDay"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "EventCalendarDay": {
+      "type": "object",
+      "description": "The aggregated counts of active events for a day by different criteria.",
+      "required": ["date", "count", "top_rank", "rank_levels", "categories", "labels"],
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date the counts are for."
+        },
+        "count": {
+          "type": "integer",
+          "description": "The total count of events.",
+          "minimum": 0
+        },
+        "top_rank": {
+          "type": "number",
+          "description": "The rank of the highest ranked event.",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "top_aviation_rank": {
+          "type": ["number", "null"],
+          "description": "The aviation rank of the highest ranked event.",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "top_local_rank": {
+          "type": ["number", "null"],
+          "description": "The local rank of the highest ranked event.",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "rank_levels": { "$ref": "#/definitions/levels" },
+        "aviation_rank_levels": { "$ref": "#/definitions/levels" },
+        "local_rank_levels": { "$ref": "#/definitions/levels" },
+        "categories": {
+          "type": "object",
+          "description": "The count of events broken down by category.",
+          "propertyNames": {
+            "enum": [
+              "academic",
+              "airport-delays",
+              "community",
+              "concerts",
+              "conferences",
+              "daylight-savings",
+              "disasters",
+              "expos",
+              "festivals",
+              "health-warnings",
+              "observances",
+              "performing-arts",
+              "politics",
+              "public-holidays",
+              "school-holidays",
+              "severe-weather",
+              "sports",
+              "terror"
+            ]
+          },
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "labels": {
+          "type": "object",
+          "description": "The count of events broken down by label. As events can have any number of labels these counts are not expected to sum to the total count of events.",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "levels": {
+      "type": "object",
+      "description": "The count of events broken down by rank level.",
+      "required": ["1", "2", "3", "4", "5"],
+      "properties": {
+        "1": {
+          "type": "integer",
+          "description": "Minor (rank between 0 and 20).",
+          "minimum": 0
+        },
+        "2": {
+          "type": "integer",
+          "description": "Moderate (rank between 21 and 40).",
+          "minimum": 0
+        },
+        "3": {
+          "type": "integer",
+          "description": "Important (rank between 41 and 60).",
+          "minimum": 0
+        },
+        "4": {
+          "type": "integer",
+          "description": "Significant (rank between 61 and 80).",
+          "minimum": 0
+        },
+        "5": {
+          "type": "integer",
+          "description": "Major (rank between 81 and 100).",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

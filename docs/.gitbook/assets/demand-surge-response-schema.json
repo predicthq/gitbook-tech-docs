@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/demand-surge-response-schema.json",
+  "type": "object",
+  "required": ["count", "surge_dates"],
+  "properties": {
+    "count": {
+      "type": "integer",
+      "description": "The total number of surge dates.",
+      "minimum": 0
+    },
+    "surge_dates": {
+      "type": "array",
+      "description": "An array of surge dates.",
+      "items": {
+        "$ref": "https://docs.predicthq.com/docs/schema/demand-surge-schema.json"
+      }
+    }
+  }
+}

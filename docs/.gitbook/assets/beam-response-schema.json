@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/beam-response-schema.json",
+  "type": "object",
+  "required": [
+    "model_version",
+    "version",
+    "dates",
+    "count",
+    "categories_impact"
+  ],
+  "properties": {
+    "model_version": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "dates": {
+      "type": "array",
+      "items": {
+        "$ref": "https://docs.predicthq.com/docs/schema/beam-schema.json"
+      }
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "categories_impact": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-categories-impact-schema.json"
+    }
+  }
+}

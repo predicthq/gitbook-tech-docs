@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/feature-response-schema.json",
+  "title": "feature response",
+  "definitions": {
+    "FeatureStats": {
+      "title": "FeatureStats",
+      "description": "All available stats that can be requested in attendance and viewership feature.",
+      "type": "object",
+      "properties": {
+        "count": {
+          "title": "Count",
+          "type": "integer"
+        },
+        "sum": {
+          "title": "Sum",
+          "type": "integer"
+        },
+        "min": {
+          "title": "Min",
+          "type": "integer"
+        },
+        "max": {
+          "title": "Max",
+          "type": "integer"
+        },
+        "avg": {
+          "title": "Avg",
+          "type": "integer"
+        },
+        "median": {
+          "title": "Median",
+          "type": "integer"
+        },
+        "std_dev": {
+          "title": "Std Dev",
+          "type": "integer"
+        }
+      }
+    },
+    "PhqAttendanceFeature": {
+      "title": "PhqAttendanceFeature",
+      "description": "The attendance category feature.",
+      "type": "object",
+      "properties": {
+        "stats": {
+          "$ref": "#/definitions/FeatureStats"
+        }
+      },
+      "required": ["stats"]
+    },
+    "RankStats": {
+      "title": "RankStats",
+      "description": "Ranking stat of phq rank levels used for non-attendance based category features.",
+      "type": "object",
+      "properties": {
+        "1": {
+          "title": "1",
+          "default": 0,
+          "type": "integer"
+        },
+        "2": {
+          "title": "2",
+          "default": 0,
+          "type": "integer"
+        },
+        "3": {
+          "title": "3",
+          "default": 0,
+          "type": "integer"
+        },
+        "4": {
+          "title": "4",
+          "default": 0,
+          "type": "integer"
+        },
+        "5": {
+          "title": "5",
+          "default": 0,
+          "type": "integer"
+        }
+      }
+    },
+    "PhqRankFeature": {
+      "title": "PhqRankFeature",
+      "description": "The rank category feature.",
+      "type": "object",
+      "properties": {
+        "rank_levels": {
+          "$ref": "#/definitions/RankStats"
+        }
+      },
+      "required": ["rank_levels"]
+    },
+    "PhqViewershipFeature": {
+      "title": "PhqViewershipFeature",
+      "description": "The viewership category feature.",
+      "type": "object",
+      "properties": {
+        "stats": {
+          "$ref": "#/definitions/FeatureStats"
+        }
+      },
+      "required": ["stats"]
+    },
+    "PhqFeatureSet": {
+      "title": "PhqFeatureSet",
+      "description": "All features fields which associate to a feature category",
+      "type": "object",
+      "properties": {
+        "date": {
+          "title": "Date",
+          "type": "string",
+          "format": "date"
+        },
+        "phq_attendance_academic_graduation": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_academic_social": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_community": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_concerts": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_conferences": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_expos": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_festivals": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_performing_arts": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_school_holidays": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_attendance_sports": {
+          "$ref": "#/definitions/PhqAttendanceFeature"
+        },
+        "phq_rank_daylight_savings": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_health_warnings": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_observances": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_public_holidays": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_school_holidays": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_politics": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_academic_session": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_academic_exam": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_rank_academic_holiday": {
+          "$ref": "#/definitions/PhqRankFeature"
+        },
+        "phq_viewership_sports_american_football": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_auto_racing": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_baseball": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_basketball": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_boxing": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_golf": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_horse_racing": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_ice_hockey": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_mma": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_softball": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_tennis": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_american_football_ncaa": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_american_football_nfl": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_auto_racing_nascar": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_auto_racing_indy_car": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_baseball_ncaa": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_baseball_mlb": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_basketball_ncaa": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_basketball_nba": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_basketball_ncaa_women": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_golf_masters": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_golf_pga_championship": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_golf_us_open": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_golf_pga_tour": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_horse_racing_kentucky_derby": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_horse_racing_preakness_stakes": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_horse_racing_belmont_stakes": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_ice_hockey_nhl": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_mma_ufc": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_mls": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_fifa_world_cup_women": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_fifa_world_cup": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_uefa_champions_league": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_concacaf_champions_league": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_concacaf_gold_cup": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_soccer_copa_america": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_softball_ncaa_women": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_tennis_wimbledon": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        },
+        "phq_viewership_sports_tennis_us_open": {
+          "$ref": "#/definitions/PhqViewershipFeature"
+        }
+      },
+      "required": ["date"]
+    },
+    "PhqFeaturesResponse": {
+      "title": "PhqFeaturesResponse",
+      "description": "An array of feature results.",
+      "type": "object",
+      "properties": {
+        "results": {
+          "title": "Results",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PhqFeatureSet"
+          }
+        }
+      },
+      "required": ["results"]
+    }
+  }
+}

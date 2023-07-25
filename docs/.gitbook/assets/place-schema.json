@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/place-schema.json",
+  "type": "object",
+  "description": "A place represents a Geonames Feature, which can be either an Area, an Administrative Feature, or a Populated Place.",
+  "required": ["id", "type", "name"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier of the place."
+    },
+    "type": {
+      "type": "string",
+      "description": "The administrative level of the place.\n\nPossible values:\n  - `neighbourhood`: subdivision of a populated place\n  - `locality`: populated place\n  - `localadmin`: administrative level 3\n  - `county`: administrative level 2\n  - `region`: administrative level 1\n  - `country`: administrative level 0\n  - `continent`: Africa, North America, South America, Antarctica, Asia, Europe, Oceania\n  - `planet`: Earth is the only supported planet at the moment, but we will work hard to support more planets as relevant events become available!\n",
+      "enum": ["neighbourhood", "locality", "localadmin", "county", "region", "country", "continent", "planet"]
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the place."
+    },
+    "county": {
+      "type": ["string", "null"],
+      "description": "The name of the place's administrative level 2 place, or `null` if it does not apply."
+    },
+    "region": {
+      "type": ["string", "null"],
+      "description": "The name of the place's administrative level 1 place, or `null` if it does not apply."
+    },
+    "country": {
+      "type": ["string", "null"],
+      "description": "The name of the place's administrative level 0 place, or `null` if it does not apply."
+    },
+    "country_alpha2": {
+      "type": ["string", "null"],
+      "description": "The ISO 3166-1 alpha-2 country code, or `null` if there is no country.",
+      "minLength": 2,
+      "maxLength": 2
+    },
+    "country_alpha3": {
+      "type": ["string", "null"],
+      "description": "The ISO 3166-1 alpha-3 country code, or `null` if there is no country.",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "location": {
+      "type": "array",
+      "description": "A 2-tuple representing the centroid of the place. Note that the longitude/latitude coordinates use the [GeoJSON order](http://geojson.org/) [lon, lat].",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}
