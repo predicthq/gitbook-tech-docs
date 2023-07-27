@@ -1,5 +1,9 @@
 # Increase Accuracy with the Features API
 
+{% embed url="https://www.youtube.com/watch?v=FpTUVdQC7hw" %}
+Features API Product Demo
+{% endembed %}
+
 Once you’ve familiarized yourself with our data, you’ll likely find that focusing on individual spikes often leads to a data set too small to accurately correlate. By doing it at an aggregate level, a data science team will be looking at the volume of spike days to prove a correlation between demand and events based on category features.
 
 Features API aggregates PHQ Attendance figures, PHQ Viewership figures and PHQ Rank counts (in buckets by rank range) for a given category feature in a particular location on a given day, and returns desired statistics. These evaluated statistics can be used to quickly gauge and understand the demand impact on a location for a given day for a particular category. For example, at a future date in Sydney, there is a major sports game, a street fair, an international film festival, the Symphony orchestra playing, and more. The combined impact of all these events might result in a total aggregate attendance (when the various category aggregated attendance values are summed up) score of 150,000 and this could be across a hundred events or more. This represents a prediction of 150,000 people attending events on that day in the location.
@@ -9,6 +13,10 @@ The Features API returns requested statistical values (`sum`, `count`, `average`
 See [the API documentation](../../../api/features/get-features.md) for more details on the API. See also our [feature engineering guide](feature-engineering-guide.md) for how to use the features API features in demand forecasting.
 
 ### Features API Endpoint
+
+{% embed url="https://www.youtube.com/watch?v=zlw4ky5NjbA" %}
+How to use Features API
+{% endembed %}
 
 In this example we will use PHQ Attendance features to find high demand days in the city of Chicago in February 2020.
 

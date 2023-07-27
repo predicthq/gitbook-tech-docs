@@ -40,6 +40,10 @@ response = requests.get(
 print(response.json())
 ```
 
+{% embed url="https://www.youtube.com/watch?v=vvujroC7Bhs" %}
+How to set up and access PredictHQ APIs
+{% endembed %}
+
 ## Streamlit Demo Apps
 
 To demonstrate how quick and easy it is to build extremely powerful apps using our APIs, we put together some Streamlit demos. All the code is available on GitHub and we encourage you to take the code, modify it, and use your own locations of interest to demo our APIs internally to your team or to simply better understand our technology.

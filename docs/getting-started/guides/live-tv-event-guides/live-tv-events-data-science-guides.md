@@ -1,4 +1,4 @@
-# Live TV Events Data Science Guides
+# Live TV Events Notebooks
 
 These guides consist of the following three notebooks:
 
@@ -7,6 +7,9 @@ These guides consist of the following three notebooks:
 * [**Part 3: Feature Engineering**](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part\_3\_feature\_engineering.ipynb) provides examples of how to aggregate and extract features from the data.
 
 {% embed url="https://www.youtube.com/watch?v=YfE7tfuFGS0" %}
-Walk through the TV Events Jupyter Notebook with Data Scientist Andrew Walker
+Walk through the TV Events Jupyter Notebook with Data Scientist Andrew Walker - Part 1
 {% endembed %}
 
+{% embed url="https://www.youtube.com/watch?v=pv1oPK1l4Ok" %}
+Walk through the TV Events Jupyter Notebook with Data Scientist Andrew Walker - Part 2
+{% endembed %}
