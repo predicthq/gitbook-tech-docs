@@ -35,7 +35,7 @@ redirects:
     datascience/features-api-usage: getting-started/guides/features-api-guides/README.md
     datascience/features-api: getting-started/guides/features-api-guides/README.md
     datascience/gettingstarted: getting-started/guides/features-api-guides/README.md
-    datascience/introduction: getting-started/guides/README.md
+    datascience/introduction: getting-started/data-science-notebooks.md
     datascience/live-tv-events-part1: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
     datascience/live-tv-events-part2: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
     datascience/live-tv-events-part3: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
