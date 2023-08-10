@@ -205,6 +205,24 @@
       "type": ["integer", "null"],
       "minimum": 1
     },
+    "phq_labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "PHQ Labels leverage newer generation LLMs and classifier models. Currently available for conferences, expos, festivals, community and performing-arts. Legacy labels are available in a separate field to preserve backwards compatibility."
+          },
+          "weight": {
+            "type": "number",
+            "description": "The weight that each label contribute to the event, weights from all labels sums up to 1."
+          }
+        },
+        "required": ["label", "weight"],
+        "additionalProperties": false
+      }
+    },
     "place_hierarchies": {
       "type": "array",
       "items": {
