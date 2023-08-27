@@ -67,6 +67,7 @@
   * [Loop Guides](getting-started/guides/loop-guides/README.md)
     * [Integrate with Loop Links](getting-started/guides/loop-guides/integrate-with-loop-links.md)
   * [Guide to Protecting PredictHQ Data](getting-started/guides/guide-to-protecting-predicthq-data.md)
+  * [Streamlit Demo Apps](getting-started/guides/streamlit-demo-apps.md)
 
 ## PredictHQ API
 
