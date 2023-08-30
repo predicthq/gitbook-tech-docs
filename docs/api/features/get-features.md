@@ -32,7 +32,7 @@ POST https://api.predicthq.com/v1/features/
     "lte": 15
   }
 }
-</code></pre></td></tr><tr><td><code>location</code><br>object</td><td><p>Location to calculate features for. You can specify the location as either a latitude/longitude (with radius) or a Place ID.</p><p></p><p>We recommend using a lat/lon+radius so your location can be more accurately defined, and we strongly recommend using our <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to work out a suitable radius around your location.<br></p><p>When using Place IDs note that a maximum of 3 may be used.</p><p></p><p>E.g. using Place IDs.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>location</code><br>object</td><td><p>Location to calculate features for. You can specify the location as a latitude/longitude (with radius), Place ID or Saved Location ID.</p><p></p><p>We recommend using a lat/lon+radius so your location can be more accurately defined, and we strongly recommend using our <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to work out a suitable radius around your location.<br></p><p>Note, when using Place IDs or Saved Location IDs a maximum of 3 IDs may be used.</p><p></p><p>E.g. using Place IDs.</p><pre class="language-json"><code class="lang-json">{
   "location": {
     "place_id": [
       5224323,
@@ -41,7 +41,16 @@ POST https://api.predicthq.com/v1/features/
     ]
   }
 }
-</code></pre><p></p><p>E.g. using a latitude/longitude and radius (recommended)</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p>E.g. using Saved Location IDs.</p><pre class="language-json"><code class="lang-json">{
+  "location": {
+    "saved_location_id": [
+      "BN7ZSw8xza9FviPVfyCycd",
+      "X3uyTFbDOUaX2q_Qh5i31b",
+      "X3uyTFbDOUhrfq_Qh5i31A"
+    ]
+  }
+}
+</code></pre><p>E.g. using a latitude/longitude and radius (recommended)</p><pre class="language-json"><code class="lang-json">{
   "location": {
     "geo": {
       "lat": 41.75038,
