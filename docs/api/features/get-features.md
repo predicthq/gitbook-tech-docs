@@ -103,7 +103,7 @@ You can configure PHQ Attendance features using the options below.
 {% tab title="PHQ Rank Features" %}
 PHQ Rank features provide daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
 
-<table><thead><tr><th width="358">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_daylight_savings</code></td><td>Daylight Savings</td></tr><tr><td><code>phq_rank_health_warnings</code></td><td>Health Warnings</td></tr><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_politics</code></td><td>Politics</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr></tbody></table>
+<table><thead><tr><th width="358">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr></tbody></table>
 
 ## Configuration
 
