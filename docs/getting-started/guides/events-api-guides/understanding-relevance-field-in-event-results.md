@@ -6,6 +6,8 @@ description: >-
 
 # Understanding Relevance Field in Event Results
 
+The `relevance` field in Events API responses is purely a sorting mechanism and is only set when using certain (relevance-affecting) parameters. By default `relevance` will be `0` but when using a parameter like `q` (full-text search) the `relevance` field will reflect the relevance of the event to the search terms used.
+
 Throughout the guide we'll be using the scenario of adding an "Events Near Me" feature to a mobile application, with the example use case of a user wanting to find a jazz concert to attend. We'll show how information from/about the user can be translated to search parameters that help tailor results to what the user wants.
 
 ## Initial Search
