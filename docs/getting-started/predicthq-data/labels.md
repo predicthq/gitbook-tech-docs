@@ -10,6 +10,8 @@ Each event record has two separate label fields.
 
 PHQ Labels are generated through newer Large Language Models (LLMs) and overall achieve a higher standard of **specificity** and **relevance** in highlighting an event's key themes when compared to legacy methods.
 
+This field is named `phq_labels`.
+
 PHQ Labels are available for the following categories:
 
 * Conferences
@@ -20,7 +22,9 @@ PHQ Labels are available for the following categories:
 
 ### Labels (Legacy)
 
-Legacy labels are still returned in order to preserve backwards compatibility with existing user implementations.&#x20;
+Legacy labels are still returned in order to preserve backwards compatibility with existing user implementations.
+
+This field is named `labels`
 
 Legacy labels are available for all event categories.
 
