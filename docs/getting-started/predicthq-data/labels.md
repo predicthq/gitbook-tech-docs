@@ -4,7 +4,7 @@ Event labels are succinct descriptive attributes attached to events that can hel
 
 For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
 
-Each event record has two separate label fields.
+Each event record has two separate label fields (`phq_labels` and `labels`).
 
 ### PHQ Labels
 
