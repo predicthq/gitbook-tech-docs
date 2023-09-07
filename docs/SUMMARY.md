@@ -21,6 +21,7 @@
     * [PHQ Rank](getting-started/predicthq-data/ranks/phq-rank.md)
     * [Local Rank](getting-started/predicthq-data/ranks/local-rank.md)
     * [Aviation Rank](getting-started/predicthq-data/ranks/aviation-rank.md)
+  * [Labels](getting-started/predicthq-data/labels.md)
   * [Predicted Attendance](getting-started/predicthq-data/predicted-attendance.md)
   * [Predicted End Times](getting-started/predicthq-data/predicted-end-times.md)
   * [Predicted Event Spend](getting-started/predicthq-data/predicted-event-spend.md)
