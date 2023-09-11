@@ -19,9 +19,9 @@ Example Use Cases
 * **Workforce Optimization**: For transportation companies if you want to arrange transportation for people leaving an event you can use Predicted End Times.
 * **Demand Forecasting**: When forecasting the impact of events in certain time periods the end time of the event is required.
 
-## How we calculate predicted end times for sports
+## How predicted end times are calculated
 
-We use a combination of methods which are largely determined by the availability of historical data. For sports types with historical data, we use machine learning methods including linear regression and quantile regression. These models use features such as gender, season, and leagues. For sports types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College and International types, where applicable.
+We use a combination of methods which are largely determined by the availability of historical data. For event types with historical data, we use machine learning methods including linear regression and quantile regression. These models use features such as gender, season, and leagues. For event types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College, and International types, where applicable.
 
 | Sport               | Professional   | College        | International  |
 | ------------------- | -------------- | -------------- | -------------- |
@@ -33,6 +33,10 @@ We use a combination of methods which are largely determined by the availability
 | Football/Soccer     | Research-based | Research-based | Research-based |
 | Baseball            | Model-based    | Research-based | Research-based |
 | NASCAR              | Research-based | Research-based | Research-based |
+
+
+
+For performing arts events we use research-based methods to calculate predicted end times.
 
 ## Predicted End Times in PredictHQ API
 
