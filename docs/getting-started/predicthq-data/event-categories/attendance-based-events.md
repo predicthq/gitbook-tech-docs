@@ -29,6 +29,12 @@ Labels for a sports event provide more information about the type, league, and e
     * `closed-doors`: When the sports game has no physical audience in attendance. This is most commonly due to COVID-19 restrictions.
     * `outdoors`: Where the sports game is held in an outdoor area.
     * `fundraise`: A community-related sports game for fundraising purposes.
+4. **Youth Sports**
+   * These events have the `youth-sport` label
+   * These events are defined as any sports event where competitors are younger than adult age, whether children or adolescents. Youth sports include school sports at primary and secondary level, as well as sports played outside the education system, whether informally or organized. They do not include colleague sports which are separate and can be cound with the `NCAA` label.
+   * Sports covered are youth basketball, baseball, softball and soccer
+   * These events are for the US (with a very small amount in Canada)
+   * Youth sports include a new dynamic ranking model that predicts attendance and rank based on the type of sport, age group, level, gender, population density, student numbers, and other features
 
 #### Date & Time
 
