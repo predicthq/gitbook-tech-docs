@@ -106,6 +106,7 @@
   * [Update an Analysis](api/beam/update-an-analysis.md)
   * [Partially Update an Analysis](api/beam/partially-update-an-analysis.md)
   * [Correlate an Analysis](api/beam/correlate-an-analysis.md)
+  * [Get Feature Importance Results](api/beam/get-feature-importance-results.md)
   * [Refresh an Analysis](api/beam/refresh-an-analysis.md)
   * [Delete an Analysis](api/beam/delete-an-analysis.md)
 * [Demand Surge](api/demand-surge/README.md)

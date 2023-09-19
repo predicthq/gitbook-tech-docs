@@ -51,7 +51,15 @@ description: Get an existing Analysis.
     }
   }
 }
-</code></pre></td></tr><tr><td><code>readiness_status</code><br>string</td><td><p>The value of this field determines whether or not the Analysis is ready for correlation.</p><p></p><p>When you upload data for an Analysis the <code>readiness_status</code> will be set to <code>pending</code> until processing has completed.<br><br>Possible values:</p><ul><li><code>pending</code></li><li><code>failed</code></li><li><code>ready</code></li></ul><p>E.g. <code>ready</code></p></td></tr><tr><td><code>status</code><br>string</td><td><p>Status of the Analysis.<br><br>Possible values:</p><ul><li><code>draft</code></li><li><code>active</code></li></ul><p>E.g. <code>active</code></p></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>readiness_status</code><br>string</td><td><p>The value of this field determines whether or not the Analysis is ready for correlation.</p><p></p><p>When you upload data for an Analysis the <code>readiness_status</code> will be set to <code>pending</code> until processing has completed.<br><br>Possible values:</p><ul><li><code>pending</code></li><li><code>failed</code></li><li><code>ready</code></li></ul><p>E.g. <code>ready</code></p></td></tr><tr><td><code>status</code><br>string</td><td><p>Status of the Analysis.<br><br>Possible values:</p><ul><li><code>draft</code></li><li><code>active</code></li></ul><p>E.g. <code>active</code></p></td></tr><tr><td><code>processing_completed</code><br>object</td><td><p>Status of the analysis processing stages. Only present in newly created or refreshed analyses.<br></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "processing_completed": {
+    "correlation": true,
+    "feature_importance": false
+  }
+}
+</code></pre></td></tr></tbody></table>
+
+
 
 <details>
 
@@ -94,6 +102,10 @@ Below is an example response:
             "missing_data_percentage": 0.0,
             "consecutive_nan": 0
         }
+    },
+    "processing_completed": {
+        "correlation": true,
+        "feature_importance": true
     },
     "tz": "UTC"
 }
