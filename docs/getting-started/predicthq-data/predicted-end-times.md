@@ -8,7 +8,7 @@ The end time and duration of an event is a key piece of information for event da
 
 The Predicted End Times feature uses machine learning and our intelligent algorithms to predict event end times. The goal is that customers can use the predicted end-time value where an actual known end-time is not present.
 
-Predicted End Times covers two categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports)**,** [**concerts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#concerts)**,** and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
+Predicted End Times covers a subset of categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports)**,** [**concerts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#concerts)**,** and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
 
 For sports events Predicted End Times covers 8 sports (American football, Basketball, Baseball, Ice-hockey, NASCAR, Soccer, Rugby, and Australian rules football).&#x20;
 
