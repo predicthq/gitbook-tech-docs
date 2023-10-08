@@ -17,6 +17,8 @@ Live TV events provide viewership data that is attached to events in other categ
 The current release of Live TV events shows the number of people watching sports events per county in the US.
 {% endhint %}
 
+For MLS soccer games Live TV Events has support for streaming viewership of live games. For other sports the viewership does not include streaming.
+
 ## Coverage
 
 **Event Types**

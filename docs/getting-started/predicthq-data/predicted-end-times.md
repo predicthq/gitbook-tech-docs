@@ -8,11 +8,11 @@ The end time and duration of an event is a key piece of information for event da
 
 The Predicted End Times feature uses machine learning and our intelligent algorithms to predict event end times. The goal is that customers can use the predicted end-time value where an actual known end-time is not present.
 
-Predicted End Times covers two categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports) and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
+Predicted End Times covers two categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports)**,** [**concerts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#concerts)**,** and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
 
 For sports events Predicted End Times covers 8 sports (American football, Basketball, Baseball, Ice-hockey, NASCAR, Soccer, Rugby, and Australian rules football).&#x20;
 
-For performing arts events all performing arts events that don't have an actual end time have a predicted end time.
+For performing arts and concerts events all performing arts events that don't have an actual end time have a predicted end time.
 
 Example Use Cases
 
@@ -21,22 +21,11 @@ Example Use Cases
 
 ## How predicted end times are calculated
 
-We use a combination of methods which are largely determined by the availability of historical data. For event types with historical data, we use machine learning methods including linear regression and quantile regression. These models use features such as gender, season, and leagues. For event types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College, and International types, where applicable.
+We use a combination of methods which are largely determined by the availability of historical data. For event types with historical data, we use machine learning methods including linear regression and quantile regression.&#x20;
 
-| Sport               | Professional   | College        | International  |
-| ------------------- | -------------- | -------------- | -------------- |
-| Ice-hockey          | Model-based    | Research-based | Model-based    |
-| Rugby               | Model-based    | Model-based    | Model-based    |
-| Basketball          | Model-based    | Research-based | Research-based |
-| Australian Football | Model-based    | Model-based    | Model-based    |
-| American Football   | Model-based    | Model-based    | Research-based |
-| Football/Soccer     | Research-based | Research-based | Research-based |
-| Baseball            | Model-based    | Research-based | Research-based |
-| NASCAR              | Research-based | Research-based | Research-based |
+For sports, these models use features such as gender, season, and leagues. For event types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College, and International types, where applicable.
 
-
-
-For performing arts events we use research-based methods to calculate predicted end times.
+<table data-full-width="true"><thead><tr><th>Category</th><th>Type</th><th>Professional sport</th><th>College sport</th><th>International sport</th><th>Non-sport</th></tr></thead><tbody><tr><td>Sport</td><td>Ice-hockey</td><td>Model-based</td><td>Research-based</td><td>Model-based</td><td>N/A</td></tr><tr><td>Sport</td><td>Rugby</td><td>Model-based</td><td>Model-based</td><td>Model-based</td><td>N/A</td></tr><tr><td>Sport</td><td>Basketball</td><td>Model-based</td><td>Research-based</td><td>Research-based</td><td>N/A</td></tr><tr><td>Sport</td><td>Australian Football</td><td>Model-based</td><td>Model-based</td><td>Model-based</td><td>N/A</td></tr><tr><td>Sport</td><td>American Football</td><td>Model-based</td><td>Model-based</td><td>Research-based</td><td>N/A</td></tr><tr><td>Sport</td><td>Football/Soccer</td><td>Research-based</td><td>Research-based</td><td>Research-based</td><td>N/A</td></tr><tr><td>Sport</td><td>Baseball</td><td>Model-based</td><td>Research-based</td><td>Research-based</td><td>N/A</td></tr><tr><td>Sport</td><td>NASCAR</td><td>Research-based</td><td>Research-based</td><td>Research-based</td><td>N/A</td></tr><tr><td>Performing arts</td><td>All</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Research-based</td></tr><tr><td>Concerts</td><td>All</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Research-based</td></tr></tbody></table>
 
 ## Predicted End Times in PredictHQ API
 
