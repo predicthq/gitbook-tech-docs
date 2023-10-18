@@ -4,6 +4,10 @@ description: Upload your demand data as CSV, line-delimited JSON or JSON.
 
 # Upload Demand Data
 
+When providing data for a Beam Analysis, the minimum amount of data required is 6 months, and the maximum is 4 years.
+
+Uploading data replaces existing data for the same date. It's not currently possible to remove data for a particular date. The idea with this endpoint is that you're continuously adding new demand data over time.
+
 ## Request
 
 ### HTTP Request
@@ -25,7 +29,7 @@ You can upload the demand data for your analysis in any of the following formats
 
 {% tabs %}
 {% tab title="CSV" %}
-The request body should contain comma separated values representing multiple data points with the columns named `date` and `demand` as in the following example:
+The request body should contain comma-separated values representing multiple data points with the columns named `date` and `demand` as in the following example:
 
 ```csv
 date,demand
@@ -37,6 +41,10 @@ date,demand
 The following request headers must be set:
 
 <table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>text/csv</code></td></tr></tbody></table>
+
+Column Types:
+
+<table><thead><tr><th width="153">Column</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string<br><em>required</em></td><td>ISO8601 Date format (<code>YYYY-MM-DD</code>)<br><br>E.g., <code>2023-01-01</code></td></tr><tr><td><code>demand</code><br>number<br><em>required</em></td><td>Number value (float or integer, must be a positive number).<br><br>Demand will typically be the demand you use in your demand forecast if you are forecasting. For example, it could be units sold, room bookings, or number of staff rostered on per day or any other unit.<br><br>E.g., <code>12.235</code></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Line-delimited JSON" %}
@@ -51,6 +59,10 @@ The request body should contain a list JSON objects representing multiple data p
 The following request headers must be set:
 
 <table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/x-ldjson</code></td></tr></tbody></table>
+
+JSON Fields:
+
+<table><thead><tr><th width="153">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string<br><em>required</em></td><td>ISO8601 Date format (<code>YYYY-MM-DD</code>)<br><br>E.g., <code>2023-01-01</code></td></tr><tr><td><code>demand</code><br>string<br><em>required</em></td><td>Number value (float or integer, must be a positive number).<br><br>Demand will typically be the demand you use in your demand forecast if you are forecasting. For example, it could be units sold, room bookings, or number of staff rostered on per day or any other unit.<br><br>E.g., <code>12.235</code></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="JSON" %}
@@ -66,6 +78,10 @@ The request body should contain a JSON object representing a single data point, 
 The following request headers must be set:
 
 <table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
+
+JSON Fields:
+
+<table><thead><tr><th width="153">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string<br><em>required</em></td><td>ISO8601 Date format (<code>YYYY-MM-DD</code>)<br><br>E.g., <code>2023-01-01</code></td></tr><tr><td><code>demand</code><br>string<br><em>required</em></td><td>Number value (float or integer, must be a positive number).<br><br>Demand will typically be the demand you use in your demand forecast if you are forecasting. For example, it could be units sold, room bookings, or number of staff rostered on per day or any other unit.<br><br>E.g., <code>12.235</code></td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
