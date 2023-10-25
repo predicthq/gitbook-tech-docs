@@ -1,21 +1,22 @@
 # Beam Notebook
 
-This notebook is designed to provide you with the context you need to get started with the [Beam API ](../../../api/beam/)and use it effectively.
+This notebook is designed to provide you with the context you need to navigate [Beam API ](https://docs.predicthq.com/resources/beam)effectively.
 
-[Beam](https://www.predicthq.com/beam) is PredictHQ's automated correlation engine to accurately reveal the events that drive demand for your business. As well as showing you the correlation between events and your demand data. Beam can also decompose your demand data which can help improve your demand forecasting accuracy. For more information on Beam see the [Beam Overview](https://www.predicthq.com/support/beam-overview).
+[Beam](https://www.predicthq.com/beam) is PredictHQ's automated correlation engine to accurately reveal the events that drive demand for your business. It not only highlights the correlation between events and your demand data but also offers a decomposition of your demand data, aiding in enhancing the precision of your demand forecasts. For a deeper dive into Beam, explore the [Beam Overview](https://www.predicthq.com/support/beam-overview).
 
 {% embed url="https://www.youtube.com/watch?v=KZ-G5QGFGBc" %}
 Introduction to Beam
 {% endembed %}
 
-Our goal is to assist users in bulk uploading multiple demand datasets to Beam, allowing them to receive decomposed demand data on a large scale. With the bulk upload feature, users can create multiple analyses at once from their source data. On the other hand, the decomposed data feature allows users to extract decomposed results using the Beam API after uploading their data.
+Our objective through this notebook is to navigate you through the following use cases facilitated by the Beam API:
 
-Utilising the decomposition of your demand data can enhance the accuracy of your forecasts. If you currently do not decompose your data for forecasting purposes, you can leverage Beam's decomposition functionality to obtain a breakdown of your data. Beam's decomposition process separates your data into baseline demand and remainder components. Improved decomposition data can lead to enhanced forecast accuracy.
+1. [Upload demand data to Beam](https://github.com/predicthq/phq-data-science-docs/blob/c0bf930ba035098cd2563eb1e7230d6e2c280931/beam-api-notebook/#part-1-upload-demand-data-to-beam): Upload your data to Beam for analysis.
+2. [Generate Beam analysis results](https://github.com/predicthq/phq-data-science-docs/blob/c0bf930ba035098cd2563eb1e7230d6e2c280931/beam-api-notebook/#part-2-generate-beam-analysis-results): Generate Beam analysis results between events and your demand data using Beam.
+3. [Plot and interpret Beam output](https://github.com/predicthq/phq-data-science-docs/blob/c0bf930ba035098cd2563eb1e7230d6e2c280931/beam-api-notebook/#part-3-plot-and-interpret-beam-output): Visualize and interpret the output from Beam for better insights.
+4. [Identify relevant features using Feature Importance](https://github.com/predicthq/phq-data-science-docs/blob/c0bf930ba035098cd2563eb1e7230d6e2c280931/beam-api-notebook/#part-4-identify-relevant-features-using-feature-importance): Explore Feature Importance to identify and extract relevant features for your forecasting model.
 
-It has the following three parts:
+Utilizing Beam's decomposition and the Feature Importance feature can substantially augment the accuracy of your forecasts. If you have not been decomposing your data for forecasting purposes, Beam’s functionalities provide a robust framework to dissect your data into baseline demand and remainder components, coupled with identifying critical features essential for an accurate forecasting model.
 
-1. Uploading location and demand data to Beam.
-2. Generating correlation results
-3. Plotting and interpretation
+For additional insights into the Beam API, please refer to our [technical documentation](https://docs.predicthq.com/api/beam).
 
 You can [find the notebook on Github](https://github.com/predicthq/phq-data-science-docs/blob/master/beam-api-notebook/A%20Step-by-step%20Guide%20to%20Beam.ipynb).
