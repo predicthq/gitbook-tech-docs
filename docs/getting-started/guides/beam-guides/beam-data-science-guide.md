@@ -18,4 +18,4 @@ It has the following three parts:
 2. Generating correlation results
 3. Plotting and interpretation
 
-You can [find the notebook on Github](https://github.com/predicthq/phq-data-science-docs/blob/beam-api/beam-api-notebook/Creating\_analyses\_with\_demand\_data.ipynb).
+You can [find the notebook on Github](https://github.com/predicthq/phq-data-science-docs/blob/master/beam-api-notebook/A%20Step-by-step%20Guide%20to%20Beam.ipynb).
