@@ -14,6 +14,7 @@ This field is named `phq_labels`.
 
 PHQ Labels are available for the following categories:
 
+* Concerts
 * Conferences
 * Expos
 * Festivals
