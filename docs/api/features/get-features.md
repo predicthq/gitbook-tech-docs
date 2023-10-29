@@ -110,6 +110,37 @@ PHQ Rank features provide daily-level aggregated sum of events bucketed by PHQ R
 PHQ Rank features cannot currently be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
 {% endtab %}
 
+{% tab title="PHQ Spend Features" %}
+PHQ Spend features provide daily-level aggregated stats based on total USD we predict will be spent during events on a given day. This takes into account complications like distributing attendance across multi-day events.
+
+You can request industry-specific features which are tuned to one of three potential industries:
+
+* Accommodation: Event spend relating to hotels and hosts for the purposes of staying at during events. Spend can extend before and after an event actually starts/ends.
+* Hospitality: Event spend on restaurants, food and drinks. Hotel restaurants are included in this industry.
+* Transportation: Ground-based transportation for the purposes of getting to and from an event. Includes public and private transport, such as taxis, rails, busses and rideshares.
+
+<table><thead><tr><th width="440">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_spend_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_spend_expos</code></td><td>Expos</td></tr><tr><td><code>phq_spend_sports</code></td><td>Sports</td></tr><tr><td><code>phq_spend_community</code></td><td>Community</td></tr><tr><td><code>phq_spend_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_spend_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_spend_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_spend_conferences_accommodation</code></td><td>Conferences - Accommodation</td></tr><tr><td><code>phq_spend_expos_accommodation</code></td><td>Expos - Accommodation</td></tr><tr><td><code>phq_spend_sports_accommodation</code></td><td>Sports - Accommodation</td></tr><tr><td><code>phq_spend_community_accommodation</code></td><td>Community - Accommodation</td></tr><tr><td><code>phq_spend_concerts_accommodation</code></td><td>Concerts - Accommodation</td></tr><tr><td><code>phq_spend_festivals_accommodation</code></td><td>Festivals - Accommodation</td></tr><tr><td><code>phq_spend_performing_arts_accommodation</code></td><td>Performing Arts - Accommodation</td></tr><tr><td><code>phq_spend_conferences_hospitality</code></td><td>Conferences - Hospitality</td></tr><tr><td><code>phq_spend_expos_hospitality</code></td><td>Expos - Hospitality</td></tr><tr><td><code>phq_spend_sports_hospitality</code></td><td>Sports - Hospitality</td></tr><tr><td><code>phq_spend_community_hospitality</code></td><td>Community - Hospitality</td></tr><tr><td><code>phq_spend_concerts_hospitality</code></td><td>Concerts - Hospitality</td></tr><tr><td><code>phq_spend_festivals_hospitality</code></td><td>Festivals - Hospitality</td></tr><tr><td><code>phq_spend_performing_arts_hospitality</code></td><td>Performing Arts - Hospitality</td></tr><tr><td><code>phq_spend_conferences_transportation</code></td><td>Conferences - Transportation</td></tr><tr><td><code>phq_spend_expos_transportation</code></td><td>Expos - Transportation</td></tr><tr><td><code>phq_spend_sports_transportation</code></td><td>Sports - Transportation</td></tr><tr><td><code>phq_spend_community_transportation</code></td><td>Community - Transportation</td></tr><tr><td><code>phq_spend_concerts_transportation</code></td><td>Concerts - Transportation</td></tr><tr><td><code>phq_spend_festivals_transportation</code></td><td>Festivals - Transportation</td></tr><tr><td><code>phq_spend_performing_arts_transportation</code></td><td>Performing Arts - Transportation</td></tr></tbody></table>
+
+## Configuration
+
+You can configure PHQ Spend features using the options below.
+
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "stats": [
+    "count",
+    "std_dev",
+    "median"
+  ]
+}
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g. </p><pre class="language-json"><code class="lang-json">{
+  "phq_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+}
+</code></pre></td></tr></tbody></table>
+{% endtab %}
+
 {% tab title="PHQ Viewership Features" %}
 PHQ Viewership features provide daily-level aggregated stats based on the number of people who we predict will view broadcasts on a given day.
 
@@ -173,7 +204,7 @@ Other than the date, the structure of each result here will depend on how you co
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Attendance features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Attendance features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -195,6 +226,21 @@ Other than the date, the structure of each result here will depend on how you co
     "3": 0,
     "4": 2,
     "5": 0
+  }
+}
+</code></pre></td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="PHQ Spend Features" %}
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p></p><p>PHQ Spend features are stats-based.</p><p></p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "stats": {
+    "count": 5,
+    "sum": 17307,
+    "min": 1000,
+    "max": 9215,
+    "avg": 3461.4,
+    "median": 2620.0,
+    "std_dev": 2978.810473997968
   }
 }
 </code></pre></td></tr></tbody></table>
