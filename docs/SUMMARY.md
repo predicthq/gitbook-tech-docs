@@ -68,6 +68,7 @@
     * [Demand Surge Notebook](getting-started/guides/demand-surge-api-guides/demand-surge-notebook.md)
   * [Loop Guides](getting-started/guides/loop-guides/README.md)
     * [Integrate with Loop Links](getting-started/guides/loop-guides/integrate-with-loop-links.md)
+  * [Using the API with the free plan](getting-started/guides/using-the-api-with-the-free-plan.md)
   * [Guide to Protecting PredictHQ Data](getting-started/guides/guide-to-protecting-predicthq-data.md)
   * [Streamlit Demo Apps](getting-started/guides/streamlit-demo-apps.md)
 
