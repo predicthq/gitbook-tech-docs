@@ -2,6 +2,17 @@
 description: >-
   Data can be provided as NDJSON, CSV or Parquet. This document describes the
   CSV/Parquet data structure.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
 ---
 
 # CSV/Parquet Data Structure for ADX

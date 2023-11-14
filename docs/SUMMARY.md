@@ -87,7 +87,7 @@
 * [Bulk Data Delivery](predicthq-api/bulk-data-delivery/README.md)
   * [Snowflake](predicthq-api/bulk-data-delivery/snowflake.md)
     * [Example SQL Queries for Snowflake](predicthq-api/bulk-data-delivery/snowflake/example-sql-queries-for-snowflake.md)
-  * [AWS Data Exchange](predicthq-api/bulk-data-delivery/aws-data-exchange/README.md)
+  * [AWS Data Exchange](predicthq-api/bulk-data-delivery/aws-data-exchange.md)
     * [CSV/Parquet Data Structure for ADX](predicthq-api/bulk-data-delivery/aws-data-exchange/csv-parquet-data-structure-for-adx.md)
     * [NDJSON Data Structure for ADX](predicthq-api/bulk-data-delivery/aws-data-exchange/ndjson-data-structure-for-adx.md)
   * [Keep Data Updated via API](predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md)
