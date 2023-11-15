@@ -92,6 +92,7 @@
     * [NDJSON Data Structure for ADX](predicthq-api/bulk-data-delivery/aws-data-exchange/ndjson-data-structure-for-adx.md)
   * [Keep Data Updated via API](predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md)
   * [Export Data via Control Center](predicthq-api/bulk-data-delivery/export-data-via-control-center.md)
+  * [Databricks](predicthq-api/bulk-data-delivery/databricks.md)
 
 ## API Reference <a href="#api" id="api"></a>
 
