@@ -71,7 +71,11 @@ description: Get an existing Saved Location.
       "phq_attendance_sum": 2646606,
       "attended_event_count": 519,
       "non_attended_event_count": 85,
-      "unscheduled_event_count": 0
+      "unscheduled_event_count": 0,
+      "pes_total_sum": 746427,
+      "pes_accommodation_sum": 104256,
+      "pes_hospitality_sum": 482976, 
+      "pes_transportation_sum": 159193
     }
   ]
 }
@@ -139,7 +143,11 @@ Below is an example response:
       "phq_attendance_sum": 2646606,
       "attended_event_count": 519,
       "non_attended_event_count": 85,
-      "unscheduled_event_count": 0
+      "unscheduled_event_count": 0,
+      "pes_total_sum": 746427,
+      "pes_accommodation_sum": 104256,
+      "pes_hospitality_sum": 482976, 
+      "pes_transportation_sum": 159193
     }
   ],
   "subscription_valid_types": [
