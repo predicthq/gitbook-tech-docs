@@ -56,9 +56,9 @@ The ML features used by the concerts model to predict how many people will atten
 * Ticket sales
 * And more
 
-#### Performing arts model - features used
+#### Performing Arts model - features used
 
-The ML features used by the performing arts model to predict how many people will attend a concert event are listed below:
+The ML features used by the performing arts model to predict how many people will attend an event are listed below:
 
 * Type of event
 * Venue capacity
