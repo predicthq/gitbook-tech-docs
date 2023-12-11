@@ -52,21 +52,31 @@ The ML features used by the concerts model to predict how many people will atten
 * Population density
 * Venue capacity
 * Performer data
-* Population density
 * Ticket sales
 * And more
 
-#### Performing Arts model - features used
+#### Performing arts model - features used
 
-The ML features used by the performing arts model to predict how many people will attend an event are listed below:
+The ML features used by the performing arts model to predict how many people will attend a performing-arts event are listed below:
 
 * Type of event
 * Venue capacity
 * Ticket sales
 * Duration
 * Start time
-* Number of\
-  performers
+* Number of performers
+* Population density
+* And more
+
+**Conferences model - features used**&#x20;
+
+The ML features used by the conferences model to predict how many people will attend a conference event are listed below:
+
+* Event density
+* Venue capacity
+* Location&#x20;
+* Duration
+* Start time
 * Population density
 * And more
 
