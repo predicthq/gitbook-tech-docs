@@ -4,7 +4,7 @@ description: >-
   directly into Tableau.
 ---
 
-# Tableau Data Connector
+# Integrate with Tableau using our Data Connector
 
 ## Requirements
 
@@ -25,5 +25,5 @@ https://tableau-connector.predicthq.com
 ```
 
 * Click on "Begin" and enter the Access Token you generated.
-* Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](../api/events/search-events.md) for a full list of fields and parameters.
+* Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](../../api/events/search-events.md) for a full list of fields and parameters.
 * Click "Get data" to import events into Tableau.

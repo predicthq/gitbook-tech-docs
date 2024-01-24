@@ -89,7 +89,7 @@ response = requests.get(
 print(response.json())
 ```
 
-You can then use the events or store them in your data store. Ensure you keep events refresh as events are dynamic and can change such as be cancelled, postponed, move locations, change dates, and so on. See [Keeping Data Updated](../../../../predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md).
+You can then use the events or store them in your data store. Ensure you keep events refresh as events are dynamic and can change such as be cancelled, postponed, move locations, change dates, and so on. See [Keeping Data Updated](../../../../integrations/integration-guides/keep-data-updated-via-api.md).
 
 For example, you may write code to loop over your list of locations and retrieve updated events for each and update your data store.
 

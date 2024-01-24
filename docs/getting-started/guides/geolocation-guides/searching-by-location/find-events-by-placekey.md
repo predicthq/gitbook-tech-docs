@@ -149,7 +149,7 @@ To account for all events around a radius, see “All neighboring hexes'' in the
 
 ## Find Events Near a Location in Snowflake
 
-PredictHQ’s Events data shared through [Snowflake Secure Data Sharing](../../../../predicthq-api/bulk-data-delivery/snowflake.md) includes Placekey, as a separate column, reflecting the physical location where the event is held. There are a few approaches you could take to use this column when it comes to joining your dataset in Snowflake.
+PredictHQ’s Events data shared through [Snowflake Secure Data Sharing](../../../../integrations/third-party-integrations/snowflake/) includes Placekey, as a separate column, reflecting the physical location where the event is held. There are a few approaches you could take to use this column when it comes to joining your dataset in Snowflake.
 
 You can simply join PredictHQ’s event tables with your data on the entire Placekey column. This makes sense if your POI data consists of venues where events can be held. If you want to find events happening near the location of your POI locations, you need to join your data with PredictHQ’s Event tables on a [substring](https://docs.snowflake.com/en/sql-reference/functions/substr.html) of the @where part of the Placekey column.
 

@@ -106,4 +106,4 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [Integrate with Loop Links](../../../getting-started/guides/loop-guides/integrate-with-loop-links.md)
+* [Integrate with Loop Links](../../../integrations/integration-guides/integrate-with-loop-links.md)
