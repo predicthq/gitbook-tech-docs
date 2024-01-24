@@ -20,6 +20,10 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 
 ## Guide
 
+{% embed url="https://vimeo.com/905617307" %}
+Xuxu Wang (CDO) demoing this approach with PowerBI
+{% endembed %}
+
 ### Base Model in PowerBI
 
 The starting point is developing a base model in PowerBI (without PredictHQ data). Using a combination of historical data and time trend features, we quickly developed a base model in PowerBI. This initial version yielded a performance of 48%, a good starting point for further enhancement.
