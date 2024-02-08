@@ -17,7 +17,7 @@ Live TV events provide viewership data that is attached to events in other categ
 The current release of Live TV events shows the number of people watching sports events per county in the US.
 {% endhint %}
 
-Live TV events support streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV). It only covers live games, not re-runs.
+Live TV events include live streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV).&#x20;
 
 ## Coverage
 
