@@ -43,7 +43,7 @@ Note: The sports type column is shown in the `event_label` field in the broadcas
 
 **Date Range Coverage**
 
-Live TV Events covers sports games that started from January 1, 2018 to two weeks into the future.
+Live TV Events via the Broadcast API covers sports games that started from November 1, 2021, to 90 days in the future (90 days from the current date).
 
 **Location**
 
