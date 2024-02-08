@@ -17,13 +17,13 @@ Live TV events provide viewership data that is attached to events in other categ
 The current release of Live TV events shows the number of people watching sports events per county in the US.
 {% endhint %}
 
-For MLS soccer games Live TV Events has support for streaming viewership of live games. For other sports the viewership does not include streaming.
+Live TV events support streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV). It only covers live games, not re-runs.
 
 ## Coverage
 
 **Event Types**
 
-We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This effects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Viewership is only shown for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, will always show viewership in all counties in the US.
+We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Viewership is only shown for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, will always show viewership in all counties in the US.
 
 **7 MAJOR SPORTS LEAGUES**
 
@@ -47,7 +47,7 @@ Live TV Events covers sports games that started from January 1, 2018 to two week
 
 **Location**
 
-Live TV Events currently available in the US at the current stage.
+Live TV Events are currently available in the US at the current stage.
 
 #### Broadcast Status
 
@@ -72,7 +72,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](../../../api/places/get-place-hierarchies.md) can be used to search in the API or in Control Center. The results will be returned on the county level where the place is located. For example, users can search the broadcast in Bell City, Los Angeles, all broadcasts in Los Angeles County that match other criteria will be returned in the result.
+Places in any [hierarchy level](../../../api/places/get-place-hierarchies.md) can be used to search in the API or in Control Center. The results will be returned on the county level where the place is located. For example, users can search for the broadcast in Bell City, Los Angeles, and all broadcasts in Los Angeles County that match other criteria will be returned in the result.
 
 ## Ranking
 
@@ -87,11 +87,15 @@ PHQ Viewership is the number of people who watch the live broadcast game in a co
   },
 ```
 
+#### Timeframe for broadcasts
+
+The Live TV Events machine learning models predicted the viewership for sports games before they happen. Broadcast records are generated 90 days before a sports game starts. However, viewership is updated daily from 14 days before the event starts providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. The viewership numbers generated between 90 days and 14 days can be used as a high-level less accurate indication of viewership.
+
 #### Physical Event Details
 
 The broadcast API also returns the physical event details accordingly with all available information. Users don’t need an event subscription to access relevant information.
 
-* **Event ID**: `event_id` of the physical event can be used to find all broadcasts nation-wide for that specific sport game.
+* **Event ID**: `event_id` of the physical event can be used to find all broadcasts nationwide for that specific sport game.
 * **Label**: `event.label` for the physical sports event provides more information about the sports type and league. It can be used to find broadcasts for the specific sports type.
 * **Entity**: The physical sports events have venue entities available.
 * **PHQ Rank**: The physical sports events have PHQ Rank available.
