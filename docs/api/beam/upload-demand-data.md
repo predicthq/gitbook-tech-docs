@@ -21,7 +21,7 @@ Uploading data replaces existing data for the same date. It's not currently poss
 
 ### Request Headers
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><p></p><ul><li><code>text/csv</code></li><li><code>application/x-ldjson</code></li><li><code>application/json</code></li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><ul><li><code>text/csv</code></li><li><code>application/x-ldjson</code></li><li><code>application/json</code></li></ul></td></tr></tbody></table>
 
 ### Request Body
 
@@ -29,7 +29,7 @@ You can upload the demand data for your analysis in any of the following formats
 
 {% tabs %}
 {% tab title="CSV" %}
-The request body should contain comma-separated values that represent multiple data points. It is crucial that the column names are specified in **lowercase** as `date` and `demand`, demonstrated by the example below:
+The request body should contain comma-separated values that represent multiple data points with the column names (in lowercase) as `date` and `demand`, demonstrated by the example below:
 
 ```csv
 date,demand
@@ -48,7 +48,7 @@ Column Types:
 {% endtab %}
 
 {% tab title="Line-delimited JSON" %}
-The request body should consist of line-delimited JSON objects, each representing a distinct data point. Ensure that the property names within these objects are in **lowercase**, specifically `date` and `demand`. The format should follow the example given below:
+The request body should consist of line-delimited JSON objects, each representing a distinct data point. Ensure that the fields within these objects are named `date` and `demand` (lowercase). The format should follow the example given below:
 
 ```json
 {"date": "2023-01-01", "demand": 12.235}
@@ -66,7 +66,7 @@ JSON Fields:
 {% endtab %}
 
 {% tab title="JSON" %}
-The request body should contain a JSON object that represents a single data point. For each request, only one data point is permitted. Ensure the keys within this object are in **lowercase**, specifically `date` and `demand`, as demonstrated in the example below:
+The request body should contain a JSON object that represents a single data point. For each request, only one data point is permitted. Ensure that the fields are named `date` and `demand` (lowercase), as demonstrated in the example below:
 
 ```json
 {
