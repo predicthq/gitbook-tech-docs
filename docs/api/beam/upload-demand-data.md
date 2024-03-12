@@ -29,7 +29,7 @@ You can upload the demand data for your analysis in any of the following formats
 
 {% tabs %}
 {% tab title="CSV" %}
-The request body should contain comma-separated values representing multiple data points with the columns named `date` and `demand` as in the following example:
+The request body should contain comma-separated values that represent multiple data points. It is crucial that the column names are specified in **lowercase** as `date` and `demand`, demonstrated by the example below:
 
 ```csv
 date,demand
@@ -48,7 +48,7 @@ Column Types:
 {% endtab %}
 
 {% tab title="Line-delimited JSON" %}
-The request body should contain a list JSON objects representing multiple data points, one data point per line using the following format:
+The request body should consist of line-delimited JSON objects, each representing a distinct data point. Ensure that the property names within these objects are in **lowercase**, specifically `date` and `demand`. The format should follow the example given below:
 
 ```json
 {"date": "2023-01-01", "demand": 12.235}
@@ -66,7 +66,7 @@ JSON Fields:
 {% endtab %}
 
 {% tab title="JSON" %}
-The request body should contain a JSON object representing a single data point, only a single data point can be uploaded per request using the following example:
+The request body should contain a JSON object that represents a single data point. For each request, only one data point is permitted. Ensure the keys within this object are in **lowercase**, specifically `date` and `demand`, as demonstrated in the example below:
 
 ```json
 {
