@@ -198,7 +198,7 @@ School holidays events for other countries, and from the US and UK before the ti
 
 For the United Kingdom (from September 2017) and US (from September 2018) school holidays, aviation rank is calculated by applying a linear transformation to the student numbers at the local authority level and then converted based on a logarithmic scale to an aviation rank value. Note that the aviation rank can be 0 when the student count is less than a threshold.
 
-For example, The [West Ada School District - Thanksgiving Break](https://control.predicthq.com/search/events/HpLNn5wxn4GQ9uAv6G) in Ada County, US has an Aviation Rank of 52, while the [Longview Public Schools - Summer Break](https://control.predicthq.com/search/events/6C78QYvqdPB9Mm9ghV) in Cowlitz County, US has Aviation Rank of 0.
+For example, The [West Ada School District - Thanksgiving Break](https://control.predicthq.com/search/events/HpLNn5wxn4GQ9uAv6G) in Ada County, US has an Aviation Rank of 52, while the [Longview Public Schools - Summer Break](https://control.predicthq.com/search/events/6C78QYvqdPB9Mm9ghV) in Cowlitz County, US has an Aviation Rank of 0.
 
 For the school holidays events for other countries, and from the US and UK before the time periods stated above, we use the following method:
 
@@ -225,9 +225,9 @@ Labels for an observance event provide more information about the event. The mos
    * When the observance marks of the seasonal change: [June Solstice](https://control.predicthq.com/search/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://control.predicthq.com/search/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://control.predicthq.com/search/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://control.predicthq.com/search/events/5eVGwA82bfPEMdHXrM).
    * 227 countries observed the above four types of events.
 2. `holiday-religious`: When observing a religious holiday that is mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://control.predicthq.com/search/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://control.predicthq.com/search/events/aY7JYozjyDx35umEwG) in other countries.
-3. `holiday-christian`: When observing a Christian related holiday, e.g. [Epiphany](https://control.predicthq.com/search/events/cMjzGaEAKnCWLTG4Lc).
+3. `holiday-christian`: When observing a Christian-related holiday, e.g. [Epiphany](https://control.predicthq.com/search/events/cMjzGaEAKnCWLTG4Lc).
 4. `observance-united-nations`:
-   * International days created by the United Nations to promote international awareness and action on some issues. For example, March 22 is[ World Water Day](https://control.predicthq.com/search/events/NDj4W65XpbLLeA9kPu).
+   * International days were created by the United Nations to promote international awareness and action on some issues. For example, March 22 is[ World Water Day](https://control.predicthq.com/search/events/NDj4W65XpbLLeA9kPu).
    * The United Nations also observes anniversaries of key events in its history. E.g. May 8th is [Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War](https://control.predicthq.com/search/events/nLoWsBHWpVrHuW5FcC).
 5. `holiday-hebrew`: When observing a Hebrew related holiday, e.g. many countries observe [Tu Bishvat](https://control.predicthq.com/search/events/FRgcTikSuwrJixHDdL).
 
@@ -250,15 +250,15 @@ Observances have event group entities available.
 **PHQ Rank**
 
 * number of well-known observances have a PHQ Rank of 90 to indicate the popularity/impact on the region. For example, [New Years’ Eve](https://control.predicthq.com/search/events/qZbqwEStS5DTZyASnt), [Valentine's Day](https://control.predicthq.com/search/events/x957f7DyXpeCubLpWH), [Halloween](https://control.predicthq.com/search/events/bEPN3H3UA5UJkVMTop).
-* The majority of observance have a PHQ rank of 50 to reflect the impact is more likely to benefit local businesses.
+* The majority of observances have a PHQ rank of 50 to reflect the impact is more likely to benefit local businesses.
 
 **Local Rank**
 
-Observances events have no Local Rank available as they impact an entire area instead of a specific point.
+Observance events have no Local Rank available as they impact an entire area instead of a specific point.
 
 **Aviation Rank**
 
-Observances events have no Aviation Rank available as they impact an entire area instead of a specific point.
+Observance events have no Aviation Rank available as they impact an entire area instead of a specific point.
 
 **PHQ Attendance**
 
@@ -266,9 +266,9 @@ Observances have no PHQ Attendance available as the rank/impact only reflects it
 
 ### Politics
 
-Politics events include the main dates of election and referendums around the world.
+Politics events include the main dates of elections and referendums around the world.
 
-**Note** the politics category currently does not cover physically attended events to do with politics such as rallies and debates, which currently are under community category labelled with `rallies` or `debates`.
+**Note** the politics category currently does not cover physically attended events to do with politics such as rallies and debates.
 
 **LABELS**
 
@@ -285,7 +285,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-Politics events scope to a country level. For example [Election for the President of the United States of America](https://control.predicthq.com/search/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude is pointing to the center of the covered area. The place scope will identify the full area of coverage.
+Politics events scope to a country level. For example [Election for the President of the United States of America](https://control.predicthq.com/search/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude point to the center of the covered area. The place scope will identify the full area of coverage.
 
 #### Entities
 
