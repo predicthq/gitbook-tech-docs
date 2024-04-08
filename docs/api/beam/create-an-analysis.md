@@ -39,7 +39,7 @@ POST https://api.predicthq.com/v1/beam/analyses
     }
   }
 }
-</code></pre></td></tr><tr><td><code>tz</code><br>string<br>optional</td><td><p>Time zone of the location in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format.<br><br>E.g. <code>Pacific/Auckland</code></p><p><br><em>Note: this parameter is only used in the Control Center Beam UI for the purpose of displaying a list of relevant events. It has no bearing on the outcome of a Beam analysis.</em></p></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>tz</code><br>string<br><em>optional</em></td><td><p>Time zone of the location in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format.<br><br>E.g. <code>Pacific/Auckland</code></p><p><br><em>Note: this field is being used in the Control Center Beam UI for the purpose of fetching a list of relevant events in the correct time zone. It no longer has bearing on the outcome of a Beam analysis.</em></p></td></tr></tbody></table>
 
 ## Response
 
@@ -78,8 +78,7 @@ curl -X POST https://api.predicthq.com/v1/beam/analyses \
         },
         "rank": {
             "type": "phq"
-        },
-        "tz": "UTC"
+        }
     }
     EOF
     )
@@ -108,8 +107,7 @@ response = requests.post(
         },
         "rank": {
             "type": "phq"
-        },
-        "tz": "UTC"
+        }
     }
 )
 

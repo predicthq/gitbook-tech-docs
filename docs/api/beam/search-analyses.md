@@ -67,7 +67,6 @@ Below is an example response:
                     "consecutive_nan": 0
                 }
             },
-            "tz": "Pacific/Auckland",
             "analysis_id": "analysis_id"
         }
     ]

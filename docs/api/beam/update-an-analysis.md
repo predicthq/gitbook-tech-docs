@@ -54,8 +54,7 @@ curl -X PUT https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID \
         },
         "rank": {
             "type": "phq"
-        },
-        "tz": "UTC"
+        }
     }
     EOF
     )
@@ -84,8 +83,7 @@ response = requests.put(
         },
         "rank": {
             "type": "phq"
-        },
-        "tz": "UTC"
+        }
     }
 )
 
