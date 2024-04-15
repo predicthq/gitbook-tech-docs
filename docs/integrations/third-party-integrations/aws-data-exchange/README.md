@@ -1,4 +1,4 @@
-# AWS Data Exchange
+# Receive Data via AWS Data Exchange
 
 AWS Data Exchange (ADX) allows customers to access regularly updated, full and incremental exports of PredictHQ data. The data is provided as either CSV, JSON or Parquet and can be automatically copied to AWS S3 where your existing Data Warehouse, Data Science platform or other data platform natively integrates with, to keep your copy of PredictHQ data continuously up-to-date.
 
@@ -29,3 +29,11 @@ Below is a useful video demonstrating how to setup automatic exports of data fro
 {% embed url="https://youtu.be/3sHbO5T45cE" %}
 Setup automatic export of data from AWS Data Exchange to S3
 {% endembed %}
+
+## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
+
+Be aware that we may make backwards compatible changes to the exports from time-to-time. Examples of some changes we might make that don't break backwards compatibility and may be introduced at any time without warning:
+
+* New columns/fields added to existing files.
+* New files in addition to existing files.
+* New event categories and labels.

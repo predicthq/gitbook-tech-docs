@@ -1,4 +1,4 @@
-# Snowflake
+# Receive Data via Snowflake
 
 Snowflake Secure Data Share enables companies to access PredictHQ’s data in a controlled and efficient way. Access to a Secure Share of our events means you will experience a familiar and high-performance SQL interface with an up-to-date, clean, and complete set of PredictHQ’s data.
 
@@ -19,6 +19,14 @@ PredictHQ Sample Data Shares on Snowflake Marketplace
 Customized Data Shares can be set up to match your preferences in terms of data type, location, time window and business use case. They are secure, easy to set up and usually don't require business resources for data integrations if you're already in the Snowflake platform.
 
 [Get in touch](https://www.predicthq.com/contact) with us to discuss your needs and we will come back to you as soon as possible.
+
+## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
+
+Be aware that we may make backwards compatible changes to the Snowflake tables from time-to-time. Examples of some changes we might make that don't break backwards compatibility and may be introduced at any time without warning:
+
+* New columns added to existing tables.
+* New tables in addition to existing tables.
+* New event categories and labels.
 
 ## Frequently Asked Questions
 
