@@ -20,22 +20,23 @@ We also provide other data science guides that go into more detail on different 
 
 This guide provides details on how to create event-based features using the SDK for the Features API. It assumes you are familiar with adding ML features to your models. Features are often used in demand forecasting models to forecast future demand but can be used in other types of models as well.
 
-The features in this guide are designed to be used in a forecasting solution where you can forecast demand for each location. For example, you may forecast demand for a set of retail stores, hotels, restaurants, parking garages, or other types of locations. In this scenario you have a set of event-based features that have a value per location and these features are used in your model to adjust the forecast for that location.
+The features in this guide are designed to be used in a forecasting solution where you can forecast demand for each location. For example, you may forecast demand for a set of retail stores, hotels, restaurants, parking garages, or other types of locations. In this scenario, you have a set of event-based features that have a value per location and these features are used in your model to adjust the forecast for that location.
 
 For example, the process for using event-based features may look as follows:
 
 1. Review the different features in this guide and the other related documentation.
 2. Data exploration - you may want to conduct data exploration using a sample data set around one of your locations.
-3. Events Feature testing - you may want to get a training data set for a location or locations (see below on using a longer data range), and conduct model R\&D with events features using techniques such as model selection and cross-validation.
-4. Model evaluation - you may want to compare the model accuracy on historical data before adding the event features and after adding the event features.
-5. Update your model to use the new features - get your production model ready for deployment.
-6. Work with your engineering team to add the features to your production pipeline - the features API can be used by your production pipeline.
+3. Events ML Feature testing - you may want to get a training data set for a location or locations (see below on using a longer data range), and conduct model R\&D with events features using techniques such as model selection and cross-validation.
+4. Model evaluation - you may want to compare the model accuracy on historical data before adding the event ML features and after adding the event features.
+5. Update your model to use the new ML features - get your production model ready for deployment.
+6. Work with your engineering team to add the features to your production pipeline - the Features API can be used by your production pipeline.
 7. Deploy your new model in production with the new event-based features.
 
 For a simple overview of how you can integrate event-based features into your system, see below. For a production implementation, we'd suggest that you store or cache the features from the Features API before you call them in production. This helps make your implementation more robust as calling services over the internet always have an element of risk. Then regularly update your copy of the features. For example, if you run your model once per day to update your forecast then you may want to refresh your copy of the Features API just before your forecast runs.
 
 ***
 
-The section above is an extract from the notebook.
+The section above is an extract from the notebook. [Download the full notebook here](https://github.com/predicthq/phq-data-science-docs/blob/master/feature-engineering-guide/feature\_engineering\_guide.ipynb).
 
-[Download the full notebook here](https://github.com/predicthq/phq-data-science-docs/blob/master/feature-engineering-guide/feature\_engineering\_guide.ipynb).
+See also the [Snowflake Data Science Guide](../../../integrations/third-party-integrations/snowflake/snowflake-data-science-guide/) for details on how to create ML features in Snowflake as an alternative to calling the Features API directly. Instead follow the guide but get the ML features from the table in Snowflake.
+
