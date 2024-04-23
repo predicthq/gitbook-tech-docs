@@ -4,7 +4,7 @@ description: Upload your demand data as CSV, line-delimited JSON or JSON.
 
 # Upload Demand Data
 
-When providing data for a Beam Analysis, the minimum amount of data required is 6 months (180 data points), and the maximum is 4 years.
+When providing data for a Beam Analysis, the minimum amount of data required is **6 months** (180 data points), and the maximum is **1 year** into the future (today + 365 days).
 
 {% hint style="info" %}
 Beam can impute up to 20% of missing values, provided that the minimum data requirements are satisfied.
