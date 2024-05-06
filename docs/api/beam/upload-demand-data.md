@@ -4,10 +4,10 @@ description: Upload your demand data as CSV, line-delimited JSON or JSON.
 
 # Upload Demand Data
 
-When providing data for a Beam Analysis, the minimum amount of data required is **6 months** (180 data points), and the maximum is **1 year** into the future (today + 365 days).
+The minimum amount of data required is **6 months**, or 180 data points. This data needs to be between 2017-01-01 and one year into the future from today's date (today + 365 days).
 
 {% hint style="info" %}
-Beam can impute up to 20% of missing values, provided that the minimum data requirements are satisfied.
+Beam can impute up to 20% of missing values, provided that the minimum data requirements are satisfied and there are no more than 7 consecutive days missing.
 {% endhint %}
 
 Uploading data replaces existing data for the same date. It's not currently possible to remove data for a particular date. The idea with this endpoint is that you're continuously adding new demand data over time.
