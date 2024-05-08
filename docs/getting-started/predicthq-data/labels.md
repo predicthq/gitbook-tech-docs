@@ -10,7 +10,7 @@ All categories have the new `phq_labels` and will be used by default.&#x20;
 
 Event labels can be searched by using the`phq_labels` field.&#x20;
 
-Some `labels` which repeat the category name such as `label: academic` have been removed.
+Some `labels` which repeats the category name such as `label: academic` have been removed.
 
 `phq_labels` will be used by default as all legacy labels have been migrated.
 
@@ -28,7 +28,7 @@ PHQ Labels are available for the following categories:
 * Festivals
 * Performing Arts
 * Community
-* Acdemic&#x20;
+* Academic&#x20;
 * Airport-delays
 * Daylight-savings
 * Disasters
@@ -62,13 +62,13 @@ response = requests.get(
 # get PHQ Labels and the count of events having them from the response
 phq_labels = response.json().get("phq_labels")
 
-print(response.json().get("phq_labels"))
+print(phq_labels)
 # > {'basketball': 408197,'parade': 14327, ... }
 
 
 ```
 
-Alternatively, you could use the list of PHQ Labels below as a reference. Bear in mind some of the PHQ Labels below might not appear in the events within your PredictHQ plans.
+Alternatively, you could use the list of PHQ Labels below as a reference. Bear in mind some of the PHQ Labels below might not appear in the events within your PredictHQ plan.
 
 <details>
 
@@ -313,7 +313,7 @@ Alternatively, you could use the list of PHQ Labels below as a reference. Bear i
 
 ### Labels (Legacy)
 
-Legacy labels are still returned in order to preserve backwards compatibility with existing user implementations.
+Legacy labels are still returned in order to preserve backward compatibility with existing user implementations.
 
 This field is named `labels`
 
