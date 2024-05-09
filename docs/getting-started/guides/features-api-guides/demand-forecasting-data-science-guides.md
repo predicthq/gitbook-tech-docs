@@ -1,13 +1,14 @@
-# Demand Forecasting Data Science Guide
+---
+description: >-
+  The provided notebook demonstrates how you can incorporate forecast-ready
+  event features into your demand forecasting model.
+---
 
-We provide guides to using our API and data with common Data Science tools and libraries in Python. The articles include a link to Jupyter Notebooks that you can download and run. The guides include code samples and instructions for performing common tasks.
+# Demand Forecasting with Event Features
 
-* [Demand Forecasting Data Science Guide](https://github.com/predicthq/phq-data-science-docs/tree/master/demand-forecasting)
+{% embed url="https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb" %}
 
-{% embed url="https://www.youtube.com/watch?v=0HhQiGWoOtQ" %}
-Demand Forecasting with PredictHQ Features API Demo - Part 1
-{% endembed %}
+While this notebook uses inputs from the [Beam API](../../../api/beam/) and [Features API](../../../api/features/), it is self-contained and can be run independently. Check out the following guides for more information:
 
-{% embed url="https://www.youtube.com/watch?v=u_Ndp_4jjpM" %}
-Demand Forecasting with PredictHQ Features API Demo - Part 2
-{% endembed %}
+* [beam-guides](../beam-guides/ "mention")
+* [feature-engineering-guide.md](feature-engineering-guide.md "mention")
