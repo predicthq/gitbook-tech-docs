@@ -96,6 +96,6 @@ print(response.status_code)
 
 Below are some guides relevant to this API:
 
-* [Beam Data Science Guide](../../integrations/integration-guides/beam-data-science-guide.md)
+* [beam-guides](../../getting-started/guides/beam-guides/ "mention")
 
 [^1]: An existing Beam Analysis ID.

@@ -120,4 +120,4 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [Beam Data Science Guide](../../integrations/integration-guides/beam-data-science-guide.md)
+* [beam-guides](../../getting-started/guides/beam-guides/ "mention")

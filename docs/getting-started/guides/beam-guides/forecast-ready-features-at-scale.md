@@ -1,11 +1,16 @@
 ---
 description: >-
-  The provided notebook connects the dots between Beam and Features API to get
-  relevant forecast-ready features for your models, at scale.
+  The provided notebook demonstrates how you can get relevant forecast-ready
+  features for your locations, at scale. To do this, we will use the Beam API.
 ---
 
-# Forecast-Ready Features at Scale
+# ML Features by Location
 
-{% embed url="https://deepnote.com/workspace/PredictHQ-598e89b2-2c38-415a-b860-76e96014e382/project/Get-forecast-ready-features-at-scale-with-Beam-and-Features-API-b6734301-09fc-4fd4-9777-cef74d38153d/notebook/67ffb27c115745d7a1c145cae4a87eee#f9abc4d8deba466a925d4208b9485939" %}
-Notebook
-{% endembed %}
+{% embed url="https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-list-of-important-features-by-location-with-beam-api.ipynb" %}
+
+## Technical documentation
+
+Below are some technical documentation relevant to this guide:
+
+* [beam](../../../api/beam/ "mention")
+* [suggested-radius](../../../api/suggested-radius/ "mention")
