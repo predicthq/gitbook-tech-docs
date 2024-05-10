@@ -1,392 +1,543 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://docs.predicthq.com/docs/schema/event-schema.json",
-  "type": "object",
-  "properties": {
-    "aviation_rank": {
-      "type": ["integer", "null"],
-      "minimum": 0,
-      "maximum": 100
-    },
-    "brand_safe": {
-      "type": "boolean"
-    },
-    "cancelled": {
-      "type": ["string", "null"],
-      "description": "The date the event was set to cancelled in the system in ISO 8601 format. All dates are in UTC.",
-      "examples": ["2018-12-19T10:00:00Z"]
-    },
-    "category": {
-      "type": "string",
-      "enum": [
-        "academic",
-        "airport-delays",
-        "community",
-        "concerts",
-        "conferences",
-        "daylight-savings",
-        "disasters",
-        "expos",
-        "festivals",
-        "health-warnings",
-        "observances",
-        "performing-arts",
-        "politics",
-        "public-holidays",
-        "school-holidays",
-        "severe-weather",
-        "sports",
-        "terror"
-      ]
-    },
-    "country": {
-      "type": "string"
-    },
-    "deleted_reason": {
-      "type": "string",
-      "enum": ["cancelled", "duplicate", "invalid", "postponed"]
-    },
-    "description": {
-      "type": ["string", "null"]
-    },
-    "duplicate_of_id": {
-      "type": ["string", "null"]
-    },
-    "duration": {
-      "type": "integer"
-    },
-    "end": {
-      "type": ["string", "null"],
-      "description": "The end date of the event in ISO 8601 format. All end dates are in UTC if the event time zone is provided, and in local time otherwise.",
-      "examples": ["2018-12-19T17:00:00", "2018-12-19T10:00:00Z"]
-    },
-    "entities": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["entity_id", "name", "type"],
-        "properties": {
-          "description": {
-            "type": "string"
-          },
-          "entity_id": {
-            "type": "string"
-          },
-          "formatted_address": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": ["airport", "event-group", "person", "venue"]
-          },
-          "category": {
-            "type": "string",
-            "enum": [
-              "academic",
-              "airport-delays",
-              "community",
-              "concerts",
-              "conferences",
-              "daylight-savings",
-              "disasters",
-              "expos",
-              "festivals",
-              "observances",
-              "performing-arts",
-              "politics",
-              "public-holidays",
-              "school-holidays",
-              "severe-weather",
-              "sports",
-              "terror",
-              "health-warnings"
-            ]
-          },
-          "labels": {
-            "type": "array",
-            "items": { "type": "string" }
-          },
-          "timezone": {
-            "type": "string"
-          },
-          "recurring": {
-            "type": "object",
-            "required": ["ical"],
-            "properties": {
-              "ical": {
-                "type": "string"
-              }
-            }
+    "$schema":"http://json-schema.org/draft-07/schema",
+    "$id":"https://docs.predicthq.com/docs/schema/event-schema.json",
+    "type":"object",
+    "properties":{
+       "aviation_rank":{
+          "type":[
+             "integer",
+             "null"
+          ],
+          "minimum":0,
+          "maximum":100
+       },
+       "brand_safe":{
+          "type":"boolean"
+       },
+       "cancelled":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The date the event was set to cancelled in the system in ISO 8601 format. All dates are in UTC.",
+          "examples":[
+             "2018-12-19T10:00:00Z"
+          ]
+       },
+       "category":{
+          "type":"string",
+          "enum":[
+             "academic",
+             "airport-delays",
+             "community",
+             "concerts",
+             "conferences",
+             "daylight-savings",
+             "disasters",
+             "expos",
+             "festivals",
+             "health-warnings",
+             "observances",
+             "performing-arts",
+             "politics",
+             "public-holidays",
+             "school-holidays",
+             "severe-weather",
+             "sports",
+             "terror"
+          ]
+       },
+       "country":{
+          "type":"string"
+       },
+       "deleted_reason":{
+          "type":"string",
+          "enum":[
+             "cancelled",
+             "duplicate",
+             "invalid",
+             "postponed"
+          ]
+       },
+       "description":{
+          "type":[
+             "string",
+             "null"
+          ]
+       },
+       "duplicate_of_id":{
+          "type":[
+             "string",
+             "null"
+          ]
+       },
+       "duration":{
+          "type":"integer"
+       },
+       "end":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The end date of the event in ISO 8601 format. All end dates are in UTC if the event time zone is provided, and in local time otherwise.",
+          "examples":[
+             "2018-12-19T17:00:00",
+             "2018-12-19T10:00:00Z"
+          ]
+       },
+       "entities":{
+          "type":"array",
+          "items":{
+             "type":"object",
+             "required":[
+                "entity_id",
+                "name",
+                "type"
+             ],
+             "properties":{
+                "description":{
+                   "type":"string"
+                },
+                "entity_id":{
+                   "type":"string"
+                },
+                "formatted_address":{
+                   "type":"string"
+                },
+                "name":{
+                   "type":"string"
+                },
+                "type":{
+                   "type":"string",
+                   "enum":[
+                      "airport",
+                      "event-group",
+                      "person",
+                      "venue"
+                   ]
+                },
+                "category":{
+                   "type":"string",
+                   "enum":[
+                      "academic",
+                      "airport-delays",
+                      "community",
+                      "concerts",
+                      "conferences",
+                      "daylight-savings",
+                      "disasters",
+                      "expos",
+                      "festivals",
+                      "observances",
+                      "performing-arts",
+                      "politics",
+                      "public-holidays",
+                      "school-holidays",
+                      "severe-weather",
+                      "sports",
+                      "terror",
+                      "health-warnings"
+                   ]
+                },
+                "labels":{
+                   "type":"array",
+                   "items":{
+                      "type":"string"
+                   }
+                },
+                "timezone":{
+                   "type":"string"
+                },
+                "recurring":{
+                   "type":"object",
+                   "required":[
+                      "ical"
+                   ],
+                   "properties":{
+                      "ical":{
+                         "type":"string"
+                      }
+                   }
+                }
+             },
+             "additionalProperties":false
           }
-        },
-        "additionalProperties": false
-      }
-    },
-    "first_seen": {
-      "type": ["string", "null"],
-      "description": "The date the event first entered our dataset in ISO 8601 format. All dates are in UTC.",
-      "examples": ["2017-12-19T06:00:00Z"]
-    },
-    "id": {
-      "type": "string"
-    },
-    "impact_patterns": {
-      "type": "object",
-      "properties": {
-        "vertical": {
-          "type": "string",
-          "enum": ["retail"]
-        },
-        "impact_type": {
-          "type": "string",
-          "enum": ["phq_rank"]
-        },
-        "impacts": {
-          "type": "object",
-          "properties": {
-            "date_local": {
-              "type": "string",
-              "examples": ["2021-02-01"]
-            },
-            "value": {
-              "type": "integer"
-            },
-            "position": {
-              "type": "string",
-              "enum": ["leading", "event_day", "lagging"]
-            }
+       },
+       "first_seen":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The date the event first entered our dataset in ISO 8601 format. All dates are in UTC.",
+          "examples":[
+             "2017-12-19T06:00:00Z"
+          ]
+       },
+       "id":{
+          "type":"string"
+       },
+       "impact_patterns":{
+          "type":"object",
+          "properties":{
+             "vertical":{
+                "type":"string",
+                "enum":[
+                   "retail"
+                ]
+             },
+             "impact_type":{
+                "type":"string",
+                "enum":[
+                   "phq_rank"
+                ]
+             },
+             "impacts":{
+                "type":"object",
+                "properties":{
+                   "date_local":{
+                      "type":"string",
+                      "examples":[
+                         "2021-02-01"
+                      ]
+                   },
+                   "value":{
+                      "type":"integer"
+                   },
+                   "position":{
+                      "type":"string",
+                      "enum":[
+                         "leading",
+                         "event_day",
+                         "lagging"
+                      ]
+                   }
+                },
+                "required":[
+                   "date_local",
+                   "value",
+                   "position"
+                ]
+             }
           },
-          "required": ["date_local", "value", "position"]
-        }
-      },
-      "required": ["vertical", "impact_type", "impacts"]
-    },
-    "labels": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "local_rank": {
-      "type": ["integer", "null"],
-      "minimum": 0,
-      "maximum": 100
-    },
-    "location": {
-      "type": "array",
-      "items": { "type": "number" },
-      "minItems": 2,
-      "maxItems": 2
-    },
-    "geo": {
-      "type": ["object", "null"],
-      "properties": {
-        "geometry": {
-          "$ref": "https://docs.predicthq.com/docs/schema/geometry-schema.json"
-        },
-        "placekey": { "type": "string" }
-      },
-      "additionalProperties": false
-    },
-    "parent_event": {
-      "type": "object",
-      "properties": {
-        "parent_event_id": {
-          "type": "string",
-          "description": "The parent_event_id refers to the id of the event that is the parent for the current event.",
-          "examples": ["w7dYyrFwTUQGYE6euv"]
-        }
-      },
-      "required": ["parent_event_id"],
-      "additionalProperties": false
-    },
-    "phq_attendance": {
-      "type": ["integer", "null"],
-      "minimum": 1
-    },
-    "phq_labels": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "label": {
-            "type": "string",
-            "description": "PHQ Labels leverage newer generation LLMs and classifier models. Currently available for conferences, expos, festivals, community and performing-arts. Legacy labels are available in a separate field to preserve backwards compatibility."
+          "required":[
+             "vertical",
+             "impact_type",
+             "impacts"
+          ]
+       },
+       "labels":{
+          "type":"array",
+          "items":{
+             "type":"string"
+          }
+       },
+       "local_rank":{
+          "type":[
+             "integer",
+             "null"
+          ],
+          "minimum":0,
+          "maximum":100
+       },
+       "location":{
+          "type":"array",
+          "items":{
+             "type":"number"
           },
-          "weight": {
-            "type": "number",
-            "description": "The weight that each label contribute to the event, weights from all labels sums up to 1."
+          "minItems":2,
+          "maxItems":2
+       },
+       "geo":{
+          "type":[
+             "object",
+             "null"
+          ],
+          "properties":{
+             "geometry":{
+                "$ref":"https://github.com/predicthq/phq-json-schema/blob/main/schema/geometry-schema.json"
+             },
+             "placekey":{
+                "type":"string"
+             }
+          },
+          "additionalProperties":false
+       },
+       "parent_event":{
+          "type":"object",
+          "properties":{
+             "parent_event_id":{
+                "type":"string",
+                "description":"The parent_event_id refers to the id of the event that is the parent for the current event.",
+                "examples":[
+                   "w7dYyrFwTUQGYE6euv"
+                ]
+             }
+          },
+          "required":[
+             "parent_event_id"
+          ],
+          "additionalProperties":false
+       },
+       "phq_attendance":{
+          "type":[
+             "integer",
+             "null"
+          ],
+          "minimum":1
+       },
+       "phq_labels":{
+          "type":"array",
+          "items":{
+             "type":"object",
+             "properties":{
+                "label":{
+                   "type":"string",
+                   "description":"PHQ Labels leverage newer generation LLMs and classifier models. Currently available for conferences, expos, festivals, community and performing-arts. Legacy labels are available in a separate field to preserve backwards compatibility."
+                },
+                "weight":{
+                   "type":"number",
+                   "description":"The weight that each label contribute to the event, weights from all labels sums up to 1."
+                }
+             },
+             "required":[
+                "label",
+                "weight"
+             ],
+             "additionalProperties":false
           }
-        },
-        "required": ["label", "weight"],
-        "additionalProperties": false
-      }
-    },
-    "place_hierarchies": {
-      "type": "array",
-      "items": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      }
-    },
-    "postponed": {
-      "type": ["string", "null"],
-      "description": "The date the event was set to postponed in the system in ISO 8601 format. All dates are in UTC.",
-      "examples": ["2018-12-19T10:00:00Z"]
-    },
-    "predicted_end": {
-      "type": "string",
-      "description": "The predicted end date of the event in ISO 8601 format. Predicted end dates are in UTC if the event time zone is provided, and in local time otherwise.",
-      "examples": ["2018-03-16T17:45:00", "2018-12-19T10:00:00Z"]
-    },
-    "predicted_event_spend": {
-      "type": ["integer", "null"],
-      "description": "The total predicted spend across all available industries for an event measured in USD"
-    },
-    "predicted_event_spend_industries": {
-      "type": ["object", "null"],
-      "description": "The predicted spend for an event broken down by industry measured in USD",
-      "properties": {
-        "accommodation": {
-          "type": ["integer", "null"],
-          "description": "The predicted spend for accommodation measured in USD"
-        },
-        "hospitality": {
-          "type": ["integer", "null"],
-          "description": "The predicted spend for hospitality measured in USD"
-        },
-        "transportation": {
-          "type": ["integer", "null"],
-          "description": "The predicted spend for transportation measured in USD"
-        }
-      }
-    },
-    "private": {
-      "type": "boolean"
-    },
-    "private_details": {
-      "type": "object",
-      "properties": {
-        "user_id": { "type": "string" },
-        "capture_link_id": { "type": "string" },
-        "org_review": {
-          "type": "string",
-          "enum": ["approved", "pending", "rejected"]
-        }
-      }
-    },
-    "rank": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 100
-    },
-    "relevance": {
-      "type": ["number", "null"]
-    },
-    "scope": {
-      "type": "string",
-      "enum": ["locality", "localadmin", "country", "region", "county"]
-    },
-    "start": {
-      "type": ["string", "null"],
-      "description": "The start date of the event in ISO 8601 format. All start dates are in UTC if the event time zone is provided, and in local time otherwise.",
-      "examples": ["2018-12-19T17:00:00", "2018-12-19T06:00:00Z"]
-    },
-    "state": {
-      "type": "string",
-      "enum": ["active", "deleted"]
-    },
-    "timezone": {
-      "type": ["string", "null"],
-      "description": "The time zone of the event in TZ Database format. If the time zone is null, the start and end date should be regarded as time zone agnostic and already being in local time.",
-      "examples": ["America/Los_Angeles", "Pacific/Auckland"]
-    },
-    "title": {
-      "type": "string"
-    },
-    "updated": {
-      "type": "string",
-      "description": "The last modification date of the event in ISO 8601 format. All dates are in UTC.",
-      "examples": ["2018-05-01T00:00:00", "2018-05-01T05:00:00Z"]
-    }
-  },
-  "allOf": [
-    {
-      "if": {
-        "properties": {
-          "state": {
-            "const": "deleted"
+       },
+       "place_hierarchies":{
+          "type":"array",
+          "items":{
+             "type":"array",
+             "items":{
+                "type":"string"
+             }
           }
-        }
-      },
-      "then": {
-        "required": ["deleted_reason"]
-      },
-      "else": {
-        "properties": {
-          "deleted_reason": false
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "deleted_reason": {
-            "const": "cancelled"
+       },
+       "postponed":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The date the event was set to postponed in the system in ISO 8601 format. All dates are in UTC.",
+          "examples":[
+             "2018-12-19T10:00:00Z"
+          ]
+       },
+       "predicted_end":{
+          "type":"string",
+          "description":"The predicted end date of the event in ISO 8601 format. Predicted end dates are in UTC if the event time zone is provided, and in local time otherwise.",
+          "examples":[
+             "2018-03-16T17:45:00",
+             "2018-12-19T10:00:00Z"
+          ]
+       },
+       "predicted_event_spend":{
+          "type":[
+             "integer",
+             "null"
+          ],
+          "description":"The total predicted spend across all available industries for an event measured in USD"
+       },
+       "predicted_event_spend_industries":{
+          "type":[
+             "object",
+             "null"
+          ],
+          "description":"The predicted spend for an event broken down by industry measured in USD",
+          "properties":{
+             "accommodation":{
+                "type":[
+                   "integer",
+                   "null"
+                ],
+                "description":"The predicted spend for accommodation measured in USD"
+             },
+             "hospitality":{
+                "type":[
+                   "integer",
+                   "null"
+                ],
+                "description":"The predicted spend for hospitality measured in USD"
+             },
+             "transportation":{
+                "type":[
+                   "integer",
+                   "null"
+                ],
+                "description":"The predicted spend for transportation measured in USD"
+             }
           }
-        },
-        "required": ["deleted_reason"]
-      },
-      "then": {
-        "required": ["cancelled"]
-      },
-      "else": {
-        "properties": {
-          "cancelled": false
-        }
-      }
-    },
-    {
-      "if": {
-        "properties": {
-          "deleted_reason": {
-            "const": "postponed"
+       },
+       "private":{
+          "type":"boolean"
+       },
+       "private_details":{
+          "type":"object",
+          "properties":{
+             "user_id":{
+                "type":"string"
+             },
+             "capture_link_id":{
+                "type":"string"
+             },
+             "org_review":{
+                "type":"string",
+                "enum":[
+                   "approved",
+                   "pending",
+                   "rejected"
+                ]
+             }
           }
-        },
-        "required": ["deleted_reason"]
-      },
-      "then": {
-        "required": ["postponed"]
-      },
-      "else": {
-        "properties": {
-          "postponed": false
-        }
-      }
-    }
-  ],
-  "additionalProperties": false,
-  "required": [
-    "category",
-    "country",
-    "description",
-    "duration",
-    "end",
-    "entities",
-    "first_seen",
-    "id",
-    "labels",
-    "place_hierarchies",
-    "rank",
-    "geo",
-    "relevance",
-    "start",
-    "state",
-    "timezone",
-    "title",
-    "updated"
-  ]
-}
+       },
+       "rank":{
+          "type":"integer",
+          "minimum":0,
+          "maximum":100
+       },
+       "relevance":{
+          "type":[
+             "number",
+             "null"
+          ]
+       },
+       "scope":{
+          "type":"string",
+          "enum":[
+             "locality",
+             "localadmin",
+             "country",
+             "region",
+             "county"
+          ]
+       },
+       "start":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The start date of the event in ISO 8601 format. All start dates are in UTC if the event time zone is provided, and in local time otherwise.",
+          "examples":[
+             "2018-12-19T17:00:00",
+             "2018-12-19T06:00:00Z"
+          ]
+       },
+       "state":{
+          "type":"string",
+          "enum":[
+             "active",
+             "deleted"
+          ]
+       },
+       "timezone":{
+          "type":[
+             "string",
+             "null"
+          ],
+          "description":"The time zone of the event in TZ Database format. If the time zone is null, the start and end date should be regarded as time zone agnostic and already being in local time.",
+          "examples":[
+             "America/Los_Angeles",
+             "Pacific/Auckland"
+          ]
+       },
+       "title":{
+          "type":"string"
+       },
+       "updated":{
+          "type":"string",
+          "description":"The last modification date of the event in ISO 8601 format. All dates are in UTC.",
+          "examples":[
+             "2018-05-01T00:00:00",
+             "2018-05-01T05:00:00Z"
+          ]
+       }
+    },
+    "allOf":[
+       {
+          "if":{
+             "properties":{
+                "state":{
+                   "const":"deleted"
+                }
+             }
+          },
+          "then":{
+             "required":[
+                "deleted_reason"
+             ]
+          },
+          "else":{
+             "properties":{
+                "deleted_reason":false
+             }
+          }
+       },
+       {
+          "if":{
+             "properties":{
+                "deleted_reason":{
+                   "const":"cancelled"
+                }
+             },
+             "required":[
+                "deleted_reason"
+             ]
+          },
+          "then":{
+             "required":[
+                "cancelled"
+             ]
+          },
+          "else":{
+             "properties":{
+                "cancelled":false
+             }
+          }
+       },
+       {
+          "if":{
+             "properties":{
+                "deleted_reason":{
+                   "const":"postponed"
+                }
+             },
+             "required":[
+                "deleted_reason"
+             ]
+          },
+          "then":{
+             "required":[
+                "postponed"
+             ]
+          },
+          "else":{
+             "properties":{
+                "postponed":false
+             }
+          }
+       }
+    ],
+    "additionalProperties":false,
+    "required":[
+       "category",
+       "country",
+       "description",
+       "duration",
+       "end",
+       "entities",
+       "first_seen",
+       "id",
+       "labels",
+       "place_hierarchies",
+       "rank",
+       "geo",
+       "relevance",
+       "start",
+       "state",
+       "timezone",
+       "title",
+       "updated"
+    ]
+ }
