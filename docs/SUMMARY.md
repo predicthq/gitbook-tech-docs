@@ -72,7 +72,7 @@
   * [Streamlit Demo Apps](getting-started/guides/streamlit-demo-apps.md)
   * [Guide to Bulk Export Data via Control Center](getting-started/guides/export-data-via-control-center.md)
   * [Tutorials](getting-started/guides/tutorials/README.md)
-    * [Improving demand forecasting models with event features](getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
+    * [Improving Demand Forecasting Models with Event Features](getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 ## Integrations
 

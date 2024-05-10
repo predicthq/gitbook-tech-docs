@@ -10,7 +10,7 @@ Features API aggregates PHQ Attendance figures, PHQ Viewership figures and PHQ R
 
 The Features API returns requested statistical values (`sum`, `count`, `average`, `min`, `max`, `median`, `std_dev`) per day for a specified date range, across a specified attendance category feature - _see_ [PHQ Attendance Response](../../../api/features/get-features.md#phq-attendance-features-1). Similarly, Features API returns requested statistical values, across a specified viewership category feature - _see_ [PHQ Viewership Response](../../../api/features/get-features.md#phq-viewership-features-1). For non-attendance-based events the rank of those events impacting that location on those days are bucketed into a relevant rank range in the response for evaluation - **see** [PHQ Rank Response](../../../api/features/get-features.md#phq-rank-features-1). When calling the API you specify a number of filters to get events at a specific location, above a specific rank value, for specific categories, and so on. The values returned are the processed aggregations that serve to measure the impact (total predicted attendance for example) for all the events that match the filters specified.
 
-See [the API documentation](../../../api/features/get-features.md) for more details on the API. See also our [feature engineering guide](feature-engineering-guide.md) for how to use the features API features in demand forecasting.
+See [the API documentation](../../../api/features/get-features.md) for more details on the API. See also [this tutorial](../tutorials/improving-demand-forecasting-models-with-event-features.md) for how to incorporate features from the Features API features into demand forecasting models.
 
 ### Features API Endpoint
 
