@@ -57,7 +57,7 @@ description: Get an existing Analysis.
     "feature_importance": false
   }
 }
-</code></pre></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>demand_type</code><br>object</td><td><p></p><p>Indicates the detected type of the uploaded demand data.<br></p><p><strong>Fields:</strong></p><ul><li><code>interval</code> - <code>day</code> or <code>week</code></li><li><code>week_start_day</code> - e.g. <code>sunday</code>, <code>monday</code> etc. Only displayed for weekly analyses</li></ul></td></tr></tbody></table>
 
 
 
@@ -106,6 +106,10 @@ Below is an example response:
     "processing_completed": {
         "correlation": true,
         "feature_importance": true
+    },
+    "demand_type": {
+        "interval": "week",
+        "week_start_day": "monday"
     },
     "tz": "UTC"
 }

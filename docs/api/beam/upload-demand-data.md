@@ -4,13 +4,19 @@ description: Upload your demand data as CSV, line-delimited JSON or JSON.
 
 # Upload Demand Data
 
-The minimum amount of data required is **6 months**, or 180 data points. This data needs to be between 2017-01-01 and one year into the future from today's date (today + 365 days).
+Beam Analyses support daily or weekly demand data. The type of data is detected automatically on upload.
 
-{% hint style="info" %}
-Beam can impute up to 20% of missing values, provided that the minimum data requirements are satisfied and there are no more than 7 consecutive days missing.
-{% endhint %}
+For **daily** demand the minimum amount of data required is **6 months**, or 180 data points. Beam can impute up to 20% of missing values, provided that the minimum data requirements are satisfied and there are no more than 7 consecutive days missing.
+
+For **weekly** demand the minimum amount of data required is **2 years**, or 104 data points. Beam can impute up to 10% of missing values, provided that the minimum data requirements are satisfied and there are no more than 5 consecutive weeks missing. All weekly data points must align with the **start of the week** and occur on the same weekday.
+
+All data points need to be between 2017-01-01 and one year into the future from today's date (today + 365 days).
 
 Uploading data replaces existing data for the same date. It's not currently possible to remove data for a particular date. The idea with this endpoint is that you're continuously adding new demand data over time.
+
+{% hint style="info" %}
+The data can be uploaded in chunks, but the analysis data must remain valid at all times. If a newly uploaded chunk renders the analysis data invalid (for example, by introducing a large gap between data points), the chunk will be rejected, and the previously stored demand data will be preserved.
+{% endhint %}
 
 ## Request
 
@@ -70,6 +76,8 @@ JSON Fields:
 {% endtab %}
 
 {% tab title="JSON" %}
+Note that this format is only suitable for appending data to an already valid data set.
+
 The request body should contain a JSON object that represents a single data point. For each request, only one data point is permitted. Ensure that the fields are named `date` and `demand` (lowercase), as demonstrated in the example below:
 
 ```json

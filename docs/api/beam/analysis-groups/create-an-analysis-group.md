@@ -26,7 +26,7 @@ POST https://api.predicthq.com/v1/beam/analysis-groups
     "JBb08XsZqAo",
     "q9iX2XqFBxM"
 ]
-</code></pre><p>Analyses can belong to multiple groups.</p></td></tr></tbody></table>
+</code></pre><p>Analyses can belong to multiple groups.<br>Analyses must have the same demand type, i.e. the <code>interval</code> must match, and in case of weekly analyses <code>week_start_day</code> must also be consistent across all analyses in the group.</p></td></tr></tbody></table>
 
 ## Response
 
