@@ -7,6 +7,8 @@ description: >-
 # ML Features by Location
 
 {% embed url="https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-list-of-important-features-by-location-with-beam-api.ipynb" %}
+View the notebook on GitHub.
+{% endembed %}
 
 ## Technical documentation
 
