@@ -1,18 +1,17 @@
+---
+description: >-
+  Event labels are succinct descriptive attributes attached to events that can
+  help with granular data selection and feature engineering use cases.
+---
+
 # Labels
 
-Event labels are succinct descriptive attributes attached to events that can help with **granular data selection** and **feature engineering** use cases.&#x20;
+&#x20;For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
 
-For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
-
-Each event record has two separate label fields (`phq_labels` and `labels`).
-
-All categories have the new `phq_labels` and will be used by default.&#x20;
-
-Event labels can be searched by using the`phq_labels` field.&#x20;
-
-Some `labels` which repeats the category name such as `label: academic` have been removed.
-
-`phq_labels` will be used by default as all legacy labels have been migrated.
+* Each event record has two separate label fields (`phq_labels` and the legacy `labels` field).
+* All categories have the new `phq_labels` and should be used by default.&#x20;
+* Event labels can be searched by using the`phq_labels` parameter.
+* Some `labels` which repeats the category name such as `label: academic` have been removed.
 
 ### PHQ Labels
 
