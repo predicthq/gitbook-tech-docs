@@ -104,4 +104,4 @@ The output of the script above should look similar to the data below:
 
 
 
-### Refer back to [Main Guide](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/tNhzHETmXsrWeVBndqqJ/\~/changes/155/integrations/third-party-integrations/snowflake/snowflake-data-science-guide)
+### Refer back to [Main Guide](./)
