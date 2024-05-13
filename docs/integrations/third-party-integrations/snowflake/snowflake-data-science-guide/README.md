@@ -32,8 +32,8 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
 2. Create the input table filled with locations
 3. Set the date range that you want to retrieve data for
 4. Choose which method to follow
-   1. [Snowpark Method](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/tNhzHETmXsrWeVBndqqJ/\~/changes/155/integrations/third-party-integrations/snowflake/snowflake-data-science-guide/snowpark-method-guide)
-   2. [SQL Method](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/tNhzHETmXsrWeVBndqqJ/\~/changes/155/integrations/third-party-integrations/snowflake/snowflake-data-science-guide/sql-method-guide)
+   1. [Snowpark Method](snowpark-method-guide.md)
+   2. [SQL Method](sql-method-guide.md)
 5. Use the output in machine learning demand forecasting models or for other applications
 
 ## Get the Suggested Radius for each Location
