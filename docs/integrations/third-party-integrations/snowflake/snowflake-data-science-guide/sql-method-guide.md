@@ -487,4 +487,4 @@ The output table should look like this (Note: the below example is only showing 
 
 
 
-### Refer Back to [Main Guide](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/tNhzHETmXsrWeVBndqqJ/\~/changes/155/integrations/third-party-integrations/snowflake/snowflake-data-science-guide)
+### Refer Back to [Main Guide](./)
