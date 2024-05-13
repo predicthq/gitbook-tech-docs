@@ -20,7 +20,7 @@ jobs:
         run: pip install requests python-dotenv
 
       - name: run script to fetch labels
-        run: python3 scripts/fetch_labels.py
+        run: python3 scripts/fetch-labels.py
         env:
           PHQ_API_TOKEN: ${{ secrets.PHQ_API_TOKEN }}
 
