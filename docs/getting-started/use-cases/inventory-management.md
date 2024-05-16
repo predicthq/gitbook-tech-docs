@@ -8,6 +8,8 @@ description: >-
 
 Maintaining lean supply chains and appropriate inventory levels drives cost savings and maximizes sales. Understanding how events impact demand will help you do both, better.&#x20;
 
+<figure><img src="../../.gitbook/assets/illustration-inventory-management[1].svg" alt=""><figcaption></figcaption></figure>
+
 When events drive high demand and demand surges, if you are not prepared, this means you will not have sufficient stock levels to account for the high demand. Similarly, sometimes events may reduce demand for your stores or products. This can happen if people are traveling away from a location for an event or are attending an event instead of buying products.
 
 Typically with inventory management customers are looking to prevent stockouts and overstocking. Using our product and tools as described below will allow you to anticipate and prepare for the upcoming demand impact driven by events and ensure your inventory management accounts for it.
@@ -42,6 +44,8 @@ To implement PredictHQ data to manage inventory for your retail business, review
 
 </details>
 
+
+
 <details>
 
 <summary>Consumer Packaged Goods</summary>
@@ -69,6 +73,8 @@ To implement PredictHQ data for Inventory Management for your Consumer Packaged 
 * [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models.
 
 </details>
+
+
 
 <details>
 

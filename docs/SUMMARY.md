@@ -77,6 +77,8 @@
   * [Automated Demand Forecasting with ML Models](getting-started/use-cases/automated-demand-forecasting-with-ml-models.md)
   * [Dynamic Pricing](getting-started/use-cases/dynamic-pricing.md)
   * [Inventory Management](getting-started/use-cases/inventory-management.md)
+  * [Workforce Optimization](getting-started/use-cases/workforce-optimization.md)
+  * [Visualization and Insights](getting-started/use-cases/visualization-and-insights.md)
 
 ## Integrations
 

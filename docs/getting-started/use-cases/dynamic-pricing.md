@@ -6,7 +6,7 @@ description: >-
 
 # Dynamic Pricing
 
-<figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/7n2iLEdTKBj3chdGJxMo1q/805799af174bbcff113426784f621418/illustration-dynamic-pricing.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/illustration-dynamic-pricing[1].svg" alt=""><figcaption></figcaption></figure>
 
 From missing out on increased revenue to losing operational efficiency and even customers due to poor customer experiences, many accommodation, parking, travel, and retail vendors and service providers are painfully aware of demand fluctuations. Most companies won’t realize a demand surge is taking place until 30-50% of availability or stock has been snapped up.
 
@@ -30,6 +30,8 @@ See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.p
 
 </details>
 
+
+
 <details>
 
 <summary>Leisure and Travel</summary>
@@ -49,6 +51,8 @@ To implement PredictHQ data to inform dynamic pricing for your Leisure and Trave
 With PredictHQ's products and data, our Leisure and Travel customers gain insights into these demand fluctuations well in advance. This allows them to optimize their pricing strategy effectively and make informed decisions that boost profitability while catering to the dynamic needs of travelers and event-goers.
 
 </details>
+
+
 
 <details>
 
@@ -75,6 +79,8 @@ To capitalize on surges like this effectively, adopting dynamic pricing strategi
 <img src="https://images.ctfassets.net/ihlmn42cjuv0/2gimBqwe0Xt0XtQbtN5GUI/fd609c66ea6a19b07aadfd2f418dcbf3/pexels-ricky-esquivel-2226607_1.png?fm=jpg&#x26;q=93" alt="" data-size="original">
 
 </details>
+
+
 
 <details>
 
