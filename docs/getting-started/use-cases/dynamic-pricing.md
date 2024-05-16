@@ -12,13 +12,15 @@ From missing out on increased revenue to losing operational efficiency and even 
 
 Our customers from these industries often use PredictHQ data to fuel their sales forecasts, dynamic pricing, and business operations in advance. We have created guides for our most common use cases. We’ll start with using PredictHQ data for dynamic pricing examples by industry:
 
+
+
 <details>
 
 <summary>Accommodation &#x26; Hospitality Dynamic Pricing Tutorials</summary>
 
 To implement PredictHQ data to inform dynamic pricing for your accommodation business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ ](https://www.predicthq.com/support/category/control-center-and-account-settings)[Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ ](https://www.predicthq.com/support/category/control-center-and-account-settings)[Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 * \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
 * [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models.
 
@@ -38,7 +40,7 @@ See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.p
 
 To implement PredictHQ data to inform dynamic pricing for your Leisure and Travel business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
@@ -60,7 +62,7 @@ With PredictHQ's products and data, our Leisure and Travel customers gain insigh
 
 To implement PredictHQ data to inform dynamic pricing for your parking and transportation business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
@@ -94,7 +96,7 @@ Dynamic pricing is a pivotal strategy in harnessing these surges effectively.
 
 To implement PredictHQ data to inform dynamic pricing for your retail business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 

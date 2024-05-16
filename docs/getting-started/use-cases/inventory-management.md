@@ -18,6 +18,8 @@ When events drive high demand and demand surges, if you are not prepared, this m
 
 Typically with inventory management customers are looking to prevent stockouts and overstocking. Using our product and tools as described below will allow you to anticipate and prepare for the upcoming demand impact driven by events and ensure your inventory management accounts for it.
 
+
+
 <details>
 
 <summary>Retail</summary>
@@ -36,7 +38,7 @@ Or if you are using Power BI you may want to update your Power BI Dashboard to s
 
 To implement PredictHQ data to manage inventory for your retail business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
@@ -66,7 +68,7 @@ We provide different levels of tools based on what resources you have available 
 
 To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
@@ -88,7 +90,7 @@ To implement PredictHQ data for Inventory Management for your Consumer Packaged 
 
 To implement PredictHQ data for Inventory Management for your business, review the guides for this use case below:
 
-* **No code**: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
