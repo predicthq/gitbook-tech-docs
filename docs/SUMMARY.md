@@ -73,6 +73,7 @@
   * [Guide to Bulk Export Data via Control Center](getting-started/guides/export-data-via-control-center.md)
   * [Tutorials](getting-started/guides/tutorials/README.md)
     * [Improving Demand Forecasting Models with Event Features](getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
+    * [Connect and Build Events data in Power BI](getting-started/guides/tutorials/connect-and-build-events-data-in-power-bi.md)
 * [Use Cases](getting-started/use-cases/README.md)
   * [Automated Demand Forecasting with ML Models](getting-started/use-cases/automated-demand-forecasting-with-ml-models.md)
   * [Dynamic Pricing](getting-started/use-cases/dynamic-pricing.md)
