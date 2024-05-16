@@ -11,7 +11,9 @@ Many vendors or platforms across industries such as accommodation, travel, retai
 
 <figure><img src="../../.gitbook/assets/visualization-insights-hero[1].png" alt=""><figcaption></figcaption></figure>
 
-These insights are delivered through various visualizations, tailored to the size, maturity, unique tech stack, and workflows of the organization. Below are some common examples of how demand data can unlock further insights, efficiency, and improvement for multiple industries."
+These insights are delivered through various visualizations, tailored to the size, maturity, unique tech stack, and workflows of the organization. Below are some common examples of how demand data can unlock further insights, efficiency, and improvement for multiple industries.
+
+
 
 <details>
 
