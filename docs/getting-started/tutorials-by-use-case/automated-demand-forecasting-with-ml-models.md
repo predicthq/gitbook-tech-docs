@@ -1,18 +1,14 @@
----
-description: >-
-  Update your demand forecasting machine learning models with event-based
-  features to increase the accuracy of your predictions.
----
-
 # Automated Demand Forecasting with ML Models
 
-Demand forecasting using machine learning (ML) models involves predicting future customer demand for products or services. If you are performing demand forecasting with ML models you are always looking to increase the accuracy of your forecast. Events have a big impact on demand and updating your models to account for events can significantly improve the accuracy of your forecasts.
+Demand forecasting using machine learning (ML) models involves predicting future customer demand for products or services. If you are performing demand forecasting with ML models you are always looking to increase the accuracy of your forecast. Events have a big impact on demand and updating your models to account for events can significantly improve the accuracy of your forecasts.\
 
-<figure><img src="../../.gitbook/assets/Illustration_-_Industry_-_Demand_Forecasting_-_01_1[1].svg" alt=""><figcaption></figcaption></figure>
 
 #### Demand Forecasting Tutorial
 
-See our tutorial on [Updating machine learning models with predictive event data](https://docs.predicthq.com/) - Automatically and dynamically update your forecast by integrating PredictHQ data directly into your demand forecasting models.
+[See our tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) on updating machine learning models with predictive event data - Automatically and dynamically update your forecast by integrating PredictHQ data directly into your demand forecasting models.\
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.19.51 PM.png" alt=""><figcaption></figcaption></figure>
 
 #### The Power of Accurate Demand Forecasting
 
@@ -24,6 +20,6 @@ Some customers try to source and manage event information themselves. What they 
 
 Figuring out how to use events in your forecast can be complex. With our product and tools, we aim to reduce any R\&D effort and enable you to quickly and easily identify event-based ML features for use in your models. Our Features API provides prebuilt, forecast-ready event-based ML features for your forecast. We have seen this reduce R\&D and feature engineering time for months to days for our customers.&#x20;
 
-[Demand forecasting](https://docs.predicthq.com/) covers a range of use cases and industries from dynamic pricing to inventory management. See the use cases below for more examples.
+[Demand forecasting](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) covers a range of use cases and industries from dynamic pricing to inventory management. See the use cases below for more examples.
 
 \
