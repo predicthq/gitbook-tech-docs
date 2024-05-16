@@ -33,7 +33,7 @@ Custom maps and filtered event lists\
 Custom maps Maps and filtered event lists\
 [Retail Demo App](https://predicthq-location-insights-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-location-insights-demo).
 
-
+![](<../../.gitbook/assets/image (2).png>)
 
 </details>
 
@@ -45,6 +45,6 @@ Custom maps Maps and filtered event lists\
 
 Custom maps with polygon, filtered event lists: [Parking Business Demo App](https://predicthq-parking-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-parking-demo).
 
-
+![](<../../.gitbook/assets/image (3).png>)
 
 </details>
