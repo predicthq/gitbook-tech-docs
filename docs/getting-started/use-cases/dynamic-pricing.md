@@ -20,8 +20,8 @@ Our customers from these industries often use PredictHQ data to fuel their sales
 
 To implement PredictHQ data to inform dynamic pricing for your accommodation business, review the guides for this use case below:
 
-* No code: [Using PredictHQ ](https://www.predicthq.com/support/category/control-center-and-account-settings)[Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* \*Most Popular\* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 * [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models.
 
 PredictHQ helps its customers master predictability with the smartest and largest event impact data stream, which can drive dynamic pricing planning and operations quickly, efficiently, and at scale.
@@ -40,14 +40,8 @@ See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.p
 
 To implement PredictHQ data to inform dynamic pricing for your Leisure and Travel business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
-
-<!---->
-
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
-
-<!---->
-
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* \*Most Popular\* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 * [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models.
 
 With PredictHQ's products and data, our Leisure and Travel customers gain insights into these demand fluctuations well in advance. This allows them to optimize their pricing strategy effectively and make informed decisions that boost profitability while catering to the dynamic needs of travelers and event-goers.
@@ -62,11 +56,11 @@ With PredictHQ's products and data, our Leisure and Travel customers gain insigh
 
 To implement PredictHQ data to inform dynamic pricing for your parking and transportation business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
-* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* \*Most Popular\* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 
 <!---->
 
@@ -96,11 +90,11 @@ Dynamic pricing is a pivotal strategy in harnessing these surges effectively.
 
 To implement PredictHQ data to inform dynamic pricing for your retail business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* \*Most Popular\* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 
 <!---->
 

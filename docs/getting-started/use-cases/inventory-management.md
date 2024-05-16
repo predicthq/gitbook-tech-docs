@@ -38,11 +38,11 @@ Or if you are using Power BI you may want to update your Power BI Dashboard to s
 
 To implement PredictHQ data to manage inventory for your retail business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 
 <!---->
 
@@ -68,11 +68,11 @@ We provide different levels of tools based on what resources you have available 
 
 To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 
 <!---->
 
@@ -90,11 +90,11 @@ To implement PredictHQ data for Inventory Management for your Consumer Packaged 
 
 To implement PredictHQ data for Inventory Management for your business, review the guides for this use case below:
 
-* No code: [Using PredictHQ Web application](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
+* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your manual pricing updates.
 
 <!---->
 
-* \*Most Popular\* **API enrichment, analysis, and visualization in Power BI** - Integrate PredictHQ data with your Power BI dynamic pricing workflows. (Coming soon)
+* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with your Power BI dynamic pricing workflows.&#x20;
 
 <!---->
 
