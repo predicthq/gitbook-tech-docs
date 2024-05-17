@@ -6,9 +6,7 @@ description: >-
 
 # Get ML Features
 
-{% embed url="https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb" %}
-View the notebook on GitHub.
-{% endembed %}
+{% @github-files/github-code-block %}
 
 ## Technical documentation
 

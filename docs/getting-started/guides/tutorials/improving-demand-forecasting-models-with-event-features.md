@@ -1,4 +1,4 @@
-# Improving demand forecasting models with event features
+# Improving Demand Forecasting Models with Event Features
 
 ## Intro
 
@@ -60,7 +60,7 @@ The sections below highlight what you need to provide for determining a list of 
 
 **Historical Demand Data**
 
-Ensure you have at least six months of time-series data that meets [Beam’s requirements](../../../api/beam/upload-demand-data.md). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants and revPAR for hotels.
+Ensure you have enough time-series data that meets [Beam’s requirements](../../../api/beam/upload-demand-data.md). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants and revPAR for hotels.
 
 **Industry**
 
@@ -81,12 +81,12 @@ Define the catchment area around your store or location using latitude/longitude
 Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our industry-specific recommendations to focus on events that are likely to influence your demand, while excluding those that are too small or irrelevant. We recommend the following PHQ Rank thresholds:
 
 | Industry                                      | Minimum PHQ Rank |
-| --------------------------------------------- | ---------------- |
-| Accommodation                                 | 35               |
-| Food and Beverage (also known as Restaurants) | 30               |
-| Retail                                        | 50               |
-| Parking                                       | 35               |
-| Other                                         | 30               |
+| --------------------------------------------- | :--------------: |
+| Accommodation                                 |        35        |
+| Food and Beverage (also known as Restaurants) |        30        |
+| Retail                                        |        50        |
+| Parking                                       |        35        |
+| Other                                         |        30        |
 
 {% hint style="info" %}
 For technical details, visit:
@@ -128,7 +128,7 @@ For technical details, visit:
 
 For practical implementation:
 
-[feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
+* [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
 {% endhint %}
 
 ### STEP 3. ML Model and Future Predictions
