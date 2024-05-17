@@ -8,7 +8,7 @@ description: >-
 
 #### What you need:
 
-1. A PredictHQ account - [sign up for free to get started](https://signup.predicthq.com/).
+1. A PredictHQ account - [log in with your PredictHQ account](https://control.predicthq.com/) if you have one or [sign up for free to get started](https://signup.predicthq.com/).
 2. An API Access Token.
 
 ## Create an access token

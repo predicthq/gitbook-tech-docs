@@ -76,7 +76,7 @@
     * [Connect and Build Events data in Power BI](getting-started/guides/tutorials/connect-and-build-events-data-in-power-bi.md)
 * [Tutorials by Use Case](getting-started/tutorials-by-use-case/README.md)
   * [Automated Demand Forecasting with ML Models](getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models.md)
-  * [Dynamic Pricing](getting-started/tutorials-by-use-case/dynamic-pricing.md)
+  * [Dynamic Pricing](getting-started/use-cases/dynamic-pricing.md)
   * [Inventory Management](getting-started/tutorials-by-use-case/inventory-management.md)
   * [Workforce Optimization](getting-started/tutorials-by-use-case/workforce-optimization.md)
   * [Visualization and Insights](getting-started/tutorials-by-use-case/visualization-and-insights.md)
