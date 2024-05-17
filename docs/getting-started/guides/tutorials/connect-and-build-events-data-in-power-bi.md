@@ -4,7 +4,7 @@ description: >-
   example report
 ---
 
-# Connect and Build Events data in Power BI
+# Use Events Data in Power BI
 
 In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that enables users to integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 
@@ -25,7 +25,7 @@ The data used in this guide is based on a popular location, in our case San Fran
 Below are the main steps involved in this guide:
 
 1. Building Report Parameters around a Location
-   * Example parameters for this guide
+   * Example Parameters for this Guide
 2. Select an Input method
    * CSV upload
    * API connection
@@ -44,7 +44,7 @@ Below are the main steps involved in this guide:
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.\
 All of these parameters are able to be modified based on user needs, we have a filtering guide coming soon with details on what these parameters mean and how they can be modified to suit different use cases.
 
-Example Parameters for this guide:
+### Example Parameters for this Guide:
 
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)&#x20;
@@ -68,13 +68,13 @@ The end result of the exercise will be a report like this:
 
 There are several ways to connect PHQ data to Power BI or other reporting software. Below are two of the main methods users can utilize to connect and start creating reports.
 
-Section 3 - CSV Upload: The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method **does not** refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
+**CSV Upload**: The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
-Section 4 - API Connection: The recommended method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever updating data source and is always up to date.
+**API Connection**: The recommended method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever updating data source and is always up to date.
 
 ### CSV Upload Method
 
-We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in Section 1 Building Report Parameters around a Location. For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
+We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the Example Parameters for this Guide. For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
 
 <figure><img src="../../../.gitbook/assets/Control Center Filter.png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
 
@@ -142,7 +142,7 @@ After completing these steps we have successfully loaded a CSV extract of PHQ Ev
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in section 1 Building Report Parameters around a Location.&#x20;
+Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the Example Parameters for this guide.&#x20;
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -288,3 +288,15 @@ The final result should look like the following:
 The picture above shows how this analysis can be used; by clicking on a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
 
 Customers can add their own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
+
+### Example API Connection Report Template
+
+Below is a downloadable Power BI template that will automatically create the example report used throughout this guide, using the API Connection method.
+
+Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide.
+
+<figure><img src="../../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
+
+**Example Report:**
+
+{% file src="../../../.gitbook/assets/PredictHQ API Connection Example Report.pbit" %}

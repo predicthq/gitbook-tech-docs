@@ -19,7 +19,7 @@ For example, we’ve seen a drop in demand of up to 50% from the baseline observ
 To implement PredictHQ data to manage inventory for your retail business, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/use-events-data-in-power-bi.md).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 </details>
@@ -39,7 +39,7 @@ By using events to help predict demand, you can significantly increase the accur
 To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/use-events-data-in-power-bi.md).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 </details>
@@ -53,7 +53,7 @@ To implement PredictHQ data for Inventory Management for your Consumer Packaged 
 To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/use-events-data-in-power-bi.md).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 </details>
