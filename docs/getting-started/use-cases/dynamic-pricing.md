@@ -18,15 +18,11 @@ To implement PredictHQ data to inform dynamic pricing for your accommodation bus
 
 PredictHQ helps its customers master predictability with the smartest and largest event impact data stream, which can drive dynamic pricing planning and operations quickly, efficiently, and at scale.
 
-See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.predicthq.com/customers/hqrevenue).\
-\
+See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.predicthq.com/customers/hqrevenue).
 
-
-
+#### <img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.41.26 PM.png" alt="" data-size="original">
 
 </details>
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.41.26 PM.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -62,11 +58,9 @@ To capitalize on surges like this effectively, adopting dynamic pricing strategi
 
 [ParkMobile uses intelligent event data to boost parking reservations](https://www.predicthq.com/customers/parkmobile).
 
-
+<img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.46.44 PM.png" alt="" data-size="original">
 
 </details>
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.46.44 PM.png" alt=""><figcaption><p>Intelligent event data boosts parking reservations</p></figcaption></figure>
 
 
 
