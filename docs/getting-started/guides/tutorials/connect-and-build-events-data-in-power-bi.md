@@ -28,15 +28,17 @@ Below are the main steps involved in this guide:
    * Example Parameters for this Guide
 2. Select an Input method
    * CSV upload
+   * Snowflake Connection
    * API connection
 3. Guide to Building the Report
    * Example report download
 
 **Requirements:**
 
-1. Access to PredictHQ data via:
-   * PredictHQ account - [Sign up here](https://predicthq.com/signup) if you don’t already have an account.
-   * [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token)
+1. Access to PredictHQ data via 3 methods with 3 different requirements:
+   * CSV: PredictHQ account - [Sign up here](https://predicthq.com/signup) if you don’t already have an account.
+   * Snowflake: PredictHQ [Snowflake Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake)
+   * API: [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token)
 2. [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) reporting software
 
 ## Building Report Parameters around a Location
@@ -58,7 +60,7 @@ The report provided in this example shows a graph of the total number of people 
 
 We find many customers want to know what is happening around a business location such as around a hotel, restaurant, store, or other location. The graph of total attendance per day shows you peaks and dips in physically attended events. This allows you to see upcoming busy days or potential demand surges as well as quieter days. The list of events allows you to see events happening on a given day in more detail.
 
-Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our use case guide for more examples.
+Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guide](https://docs.predicthq.com/getting-started/tutorials-by-use-case) for more examples.
 
 The end result of the exercise will be a report like this:
 
@@ -68,13 +70,15 @@ The end result of the exercise will be a report like this:
 
 There are several ways to connect PHQ data to Power BI or other reporting software. Below are two of the main methods users can utilize to connect and start creating reports.
 
-**CSV Upload**: The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
+[**CSV Upload**](connect-and-build-events-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
-**API Connection**: The recommended method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever updating data source and is always up to date.
+[**Snowflake Connection**](connect-and-build-events-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
+
+[**API Connection**](connect-and-build-events-data-in-power-bi.md#api-connection-method): Another preferred method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever-updating data source and is always up to date.
 
 ### CSV Upload Method
 
-We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the Example Parameters for this Guide. For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
+We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
 
 <figure><img src="../../../.gitbook/assets/Control Center Filter.png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
 
@@ -94,7 +98,7 @@ Right-click the Query under Queries and go to the Advanced Editor option. The Qu
 
 This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that will transform the columns automatically for use in the report.
 
-This code expands out the Impact Patterns column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi stage transformation.
+This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 Paste the Power Query below after the first existing 4 lines, after the "Changed Type" step, replacing everything from the existing “in” down.
 
@@ -136,13 +140,74 @@ Hit Close & Apply and wait for the data transformation to finish processing.
 
 <figure><img src="../../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
-After completing these steps we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. See the Building the Report step 5 below for the next steps.
+After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
-### API Connection method
+### Snowflake Connection Method
+
+To connect using Snowflake you will need the following knowledge about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the variables below:
+
+1. Server Name: Usually in format <[account\_name](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name)>.snowflakecomputing.com
+2. Warehouse: A [warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview) is what you use to run queries. See which are available to you using the [SHOW WAREHOUSES](https://docs.snowflake.com/en/sql-reference/sql/show-warehouses) function.
+3. Table Location: the Database, Schema, and Table Name for your [PredictHQ Data Share Events](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) table.
+
+To start, navigate to the Snowflake data connection via:
+
+Get Data -> More -> Database -> Snowflake\
+
+
+<figure><img src="../../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/Select Snowflake Database.png" alt=""><figcaption><p>Database -> Snowflake</p></figcaption></figure>
+
+The Server and Warehouse info we gathered above will need to be entered at this step.\
+It should look something like the below, replacing square bracket placeholder variables for your Server and Warehouse info.
+
+<figure><img src="../../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
+
+Expand Advanced options and scroll down.
+
+Fill the Database where the PredictHQ Events table lies in your Snowflake structure (case sensitive).\
+Paste this SQL in the SQL box after substituting the Schema and Table Name. This code assumes no columns have been renamed:
+
+{% code lineNumbers="true" fullWidth="true" %}
+```sql
+select e.event_id as id, e.parent_event_id, e.update_dt, e.title, e.category, ARRAY_TO_STRING(e.labels,',') as labels, e.phq_labels
+    , e.phq_rank, e.phq_attendance, e.local_rank, e.status 
+    , CONVERT_TIMEZONE('UTC', Timezone, Event_Start) AS "START", CONVERT_TIMEZONE('UTC', Timezone, Event_End) AS "END", e.predicted_end, e.timezone
+    , val.value:value::INT as attendance_per_day, val.value:date_local::DATE as date_local  
+    , e.country_code, e.entities, e.geo, e.placekey, e.impact_patterns
+    , e.predicted_event_spend_accommodation, e.predicted_event_spend_hospitality, e.predicted_event_spend_transportation
+    , e.place_hierarchies, 
+From [Schema].[TableName] e    --replace with PredictHQ Events Data Share table location
+, LATERAL FLATTEN(INPUT => impact_patterns) imp
+, LATERAL FLATTEN(INPUT => imp.value:impacts) val
+where val.value:date_local::DATE between '2024-01-01' and '2024-03-31'
+    and status in ('active','predicted')
+    and phq_attendance >= 1
+    and category in ('community','concerts','conferences','expos','festivals','performing-arts','sports')
+    and imp.value:vertical::STRING = 'accommodation' and val.value:position::STRING = 'event_day'
+    and ARRAY_TO_STRING(PLACE_HIERARCHIES, ',') ilike '%5391959%'
+```
+{% endcode %}
+
+This code is performing the data transformation and filtering in code. It filters to the parameters laid out in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide) section, and transforms some columns we will be using for ease of use in the report.\
+The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.&#x20;
+
+This is what it should look like when filled in - with all square bracket placeholder text replaced.
+
+<figure><img src="../../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
+
+Click "OK". Click "Load Data" on the next screen.
+
+Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
+
+After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+
+### API Connection Method
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the Example Parameters for this guide.&#x20;
+Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide).&#x20;
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -187,7 +252,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 Replace the entire existing Power Query code with the one below, changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
-This code expands out the Impact Patterns column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi stage transformation.&#x20;
+This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.&#x20;
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -235,7 +300,7 @@ Click Close & Apply and wait for the data transformation to finish processing th
 
 <figure><img src="../../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
-After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI.
+After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](connect-and-build-events-data-in-power-bi.md#example-api-connection-report-template) section.
 
 ## Guide to Building the Report
 
@@ -250,7 +315,7 @@ Group as one (shift-click both boxes, right-click on one of them, and click the 
 <figure><img src="../../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
-drag the “date\_local” field from the Data tab on the right to the “Filters on this page” section under Filters.&#x20;
+drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.&#x20;
 
 Change the drop-down to Advanced filtering and add the following:
 
@@ -286,6 +351,8 @@ The final result should look like the following:
 <figure><img src="../../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
 The picture above shows how this analysis can be used; by clicking on a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
+
+A useful addition to this basic view could be a drill down on the table by adding a new table visual to the group that has the 'id', 'date\_local', and 'attendance\_per\_day' columns, showing how the attendance of an event has been spread out over multiple days (if it is a multi-day event). For more understanding of multi-day events, see our [Working with Multi-day Events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) documentation.
 
 Customers can add their own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
 
