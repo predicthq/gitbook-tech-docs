@@ -16,6 +16,8 @@ The Suggested Radius API returns a radius that can be used to find attended even
 
 The Suggested Radius API is powered by a machine learning model that looks at factors like population density, the events around a location, the customer’s industry, and many other factors to determine the ideal radius.
 
+We'd suggest caching the Suggested Radius API response where possible. The response will only change infrequently and it would be sufficient to refresh the cache once per month.
+
 ## Request
 
 ### HTTP Request
