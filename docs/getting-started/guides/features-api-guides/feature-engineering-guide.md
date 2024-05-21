@@ -6,7 +6,7 @@ description: >-
 
 # Get ML Features
 
-See the [Get Features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb).
+See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb).
 
 ## Technical documentation
 

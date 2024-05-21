@@ -6,7 +6,7 @@ description: >-
 
 # Demand Forecasting with Event Features
 
-See the [Demand Forecasting with Event Features notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb)
+See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb).
 
 While this notebook uses inputs from the [Beam API](../../../api/beam/) and [Features API](../../../api/features/), it is self-contained and can be run independently. Check out the following guides for more information:
 

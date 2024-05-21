@@ -40,7 +40,7 @@ Most steps are handled by PredictHQ APIs; you just need to provide the following
 2. Latitude and longitude
 3. Industry
 
-### STEP 1. Select Relevant Event Features
+### Step 1. Select Relevant Event Features
 
 With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can create a Beam analysis for your store or location via [Control Center](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
 
@@ -102,7 +102,7 @@ For practical implementation:
 * [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
 {% endhint %}
 
-### STEP 2. Get Features
+### Step 2. Get Features
 
 The [Features API](../../../api/features/) provides access to a library of prebuilt, forecast-ready features ready for direct integration into your machine-learning models. Simply specify the date range, location, and list of features, all of which can be sourced from the [Beam API](../../../api/beam/).
 
@@ -131,7 +131,7 @@ For practical implementation:
 * [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
 {% endhint %}
 
-### STEP 3. ML Model and Future Predictions
+### Step 3. ML Model and Future Predictions
 
 Event features provided by the [Features API](../../../api/features/) are prebuilt, forecast-ready, and ready for immediate use. They can be integrated into your existing dataset by merging based on location ID and date. Incorporating these event features can enhance your model's performance by adding valuable demand-driving event data.
 
