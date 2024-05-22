@@ -1,7 +1,7 @@
 ---
 description: >-
-  How to connect PredictHQ data to Power BI using multiple methods, and build an
-  example report
+  Learn how to connect PredictHQ data to Power BI using multiple methods, and
+  build an example report.
 ---
 
 # Use Events Data in Power BI
@@ -14,7 +14,7 @@ Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, I
 
 ## Relevant Industries
 
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel & DMO, Marketing, Parking, Restaurants, Retail, Transportation & Delivery
+Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
 
 ## Overview
 

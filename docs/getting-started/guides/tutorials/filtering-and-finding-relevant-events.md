@@ -6,17 +6,15 @@ description: >-
 
 # Filtering and Finding Relevant Events
 
-## Intro
+Events such as concerts, expos and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
 
-Events such as concerts, expos, and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
-
-This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls, and interpret responses.
+This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
 Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [Control Center](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../../api/saved-locations/).
 
 ## Use Cases
 
-Demand Forecasting, Custom Demand Analysis & Visualization, Dynamic Pricing, Inventory Management, Workforce Optimization and Others
+Demand Forecasting, Visualization and Insights, Dynamic Pricing, Inventory Management, Workforce Optimization and Others
 
 ## Relevant Industries
 
@@ -229,7 +227,7 @@ params={
 </details>
 
 {% hint style="info" %}
-For detailed information on all query parameters (including those not shown here), please consult  [Events API](../../../api/events/).
+For detailed information on all query parameters (including those not shown here), please consult [Events API](../../../api/events/).
 {% endhint %}
 
 ### Step 2. Call Events API

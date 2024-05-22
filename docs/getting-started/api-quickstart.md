@@ -11,7 +11,7 @@ description: >-
 1. A PredictHQ account - [log in with your PredictHQ account](https://control.predicthq.com/) if you have one or [sign up for free to get started](https://signup.predicthq.com/).
 2. An API Access Token.
 
-## Create an access token
+## Create an Access Token
 
 Read a more in-depth guide to [creating a new API Client and Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
@@ -20,6 +20,8 @@ Read a more in-depth guide to [creating a new API Client and Token](https://www.
 3. Make sure to keep a copy of your new Client Secret as this cannot be shown to you again.
 4. Use the new Client Secret to create a new Token.
 5. Make sure to keep a copy of your new API Token as this cannot be shown to you again.
+
+## Access Events API
 
 Now you can use the new API Access Token in the `Authorization` header of your API requests as in the example below:
 
@@ -43,6 +45,10 @@ print(response.json())
 {% embed url="https://www.youtube.com/watch?v=vvujroC7Bhs" %}
 How to set up and access PredictHQ APIs
 {% endembed %}
+
+{% hint style="info" %}
+Refer to [filtering-and-finding-relevant-events.md](guides/tutorials/filtering-and-finding-relevant-events.md "mention") for guidance on how to identify events relevant to your business.
+{% endhint %}
 
 ## Streamlit Demo Apps
 
