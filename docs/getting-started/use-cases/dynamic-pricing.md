@@ -2,8 +2,9 @@
 
 From missing out on increased revenue to losing operational efficiency and even customers due to poor customer experiences, many `accommodation`, `parking`, `travel`, and `retail` vendors and service providers are painfully aware of demand fluctuations. Most companies won’t realize a demand surge is taking place until 30-50% of availability or stock has been snapped up.
 
-Our customers from these industries often use PredictHQ data to fuel their sales forecasts, dynamic pricing, and business operations in advance. We have created guides for our most common use cases. We’ll start with using PredictHQ data for dynamic pricing examples by industry:
+<figure><img src="../../.gitbook/assets/Tutorials illustration 2.png" alt=""><figcaption></figcaption></figure>
 
+Our customers from these industries often use PredictHQ data to fuel their sales forecasts, dynamic pricing, and business operations in advance. We have created guides for our most common use cases. We’ll start with using PredictHQ data for dynamic pricing examples by industry:\
 
 
 <details>
@@ -20,7 +21,9 @@ PredictHQ helps its customers master predictability with the smartest and larges
 
 See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.predicthq.com/customers/hqrevenue).
 
-#### <img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.41.26 PM.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/stock per week tutorial example (2).png" alt="" data-size="original">
+
+
 
 </details>
 

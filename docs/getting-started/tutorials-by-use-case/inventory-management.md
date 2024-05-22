@@ -2,9 +2,9 @@
 
 Maintaining lean supply chains and appropriate inventory levels drives cost savings and maximizes sales. Understanding how events impact demand will help you do both, better.&#x20;
 
-When events drive high demand and demand surges, if you are not prepared, this means you will not have sufficient stock levels to account for the high demand. Similarly, sometimes events may reduce demand for your stores or products. This can happen if people are traveling away from a location for an event or are attending an event instead of buying products.
+<figure><img src="../../.gitbook/assets/stock per week tutorial example.png" alt=""><figcaption></figcaption></figure>
 
-Typically with inventory management customers are looking to prevent stockouts and overstocking. Using our product and tools as described below will allow you to anticipate and prepare for the upcoming demand impact driven by events and ensure your inventory management accounts for it.
+Using our product and tools as described below will allow you to anticipate and prepare for the upcoming demand impact driven by events and ensure your inventory management accounts for it.
 
 
 
