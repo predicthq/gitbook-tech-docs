@@ -48,9 +48,9 @@ To implement PredictHQ data for Inventory Management for your Consumer Packaged 
 
 <details>
 
-<summary>Other Industries Inventory Management Tutorials</summary>
+<summary>Other Industries</summary>
 
-To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the options below:
+To implement PredictHQ data for Inventory Management for your industry, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) inventory management workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
