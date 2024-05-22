@@ -59,9 +59,9 @@ Consider a scenario where a city is scheduled to host a major sports championshi
 
 To capitalize on surges like this effectively, adopting dynamic pricing strategies becomes crucial.
 
-[ParkMobile uses intelligent event data to boost parking reservations](https://www.predicthq.com/customers/parkmobile).
+Learn how [ParkMobile uses intelligent event data to boost parking reservations](https://www.predicthq.com/customers/parkmobile).
 
-<img src="../../.gitbook/assets/Screenshot 2024-05-16 at 5.46.44 PM.png" alt="" data-size="original">
+
 
 </details>
 

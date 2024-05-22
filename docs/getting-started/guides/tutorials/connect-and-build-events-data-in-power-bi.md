@@ -43,8 +43,13 @@ Below are the main steps involved in this guide:
 
 ## Building Report Parameters around a Location
 
-For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.\
-All of these parameters are able to be modified based on user needs, see our [filtering guide](filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
+For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
+
+
+
+{% hint style="info" %}
+All of our parameters are able to be modified based on user needs, see our [filtering guide](filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
+{% endhint %}
 
 ### Example Parameters for this Guide:
 
