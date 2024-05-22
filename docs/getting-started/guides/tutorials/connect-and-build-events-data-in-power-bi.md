@@ -44,7 +44,7 @@ Below are the main steps involved in this guide:
 ## Building Report Parameters around a Location
 
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.\
-All of these parameters are able to be modified based on user needs, we have a filtering guide coming soon with details on what these parameters mean and how they can be modified to suit different use cases.
+All of these parameters are able to be modified based on user needs, see our [filtering guide](filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
 
 ### Example Parameters for this Guide:
 
@@ -213,13 +213,15 @@ Following these parameters and the [Events API](https://docs.predicthq.com/api/e
 
 {% code overflow="wrap" fullWidth="true" %}
 ```url
-/https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500
+https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500
 ```
 {% endcode %}
 
 Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API. \
 Time zone parameter (active.tz) filters results based on that given time zone, even though date results are returned in UTC.\
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
+
+See also our [filtering guide](filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
 With this API query string, event data can start to be loaded into Power BI.&#x20;
 
