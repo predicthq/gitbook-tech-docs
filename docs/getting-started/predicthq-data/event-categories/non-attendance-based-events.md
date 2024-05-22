@@ -222,14 +222,14 @@ An Observance is a day that is recognized nationally or internationally, usually
 Labels for an observance event provide more information about the event. The most common 5 labels are:
 
 1. `observance-season`
-   * When the observance marks of the seasonal change: [June Solstice](https://control.predicthq.com/search/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://control.predicthq.com/search/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://control.predicthq.com/search/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://control.predicthq.com/search/events/5eVGwA82bfPEMdHXrM).
+   * When the observance marks the seasonal change: [June Solstice](https://control.predicthq.com/search/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://control.predicthq.com/search/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://control.predicthq.com/search/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://control.predicthq.com/search/events/5eVGwA82bfPEMdHXrM).
    * 227 countries observed the above four types of events.
-2. `holiday-religious`: When observing a religious holiday that is mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://control.predicthq.com/search/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://control.predicthq.com/search/events/aY7JYozjyDx35umEwG) in other countries.
+2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://control.predicthq.com/search/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://control.predicthq.com/search/events/aY7JYozjyDx35umEwG) in other countries.
 3. `holiday-christian`: When observing a Christian-related holiday, e.g. [Epiphany](https://control.predicthq.com/search/events/cMjzGaEAKnCWLTG4Lc).
 4. `observance-united-nations`:
-   * International days were created by the United Nations to promote international awareness and action on some issues. For example, March 22 is[ World Water Day](https://control.predicthq.com/search/events/NDj4W65XpbLLeA9kPu).
+   * The United Nations created international days to promote global awareness and action on some issues. For example, March 22 is[ World Water Day](https://control.predicthq.com/search/events/NDj4W65XpbLLeA9kPu).
    * The United Nations also observes anniversaries of key events in its history. E.g. May 8th is [Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War](https://control.predicthq.com/search/events/nLoWsBHWpVrHuW5FcC).
-5. `holiday-hebrew`: When observing a Hebrew related holiday, e.g. many countries observe [Tu Bishvat](https://control.predicthq.com/search/events/FRgcTikSuwrJixHDdL).
+5. `holiday-hebrew`: When observing a Hebrew-related holiday, e.g. many countries observe [Tu Bishvat](https://control.predicthq.com/search/events/FRgcTikSuwrJixHDdL).
 
 #### Date & Time
 
@@ -249,8 +249,10 @@ Observances have event group entities available.
 
 **PHQ Rank**
 
-* number of well-known observances have a PHQ Rank of 90 to indicate the popularity/impact on the region. For example, [New Years’ Eve](https://control.predicthq.com/search/events/qZbqwEStS5DTZyASnt), [Valentine's Day](https://control.predicthq.com/search/events/x957f7DyXpeCubLpWH), [Halloween](https://control.predicthq.com/search/events/bEPN3H3UA5UJkVMTop).
-* The majority of observances have a PHQ rank of 50 to reflect the impact is more likely to benefit local businesses.
+* **Rank 80-90** observances are widely observed and typically associated with consumer spending on gifts, travel, and festivities. Examples include [Valentine's Day](https://control.predicthq.com/search/events/x957f7DyXpeCubLpWH) and [Christmas Eve](https://control.predicthq.com/search/events/AtVVBpX4bkXhLDNjBa).
+* **Rank 60-79** observances are mostly religious observances, national days, independence days, or cultural and historical dates which have a wide impact. Examples include [Constitution Day](https://control.predicthq.com/search/events/PmW2kvCVoxQ3AHgAZS) and [Ganesh Chaturthi](https://control.predicthq.com/search/events/N22YXJKJlGwL).
+* **Rank 40-59** observances include observances with the potential for increased localized economic activities such as awareness days, smaller historical observances, and regional celebrations. Examples include [Queensland Day](https://control.predicthq.com/search/events/4CJKDjxdQb5RCyckrN) and [National Indigenous Peoples Day](https://control.predicthq.com/search/events/AYd5LmshmHX5zjjc4k).
+* **Rank 20-39** observances generally do not have widespread commercialization, public holidays, or significant consumer behavior changes associated with them. Examples include [September Equinox](https://control.predicthq.com/search/events/wjjJldkg0jGj) and [World Bicycle Day](https://control.predicthq.com/search/events/Bkgr5cvHLa8ZEGNUbT).
 
 **Local Rank**
 
