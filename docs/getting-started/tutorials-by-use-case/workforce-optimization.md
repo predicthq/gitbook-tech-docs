@@ -2,7 +2,7 @@
 
 Until PredictHQ, labor optimization aligned with event-based demand prediction was impossible to perform effectively or at scale.
 
-<figure><img src="../../.gitbook/assets/stock per week tutorial example (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/stock per week tutorial example 2.png" alt=""><figcaption></figcaption></figure>
 
 Companies are increasingly leveraging automated scheduling systems that incorporate demand forecasting to optimize their workforce optimization. These systems use AI and data analysis to predict staffing needs based on factors like seasonal demand, historical sales, and real-time data, enabling businesses to adjust their staffing levels dynamically. Using PredictHQ’s events data allows our customers to optimize this automation.
 
