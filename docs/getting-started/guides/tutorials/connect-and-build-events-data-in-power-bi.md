@@ -10,11 +10,11 @@ In today's data-driven landscape, leveraging powerful analytical tools is essent
 
 ## Use Cases
 
-Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, Inventory Management, Event Visibility
+[Demand Forecasting](https://docs.predicthq.com/getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models), [Dynamic Pricing](https://docs.predicthq.com/getting-started/tutorials-by-use-case/dynamic-pricing), [Workforce Optimization](https://docs.predicthq.com/getting-started/tutorials-by-use-case/workforce-optimization), [Demand Analytics](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights), [Inventory Management](https://docs.predicthq.com/getting-started/tutorials-by-use-case/inventory-management), [Event Visibility](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights)
 
 ## Relevant Industries
 
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
+[Accommodation](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#accommodation-demand-analytics-calendar-and-map-tutorials), Consumer Packaged Goods, [Grocery and Supermarkets](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), Leisure, Travel and Tourism, Marketing and Advertising, [Parking](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials), Restaurants, [Retail](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), [Transportation and Delivery](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials) and Others
 
 ## Overview
 
