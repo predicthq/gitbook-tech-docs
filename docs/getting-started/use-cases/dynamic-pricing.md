@@ -19,6 +19,16 @@ To implement PredictHQ data to inform dynamic pricing for your accommodation bus
 
 PredictHQ helps its customers master predictability with the smartest and largest event impact data stream, which can drive dynamic pricing planning and operations quickly, efficiently, and at scale.
 
+As an example, accommodation customers find it useful to overlay accommodation room price data with event impact data and use that to help guide pricing adjustments. See the example below in Power BI:
+
+<img src="../../.gitbook/assets/Power BI Dynamic Pricing Example.png" alt="" data-size="original">
+
+In this example, we have added daily room price data into the Power BI dashboard showing the total number of people attending events in the location (in this example the location is San Francisco but typically it would be events within a radius around a hotel). You can do this by following the [Power BI tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md) and adding in your data. Based on this you can look for peak days and surges in demand and adjust pricing accordingly.
+
+In this fictional example on the 24 February where 596,569 people are attending events in the area and this is significantly higher than other days. This represents a demand surge or peak in demand that commonly has an impact of businesses. In this case the hotel owner is then adjusting the pricing on this day from $230 to $310 dollars (this may be done in another app).&#x20;
+
+This is a simple way of overlaying attendance and your business data to highlight when to adjust pricing. A more sophisticated way is to use machine learning models to suggested updated pricing or automatically update your pricing.
+
 See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.predicthq.com/customers/hqrevenue).
 
 <img src="../../.gitbook/assets/stock per week tutorial example (2).png" alt="" data-size="original">
