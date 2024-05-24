@@ -73,7 +73,7 @@ The end result of the exercise will be a report like this:
 
 ## Select an Input Method
 
-There are several ways to connect PHQ data to Power BI or other reporting software. Below are two of the main methods users can utilize to connect and start creating reports.
+There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods users can utilize to connect and start creating reports.
 
 [**CSV Upload**](connect-and-build-events-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
