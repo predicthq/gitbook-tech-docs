@@ -60,13 +60,6 @@ Sports events have PHQ Rank available.
 
 Sports events have Local Rank available.
 
-**Aviation Rank**
-
-* A major sports event will result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend the event.
-* A minor or local sports event will result in a lower impact on Aviation Rank as it’s less likely to cause travel by flight.
-
-The league type and tier level is also considered. For example, in `auto-racing` sports, [F1](https://control.predicthq.com/search/events/WATaTgUN2xivVNn2yL) is considered a major event with an Aviation Rank of 100, while [Monster Trucks](https://control.predicthq.com/search/events/UrFHitKVNCLjbFz9qH) events are considered minor events within this sport type, with an Aviation Rank of 0.
-
 **PHQ Attendance**
 
 Sports events have PHQ Attendance available.
@@ -108,13 +101,6 @@ Conference events have PHQ Rank available.
 **Local Rank**
 
 Conference events have Local Rank available.
-
-**Aviation Rank**
-
-* Major conferences such as an international industrial conference will result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend.
-* A local or a small to midsize conferences event will result in a lower impact on Aviation Rank as it’s less likely to cause travel by flight.
-
-For example, [Automotive Manufacturing Thailand](https://control.predicthq.com/search/events/2J781nm69Kzy) has an Aviation Rank of 100 while [The Oklahoma Aerospace Forum](https://control.predicthq.com/search/events/3bjSwJNsQYSiyTMdtS) has an Aviation Rank of 0.
 
 **PHQ Attendance**
 
@@ -158,13 +144,6 @@ Expos events have PHQ Rank available.
 
 Expos events have Local Rank available.
 
-**Aviation Rank**
-
-* Major expos such as an international industrial expo will result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend.
-* A local or a small to midsize expos will result in a lower impact on Aviation Rank as it’s less likely to cause travel by flight.
-
-For example, the [International Broadcasting Convention](https://control.predicthq.com/search/events/NDXK8oMZQpMX) has an Aviation Rank of 100 while a [Bride & Groom Exhibition](https://control.predicthq.com/search/events/YjN29p0N6WN9) has an Aviation Rank of 60.
-
 **PHQ Attendance**
 
 Expos events have PHQ Attendance available.
@@ -200,13 +179,6 @@ Concerts events have PHQ Rank available.
 **Local Rank**
 
 Concerts events have Local Rank available.
-
-**Aviation Rank**
-
-* A famous foreign musical artist who performs during the weekend is likely to result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend.
-* A local musical artist performing is less likely to cause travel by flight.
-
-For example, [Jay Chou Singapore](https://control.predicthq.com/search/events/mXuGXGcE2w87tjPGUU) has an Aviation Rank of 56 while a nightclub music show has an Aviation Rank of 0.
 
 **PHQ Attendance**
 
@@ -249,13 +221,6 @@ Festival events have PHQ Rank available.
 **Local Rank**
 
 Festival events have Local Rank available.
-
-**Aviation Rank**
-
-* An annual large festival, especially when it overlaps with a weekend will result in a higher impact on Aviation Rank as people are likely to travel across the country or overseas to attend.
-* A local community festival is less likely to cause travel by flight.
-
-For example, the [New Orleans Jazz and Heritage Festival](https://control.predicthq.com/search/events/ToZHJ3MHBrQGsw45Rx) has an Aviation Rank of 78 while [An Old Time Christmas](https://control.predicthq.com/search/events/ToZHJ3MHBrQGsw45Rx) (a seasonal light show) has an Aviation Rank of 0.
 
 **PHQ Attendance**
 
@@ -355,11 +320,6 @@ Community events have PHQ Rank available.
 
 Community events have Local Rank available.
 
-**Aviation Rank**
-
-* Community events have no Aviation Rank available as they are not likely to cause impact on air travel.
-* The `aviation_rank` field returns `null` for community events.
-
 **PHQ Attendance**
 
 Community events have PHQ Attendance available.
@@ -441,10 +401,6 @@ Academic events have PHQ Rank available.
 **Local Rank**
 
 Academic events have no Local Rank available.
-
-**Aviation Rank**
-
-Academic events have no Aviation Rank available.
 
 **PHQ Attendance**
 
