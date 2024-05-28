@@ -208,6 +208,10 @@ Connection settings: DirectQuery is recommended for constant database connection
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
+### Connecting to other Data Warehouses
+
+See [loading-predicthqs-event-data-into-your-data-warehouse.md](loading-predicthqs-event-data-into-your-data-warehouse.md "mention") for an example of how to load events data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
+
 ### API Connection Method
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).

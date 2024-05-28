@@ -564,7 +564,7 @@ You can use Event data from your data warehouse in your demand forecast to impro
 
 Use the data within BigQuery to create detailed reports and dashboards that monitor the effects of events on your business operations. These reports can provide actionable insights to business users across your organization, from marketing teams planning campaigns around major events to supply chain management preparing for increased activity.
 
-See [Use Events Data in Power BI](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi) for an example of building reports in Power BI. You can connect Power BI or other BI tools to your database to build dashboards and reports.
+See [Use Events Data in Power BI](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi) for an example of building reports in Power BI. You can connect Power BI or other BI tools to your database to build dashboards and reports. See also [How to Connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
 #### 4. Enhancing Customer Experience
 

@@ -102,6 +102,7 @@
   * [Integrate with Databricks](integrations/third-party-integrations/integrate-with-databricks.md)
   * [Integrate with Tableau using our Data Connector](integrations/third-party-integrations/tableau-data-connector.md)
   * [Integrate with a Demand Forecast in PowerBI](integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md)
+  * [Google Cloud BigQuery](integrations/third-party-integrations/google-cloud-bigquery.md)
 * [PredictHQ SDKs](integrations/sdks/README.md)
   * [Python SDK](integrations/sdks/python-sdk.md)
   * [Javascript SDK](integrations/sdks/javascript-sdk.md)
