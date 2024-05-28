@@ -208,9 +208,9 @@ Connection settings: DirectQuery is recommended for constant database connection
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
-### Connecting to other Data Warehouses
+#### Connecting to other Data Warehouses
 
-See [loading-predicthqs-event-data-into-your-data-warehouse.md](loading-predicthqs-event-data-into-your-data-warehouse.md "mention") for an example of how to load events data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
+See [loading-predicthqs-event-data-into-your-data-warehouse.md](loading-predicthqs-event-data-into-your-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
 ### API Connection Method
 
@@ -371,10 +371,17 @@ Customers can add their own data to this chart to compare peaks and troughs of a
 
 Below is a downloadable Power BI template that will automatically create the example report used throughout this guide, using the API Connection method.
 
-Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide.
+Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide. \
+Please wait 10-20 seconds between each step as data populates and data runs in the background.
 
 <figure><img src="../../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
-**Example Report:**
+Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Please select Anonymous and click Connect.
+
+<figure><img src="../../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
+
+If there are any issues with this template please refer to the [API Connection Method](connect-and-build-events-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
+
+#### Example Report:
 
 {% file src="../../../.gitbook/assets/PredictHQ API Connection Example Report.pbit" %}
