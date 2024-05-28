@@ -12,7 +12,7 @@ We use Google Cloud Platform (GCP) as our primary example, but the methods for s
 
 Please note that this guide focuses exclusively on integrating PredictHQ’s Events API data and does not cover the Features API.
 
-If you are using Snowflake or ADX for your data lake PredictHQ integrates with those products. See [Receive Data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive Data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
+If you are using Snowflake or AWS Data Exchange (ADX) for your data lake PredictHQ integrates with those products. See [Receive Data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive Data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
 
 ## Overview
 
@@ -24,10 +24,10 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 * Access to PredictHQ Data&#x20;
   * JSONL: Requires a PredictHQ account.[ Sign up here](https://predicthq.com/signup) if you don’t already have one.
-  * API: An API Access Token is necessary for accessing the data programmatically.
+  * API: An [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token) is necessary for accessing the data programmatically.
 * GCP permissions:
   * Ensure you have "BigQuery Data Owner" and "BigQuery User" permissions over the BigQuery environment.
-  * A GCP BigQuery Service Account and its corresponding JSON key are required.[ See the official documentation](https://cloud.google.com/iam/docs/service-account-overview) for details.
+  * A GCP BigQuery Service Account and its corresponding JSON key are required.[ See the GCP documentation](https://cloud.google.com/iam/docs/service-account-overview) for details.
 
 ## Scenario: Tom’s Pizzeria
 
@@ -106,7 +106,8 @@ To locate and export the relevant event data into a JSONL file, we utilize the P
 
 Typically you may download all the data you have access to into your data warehouse. In that case, run a search for all events and download them.
 
-In the context of our example [Scenario](loading-predicthqs-event-data-into-your-data-warehouse.md#scenario-toms-pizzeria) for Tom's Pizzeria, they would be downloading events for all of the US and then querying for specific locations. Many customers may bulk load all the data they have access to by exporting it all and then importing it into their data lake. In this example, we’ll download events only for Seattle.\
+In the context of our example [Scenario](loading-predicthqs-event-data-into-your-data-warehouse.md#scenario-toms-pizzeria) for Tom's Pizzeria, they would be downloading events for all of the US and then querying for specific locations. Many customers may bulk load all the data they have access to by exporting it all and then importing it into their data lake. In this example, we’ll download events only for Seattle.
+
 To do that, we searched for Seattle in the Control Center for the relevant period, status, and attended categories.
 
 <figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>Control Center Search for Seattle ready for Export</p></figcaption></figure>
@@ -538,7 +539,7 @@ A common example is customers often look at events occurring in the next 1 to 3 
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
-See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
+You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the example above. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
 
 Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\
 
