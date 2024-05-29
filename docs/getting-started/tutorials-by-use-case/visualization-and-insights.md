@@ -26,7 +26,6 @@ These insights are delivered through various visualizations, tailored to the siz
 
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi).\
 
-* **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features)
 
 2. To create **custom maps and filtered event lists,** check out our\
    [Accommodation Business Demo App](https://predicthq-accommodation-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-accommodation-demo).
@@ -45,7 +44,6 @@ These insights are delivered through various visualizations, tailored to the siz
 
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi).\
 
-* **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features)
 
 2. To create **custom maps and filtered event lists,** check out our\
    [Retail Demo App](https://predicthq-location-insights-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-location-insights-demo).
@@ -66,7 +64,6 @@ These insights are delivered through various visualizations, tailored to the siz
 
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi).\
 
-* **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features)
 
 2. To create **custom maps, polygons, and filtered event lists,** check out our\
    [Parking Business Demo App](https://predicthq-parking-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-parking-demo).

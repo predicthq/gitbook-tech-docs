@@ -14,15 +14,15 @@ Companies are increasingly leveraging automated scheduling systems that incorpor
 
 To implement PredictHQ data to inform dynamic pricing for your retail business, review the options below:
 
-* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your workforce optimization updates.
+* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 
 <!---->
 
-* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with Power BI for your workforce optimization.&#x20;
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) inventory management workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
 
 <!---->
 
-* [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your workforce optimization by integrating PredictHQ data directly into your demand forecasting models.
+* **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 <!---->
 
@@ -46,16 +46,9 @@ Read about how [Legion relies on PredictHQ to help retailers eliminate labor ine
 
 To implement PredictHQ data to inform dynamic pricing for your restaurant business, review the options below:
 
-* [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your workforce optimization by integrating PredictHQ data directly into your demand forecasting models.
-
-<!---->
-
-* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with Power BI for your workforce optimization.&#x20;
-
-<!---->
-
-* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your workforce optimization updates.\
-
+* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) inventory management workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
+* **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 * Build a custom demand calendar (Coming soon)
 
 \
@@ -77,15 +70,12 @@ By using PredictHQ’s event data in their demand forecasting models, or plannin
 To implement PredictHQ data for Workforce Optimization for your industry, review the options below:\
 
 
-* No code: [**Using PredictHQ** ](https://www.predicthq.com/support/category/control-center-and-account-settings)[**Web application**](https://www.predicthq.com/support/category/control-center-and-account-settings) (Control Center) - Use basic event impact data and trends to inform your workforce optimization updates.
+* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 
 <!---->
 
-* [**API enrichment, analysis, and visualization in Power BI** ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)- Integrate PredictHQ data with Power BI for your workforce optimization.&#x20;
-
-<!---->
-
-* [**Update machine learning models with predictive event data**](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) - Automatically and dynamically update your workforce optimization by integrating PredictHQ data directly into your demand forecasting models.
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) inventory management workflows. [Read tutorial](../guides/tutorials/connect-and-build-events-data-in-power-bi.md).
+* **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 <!---->
 
