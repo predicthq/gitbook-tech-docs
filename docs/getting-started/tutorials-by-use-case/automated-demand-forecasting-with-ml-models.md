@@ -23,4 +23,6 @@ Figuring out how to use events in your forecast can be complex. With our product
 
 [Demand forecasting](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) covers a range of use cases and industries from dynamic pricing to inventory management. See the use cases below for more examples.
 
+See [integrate-with-a-demand-forecast-in-powerbi.md](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md "mention") for an example of implement demand forecasting using PowerBI's AutoML models to forecast demand with PredictHQ technology and data.
+
 \

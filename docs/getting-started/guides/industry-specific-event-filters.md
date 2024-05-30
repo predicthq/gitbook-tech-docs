@@ -30,6 +30,12 @@ For stores and locations where proximity to events is important, such as those i
 | Transportation and Delivery                   |      City     |
 | Other                                         |      City     |
 
+For different location types you can use the approaches below to get events:
+
+**Radius-based location type** - You need to have a latitude and longitude for your location. Use the [Suggested Radius API](../../api/suggested-radius/) to find the radius for your location and call the [Events API](../../api/events/search-events.md) (and other APIs) using the `within` parameter supplying the latitude, longitude and radius to get all events around your location. You can also use Saved Locations (also known as [Location Insights](https://www.predicthq.com/support/category/location-insights)) and create saved locations for each of your locations (stores, hotels, parking garages, etc.) then use those saved locations with the Events API or other APIs. You can create Saved Locations via the [API ](../../api/saved-locations/)or Control Center.
+
+**City location types** - For these types of locations use the [Places API](../../api/places/) to find a Place ID for your city. Then query the [Events API](../../api/events/search-events.md) and other APIs using the Place ID. This will return all events within the location.
+
 ## Relevant Event Categories
 
 With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Demand Analysis](https://www.predicthq.com/support/beam-overview) to automatically identify important categories for your specific stores or locations. Access Demand Analysis via [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
