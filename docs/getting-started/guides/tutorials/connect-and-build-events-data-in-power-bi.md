@@ -87,7 +87,7 @@ We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/
 
 <figure><img src="../../../.gitbook/assets/Control Center Filter.png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
 
-Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Real-World-Events-202xxxxx.csv” where the x are dates of the export - feel free to rename this to anything else.
+Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and y is the location - feel free to rename this to anything else.
 
 In Power BI, create a new report and press Get Data -> Text/CSV
 
