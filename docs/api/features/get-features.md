@@ -32,7 +32,7 @@ POST https://api.predicthq.com/v1/features/
     "lte": 15
   }
 }
-</code></pre></td></tr><tr><td><code>location</code><br>object</td><td><p>Location to calculate features for. You can specify the location as a latitude/longitude (with radius), Place ID or Saved Location ID.</p><p></p><p>We recommend using a lat/lon+radius so your location can be more accurately defined, and we strongly recommend using our <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to work out a suitable radius around your location.<br></p><p>Note, when using Place IDs or Saved Location IDs a maximum of 3 IDs may be used.</p><p></p><p>E.g. using Place IDs.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>location</code><br>object</td><td><p>Location to calculate features for. You can specify the location as a latitude/longitude (with radius), Place ID(s) or  <a href="../saved-locations/">Saved Location</a> ID(s).</p><p></p><p>We recommend using a lat/lon+radius as they could define the location of your interest more accurately. To work out a suitable radius around your location we strongly recommend using our <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a>.<br></p><p><strong>Note:</strong> When using Place IDs or Saved Location IDs a maximum of 3 IDs may be used.</p><p></p><p><strong>Note:</strong> When using lat/lon+radius, the radius must be in the format <code>&#x3C;radius>&#x3C;radius_unit></code>, where <code>&#x3C;radius></code> is an integer or a float number up to 2 decimal places and <code>&#x3C;radius_unit></code> is one of:</p><ul><li><code>m</code> - meters</li><li><code>km</code> - kilometers</li><li><code>ft</code> - feet</li><li><code>mi</code> - miles</li></ul><p></p><p>E.g. using Place IDs:</p><pre class="language-json"><code class="lang-json">{
   "location": {
     "place_id": [
       5224323,
@@ -41,7 +41,7 @@ POST https://api.predicthq.com/v1/features/
     ]
   }
 }
-</code></pre><p>E.g. using Saved Location IDs.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p>E.g. using Saved Location IDs:</p><pre class="language-json"><code class="lang-json">{
   "location": {
     "saved_location_id": [
       "BN7ZSw8xza9FviPVfyCycd",
@@ -50,16 +50,16 @@ POST https://api.predicthq.com/v1/features/
     ]
   }
 }
-</code></pre><p>E.g. using a latitude/longitude and radius (recommended)</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p>E.g. using a latitude/longitude and radius (recommended):</p><pre class="language-json"><code class="lang-json">{
   "location": {
     "geo": {
       "lat": 41.75038,
       "lon": -71.49978,
-      "radius": "2.6mi"
+      "radius": "2.62mi"
     }
   }
 }
-</code></pre><p>The radius is in the format: <code>&#x3C;radius>&#x3C;radius_unit></code></p><p>Supported radius units are:</p><ul><li><code>m</code> - meters</li><li><code>km</code> - kilometers</li><li><code>ft</code> - feet</li><li><code>mi</code> - miles</li></ul><p></p></td></tr><tr><td><code>interval</code><br>string<br>optional</td><td><p>Aggregation interval.<br><br><strong>Possible values:</strong></p><ul><li><code>day</code> (default) for daily aggregation</li><li><code>week</code> for weekly aggregation</li></ul></td></tr><tr><td><code>week_start_day</code><br>string<br>optional</td><td><p>The weekday to be treated as the start of the week.</p><p></p><p><strong>Possible values:</strong></p><ul><li><code>monday</code> (default)</li><li><code>tuesday</code></li><li><code>wednesday</code></li><li><code>thursday</code></li><li><code>friday</code></li><li><code>saturday</code></li><li><code>sunday</code></li></ul><p><br>Only applicable when <code>interval</code> is set to <code>week</code>. </p></td></tr><tr><td><code>&#x3C;feature_name></code><br>object or boolean</td><td><p>The name of the feature you're requesting. You can request multiple features in a single request.<br><br>Features can be further configured here, or you can set the value as <code>true</code> to perform the default calculations for that feature.<br><br>Please see the tables below for a list of all currently supported features and how they can be further configured.<br></p><p>E.g. requesting certain stats fields and filtering for records with a PHQ Rank over 50.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p></p></td></tr><tr><td><code>interval</code><br>string<br>optional</td><td><p>Aggregation interval.<br><br><strong>Possible values:</strong></p><ul><li><code>day</code> (default) for daily aggregation</li><li><code>week</code> for weekly aggregation</li></ul></td></tr><tr><td><code>week_start_day</code><br>string<br>optional</td><td><p>The weekday to be treated as the start of the week.</p><p></p><p><strong>Possible values:</strong></p><ul><li><code>monday</code> (default)</li><li><code>tuesday</code></li><li><code>wednesday</code></li><li><code>thursday</code></li><li><code>friday</code></li><li><code>saturday</code></li><li><code>sunday</code></li></ul><p><br>Only applicable when <code>interval</code> is set to <code>week</code>. </p></td></tr><tr><td><code>&#x3C;feature_name></code><br>object or boolean</td><td><p>The name of the feature you're requesting. You can request multiple features in a single request.<br><br>Features can be further configured here, or you can set the value as <code>true</code> to perform the default calculations for that feature.<br><br>Please see the tables below for a list of all currently supported features and how they can be further configured.<br></p><p>E.g. requesting certain stats fields and filtering for records with a PHQ Rank over 50.</p><pre class="language-json"><code class="lang-json">{
   "phq_attendance_sports": {
     "stats": ["count", "std_dev", "median"],
     "phq_rank": { 

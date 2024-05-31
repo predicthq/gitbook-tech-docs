@@ -20,15 +20,14 @@ POST https://api.predicthq.com/v1/beam/analyses
 
 ### Request Body
 
-<table><thead><tr><th width="217">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><code>location.*</code><br>object<br><em>required</em></td><td><p>This should be the location of your data. We will use this location for our time series modelling and to correlate with events in the specified area.</p><pre class="language-json"><code class="lang-json">{
-  "geopoint": {
+<table><thead><tr><th width="217">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><code>location.*</code><br>object<br><em>required</em></td><td><pre class="language-json"><code class="lang-json">  "geopoint": {
     "lat": "-36.849761",
     "lon": "174.7628903"
   },
   "radius": 1.2,
   "unit": "km"
 }
-</code></pre><p>We recommend using the <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to find a suitable radius for your location/industry.<br><br><strong>Possible radius units:</strong><br><code>mi</code> - Miles<br><code>m</code> - Meters<br><code>km</code> - Kilometers</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
 </code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><code>aviation</code> - Aviation Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
