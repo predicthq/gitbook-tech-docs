@@ -242,8 +242,11 @@ Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bea
 
 Add the HTTP request header with the following information:
 
-1. URL parts: our created Events API URL from the above
-2. Header: Authorization = Bearer api\_token where ‘\[api\_token]’ will be replaced with your PHQ API Access Token. Just replace ‘\[api\_token]’ with your actual API Access Token. Leave the ‘Bearer ’ part in
+1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
+2. **HTTP request header parameters**:&#x20;
+   1. Put `Authorization` in the first field
+   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Just replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in\
+
 
 The filled-out information should look like this:
 

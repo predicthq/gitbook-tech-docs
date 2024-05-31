@@ -20,15 +20,15 @@ POST https://api.predicthq.com/v1/beam/analyses
 
 ### Request Body
 
-<table><thead><tr><th width="217">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><code>location.*</code><br>object<br><em>required</em></td><td><p>This is the location of your data. For example, if you are creating an analysis for a store in Seattle you'd specify the latitude and longitude of your store. We will use this location for our time series modeling and to correlate with events in the specified area. See the example below:</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="217">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string<br><em>required</em></td><td>Name of an analysis.<br><br>E.g. <code>My Location Analysis 1</code></td></tr><tr><td><code>location.*</code><br>object<br><em>required</em></td><td><p>Contains <code>geopoint</code>, <code>radius</code> and <code>unit</code> to represent the location of your data to create the analysis.</p><ul><li><code>geopoint</code> contains <code>lat</code> and <code>lon</code> which are coordinates for your analysis, e.g. if you are creating an analysis for a store in Seattle you'd specify the latitude and longitude of your store.</li><li><code>radius</code> must be an integer or a float number up to 2 decimal places. It represents the radius of the event search around your <code>geopoint</code> to use for time series modelling and correlation. We <strong>strongly recommend</strong> using the <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to find a suitable radius for your location/industry.</li><li><p><code>unit</code> is the unit for <code>radius</code> and must be one of:</p><ul><li><code>m</code> - meters</li><li><code>km</code> - kilometers</li><li><code>ft</code> - feet</li><li><code>mi</code> - miles</li></ul></li></ul><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "geopoint": {
     "lat": "-36.849761",
     "lon": "174.7628903"
   },
-  "radius": 1.2,
+  "radius": 1.22,
   "unit": "km"
 }
-</code></pre><p><code>radius</code> - is an integer or a float number up to 2 decimal places.<br><br><strong>Possible radius units:</strong></p><ul><li><code>mi</code> - Miles</li><li><code>m</code> - Meters</li><li><code>km</code> - Kilometers</li></ul><p>We recommend using the <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to find a suitable radius for your location/industry.</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
 </code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><code>aviation</code> - Aviation Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
