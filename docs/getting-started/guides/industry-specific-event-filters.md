@@ -40,18 +40,18 @@ For different location types you can use the approaches below to get events:
 
 With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Demand Analysis](https://www.predicthq.com/support/beam-overview) to automatically identify important categories for your specific stores or locations. Access Demand Analysis via [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
 
-| Industry                                      |                       Relevant Event Categories                       |
-| --------------------------------------------- | :-------------------------------------------------------------------: |
-| Accommodation                                 |        concerts, conferences, expos, festivals, performing-arts       |
-| Consumer Packaged Goods                       | public holidays, performing-arts, conferences, conferences, community |
-| Food and Beverage (also known as Restaurants) |   public holidays, performing-arts, conferences, concerts, festivals  |
-| Grocery and Supermarkets                      | public holidays, performing-arts, conferences, conferences, community |
-| Leisure, Travel and Tourism                   | public holidays, performing-arts, conferences, conferences, community |
-| Marketing                                     | public holidays, performing-arts, conferences, conferences, community |
-| Parking                                       |      public holidays, community, concerts, expos, performing-arts     |
-| Retail                                        |  public holidays, performing-arts, community, conferences, festivals  |
-| Transportation and Delivery                   | public holidays, performing-arts, conferences, conferences, community |
-| Other                                         | public holidays, performing-arts, conferences, conferences, community |
+| Industry                                      |                                   Relevant Event Categories                                  |
+| --------------------------------------------- | :------------------------------------------------------------------------------------------: |
+| Accommodation                                 |                   concerts, conferences, expos, festivals, performing-arts                   |
+| Consumer Packaged Goods                       |             public holidays, performing-arts, conferences, conferences, community            |
+| Food and Beverage (also known as Restaurants) |              public holidays, performing-arts, conferences, concerts, festivals              |
+| Grocery and Supermarkets                      |             public holidays, performing-arts, conferences, conferences, community            |
+| Leisure, Travel and Tourism                   |             public holidays, performing-arts, conferences, conferences, community            |
+| Marketing                                     |             public holidays, performing-arts, conferences, conferences, community            |
+| Parking                                       |                 public holidays, community, concerts, expos, performing-arts                 |
+| Retail                                        |              public holidays, performing-arts, community, conferences, festivals             |
+| Transportation and Delivery                   |             public holidays, performing-arts, conferences, conferences, community            |
+| Other                                         | public holidays, performing-arts, concerts, conferences, community, festivals, expos, sports |
 
 ## Minimum PHQ Rank
 
