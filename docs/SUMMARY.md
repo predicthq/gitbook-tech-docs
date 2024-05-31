@@ -102,7 +102,7 @@
     * [CSV/Parquet Data Structure for ADX](integrations/third-party-integrations/aws-data-exchange/csv-parquet-data-structure-for-adx.md)
     * [NDJSON Data Structure for ADX](integrations/third-party-integrations/aws-data-exchange/ndjson-data-structure-for-adx.md)
   * [Integrate with Databricks](integrations/third-party-integrations/integrate-with-databricks.md)
-  * [Integrate with Tableau using our Data Connector](integrations/third-party-integrations/tableau-data-connector.md)
+  * [Integrate with Tableau](integrations/third-party-integrations/tableau-data-connector.md)
   * [Integrate with a Demand Forecast in PowerBI](integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md)
   * [Google Cloud BigQuery](integrations/third-party-integrations/google-cloud-bigquery.md)
 * [PredictHQ SDKs](integrations/sdks/README.md)

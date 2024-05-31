@@ -24,8 +24,7 @@ These insights are delivered through various visualizations, tailored to the siz
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends and Location Insights.\
 
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi).\
-
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 
 2. To create **custom maps and filtered event lists,** check out our\
    [Accommodation Business Demo App](https://predicthq-accommodation-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-accommodation-demo).
@@ -42,7 +41,7 @@ These insights are delivered through various visualizations, tailored to the siz
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends and Location Insights.\
 
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi).\
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).\
 
 
 2. To create **custom maps and filtered event lists,** check out our\
