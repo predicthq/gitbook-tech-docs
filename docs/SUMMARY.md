@@ -76,6 +76,7 @@
     * [Improving Demand Forecasting Models with Event Features](getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
     * [Use Events Data in Power BI](getting-started/guides/tutorials/connect-and-build-events-data-in-power-bi.md)
     * [Connect to the PredictHQ API with Microsoft Excel](getting-started/guides/tutorials/connect-to-the-predicthq-api-with-microsoft-excel.md)
+    * [Using Event Data in Tableau](getting-started/guides/tutorials/using-event-data-in-tableau.md)
     * [Filtering and Finding Relevant Events](getting-started/guides/tutorials/filtering-and-finding-relevant-events.md)
     * [Loading PredictHQ’s Event Data into your Data Warehouse](getting-started/guides/tutorials/loading-predicthqs-event-data-into-your-data-warehouse.md)
 * [Tutorials by Use Case](getting-started/tutorials-by-use-case/README.md)
