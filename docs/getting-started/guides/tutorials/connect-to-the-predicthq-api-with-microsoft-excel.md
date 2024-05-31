@@ -1,5 +1,42 @@
 # Connect to the PredictHQ API with Microsoft Excel
 
+## Use Cases
+
+[Demand Forecasting](https://docs.predicthq.com/getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models), [Dynamic Pricing](https://docs.predicthq.com/getting-started/tutorials-by-use-case/dynamic-pricing), [Workforce Optimization](https://docs.predicthq.com/getting-started/tutorials-by-use-case/workforce-optimization), [Demand Analytics](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights), [Inventory Management](https://docs.predicthq.com/getting-started/tutorials-by-use-case/inventory-management), [Event Visibility](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights)
+
+## Relevant Industries
+
+[Accommodation](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#accommodation-demand-analytics-calendar-and-map-tutorials), Consumer Packaged Goods, [Grocery and Supermarkets](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), Leisure, Travel and Tourism, Marketing and Advertising, [Parking](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials), Restaurants, [Retail](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), [Transportation and Delivery](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials) and Others
+
+## Overview
+
+The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Please change the location from San Francisco to the location you want to look at.
+
+Below are the main steps involved in this guide:
+
+1. Building Report Parameters around a Location
+   * Example Parameters for this Guide
+2. Select an Input method
+   * API connection
+3. View events data in Excel
+
+**Requirements:**
+
+1. API: [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token)
+2. Microsoft Excel
+
+### Example Parameters for this Guide:
+
+1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
+2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)&#x20;
+3. **Event State**: Active and Predicted
+4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
+5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
+
+Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to hone in on a specific shop location and pull only events within a more accurate radius based on those results. For now, we will look at the citywide events in San Francisco as our example.
+
+### How to get Events data via PredictHQ's API
+
 This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. The examples have been provided for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
 
 PredictHQ has a number of different APIs that can be used to build reports, in  this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
