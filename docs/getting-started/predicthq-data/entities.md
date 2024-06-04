@@ -19,3 +19,9 @@ All events happening at the same venue will have the same latitude/longitude and
 Stored within the entities section on an event, an event group identifies [recurring events](../guides/date-and-time-guides/working-with-recurring-events.md) across the PredictHQ events dataset. For example, The (Summer) Olympics repeats every four years around summer time, therefore we would have an event group that is attached to all of our Summer Olympics events.
 
 Events that are associated with event groups have the `recurring` label and also contain an entity with the type of `event-group` within the event data.
+
+### Residencies
+
+Residencies are a subset of event groups. Residencies describe a type of concert where an artist performs at the same venue for two or more shows. This means that residencies can last for several weeks or months, as long as each instance of a performance by the same artist is within one week (7 days) of one another.
+
+Residencies can be identified by the `residency` label attached to the event group.
