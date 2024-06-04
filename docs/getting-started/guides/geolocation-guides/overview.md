@@ -20,13 +20,64 @@ Our APIs offer spatial search parameters to discover all events that impact your
 
 ## Basic Location
 
-The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`.
+The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`. Note the `geo` field is preferred over the `location` field. The `geo` field also contains the longitude and latitude for point events and in future will replace the location field.
 
-For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has the location value `[-122.38926979999997, 37.7785951]`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
+Below is an example of the location information for point events in the `geo` field.
+
+```
+    "geo": {
+        "geometry": {
+            "coordinates": [
+                -88.9746153,
+                30.393504
+            ],
+            "type": "Point"
+        },
+    ...
+    },
+```
+
+For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has a latitude and longitude of `-122.38926979999997, 37.7785951`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
 
 For an area event, its `location` coordinates are the center of the area where the event occurs. For example, a nation-wide public holiday in the USA, such as [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n), has the location value `[ -95.712891, 37.09024 ]` which is the centroid of the Geonames Place for the country of USA.
 
 Area events cover either a Geonames Place, as in the Thanksgiving Day example above, or a specific geographic area bounded by a geometry (polygon). The next section details geometries and polygons, additional geometric data available in the `geo` field for area events.
+
+## Address data in the geo field
+
+The `geo` field also contains address information (as of June 2024). The **address** subfield within the `geo` field can contain the following information:
+
+* `country_code` (required) - 2 letter country code
+* `formatted_address` (optional) - a fully formatted address which can include street address, locality, postcode, region and country
+* `postcode` (optional)
+* `locality` (optional) - indicates the city or town the event occurs in
+* `region` (optional) - the region or state at which the event takes place
+
+For attended events when they are linked to a [venue entity ](../../predicthq-data/entities.md#venue)then the address information will correspond to the address of the venue.
+
+Events that cover a larger area (for example non-attended events like holidays) tend to have less address information. For example, a country-wide holiday may only have the country code field in the address field.
+
+See below for an example of the address subfield within the `geo` field:
+
+```json
+"geo": {
+    "geometry": {
+        "coordinates": [
+            -88.9746153,
+            30.393504
+        ],
+        "type": "Point"
+    },
+    "placekey": "@8f4-wyy-4y9",
+    "address": {
+        "country_code": "US",
+        "formatted_address": "2350 Beach Blvd, Biloxi, MS 39531, USA",
+        "postcode": "39531",
+        "locality": "Biloxi",
+        "region": "Mississippi"
+    }
+},
+```
 
 ## GeoJSON
 

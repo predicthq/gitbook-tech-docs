@@ -85,16 +85,6 @@
              "2018-12-19T10:00:00Z"
           ]
        },
-       "end_local":{
-          "type":[
-             "string",
-             "null"
-          ],
-          "description":"The end date of the event in ISO 8601 format in event's location.",
-          "examples":[
-             "2018-12-19T17:00:00"
-          ]
-       },
        "entities":{
           "type":"array",
           "items":{
@@ -268,29 +258,6 @@
              },
              "placekey":{
                 "type":"string"
-             },
-             "address": {
-               "type": [
-                  "object",
-                  "null"
-               ],
-               "properties": {
-                  "locality": {
-                     "type": "string"
-                  },
-                  "country_code": {
-                     "type": "string"
-                  },
-                  "formatted_address": {
-                     "type": "string"
-                  },
-                  "postcode": {
-                     "type": "string"
-                  },
-                  "region": {
-                     "type": "string"
-                  }
-               }
              }
           },
           "additionalProperties":false
@@ -455,16 +422,6 @@
           "examples":[
              "2018-12-19T17:00:00",
              "2018-12-19T06:00:00Z"
-          ]
-       },
-       "start_local":{
-          "type":[
-             "string",
-             "null"
-          ],
-          "description":"The start date of the event in ISO 8601 format in event's location.",
-          "examples":[
-             "2018-12-19T17:00:00"
           ]
        },
        "state":{
