@@ -517,7 +517,7 @@ For more details, visit:
 
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 
-* **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [connect-and-build-events-data-in-power-bi.md](connect-and-build-events-data-in-power-bi.md "mention") for step-by-step instructions.
+* **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
 * **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
 * **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 

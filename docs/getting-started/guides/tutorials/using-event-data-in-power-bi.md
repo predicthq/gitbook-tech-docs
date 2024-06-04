@@ -4,7 +4,7 @@ description: >-
   build an example report.
 ---
 
-# Use Events Data in Power BI
+# Using Event Data in Power BI
 
 In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that enables users to integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 
@@ -36,7 +36,7 @@ Below are the main steps involved in this guide:
 **Requirements:**
 
 1. Access to PredictHQ data via 3 methods with 3 different requirements:
-   * CSV: PredictHQ account - [Sign up here](https://predicthq.com/signup) if you don’t already have an account.
+   * CSV: PredictHQ account - [Sign up here](https://signup.predicthq.com/) if you don’t already have an account.
    * Snowflake: PredictHQ [Snowflake Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake)
    * API: [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token)
 2. [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) reporting software
@@ -44,8 +44,6 @@ Below are the main steps involved in this guide:
 ## Building Report Parameters around a Location
 
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
-
-
 
 {% hint style="info" %}
 All of our parameters are able to be modified based on user needs, see our [filtering guide](filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
@@ -75,15 +73,15 @@ The end result of the exercise will be a report like this:
 
 There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods users can utilize to connect and start creating reports.
 
-[**CSV Upload**](connect-and-build-events-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
+[**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
-[**Snowflake Connection**](connect-and-build-events-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
+[**Snowflake Connection**](using-event-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
 
-[**API Connection**](connect-and-build-events-data-in-power-bi.md#api-connection-method): Another preferred method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever-updating data source and is always up to date.
+[**API Connection**](using-event-data-in-power-bi.md#api-connection-method): Another preferred method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever-updating data source and is always up to date.
 
 ### CSV Upload Method
 
-We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
+We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
 
 <figure><img src="../../../.gitbook/assets/Control Center Filter.png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
 
@@ -145,7 +143,7 @@ Hit Close & Apply and wait for the data transformation to finish processing.
 
 <figure><img src="../../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
-After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
 ### Snowflake Connection Method
 
@@ -195,7 +193,7 @@ where val.value:date_local::DATE between '2024-01-01' and '2024-03-31'
 ```
 {% endcode %}
 
-This code is performing the data transformation and filtering in code. It filters to the parameters laid out in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide) section, and transforms some columns we will be using for ease of use in the report.\
+This code is performing the data transformation and filtering in code. It filters to the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide) section, and transforms some columns we will be using for ease of use in the report.\
 The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.&#x20;
 
 This is what it should look like when filled in - with all square bracket placeholder text replaced.
@@ -206,17 +204,17 @@ Click "OK". Click "Load Data" on the next screen.
 
 Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
 
-After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](connect-and-build-events-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
 #### Connecting to other Data Warehouses
 
-See [loading-predicthqs-event-data-into-your-data-warehouse.md](loading-predicthqs-event-data-into-your-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
+See [loading-event-data-into-a-data-warehouse.md](loading-event-data-into-a-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
 ### API Connection Method
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](connect-and-build-events-data-in-power-bi.md#example-parameters-for-this-guide).&#x20;
+Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).&#x20;
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -245,8 +243,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:&#x20;
    1. Put `Authorization` in the first field
-   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Just replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in\
-
+   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Just replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
 The filled-out information should look like this:
 
@@ -314,7 +311,7 @@ Click Close & Apply and wait for the data transformation to finish processing th
 
 <figure><img src="../../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
-After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](connect-and-build-events-data-in-power-bi.md#example-api-connection-report-template) section.
+After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
 ## Guide to Building the Report
 
@@ -383,7 +380,7 @@ Once the data connection has loaded for a bit you might be prompted for a connec
 
 <figure><img src="../../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 
-If there are any issues with this template please refer to the [API Connection Method](connect-and-build-events-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
+If there are any issues with this template please refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
 
 #### Example Report:
 

@@ -6,8 +6,7 @@ Demand forecasting using machine learning (ML) models involves predicting future
 
 #### Demand Forecasting Tutorial
 
-[See our tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) on updating machine learning models with predictive event data - Automatically and dynamically update your forecast by integrating PredictHQ data directly into your demand forecasting models.\
-
+[See our tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) on updating machine learning models with predictive event data - Automatically and dynamically update your forecast by integrating PredictHQ data directly into your demand forecasting models.
 
 #### The Power of Accurate Demand Forecasting
 
@@ -23,6 +22,4 @@ Figuring out how to use events in your forecast can be complex. With our product
 
 [Demand forecasting](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md) covers a range of use cases and industries from dynamic pricing to inventory management. See the use cases below for more examples.
 
-See [integrate-with-a-demand-forecast-in-powerbi.md](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md "mention") for an example of implement demand forecasting using PowerBI's AutoML models to forecast demand with PredictHQ technology and data.
-
-\
+See [integrate-with-a-demand-forecast-in-powerbi.md](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md "mention") for an example of implement demand forecasting using PowerBI's AutoML models to forecast demand with PredictHQ technology and data.\

@@ -6,8 +6,6 @@ Maintaining lean supply chains and appropriate inventory levels drives cost savi
 
 Using our product and tools as described below will allow you to anticipate and prepare for the upcoming demand impact driven by events and ensure your inventory management accounts for it.
 
-
-
 <details>
 
 <summary>Retail &#x26; Restaurants Inventory Management Tutorial</summary>
@@ -15,11 +13,11 @@ Using our product and tools as described below will allow you to anticipate and 
 To implement PredictHQ data to manage inventory for your retail business, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
-* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/loading-predicthqs-event-data-into-your-data-warehouse).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
+* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
-[**Quick filters**](https://docs.predicthq.com/getting-started/guides/industry-specific-event-filters#location-type) **to get you started:**  \
+[**Quick filters**](../guides/industry-specific-event-filters.md) **to get you started:**  \
 1\. Event categories most impactful for this industry: `public holidays, performing-arts, community, conferences, festivals`\
 2\. Location type: `radius-based`\
 3\. Minimum PHQ rank: 50
@@ -30,8 +28,6 @@ For example, we’ve seen a drop in demand of up to 50% from the baseline observ
 
 </details>
 
-
-
 <details>
 
 <summary>Consumer Packaged Goods Inventory Management Tutorial</summary>
@@ -39,11 +35,11 @@ For example, we’ve seen a drop in demand of up to 50% from the baseline observ
 To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
-* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/loading-predicthqs-event-data-into-your-data-warehouse).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
+* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
-[**Quick filters**](https://docs.predicthq.com/getting-started/guides/industry-specific-event-filters#location-type) **to get you started:**  \
+[**Quick filters**](../guides/industry-specific-event-filters.md) **to get you started:**  \
 1\. Event categories most impactful for this industry: `public holidays, performing-arts, conferences, conferences, community`\
 2\. Location type: `city`\
 3\. Minimum PHQ rank: 30
@@ -56,8 +52,6 @@ By using events to help predict demand, you can significantly increase the accur
 
 </details>
 
-
-
 <details>
 
 <summary>Other Industries</summary>
@@ -65,8 +59,8 @@ By using events to help predict demand, you can significantly increase the accur
 To implement PredictHQ data for Inventory Management for your industry, review the options below:
 
 * **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
-* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/connect-and-build-events-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
-* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/loading-predicthqs-event-data-into-your-data-warehouse).
+* **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
+* **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
 </details>

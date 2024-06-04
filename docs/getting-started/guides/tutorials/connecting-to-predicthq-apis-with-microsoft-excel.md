@@ -1,4 +1,8 @@
-# Connect to the PredictHQ API with Microsoft Excel
+---
+description: Learn how to connect PredictHQ data to Microsoft Excel using APIs.
+---
+
+# Connecting to PredictHQ APIs with Microsoft Excel
 
 ## Use Cases
 
@@ -41,7 +45,7 @@ This guide provides details on how to load PredictHQ's event data into Microsoft
 
 PredictHQ has a number of different APIs that can be used to build reports, in  this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connect-to-the-predicthq-api-with-microsoft-excel.md#example-parameters-for-this-guide).&#x20;
+Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).&#x20;
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
