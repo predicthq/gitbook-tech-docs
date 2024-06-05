@@ -121,7 +121,7 @@ Below is a CSV of all supported airport codes and their respective `place_id`.
 Search Events Response JSON Schema
 {% endfile %}
 
-{% file src="../../.gitbook/assets/event-schema (1).json" %}
+{% file src="../../.gitbook/assets/event-schema.json" %}
 Single Event JSON Schema
 {% endfile %}
 
@@ -131,8 +131,7 @@ Single Event JSON Schema
 
 Below is an example of a single result.
 
-```json
-{
+<pre class="language-json"><code class="lang-json">{
   "count": 1,
   "overflow": false,
   "next": null,
@@ -268,16 +267,23 @@ Below is an example of a single result.
         -97.63585109999997,
         30.1345808
       ],
-      "geo": {
-        "geometry": {
-          "coordinates": [
-            -97.63585109999997,
-            30.1345808
-          ],
-          "type": "Point"
-        },
-        "placekey": "zzw-222@8t2-fgg-gtv"
-      },
+<strong>      "geo": {
+</strong>         "geometry": {
+             "coordinates": [
+                 -97.63585109999997,
+                 30.1345808
+             ],
+             "type": "Point"
+         },
+         "placekey": "@8t2-fgg-dqf",
+         "address": {
+             "country_code": "US",
+             "formatted_address": "9201 Circuit of the Americas Boulevard\nAustin, TX 78617\nUnited States of America",
+             "postcode": "78617",
+             "locality": "Austin",
+             "region": "Texas"
+         }
+      },      
       "scope": "locality",
       "country": "US",
       "place_hierarchies": [
@@ -309,7 +315,7 @@ Below is an example of a single result.
     }
   ]
 }
-```
+</code></pre>
 
 </details>
 
