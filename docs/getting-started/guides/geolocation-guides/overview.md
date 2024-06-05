@@ -8,7 +8,7 @@ Events also have the `formatted_address` field for [venue entities](../../predic
 
 ## **Points and Areas**
 
-Point events' locations are represented by latitude, longitude coordinates. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at 37.7785951,-122.38926979999997.
+Point events' locations are represented by latitude, longitude coordinates. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at 37.77859,-122.38926.
 
 Area events impact a geographic area such as a region, or an entire country. For example, [Christmas Day in the United Kingdom](https://events.predicthq.com/events/KmzdXpxZEq9M), is a country-wide public holiday.
 
@@ -20,9 +20,7 @@ Our APIs offer spatial search parameters to discover all events that impact your
 
 ## Basic Location
 
-The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`. Note the `geo` field is preferred over the `location` field. The `geo` field also contains the longitude and latitude for point events and in future will replace the location field.
-
-Below is an example of the location information for point events in the `geo` field.
+The `geo` field in the Events API response contains the longitude and latitude for point events. Below is an example of the location information for point events in the `geo` field. For a point type geometry object the coordinates are in the order longitude, latitude (as this follows the [geojson standard](https://geojson.org/)). See the example below:
 
 ```
     "geo": {
@@ -37,11 +35,19 @@ Below is an example of the location information for point events in the `geo` fi
     },
 ```
 
+{% hint style="info" %}
+In a GeoJSON Point object, the order of the coordinates is `[longitude, latitude]`. This is different from the common ordering in many other contexts, where coordinates are usually given as `[latitude, longitude]`.
+{% endhint %}
+
 For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has a latitude and longitude of `-122.38926979999997, 37.7785951`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
 
-For an area event, its `location` coordinates are the center of the area where the event occurs. For example, a nation-wide public holiday in the USA, such as [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n), has the location value `[ -95.712891, 37.09024 ]` which is the centroid of the Geonames Place for the country of USA.
+For an area event that does not have a polygon, its coordinates will be the center of the area where the event occurs.&#x20;
 
-Area events cover either a Geonames Place, as in the Thanksgiving Day example above, or a specific geographic area bounded by a geometry (polygon). The next section details geometries and polygons, additional geometric data available in the `geo` field for area events.
+Area events cover either a Geonames Place, for example [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n), or a specific geographic area bounded by a geometry (polygon). The next section details geometries and polygons, additional geometric data available in the `geo` field for area events. See [GeoJSON ](overview.md#geojson)for more information.
+
+#### Location field (deprecated)
+
+The `location` field was previously used for latitude and longitude information. The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`. Note the `geo` field is preferred over the `location` field as the location field will be deprecated in future.
 
 ## Address data in the geo field
 
