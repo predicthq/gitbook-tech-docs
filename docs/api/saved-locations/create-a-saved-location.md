@@ -21,11 +21,11 @@ POST https://api.predicthq.com/v1/saved-locations
 <table><thead><tr><th width="181">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code><br>string<br><em>required</em></td><td>Name of the Saved Location.<br><br>E.g. <code>My Location</code></td></tr><tr><td><code>description</code><br>string</td><td>Description of the location.</td></tr><tr><td><code>location_code</code><br>string</td><td>An optional identifier for your location.<br><br>The intention here is to use your own identifier for the location if you have one. E.g., you might have stores/hotels/etc in your system with their own ID - use that ID here to make it easier to lookup the location later.</td></tr><tr><td><code>labels</code><br>array</td><td><p>A list of labels to help you categorize your locations. You can use these labels to search upon.<br><br>E.g. </p><pre class="language-json"><code class="lang-json">{
   "labels": ["label1", "label2"]
 }
-</code></pre></td></tr><tr><td><code>geojson</code><br>object</td><td><p>You can define the geolocation of the Saved Location either by GeoJSON or Place IDs.</p><p></p><p>When using GeoJSON please note the following:</p><ul><li>Currently we support <code>Point</code> type locations only.</li><li>Remember that GeoJSON coordinates are ordered longitude then latitude.</li><li>We require a radius to be defined using a special set of properties on the GeoJSON record. As in the example below, these are <code>radius</code> and <code>radius_unit</code>.</li><li>The <code>radius</code> property should be a numeric value.</li><li>The <code>radius_unit</code> property can be one of <code>m</code> (meters), <code>km</code> (kilometers), <code>ft</code> (feet), <code>mi</code> (miles).</li></ul><p>As always, we strongly recommend using our <a href="../suggested-radius/">Suggested Radius API</a> to work out a suitable radius value for your location.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>geojson</code><br>object</td><td><p>You can define the geolocation of the Saved Location either by GeoJSON or Place IDs.</p><p></p><p>When using GeoJSON please note the following:</p><ul><li>Currently we support <code>Point</code> type locations only.</li><li>Remember that GeoJSON coordinates are <strong>ordered longitude then latitude</strong>.</li><li>We require a radius to be defined using a special set of properties on the GeoJSON record. As in the example below, these are <code>radius</code> and <code>radius_unit</code>.</li><li>The <code>radius</code> property must be an integer or a float number up to 2 decimal places. We <strong>strongly recommend</strong> using the <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a> to find a suitable radius for your location/industry.</li><li><p>The <code>radius_unit</code> property must be one of: </p><ul><li><code>m</code> - meters</li><li><code>km</code> - kilometers</li><li><code>ft</code> - feet</li><li><code>mi</code> - miles</li></ul></li></ul><ul><li>As always, we <strong>strongly recommend</strong> using our <a href="../suggested-radius/">Suggested Radius API</a> to find a suitable radius value for your location and industry.</li></ul><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "geojson": {
     "type": "Feature",
     "properties": {
-      "radius": 1,
+      "radius": 2.23,
       "radius_unit": "mi"
     },
     "geometry": {
@@ -73,7 +73,7 @@ curl --location 'https://api.predicthq.com/v1/saved-locations' \
     "geojson": {
         "type": "Feature",
         "properties": {
-            "radius": 1,
+            "radius": 2.23,
             "radius_unit": "mi"
         },
         "geometry": {
