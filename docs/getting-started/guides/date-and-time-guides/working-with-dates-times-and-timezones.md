@@ -6,9 +6,22 @@ description: >-
 
 # Working with Dates, Times and Timezones
 
-## Converting to Local Time
+## Event start and end local time
 
-Dates and times on events provided by the Event API are in UTC - not event local time. To find out the time of the event (in the same timezone as the event, i.e. local time) you need to convert from UTC.
+The Events API now provides event start and end times in UTC and in the event local time format (as of June 2024). The date and time fields available are:
+
+* The fields that provide local time are `start_local`, `end_local`, and `predicted_end_local`. These fields have the local time end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) format. This is the local time in the time zone at the event location. See the [Events API Response Fields](../../../api/events/search-events.md#response-fields) for more details on these fields.
+* The fields `start`, `end` and `predicted_end` have date values in UTC format.
+
+{% hint style="info" %}
+Note that the date fields in the Events API Query Parameters are in UTC.
+{% endhint %}
+
+<details>
+
+<summary>Previous guide on Converting to Local Time</summary>
+
+Dates and times of events provided by the Event API are in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone see the guide below.&#x20;
 
 Below is an example of converting UTC time to local time using the `pytz` library in Python.
 
@@ -31,27 +44,15 @@ def convert_to_local(date_str, timezone_str):
     local_dt = utc_dt.astimezone(target_tz)
     return local_dt.isoformat()
 
-event["start_local"] = convert_to_local(event["start"], event["timezone"])
-event["end_local"] = convert_to_local(event["end"], event["timezone"])
+event["start_tz_converted"] = convert_to_local(event["start"], event["timezone"])
+event["end_tz_converted"] = convert_to_local(event["end"], event["timezone"])
 
 print(event)
 ```
 
-Using the code above we'd see `start_local` and `end_local` as below:
-
-```json
-{
-  "start": "2023-10-23T13:00:00Z",
-  "end": "2023-10-24T12:59:59Z",
-  
-  "start_local": "2023-10-24T00:00:00+11:00",
-  "end_local": "2023-10-24T23:59:59+11:00",
-  
-  "timezone": "Australia/Sydney"
-}
-```
-
 Dates are a little more complex and the rest of this guide will help you understand how dates are represented in our data.
+
+</details>
 
 ## Date Concepts
 
@@ -136,7 +137,7 @@ When the `timezone` field is `null` like this you don't need to convert the star
 
 ## Predicted End Times
 
-Many events don't have scheduled end times, for many of these events we provide a `predicted_end_time` field. Below is an example of what this might look like on an event. Note that the `start` and `end` values are exactly the same - this suggests we know the start time but not the scheduled end time, hence why we have provided a `predicted_end` value.
+Many events don't have scheduled end times, for many of these events we provide a `predicted_end_time` field (in UTC) and a `predicted_end_local` (in the time zone of the location of the event). Below is an example of what this might look like on an event. Note that the `start` and `end` values are exactly the same - this suggests we know the start time but not the scheduled end time, hence why we have provided a `predicted_end` value.
 
 ```json
 {
