@@ -30,11 +30,44 @@ For stores and locations where proximity to events is important, such as those i
 | Transportation and Delivery                   |      City     |
 | Other                                         |      City     |
 
-For different location types you can use the approaches below to get events:
+To retrieve events for different location types, use the following approaches:
 
-**Radius-based location type** - You need to have a latitude and longitude for your location. Use the [Suggested Radius API](../../api/suggested-radius/) to find the radius for your location and call the [Events API](../../api/events/search-events.md) (and other APIs) using the `within` parameter supplying the latitude, longitude and radius to get all events around your location. You can also use Saved Locations (also known as [Location Insights](https://www.predicthq.com/support/category/location-insights)) and create saved locations for each of your locations (stores, hotels, parking garages, etc.) then use those saved locations with the Events API or other APIs. You can create Saved Locations via the [API ](../../api/saved-locations/)or Control Center.
+<details>
 
-**City location types** - For these types of locations use the [Places API](../../api/places/) to find a Place ID for your city. Then query the [Events API](../../api/events/search-events.md) and other APIs using the Place ID. This will return all events within the location.
+<summary>Radius-based Locations</summary>
+
+**Using latitude, longitude, and radius**
+
+1. Determine the appropriate radius using the [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius).
+2. Configuration:
+   1. For the Events API, use the `within` field.
+   2. For the Features API and Beam API, use the `location` field.
+
+**Using location IDs**
+
+1. Create Saved Locations via [Location Insights](https://www.predicthq.com/support/category/location-insights) in Control Center or at scale using the [Saved Locations API](https://docs.predicthq.com/api/saved-locations).
+2. Configuration:
+   1. For the Events API, use the `saved_location.location_id` field.
+   2. For the Features API, use the `location` field.
+
+</details>
+
+<details>
+
+<summary>City Locations</summary>
+
+**Using place IDs**
+
+1. Find the place ID for a city using the [Places API](https://docs.predicthq.com/api/places/search-places).
+2. Configuration:
+   1. For the Events API, use the `place.scope` field.
+   2. For the Features API, use the `location` field.
+
+</details>
+
+{% hint style="info" %}
+For more information on defining locations by API, see [overview](../../api/overview/ "mention").
+{% endhint %}
 
 ## Relevant Event Categories
 
