@@ -139,7 +139,7 @@ Below is a CSV of all supported airport codes and their respective `place_id`.
 Search Events Response JSON Schema
 {% endfile %}
 
-{% file src="../../.gitbook/assets/event-schema.json" %}
+{% file src="../../.gitbook/assets/event-schema (2).json" %}
 Single Event JSON Schema
 {% endfile %}
 
@@ -272,7 +272,7 @@ Below is an example of a single result.
           "entity_id": "MasUgUJtWz3kQFVgCG6rJU",
           "name": "Circuit of the Americas",
           "type": "venue",
-          "formatted_address": "9201 Circuit of the Americas Boulevard\nAustin, TX 78617\nUnited States of America"
+          "formatted_address": "9201 Circuit of the Americas Boulevard, Austin, TX 78617, United States of America"
         }
       ],
       "duration": 7200,
@@ -296,7 +296,7 @@ Below is an example of a single result.
          "placekey": "@8t2-fgg-dqf",
          "address": {
              "country_code": "US",
-             "formatted_address": "9201 Circuit of the Americas Boulevard\nAustin, TX 78617\nUnited States of America",
+             "formatted_address": "9201 Circuit of the Americas Boulevard, Austin, TX 78617, United States of America",
              "postcode": "78617",
              "locality": "Austin",
              "region": "Texas"
