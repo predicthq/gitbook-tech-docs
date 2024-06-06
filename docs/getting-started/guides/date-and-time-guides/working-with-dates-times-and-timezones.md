@@ -14,7 +14,7 @@ The Events API now provides event start and end times in UTC and in the event lo
 * The fields `start`, `end` and `predicted_end` have date values in UTC format.
 
 {% hint style="info" %}
-Note that the date fields in the Events API Query Parameters are in UTC.
+Note that the date fields in the Events API Query Parameters are in UTC. You can use the `tz` suffix to specify a time zone when querying using the date filters.
 {% endhint %}
 
 <details>
