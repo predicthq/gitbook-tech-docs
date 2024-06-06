@@ -2,13 +2,13 @@
 
 Geographic information for an event describes where the event is located and the geographic area impacted. This page introduces geographic information available in events:
 
-<table><thead><tr><th width="346">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>location</code></td><td>Latitude and longitude coordinates of the event's location.</td></tr><tr><td><code>geo</code></td><td>Geometric data for the area impacted by the event.</td></tr><tr><td><code>place_hierarchies</code> and <code>scope</code></td><td>Place where the event is located.</td></tr></tbody></table>
+<table><thead><tr><th width="346">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>location</code></td><td>Latitude and longitude coordinates of the event's location.</td></tr><tr><td><code>geo.geography</code></td><td>Geo data in GeoJSON format for the area impacted by the event.</td></tr><tr><td><code>place_hierarchies</code> and <code>scope</code></td><td>Place where the event is located.</td></tr></tbody></table>
 
 Events also have the `formatted_address` field for [venue entities](../../predicthq-data/entities.md) with the street address of an event where it is present.
 
 ## **Points and Areas**
 
-Point events' locations are represented by latitude, longitude coordinates. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at 37.77859,-122.38926.
+Point events' locations are represented by latitude, longitude coordinates. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at `37.77859,-122.38926`.
 
 Area events impact a geographic area such as a region, or an entire country. For example, [Christmas Day in the United Kingdom](https://events.predicthq.com/events/KmzdXpxZEq9M), is a country-wide public holiday.
 
@@ -36,7 +36,7 @@ The `geo` field in the Events API response contains the longitude and latitude f
 ```
 
 {% hint style="info" %}
-In a GeoJSON Point object, the order of the coordinates is `[longitude, latitude]`. This is different from the common ordering in many other contexts, where coordinates are usually given as `[latitude, longitude]`.
+In the `geo.geometry` field we follow the GeoJSON standard which orders coordinates as longitude followed by latitude (i.e., `[longitude, latitude]`).
 {% endhint %}
 
 For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has a latitude and longitude of `-122.38926979999997, 37.7785951`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
