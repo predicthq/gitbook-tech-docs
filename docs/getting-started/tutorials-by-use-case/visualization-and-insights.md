@@ -26,6 +26,7 @@ These insights are delivered through various visualizations, tailored to the siz
 
 2. To create **custom maps and filtered event lists,** check out our\
    [Accommodation Business Demo App](https://predicthq-accommodation-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-accommodation-demo).
+3. **Build a custom demand calendar**: See an example of how to implement a calendar heatmap view showing busy days. [Read tutorial](../guides/tutorials/displaying-events-in-a-heatmap-calendar.md).
 
 </details>
 
@@ -41,6 +42,7 @@ These insights are delivered through various visualizations, tailored to the siz
 
 2. To create **custom maps and filtered event lists,** check out our\
    [Retail Demo App](https://predicthq-location-insights-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-location-insights-demo).
+3. **Build a custom demand calendar**: See an example of how to implement a calendar heatmap view showing busy days. [Read tutorial](../guides/tutorials/displaying-events-in-a-heatmap-calendar.md).
 
 </details>
 
@@ -56,5 +58,6 @@ These insights are delivered through various visualizations, tailored to the siz
 
 2. To create **custom maps, polygons, and filtered event lists,** check out our\
    [Parking Business Demo App](https://predicthq-parking-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-parking-demo).
+3. **Build a custom demand calendar**: See an example of how to implement a calendar heatmap view showing busy days. [Read tutorial](../guides/tutorials/displaying-events-in-a-heatmap-calendar.md).
 
 </details>
