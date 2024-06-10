@@ -87,6 +87,20 @@ For example, consider a scenario where a city is scheduled to host a major sport
 
 To capitalize on surges like this effectively, adopting dynamic pricing strategies becomes crucial.
 
+**Parking example**
+
+There are a range of tools out there and we know some organizations manage pricing in Spreadsheets. To get started with our data one way you can integrate events data into a Spreadsheet is to [connect to PredictHQ's Events API using Microsoft Excel](../guides/tutorials/connecting-to-predicthq-apis-with-microsoft-excel.md). Follow this tutorial to get event data for your location into Excel and keep it updated automatically.
+
+You can then use your parking inventory for the location in the Spreadsheet and compare that with the total amount of people attending events in the area. In this example, the customer has graphed daily total attendance from events in their area and compared it with parking bookings. As of the 10th of Feb, they look ahead at the events coming up for the next month. See the chart below showing event impact per day in the blue line and the parking capacity booked in the orange line:
+
+![](<../../.gitbook/assets/image (10).png>)
+
+The customer looks for the month ahead and updates their provisional pricing based on events occurring and the demand-driven in past days with high event impact. In this example they see a lot of demand on the 24th of February and they dig into the data in Excel by filtering down to this date. They see the demand is driven by events like the [San Francisco Chinese New Year Parade](https://events.predicthq.com/events/DGCqwsuA8vGgAfRNB5), [Chinatown Community Street Fair](https://events.predicthq.com/events/CrUsXRVXWaDDNbBQcR), the [Noise Pop](https://events.predicthq.com/events/DUEqiDG2U3e3yqm9Mh) festival, and much more. This is what we, sometimes call a perfect storm of demand on this day.&#x20;
+
+![](<../../.gitbook/assets/image (11).png>)
+
+So, the customer increases their pricing to allow for a full capacity day at multiple parking garages in the area on that day. They use the predicted event impact on other days as input to their pricing. This is a simple way to get event data into your tools and to easily use it for day to day operations.
+
 Learn how [ParkMobile uses intelligent event data to boost parking reservations](https://www.predicthq.com/customers/parkmobile).
 
 </details>
