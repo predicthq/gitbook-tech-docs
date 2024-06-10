@@ -8,18 +8,23 @@ description: >-
 
 #### What you need:
 
-1. A PredictHQ account - [log in with your PredictHQ account](https://control.predicthq.com/) if you have one or [sign up for free to get started](https://signup.predicthq.com/).
-2. An API Access Token.
+1. A PredictHQ account:
+   1. Existing users: [log in with your PredictHQ account](https://control.predicthq.com/)
+   2. New users: [Sign up for free to get started](https://signup.predicthq.com/).
+2. An API Access Token: We'll guide you through creating one below.
 
 ## Create an Access Token
 
 Read a more in-depth guide to [creating a new API Client and Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
-1. Log into Control Center and visit the [API Clients](https://control.predicthq.com/clients) page.
-2. Select "New Client" and fill in the required information.
-3. Make sure to keep a copy of your new Client Secret as this cannot be shown to you again.
-4. Use the new Client Secret to create a new Token.
-5. Make sure to keep a copy of your new API Token as this cannot be shown to you again.
+1. Log into Control Center and visit the [API Clients](https://control.predicthq.com/clients) page under API tools.
+2. Select "New Client"&#x20;
+   1. Fill in the required information.
+   2. Copy the Client Secret, be sure to save this as it will not be shown again.
+3. Select Create New Token:
+   1. Use the Client Secret to create a new Token.
+   2. Keep a copy of your new API Token, as it will not be shown again.
+4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below:
 
 ## Access Events API
 
