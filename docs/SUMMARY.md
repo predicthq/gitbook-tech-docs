@@ -80,6 +80,7 @@
     * [Connecting to PredictHQ APIs with Microsoft Excel](getting-started/guides/tutorials/connecting-to-predicthq-apis-with-microsoft-excel.md)
     * [Loading Event Data into a Data Warehouse](getting-started/guides/tutorials/loading-event-data-into-a-data-warehouse.md)
     * [Displaying Events in a Heatmap Calendar](getting-started/guides/tutorials/displaying-events-in-a-heatmap-calendar.md)
+    * [Displaying Events on a Map](getting-started/guides/tutorials/displaying-events-on-a-map.md)
 * [Tutorials by Use Case](getting-started/tutorials-by-use-case/README.md)
   * [Automated Demand Forecasting with ML Models](getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models.md)
   * [Dynamic Pricing](getting-started/use-cases/dynamic-pricing.md)
