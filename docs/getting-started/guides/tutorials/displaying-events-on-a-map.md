@@ -42,10 +42,10 @@ For more information on the Events API, see this [documentation](../../../api/ev
 
 For this example, [events are retrieved](https://observablehq.com/@predicthq/events-map-example#fetchEvents) from the Events API based on the following criteria:
 
-1. Date Range: Events taking place within the next 7 days from today are considered to ensure the data remains current and actionable.
-2. Location: The geographical focus is on San Francisco, offering a targeted view of local events.
-3. Categories: The focus is on sports events and their potential to draw large crowds.
-4. Event Rank: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
+1. **Date Range**: Events taking place within the next 7 days from today are considered to ensure the data remains current and actionable.
+2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
+3. **Categories**: The focus is on sports events and their potential to draw large crowds.
+4. **Event Rank**: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
 
 {% hint style="info" %}
 For guidance on effectively querying the Events API, see [#customizing-event-data](displaying-events-on-a-map.md#customizing-event-data "mention") below.

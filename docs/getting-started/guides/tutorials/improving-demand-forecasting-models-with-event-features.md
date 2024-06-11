@@ -88,7 +88,7 @@ Specify your industry as there are several industry-specific settings required i
 
 **Location**
 
-Define the catchment area around your store or location using latitude/longitude and radius. The [Suggested Radius API](../../../api/suggested-radius/) recommends a radius specific to your industry and coordinates. Custom configuration is also available.
+Define the catchment area around your store or location using a center point and radius approach. The [Suggested Radius API](../../../api/suggested-radius/) recommends a radius specific to your industry and latitude/longitude. Custom configuration is also available.
 
 **Event Rank**
 

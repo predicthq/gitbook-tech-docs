@@ -12,7 +12,7 @@ This tutorial demonstrates how to use PredictHQ event data to build a heatmap ca
 
 ## Use Cases
 
-Visualization and Insights
+Visualization and Insights, Workforce Optimization
 
 ## Relevant Industries
 
@@ -51,9 +51,9 @@ For more information on the Features API, see this [intro guide](../features-api
 
 ### Specifying Parameters
 
-* Start Date: Set the start date for the period of interest.
-* Location: Select one of the predefined locations.&#x20;
-* Categories: Choose the event categories to consider.&#x20;
+* **Date Range Start**: Set the start date for the period of interest.
+* **Location**: Select one of the predefined locations.&#x20;
+* **Categories**: Choose the event categories to consider.&#x20;
 
 {% hint style="info" %}
 For guidance on effectively querying the Features API, see [#customizing-event-data](displaying-events-in-a-heatmap-calendar.md#customizing-event-data "mention") below.
@@ -87,34 +87,54 @@ For more information on using the Events API, see [filtering-and-finding-relevan
 
 This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](../../../api/features/get-features.md#request-body):
 
-### Date Range
+<details>
+
+<summary>Date Range</summary>
 
 * Define a date range for the period of interest.
 * Configuration: Use the `active` field.
 
-### Location of Interest
+</details>
+
+<details>
+
+<summary>Location of Interest</summary>
 
 * Determine the geographical area for which event data is required.&#x20;
 * Configuration: Use the `location` field to specify a latitude, longitude, and radius or place ID for a specific city or region (as in the above example).
 * Guidance: For details on how to set locations, refer to [#location-type](../industry-specific-event-filters.md#location-type "mention").&#x20;
 
-### Event Categories
+</details>
+
+<details>
+
+<summary>Event Categories</summary>
 
 * Identify the types of events of interest, such as concerts, sports, or community events.
 * Configuration: Add `<feature_name>` to the request body, specifying `stat` and `phq_rank` as needed (see next).&#x20;
 * Guidance: Start with [features](../../../api/features/get-features.md#available-features) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
 
-### Aggregation Statistic
+</details>
+
+<details>
+
+<summary>Aggregation Statistic</summary>
 
 * Choose how to aggregate event data at the daily level.
 * Configuration: Use the `stat` field under `<feature_name>`.
 * Guidance: Set as `sum` for visualizing the total daily attendance, which offers insights into people movement. Set as `count` to monitor the daily count of events, though it should be noted that this does not reflect event attendance or size.
 
-### Minimum Event Rank
+</details>
+
+<details>
+
+<summary>Minimum Event Rank</summary>
 
 * Set a threshold to filter out small events that are unlikely to have a significant impact based on [PHQ Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/phq-rank).
 * Configuration: Use the `phq_rank` field under `<feature_name>`.
 * Guidance: For details on how to set the minimum event rank, refer to [#minimum-phq-rank](../industry-specific-event-filters.md#minimum-phq-rank "mention").
+
+</details>
 
 {% hint style="info" %}
 For an example of calling the API in JavaScript, see [here](https://observablehq.com/@predicthq/features\_api\_heatmap#data). For more information on using the Features API, see these [guides](../features-api-guides/).
@@ -122,6 +142,6 @@ For an example of calling the API in JavaScript, see [here](https://observablehq
 
 ## Conclusion
 
-This tutorial has demonstrated how to create a heatmap calendar with PredictHQ’s APIs, from fetching event data to visualizing it interactively. These techniques provide valuable insights into event impact, supporting informed, data-driven decisions. Adapt the provided example and customize the heatmap to align with your specific operational needs.&#x20;
+This tutorial has demonstrated how to create a heatmap calendar with PredictHQ’s APIs, from fetching event data to visualizing it interactively. It is an effective tool that helps you plan for events and their impacts, supporting informed, data-driven decisions. Adapt the provided example and customize the heatmap to align with your specific operational needs.&#x20;
 
 \

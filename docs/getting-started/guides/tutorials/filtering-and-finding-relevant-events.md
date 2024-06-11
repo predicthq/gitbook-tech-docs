@@ -65,7 +65,7 @@ params={
 
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.&#x20;
 
-* **Radius-based**: Define a circular area around your store or location by specifying latitude/longitude and a radius using the `within` parameter. The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) can assist in identifying an appropriate radius.
+* **Center Point & Radius**: Define a circular area around your store or location by specifying latitude/longitude and a radius using the `within` parameter. The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) can assist in identifying an appropriate radius.
 
 <!---->
 
@@ -77,7 +77,7 @@ Define the catchment area for the search. Refer to our [industry recommendations
 
 #### Settings for Tom’s Pizzeria
 
-Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the radius-based approach.
+Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the center point and radius approach.
 
 Tom first uses the [Suggested Radius API](../../../api/suggested-radius/get-suggested-radius.md) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
 
@@ -346,8 +346,11 @@ Once the API call is made, the Events API returns a structured JSON response con
       ],
       "duration": 0,
       "start": "2024-06-07T03:00:00Z",
+      "start_local": "2024-06-06T20:00:00",
       "end": "2024-06-07T03:00:00Z",
+      "end_local": "2024-06-06T20:00:00",
       "predicted_end": "2024-06-07T07:10:00Z",
+      "predicted_end_local": "2024-06-07T00:10:00",
       "updated": "2024-05-15T18:25:53Z",
       "first_seen": "2024-01-26T02:32:24Z",
       "timezone": "America/Los_Angeles",
@@ -479,7 +482,8 @@ Events are detailed in the results section of the response, each represented as 
 
 **Dates**
 
-* `start`, `end`: Indicates the start and end date of the event i[n UTC (convert dates to your local time zone](../date-and-time-guides/working-with-dates-times-and-timezones.md#converting-to-local-time), if required). If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end`.
+* `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
+* `start`, `end`, `predicted_end`: Indicates the start, end and predicted end dates in UTC.
 
 **Location**
 
