@@ -274,10 +274,6 @@ Performing-arts events have PHQ Rank available.
 
 Performing-arts events have Local Rank available.
 
-**Aviation Rank**
-
-Performing-arts events are less likely to cause impact on air travel. The majority of performing-arts events have an Aviation Rank of 0.
-
 **PHQ Attendance**
 
 Performing-arts events have PHQ Attendance available.

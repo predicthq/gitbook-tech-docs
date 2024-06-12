@@ -68,10 +68,6 @@ For example, An event with an urgency of immediate (15), a severity of severe (3
 
 Severe weather events have no Local Rank available as they impact an entire area instead of a specific point.
 
-**Aviation Rank**
-
-Severe weather events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
-
 **PHQ Attendance**
 
 Severe weather events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
@@ -121,10 +117,6 @@ Disaster events have PHQ Rank available, it indicates the severity of the disast
 
 Disasters events have no Local Rank available as they impact an entire area instead of a specific point.
 
-**Aviation Rank**
-
-Disasters events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
-
 **PHQ Attendance**
 
 Disasters events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
@@ -165,10 +157,6 @@ Airport delays events have PHQ Rank available, indicating the severity of the de
 **Local Rank**
 
 Airport delays events have no Local Rank available as they impact an entire area instead of a specific point. To be specific, the fact of the flight delay happens in an airport, but the impact is applying to a region where the passengers are from.
-
-**Aviation Rank**
-
-Airport delays events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
 
 **PHQ Attendance**
 
@@ -229,10 +217,6 @@ Health warnings events have PHQ Rank available.
 
 Health warnings events have no Local Rank available as they impact an entire area instead of a specific point.
 
-**Aviation Rank**
-
-Health warnings events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
-
 **PHQ Attendance**
 
 Health warnings events have no PHQ Attendance available as the rank/impact only reflects its influence, rather than a specific amount of attendees at a specific location.
@@ -276,10 +260,6 @@ Terror events have PHQ Rank available. It indicates the severity of the terroris
 **Local Rank**
 
 Terror events have no Local Rank available as they impact an entire area instead of a specific point. To be specific, the terrorism acts may happen at a specific location, but the impact is applying to all residents in the nearby area.
-
-**Aviation Rank**
-
-Terror events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
 
 **PHQ Attendance**
 

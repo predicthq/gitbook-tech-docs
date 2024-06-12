@@ -47,13 +47,6 @@ Public holidays have event group entities available.
 
 Public holidays events have no Local Rank available as they impact an entire area instead of a specific point
 
-**Aviation Rank**
-
-* A national public holiday will result in a positive impact on Aviation Rank as people are likely to travel across the country or overseas during that time. If the days are close to the weekend, the events may have an Aviation Rank of 100 as there is likely a significant aviation impact.
-* Local public holiday events will have an Aviation Rank of 0 as it’s less likely to cause long-distance travel
-
-For example, [Labour Day](https://control.predicthq.com/search/events/WgLMwVZvdRAnjwKqhE) in Canada (a national holiday) has an Aviation Rank of 100, while [Good Friday](https://control.predicthq.com/search/events/zk4SURxUosG5GGAoQQ) in Malaysia (a local common holiday) has an Aviation Rank of 0.
-
 **PHQ Attendance**
 
 Public holidays have no PHQ Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
@@ -194,19 +187,6 @@ For the United Kingdom (from September 2017) and US (from September 2018) school
 
 School holidays events for other countries, and from the US and UK before the time periods stated above, have no Local Rank available as they do not have student numbers attached.
 
-**Aviation Rank**
-
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, aviation rank is calculated by applying a linear transformation to the student numbers at the local authority level and then converted based on a logarithmic scale to an aviation rank value. Note that the aviation rank can be 0 when the student count is less than a threshold.
-
-For example, The [West Ada School District - Thanksgiving Break](https://control.predicthq.com/search/events/HpLNn5wxn4GQ9uAv6G) in Ada County, US has an Aviation Rank of 52, while the [Longview Public Schools - Summer Break](https://control.predicthq.com/search/events/6C78QYvqdPB9Mm9ghV) in Cowlitz County, US has an Aviation Rank of 0.
-
-For the school holidays events for other countries, and from the US and UK before the time periods stated above, we use the following method:
-
-* A longer duration school holiday will result in a positive impact on Aviation Rank as the families are likely to travel across the country or overseas during the long break. The events have an Aviation Rank of 100 if they last over 12 days.
-* A shorter duration school holiday will have an Aviation Rank of 0 as it’s less likely to cause aviation travel
-
-For examples, the 9 days [October School Holidays](https://control.predicthq.com/search/events/eLkeXDkSft4dVsw8t2) in Flevoland, Netherlands has an Aviation Rank of 0, while the 16 days [Toulouse - Christmas School Holidays](https://control.predicthq.com/search/events/AyjChK2BsyjxuLGvzh) in Toulouse, France an Aviation Rank of 100.
-
 **PHQ Attendance**
 
 PHQ Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
@@ -258,10 +238,6 @@ Observances have event group entities available.
 
 Observance events have no Local Rank available as they impact an entire area instead of a specific point.
 
-**Aviation Rank**
-
-Observance events have no Aviation Rank available as they impact an entire area instead of a specific point.
-
 **PHQ Attendance**
 
 Observances have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
@@ -303,10 +279,6 @@ Politics events have PHQ Rank available. It considers the number of registered v
 
 Politics events have no Local Rank available as they impact an entire country instead of a specific point.
 
-**Aviation Rank**
-
-Politics events have no Aviation Rank available as they are unlikely to result in a positive impact on air-travel.
-
 **PHQ Attendance**
 
 Politics events have no PHQ Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
@@ -342,10 +314,6 @@ All daylight savings events have a PHQ Rank of 30.
 **Local Rank**
 
 Daylight savings events have no Local Rank available as they impact an entire area.
-
-**Aviation Rank**
-
-Daylight savings events have no Aviation Rank available.
 
 **PHQ Attendance**
 
