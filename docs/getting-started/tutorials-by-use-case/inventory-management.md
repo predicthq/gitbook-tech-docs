@@ -8,47 +8,55 @@ Using our product and tools as described below will allow you to anticipate and 
 
 <details>
 
-<summary>Retail &#x26; Restaurants Inventory Management Tutorial</summary>
+<summary>Consumer Packaged Goods</summary>
 
-To implement PredictHQ data to manage inventory for your retail business, review the options below:
+To implement PredictHQ data to manage inventory for your consumer packaged goods business, review the options below:
 
-* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
-[**Quick filters**](../guides/industry-specific-event-filters.md) **to get you started:**  \
-1\. Event categories most impactful for this industry: `public holidays, performing-arts, community, conferences, festivals`\
-2\. Location type: `radius-based`\
-3\. Minimum PHQ rank: 50
+**Getting Started**
 
-Whether you are looking after health and pharmaceutical products, food and beverage supply chains, retail store inventory, or other areas, using events can help you more accurately predict and manage inventory.
+1. Quick [filters](../guides/industry-specific-event-filters.md) for consumer packaged goods:
+   1. Relevant Event Categories: `public holidays`, `performing-arts`, `conferences`, `conferences`, `community`
+   2. Location Type: `City`
+   3. Minimum PHQ Rank: 30
 
-For example, we’ve seen a drop in demand of up to 50% from the baseline observed at pizza stores in New Jersey when the New Jersey Devils play about 2 mi away. This could be due to the event drawing potential customers from the store, reducing in-store purchases. Another example is in London for a restaurant chain we saw a 25% increase in demand when two major sports events, with a combined attendance of 50,638, were occurring near the store.
+**Example in Practice**
+
+In 2023, PredictHQ recorded 49,574 festivals, 76,498 conferences, and 1,195 public holidays and observances in the United States. The cumulative impact of these events on businesses is huge.
+
+Festivals draw large crowds, boosting sales of products like bottled water, energy drinks, sunscreen, and ready-to-eat foods at local stores. Conferences attract professionals and tourists, increasing demand for quick meals, bottled beverages, and personal care products, among other items. Holidays typically spike demand for specific consumer goods like beverages, snacks, and festive decorations.
+
+Incorporating event data into your demand forecasting significantly improves prediction accuracy and helps you effectively manage fluctuations driven by events.
 
 </details>
 
 <details>
 
-<summary>Consumer Packaged Goods Inventory Management Tutorial</summary>
+<summary>Retail &#x26; Restaurants</summary>
 
-To implement PredictHQ data for Inventory Management for your Consumer Packaged Goods business, review the options below:
+To implement PredictHQ data to manage inventory for your retail or restaurant business, review the options below:
 
-* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 
-[**Quick filters**](../guides/industry-specific-event-filters.md) **to get you started:**  \
-1\. Event categories most impactful for this industry: `public holidays, performing-arts, conferences, conferences, community`\
-2\. Location type: `city`\
-3\. Minimum PHQ rank: 30
+**Getting Started**
 
-In PredictHQ’s system in 2023 for the United States there were 49,574 festivals, 76,498 conferences, and 1,195 instances of public holidays and observances. The cumulative impact of these events on businesses is huge.
+1. Quick [filters](../guides/industry-specific-event-filters.md) for retail and restaurants:
+   1. Relevant Event Categories: `public holidays`, `performing-arts`, `community`, `conferences`, `festivals`
+   2. Location Type: `Center Point & Radius`
+   3. Minimum PHQ Rank: 50
 
-Festivals attract large numbers of attendees who often purchase goods like bottled water, energy drinks, sunscreen, and ready-to-eat foods to use during the event. Local stores nearby may see a spike in sales. Conferences bring professionals and tourists to specific cities, leading to increased demand for quick meals, bottled beverages, and personal care products among other items. Holidays typically lead to an increase in demand for specific CPG categories, such as beverages, snacks, and festive decorations.&#x20;
+**Example in Practice**
 
-By using events to help predict demand, you can significantly increase the accuracy of your predictions and ensure you account for the fluctuations in demand driven by events.
+Whether you are looking after health and pharmaceutical products, food and beverage supply chains, retail store inventory, or other sectors, event data can enhance inventory prediction and management.
+
+For example, pizza stores in New Jersey see a 50% drop in demand when the New Jersey Devils play about 2 miles away, likely due to these events drawing away potential customers, reducing in-store purchases. Similarly, a restaurant chain in London experienced a 25% increase in demand when two major sports events were taking place nearby and attracted a combined attendance of over 50,000. These instances demonstrate how event data can inform strategic inventory decisions.
 
 </details>
 
@@ -56,9 +64,9 @@ By using events to help predict demand, you can significantly increase the accur
 
 <summary>Other Industries</summary>
 
-To implement PredictHQ data for Inventory Management for your industry, review the options below:
+To implement PredictHQ data to manage inventory for your business, review the options below:
 
-* **No code:** Using the PredictHQ Web application (Control Center) unlocks demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
