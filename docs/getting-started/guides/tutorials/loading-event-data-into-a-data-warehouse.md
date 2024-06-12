@@ -81,8 +81,12 @@ Regardless of the method chosen for initial data creation and loading, the table
 | entities                            | JSON      | NULLABLE |
 | duration                            | INTEGER   | NULLABLE |
 | start                               | TIMESTAMP | NULLABLE |
+| start\_local                        | TIMESTAMP | NULLABLE |
 | end                                 | TIMESTAMP | NULLABLE |
-| pdated                              | TIMESTAMP | NULLABLE |
+| end\_local                          | TIMESTAMP | NULLABLE |
+| predicted\_end                      | TIMESTAMP | NULLABLE |
+| predicted\_end\_local               | TIMESTAMP | NULLABLE |
+| updated                             | TIMESTAMP | NULLABLE |
 | first\_seen                         | TIMESTAMP | NULLABLE |
 | timezone                            | STRING    | NULLABLE |
 | location                            | JSON      | NULLABLE |
@@ -184,7 +188,11 @@ schema = [
     bigquery.SchemaField("entities", "JSON"),
     bigquery.SchemaField("duration", "INTEGER"),
     bigquery.SchemaField("start", "TIMESTAMP"),
+    bigquery.SchemaField("start_local", "TIMESTAMP"),
     bigquery.SchemaField("end", "TIMESTAMP"),
+    bigquery.SchemaField("end_local", "TIMESTAMP"),
+    bigquery.SchemaField("predicted_end", "TIMESTAMP"),
+    bigquery.SchemaField("predicted_end_local", "TIMESTAMP"),
     bigquery.SchemaField("updated", "TIMESTAMP"),
     bigquery.SchemaField("first_seen", "TIMESTAMP"),
     bigquery.SchemaField("timezone", "STRING"),
@@ -300,9 +308,9 @@ def prepare_data_for_bigquery(events_data):
     schema_fields = set([
         'id', 'parent_event', 'title', 'alternate_titles', 'description', 'category', 'labels',  
         'phq_labels', 'rank', 'local_rank', 'phq_attendance', 'entities', 'duration', 'start', 
-        'end', 'updated', 'first_seen', 'timezone', 'location', 'geo', 'scope', 'country',
-        'place_hierarchies', 'state', 'private', 'impact_patterns',
-        'predicted_event_spend', 'predicted_event_spend_industries'
+        'start_local', 'end', 'end_local', 'updated', 'predicted_end', 'predicted_end_local', 'first_seen', 
+        'timezone', 'location', 'geo', 'scope', 'country', 'place_hierarchies', 'state', 'private', 
+        'impact_patterns', 'predicted_event_spend', 'predicted_event_spend_industries'
     ])
 
     # Fields that are to be in JSON format
@@ -429,9 +437,9 @@ def prepare_data_for_bigquery(events_data):
     schema_fields = set([
         'id', 'parent_event', 'title', 'alternate_titles', 'description', 'category', 'labels',  
         'phq_labels', 'rank', 'local_rank', 'phq_attendance', 'entities', 'duration', 'start', 
-        'end', 'updated', 'first_seen', 'timezone', 'location', 'geo', 'scope', 'country',
-        'place_hierarchies', 'state', 'private', 'impact_patterns',
-        'predicted_event_spend', 'predicted_event_spend_industries'
+        'start_local', 'end', 'end_local', 'updated', 'predicted_end', 'predicted_end_local', 'first_seen', 
+        'timezone', 'location', 'geo', 'scope', 'country', 'place_hierarchies', 'state', 'private', 
+        'impact_patterns', 'predicted_event_spend', 'predicted_event_spend_industries'
     ])
 
     # Fields that are to be in JSON format
@@ -513,8 +521,8 @@ This type of query is used to find all events around a location with a specified
 SELECT *
 FROM `predicthq_dataset_test.phq_api_json_format`
 WHERE category IN ('concerts','conferences','festivals','performing-arts')
-  AND `start` >= '2024-06-01' --Change this to the date range you want to display events for - e.g. the next 30 days
-  AND `end` <= '2024-06-30'
+  AND `start_local` >= '2024-06-01' --Change this to the date range you want to display events for - e.g. the next 30 days
+  AND `end_local` <= '2024-06-30'
   AND rank >= 30
   AND ST_Distance(
       ST_GeogPoint(
