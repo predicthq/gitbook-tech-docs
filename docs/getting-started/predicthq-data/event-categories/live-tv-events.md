@@ -100,7 +100,6 @@ The broadcast API also returns the physical event details accordingly with all a
 * **Entity**: The physical sports events have venue entities available.
 * **PHQ Rank**: The physical sports events have PHQ Rank available.
 * **Local Rank**: The physical sports events have Local Rank available.
-* **Aviation Rank**: The physical sports events have Aviation Rank available.
 * **PHQ Attendance**: The physical sports events have PHQ Attendance available.
 
 ```json
