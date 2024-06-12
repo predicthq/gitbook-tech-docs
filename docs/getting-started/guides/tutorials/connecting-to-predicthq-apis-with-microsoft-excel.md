@@ -89,9 +89,7 @@ The filled-out information should look like this (except that api\_key should be
 
 After clicking “OK”,  the Data Transformation page will open where data shaping options can be made before building the report.
 
-It is recommended to rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat.
-
-In this guide, the Query is renamed to “PredictHQ Connection”.
+Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. We recommend renaming it to “PredictHQ Connection”, but if you name it something else you will need to change the Power Query below too.
 
 <figure><img src="../../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
@@ -102,7 +100,8 @@ In order to transform the columns, open Power Query and paste the code below to 
 Replace the entire existing Power Query code with the one below, **changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
 
 {% hint style="info" %}
-This example will not work unless you replace the \[api\_token] with your token
+This example will not work unless you replace the \[api\_token] with your token.\
+Lines 2 and 11 refer to the Query name, if you've named it something other than "PredictHQ Connection" you will need to replace it here aswell.
 {% endhint %}
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.&#x20;
@@ -123,7 +122,7 @@ let
     #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"Result"}, {"Column1.Result"}),
     #"Expanded Column1.Result" = Table.ExpandRecordColumn(#"Expanded Column1", "Column1.Result", {"results"}, {"Column1.Result.results"}),
     #"Expanded Column1.Result.results" = Table.ExpandListColumn(#"Expanded Column1.Result", "Column1.Result.results"),
-    #"Expanded Column1.Result.results1" = Table.ExpandRecordColumn(#"Expanded Column1.Result.results", "Column1.Result.results", {"id", "title", "description", "category", "labels", "rank", "local_rank", "phq_attendance", "entities", "duration", "start", "end", "updated", "first_seen", "timezone", "location", "geo", "impact_patterns", "scope", "country", "place_hierarchies", "state", "private", "predicted_event_spend", "predicted_event_spend_industries", "phq_labels"}),
+    #"Expanded Column1.Result.results1" = Table.ExpandRecordColumn(#"Expanded Column1.Result.results", "Column1.Result.results", {"id", "title", "description", "category", "labels", "rank", "local_rank", "phq_attendance", "entities", "duration", "start", "start_local", "end", "end_local", "updated", "first_seen", "timezone", "location", "geo", "impact_patterns", "scope", "country", "place_hierarchies", "state", "private", "predicted_event_spend", "predicted_event_spend_industries", "phq_labels"}),
     #"Expanded impact_patterns" = Table.ExpandListColumn(#"Expanded Column1.Result.results1", "impact_patterns"),
     #"Expanded impact_patterns1" = Table.ExpandRecordColumn(#"Expanded impact_patterns", "impact_patterns", {"vertical", "impact_type", "impacts"}, {"impact_patterns.vertical", "impact_patterns.impact_type", "impact_patterns.impacts"}),
     #"Expanded impact_patterns.impacts" = Table.ExpandListColumn(#"Expanded impact_patterns1", "impact_patterns.impacts"),
@@ -132,12 +131,12 @@ let
     #"Changed Number Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"impact_patterns.impacts.value", Int64.Type}}),
     #"Changed Date Type" = Table.TransformColumnTypes(#"Changed Number Type", {
     {"impact_patterns.impacts.date_local", type date},
-    {"start", type datetime},
-    {"end", type datetime}
+    {"start", type datetime}, {"end", type datetime},
+    {"start_local", type datetime}, {"end_local", type datetime}
     }),
     #"Extracted Date" = Table.TransformColumns(#"Changed Date Type", {
-        {"start", DateTime.Date, type date},
-        {"end", DateTime.Date, type date}
+        {"start", DateTime.Date, type date}, {"end", DateTime.Date, type date},
+        {"start_local", DateTime.Date, type date}, {"end_local", DateTime.Date, type date}
     }),
     #"Changed Type" = Table.TransformColumnTypes(#"Extracted Date",{{"phq_attendance", Int64.Type}}),
     #"Renamed Columns" = Table.RenameColumns(#"Changed Type", {
@@ -151,7 +150,7 @@ in
 
 The code in the advanced editor should look like the screen shot below:
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
 
 Click Close & Apply and wait for the data transformation to finish processing through multiple API pages.
 
