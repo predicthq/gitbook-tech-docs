@@ -2,9 +2,13 @@
 
 Geographic information for an event describes where the event is located and the geographic area impacted. This page introduces geographic information available in events:
 
-<table><thead><tr><th width="346">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>location</code></td><td>Latitude and longitude coordinates of the event's location.</td></tr><tr><td><code>geo.geography</code></td><td>Geo data in GeoJSON format for the area impacted by the event.</td></tr><tr><td><code>place_hierarchies</code> and <code>scope</code></td><td>Place where the event is located.</td></tr></tbody></table>
+<table><thead><tr><th width="346">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>geo.geography</code></td><td>Geo data in GeoJSON format for the area impacted by the event.</td></tr><tr><td><code>place_hierarchies</code> and <code>scope</code></td><td>Place where the event is located.</td></tr></tbody></table>
 
 Events also have the `formatted_address` field for [venue entities](../../predicthq-data/entities.md) with the street address of an event where it is present.
+
+{% hint style="info" %}
+The `location` field was previously ued for geographic information but is now deprecated.
+{% endhint %}
 
 ## **Points and Areas**
 
