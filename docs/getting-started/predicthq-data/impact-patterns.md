@@ -1,6 +1,8 @@
 # Impact Patterns
 
-Also known as “Demand impact patterns”. This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into your hotel before the concert begins. The demand impact pattern for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries. Below is a visual representation of impact patterns.&#x20;
+Also known as “Demand impact patterns”. This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into their hotel before the concert begins. The demand impact pattern for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries.&#x20;
+
+Below is a visual representation of impact patterns:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
