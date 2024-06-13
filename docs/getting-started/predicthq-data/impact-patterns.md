@@ -1,6 +1,6 @@
 # Impact Patterns
 
-Also known as “Demand impact patterns”. This field shows the impact for leading days (days before the event), lagging days (days after an event), and the days the event occurs. Below is a visual representation of impact patterns.
+Also known as “Demand impact patterns”. This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into your hotel before the concert begins. The demand impact pattern for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries. Below is a visual representation of impact patterns.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
@@ -10,23 +10,52 @@ You can use Demand Impact Patterns in your demand forecasting so that your machi
 
 Impact Patterns are available for the following industry segments and categories:
 
-| Vertical        | Impact Type      | Category          |
-| --------------- | ---------------- | ----------------- |
-| `retail`        | `phq_rank`       | `severe-weather`  |
-| `accommodation` | `phq_attendance` | `community`       |
-|                 |                  | `concerts`        |
-|                 |                  | `conferences`     |
-|                 |                  | `expos`           |
-|                 |                  | `festivals`       |
-|                 |                  | `performing-arts` |
-|                 |                  | `sports`          |
-| `hospitality`   | `phq_attendance` | `community`       |
-|                 |                  | `concerts`        |
-|                 |                  | `conferences`     |
-|                 |                  | `expos`           |
-|                 |                  | `festivals`       |
-|                 |                  | `performing-arts` |
-|                 |                  | `sports`          |
+{% tabs %}
+{% tab title="Accommodation" %}
+| Impact Type      | Category          |
+| ---------------- | ----------------- |
+| `phq_rank`       | `public-holidays` |
+|                  | `observances`     |
+| `phq_attendance` | `community`       |
+|                  | `concerts`        |
+|                  | `conferences`     |
+|                  | `expos`           |
+|                  | `festivals`       |
+|                  | `performing-arts` |
+|                  | `sports`          |
+{% endtab %}
+
+{% tab title="Retail" %}
+| Impact Type      | Category          |
+| ---------------- | ----------------- |
+| `phq_rank`       | `public-holidays` |
+|                  | `observances`     |
+|                  | `severe-weather`  |
+| `phq_attendance` | `community`       |
+|                  | `concerts`        |
+|                  | `conferences`     |
+|                  | `expos`           |
+|                  | `festivals`       |
+|                  | `performing-arts` |
+|                  | `sports`          |
+{% endtab %}
+
+{% tab title="Restaurants" %}
+| Impact Type      | Category          |
+| ---------------- | ----------------- |
+| `phq_rank`       | `public-holidays` |
+|                  | `observances`     |
+| `phq_attendance` | `community`       |
+|                  | `concerts`        |
+|                  | `conferences`     |
+|                  | `expos`           |
+|                  | `festivals`       |
+|                  | `performing-arts` |
+|                  | `sports`          |
+{% endtab %}
+{% endtabs %}
+
+<table><thead><tr><th width="212.33333333333331">Vertical</th><th>Impact Type</th><th>Category</th></tr></thead><tbody><tr><td><code>retail</code></td><td><code>phq_rank</code></td><td><code>severe-weather</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>community</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>concerts</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>conferences</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>expos</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>festivals</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>performing-arts</code></td></tr><tr><td><code>retail</code></td><td><code>phq_attendance</code></td><td><code>sports</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>community</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>concerts</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>conferences</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>expos</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>festivals</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>performing-arts</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_attendance</code></td><td><code>sports</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_rank</code></td><td><code>public-holidays</code></td></tr><tr><td><code>accommodation</code></td><td><code>phq_rank</code></td><td><code>observances</code></td></tr><tr><td><code>hospitality</code> (food and beverage)</td><td><code>phq_attendance</code></td><td><code>community</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>concerts</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>conferences</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>expos</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>festivals</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>performing-arts</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_attendance</code></td><td><code>sports</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_rank</code></td><td><code>public-holidays</code></td></tr><tr><td><code>hospitality</code> </td><td><code>phq_rank</code></td><td><code>observances</code></td></tr></tbody></table>
 
 ## Impact Patterns in the Events API
 
@@ -101,9 +130,3 @@ or for `retail` for severe weather events
 ## Impact Patterns in the Features API
 
 You can also use Demand Impact Patterns with the Features API. The features API provides pre-built machine learning features for demand forecasting. See the[ features API ](../../api/features/get-features.md#impact-patterns)documentation. Use the features for your industry to get more accurate forecasting results. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. In order to use impact patterns with the features API you need to use the impact pattern features. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`.  If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.
-
-## Impact pattern coverage by industry
-
-The table below lists the categories and industries which we have impact patterns for.
-
-<table data-header-hidden><thead><tr><th width="155"></th><th width="172"></th><th width="127"></th><th width="166"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Category</strong></td><td><strong>Industries</strong></td><td></td><td></td></tr><tr><td></td><td></td><td>Food and Beverage</td><td>Accommodation</td><td>Retail</td></tr><tr><td>Attended</td><td>Community</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Concerts</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Conferences</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Expos</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Festivals</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Performing Arts</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Sports</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Non-attended</td><td>Public Holidays</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td></td><td>Severe Weather</td><td> </td><td> </td><td>Y</td></tr><tr><td></td><td>Observances</td><td>Y</td><td>Y</td><td>Y</td></tr></tbody></table>
