@@ -6,7 +6,9 @@ description: >-
 
 # Labels
 
-&#x20;For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
+All our events occur within a category. We also have labels that indicate the classification within a category. You can think of it as sub-category level information. Sports is a category in our system but if you want to know what type of sport an event is for that is indicated by labels (e.g. `nfl`, `mls`, `nhl`, `nba`, etc)&#x20;
+
+For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
 
 * Each event record has two separate label fields (`phq_labels` and the legacy `labels` field).
 * All categories have the new `phq_labels` and should be used by default.&#x20;
@@ -42,7 +44,15 @@ PHQ Labels are available for the following categories:
 
 #### PHQ Label Values
 
-PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](../../api/events/get-event-counts.md) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labelled with each, **within your PredictHQ plan**. You could also use [Query Parameters](../../api/events/search-events.md#query-parameters) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
+PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](../../api/events/get-event-counts.md) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
+
+Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.predicthq.com/events/ssZCJhGGKUswicJswa) at the Melbourne Cricket Ground in 2024 it has the following PHQ labels (pop, country, and rock) in the API response:
+
+```
+"phq_labels": [ { "label": "pop", "weight": 0.51 }, { "label": "country", "weight": 0.25 }, { "label": "rock", "weight": 0.25 }
+```
+
+You could also use [Query Parameters](../../api/events/search-events.md#query-parameters) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
 
 ```python
 import requests
