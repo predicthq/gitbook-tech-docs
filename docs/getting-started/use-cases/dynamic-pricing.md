@@ -96,7 +96,7 @@ If you have a demand forecast for your retail stores you can integrate events in
 
 Below is an example where a retail customer performed some R\&D and tested how their forecast changed when they added events. This is an example of a location in London. You can see a significant improvement with the addition of events to the forecast making forecasting demand a lot closer to actual demand. Click on the image below to expand it.
 
-<img src="../../.gitbook/assets/Forecasting_graph.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/Forecasting_graph_2.png" alt="" data-size="original">
 
 _Run a Beam analysis to find how events impact you_
 
