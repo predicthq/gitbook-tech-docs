@@ -90,6 +90,28 @@ In the retail industry, failing to recognize demand fluctuations can lead to mis
 
 Dynamic pricing is a pivotal strategy in harnessing these surges effectively.
 
+**Example in Practice**
+
+If you have a demand forecast for your retail stores you can integrate events into your forecast to increase accuracy and improve your dynamic pricing. To add events to your ML forecast see the [demand forecasting tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features).&#x20;
+
+Below is an example where a retail customer performed some R\&D and tested how their forecast changed when they added events. This is an example of a location in London. You can see a significant improvement with the addition of events to the forecast making forecasting demand a lot closer to actual demand. Click on the image below to expand it.
+
+<img src="../../.gitbook/assets/Forecasting_graph.png" alt="" data-size="original">
+
+_Run a Beam analysis to find how events impact you_
+
+When you are considering updating a demand forecast you need to figure out which event-based machine learning features to add to your forecast. To do this you can analyse your locations in our [demand analysis tool](https://www.predicthq.com/support/beam-overview) (Beam). To do this upload your demand data into Beam for a set of locations and create a group for your analyses. For a retail customer, you may upload the number of units sold per day for your products and perform a Beam analysis.&#x20;
+
+Below is an example of a feature importance analysis - click to enlarge:
+
+<img src="../../.gitbook/assets/feature-importance-result-screenshot.png" alt="" data-size="original">
+
+The Beam [feature impotrance results](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam) will then show you which categories have the largest impact on your demand. You can use the Beam output to find the most impactful ML features to add to your forecasting using the "[View ML Features](https://www.predicthq.com/support/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecast)" option or the Beam API. Then follow the [forecasting guide](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features) to add these features to your forecast using the [Features API](https://docs.predicthq.com/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api).
+
+_Add ML features to your forecast_
+
+Following on from the example above this customer found that concerts (phq\_attendance\_concerts), sports (phq\_attendance\_sports), festivals (phq\_attendance\_festivals), conferences (phq\_attendance\_conferences), public holidays (phq\_rank\_public\_holidays), and observances (phq\_rank\_observances) were the most impactful. They updated their forecast to use these features and saw a significant forecast improvement. Having a more accurate forecast allowed them to improve their dynamic pricing and this increased revenue for their stores.
+
 </details>
 
 <details>
