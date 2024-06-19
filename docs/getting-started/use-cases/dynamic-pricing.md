@@ -86,31 +86,31 @@ To implement PredictHQ data to inform dynamic pricing for your retail business, 
    2. Location Type: `Center Point & Radius`
    3. Minimum PHQ Rank: 50
 
-In the retail industry, failing to recognize demand fluctuations can lead to missed revenue opportunities and operational challenges, much like in the transportation and parking sectors. Imagine a major retail chain facing significant events like Black Friday, Christmas, or even local festivals. Sales could spike dramatically, increasing by 50% to 100% above normal levels during these periods.
-
-Dynamic pricing is a pivotal strategy in harnessing these surges effectively.
-
 **Example in Practice**
 
-If you have a demand forecast for your retail stores you can integrate events into your forecast to increase accuracy and improve your dynamic pricing. To add events to your ML forecast see the [demand forecasting tutorial](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features).&#x20;
+In the retail industry, much like in transportation and parking, failing to recognize demand fluctuations can lead to missed revenue opportunities and operational challenges. Significant events like Black Friday, Christmas, and local festivals can cause sales to surge by 50% to 100% above normal levels. Also, attended events happening nearby retail locations can drive significant fluctuations in demand. Dynamic pricing is a pivotal strategy in harnessing these surges effectively.
 
-Below is an example where a retail customer performed some R\&D and tested how their forecast changed when they added events. This is an example of a location in London. You can see a significant improvement with the addition of events to the forecast making forecasting demand a lot closer to actual demand. Click on the image below to expand it.
+Optimizing ML Features&#x20;
 
-<img src="../../.gitbook/assets/Forecasting_graph_2.png" alt="" data-size="original">
-
-_Run a Beam analysis to find how events impact you_
-
-When you are considering updating a demand forecast you need to figure out which event-based machine learning features to add to your forecast. To do this you can analyse your locations in our [demand analysis tool](https://www.predicthq.com/support/beam-overview) (Beam). To do this upload your demand data into Beam for a set of locations and create a group for your analyses. For a retail customer, you may upload the number of units sold per day for your products and perform a Beam analysis.&#x20;
+Integrating event-based ML features into forecasting models is essential for accurate demand predictions to improve your dynamic pricing. When you are considering updating a demand forecast you need to figure out which event-based machine learning features to add to your forecast. You can analyze your locations using our [demand analysis tool](https://www.predicthq.com/support/beam-overview) (Beam).  [Upload demand data](https://www.predicthq.com/support/uploading-your-demand-data-to-beam), such as the number of units sold per day, and [view the top features](https://www.predicthq.com/support/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecast) identified for your specific location.
 
 Below is an example of a feature importance analysis - click to enlarge:
 
 <img src="../../.gitbook/assets/feature-importance-result-screenshot.png" alt="" data-size="original">
 
-The Beam [feature impotrance results](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam) will then show you which categories have the largest impact on your demand. You can use the Beam output to find the most impactful ML features to add to your forecasting using the "[View ML Features](https://www.predicthq.com/support/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecast)" option or the Beam API. Then follow the [forecasting guide](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features) to add these features to your forecast using the [Features API](https://docs.predicthq.com/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api).
+Integrating Event Data
 
-_Add ML features to your forecast_
+Retrieve the identified features using the [Features API](../../api/features/get-features.md) and incorporate them into your forecasting model by following the [demand forecasting tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md).
 
-Following on from the example above this customer found that concerts (phq\_attendance\_concerts), sports (phq\_attendance\_sports), festivals (phq\_attendance\_festivals), conferences (phq\_attendance\_conferences), public holidays (phq\_rank\_public\_holidays), and observances (phq\_rank\_observances) were the most impactful. They updated their forecast to use these features and saw a significant forecast improvement. Having a more accurate forecast allowed them to improve their dynamic pricing and this increased revenue for their stores.
+Forecasting Demand
+
+A London-based retailer used [Demand Analysis](https://www.predicthq.com/support/beam-overview) to evaluate the impact of events on their sales. They discovered that concerts (phq\_attendance\_concerts), sports (phq\_attendance\_sports), festivals (phq\_attendance\_festivals), conferences (phq\_attendance\_conferences), public holidays (phq\_rank\_public\_holidays), and observances (phq\_rank\_observances) significantly impacted their sales. The forecasting model was updated accordingly using the Features API, resulting in a substantial improvement in forecast accuracy. The new model shows better alignment between forecasted demand and actual sales, facilitating more effective dynamic pricing.
+
+<img src="../../.gitbook/assets/Forecasting_graph_2.png" alt="" data-size="original">
+
+Pricing Adjustments
+
+With a refined forecasting model, businesses can adjust prices dynamically in response to predicted demand changes. This approach allows for pricing strategies that are both responsive and proactive, maximizing profitability during high-demand periods and maintaining competitive pricing when demand wanes.
 
 </details>
 
