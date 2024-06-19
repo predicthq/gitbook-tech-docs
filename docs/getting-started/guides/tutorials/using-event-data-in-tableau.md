@@ -237,7 +237,6 @@ For more information on connecting to a custom SQL query, see this [Tableau arti
 Some other connectors commonly used with PredictHQ data include the following:
 
 * [Google BigQuery](https://help.tableau.com/current/pro/desktop/en-us/examples\_googlebigquery.htm)
-* [Data into your Data Warehouse](https://docs.predicthq.com/getting-started/guides/tutorials/loading-predicthqs-event-data-into-your-data-warehouse).
 * [Azure SQL Database](https://help.tableau.com/current/pro/desktop/en-us/examples\_azure\_sql\_database.htm)
 * [Amazon Redshift](https://help.tableau.com/current/pro/desktop/en-us/examples\_amazonredshift.htm)
 
