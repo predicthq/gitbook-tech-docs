@@ -17,6 +17,8 @@ automotive
 autumn-holiday
 avalanche
 badminton
+bars-closed
+bars-open
 baseball
 basketball
 beauty-and-fashion
@@ -67,6 +69,8 @@ educational
 election
 electronic
 entertainment
+entertainment-closed
+entertainment-open
 epidemic
 epidemic-hazard
 esports
@@ -180,10 +184,14 @@ pop
 president
 rain
 rallies
+recreation-open
 referendum
 religion
 religion-and-spirituality
 research-development
+restaurant-closed
+restaurant-open
+retail-open
 rock
 rodeo
 rugby
@@ -232,6 +240,7 @@ wildfire
 wind
 winter-holiday
 wnba
+worship-open
 wrestling
 wwe
 youth-sport
