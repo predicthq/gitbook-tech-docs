@@ -165,6 +165,7 @@ ncaa
 nfl
 nhl
 nightlife
+nuclear
 observance
 observance-local
 observance-season
@@ -178,12 +179,15 @@ outdoor-sports
 parade
 parliament
 performing-arts
+personal-care-closed
+personal-care-open
 pga
 politics
 pop
 president
 rain
 rallies
+recreation-closed
 recreation-open
 referendum
 religion
@@ -191,6 +195,7 @@ religion-and-spirituality
 research-development
 restaurant-closed
 restaurant-open
+retail-closed
 retail-open
 rock
 rodeo
@@ -240,6 +245,7 @@ wildfire
 wind
 winter-holiday
 wnba
+worship-closed
 worship-open
 wrestling
 wwe
