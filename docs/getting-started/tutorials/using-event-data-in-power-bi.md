@@ -67,7 +67,7 @@ Our customers use this in a variety of ways, for example, an accommodation custo
 
 The end result of the exercise will be a report like this:
 
-<figure><img src="../../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
 ## Select an Input Method
 
@@ -83,21 +83,21 @@ There are several ways to connect PHQ data to Power BI or other reporting softwa
 
 We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
 
-<figure><img src="../../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
 
 Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
 In Power BI, create a new report and press Get Data -> Text/CSV
 
-<figure><img src="../../../.gitbook/assets/New CSV Connection.png" alt=""><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New CSV Connection.png" alt=""><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
 
 Upload the CSV export and hit the transform data option.
 
-<figure><img src="../../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
 Right-click the Query under Queries and go to the Advanced Editor option. The Query will be named the same as the uploaded CSV name.
 
-<figure><img src="../../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
 This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that will transform the columns automatically for use in the report.
 
@@ -134,12 +134,12 @@ in
 
 As you can see we start with a comma to add on to the existing line, its positioning can be changed to the end of the existing line if you prefer, but its function is the same. The final pasted code should look something like this:
 
-<figure><img src="../../../.gitbook/assets/CSV Power Query complete (1).png" alt=""><figcaption><p>CSV Power Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt=""><figcaption><p>CSV Power Query</p></figcaption></figure>
 
 Hit Done.\
 Hit Close & Apply and wait for the data transformation to finish processing.
 
-<figure><img src="../../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
 After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
@@ -156,14 +156,14 @@ To start, navigate to the Snowflake data connection via:
 Get Data -> More -> Database -> Snowflake\
 
 
-<figure><img src="../../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Select Snowflake Database.png" alt=""><figcaption><p>Database -> Snowflake</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt=""><figcaption><p>Database -> Snowflake</p></figcaption></figure>
 
 The Server and Warehouse info we gathered above will need to be entered at this step.\
 It should look something like the below, replacing square bracket placeholder variables for your Server and Warehouse info.
 
-<figure><img src="../../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
 
 Expand Advanced options and scroll down.
 
@@ -197,7 +197,7 @@ The most important transformed column is the 'impact\_patterns' column which we 
 
 This is what it should look like when filled in - with all square bracket placeholder text in the FROM condition replaced.
 
-<figure><img src="../../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
 
 Click "OK". Click "Load Data" on the next screen.
 
@@ -233,7 +233,7 @@ With this API query string, event data can start to be loaded into Power BI.&#x2
 
 First, start a new report. Then select Get Data -> Web
 
-<figure><img src="../../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
 Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
@@ -246,17 +246,17 @@ Add the HTTP request header with the following information:
 
 The filled-out information should look like this:
 
-<figure><img src="../../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
 After clicking “OK”,  the Data Transformation page will open where data shaping options can be made before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.&#x20;
 
-<figure><img src="../../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
 In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right click on the Query name under Queries and click Advanced Editor:
 
-<figure><img src="../../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
 Replace the entire existing Power Query code with the one below, changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
@@ -310,7 +310,7 @@ in
 
 Click Close & Apply and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
@@ -324,7 +324,7 @@ To begin, insert a blank chart and table visualization using the Insert -> New V
 
 Group as one (shift-click both boxes, right-click on one of them, and click the Group -> Group option).
 
-<figure><img src="../../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
 drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.&#x20;
@@ -334,7 +334,7 @@ Change the drop-down to Advanced filtering and add the following:
 “_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click “apply filter” in the bottom right of the filter menu. \
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
 
-<figure><img src="../../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
 
 Now fill the chart axis.\
 The X-axis gets filled with the date\_local field\
@@ -346,21 +346,21 @@ Table: id, title, category, phq\_attendance, start\_local, end\_local
 
 For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. Use the dropdown in the Visualizations column and select the field name instead of “Date Hierarchy”. If Date Hierarchy is preferred, feel free to leave this as is.
 
-<figure><img src="../../../.gitbook/assets/Remove Date Hierarchy.png" alt=""><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt=""><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 
 For phq\_attendance in the table use the drop down to remove the summary, this summary isn’t actually grouping anything so is an unnecessary default that should be removed. Note that we only want to stop the summarization in the table, leave the chart as is.
 
-<figure><img src="../../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
 Rename the chart title by clicking on the chart and going to the Visualizations tab -> General -> Title. Let’s rename it to “Event Attendance per day in San Francisco”.
 
-<figure><img src="../../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
 Click on the "phq\_attendance" column in the table twice to sort by highest to lowest attendance.
 
 The final result should look like the following:
 
-<figure><img src="../../../.gitbook/assets/Final Result (1).png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Final Result (1).png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
 The picture above shows how this analysis can be used; by clicking on a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
 
@@ -375,14 +375,14 @@ Below is a downloadable Power BI template that will automatically create the exa
 Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide. \
 Please wait 10-20 seconds between each step as data populates and data runs in the background.
 
-<figure><img src="../../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
 Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Please select Anonymous and click Connect.
 
-<figure><img src="../../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 
 If there are any issues with this template please refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
 
 #### Example Report:
 
-{% file src="../../../.gitbook/assets/PredictHQ API Connection Example Report (1).pbit" %}
+{% file src="../../.gitbook/assets/PredictHQ API Connection Example Report (1).pbit" %}

@@ -10,7 +10,7 @@ Events such as concerts, expos and public holidays can shift consumer behavior a
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [Control Center](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../../api/saved-locations/).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [Control Center](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../api/saved-locations/).
 
 ## Use Cases
 
@@ -22,7 +22,7 @@ Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Trave
 
 ## Getting Started
 
-A valid access token is required for calling PredictHQ’s APIs. Refer to the [API Quickstart](../../api-quickstart.md) for guidance on creating an access token and quickly test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
+A valid access token is required for calling PredictHQ’s APIs. Refer to the [API Quickstart](../api-quickstart.md) for guidance on creating an access token and quickly test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
 
 ## Scenario
 
@@ -34,7 +34,7 @@ The sections below will guide you through identifying the top 50 upcoming events
 
 ### Step 1. Define Query Parameters for the Events API
 
-Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](../../../api/events/search-events.md), providing guidance on how to use them along with Tom’s choices:
+Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](../../api/events/search-events.md), providing guidance on how to use them along with Tom’s choices:
 
 <details>
 
@@ -63,7 +63,7 @@ params={
 
 <summary>Location Type</summary>
 
-Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.&#x20;
+Define the catchment area for the search. Refer to our [industry recommendations](../guides/industry-specific-event-filters.md#location-type) for which location type to start with.&#x20;
 
 * **Center Point & Radius**: Define a circular area around your store or location by specifying latitude/longitude and a radius using the `within` parameter. The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) can assist in identifying an appropriate radius.
 
@@ -79,7 +79,7 @@ Define the catchment area for the search. Refer to our [industry recommendations
 
 Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the center point and radius approach.
 
-Tom first uses the [Suggested Radius API](../../../api/suggested-radius/get-suggested-radius.md) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
+Tom first uses the [Suggested Radius API](../../api/suggested-radius/get-suggested-radius.md) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
 
 ```python
 params={
@@ -129,7 +129,7 @@ print(response.json())
 
 Select the types of events for the search.
 
-* **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../../api/beam/). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
+* **Relevant Event Categories**: To identify [event categories](../predicthq-data/event-categories/) that are most relevant to your location, use [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, start with our [industry recommendations](../guides/industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 
 <!---->
 
@@ -155,17 +155,17 @@ Next, Tom plans to use use [Demand Analysis](https://www.predicthq.com/support/b
 
 Define the event impact for the search.
 
-* **PHQ Rank**: Use the `rank` parameter to target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
+* **PHQ Rank**: Use the `rank` parameter to target events based on their [predicted impact](../predicthq-data/ranks/phq-rank.md), with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../guides/industry-specific-event-filters.md#minimum-phq-rank).
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
 
 <!---->
 
-* **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
+* **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
 
 <!---->
 
-* **PHQ Attendance**: For [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../../predicthq-data/predicted-attendance.md).
+* **PHQ Attendance**: For [attendance-based events](../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../predicthq-data/predicted-attendance.md).
 
 #### Settings for Tom’s Pizzeria&#x20;
 
@@ -185,7 +185,7 @@ params={
 
 Track events based on their likelihood of occurring.
 
-* **Event State**: Events classified as `active` by the `state` parameter have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../../predicthq-data/predicted-events.md) as more information becomes available. Events are marked as `deleted` if they are canceled, postponed, or otherwise removed.
+* **Event State**: Events classified as `active` by the `state` parameter have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../predicthq-data/predicted-events.md) as more information becomes available. Events are marked as `deleted` if they are canceled, postponed, or otherwise removed.
 
 Focusing primarily on `active` and `predicted` event states ensures that only events which are relevant and likely to occur are tracked
 
@@ -227,7 +227,7 @@ params={
 </details>
 
 {% hint style="info" %}
-For detailed information on all query parameters (including those not shown here), please consult [Events API](../../../api/events/).
+For detailed information on all query parameters (including those not shown here), please consult [Events API](../../api/events/).
 {% endhint %}
 
 ### Step 2. Call Events API
@@ -289,13 +289,13 @@ print("Total events fetched:", len(all_events))
 
 ```
 
-For information on how to search for events using our SDK, please refer to [sdks](../../../integrations/sdks/ "mention").
+For information on how to search for events using our SDK, please refer to [sdks](../../integrations/sdks/ "mention").
 
 {% hint style="info" %}
 For more details, visit:
 
-* [search-events.md](../../../api/events/search-events.md "mention")
-* [sdks](../../../integrations/sdks/ "mention")
+* [search-events.md](../../api/events/search-events.md "mention")
+* [sdks](../../integrations/sdks/ "mention")
 {% endhint %}
 
 ### Step 3. Interpret Response
@@ -470,7 +470,7 @@ Results are returned in a paginated format, where the number of events per page 
 * `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.&#x20;
 * `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.&#x20;
 
-For more comprehensive guidelines on navigating paginated results, refer to [pagination.md](../../../api/overview/pagination.md "mention").
+For more comprehensive guidelines on navigating paginated results, refer to [pagination.md](../../api/overview/pagination.md "mention").
 
 </details>
 
@@ -478,43 +478,43 @@ For more comprehensive guidelines on navigating paginated results, refer to [pag
 
 <summary>Events</summary>
 
-Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [#response-fields](../../../api/events/search-events.md#response-fields "mention"). Common response fields include:
+Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [#response-fields](../../api/events/search-events.md#response-fields "mention"). Common response fields include:
 
 **Dates**
 
-* `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
+* `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
 * `start`, `end`, `predicted_end`: Indicates the start, end and predicted end dates in UTC.
 
 **Location**
 
-* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover [an area](../geolocation-guides/working-with-polygons.md) rather than a point, such as parades.&#x20;
-* `place_hierarchies`: Lists the [place IDs](../geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
+* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover [an area](../guides/geolocation-guides/working-with-polygons.md) rather than a point, such as parades.&#x20;
+* `place_hierarchies`: Lists the [place IDs](../guides/geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
 * `country`: Identifies the country where the event takes place.
 
 **Event Descriptors**
 
 * `title`: The name of the event.
 * `description`: A brief description of what the event entails, if available.
-* `category`: The [type of event](../../predicthq-data/event-categories/), such as concerts or public holidays.
-* `phq_labels`: [Tags](../../predicthq-data/labels.md) that classify the event into common themes or topics. Note, `labels` is a legacy field and is no longer maintained.
+* `category`: The [type of event](../predicthq-data/event-categories/), such as concerts or public holidays.
+* `phq_labels`: [Tags](../predicthq-data/labels.md) that classify the event into common themes or topics. Note, `labels` is a legacy field and is no longer maintained.
 
 **Event Impact**
 
-* `rank`: The [predicted impact](../../predicthq-data/ranks/phq-rank.md) of the event based on a globally comparable rank index.
-* `local_rank`: The [predicted impact](../../predicthq-data/ranks/local-rank.md) of the event, taking into account the local area.
-* `phq_attendance`: The number of people [predicted to attend](../../predicthq-data/predicted-attendance.md) the event, for [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md).
-* `impact_patterns`: The [predicted impact](../../predicthq-data/impact-patterns.md) of how the event affects various industries on days surrounding the event.
-* `predicted_event_spend`: The [predicted financial impact](../../predicthq-data/predicted-event-spend.md) of the event on local businesses.
+* `rank`: The [predicted impact](../predicthq-data/ranks/phq-rank.md) of the event based on a globally comparable rank index.
+* `local_rank`: The [predicted impact](../predicthq-data/ranks/local-rank.md) of the event, taking into account the local area.
+* `phq_attendance`: The number of people [predicted to attend](../predicthq-data/predicted-attendance.md) the event, for [attendance-based events](../predicthq-data/event-categories/attendance-based-events.md).
+* `impact_patterns`: The [predicted impact](../predicthq-data/impact-patterns.md) of how the event affects various industries on days surrounding the event.
+* `predicted_event_spend`: The [predicted financial impact](../predicthq-data/predicted-event-spend.md) of the event on local businesses.
 
 </details>
 
 {% hint style="info" %}
 For more details, visit:
 
-* [pagination.md](../../../api/overview/pagination.md "mention")
-* [search-events.md](../../../api/events/search-events.md "mention")
-* [working-with-dates-times-and-timezones.md](../date-and-time-guides/working-with-dates-times-and-timezones.md "mention")
-* [predicthq-data](../../predicthq-data/ "mention")
+* [pagination.md](../../api/overview/pagination.md "mention")
+* [search-events.md](../../api/events/search-events.md "mention")
+* [working-with-dates-times-and-timezones.md](../guides/date-and-time-guides/working-with-dates-times-and-timezones.md "mention")
+* [predicthq-data](../predicthq-data/ "mention")
 {% endhint %}
 
 ## Next Steps
@@ -523,7 +523,7 @@ With a clear view of upcoming events, Tom plans to leverage this information for
 
 * **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
 * **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
-* **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
+* **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 
 ## Conclusion
 

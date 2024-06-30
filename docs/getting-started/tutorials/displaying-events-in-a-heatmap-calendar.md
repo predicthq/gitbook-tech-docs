@@ -34,7 +34,7 @@ To experiment with this example, consider [forking the notebook](https://observa
 
 ### Getting Started
 
-An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
+An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../api-quickstart.md) to obtain one if needed.
 
 ### Event Data
 
@@ -46,7 +46,7 @@ To view the code used to call the Features API, Events API, and other functions 
 * Alternatively, click 'Edit' in the cell menu.
 
 {% hint style="info" %}
-For more information on the Features API, see this [intro guide](../features-api-guides/increase-accuracy-with-the-features-api.md).
+For more information on the Features API, see this [intro guide](../guides/features-api-guides/increase-accuracy-with-the-features-api.md).
 {% endhint %}
 
 ### Specifying Parameters
@@ -77,7 +77,7 @@ The notebook can also be [compiled and downloaded](https://observablehq.com/docu
 
 ### Extension
 
-Another approach to using calendars is to showcase the most impactful events, including links to their respective pages on Control Center. This method involves fetching event data from the [Events API](../../../api/events/search-events.md), sorting by attendance, and then directly displaying the top events on the calendar.
+Another approach to using calendars is to showcase the most impactful events, including links to their respective pages on Control Center. This method involves fetching event data from the [Events API](../../api/events/search-events.md), sorting by attendance, and then directly displaying the top events on the calendar.
 
 {% hint style="info" %}
 For more information on using the Events API, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention").
@@ -85,7 +85,7 @@ For more information on using the Events API, see [filtering-and-finding-relevan
 
 ## Customizing Event Data
 
-This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](../../../api/features/get-features.md#request-body):
+This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](../../api/features/get-features.md#request-body):
 
 <details>
 
@@ -102,7 +102,7 @@ This section provides guidance on how to customize the underlying event data usi
 
 * Determine the geographical area for which event data is required.&#x20;
 * Configuration: Use the `location` field to specify a latitude, longitude, and radius or place ID for a specific city or region (as in the above example).
-* Guidance: For details on how to set locations, refer to [#location-type](../industry-specific-event-filters.md#location-type "mention").&#x20;
+* Guidance: For details on how to set locations, refer to [#location-type](../guides/industry-specific-event-filters.md#location-type "mention").&#x20;
 
 </details>
 
@@ -112,7 +112,7 @@ This section provides guidance on how to customize the underlying event data usi
 
 * Identify the types of events of interest, such as concerts, sports, or community events.
 * Configuration: Add `<feature_name>` to the request body, specifying `stat` and `phq_rank` as needed (see next).&#x20;
-* Guidance: Start with [features](../../../api/features/get-features.md#available-features) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
+* Guidance: Start with [features](../../api/features/get-features.md#available-features) prefixed by `phq_attendance` for [attendance-based categories](../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../guides/industry-specific-event-filters.md#relevant-event-categories "mention").
 
 </details>
 
@@ -132,12 +132,12 @@ This section provides guidance on how to customize the underlying event data usi
 
 * Set a threshold to filter out small events that are unlikely to have a significant impact based on [PHQ Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/phq-rank).
 * Configuration: Use the `phq_rank` field under `<feature_name>`.
-* Guidance: For details on how to set the minimum event rank, refer to [#minimum-phq-rank](../industry-specific-event-filters.md#minimum-phq-rank "mention").
+* Guidance: For details on how to set the minimum event rank, refer to [#minimum-phq-rank](../guides/industry-specific-event-filters.md#minimum-phq-rank "mention").
 
 </details>
 
 {% hint style="info" %}
-For an example of calling the API in JavaScript, see [here](https://observablehq.com/@predicthq/features\_api\_heatmap#data). For more information on using the Features API, see these [guides](../features-api-guides/).
+For an example of calling the API in JavaScript, see [here](https://observablehq.com/@predicthq/features\_api\_heatmap#data). For more information on using the Features API, see these [guides](../guides/features-api-guides/).
 {% endhint %}
 
 ## Conclusion

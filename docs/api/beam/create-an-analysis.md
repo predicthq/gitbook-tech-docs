@@ -28,10 +28,10 @@ POST https://api.predicthq.com/v1/beam/analyses
   "radius": 1.22,
   "unit": "km"
 }
-</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. If you're unsure which to use we recommend using <code>phq</code>.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank (also known as "Rank") is supported so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
-</code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><code>aviation</code> - Aviation Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq",
   "levels": {
     "phq": {

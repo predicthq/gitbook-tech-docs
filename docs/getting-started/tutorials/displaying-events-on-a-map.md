@@ -35,7 +35,7 @@ An Access Token is required to access PredictHQ's APIs and run the notebook. Fol
 The event data used in this map is sourced from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
 
 {% hint style="info" %}
-For more information on the Events API, see this [documentation](../../../api/events/search-events.md).
+For more information on the Events API, see this [documentation](../../api/events/search-events.md).
 {% endhint %}
 
 ### Parameters
@@ -45,7 +45,7 @@ For this example, [events are retrieved](https://observablehq.com/@predicthq/eve
 1. **Date Range**: Events taking place within the next 7 days from today are considered to ensure the data remains current and actionable.
 2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
 3. **Categories**: The focus is on sports events and their potential to draw large crowds.
-4. **Event Rank**: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
+4. **Event Rank**: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
 
 {% hint style="info" %}
 For guidance on effectively querying the Events API, see [#customizing-event-data](displaying-events-on-a-map.md#customizing-event-data "mention") below.
@@ -67,7 +67,7 @@ Event coordinates are returned by the Events API in the `geo` field. It is forma
 The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). Events covering larger areas, such as parades, are classified as `polygon` or `multipolygon`. All relevant geometry information needed for rendering these types of events on a map is also contained within the `geo` field.
 
 {% hint style="info" %}
-For more information on how PredictHQ events are geographically represented, see this [overview](../geolocation-guides/overview.md).
+For more information on how PredictHQ events are geographically represented, see this [overview](../guides/geolocation-guides/overview.md).
 {% endhint %}
 
 ### Exporting Code
@@ -79,7 +79,7 @@ The notebook can also be[ compiled and downloaded](https://observablehq.com/docu
 
 ## Additional Examples
 
-For examples of maps created in Python, explore these [demo apps](../streamlit-demo-apps.md). The source code for rendering events in these apps is available on GitHub. Check out [utils/map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/utils/map.py) and [map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/map.py) for the parking demo which provides a practical example of visualizing events with Python and [Streamlit](https://streamlit.io/).&#x20;
+For examples of maps created in Python, explore these [demo apps](../guides/streamlit-demo-apps.md). The source code for rendering events in these apps is available on GitHub. Check out [utils/map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/utils/map.py) and [map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/map.py) for the parking demo which provides a practical example of visualizing events with Python and [Streamlit](https://streamlit.io/).&#x20;
 
 ## Customizing Event Data
 

@@ -69,7 +69,7 @@ With this API query string, event data can start to be loaded into Microsoft Exc
 
 First, create a new Spreadsheet. Click on the Data tab and choose Get Data as shown below:
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
@@ -80,22 +80,22 @@ Add the HTTP request header with the following information:
    1. Put `Authorization` in the first field
    2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PHQ API Access Token. Just replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
-      ![](<../../../.gitbook/assets/image (5).png>)\
+      ![](<../../.gitbook/assets/image (5).png>)\
 
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
-<figure><img src="../../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
 After clicking “OK”,  the Data Transformation page will open where data shaping options can be made before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. We recommend renaming it to “PredictHQ Connection”, but if you name it something else you will need to change the Power Query below too.
 
-<figure><img src="../../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
 In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right click on the Query name under Queries and click Advanced Editor:
 
-<figure><img src="../../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
 Replace the entire existing Power Query code with the one below, **changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
 
@@ -150,14 +150,14 @@ in
 
 The code in the advanced editor should look like the screen shot below:
 
-<figure><img src="../../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
 
 Click Close & Apply and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Microsoft Excel. You should see a Spreadsheet like that shown below:
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 You now have a connection to the API that you can refresh to get updated data.

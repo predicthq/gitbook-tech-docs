@@ -114,7 +114,7 @@ In the context of our example [Scenario](loading-event-data-into-a-data-warehous
 
 To do that, we searched for Seattle in the Control Center for the relevant period, status, and attended categories.
 
-<figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>Control Center Search for Seattle ready for Export</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>Control Center Search for Seattle ready for Export</p></figcaption></figure>
 
 After configuring your filters and executing the search, simply select the Export option. For more details on exporting see the[ CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter) except select the JSONL file format instead of CSV. This JSONL can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
@@ -124,21 +124,21 @@ Setting up a BigQuery table with a JSONL file is a straightforward process, prov
 
 1. **Click Create Table**: Navigate to the dataset you wish to create the table in, click the hamburger menu and select “Create Table”.
 
-<figure><img src="../../../.gitbook/assets/Create Table.png" alt=""><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create Table.png" alt=""><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 
 2. **Select the File Location**: Select the JSONL export that you have downloaded somewhere on your computer.
 3. **Name the Table**: Give the table about to be created a name that suits
 
-<figure><img src="../../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
 4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype will lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
-<figure><img src="../../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table Data Structure</a> and check for spelling</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table Data Structure</a> and check for spelling</p></figcaption></figure>
 
 5. **Advanced Options**: Expand the Advanced Options and tick the checkbox “Unknown Values”. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: Click the "Create Table" button to finalize the creation.
 
-<figure><img src="../../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
 
 This method allows initializing your BigQuery table with a JSONL dataset suitable for bulk data uploads. However, it does not support ongoing data refreshes. See the [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section for advice on setting up a regularly updated table after initialization.
 
@@ -539,7 +539,7 @@ This query will retrieve records that meet all the specified criteria, allowing 
 
 Visually this type of query allows you to pull all the events in a radius as shown in the image below:
 
-<figure><img src="../../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
 A common example is customers often look at events occurring in the next 1 to 3 months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to store the radius and then look up your store locations in the table. For example you may have a table of locations like that below:
 
