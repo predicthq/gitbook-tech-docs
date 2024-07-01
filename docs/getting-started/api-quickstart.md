@@ -52,7 +52,7 @@ How to set up and access PredictHQ APIs
 {% endembed %}
 
 {% hint style="info" %}
-Refer to [filtering-and-finding-relevant-events.md](tutorials/filtering-and-finding-relevant-events.md "mention") for guidance on how to identify events relevant to your business.
+Refer to [filtering-and-finding-relevant-events.md](tutorials-by-use-case/filtering-and-finding-relevant-events.md "mention") for guidance on how to identify events relevant to your business.
 {% endhint %}
 
 ## Streamlit Demo Apps
