@@ -28,7 +28,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## Create an access token
+## Create an API Token
 
 Read a more in-depth guide to [creating a new API Client and Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
