@@ -8,7 +8,7 @@ description: Search for an existing Analysis Group.
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/beam/analysis-groups
 ```
 

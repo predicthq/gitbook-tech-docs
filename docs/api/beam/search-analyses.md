@@ -8,7 +8,7 @@ description: Search for an existing Analysis.
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/beam/analyses
 ```
 

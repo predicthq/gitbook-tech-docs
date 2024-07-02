@@ -8,7 +8,7 @@ description: Update your Loop Settings.
 
 ### HTTP Request
 
-```
+```http
 PUT https://api.predicthq.com/v1/loop/settings
 ```
 

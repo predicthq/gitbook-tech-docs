@@ -8,7 +8,7 @@ description: Search for events happening in an existing Saved Location.
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">GET https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>/insights/events
+<pre class="language-http"><code class="lang-http">GET https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>/insights/events
 </code></pre>
 
 ### Path Parameters

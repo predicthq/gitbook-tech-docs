@@ -8,7 +8,7 @@ description: Search for an existing Saved Location.
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/saved-locations
 ```
 

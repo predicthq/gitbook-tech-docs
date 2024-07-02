@@ -10,7 +10,7 @@ This endpoint provides Feature Importance results aggregated across the Analyses
 
 ### HTTP Request
 
-```apacheconf
+```http
 GET https://api.predicthq.com/v1/beam/analysis-groups/$group_id/feature-importance
 ```
 
@@ -155,4 +155,3 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -8,7 +8,7 @@ description: Rerun the Beam correlation and analysis process.
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/refresh
+<pre class="language-http"><code class="lang-http">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/refresh
 </code></pre>
 
 ### Path Parameters

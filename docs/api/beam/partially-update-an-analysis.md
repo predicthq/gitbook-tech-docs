@@ -8,7 +8,7 @@ description: Partially update an existing Analysis.
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">PATCH https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>
+<pre class="language-http"><code class="lang-http">PATCH https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>
 </code></pre>
 
 ### Path Parameters

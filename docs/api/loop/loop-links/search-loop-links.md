@@ -8,7 +8,7 @@ description: Search existing Loop Links.
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/loop/links
 ```
 

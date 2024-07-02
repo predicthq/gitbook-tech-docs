@@ -8,7 +8,7 @@ description: Get an existing Saved Location.
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">GET https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>
+<pre class="language-http"><code class="lang-http">GET https://api.predicthq.com/v1/saved-locations/<a data-footnote-ref href="#user-content-fn-1">$location_id</a>
 </code></pre>
 
 ### Path Parameters

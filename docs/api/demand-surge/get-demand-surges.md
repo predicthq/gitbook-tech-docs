@@ -17,7 +17,7 @@ Once you have identified the dates with the surge in demand, you can use:
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/demand-surge/
 ```
 

@@ -10,7 +10,7 @@ Conversations are used to track feedback on existing events for example feedback
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/loop/feedback/conversations
 ```
 

@@ -8,7 +8,7 @@ description: Delete an existing Analysis Group.
 
 ### HTTP Request
 
-```apacheconf
+```http
 DELETE https://api.predicthq.com/v1/beam/analysis-groups/$group_id
 ```
 
@@ -45,4 +45,3 @@ print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
-

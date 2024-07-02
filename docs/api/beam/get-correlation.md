@@ -10,7 +10,7 @@ description: >-
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">GET https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/correlate
+<pre class="language-http"><code class="lang-http">GET https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/correlate
 </code></pre>
 
 ### Path Parameters

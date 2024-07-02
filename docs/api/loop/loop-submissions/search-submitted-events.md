@@ -10,7 +10,7 @@ For example, you can use this to display a list of events submitted via Loop Lin
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/loop/events
 ```
 

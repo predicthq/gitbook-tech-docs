@@ -22,7 +22,7 @@ The data can be uploaded in chunks, but the analysis data must remain valid at a
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/sink
+<pre class="language-http"><code class="lang-http">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/sink
 </code></pre>
 
 ### Path Parameters

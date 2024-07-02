@@ -8,7 +8,7 @@ description: Rerun the Beam Analysis Group aggregation process.
 
 ### HTTP Request
 
-```apacheconf
+```http
 POST https://api.predicthq.com/v1/beam/analysis-groups/$group_id/refresh
 ```
 
@@ -47,4 +47,3 @@ print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
-

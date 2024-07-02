@@ -12,7 +12,7 @@ Particularly for the Loop Links UI we take the `org_name` from Settings and disp
 
 ### HTTP Request
 
-```
+```http
 GET https://api.predicthq.com/v1/loop/settings
 ```
 

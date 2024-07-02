@@ -8,7 +8,7 @@ description: Get an existing Analysis Group.
 
 ### HTTP Request
 
-```apacheconf
+```http
 GET https://api.predicthq.com/v1/beam/analysis-groups/$group_id
 ```
 

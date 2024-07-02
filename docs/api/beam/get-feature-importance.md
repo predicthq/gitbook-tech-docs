@@ -12,7 +12,7 @@ These values represent each group of features' statistical significance when it 
 
 ### HTTP Request
 
-<pre class="language-apacheconf"><code class="lang-apacheconf">GET https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/feature-importance
+<pre class="language-http"><code class="lang-http">GET https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/feature-importance
 </code></pre>
 
 ### Path Parameters
