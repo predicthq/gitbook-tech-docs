@@ -109,7 +109,8 @@ Below is an example response:
 
 ### Query Parameters
 
-**`q`** _string_\
+#### **`q`** _string_
+
 Full-text search of event information. E.g. `?q=hotel+a`
 
 ***
