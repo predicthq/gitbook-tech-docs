@@ -4,7 +4,7 @@ description: Use events data in Tableau
 
 # Integrate with Tableau
 
-See [using-event-data-in-tableau.md](../../getting-started/tutorials-by-use-case/using-event-data-in-tableau.md "mention").
+See [using-event-data-in-tableau.md](../../getting-started/guides/tutorials/using-event-data-in-tableau.md "mention").
 
 ## Deprecated option - Tableau Connector
 

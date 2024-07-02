@@ -12,7 +12,7 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 * [Beam](../integration-guides/beam-data-science-guide.md)
 * [Suggested Radius](../../api/suggested-radius/get-suggested-radius.md)
 * [Control Center](https://control.predicthq.com)
-* Tutorial: [improving-demand-forecasting-models-with-event-features.md](../../getting-started/tutorials-by-use-case/improving-demand-forecasting-models-with-event-features.md "mention")
+* Tutorial: [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention")
 
 ### Microsoft
 
@@ -32,7 +32,7 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 ### Improving Base Model Results with PredictHQ
 
-From here you should follow the [improving-demand-forecasting-models-with-event-features.md](../../getting-started/tutorials-by-use-case/improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](../../api/beam/) and [Features API](../../api/features/). When we have the relevant PredictHQ features we can enhance the model's accuracy.
+From here you should follow the [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](../../api/beam/) and [Features API](../../api/features/). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 
 ### Suggested Radius
 
