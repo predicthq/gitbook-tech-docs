@@ -109,27 +109,27 @@ Below is an example response:
 
 ### Query Parameters
 
-`q` _string_\
+**`q`** _string_\
 Full-text search of event information. E.g. `?q=hotel+a`
 
 ***
 
-`link_id` _string_\
+**`link_id`** _string_\
 Comma-separated list of link ids. Allows you to filter on events submitted via a specific Loop Link link id. E.g. `?link_id=m4Dk4g4DRA8Yqbp2PC54`
 
 ***
 
-`event_id` _string_\
+**`event_id`** _string_\
 Comma-separated list of event ids. Allows you to retrieve specific events. E.g. `?event_id=5uRg7CqGu7DTtu4Rfk`
 
 ***
 
-`user_id` _string_\
+**`user_id`** _string_\
 Comma-separated list of user ids that submitted events. E.g. `?user_id=hw8Dsmv4Djg`
 
 ***
 
-`state` _string_\
+**`state`** _string_\
 Comma separated list of event states. Possible values:&#x20;
 
 * `active`
@@ -140,53 +140,53 @@ Comma separated list of event states. Possible values:&#x20;
 
 ***
 
-`category` _string_\
+**`category`** _string_\
 Comma separated list of event categories. E.g. `?category=expos,festivals`
 
 ***
 
-`label` _string_\
+**`label`** _string_\
 Comma separated list of event labels. E.g. `?label=community,food,music`
 
 ***
 
-`country` _string_\
+**`country`** _string_\
 Comma separated list of country codes. E.g. `?country=NZ,US`
 
 ***
 
-`start.*` _string_\
+**`start.*`** _string_\
 The date from and/or to the event starts. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?start.gt=2023-03-04&start.lte=2023-05-01`
 
 ***
 
-`end.*` _string_\
+**`end.*`** _string_\
 The date from and/or to the event ends. Must be used with suffixes `lt`, `lte`, `gt` or `gte`\
 E.g. `?end.gt=2023-03-04&end.lte=2023-05-01`
 
 ***
 
-`active.*` _string_\
+**`active.*`** _string_\
 The date from and/or to the event is active. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?active.gt=2023-03-04&active.lte=2023-05-01`
 
 ***
 
-`created.*` _string_\
+**`created.*`** _string_\
 The date from and/or to the event has been created. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?created.gt=2023-03-04&created.lte=2023-05-01`
 
 ***
 
-`updated.*` _string_
+**`updated.*`** _string_
 
 The date from and/or to the event has been updated. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?updated.gt=2023-03-04&updated.lte=2023-05-01`
 
 ***
 
-`private.include` _string_\
+**`private.include`** _string_\
 Whether or not to include private events. Rejected & pending submitted events will always be private. Possible values:
 
 * `true`: private and public events
@@ -197,17 +197,17 @@ E.g `?private.include=only`
 
 ***
 
-`org_review` _string_\
+**`org_review`** _string_\
 Filter for submitted events approved, rejected or yet to be treated by the related org. Possible values: `pending`, `approved`, `rejected`. E.g `?org_review=approved`
 
 ***
 
-`phq_review` _string_\
+**`phq_review`** _string_\
 Filter for submitted events approved, rejected or yet to be treated by PredictHQ. Possible values: `pending`, `approved`, `rejected`. E.g `?phq_review=approved`
 
 ***
 
-`sort` _string_\
+**`sort`** _string_\
 Comma-separated list of sort options. Prefix the field name with `-` for reverse order. Possible values**:**
 
 * `created`
@@ -220,12 +220,12 @@ Defaults to `?sort=relevance,-updated`
 
 ***
 
-`limit` _number_\
+**`limit`** _number_\
 The maximum number of results to return. The default limit is `10`. E.g. `?limit=10`
 
 ***
 
-`offset` _number_\
+**`offset`** _number_\
 The number of results to skip. The default is `0`. E.g. `?offset=20`
 
 ***
