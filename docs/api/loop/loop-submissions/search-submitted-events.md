@@ -109,14 +109,13 @@ Below is an example response:
 
 ### Query Parameters
 
-#### **`q`** _string_
+#### `q` (string, optional) <a href="#q" id="q"></a>
 
 Full-text search of event information. E.g. `?q=hotel+a`
 
 ***
 
-**`link_id`** _string_\
-Comma-separated list of link ids. Allows you to filter for events submitted via a specific Loop Link ID. E.g. `?link_id=m4Dk4g4DRA8Yqbp2PC54`
+#### `link_id` _(_string, optional) Comma-separated list of link ids. Allows you to filter for events submitted via a specific Loop Link ID. E.g. `?link_id=m4Dk4g4DRA8Yqbp2PC54`
 
 ***
 
