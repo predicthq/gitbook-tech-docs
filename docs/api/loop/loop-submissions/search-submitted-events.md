@@ -115,108 +115,108 @@ Full-text search of event information. E.g. `?q=hotel+a`
 
 ***
 
-#### `link_id` (string, optional)
+#### `link_id` (string, optional) <a href="#link_id" id="link_id"></a>
 
 Comma-separated list of link ids. Allows you to filter for events submitted via a specific Loop Link ID. E.g. `?link_id=m4Dk4g4DRA8Yqbp2PC54`
 
 ***
 
-#### `event_id` (string, optional)
+#### `event_id` (string, optional) <a href="#event_id" id="event_id"></a>
 
 Comma-separated list of event IDs. Allows you to retrieve specific events. E.g. `?event_id=5uRg7CqGu7DTtu4Rfk`
 
 ***
 
-#### `user_id` (string, optional)
+#### `user_id` (string, optional) <a href="#user_id" id="user_id"></a>
 
 Comma-separated list of user IDs that submitted the event. E.g. `?user_id=hw8Dsmv4Djg`
 
 ***
 
-#### `state` (string, optional)
+#### `state` (string, optional) <a href="#state" id="state"></a>
 
 Comma separated list of event states. Possible values: `active`, `predicted`, `cancelled`, `postponed`, `archived`.
 
 ***
 
-#### `category` (string, optional)
+#### `category` (string, optional) <a href="#category" id="category"></a>
 
 Comma separated list of event categories. E.g. `?category=expos,festivals`
 
 ***
 
-#### `label` (string, optional)
+#### `label` (string, optional) <a href="#label" id="label"></a>
 
 Comma separated list of event labels. E.g. `?label=community,food,music`
 
 ***
 
-#### `country` (string, optional)
+#### `country` (string, optional) <a href="#country" id="country"></a>
 
 Comma separated list of country codes. E.g. `?country=NZ,US`
 
 ***
 
-#### `start.*` (string, optional)
+#### `start.*` (string, optional) <a href="#start" id="start"></a>
 
 The date from and/or to the event starts. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?start.gt=2023-03-04&start.lte=2023-05-01`
 
 ***
 
-#### `end.*` (string, optional)
+#### `end.*` (string, optional) <a href="#end" id="end"></a>
 
 The date from and/or to the event ends. Must be used with suffixes `lt`, `lte`, `gt` or `gte`\
 E.g. `?end.gt=2023-03-04&end.lte=2023-05-01`
 
 ***
 
-#### `active.*` (string, optional)
+#### `active.*` (string, optional) <a href="#active" id="active"></a>
 
 The date from and/or to the event is active. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?active.gt=2023-03-04&active.lte=2023-05-01`
 
 ***
 
-#### `created.*` (string, optional)
+#### `created.*` (string, optional) <a href="#created" id="created"></a>
 
 The date from and/or to the event has been created. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?created.gt=2023-03-04&created.lte=2023-05-01`
 
 ***
 
-#### `updated.*` (string, optional)
+#### `updated.*` (string, optional) <a href="#updated" id="updated"></a>
 
 The date from and/or to the event was last updated. Must be used with suffixes `lt`, `lte`, `gt` or `gte`.\
 E.g. `?updated.gt=2023-03-04&updated.lte=2023-05-01`
 
 ***
 
-#### `private.include` (string, optional)
+#### `private.include` (string, optional, defaults to `false`) <a href="#private.include" id="private.include"></a>
 
 Whether or not to include private events. Rejected & pending events will always be private. Possible values:
 
 * `true`: private and public events
-* `false` (default): only public events
+* `false` only public events
 * `only`: only private events
 
 E.g `?private.include=only`
 
 ***
 
-#### `org_review` (string, optional)
+#### `org_review` (string, optional) <a href="#org_review" id="org_review"></a>
 
 Filter for submitted events approved, rejected or yet to be reviewed by the your Org. Possible values: `pending`, `approved`, `rejected`. E.g `?org_review=approved`
 
 ***
 
-#### `phq_review` (string, optional)
+#### `phq_review` (string, optional) <a href="#phq_review" id="phq_review"></a>
 
 Filter for submitted events approved, rejected or yet to be reviewed by PredictHQ. Possible values: `pending`, `approved`, `rejected`. E.g `?phq_review=approved`
 
 ***
 
-#### `sort` (string, optional, defaults to`relevance,-updated`)
+#### `sort` (string, optional, defaults to`relevance,-updated`) <a href="#sort" id="sort"></a>
 
 Comma-separated list of sort options. Prefix the field name with `-` for reverse order (e.g., `-created`). Possible values**:**
 
@@ -229,13 +229,13 @@ E.g. `?sort=-updated`
 
 ***
 
-#### `limit` (number, optional, defaults to`10`)
+#### `limit` (number, optional, defaults to`10`) <a href="#limit" id="limit"></a>
 
 The maximum number of results to return. E.g. `?limit=10`
 
 ***
 
-#### `offset` (number, optional, defaults to `0`)
+#### `offset` (number, optional, defaults to `0`) <a href="#offset" id="offset"></a>
 
 The number of results to skip. E.g. `?offset=20`
 
