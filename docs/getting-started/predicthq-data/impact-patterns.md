@@ -47,7 +47,7 @@ Impact Patterns are available for the following industry segments and categories
 {% endtab %}
 
 {% tab title="Hospitality (Restaurants)" %}
-Impact pattern features for this industry use the name `hospitality` but, this category includes food & beverage including restaurants.
+Impact pattern features for this industry use the name `hospitality` but this category covers food & beverage including restaurants.
 
 | Impact Type      | Category          |
 | ---------------- | ----------------- |
