@@ -2,6 +2,10 @@
 
 Also known as “Demand impact patterns”. This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into their hotel before the concert begins. The demand impact pattern for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries.&#x20;
 
+{% hint style="success" %}
+We recommend that if you operate in the supported industries you use demand impact features instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes. In our testing we have found significant forecasting accuracy improvements from using impact pattern features in demand forecast machine learning models.
+{% endhint %}
+
 Below is a visual representation of impact patterns:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
@@ -42,7 +46,9 @@ Impact Patterns are available for the following industry segments and categories
 |                  | `sports`          |
 {% endtab %}
 
-{% tab title="Restaurants" %}
+{% tab title="Hospitality (Restaurants)" %}
+Impact pattern features for this industry use the name `hospitality` but, this category includes food & beverage including restaurants.
+
 | Impact Type      | Category          |
 | ---------------- | ----------------- |
 | `phq_rank`       | `public-holidays` |
@@ -117,10 +123,10 @@ or for `retail` for severe weather events
         "impact_range_start_dt": "2018-02-03T15:00:00+00:00",
         "impact_range_end_dt": "2018-02-07T14:59:59+00:00",
         "impacts": [
-            {"date_local": "2018-02-04", "value": 64, "position": "event_day"},
+            {"date_local": "2018-02-04", "value": 40, "position": "leading"},
             {"date_local": "2018-02-05", "value": 64, "position": "event_day"},
-            {"date_local": "2018-02-06", "value": 64, "position": "event_day"},
-            {"date_local": "2018-02-07", "value": 64, "position": "event_day"},
+            {"date_local": "2018-02-06", "value": 50, "position": "lagging"},
+            {"date_local": "2018-02-07", "value": 50, "position": "lagging"},
         ],
     }
 ]

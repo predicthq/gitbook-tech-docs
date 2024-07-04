@@ -74,17 +74,33 @@ POST https://api.predicthq.com/v1/features/
 
 #### Available Features
 
+
+
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
 PHQ Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
+{% hint style="success" %}
+We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See[#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
+{% endhint %}
+
+#### Attended Events Generic Features
+
+Use the generic features in this table if you are not in one of the industries covered by the impact pattern features listed below.
+
 <table><thead><tr><th width="431">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_academic_graduation</code></td><td>Academic - Graduation</td></tr><tr><td><code>phq_attendance_academic_social</code></td><td>Academic - Social</td></tr><tr><td><code>phq_attendance_community</code></td><td>Community</td></tr><tr><td><code>phq_attendance_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_attendance_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_attendance_expos</code></td><td>Expos</td></tr><tr><td><code>phq_attendance_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_attendance_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_attendance_sports</code></td><td>Sports</td></tr><tr><td><code>phq_attendance_school_holidays</code></td><td>School Holidays</td></tr></tbody></table>
 
-## Impact Patterns
+#### Attended Events Impact Pattern Features
 
-We have recently extended our research on impact patterns to surface the `accommodation` and `hospitality` vertical accross `phq_attendance` as the `impact_type`. This yields new features:
+Demand impact patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. In the Features API, Impact Patterns are provided as different features with a feature per industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
-<table><thead><tr><th width="483">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_community_accommodation</code></td><td>Community accommodation impact</td></tr><tr><td><code>phq_attendance_concerts_accommodation</code></td><td>Concerts accommodation impact</td></tr><tr><td><code>phq_attendance_conferences_accommodation</code></td><td>Conferences accommodation impact</td></tr><tr><td><code>phq_attendance_expos_accommodation</code></td><td>Expos accommodation impact</td></tr><tr><td><code>phq_attendance_festivals_accommodation</code></td><td>Festivals accommodation impact</td></tr><tr><td><code>phq_attendance_performing_arts_accommodation</code></td><td>Performing Arts accommodation impact</td></tr><tr><td><code>phq_attendance_sports_accommodation</code></td><td>Sports accommodation impact</td></tr><tr><td><code>phq_attendance_community_hospitality</code></td><td>Community hospitality impact</td></tr><tr><td><code>phq_attendance_concerts_hospitality</code></td><td>Concerts hospitality impact</td></tr><tr><td><code>phq_attendance_conferences_hospitality</code></td><td>Conferences hospitality impact</td></tr><tr><td><code>phq_attendance_expos_hospitality</code></td><td>Expos hospitality impact</td></tr><tr><td><code>phq_attendance_festivals_hospitality</code></td><td>Festivals hospitality impact</td></tr><tr><td><code>phq_attendance_performing_arts_hospitality</code></td><td>Performing Arts hospitality impact</td></tr><tr><td><code>phq_attendance_sports_hospitality</code></td><td>Sports hospitality impact</td></tr></tbody></table>
+The features above are generic features and the features in the table below are the impact pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for  the conferences category you'd use `phq_attendance_conferences_accommodation`.
+
+{% hint style="success" %}
+We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")for more details.
+{% endhint %}
+
+<table><thead><tr><th width="483">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_community_accommodation</code></td><td>Community accommodation impact</td></tr><tr><td><code>phq_attendance_concerts_accommodation</code></td><td>Concerts accommodation impact</td></tr><tr><td><code>phq_attendance_conferences_accommodation</code></td><td>Conferences accommodation impact</td></tr><tr><td><code>phq_attendance_expos_accommodation</code></td><td>Expos accommodation impact</td></tr><tr><td><code>phq_attendance_festivals_accommodation</code></td><td>Festivals accommodation impact</td></tr><tr><td><code>phq_attendance_performing_arts_accommodation</code></td><td>Performing Arts accommodation impact</td></tr><tr><td><code>phq_attendance_sports_accommodation</code></td><td>Sports accommodation impact</td></tr><tr><td><code>phq_attendance_community_hospitality</code></td><td>Community hospitality impact</td></tr><tr><td><code>phq_attendance_concerts_hospitality</code></td><td>Concerts hospitality impact</td></tr><tr><td><code>phq_attendance_conferences_hospitality</code></td><td>Conferences hospitality impact</td></tr><tr><td><code>phq_attendance_expos_hospitality</code></td><td>Expos hospitality impact</td></tr><tr><td><code>phq_attendance_festivals_hospitality</code></td><td>Festivals hospitality impact</td></tr><tr><td><code>phq_attendance_performing_arts_hospitality</code></td><td>Performing Arts hospitality impact</td></tr><tr><td><code>phq_attendance_sports_hospitality</code></td><td>Sports hospitality impact</td></tr><tr><td><code>phq_attendance_community_retail</code></td><td>Community Retail impact</td></tr><tr><td><code>phq_attendance_concerts_retail</code></td><td>Concerts Retail impact</td></tr><tr><td><code>phq_attendance_conferences_retail</code></td><td>Conferences Retail impact</td></tr><tr><td><code>phq_attendance_expos_retail</code></td><td>Expos Retail impact</td></tr><tr><td><code>phq_attendance_festivals_retail</code></td><td>Festivals Retail impact</td></tr><tr><td><code>phq_attendance_performing_arts_retail</code></td><td>Performing Arts Retail impact</td></tr><tr><td><code>phq_attendance_sports_retail</code></td><td>Sports Retail impact</td></tr></tbody></table>
 
 ## Configuration
 
@@ -107,7 +123,17 @@ You can configure PHQ Attendance features using the options below.
 {% endtab %}
 
 {% tab title="PHQ Rank Features" %}
-PHQ Rank features provide daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
+PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
+
+## PHQ Rank Impact Pattern Features
+
+See the [#holidays-and-observances-impact-pattern-features](get-features.md#holidays-and-observances-impact-pattern-features "mention") in the tab above. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+
+{% hint style="success" %}
+We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+{% endhint %}
+
+## PHQ Rank Generic Features
 
 <table><thead><tr><th width="358">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr></tbody></table>
 
@@ -173,9 +199,29 @@ You can configure PHQ Attendance features using the options below.
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event). Currently supported industries are: Retail.
+PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event).&#x20;
+
+#### Holidays and Observances Impact Pattern Features
+
+These features include the demand impact patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
+
+{% hint style="success" %}
+We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+{% endhint %}
+
+<table><thead><tr><th width="450">Feature</th><th width="141">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr></tbody></table>
+
+#### Severe Weather Impact Features
+
+Currently supported industries are: Retail.
 
 <table><thead><tr><th width="560">Feature</th><th width="352">Description</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_severe_weather_air_quality_retail</code></td><td>Severe Weather - Air Quality</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_blizzard_retail</code></td><td>Severe Weather - Blizzard</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_retail</code></td><td>Severe Weather - Cold Wave - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_snow_retail</code></td><td>Severe Weather - Cold Wave - Snow</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_storm_retail</code></td><td>Severe Weather - Cold Wave - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_retail</code></td><td>Severe Weather - Dust - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_storm_retail</code></td><td>Severe Weather - Dust - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_flood_retail</code></td><td>Severe Weather - Flood</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_heat_wave_retail</code></td><td>Severe Weather - Heat Wave</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_hurricane_retail</code></td><td>Severe Weather - Hurricane</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_thunderstorm_retail</code></td><td>Severe Weather - Thunderstorm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tornado_retail</code></td><td>Severe Weather - Tornado</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tropical_storm_retail</code></td><td>Severe Weather - Tropical Storm</td><td>Retail</td></tr></tbody></table>
+
+#### Attended Events Impact Features
+
+See [#attended-events-impact-pattern-features](get-features.md#attended-events-impact-pattern-features "mention")
+
+
 
 ## Configuration
 
