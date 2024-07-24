@@ -147,7 +147,7 @@
     * [Partially Update an Analysis Group](api/beam/analysis-groups/partially-update-an-analysis-group.md)
     * [Refresh an Analysis Group](api/beam/analysis-groups/refresh-an-analysis-group.md)
     * [Delete an Analysis Group](api/beam/analysis-groups/delete-an-analysis-group.md)
-    * [Get Aggregated Feature Importance](api/beam/analysis-groups/get-aggregated-feature-importance.md)
+    * [Get Feature Importance for an Analysis Group](api/beam/analysis-groups/get-aggregated-feature-importance.md)
 * [Demand Surge](api/demand-surge/README.md)
   * [Get Demand Surges](api/demand-surge/get-demand-surges.md)
 * [Suggested Radius](api/suggested-radius/README.md)
