@@ -74,7 +74,9 @@ Severe weather events have no PHQ Attendance available as the rank/impact only r
 
 ### Disasters
 
-Disaster events are major adverse events resulting from natural processes of the Earth, for example, earthquakes, volcanoes, tsunamis, etc. The reduction and/or limitation of social activities that are forced by COVID-19 pandemic is also classified under disaster category.
+Disaster events are major adverse events resulting from natural processes of the Earth, for example, earthquakes, volcanoes, tsunamis, etc. The reduction and/or limitation of social activities that are forced by COVID-19 pandemic is also classified under the disaster category.
+
+These events tend to be high-impact disasters noticed at a regional or country level.
 
 **Labels**
 
@@ -82,13 +84,16 @@ This category is classified into three buckets with the following labels used to
 
 1.  **Hydrological\_geophysical**
 
-    `earthquake`, `avalanche`, `landslide`, `volcano`, `tsunami`, `ashfall`
+    `earthquake`, `avalanche`, `landslide`, `volcano`, `tsunami`, `ashfall`\
+    \
+    Note: Earthquake coverage typically includes magnitude 4 and above earthquakes.\
+
 2.  **Climatological**
 
     `fire`, `wildfire`, `drought`
 3.  **Lockdown**
 
-    The government mandated stay at home orders during the COVID-19 pandemic that restricts or reduces social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://control.predicthq.com/search/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://control.predicthq.com/search/events/Vat8acyAFAXQaNNTaK).
+    The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://control.predicthq.com/search/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://control.predicthq.com/search/events/Vat8acyAFAXQaNNTaK).
 
 #### Date & Time
 
@@ -98,7 +103,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Disaster is an area event with the latitude and longitude is pointing to the center of the impacted area.
+Disaster is an area event with the latitude and longitude pointing to the center of the impacted area.
 
 #### Entities
 
@@ -108,14 +113,14 @@ Disaster events have no entities available.
 
 **PHQ Rank**
 
-Disaster events have PHQ Rank available, it indicates the severity of the disasters.
+Disaster events have PHQ Rank available, which indicates the severity of the disasters.
 
-* The natural disasters events consider [CAP](https://en.wikipedia.org/wiki/Common\_Alerting\_Protocol) information, number of injured, deaths, evacuated, etc.
-* The lockdowns events consider the level of restriction, the maximum number of people allowed in a public social gathering, etc.
+* The natural disaster events consider [CAP](https://en.wikipedia.org/wiki/Common\_Alerting\_Protocol) information, number of injured, deaths, evacuated, etc.
+* The lockdown events consider the level of restriction, the maximum number of people allowed in a public social gathering, etc.
 
 **Local Rank**
 
-Disasters events have no Local Rank available as they impact an entire area instead of a specific point.
+Disaster events have no Local Rank available as they impact an entire area instead of a specific point.
 
 **PHQ Attendance**
 
