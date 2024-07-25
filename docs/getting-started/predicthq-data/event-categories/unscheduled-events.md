@@ -84,10 +84,9 @@ This category is classified into three buckets with the following labels used to
 
 1.  **Hydrological\_geophysical**
 
-    `earthquake`, `avalanche`, `landslide`, `volcano`, `tsunami`, `ashfall`\
-    \
-    Note: Earthquake coverage typically includes magnitude 4 and above earthquakes.\
+    `earthquake`, `avalanche`, `landslide`, `volcano`, `tsunami`, `ashfall`
 
+    1. Note: Earthquake coverage typically includes magnitude 4 and above earthquakes.
 2.  **Climatological**
 
     `fire`, `wildfire`, `drought`
