@@ -30,12 +30,10 @@ print(response.json())
 
 ## Create an API Token
 
-Read a more in-depth guide to [creating a new API Client and Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
+Read a more in-depth guide to [creating a new API Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
-1. Log into Control Center and visit the [API Clients](https://control.predicthq.com/clients) page.
-2. Select "New Client" and fill in the required information.
-3. Make sure to keep a copy of your new Client Secret as this cannot be shown to you again.
-4. Use the new Client Secret to create a new Token.
-5. Make sure to keep a copy of your new API Token as this cannot be shown to you again.
+1. Log into Control Center and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
+2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
+3. Click "Copy Token" to copy your token to the clipboard. You can now paste the token into another application. Keep a copy of your new API Token, as it will not be shown again.
 
 Now you can use the new API Token in the `Authorization` header of your API requests.

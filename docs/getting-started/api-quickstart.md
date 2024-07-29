@@ -15,16 +15,12 @@ description: >-
 
 ## Create an Access Token
 
-Read a more in-depth guide to [creating a new API Client and Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
+Read a more in-depth guide to [creating a new API Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
-1. Log into Control Center and visit the [API Clients](https://control.predicthq.com/clients) page under API tools.
-2. Select "New Client"&#x20;
-   1. Fill in the required information.
-   2. Copy the Client Secret, be sure to save this as it will not be shown again.
-3. Select Create New Token:
-   1. Use the Client Secret to create a new Token.
-   2. Keep a copy of your new API Token, as it will not be shown again.
-4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below:
+1. Log into Control Center and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
+2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
+3. Click "Copy Token" to copy your token to the clipboard. You can now paste the token into another application. Keep a copy of your new API Token, as it will not be shown again.
+4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below
 
 ## Access Events API
 
