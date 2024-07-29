@@ -10,6 +10,6 @@ The rate limit applies to your entire Organization as a whole, regardless of IP,
 From time-to-time we may introduce additional rate limits to ensure the reliability of our service is maintained.
 {% endhint %}
 
-Please ensure you are using appropriate retries and exponential backoff's to work within the rate limits.
+Please ensure you are using appropriate retries and exponential backoff's to work within the rate limits. Please see the following page with advice on retrying failed requests.
 
 * [#retrying-failed-requests](troubleshooting.md#retrying-failed-requests "mention")
