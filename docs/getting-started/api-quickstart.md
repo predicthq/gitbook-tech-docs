@@ -43,7 +43,7 @@ response = requests.get(
 print(response.json())
 ```
 
-{% embed url="https://www.youtube.com/watch?v=vvujroC7Bhs" %}
+{% embed url="https://youtu.be/_vD5GpQxXRg?si=7QMdU92ATASiELcj" %}
 How to set up and access PredictHQ APIs
 {% endembed %}
 
