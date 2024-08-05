@@ -8,6 +8,8 @@ description: >-
 
 ## Categories
 
+**Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. Polygon information is returned on the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
+
 ### Public Holidays
 
 A holiday generally established and recognized by law when most businesses and schools are closed. E.g. most countries celebrate New Year’s Day on January 1st.
@@ -71,8 +73,6 @@ Note: Datetime is used with the local timezone.
 
 School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
 
-Note that school holiday events in the United States use polygons. Whereas school holidays in other countries do not use polygons.
-
 The latitude and longitude is pointing to the center of the region or country.
 
 <table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina, Sweden, Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
@@ -133,10 +133,6 @@ Our school holidays granularity changed in October 2021 to move from the state l
 
 We rank our school holidays based on student numbers in the school district.
 
-Our school holiday events for the US contain polygon information showing the boundary of the school district. Polygon information is returned on the geo field.
-
-School holidays for the US have polygons showing the school district boundary. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
-
 Here are some examples of the school holidays for the United States:
 
 * [New York City School District - Christmas Break](https://events.predicthq.com/events/3W5n3HjxNnV6VVqiH5)
@@ -160,7 +156,7 @@ These Frequently asked questions apply to district level school holidays (for th
 1. **Does the data include private school holidays as well?** The data set does not cover private schools. Private schools select their own calendars and are not necessarily governed by school district dates. That being said, some private schools might follow similar calendars.
 2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data will recognize changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. The weekend after a school holiday is included if the holiday ends on a Friday or Sunday.
-4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality. For the US we have polygons (see the [polygons doc](../../guides/geolocation-guides/overview.md) for more info) showing the area of the school district.
+4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
 5. **Teacher Only Days -** We do not currently include teacher-only days.
 
 #### Geoscoping
