@@ -93,7 +93,7 @@ Below is an example response:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/correlate?date.gte=2022-01-01&date.lte=2022-12-31 \
+curl -X GET "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/correlate?date.gte=2022-01-01&date.lte=2022-12-31" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```

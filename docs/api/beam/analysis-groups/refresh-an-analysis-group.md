@@ -25,7 +25,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X POST https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/refresh \
+curl -X POST "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/refresh" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```

@@ -88,7 +88,7 @@ Below is an example response:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID \
+curl -X GET "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
