@@ -28,7 +28,12 @@ POST https://api.predicthq.com/v1/beam/analyses
   "radius": 1.22,
   "unit": "km"
 }
-</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank is supported (also known as "Rank") so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>demand_type.*</code><br>object<br><em>optional</em></td><td><p>Provides information about the demand type of the analysis.<br><br>Example:</p><pre class="language-json"><code class="lang-json">{
+  "industry": "restaurants",
+  "unit": "sales",
+  "description": "Daily sales amount in USD"
+}
+</code></pre><p><code>industry</code> must be one of the following:</p><ul><li><code>accommodation</code></li><li><code>cpg</code></li><li><code>tourism</code></li><li><code>marketing</code></li><li><code>parking</code></li><li><code>restaurants</code></li><li><code>retail</code></li><li><code>transportation</code></li><li><code>other</code></li></ul><p>Choosing the right industry is important as this will determine the type of features used in the analysis.<br><br><code>unit</code> and <code>description</code> are arbitrary strings.</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank is supported (also known as "Rank") so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
 </code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
@@ -76,6 +81,9 @@ curl -X POST https://api.predicthq.com/v1/beam/analyses \
             "radius": 1.2,
             "unit": "km"
         },
+        "demand_type": {
+            "industry": "restaurants"
+        },
         "rank": {
             "type": "phq"
         }
@@ -104,6 +112,9 @@ response = requests.post(
             },
             "radius": 1.2,
             "unit": "km"
+        },
+        "demand_type": {
+            "industry": "restaurants"
         },
         "rank": {
             "type": "phq"
