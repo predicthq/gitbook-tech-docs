@@ -39,7 +39,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X PATCH https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID \
+curl -X PATCH "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN" \
      --data @<(cat <<EOF

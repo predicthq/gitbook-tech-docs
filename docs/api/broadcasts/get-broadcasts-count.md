@@ -39,7 +39,7 @@ Below is an example response:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/broadcasts/count/?event.event_id=AdKtL974inQB7GURRd \
+curl -X GET "https://api.predicthq.com/v1/broadcasts/count/?event.event_id=AdKtL974inQB7GURRd" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
@@ -64,4 +64,3 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
-

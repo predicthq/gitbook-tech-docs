@@ -5,7 +5,7 @@ All PredictHQ API endpoints require authentication. You can authenticate your re
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/events/ \
+curl -X GET "https://api.predicthq.com/v1/events/" \
      -H "Authorization: Bearer $ACCESS_TOKEN" 
 ```
 {% endtab %}

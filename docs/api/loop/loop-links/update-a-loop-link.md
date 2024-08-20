@@ -36,7 +36,7 @@ If successful, the HTTP response code will be `204 No Content`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X PUT https://api.predicthq.com/v1/loop/links/$LINK_ID \
+curl -X PUT "https://api.predicthq.com/v1/loop/links/$LINK_ID" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN" \
      --data @<(cat <<EOF

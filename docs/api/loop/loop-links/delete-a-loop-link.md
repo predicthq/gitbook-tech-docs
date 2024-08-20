@@ -24,7 +24,7 @@ If successful, the HTTP response code will be `204 No Content`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X DELETE https://api.predicthq.com/v1/loop/links/$LINK_ID \
+curl -X DELETE "https://api.predicthq.com/v1/loop/links/$LINK_ID" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
 {% endtab %}

@@ -447,7 +447,7 @@ The same data represented as a table:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X POST https://api.predicthq.com/v1/features/ \
+curl -X POST "https://api.predicthq.com/v1/features/" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN" \
      --data @<(cat <<EOF

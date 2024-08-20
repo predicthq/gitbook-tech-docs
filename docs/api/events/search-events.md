@@ -342,7 +342,7 @@ Below is an example of a single result.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/events/?id=5uRg7CqGu7DTtu4Rfk \
+curl -X GET "https://api.predicthq.com/v1/events/?id=5uRg7CqGu7DTtu4Rfk" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
@@ -375,4 +375,3 @@ Below are some guides relevant to this API:
 * [Geolocation Guides](../../getting-started/guides/geolocation-guides/)
 * [Date and Time Guides](../../getting-started/guides/date-and-time-guides/)
 * Other [Event API Guides](../../getting-started/guides/events-api-guides/)
-
