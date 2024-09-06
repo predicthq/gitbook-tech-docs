@@ -16,7 +16,7 @@ POST https://api.predicthq.com/v1/features/
 
 ### Request Headers
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Receive results in JSON or CSV by specifying the appropriate <code>Content-Type</code> header.</p><p></p><p>Supported values:</p><ul><li><code>application/json</code></li><li><code>text/csv</code></li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Accept</code></td><td><p>Receive results in JSON or CSV by specifying the appropriate <code>Accept</code> header.</p><p></p><p>Supported values:</p><ul><li><code>application/json</code></li><li><code>text/csv</code></li></ul></td></tr></tbody></table>
 
 ### Request Body
 
@@ -333,11 +333,11 @@ Other than the date, the structure of each result here will depend on how you co
 
 ### Response Format
 
-You can receive responses formatted as JSON (default) or CSV. Use the `Content-Type` header when performing your request to define which format you would like to receive.
+You can receive responses formatted as JSON (default) or CSV. Use the `Accept` header when performing your request to define which format you would like to receive.
 
 {% tabs %}
 {% tab title="JSON" %}
-With the `Content-Type` header set to `application/json` you will receive the results as JSON like the example below:
+With the `Accept` header set to `application/json` you will receive the results as JSON like the example below:
 
 ```json
 {
@@ -418,7 +418,7 @@ With the `Content-Type` header set to `application/json` you will receive the re
 {% endtab %}
 
 {% tab title="CSV" %}
-With the `Content-Type` header set to `text/csv` you will receive the results as CSV like the example below:
+With the `Accept` header set to `text/csv` you will receive the results as CSV like the example below:
 
 ```csv
 date,phq_attendance_concerts_stats_count,phq_attendance_concerts_stats_sum,phq_attendance_conferences_stats_min,phq_attendance_conferences_stats_max,phq_attendance_sports_stats_count,phq_attendance_sports_stats_sum,phq_attendance_sports_stats_min,phq_attendance_sports_stats_max,phq_attendance_sports_stats_avg,phq_attendance_sports_stats_median,phq_attendance_sports_stats_std_dev,phq_rank_public_holidays_rank_levels_1,phq_rank_public_holidays_rank_levels_2,phq_rank_public_holidays_rank_levels_3,phq_rank_public_holidays_rank_levels_4,phq_rank_public_holidays_rank_levels_5
