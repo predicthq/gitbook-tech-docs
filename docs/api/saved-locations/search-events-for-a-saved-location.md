@@ -17,7 +17,9 @@ description: Search for events happening in an existing Saved Location.
 
 ### Query Parameters
 
-<table><thead><tr><th width="219">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>date_range_type</code><br>string</td><td><p>Date range to fetch events for.<br><br>Currently the only supported date ranges are:</p><ul><li><code>next_90d</code></li></ul><p>E.g. <code>?date_range_type=next_90d</code></p></td></tr><tr><td><code>category</code><br>string</td><td>Comma-separated list of event categories to include.<br><br>Please refer to the <code>category</code> parameter in <a href="../events/search-events.md#query-parameters">Events API</a>.<br><br>E.g. <code>?category=sports,concerts</code></td></tr><tr><td><code>sort</code><br>string</td><td>Sort order for results.<br><br>Please refer to the <code>sort</code> parameter in Events API.<br><br>E.g. <code>?sort=phq_attendance</code></td></tr><tr><td><code>limit</code><br>number</td><td>The maximum number of results to return. The default limit is <code>10</code>.<br><br>E.g. <code>?limit=10</code></td></tr><tr><td><code>offset</code><br>number</td><td><p>The number of results to skip. The default is <code>0</code>.</p><p><br>E.g. <code>?offset=20</code></p></td></tr></tbody></table>
+Please refer to the [Events API](../events/search-events.md#query-parameters) documentation for the available query parameters.
+
+<table><thead><tr><th width="227">Additional Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>date_range_type</code><br>string</td><td><p>Date range to fetch events for.<br><br>Currently the only supported date ranges are:</p><ul><li><code>next_90d</code></li></ul><p>E.g. <code>?date_range_type=next_90d</code></p></td></tr></tbody></table>
 
 ## Response
 
