@@ -17,9 +17,11 @@ description: Search for events happening in an existing Saved Location.
 
 ### Query Parameters
 
-Please refer to the [Events API](../events/search-events.md#query-parameters) documentation for the available query parameters.
+{% hint style="info" %}
+Please refer to the [Events API](../events/search-events.md#query-parameters) documentation for the available query parameters in addition to those listed below.
+{% endhint %}
 
-<table><thead><tr><th width="227">Additional Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>date_range_type</code><br>string</td><td><p>Date range to fetch events for.<br><br>Currently the only supported date ranges are:</p><ul><li><code>next_90d</code></li></ul><p>E.g. <code>?date_range_type=next_90d</code></p></td></tr></tbody></table>
+<table><thead><tr><th width="227">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>date_range_type</code><br>string</td><td><p>Date range to fetch events for.<br><br>Currently the only supported date ranges are:</p><ul><li><code>next_90d</code></li></ul><p>E.g. <code>?date_range_type=next_90d</code></p></td></tr></tbody></table>
 
 ## Response
 
