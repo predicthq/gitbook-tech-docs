@@ -67,7 +67,6 @@
     * [ML Features by Group](getting-started/guides/beam-guides/ml-features-by-group.md)
   * [Demand Surge API Guides](getting-started/guides/demand-surge-api-guides/README.md)
     * [Demand Surge Notebook](getting-started/guides/demand-surge-api-guides/demand-surge-notebook.md)
-  * [Using the API with the free plan](getting-started/guides/using-the-api-with-the-free-plan.md)
   * [Guide to Protecting PredictHQ Data](getting-started/guides/guide-to-protecting-predicthq-data.md)
   * [Streamlit Demo Apps](getting-started/guides/streamlit-demo-apps.md)
   * [Guide to Bulk Export Data via Control Center](getting-started/guides/export-data-via-control-center.md)
