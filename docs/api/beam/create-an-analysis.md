@@ -28,10 +28,18 @@ POST https://api.predicthq.com/v1/beam/analyses
   "radius": 1.22,
   "unit": "km"
 }
-</code></pre></td></tr><tr><td><code>demand_type.*</code><br>object<br><em>optional</em></td><td><p>Provides information about the demand type of the analysis.<br><br>Example:</p><pre class="language-json"><code class="lang-json">{
-  "industry": "restaurants"
+</code></pre></td></tr><tr><td><p><code>demand_type.*</code><br>object</p><p><em>optional</em></p></td><td><p>Provides information about the demand type of the analysis.</p><p></p><ul><li><p><code>industry</code> is the industry of the demand data being analysed by Beam. Choosing the right industry is important as this will determine the type of features used in the Analysis and will impact the accuracy of the results. Must be one of the following:</p><ul><li><code>accommodation</code></li><li><code>cpg</code></li><li><code>tourism</code></li><li><code>marketing</code></li><li><code>parking</code></li><li><code>restaurants</code></li><li><code>retail</code></li><li><code>transportation</code></li><li><code>other</code></li></ul></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "demand_type": {
+    "industry": "restaurants"
+  }
 }
-</code></pre><p><code>industry</code> must be one of the following:</p><ul><li><code>accommodation</code></li><li><code>cpg</code></li><li><code>tourism</code></li><li><code>marketing</code></li><li><code>parking</code></li><li><code>restaurants</code></li><li><code>retail</code></li><li><code>transportation</code></li><li><code>other</code></li></ul><p>Choosing the right industry is important as this will determine the type of features used in the analysis.</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank is supported (also known as "Rank") so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>external_id</code><br>string<br><em>optional</em></td><td><p>External identifier for the location. If you have an ID for the location/store/property in your other platforms, use the same ID here to easily link this specific Beam Analysis to the location.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "external_id": "abc123"
+}
+</code></pre></td></tr><tr><td><code>label</code><br>string<br><em>optional</em></td><td><p>Comma-separated list of labels that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "label": ["label1", "label2", "label3"]
+}
+</code></pre></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank is supported (also known as "Rank") so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
 </code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts. Note: <strong>We strongly recommend</strong> not setting the rank levels and instead letting Beam define the best rank levels based on your industry.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
@@ -41,12 +49,6 @@ POST https://api.predicthq.com/v1/beam/analyses
       "min": 51
     }
   }
-}
-</code></pre></td></tr><tr><td><code>external_id</code><br>string<br><em>optional</em></td><td><p>External identifier for the location. If you have an ID for the location/store/property in your other platforms, use the same ID here to easily link this specific Beam Analysis to the location.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "external_id": "abc123"
-}
-</code></pre></td></tr><tr><td><code>label</code><br>string<br><em>optional</em></td><td><p>Comma-separated list of labels that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "label": ["label1", "label2", "label3"]
 }
 </code></pre></td></tr></tbody></table>
 
