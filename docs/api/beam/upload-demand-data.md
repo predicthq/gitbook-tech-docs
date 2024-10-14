@@ -31,9 +31,7 @@ The data can be uploaded in chunks, but the analysis data must remain valid at a
 
 ### Request Headers
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><ul><li><code>text/csv</code></li><li><code>application/x-ndjson</code></li><li><code>application/json</code></li><li><code>application/x-ldjson</code></li></ul></td></tr></tbody></table>
-
-Please note, content-type `application/x-ldjson` has been deprecated in favor of `application/x-ndjson`. While `application/x-ldjson` will continue to work we suggest using `applicaiton/x-ndjson` instead.
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><ul><li><code>text/csv</code></li><li><code>application/x-ndjson</code></li><li><code>application/json</code></li><li><code>application/x-ldjson</code> (deprecated)</li></ul><p>Note: <code>application/x-ldjson</code> has been deprecated in favor of <code>application/x-ndjson</code>. However the data format is exactly the same (newline delimited JSON). We recommend using <code>application/x-ndjson</code></p></td></tr></tbody></table>
 
 ### Request Body
 
@@ -59,7 +57,7 @@ Column Types:
 <table><thead><tr><th width="153">Column</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string<br><em>required</em></td><td>ISO8601 Date format (<code>YYYY-MM-DD</code>)<br><br>E.g., <code>2023-01-01</code></td></tr><tr><td><code>demand</code><br>number<br><em>required</em></td><td>Number value (float or integer, must be a positive number).<br><br>Demand will typically be the demand you use in your demand forecast if you are forecasting. For example, it could be units sold, room bookings, or number of staff rostered on per day or any other unit.<br><br>E.g., <code>12.235</code></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="Line-delimited JSON" %}
+{% tab title="Newline-delimited JSON" %}
 The request body should consist of line-delimited JSON objects, each representing a distinct data point. Ensure that the fields within these objects are named `date` and `demand` (lowercase). The format should follow the example given below:
 
 ```json
