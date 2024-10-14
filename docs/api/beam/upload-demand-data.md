@@ -31,7 +31,9 @@ The data can be uploaded in chunks, but the analysis data must remain valid at a
 
 ### Request Headers
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><ul><li><code>text/csv</code></li><li><code>application/x-ldjson</code></li><li><code>application/json</code></li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><p>Must be one of the following:</p><ul><li><code>text/csv</code></li><li><code>application/x-ndjson</code></li><li><code>application/json</code></li><li><code>application/x-ldjson</code></li></ul></td></tr></tbody></table>
+
+Please note, content-type `application/x-ldjson` has been deprecated in favor of `application/x-ndjson`. While `application/x-ldjson` will continue to work we suggest using `applicaiton/x-ndjson` instead.
 
 ### Request Body
 
@@ -68,7 +70,7 @@ The request body should consist of line-delimited JSON objects, each representin
 
 The following request headers must be set:
 
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/x-ldjson</code></td></tr></tbody></table>
+<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/x-ndjson</code></td></tr></tbody></table>
 
 JSON Fields:
 
