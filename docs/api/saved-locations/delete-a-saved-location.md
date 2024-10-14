@@ -24,7 +24,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X DELETE https://api.predicthq.com/v1/saved-locations/$LOCATION_ID \
+curl -X DELETE "https://api.predicthq.com/v1/saved-locations/$LOCATION_ID" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
 {% endtab %}

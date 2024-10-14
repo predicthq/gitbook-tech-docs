@@ -73,7 +73,7 @@ Below is an example response:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X POST https://api.predicthq.com/v1/beam/analyses \
+curl -X POST "https://api.predicthq.com/v1/beam/analyses" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN" \
      --data @<(cat <<EOF

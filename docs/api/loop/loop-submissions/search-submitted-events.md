@@ -34,7 +34,7 @@ print(response.json())
 
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/loop/events?phq_review=approved \
+curl -X GET "https://api.predicthq.com/v1/loop/events?phq_review=approved" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```

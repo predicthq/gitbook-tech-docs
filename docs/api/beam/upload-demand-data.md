@@ -106,7 +106,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X POST https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink \
+curl -X POST "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink" \
      -H "Content-Type: text/csv" \
      -H "Authorization: Bearer $ACCESS_TOKEN" \
      --data @data.csv

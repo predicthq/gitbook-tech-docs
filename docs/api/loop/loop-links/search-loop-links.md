@@ -60,7 +60,7 @@ Below is an example response:
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X GET https://api.predicthq.com/v1/loop/links?sort=name \
+curl -X GET "https://api.predicthq.com/v1/loop/links?sort=name" \
      -H "Accept: application/json" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
