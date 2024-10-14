@@ -42,7 +42,13 @@ POST https://api.predicthq.com/v1/beam/analyses
     }
   }
 }
-</code></pre></td></tr><tr><td><code>tz</code><br>string<br><em>optional</em></td><td><p>Time zone of the location in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format.<br><br>E.g. <code>Pacific/Auckland</code></p><p><br><em>Note: this field is being used in the Control Center Beam UI for the purpose of fetching a list of relevant events in the correct time zone. It no longer has bearing on the outcome of a Beam analysis.</em></p></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>tz</code><br>string<br><em>optional</em></td><td><p>Time zone of the location in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format.<br><br>E.g. <code>Pacific/Auckland</code></p><p><br><em>Note: this field is being used in the Control Center Beam UI for the purpose of fetching a list of relevant events in the correct time zone. It no longer has bearing on the outcome of a Beam analysis.</em></p></td></tr><tr><td><code>external_id</code><br>string<br><em>optional</em></td><td><p>User specified id that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "external_id": "external_id"
+}
+</code></pre></td></tr><tr><td><code>label</code><br>string<br><em>optional</em></td><td><p>Comma-separated list of user specified labels that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "label": ["label1", "label2", "label3"]
+}
+</code></pre></td></tr></tbody></table>
 
 ## Response
 

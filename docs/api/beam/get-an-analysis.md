@@ -57,7 +57,7 @@ description: Get an existing Analysis.
     "feature_importance": true
   }
 }
-</code></pre></td></tr><tr><td><code>demand_type</code><br>object</td><td><p></p><p>Indicates the detected type of the uploaded demand data.<br></p><p><strong>Fields:</strong></p><ul><li><code>interval</code> - <code>day</code> or <code>week</code></li><li><code>week_start_day</code> - e.g. <code>sunday</code>, <code>monday</code> etc. Only displayed for weekly analyses</li></ul></td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>demand_type</code><br>object</td><td><p></p><p>Indicates the detected type of the uploaded demand data.<br></p><p><strong>Fields:</strong></p><ul><li><code>interval</code> - <code>day</code> or <code>week</code></li><li><code>week_start_day</code> - e.g. <code>sunday</code>, <code>monday</code> etc. Only displayed for weekly analyses</li></ul></td></tr><tr><td><code>external_id</code><br>string</td><td>The external id set by the user.</td></tr><tr><td><code>label</code><br>list[string]</td><td>The labels set by the user.</td></tr></tbody></table>
 
 
 
@@ -111,7 +111,9 @@ Below is an example response:
         "interval": "week",
         "week_start_day": "monday"
     },
-    "tz": "UTC"
+    "tz": "UTC",
+    "external_id": "external_id",
+    "label": ["label1", "label2", "label3"]
 }
 ```
 
