@@ -39,7 +39,7 @@ description: Get an existing Analysis.
     }
   }
 }
-</code></pre></td></tr><tr><td><code>demand_type</code><br>object</td><td><p></p><p>Indicates the detected type of the uploaded demand data.<br></p><p><strong>Fields:</strong></p><ul><li><code>interval</code> - <code>day</code> or <code>week</code></li><li><code>week_start_day</code> - e.g. <code>sunday</code>, <code>monday</code> etc. Only displayed for weekly analyses</li></ul></td></tr><tr><td><code>tz</code><br>string</td><td><p>The time zone of the Analysis in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. </p><p></p><p>E.g. <code>Pacific/Auckland</code></p><p></p><p><strong>Note</strong>: this field is populated automatically based on the location of the Analysis.</p></td></tr><tr><td><code>readiness_checks</code><br>object</td><td><p>Beam performs a number of validation checks on the data provided. The results of some of those checks are stored in this field.</p><p></p><p>We don't recommend relying on the values in this field as the structure may change without warning. Instead, refer to the <code>readiness_status</code> field to determine whether or not the Analysis is ready (i.e. has completed processing successfully).<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>demand_type</code><br>object</td><td><p></p><p>Indicates the detected type of the uploaded demand data as well as other user-defined information about the demand data.<br></p><p><strong>Fields:</strong></p><ul><li><code>interval</code> - <code>day</code> or <code>week</code></li><li><code>week_start_day</code> - e.g. <code>sunday</code>, <code>monday</code> etc. Only displayed for weekly analyses</li><li><code>industry</code> - user selected industry of the demand data.</li></ul></td></tr><tr><td><code>tz</code><br>string</td><td><p>The time zone of the Analysis in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format. </p><p></p><p>E.g. <code>Pacific/Auckland</code></p><p></p><p><strong>Note</strong>: this field is populated automatically based on the location of the Analysis.</p></td></tr><tr><td><code>readiness_checks</code><br>object</td><td><p>Beam performs a number of validation checks on the data provided. The results of some of those checks are stored in this field.</p><p></p><p>We don't recommend relying on the values in this field as the structure may change without warning. Instead, refer to the <code>readiness_status</code> field to determine whether or not the Analysis is ready (i.e. has completed processing successfully).<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
   "readiness_checks": {
     "date_range": {
       "start": "2017-01-01",
@@ -70,6 +70,12 @@ Below is an example response:
 ```json
 {
     "name": "Analysis 1",
+    "create_dt": "2023-03-01T23:03:19.403859+00:00",
+    "update_dt": "2023-03-01T23:49:39.464011+00:00",
+    "processed_dt": "2023-03-01T23:43:52.253150+00:00",
+    "user_id": null,
+    "external_id": "id1",
+    "label": ["label1", "label2", "label3"],
     "location": {
         "geopoint": {
             "lat": "-36.849761",
@@ -77,6 +83,11 @@ Below is an example response:
         },
         "radius": 1.2,
         "unit": "km"
+    },
+    "demand_type": {
+        "interval": "week",
+        "week_start_day": "monday",
+        "industry": "restaurants"
     },
     "rank": {
         "type": "phq",
@@ -86,12 +97,7 @@ Below is an example response:
             }
         }
     },
-    "status": "draft",
-    "create_dt": "2023-03-01T23:03:19.403859+00:00",
-    "update_dt": "2023-03-01T23:49:39.464011+00:00",
-    "user_id": null,
-    "access_type": "full",
-    "processed_dt": "2023-03-01T23:43:52.253150+00:00",
+    "tz": "UTC",
     "readiness_status": "ready",
     "readiness_checks": {
         "date_range": {
@@ -107,13 +113,8 @@ Below is an example response:
         "correlation": true,
         "feature_importance": true
     },
-    "demand_type": {
-        "interval": "week",
-        "week_start_day": "monday"
-    },
-    "tz": "UTC",
-    "external_id": "external_id",
-    "label": ["label1", "label2", "label3"]
+    "access_type": "full",
+    "status": "draft"
 }
 ```
 
