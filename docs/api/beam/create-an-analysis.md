@@ -34,7 +34,7 @@ POST https://api.predicthq.com/v1/beam/analyses
 </code></pre><p><code>industry</code> must be one of the following:</p><ul><li><code>accommodation</code></li><li><code>cpg</code></li><li><code>tourism</code></li><li><code>marketing</code></li><li><code>parking</code></li><li><code>restaurants</code></li><li><code>retail</code></li><li><code>transportation</code></li><li><code>other</code></li></ul><p>Choosing the right industry is important as this will determine the type of features used in the analysis.</p></td></tr><tr><td><code>rank.*</code><br>object<br><em>required</em></td><td><p>Specifies which rank type to use when calculating event impacts and anomaly detection. Currently, only PHQ rank is supported (also known as "Rank") so this value should be set to <code>"phq"</code> as shown below.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq"
 }
-</code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p><strong>Possible rank type values:</strong><br><code>phq</code> - PHQ Rank<br><br>Optionally, specify the minimum rank level to use when calculating event impacts. Note: <strong>We strongly recommend</strong> not setting the rank levels and instead letting Beam define the best rank levels based on your industry.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "type": "phq",
   "levels": {
     "phq": {
@@ -42,10 +42,10 @@ POST https://api.predicthq.com/v1/beam/analyses
     }
   }
 }
-</code></pre></td></tr><tr><td><code>tz</code><br>string<br><em>optional</em></td><td><p>Time zone of the location in <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">TZ Database</a> format.<br><br>E.g. <code>Pacific/Auckland</code></p><p><br><em>Note: this field is being used in the Control Center Beam UI for the purpose of fetching a list of relevant events in the correct time zone. It no longer has bearing on the outcome of a Beam analysis.</em></p></td></tr><tr><td><code>external_id</code><br>string<br><em>optional</em></td><td><p>User specified id that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "external_id": "external_id"
+</code></pre></td></tr><tr><td><code>external_id</code><br>string<br><em>optional</em></td><td><p>External identifier for the location. If you have an ID for the location/store/property in your other platforms, use the same ID here to easily link this specific Beam Analysis to the location.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "external_id": "abc123"
 }
-</code></pre></td></tr><tr><td><code>label</code><br>string<br><em>optional</em></td><td><p>Comma-separated list of user specified labels that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>label</code><br>string<br><em>optional</em></td><td><p>Comma-separated list of labels that can be used to search and filter Beam analyses.<br><br>E.g.</p><pre class="language-json"><code class="lang-json">{
   "label": ["label1", "label2", "label3"]
 }
 </code></pre></td></tr></tbody></table>
