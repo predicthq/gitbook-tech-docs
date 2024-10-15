@@ -99,10 +99,12 @@ JSON Fields:
 
 ## Response
 
+{% tabs %}
+{% tab title="Success Response" %}
 If successful, the HTTP response code will be `202 Accepted`.
+{% endtab %}
 
-### Error Codes
-
+{% tab title="Error Response" %}
 An unsuccessful HTTP response code could be returned for several reasons. In addition to an error message, there may also be a `code` field when applicable. The table below outlines the meaning of several error codes that may be returned.
 
 | Code                                        | Description                                                                                                                                    |
@@ -128,6 +130,8 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `exceeding_consecutive_missing_data_volume` | There are too many consecutive missing demand values.                                                                                          |
 | `high_variance_difference_rate`             | The variance of the uploaded demand data is too large to be processed.                                                                         |
 | `unexpected_error`                          | An unexpected error occurred.                                                                                                                  |
+{% endtab %}
+{% endtabs %}
 
 ## Examples
 
