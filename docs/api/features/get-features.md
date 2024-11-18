@@ -134,6 +134,12 @@ You can configure PHQ Attendance features using the options below.
     "lt": 80
   }
 }
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "local_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+}
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
@@ -187,6 +193,12 @@ You can configure PHQ Spend features using the options below.
     "lt": 80
   }
 }
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "local_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+}
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
@@ -208,6 +220,12 @@ You can configure PHQ Attendance features using the options below.
 }
 </code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+}
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optiona</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "local_rank": {
     "gt": 50,
     "lt": 80
   }
@@ -255,6 +273,11 @@ You can configure PHQ Impact features using the options below.
     "lt": 80
   }
 }
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "local_rank": {
+    "gt": 50,
+    "lt": 80
+  }
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
