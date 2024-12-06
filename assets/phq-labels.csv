@@ -1,5 +1,4 @@
 academic-session
-agriculture
 agriculture-forestry-and-fisheries
 air-quality
 airport
@@ -28,8 +27,6 @@ biological-hazard
 blizzard
 bombing
 boxing
-business
-campus
 celebration
 charity
 chemical
@@ -39,7 +36,6 @@ circus
 civil
 climate-change
 closed-doors
-club
 coastal-event
 cold-wave
 comedy-club
@@ -72,7 +68,6 @@ electronic
 entertainment
 entertainment-closed
 entertainment-open
-environment
 epidemic
 epidemic-hazard
 esports
@@ -87,7 +82,6 @@ family
 family-activities
 family-fun
 family-theatre
-fashion
 festival
 festivals-and-outdoor-activities
 fighting
@@ -99,7 +93,6 @@ food
 food-and-beverage
 football
 fundraiser
-gaming
 general-theatre
 golf
 graduation
@@ -131,6 +124,7 @@ hurricane
 hybrid-session
 ice-hockey
 in-person-session
+industrial
 indycar
 ironman
 jazz-and-classical
@@ -163,6 +157,7 @@ nascar
 nature-and-outdoor-activities
 nba
 nba-gleague
+nba-summer-league
 ncaa
 nfl
 nhl
@@ -183,7 +178,6 @@ parliament
 personal-care-closed
 personal-care-open
 pga
-politics
 pop
 president
 rain
@@ -193,7 +187,6 @@ recreation-open
 referendum
 religion
 religion-and-spirituality
-research-development
 restaurant-closed
 restaurant-open
 retail-closed
@@ -202,9 +195,7 @@ rock
 rodeo
 rugby
 running
-sales
 sand
-school
 science-and-technology
 shooting
 skating
@@ -223,16 +214,12 @@ summer-holiday
 suspected-attack
 suspected-bombing
 table-tennis
-technology
 tennis
 textile
 thanksgiving-holiday
 thunderstorm
 tornado
-tourism
 training
-transportation
-travel
 triathlon
 tropical-storm
 tsunami
