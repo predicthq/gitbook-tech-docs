@@ -4,6 +4,7 @@
 * [Control Center Support](https://www.predicthq.com/support)
 * [API Explorer](https://control.predicthq.com/explorer)
 * [Loop](https://loop.predicthq.com)
+* [System Status](https://www.predicthqstatus.com)
 
 ## Getting Started
 
