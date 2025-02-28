@@ -127,7 +127,7 @@
   * [Search Broadcasts](api/broadcasts/search-broadcasts.md)
   * [Get Broadcasts Count](api/broadcasts/get-broadcasts-count.md)
 * [Features](api/features/README.md)
-  * [Get Features](api/features/get-features.md)
+  * [Get ML Features](api/features/get-features.md)
 * [Beam](api/beam/README.md)
   * [Create an Analysis](api/beam/create-an-analysis.md)
   * [Upload Demand Data](api/beam/upload-demand-data.md)

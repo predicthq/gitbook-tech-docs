@@ -1,10 +1,10 @@
 ---
-description: >-
-  Search for events happening in a location and date range. Use our extensive
-  filters to narrow down your results.
+description: The largest and most accurate source of global data.
 ---
 
 # Search Events
+
+Search for events happening in a location and date range. Use our extensive filters to narrow down your results.
 
 {% hint style="info" %}
 **Results are limited by your subscription**
