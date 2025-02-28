@@ -27,7 +27,7 @@
   * [Predicted End Times](getting-started/predicthq-data/predicted-end-times.md)
   * [Predicted Event Spend](getting-started/predicthq-data/predicted-event-spend.md)
   * [Predicted Events](getting-started/predicthq-data/predicted-events.md)
-  * [Impact Patterns](getting-started/predicthq-data/impact-patterns.md)
+  * [Predicted Impact Patterns](getting-started/predicthq-data/impact-patterns.md)
 * [Guides](getting-started/guides/README.md)
   * [Geolocation Guides](getting-started/guides/geolocation-guides/README.md)
     * [Overview](getting-started/guides/geolocation-guides/overview.md)
