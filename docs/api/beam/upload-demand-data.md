@@ -158,7 +158,7 @@ response = requests.post(
     data=open("data.csv")
 )
 
-print(response.json())
+print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
