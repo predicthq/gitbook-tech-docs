@@ -94,7 +94,7 @@ POST https://api.predicthq.com/v1/features/
 }
 </code></pre></td></tr></tbody></table>
 
-#### Available Features
+### Available Features
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
@@ -313,6 +313,21 @@ Other than the date, the structure of each result here will depend on how you co
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
+{% tab title="PHQ Impact Features" %}
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "stats": {
+    "count": 5,
+    "sum": 17307,
+    "min": 1000,
+    "max": 9215,
+    "avg": 3461.4,
+    "median": 2620.0,
+    "std_dev": 2978.810473997968
+  }
+}
+</code></pre></td></tr></tbody></table>
+{% endtab %}
+
 {% tab title="PHQ Rank Features" %}
 <table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here is always the same as PHQ Rank features cannot currently be configured.</p><p>Will contain a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "rank_levels": {
@@ -343,21 +358,6 @@ Other than the date, the structure of each result here will depend on how you co
 
 {% tab title="PHQ Viewership Features" %}
 <table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "stats": {
-    "count": 5,
-    "sum": 17307,
-    "min": 1000,
-    "max": 9215,
-    "avg": 3461.4,
-    "median": 2620.0,
-    "std_dev": 2978.810473997968
-  }
-}
-</code></pre></td></tr></tbody></table>
-{% endtab %}
-
-{% tab title="PHQ Impact Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
