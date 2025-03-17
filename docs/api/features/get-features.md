@@ -148,26 +148,52 @@ You can configure PHQ Attendance features using the options below.
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Rank Features" %}
-PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
+{% tab title="PHQ Impact Features" %}
+PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event).
 
-### PHQ Rank Impact Pattern Features
+**Holidays and Observances Impact Pattern Features**
 
-See the "Holidays and Observances Impact Pattern Features" under PHQ Impact in the tab above. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+These features include the demand impact patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
 
 {% hint style="success" %}
-We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
-### PHQ Rank Generic Features
+<table><thead><tr><th width="375">Feature</th><th width="149">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays</code></td><td>Public Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public Holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public Holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances</code></td><td>Observances</td><td>N/A</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr><tr><td><code>phq_impact_school_holidays</code></td><td>School Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_exam</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_holiday</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_session</code></td><td>Academic</td><td>N/A</td></tr></tbody></table>
 
-These are generic features that do not include demand impact patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
+**Severe Weather Impact Features**
 
-<table><thead><tr><th width="369">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr><tr><td><code>phq_rank_daylight_savings</code></td><td>Daylight savings</td></tr><tr><td><code>phq_rank_health_warnings</code></td><td>Health Warnings</td></tr><tr><td><code>phq_rank_politics</code></td><td>Politics</td></tr></tbody></table>
+Currently supported industries are: Retail.
+
+<table><thead><tr><th width="560">Feature</th><th width="352">Description</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_severe_weather_air_quality_retail</code></td><td>Severe Weather - Air Quality</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_blizzard_retail</code></td><td>Severe Weather - Blizzard</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_retail</code></td><td>Severe Weather - Cold Wave - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_snow_retail</code></td><td>Severe Weather - Cold Wave - Snow</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_storm_retail</code></td><td>Severe Weather - Cold Wave - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_retail</code></td><td>Severe Weather - Dust - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_storm_retail</code></td><td>Severe Weather - Dust - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_flood_retail</code></td><td>Severe Weather - Flood</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_heat_wave_retail</code></td><td>Severe Weather - Heat Wave</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_hurricane_retail</code></td><td>Severe Weather - Hurricane</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_thunderstorm_retail</code></td><td>Severe Weather - Thunderstorm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tornado_retail</code></td><td>Severe Weather - Tornado</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tropical_storm_retail</code></td><td>Severe Weather - Tropical Storm</td><td>Retail</td></tr></tbody></table>
+
+**Attended Events Impact Features**
+
+See [#attended-events-impact-pattern-features](get-features.md#attended-events-impact-pattern-features "mention")
 
 ### Configuration
 
-PHQ Rank features cannot currently be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
+You can configure PHQ Impact features using the options below.
+
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "stats": [
+    "count",
+    "std_dev",
+    "median"
+  ]
+}
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "phq_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+}
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+  "local_rank": {
+    "gt": 50,
+    "lt": 80
+  }
+</code></pre></td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="PHQ Spend Features" %}
@@ -238,52 +264,26 @@ You can configure PHQ Attendance features using the options below.
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Impact Features" %}
-PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event).
+{% tab title="PHQ Rank Features" %}
+PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
 
-**Holidays and Observances Impact Pattern Features**
+### PHQ Rank Impact Pattern Features
 
-These features include the demand impact patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
+See the "Holidays and Observances Impact Pattern Features" under PHQ Impact in the tab above. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
-We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
-<table><thead><tr><th width="375">Feature</th><th width="149">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr></tbody></table>
+### PHQ Rank Generic Features
 
-**Severe Weather Impact Features**
+These are generic features that do not include demand impact patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
 
-Currently supported industries are: Retail.
-
-<table><thead><tr><th width="560">Feature</th><th width="352">Description</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_severe_weather_air_quality_retail</code></td><td>Severe Weather - Air Quality</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_blizzard_retail</code></td><td>Severe Weather - Blizzard</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_retail</code></td><td>Severe Weather - Cold Wave - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_snow_retail</code></td><td>Severe Weather - Cold Wave - Snow</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_storm_retail</code></td><td>Severe Weather - Cold Wave - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_retail</code></td><td>Severe Weather - Dust - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_storm_retail</code></td><td>Severe Weather - Dust - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_flood_retail</code></td><td>Severe Weather - Flood</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_heat_wave_retail</code></td><td>Severe Weather - Heat Wave</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_hurricane_retail</code></td><td>Severe Weather - Hurricane</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_thunderstorm_retail</code></td><td>Severe Weather - Thunderstorm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tornado_retail</code></td><td>Severe Weather - Tornado</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tropical_storm_retail</code></td><td>Severe Weather - Tropical Storm</td><td>Retail</td></tr></tbody></table>
-
-**Attended Events Impact Features**
-
-See [#attended-events-impact-pattern-features](get-features.md#attended-events-impact-pattern-features "mention")
+<table><thead><tr><th width="369">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr><tr><td><code>phq_rank_daylight_savings</code></td><td>Daylight savings</td></tr><tr><td><code>phq_rank_health_warnings</code></td><td>Health Warnings</td></tr><tr><td><code>phq_rank_politics</code></td><td>Politics</td></tr></tbody></table>
 
 ### Configuration
 
-You can configure PHQ Impact features using the options below.
-
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "stats": [
-    "count",
-    "std_dev",
-    "median"
-  ]
-}
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "phq_rank": {
-    "gt": 50,
-    "lt": 80
-  }
-}
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "local_rank": {
-    "gt": 50,
-    "lt": 80
-  }
-</code></pre></td></tr></tbody></table>
+PHQ Rank features cannot currently be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
 {% endtab %}
 {% endtabs %}
 
