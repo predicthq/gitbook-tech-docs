@@ -6,9 +6,25 @@ This means with very little setup, you can incorporate the data into your models
 
 ## Overview
 
-When setting up the AWS Data Exchange integration, we will provide an initial full data dump to ensure you have complete event coverage from the start. After the initial setup, we typically deliver daily incremental updates containing only newly added or updated events. The frequency of these incremental updates can be adjusted based on your specific requirements.
+When integrating with AWS Data Exchange, PredictHQ delivers event data as a feed of files. Here’s what you can expect:
 
-Please note: On occasion, we may need to perform a full data dump outside of the regular incremental schedule. This may occur without prior notice to ensure data accuracy and integrity.
+* **Initial Full Dump** - Upon setup, you will receive a full dataset covering all events you have access to.
+* **Incremental Updates** - After the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.
+* **Occasional Full Dumps** - While incremental updates are the standard, at times (either by request or operational need), we may deliver a full dump without prior notice. You can distinguish these by the presence of `full` (not `incremental`) in the filename.
+
+### Processing Order & Deletions
+
+It is essential to process all ADX revisions in the order they are delivered to maintain a complete and accurate dataset. However, within a revision, the individual files can be processed in any order or in parallel.
+
+For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update` or `delete`).
+
+### File Naming
+
+```
+<delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
+```
+
+<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>Internal PredictHQ identifier for your ADX configuration.</td></tr><tr><td><code>datetime</code></td><td>This is the date and time the data was exported (UTC).<br><br>Date format: <code>YYYYMMDD-HHMM</code><br>E.g., <code>20250324-0115</code> (24th March, 2025 at 01:15 UTC)</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td>delivery_type</td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td>When exporting, the data is separated into multiple files to keep the file size small.  File sizes will range but won't be larger than 1 GB. Files are not sequential and do not need to be processed sequentially. You are able to process the files in parallel (it's important each ADX revision is processed sequentially, but within a revision, the files can be processed in parallel).</td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data will be compressed using Snappy and the file extension will be prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
 
 ## Samples
 
