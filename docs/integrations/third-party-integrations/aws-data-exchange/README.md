@@ -12,7 +12,7 @@ When integrating with AWS Data Exchange, PredictHQ delivers event data as a feed
 * **Incremental Updates** - After the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.
 * **Occasional Full Dumps** - While incremental updates are the standard, at times (either by request or operational need), we may deliver a full dump without prior notice. You can distinguish these by the presence of `full` (not `incremental`) in the filename.
 
-### Processing Order & Deletions
+### Processing Order & Change Action
 
 It is essential to process all ADX revisions in the order they are delivered to maintain a complete and accurate dataset. However, within a revision, the individual files can be processed in any order or in parallel.
 
