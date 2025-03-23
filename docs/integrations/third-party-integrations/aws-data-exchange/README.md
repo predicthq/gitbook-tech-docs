@@ -4,6 +4,12 @@ AWS Data Exchange (ADX) allows customers to access regularly updated, full and i
 
 This means with very little setup, you can incorporate the data into your models, removing or greatly simplifying the need for ELT/ETL processes to pull event data into your data warehouse. You can check out the AWS Data Exchange Overview page if you're interested to read more on how AWS Data Exchange works.
 
+## Overview
+
+When setting up the AWS Data Exchange integration, we will provide an initial full data dump to ensure you have complete event coverage from the start. After the initial setup, we typically deliver daily incremental updates containing only newly added or updated events. The frequency of these incremental updates can be adjusted based on your specific requirements.
+
+Please note: On occasion, we may need to perform a full data dump outside of the regular incremental schedule. This may occur without prior notice to ensure data accuracy and integrity.
+
 ## Samples
 
 The sample data sets are not limited in terms of columns or fields making them valuable for business and data science evaluations. However, these data sets are limited to a specific location and restricted time window that might not suit your use case. These samples therefore represent a small fraction of the data we have available. We also offer Private Listings which are filtered to match your PredictHQ license.
