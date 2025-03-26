@@ -123,6 +123,7 @@
 * [Events](api/events/README.md)
   * [Search Events](api/events/search-events.md)
   * [Get Event Counts](api/events/get-event-counts.md)
+  * [Search Events (OpenAPI Test)](api/events/search-events-openapi-test.md)
 * [Broadcasts](api/broadcasts/README.md)
   * [Search Broadcasts](api/broadcasts/search-broadcasts.md)
   * [Get Broadcasts Count](api/broadcasts/get-broadcasts-count.md)
