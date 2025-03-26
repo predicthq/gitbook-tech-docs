@@ -861,42 +861,263 @@ components:
     Event:
       type: object
       description: An individual event object.
-      # Use full schema from event-schema.json here or reference external file if OpenAPI tooling supports it
-      # For brevity, you could replace the following with "$ref": "./event-schema.yaml" if using $ref-compatible tooling
       properties:
-        # include key properties here or inline the full schema
-        id:
-          type: string
-        title:
-          type: string
+        aviation_rank:
+          type:
+            - integer
+            - "null"
+          minimum: 0
+          maximum: 100
+          deprecated: true
+        brand_safe:
+          description: |-
+            Indicates whether or not the event is considered "brand safe".
+          type: boolean
+        cancelled:
+          description: |-
+            The date the event was set to cancelled in the system in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            Dates are in UTC.
+
+            This field will only be present for events with `deleted_reason` set to `cancelled`, and will have a `null` value if `cancelled` date is not available.
+          type:
+            - string
+            - "null"
+          format: date-time
         category:
+          description: |-
+            The category of the event.
           type: string
           enum:
-            - academic
-            - airport-delays
-            - community
-            - concerts
-            - conferences
-            - daylight-savings
-            - disasters
-            - expos
-            - festivals
-            - health-warnings
-            - observances
-            - performing-arts
-            - politics
-            - public-holidays
-            - school-holidays
-            - severe-weather
-            - sports
-            - terror
-        # Add other properties or use the full schema
+            - "academic"
+            - "school-holidays"
+            - "public-holidays"
+            - "observances"
+            - "politics"
+            - "conferences"
+            - "expos"
+            - "concerts"
+            - "festivals"
+            - "performing-arts"
+            - "sports"
+            - "community"
+            - "daylight-savings"
+            - "airport-delays"
+            - "severe-weather"
+            - "disasters"
+            - "terror"
+            - "health-warnings"
+        country:
+          description: |-
+            The country code in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.
+            Note that the country value will usually be present but in some cases where the event location is not within a country (e.g. an earthquake in the middle of the ocean) it can be empty.
+          type: string
+          examples:
+            - "US"
+        deleted_reason:
+          description: |-
+            The reason why the event was deleted.
+
+            Note that this field is only present for events with state `deleted`.
+          type: string
+          enum:
+            - "cancelled"
+            - "duplicate"
+            - "invalid"
+            - "postponed"
+        description:
+          description: |-
+            A description of the event.
+          type:
+            - string
+            - "null"
+          examples:
+            - "See Katy Perry in concert [...]"
+        duplicate_of_id:
+          description: |-
+            The `id` of the active event this event is a duplicate of.
+
+            Note that this field is only present for deleted events with `deleted_reason` set to `duplicate`.
+          type:
+            - string
+            - "null"
+        duration:
+          description: |-
+            The duration of the event in seconds.
+          type: integer
+          examples:
+            - 3600
+        end:
+          description: |-
+            The end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            All end dates are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a `null` time zone.
+          type:
+            - string
+            - "null"
+          format: date-time
+        end_local:
+          description: |-
+            The end date in local time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            The `end` field is in UTC and `end_local` is in the local time at the events location.
+          type:
+            - string
+            - "null"
+          format: date-time
+        entities:
+          description: |-
+            An array of Entities linked to the event.
+
+            Read the [Entities data guide](https://docs.predicthq.com/getting-started/predicthq-data/entities) for more info.
+          type: array
+          items:
+            type: object
+            required:
+              - entity_id
+              - name
+              - type
+            properties:
+              entity_id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - airport
+                  - event-group
+                  - person
+                  - venue
+              labels:
+                type: array
+                items:
+                  type: string
+              name:
+                type: string
+              description:
+                type: string
+              category:
+                type: string
+                enum:
+                  - academic
+                  - airport-delays
+                  - community
+                  - concerts
+                  - conferences
+                  - daylight-savings
+                  - disasters
+                  - expos
+                  - festivals
+                  - observances
+                  - performing-arts
+                  - politics
+                  - public-holidays
+                  - school-holidays
+                  - severe-weather
+                  - sports
+                  - terror
+                  - health-warnings
+              formatted_address:
+                type: string
+              timezone:
+                type: string
+              recurring:
+                type: object
+                required:
+                  - ical
+                properties:
+                  ical:
+                    type: string
+            examples:
+              - entity_id: 39yXYp4LvTW8TicddxHSiXw
+                type: event-group
+                labels:
+                  - recurring
+                name: Underwood Family Farms Fall Harvest Festival
+                recurring:
+                  ical: "DTSTART;VALUE=DATE-TIME:20170930T090000 DURATION:P31DT9H RRULE:FREQ=YEARLY;INTERVAL=1"
+              - entity_id: fx5IMIphsUX7yoJ9X7PktQ
+                type: event-group
+                labels:
+                  - residency
+                name: Taylor Swift at Anfield
+              - entity_id: 328DxFUbRKvaiJJGyT2gReF
+                type: venue
+                name: Spark Arena
+                formatted_address: "Mahuhu Crescent\nAuckland 1010\nNew Zealand"
+        first_seen:
+          description: |-
+            The date the event first entered our dataset in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Dates are in UTC. This value may be missing on some events, and should not be considered an event announcement date.
+          type:
+            - string
+            - "null"
+          format: date-time
+        id:
+          description: |-
+            The unique identifier of the event.
+          type: string
+          examples:
+            - z13B3870YOgv
+        impact_patterns:
+          description: |-
+            This field shows the Predicted Impact Patterns for leading days (days before the event), lagging days (days after an event), and the days the event occurs. See [Predicted Impact Patterns](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns) for more details.
+
+            impact_patterns is an array of impact pattern objects. The same event can have different impact patterns for different industry verticals. It contains the following fields:
+          type: object
+          required:
+            - vertical
+            - impact_type
+            - impacts
+          properties:
+            vertical:
+              description: |-
+                The industry vertical the impact pattern applies to.
+              type: string
+              enum:
+                - accommodation
+                - retail
+                - hospitality
+            impact_type:
+              description: |-
+                Indicates the type of impact shown in the impact pattern. Currently, the supported types are phq_rank and phq_attendance. If the impact_type is phq_rank then the impact values shown per day reflect phq_rank values. If impact_type is phq_attendance then the impact values per day reflect phq_attendance which is the estimated amount of people attending the event per day.
+              type: string
+              enum:
+                - phq_rank
+                - phq_attendance
+            impacts:
+              type: array
+              items:
+                type: object
+                required:
+                  - date_local
+                  - value
+                  - position
+                properties:
+                  date_local:
+                    description: |-
+                      The date in the local timezone of the event.
+                    type: string
+                    format: date
+                  value:
+                    description: |-
+                      The value of the `impact_type` for that given day. For example, if the `impact_type` was `phq_rank` the `value` would be the PHQ Rank value on the given day. Otherwise, it will reflect `phq_attendance`.
+                    type: integer
+                  position:
+                    description: |-
+                      - `leading` are the days before the event occurs.
+                      - `event_day` are the days the event occurs.
+                      - `lagging` are the days after the event has occurred.
+                    type: string
+                    enum:
+                      - leading
+                      - event_day
+                      - lagging
+        title:
+          type: string
+        
       required:
         - id
         - title
         - category
-        # Add other required fields from event-schema.json
-
     EventsResponse:
       type: object
       description: Paginated response containing events.
@@ -914,33 +1135,26 @@ components:
         overflow:
           type: boolean
           description: Indicates if there are more results than the subscription allows.
+          default: false
         previous:
-          type: [string, "null"]
+          anyOf:
+            - type: string
+            - type: 'null'
           description: URL to the previous page of results.
+          examples:
+            - 'https://api.predicthq.com/v1/events/?limit=10&offset=10'
         next:
-          type: [string, "null"]
+          anyOf:
+            - type: string
+            - type: 'null'
           description: URL to the next page of results.
+          examples:
+            - 'https://api.predicthq.com/v1/events/?limit=10&offset=20'
         results:
           type: array
           description: List of event records.
           items:
             $ref: '#/components/schemas/Event'
-    PaginationPrevNext:
-      type: object
-      properties:
-        count:
-          type: integer
-          description: Number of results.
-        prev:
-          type: string
-          description: URL for the previous page.
-          examples:
-            - 'https://<url>?limit=10&offset=10'
-        next:
-          type: string
-          description: URL for the next page.
-          examples:
-            - 'https://<url>?limit=10&offset=20'
   securitySchemes:
     BearerAuth:
       type: http
