@@ -38,13 +38,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-01-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-01-01T00:00:00'
+          example: "2025-01-01"
         - in: query
           name: active.gt
           description: |-
@@ -65,13 +59,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-02-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-02-01T00:00:00'
+          example: "2025-02-01"
         - in: query
           name: active.lt
           description: |-
@@ -133,13 +121,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-01-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-01-01T00:00:00'
+          example: "2025-01-01"
         - in: query
           name: cancelled.gt
           description: |
@@ -160,13 +142,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-02-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-02-01T00:00:00'
+          example: "2025-02-01"
         - in: query
           name: cancelled.lt
           description: |
@@ -219,12 +195,9 @@ paths:
                 - "health-warnings"
           style: form
           explode: false
-          examples:
-            categories:
-              summary: Example categories
-              value:
-                - "concerts"
-                - "sports"
+          example:
+            - "concerts"
+            - "sports"
         - in: query
           name: country
           description: |-
@@ -236,11 +209,7 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            usa:
-              summary: Example countries
-              value:
-                - "US"
+          example: "US"
         - in: query
           name: deleted_reason
           description: |-
@@ -257,12 +226,9 @@ paths:
                 - postponed
           style: form
           explode: false
-          examples:
-            reason:
-              summary: Example reasons
-              value:
-                - cancelled
-                - duplicate
+          example:
+            - cancelled
+            - duplicate
         - in: query
           name: end.gte
           description: |-
@@ -273,13 +239,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-01-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-01-01T00:00:00'
+          example: "2025-01-01"
         - in: query
           name: end.gt
           description: |-
@@ -300,13 +260,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-02-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-02-01T00:00:00'
+          example: "2025-02-01"
         - in: query
           name: end.lt
           description: |-
@@ -338,10 +292,7 @@ paths:
           schema:
             type: string
             format: date
-          examples:
-            origin:
-              summary: Date Example
-              value: '2025-02-01'
+          example: "2025-02-01"
         - in: query
           name: end_around.offset
           description: |-
@@ -352,10 +303,7 @@ paths:
             type: string
             pattern: '^\d{1,3}d$'
             default: "0d"
-          examples:
-            offset:
-              summary: Offset example
-              value: "5d"
+          example: "5d"
         - in: query
           name: end_around.scale
           description: |-
@@ -366,10 +314,7 @@ paths:
             type: string
             pattern: '^\d{1,3}d$'
             default: "3d"
-          examples:
-            scale:
-              summary: Scale example
-              value: "10d"
+          example: "10d"
         - in: query
           name: end_around.decay
           description: |-
@@ -382,10 +327,7 @@ paths:
             minimum: 0.0
             maximum: 1.0
             default: 0.5
-          examples:
-            date:
-              summary: Decay example
-              value: 0.9
+          example: 0.9
         - in: query
           name: entity.id
           description: |-
@@ -397,11 +339,8 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            entity:
-              summary: Example Entities
-              value:
-                - "XABWvihQAj8TnjvF6WNzLW"
+          example:
+            - "XABWvihQAj8TnjvF6WNzLW"
         - in: query
           name: first_seen.gte
           description: |-
@@ -412,13 +351,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-01-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-01-01T00:00:00'
+          example: "2025-01-01"
         - in: query
           name: first_seen.gt
           description: |-
@@ -439,13 +372,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-02-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-02-01T00:00:00'
+          example: "2025-02-01"
         - in: query
           name: first_seen.lt
           description: |-
@@ -477,11 +404,7 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            event:
-              summary: Example Events
-              value:
-                - "z13B3870YOgv"
+          example: "z13B3870YOgv"
         - in: query
           name: impact.gte
           description: |-
@@ -498,13 +421,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-01-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-01-01T00:00:00'
+          example: "2025-01-01"
         - in: query
           name: impact.gt
           description: |-
@@ -525,13 +442,7 @@ paths:
           schema:
             type: string
             format: date-time
-          examples:
-            date:
-              summary: Date Example
-              value: '2025-02-01'
-            datetime:
-              summary: Datetime Example
-              value: '2025-02-01T00:00:00'
+          example: "2025-02-01"
         - in: query
           name: impact.lt
           description: |-
@@ -569,10 +480,7 @@ paths:
               - "restaurants"
               - "retail"
               - "transportation"
-          examples:
-            industry:
-              summary: Example industry
-              value: "accommodation"
+          example: "accommodation"
         - in: query
           name: label
           description: |-
@@ -589,12 +497,9 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            labels:
-              summary: Example labels
-              value:
-                - holiday
-                - observance
+          example:
+            - holiday
+            - observance
         - in: query
           name: local_rank.gte
           description: |-
@@ -683,10 +588,7 @@ paths:
           schema:
             type: string
             pattern: '^-?\d+(\.\d+)?,-?\d+(\.\d+)?$'
-          examples:
-            origin:
-              summary: Lat/lon Example
-              value: '40.730610,-73.935242'
+          example: "40.730610,-73.935242"
         - in: query
           name: location_around.offset
           description: |-
@@ -699,10 +601,7 @@ paths:
             type: string
             pattern: '^\d+(m|km|ft|mi)$'
             default: 0km
-          examples:
-            offset:
-              summary: Offset example
-              value: 2mi
+          example: 2mi
         - in: query
           name: location_around.scale
           description: |-
@@ -715,10 +614,7 @@ paths:
             type: string
             pattern: '^\d+(m|km|ft|mi)$'
             default: 2km
-          examples:
-            scale:
-              summary: Scale example
-              value: 4mi
+          example: 4mi
         - in: query
           name: location_around.decay
           description: |-
@@ -731,10 +627,7 @@ paths:
             minimum: 0.0
             maximum: 1.0
             default: 0.5
-          examples:
-            date:
-              summary: Decay example
-              value: 0.9
+          example: 0.9
         - in: query
           name: location_confidence_score.gte
           description: |-
@@ -839,12 +732,9 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            labels:
-              summary: Example labels
-              value:
-                - agriculture-forestry-and-fisheries
-                - food-and-beverage
+          example:
+            - agriculture-forestry-and-fisheries
+            - food-and-beverage
         - in: query
           name: phq_label.op
           description: |-
@@ -869,11 +759,8 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            labels:
-              summary: Example labels
-              value:
-                - lifestyle
+          example:
+            - lifestyle
         - in: query
           name: phq_label.exclude.op
           description: |-
@@ -900,15 +787,9 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            newyork:
-              summary: State of New York
-              value:
-                - 5128638
-            sfo:
-              summary: San Francisco Airport
-              value:
-                - SFO
+          example:
+            - "5128638"
+            - SFO
         - in: query
           name: place.exact
           description: |-
@@ -949,12 +830,9 @@ paths:
               type: string
           style: form
           explode: false
-          examples:
-            placekey:
-              summary: Example Placekeys
-              value:
-                - "225@63j-rqb-j7q"
-                - "@627-s8j-z2k"
+          example:
+            - "225@63j-rqb-j7q"
+            - "@627-s8j-z2k"
         - $ref: '#/components/parameters/LimitParam'
         - $ref: '#/components/parameters/OffsetParam'
       responses:
@@ -1000,5 +878,5 @@ components:
   securitySchemes:
     BearerAuth:
       type: http
-      scheme: Bearer
-      bearerFormat: bearer
+      scheme: bearer
+      bearerFormat: "$API_KEY"
