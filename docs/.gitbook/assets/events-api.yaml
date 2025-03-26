@@ -571,12 +571,9 @@ paths:
                 - 5
           style: form
           explode: false
-          examples:
-            rank:
-              summary: Example rank levels
-              value:
-                - 4
-                - 5
+          example:
+            - 4
+            - 5
         - in: query
           name: location_around.origin
           description: |-
@@ -837,9 +834,11 @@ paths:
         - $ref: '#/components/parameters/OffsetParam'
       responses:
         '200':
-          description: Successful response
+          description: Successful Response
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsResponse'
 components:
   parameters:
     LimitParam:
@@ -859,6 +858,73 @@ components:
         type: integer
         default: 0
   schemas:
+    Event:
+      type: object
+      description: An individual event object.
+      # Use full schema from event-schema.json here or reference external file if OpenAPI tooling supports it
+      # For brevity, you could replace the following with "$ref": "./event-schema.yaml" if using $ref-compatible tooling
+      properties:
+        # include key properties here or inline the full schema
+        id:
+          type: string
+        title:
+          type: string
+        category:
+          type: string
+          enum:
+            - academic
+            - airport-delays
+            - community
+            - concerts
+            - conferences
+            - daylight-savings
+            - disasters
+            - expos
+            - festivals
+            - health-warnings
+            - observances
+            - performing-arts
+            - politics
+            - public-holidays
+            - school-holidays
+            - severe-weather
+            - sports
+            - terror
+        # Add other properties or use the full schema
+      required:
+        - id
+        - title
+        - category
+        # Add other required fields from event-schema.json
+
+    EventsResponse:
+      type: object
+      description: Paginated response containing events.
+      required:
+        - count
+        - next
+        - previous
+        - overflow
+        - results
+      properties:
+        count:
+          type: integer
+          description: The total number of results.
+          minimum: 0
+        overflow:
+          type: boolean
+          description: Indicates if there are more results than the subscription allows.
+        previous:
+          type: [string, "null"]
+          description: URL to the previous page of results.
+        next:
+          type: [string, "null"]
+          description: URL to the next page of results.
+        results:
+          type: array
+          description: List of event records.
+          items:
+            $ref: '#/components/schemas/Event'
     PaginationPrevNext:
       type: object
       properties:
