@@ -1155,7 +1155,19 @@ components:
                 geometry:
                   $ref: '#/components/schemas/Geometry'
                 placekey:
+                  description: |-
+                    The Placekey (See [placekey.io](https://www.placekey.io/)) reflects the location of an event in the format what@where. Placekey is part of the geo field for an event.
+
+                    Possible formats:
+                    - `{address}-{poi}@{where}`
+                    - `{address)@{where}`
+                    - `@where`
+
+                    Some events do not contain a Placekey.
                   type: string
+                  examples:
+                    - "222-229@8t2-fgc-z2k"
+                    - "@7f7-mcy-ndv"
                 address:
                   oneOf:
                     - type: object
@@ -1184,13 +1196,248 @@ components:
                             - "39531"
                     - type: 'null'
             - type: 'null'
-        title:
+        parent_event:
+          description: |-
+            Used to indicate if this event is part of a larger event. These types of events are called umbrella events in the system. For example, a large multi-day parent umbrella event may have individual child events for sessions on different days. For example the Formula 1 2019 United States Grand Prix has child events for the qualification, 3 practice events, a concert that occurs at the Grand Prix, and the actual race events (there are 12 child events).
+
+            See [umbrella events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events#umbrella-events-beta) for details on this field and details on what umbrella events are.
+
+            Note that this field shows if a child event has a parent id. It does not indicate if a parent event has child events.
+          type: object
+          required:
+            - parent_event_id
+          properties:
+            parent_event_id:
+              description: |-
+                The parent_event_id refers to the id of the event that is the parent for the current event.
+              type: string
+              examples:
+                - w7dYyrFwTUQGYE6euv
+        phq_attendance:
+          description: |-
+            A numerical value that reflects the predicted attendance for supported attendance-based categories.
+
+            This reflects the entire attendance for multi-day events (the number of people attending across the full duration of the event) except for some categories like conferences where it is the daily attendance.
+
+            See [Handling multi-day and Umbrella events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) for more details.
+          type:
+            - integer
+            - "null"
+          examples:
+            - 2511
+        phq_labels:
+          description: |-
+            An array of objects which contains the PHQ Labels associated to an event as well as the weight that they contribute to the event. Weights from all labels should sum up to 1.0
+
+            PHQ Labels leverage AI and classifier models. Currently available for conferences, expos, festivals, community and performing-arts categories. Legacy labels are available in a separate field to preserve backwards compatibility.
+
+            Take a look at [PHQ Label Values](https://docs.predicthq.com/getting-started/predicthq-data/labels#phq-label-values) to see a list of possible values that could be in phq_labels.label.
+          type: array
+          items:
+            type: object
+            required:
+              - label
+              - weight
+            properties:
+              label:
+                type: string
+              weight:
+                type: number
+                minimum: 0.0
+                maximum: 1.0
+          examples:
+            - - label: agriculture-forestry-and-fisheries
+                weight: 0.376
+              - label: food-and-beverage
+                weight: 0.263
+              - label: art-and-cultural
+                weight: 0.186
+              - label: science-and-technology
+                weight: 0.175
+        place_hierarchies:
+          description: |-
+            An array of place hierarchies for the event. Each hierarchy is an array of place IDs. The final place in a hierarchy is a specific place the event applies to. Each place is a sub-place of the place immediately preceding it in the hierarchy.
+
+            For example, a hierarchy might contain the following places in this order: `Earth > Europe > United Kingdom > England > Nottingham`
+
+            Note that the place_hierarchies value can be an empty array in some cases.
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+          examples:
+            - - - "6295630"
+                - "6255148"
+                - "2635167"
+                - "6269131"
+                - "3333178"
+                - "2641170"
+        postponed:
+          description: |-
+            The date the event was set to postponed in the system in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Dates are in UTC.
+
+            This field will only be present for events with deleted_reason set to postponed, and will have a null value if postponed date is not available.
           type: string
-        
+          format: date-time
+        predicted_end:
+          description: |-
+            The predicted end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            Predicted end dates are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a `null` time zone.
+
+            This field will only be present if an actual `end` time is not available for an event and we have a predicted end time.
+          type: string
+          format: date-time
+        predicted_end_local:
+          description: |-
+            The predicted end date in the local time of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            The `predicted_end` field is in UTC and `predicted_end_local` is in the local time in the time zone at the location of the event.
+
+            This field will only be present if an actual `end` time is not available for an event and we have a predicted end time.
+          type: string
+          format: date-time
+        predicted_event_spend:
+          description: |-
+            The total Predicted Event Spend across all supported industries for an event in USD. This figure represents the consumer spend impact on local businesses that the event is predicted to generate.
+          type: integer
+          examples:
+            - 11806680
+        predicted_event_spend_industries:
+          description: |-
+            The Predicted Event Spend for each supported industry in USD.
+          type: object
+          properties:
+            accommodation:
+              description: |-
+                The consumer spend predicted to be attributed to hotels and hosts.
+              type: integer
+              examples:
+                - 5016960
+            hospitality:
+              description: |-
+                The consumer spend predicted to be attributed to food and beverage.
+              type: integer
+              examples:
+                - 4924000
+            transportation:
+              description: |-
+                The consumer spend predicted to be attributed to ground-based transportation as a means of getting to and from the event.
+              type: integer
+              examples:
+                - 1865720
+        rank:
+          description: |-
+            A log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event independent of its geographical location.
+          type: integer
+          minimum: 0
+          maximum: 100
+          examples:
+            - 83
+        relevance:
+          description: |-
+            Relative relevance of the event to the event search.
+
+            See the relevance parameter for information on how relevance is calculated.
+
+            This value is used purely for sorting and will be different per event depending on your request parameters.
+
+            If storing a copy of events, do not store this field.
+          type:
+            - number
+            - "null"
+          examples:
+            - 2.9654586
+        scope:
+          description: |-
+            The geographical scope the events apply to.
+          type: string
+          enum:
+            - locality
+            - localadmin
+            - county
+            - region
+            - country
+        start:
+          description: |-
+            The start date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            All start dates are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the time zone, and will have a `null` time zone.
+
+            If an event has a start time of midnight (in the event time zone) this is an indication that the actual time may be unknown. You may wish to omit the time when displaying these events.
+          type:
+            - string
+            - "null"
+          format: date-time
+        start_local:
+          description: |-
+            The local start date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+            The `start` field is in UTC and `start_local` is in the local time in the timezone at the event location.
+          type:
+            - string
+            - "null"
+          format: date-time
+        start_date_confidence_score:
+          description: |-
+            The Predicted Event start date confidence score.
+          type:
+            - integer
+            - "null"
+          minimum: 1
+          maximum: 5
+        state:
+          description: |-
+            The publication state of the event.
+
+            Possible values:
+            - `active`: the event is published and valid.
+            - `deleted`: the event was removed, either because it was cancelled or is a duplicate.
+            - `predicted`: events that have an unconfirmed start time i.e for which the exact time the event begins is not yet known.
+          type: string
+          enum:
+            - active
+            - deleted
+            - predicted
+        timezone:
+          description: |-
+            The time zone of the event in [TZ Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) format. This is helpful so you know which time zone to convert the dates to (if needed).
+
+            If the time zone is `null`, the `start` and `end` date should be regarded as time zone agnostic and already being in local time. Our `start` and `end` filters take this into account when specifying a lower and higher bound on dates.
+          type: string
+          examples:
+            - Pacific/Auckland
+        title:
+          description: |-
+            The title of the event.
+          type: string
+          examples:
+            - Katy Perry
+        updated:
+          description: |-
+            The last modification date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. All dates are in UTC.
+          type: string
+          format: date-time
       required:
-        - id
-        - title
         - category
+        - country
+        - description
+        - duration
+        - end
+        - entities
+        - first_seen
+        - id
+        - phq_labels
+        - place_hierarchies
+        - rank
+        - geo
+        - relevance
+        - start
+        - state
+        - timezone
+        - title
+        - updated
     EventsResponse:
       title: Events Response
       type: object
