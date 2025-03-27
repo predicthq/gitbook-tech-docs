@@ -193,8 +193,7 @@ paths:
                 - "disasters"
                 - "terror"
                 - "health-warnings"
-          style: form
-          explode: false
+          style: simple
           example:
             - "concerts"
             - "sports"
@@ -207,9 +206,9 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
-          example: "US"
+          style: simple
+          example:
+            - "US"
         - in: query
           name: deleted_reason
           description: |-
@@ -224,8 +223,7 @@ paths:
                 - invalid
                 - duplicate
                 - postponed
-          style: form
-          explode: false
+          style: simple
           example:
             - cancelled
             - duplicate
@@ -337,8 +335,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - "XABWvihQAj8TnjvF6WNzLW"
         - in: query
@@ -402,9 +399,9 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
-          example: "z13B3870YOgv"
+          style: simple
+          example:
+            - "z13B3870YOgv"
         - in: query
           name: impact.gte
           description: |-
@@ -493,8 +490,7 @@ paths:
           deprecated: true
           schema:
             $ref: '#/components/schemas/LegacyLabels'
-          style: form
-          explode: false
+          style: simple
           example:
             - holiday
             - observance
@@ -567,8 +563,7 @@ paths:
                 - 3
                 - 4
                 - 5
-          style: form
-          explode: false
+          style: simple
           example:
             - 4
             - 5
@@ -725,8 +720,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - agriculture-forestry-and-fisheries
             - food-and-beverage
@@ -752,8 +746,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - lifestyle
         - in: query
@@ -780,8 +773,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - "5128638"
             - SFO
@@ -796,8 +788,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
         - in: query
           name: placekey
           description: |-
@@ -823,8 +814,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - "225@63j-rqb-j7q"
             - "@627-s8j-z2k"
@@ -1062,8 +1052,7 @@ paths:
                 - 3
                 - 4
                 - 5
-          style: form
-          explode: false
+          style: simple
           example:
             - 4
             - 5
@@ -1097,8 +1086,7 @@ paths:
                 - location_around
                 - rank
                 - local_rank
-          style: form
-          explode: false
+          style: simple
           example:
             - q
             - rank
@@ -1112,8 +1100,7 @@ paths:
             type: array
             items:
               type: string
-          style: form
-          explode: false
+          style: simple
           example:
             - sFlb8HlsLa1j-S4UDEMEkQ
         - in: query
@@ -1151,8 +1138,7 @@ paths:
                 - predicted_event_spend_industry.accommodation
                 - predicted_event_spend_industry.hospitality
                 - predicted_event_spend_industry.transportation
-          style: form
-          explode: false
+          style: simple
           example:
             - country
             - "-start"
@@ -1308,8 +1294,7 @@ paths:
                 - "predicted"
             default:
               - "active"
-          style: form
-          explode: false
+          style: simple
           example:
             - "active"
             - "deleted"
