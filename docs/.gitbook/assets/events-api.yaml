@@ -492,9 +492,7 @@ paths:
           required: false
           deprecated: true
           schema:
-            type: array
-            items:
-              type: string
+            $ref: '#/components/schemas/LegacyLabels'
           style: form
           explode: false
           example:
@@ -1111,6 +1109,81 @@ components:
                       - leading
                       - event_day
                       - lagging
+        labels:
+          description: |-
+            Legacy labels to further categorise the event.
+          deprecated: true
+          allOf:
+            - $ref: '#/components/schemas/LegacyLabels'
+        local_rank:
+          description: |-
+            Similar to PHQ Rank, this is a log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event on its local geographical area.
+
+            If `local_rank` is not intended to be available for an event, this field will be `null`.
+          type:
+            - integer
+            - "null"
+          minimum: 0
+          maximum: 100
+        location:
+          description: |-
+            A 2-tuple representing the geo location of the event. Note that the longitude/latitude coordinates use the [GeoJSON](https://geojson.org/) order [lon, lat].
+
+            Please use the `geo` field instead of this field.
+          deprecated: true
+          type: array
+          items:
+            type: number
+          minItems: 2
+          maxItems: 2
+          examples:
+            - [174.776792, -36.847319]
+        location_confidence_score:
+          description: |-
+            The Predicted Event location confidence score.
+          type:
+            - integer
+            - "null"
+          minimum: 1
+          maximum: 5
+        geo:
+          description: |-
+            An object containing the geographic information about an event. This field will be used in future instead of the `location` field (the `location` field will remain in the current version of the API but could be removed in future versions).
+          oneOf:
+            - type: object
+              properties:
+                geometry:
+                  $ref: '#/components/schemas/Geometry'
+                placekey:
+                  type: string
+                address:
+                  oneOf:
+                    - type: object
+                      required:
+                        - country_code
+                      properties:
+                        country_code:
+                          type: string
+                          examples:
+                            - "US"
+                        formatted_address:
+                          type: string
+                          examples:
+                            - "2350 Beach Blvd, Biloxi, MS 39531, USA"
+                        locality:
+                          type: string
+                          examples:
+                            - "Biloxi"
+                        region:
+                          type: string
+                          examples:
+                            - "Mississippi"
+                        postcode:
+                          type: string
+                          examples:
+                            - "39531"
+                    - type: 'null'
+            - type: 'null'
         title:
           type: string
         
@@ -1119,6 +1192,7 @@ components:
         - title
         - category
     EventsResponse:
+      title: Events Response
       type: object
       description: Paginated response containing events.
       required:
@@ -1155,6 +1229,356 @@ components:
           description: List of event records.
           items:
             $ref: '#/components/schemas/Event'
+    LegacyLabels:
+      title: Legacy Labels
+      type: array
+      items:
+        type: string
+        enum:
+          - academic
+          - academic-session
+          - agriculture
+          - air-quality
+          - airport
+          - american-football
+          - animal
+          - architecture
+          - arson
+          - ashfall
+          - assassination
+          - attack
+          - attraction
+          - australian-football
+          - auto-racing
+          - automotive
+          - autumn-holiday
+          - avalanche
+          - badminton
+          - bars-closed
+          - bars-open
+          - baseball
+          - basketball
+          - bicycle
+          - biological-hazard
+          - blizzard
+          - bombing
+          - boxing
+          - business
+          - campus
+          - career
+          - chemical
+          - chemical-accident
+          - christmas-holiday
+          - civil
+          - climate-change
+          - closed-doors
+          - clothing
+          - club
+          - coastal-event
+          - cold-wave
+          - comedy
+          - comic
+          - community
+          - concert
+          - conference
+          - construction
+          - corporate
+          - course
+          - craft
+          - cricket
+          - cyclone
+          - daylight-savings
+          - debates
+          - delay
+          - design
+          - digital
+          - disaster
+          - disaster-warning
+          - drought
+          - dust
+          - earthquake
+          - easter-holiday
+          - education
+          - election
+          - entertainment
+          - entertainment-closed
+          - entertainment-open
+          - environment
+          - environment-pollution
+          - epidemic
+          - epidemic-hazard
+          - esports
+          - estimated
+          - exam
+          - execution
+          - explosion
+          - expo
+          - extreme-weather
+          - f1
+          - family
+          - fashion
+          - festival
+          - fighting
+          - fire
+          - flood
+          - fog
+          - food
+          - football
+          - fundraiser
+          - furniture
+          - gaming
+          - golf
+          - graduation
+          - gymnastics
+          - hail
+          - hazardous-surf
+          - hazmat
+          - health
+          - health-warning
+          - heat-wave
+          - hijacking
+          - hockey
+          - holiday
+          - holiday-christian
+          - holiday-hebrew
+          - holiday-hindu
+          - holiday-local
+          - holiday-local-common
+          - holiday-muslim
+          - holiday-national
+          - holiday-observed
+          - holiday-orthodox
+          - holiday-religious
+          - horse-racing
+          - horticulture
+          - hostage-crisis
+          - household
+          - hurricane
+          - hybrid-session
+          - ice-hockey
+          - in-person-session
+          - industrial
+          - indycar
+          - instrument
+          - ironman
+          - jewelry
+          - landslide
+          - local-market
+          - lockdown
+          - lpga
+          - marathon
+          - marine
+          - mass-shooting
+          - medical
+          - mineral
+          - minor-league
+          - mlb
+          - mls
+          - mma
+          - monster-truck
+          - motocross
+          - motogp
+          - movie
+          - music
+          - nascar
+          - natural
+          - nba
+          - nba-gleague
+          - ncaa
+          - nfl
+          - nhl
+          - nuclear
+          - nursing
+          - observance
+          - observance-local
+          - observance-season
+          - observance-united-nations
+          - observance-worldwide
+          - office
+          - olympic
+          - online-session
+          - outdoor
+          - packaging
+          - paper
+          - parade
+          - parliament
+          - performing-arts
+          - personal-care-closed
+          - personal-care-open
+          - pet
+          - pga
+          - plastic
+          - politics
+          - president
+          - print
+          - product
+          - rain
+          - rallies
+          - real-estate
+          - recreation-closed
+          - recreation-open
+          - referendum
+          - religion
+          - research-development
+          - restaurant-closed
+          - restaurant-open
+          - retail-closed
+          - retail-open
+          - rodeo
+          - rugby
+          - running
+          - sales
+          - sand
+          - school
+          - science
+          - seminar
+          - shooting
+          - skating
+          - snow
+          - soccer
+          - social
+          - space
+          - sport
+          - spring-holiday
+          - stabbing
+          - storm
+          - storm-surge
+          - summer-holiday
+          - suspected-attack
+          - suspected-bombing
+          - table-tennis
+          - technology
+          - tennis
+          - terror
+          - thanksgiving-holiday
+          - thunderstorm
+          - tool
+          - tornado
+          - tourism
+          - training
+          - transportation
+          - travel
+          - triathlon
+          - tropical-storm
+          - tsunami
+          - typhoon
+          - vehicle-accident
+          - volcano
+          - volleyball
+          - weather
+          - weather-warning
+          - wedding
+          - wildfire
+          - wind
+          - winter-holiday
+          - wnba
+          - worship-closed
+          - worship-open
+          - wrestling
+          - wwe
+          - youth-sport
+    Geometry:
+      title: GeoJSON Geometry
+      oneOf:
+        - title: GeoJSON Point
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [Point]
+            coordinates:
+              type: array
+              minItems: 2
+              items:
+                type: number
+        - title: GeoJSON MultiPoint
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [MultiPoint]
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: number
+            bbox:
+              type: array
+              minItems: 4
+              items:
+                type: number
+        - title: GeoJSON LineString
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [LineString]
+            coordinates:
+              type: array
+              minItems: 2
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: number
+        - title: GeoJSON MultiLineString
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [MultiLineString]
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 2
+                items:
+                  type: array
+                  minItems: 2
+                  items:
+                    type: number
+        - title: GeoJSON Polygon
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [Polygon]
+            coordinates:
+              type: array
+              items:
+                type: array
+                minItems: 4
+                items:
+                  type: array
+                  minItems: 2
+                  items:
+                    type: number
+        - title: GeoJSON MultiPolygon
+          type: object
+          required: [type, coordinates]
+          properties:
+            type:
+              type: string
+              enum: [MultiPolygon]
+            coordinates:
+              type: array
+              items:
+                type: array
+                items:
+                  type: array
+                  minItems: 4
+                  items:
+                    type: array
+                    minItems: 2
+                    items:
+                      type: number
   securitySchemes:
     BearerAuth:
       type: http
