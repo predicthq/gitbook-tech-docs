@@ -1,17 +1,22 @@
 ---
+description: The largest and most accurate source of global data.
 hidden: true
 noIndex: true
 ---
 
 # Search Events (OpenAPI Test)
 
-## Schema
+Search for events happening in a location and date range. Use our extensive filters to narrow down your results.
 
-{% openapi src="../../.gitbook/assets/events-api.yaml" path="/v1/events/" method="get" %}
-[events-api.yaml](../../.gitbook/assets/events-api.yaml)
-{% endopenapi %}
+{% hint style="info" %}
+**Results are limited by your subscription**
 
-## Examples
+Please note that you will not receive an error when requesting a date range or location that is outside of your subscription settings.
+
+This is sometimes confused with missing data. If you're not seeing the results you expect to see then please ensure your subscription covers the location or time period you're searching for.
+
+Your subscription settings can be viewed in [Control Center](https://control.predicthq.com/settings/plans).
+{% endhint %}
 
 {% tabs %}
 {% tab title="python sdk" %}
@@ -67,6 +72,10 @@ curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,con
 ```
 {% endtab %}
 {% endtabs %}
+
+{% openapi src="../../.gitbook/assets/events-api.yaml" path="/v1/events/" method="get" %}
+[events-api.yaml](../../.gitbook/assets/events-api.yaml)
+{% endopenapi %}
 
 ## Guides
 
