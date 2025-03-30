@@ -12,7 +12,6 @@ externalDocs:
   url: https://docs.predicthq.com
   description: PredictHQ API Documentation
 x-hideTryItPanel: true
-x-codeSamples: false
 security:
   - BearerAuth: []
 tags:

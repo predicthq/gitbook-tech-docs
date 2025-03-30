@@ -18,6 +18,12 @@ This is sometimes confused with missing data. If you're not seeing the results y
 Your subscription settings can be viewed in [Control Center](https://control.predicthq.com/settings/plans).
 {% endhint %}
 
+{% openapi src="../../.gitbook/assets/events-api.yaml" path="/v1/events/" method="get" %}
+[events-api.yaml](../../.gitbook/assets/events-api.yaml)
+{% endopenapi %}
+
+## Examples
+
 {% tabs %}
 {% tab title="python sdk" %}
 Make sure to properly load your access token from an environment variable or other secure method.
@@ -72,10 +78,6 @@ curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,con
 ```
 {% endtab %}
 {% endtabs %}
-
-{% openapi src="../../.gitbook/assets/events-api.yaml" path="/v1/events/" method="get" %}
-[events-api.yaml](../../.gitbook/assets/events-api.yaml)
-{% endopenapi %}
 
 ## Guides
 
