@@ -1076,6 +1076,7 @@ paths:
             - rank
             - local_rank
           required: false
+          deprecated: true
           schema:
             type: array
             items:
