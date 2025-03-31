@@ -1363,7 +1363,6 @@ paths:
 
             Note we always recommend using our Suggested Radius API to determine the relevant impact zone around your location.
           required: false
-          deprecated: true
           schema:
             type: string
             pattern: ^(?:(?:[1-9]\d*(?:\.\d+)?(km|mi))|(?:[1-9]\d*(m|ft)))@-?\d+(?:\.\d+)?,\-?\d+(?:\.\d+)?$
@@ -1400,13 +1399,6 @@ components:
       type: object
       description: An individual event object.
       properties:
-        aviation_rank:
-          type:
-            - integer
-            - "null"
-          minimum: 0
-          maximum: 100
-          deprecated: true
         brand_safe:
           description: |-
             Indicates whether or not the event is considered "brand safe".
@@ -1650,11 +1642,7 @@ components:
                       - event_day
                       - lagging
         labels:
-          description: |-
-            Legacy labels to further categorise the event.
-          deprecated: true
-          allOf:
-            - $ref: '#/components/schemas/LegacyLabels'
+          $ref: '#/components/schemas/LegacyLabels'
         local_rank:
           description: |-
             Similar to PHQ Rank, this is a log scale numerical value between 0 and 100 with a five-level hierarchical impact schema. It is designed to represent the potential impact of an event on its local geographical area.
@@ -2018,6 +2006,9 @@ components:
             $ref: '#/components/schemas/Event'
     LegacyLabels:
       title: Legacy Labels
+      description: |-
+            Legacy labels to further categorise the event.
+      deprecated: true
       type: array
       items:
         type: string
@@ -2264,6 +2255,9 @@ components:
           - wrestling
           - wwe
           - youth-sport
+      examples:
+        - - "entertainment"
+          - "family"
     Geometry:
       title: GeoJSON Geometry
       oneOf:
@@ -2302,11 +2296,6 @@ components:
                 minItems: 2
                 items:
                   type: number
-            bbox:
-              type: array
-              minItems: 4
-              items:
-                type: number
         - title: GeoJSON LineString
           type: object
           required:
