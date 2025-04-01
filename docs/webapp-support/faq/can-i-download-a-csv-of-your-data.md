@@ -1,0 +1,5 @@
+# Can I Download a CSV of Your Data?
+
+You can also take advantage of our [Data Exporter](https://www.predicthq.com/tools/data-exporter) which permits you to export our data as CSV or JSON - no code necessary.  You can access [Data Exporter](https://www.predicthq.com/tools/data-exporter) through the [WebApp](https://www.predicthq.com/products/webapp). We also have a [Tableau Data Connector](https://www.predicthq.com/tools/tableau-connector). This gives you the ability to connect to, and explore our data directly in Tableau with no code necessary either. Both tools are particularly handy for Data Scientists and Analysts as they can explore our data in a BI tool of their choice, instead of using our API directly like a Developer typically would.
+
+Remember to keep in mind the limitations of a static export though. It is a snapshot. With events being dynamic and metadata updating all the time, your export will go out of date very quickly. Also, CSV exports can have character encoding issues - something you won't face if using our API instead.
