@@ -114,6 +114,7 @@
 
 * [API Overview](api/overview/README.md)
   * [Authenticating](api/overview/authenticating.md)
+  * [API Specs](api/overview/api-specs.md)
   * [Rate Limits](api/overview/rate-limits.md)
   * [Pagination](api/overview/pagination.md)
   * [API Changes](api/overview/api-changes.md)
