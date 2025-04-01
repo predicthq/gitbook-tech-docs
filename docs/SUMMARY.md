@@ -230,8 +230,6 @@
     * [How Do I Integrate Live TV Events into Forecasting Models?](webapp-support/tools/live-tv-events/how-do-i-integrate-live-tv-events-into-forecasting-models.md)
   * [Labels](webapp-support/tools/labels/README.md)
     * [What Does the Closed-Doors Label Mean?](webapp-support/tools/labels/what-does-the-closed-doors-label-mean.md)
-  * [Features API](webapp-support/tools/features-api/README.md)
-    * [Features API - Intro and Getting Started](webapp-support/tools/features-api/features-api-intro-and-getting-started.md)
 * [Beam (Relevancy Engine)](webapp-support/beam-relevancy-engine/README.md)
   * [An Overview of Beam - Relevancy Engine](webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md)
   * [Creating an Analysis in Beam](webapp-support/beam-relevancy-engine/creating-an-analysis-in-beam.md)

@@ -46,7 +46,7 @@ You use the Event Trends feature in the same way as detailed above to look at sp
 
 Our Predicted Event Spend model takes into account many factors when calculating spend per day. At the core of this figure sits our market-leading global event coverage, predicted event attendance, local accommodation demand, third-party data, and more which culminate into a contextual and attributable dollar figure that can be used to power both insights and forecasting models.
 
-Predicted Event Spend is calculated from our core PredictHQ data, enriched by local economic indicators and partner data. Find out more about predicted event spend in our [technical documentation](broken-reference).
+Predicted Event Spend is calculated from our core PredictHQ data, enriched by local economic indicators and partner data. Find out more about predicted event spend in our [technical documentation](../../getting-started/predicthq-data/predicted-event-spend.md).
 
 <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/3yd9U7IppdLOcJkadFtKAU/b4268bdcd6135145467a16139f55faa4/DEI-PES.png" alt="Daily Event Impact - PES"><figcaption></figcaption></figure>
 
