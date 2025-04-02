@@ -128,6 +128,7 @@
   * [Get Broadcasts Count](api/broadcasts/get-broadcasts-count.md)
 * [Features](api/features/README.md)
   * [Get ML Features](api/features/get-features.md)
+  * [Get ML Features (OpenAPI Test)](api/features/get-ml-features-openapi-test.md)
 * [Beam](api/beam/README.md)
   * [Create an Analysis](api/beam/create-an-analysis.md)
   * [Upload Demand Data](api/beam/upload-demand-data.md)
