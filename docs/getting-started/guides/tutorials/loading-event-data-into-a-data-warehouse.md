@@ -51,7 +51,7 @@ For the purposes of this guide, we have limited the example load to a single cit
 
 There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates will require API code.
 
-**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by [exporting data](https://www.predicthq.com/support/getting-started-with-data-exporter) from PredictHQ’s [Control Center](https://control.predicthq.com/search/events) web application. We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
+**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by [exporting data](https://www.predicthq.com/support/getting-started-with-data-exporter) from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
 
 **API Connection Method**: Connect to the PredictHQ Events API to download the latest data from the API into your data lake. This guide takes you through using the Python API connection method for GCP but similar steps would apply to other programming languages. Events data is dynamic with events changing all the time as events are canceled, postponed, shift location, or have other details change. Also, new events are being announced all the time. We recommend having a process that updates your data on a regular frequency, such as daily.
 
@@ -104,17 +104,17 @@ Regardless of the method chosen for initial data creation and loading, the table
 
 This method is recommended for large data uploads, as it efficiently manages the transfer of large volumes of data better than direct API calls.
 
-### Search Control Center and Export JSONL
+### Search Events in the WebApp and Export JSONL
 
-To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [Control Center Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs. For detailed instructions on optimizing your search with the Control Center, please refer to [this guide](https://www.predicthq.com/support/control-center-search) on Control Center search capabilities.
+To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs. For detailed instructions on optimizing your search with the WebApp, please refer to [this guide](../../../webapp-support/webapp-overview/events-search.md) on the WebApp search capabilities.
 
 Typically you may download all the data you have access to into your data warehouse. In that case, run a search for all events and download them.
 
 In the context of our example [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) for Tom's Pizzeria, they would be downloading events for all of the US and then querying for specific locations. Many customers may bulk load all the data they have access to by exporting it all and then importing it into their data lake. In this example, we’ll download events only for Seattle.
 
-To do that, we searched for Seattle in the Control Center for the relevant period, status, and attended categories.
+To do that, we searched for Seattle in the WebApp for the relevant period, status, and attended categories.
 
-<figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>Control Center Search for Seattle ready for Export</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
 After configuring your filters and executing the search, simply select the Export option. For more details on exporting see the[ CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter) except select the JSONL file format instead of CSV. This JSONL can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
@@ -501,7 +501,7 @@ We recommend running a daily update process (such as a cron job) that calls the 
 
 ## Querying the Loaded Data
 
-Once the data is successfully loaded into BigQuery, you can begin querying it to derive insights relevant to your use case. This section provides an example of a BigQuery SQL query tailored to Tom’s scenario as outlined earlier. While the initial data load might have utilized specific filters via the Control Center or API parameters, it's often useful to perform additional queries directly within BigQuery. This capability is particularly valuable if you have loaded a broader dataset and need to perform dynamic or complex filtering post-load.
+Once the data is successfully loaded into BigQuery, you can begin querying it to derive insights relevant to your use case. This section provides an example of a BigQuery SQL query tailored to Tom’s scenario as outlined earlier. While the initial data load might have utilized specific filters via the WebApp or API parameters, it's often useful to perform additional queries directly within BigQuery. This capability is particularly valuable if you have loaded a broader dataset and need to perform dynamic or complex filtering post-load.
 
 Some common fields to query are:
 

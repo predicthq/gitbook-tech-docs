@@ -11,7 +11,7 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 * [Features API](../../getting-started/guides/features-api-guides/)
 * [Beam](../integration-guides/beam-data-science-guide.md)
 * [Suggested Radius](../../api/suggested-radius/get-suggested-radius.md)
-* [Control Center](https://control.predicthq.com)
+* [WebApp](https://control.predicthq.com)
 * Tutorial: [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention")
 
 ### Microsoft

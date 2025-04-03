@@ -32,7 +32,7 @@ print(response.json())
 
 Read a more in-depth guide to [creating a new API Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
-1. Log into Control Center and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
+1. Log into the WebApp and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
 2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
 3. Click "Copy Token" to copy your token to the clipboard. You can now paste the token into another application. Keep a copy of your new API Token, as it will not be shown again.
 

@@ -10,15 +10,15 @@ This guide provides details on how to use PredictHQ APIs when you have purchased
 
 The summary of how to use our APIs with location-based access is as follows:
 
-* Use the [Location Insights feature](https://www.predicthq.com/support/category/location-insights) Control Center web application or our [Saved Locations API](../../../../api/saved-locations/) to create saved locations for each of your business locations
+* Use the [Location Insights feature](https://www.predicthq.com/support/category/location-insights) in our WebApp or our [Saved Locations API](../../../../api/saved-locations/) to create saved locations for each of your business locations
 * To access events you then use our [Events API](../../../../api/events/search-events.md) and call it using the `saved_location.location_id` filter to access events for your locations. Alternatively, you can also access events using the `/events` call in the [Saved Locations API](../../../../api/saved-locations/search-saved-locations.md) (see Get a list of events for a location).
 * If you add or delete locations ensure you update the location\_id values used to query the API.
 
-This guide is focused on using the APIs. You can also use our Control Center web application to manage and access locations. See the documentation on [Control Center](https://www.predicthq.com/support) for more details.
+This guide is focused on using the APIs. You can also use our WebApp to manage and access locations. See the documentation on the [WebApp](https://www.predicthq.com/support) for more details.
 
 ### How to see the Number of Locations I have Access to?
 
-Within Control Center on the [plans page](https://control.predicthq.com/settings/plans/api) or in the location insights view you can see how many locations you have purchased and how many you have used.
+Within the WebApp on the [plans page](https://control.predicthq.com/settings/plans/api) or in the location insights view you can see how many locations you have purchased and how many you have used.
 
 If you add more locations than you have purchased you will have access to the additional locations for a limited time and will need to upgrade your subscription to purchase more or remove the locations you added. The PredictHQ team will contact you to discuss options.
 

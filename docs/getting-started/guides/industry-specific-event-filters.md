@@ -71,7 +71,7 @@ For more information on defining locations by API, see [overview](../../api/over
 
 ## Relevant Event Categories
 
-With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Demand Analysis](https://www.predicthq.com/support/beam-overview) to automatically identify important categories for your specific stores or locations. Access Demand Analysis via [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
+With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
 
 | Industry                                      |                                   Relevant Event Categories                                  |
 | --------------------------------------------- | :------------------------------------------------------------------------------------------: |

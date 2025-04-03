@@ -17,7 +17,7 @@ description: >-
 
 Read a more in-depth guide to [creating a new API Token](https://www.predicthq.com/support/how-to-create-an-api-token) or follow the basic steps below:
 
-1. Log into Control Center and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
+1. Log into the WebApp and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
 2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
 3. Click "Copy Token" to copy your token to the clipboard. You can now paste the token into another application. Keep a copy of your new API Token, as it will not be shown again.
 4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below
@@ -64,5 +64,5 @@ To demonstrate how quick and easy it is to build extremely powerful apps using o
 Below is a guide to point you in the right direction if you're new to the PredictHQ APIs:
 
 {% hint style="info" %}
-Did you know - [Control Center](https://control.predicthq.com/) uses the same APIs you have access to. One of the easiest ways to learn how to use our APIs is to see it in action in Control Center.
+Did you know - The [WebApp](https://control.predicthq.com/) uses the same APIs you have access to. One of the easiest ways to learn how to use our APIs is to see it in action in the WebApp.
 {% endhint %}

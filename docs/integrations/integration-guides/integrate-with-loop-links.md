@@ -8,9 +8,9 @@ description: >-
 
 [PredictHQ's Loop tool](https://www.predicthq.com/tools/loop) allows customers to submit feedback on existing events and to submit missing events. PredictHQ has global events data from hundreds of providers, but sometimes our data may not include events such as hyperlocal events. Loop allows customers to report events that appear to be missing. It also allows customers to provide feedback on events if they have updates to details like attendance, times, or location.
 
-Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to Control Center, however, some customers want their users to be able to submit event feedback without needing a PredictHQ login. These customers want a way to integrate the ability to report missing events or event feedback into their product.
+Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebApp, however, some customers want their users to be able to submit event feedback without needing a PredictHQ login. These customers want a way to integrate the ability to report missing events or event feedback into their product.
 
-**Loop Links** provide a way for customers to integrate with Loop without their users needing a Control Center login, and enable the following:
+**Loop Links** provide a way for customers to integrate with Loop without their users needing a WebApp login, and enable the following:
 
 * Customers can integrate Loop into their products such as a web app, mobile app, or other tool
 * Each customer can generate a unique URL to allow their users to submit event feedback and missing event information
@@ -51,7 +51,7 @@ The diagram below shows how your app will integrate with the Loop Links event pa
 
 <figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt=""><figcaption></figcaption></figure>
 
-The heading at the top of the Loop pages defaults to your organization name in Control Center. You can update it to change it via the API.
+The heading at the top of the Loop pages defaults to your organization name in the WebApp. You can update it to change it via the API.
 
 **Missing event link**
 

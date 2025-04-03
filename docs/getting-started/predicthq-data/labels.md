@@ -77,9 +77,9 @@ print(phq_labels)
 
 ```
 
-You can also see a list of PHQ Labels in the "Labels" field on the [Search Events](https://control.predicthq.com/search/events) page of the Control Center:
+You can also see a list of PHQ Labels in the "Labels" field on the [Search Events](https://control.predicthq.com/search/events) page of the WebApp:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The "Labels" field in Control Center's Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The "Labels" field in the WebApp Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
 
 ### Labels (Legacy)
 

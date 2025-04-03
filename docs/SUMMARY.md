@@ -69,7 +69,7 @@
     * [Demand Surge Notebook](getting-started/guides/demand-surge-api-guides/demand-surge-notebook.md)
   * [Guide to Protecting PredictHQ Data](getting-started/guides/guide-to-protecting-predicthq-data.md)
   * [Streamlit Demo Apps](getting-started/guides/streamlit-demo-apps.md)
-  * [Guide to Bulk Export Data via Control Center](getting-started/guides/export-data-via-control-center.md)
+  * [Guide to Bulk Export Data via the WebApp](getting-started/guides/export-data-via-control-center.md)
   * [Industry-Specific Event Filters](getting-started/guides/industry-specific-event-filters.md)
   * [Tutorials](getting-started/guides/tutorials/README.md)
     * [Filtering and Finding Relevant Events](getting-started/guides/tutorials/filtering-and-finding-relevant-events.md)

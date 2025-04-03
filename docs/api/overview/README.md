@@ -11,5 +11,5 @@ You can test-drive the PredictHQ API by importing our Postman Collection below. 
 Below is a guide to point you in the right direction if you're new to the PredictHQ APIs:
 
 {% hint style="info" %}
-Did you know - [Control Center](https://control.predicthq.com/) uses the same APIs you have access to. One of the easiest ways to learn how to use our APIs is to see it in action in Control Center.
+Did you know - Our [WebApp](https://control.predicthq.com/) uses the same APIs you have access to. One of the easiest ways to learn how to use our APIs is to see it in action in Control Center.
 {% endhint %}

@@ -112,7 +112,7 @@ Use the generic features in this table if you are not in one of the industries c
 
 **Attended Events Impact Pattern Features**
 
-Demand impact patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. In the Features API, Impact Patterns are provided as different features with a feature per industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
+Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. In the Features API, Impact Patterns are provided as different features with a feature per industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
 The features above are generic features and the features in the table below are the impact pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 

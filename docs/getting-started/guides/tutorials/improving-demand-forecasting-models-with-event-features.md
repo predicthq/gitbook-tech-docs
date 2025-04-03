@@ -46,7 +46,7 @@ Most steps are handled by PredictHQ APIs; you just need to provide the following
 
 ### Step 1. Select Relevant Event Features
 
-With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access Beam via [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
+With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](../../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
 
 There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. See below and choose the approach that best suits your operational needs.
 
@@ -124,9 +124,9 @@ The [Features API](../../../api/features/) provides access to a library of prebu
 | `phq_spend_*`      |     sum     |    <p><br></p>    |
 | `phq_viewership_*` |     max     |    <p><br></p>    |
 
-**Demand Impact Patterns**
+**Predicted Impact Patterns**
 
-Some features consider the additional impact from events before and after scheduled dates, offering a more accurate representation of event impacts on demand. This is known as [Demand Impact Patterns (DIP)](https://www.predicthq.com/blog/use-demand-impact-patterns-to-predict-how-events-shape-consumer-behavior), which vary by event category and industry. Features including DIP are denoted with an industry suffix, such as `phq_attendance_sports_accommodation` or `phq_impact_severe_weather_air_quality_retail`.
+Some features consider the additional impact from events before and after scheduled dates, offering a more accurate representation of event impacts on demand. This is known as [Predicted Impact Patterns](https://www.predicthq.com/blog/use-demand-impact-patterns-to-predict-how-events-shape-consumer-behavior), which vary by event category and industry. Features including Predicted Impact Patterns are denoted with an industry suffix, such as `phq_attendance_sports_accommodation` or `phq_impact_severe_weather_air_quality_retail`.
 
 {% hint style="info" %}
 For technical details, visit:

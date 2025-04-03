@@ -125,11 +125,7 @@ For the district school holiday data for the US we have historic data from Septe
 Our school holidays granularity changed in October 2021 to move from the state level to the district level.
 {% endhint %}
 
-<div data-full-width="false">
-
-<figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="alt"><figcaption></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="alt"><figcaption></figcaption></figure></div>
 
 We rank our school holidays based on student numbers in the school district.
 
@@ -142,7 +138,7 @@ Here are some examples of the school holidays for the United States:
 * [Broward County Public Schools - Thanksgiving Break](https://events.predicthq.com/events/J7qZdCiQPGMjCMEkWy)
 * [Prince William County Public Schools - Fall Break](https://events.predicthq.com/events/7bNtEWAe6Mke2eZ7BZ)
 
-To find school holidays that impact your location you can use the standard features of our events API and Control Center to find events that impact your location - as follows:
+To find school holidays that impact your location you can use the standard features of our events API and our WebApp to find events that impact your location - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.

@@ -7,7 +7,7 @@ description: >-
 
 # Integrate with Beam
 
-## Quick Insights from Control Center
+## Quick Insights from the WebApp
 
 Check out this video to see how easy it is to upload your demand data and start pulling insights in no time:
 
