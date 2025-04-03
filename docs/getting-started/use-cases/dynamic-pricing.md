@@ -92,7 +92,7 @@ In the retail industry, much like in transportation and parking, failing to reco
 
 Optimizing ML Features&#x20;
 
-Integrating event-based ML features into forecasting models is essential for accurate demand predictions to improve your dynamic pricing. When you are considering updating a demand forecast you need to figure out which event-based machine learning features to add to your forecast. You can analyze your locations using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine).  [Upload demand data](../../webapp-support/beam-relevancy-engine/uploading-your-demand-data-to-beam.md), such as the number of units sold per day, and [view the top features](../../webapp-support/beam-relevancy-engine/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecasts.md) identified for your specific location.
+Integrating event-based ML features into forecasting models is essential for accurate demand predictions to improve your dynamic pricing. When you are considering updating a demand forecast you need to figure out which event-based machine learning features to add to your forecast. You can analyze your locations using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md).  [Upload demand data](../../webapp-support/beam-relevancy-engine/uploading-your-demand-data-to-beam.md), such as the number of units sold per day, and [view the top features](../../webapp-support/beam-relevancy-engine/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecasts.md) identified for your specific location.
 
 Below is an example of a feature importance analysis - click to enlarge:
 
@@ -104,7 +104,7 @@ Retrieve the identified features using the [Features API](../../api/features/get
 
 Forecasting Demand
 
-A London-based retailer used [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) to evaluate the impact of events on their sales. They discovered that concerts (phq\_attendance\_concerts), sports (phq\_attendance\_sports), festivals (phq\_attendance\_festivals), conferences (phq\_attendance\_conferences), public holidays (phq\_rank\_public\_holidays), and observances (phq\_rank\_observances) significantly impacted their sales. The forecasting model was updated accordingly using the Features API, resulting in a substantial improvement in forecast accuracy. The new model shows better alignment between forecasted demand and actual sales, facilitating more effective dynamic pricing.
+A London-based retailer used [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to evaluate the impact of events on their sales. They discovered that concerts (phq\_attendance\_concerts), sports (phq\_attendance\_sports), festivals (phq\_attendance\_festivals), conferences (phq\_attendance\_conferences), public holidays (phq\_rank\_public\_holidays), and observances (phq\_rank\_observances) significantly impacted their sales. The forecasting model was updated accordingly using the Features API, resulting in a substantial improvement in forecast accuracy. The new model shows better alignment between forecasted demand and actual sales, facilitating more effective dynamic pricing.
 
 <img src="../../.gitbook/assets/Forecasting_graph_2.png" alt="" data-size="original">
 

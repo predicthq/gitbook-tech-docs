@@ -129,7 +129,7 @@ print(response.json())
 
 Select the types of events for the search.
 
-* **Relevant Event Categories**: To identify [event categories](../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, start with our [industry recommendations](../guides/industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
+* **Relevant Event Categories**: To identify [event categories](../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, start with our [industry recommendations](../guides/industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 
 <!---->
 
@@ -145,7 +145,7 @@ params={
   } 
 ```
 
-Next, Tom plans to use use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
+Next, Tom plans to use use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
 
 </details>
 
@@ -522,7 +522,7 @@ For more details, visit:
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 
 * **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
-* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
+* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
 * **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 
 ## Conclusion

@@ -46,7 +46,7 @@ Most steps are handled by PredictHQ APIs; you just need to provide the following
 
 ### Step 1. Select Relevant Event Features
 
-With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
+With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
 
 There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. See below and choose the approach that best suits your operational needs.
 

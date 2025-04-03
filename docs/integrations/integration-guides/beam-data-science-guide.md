@@ -15,7 +15,7 @@ Check out this video to see how easy it is to upload your demand data and start 
 Introduction to Beam
 {% endembed %}
 
-Need more details? Browse our [Support articles](https://www.predicthq.com/support/category/beam).&#x20;
+Need more details? Browse our [Support articles](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md).&#x20;
 
 ## Scale with the Beam API&#x20;
 
