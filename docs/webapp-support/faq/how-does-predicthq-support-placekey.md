@@ -10,7 +10,7 @@ In the PredictHQ products and tools Placekey is supported in the following ways:
 
 * You can search on Placekey in the events API using the Placekey filter – see placekey under [Event Filters](../../api/events/search-events.md) in the Events API endpoint documentation.
 * The Placekey field is returned in the Events API response – see [Event fields](../../api/events/search-events.md#response-fields).
-* You can try the Placekey field in the API Explorer in Control Center for the Events API.
+* You can try the Placekey field in the API Explorer in the WebApp for the Events API.
 * Placekey is returned in the [Snowflake](../../integrations/third-party-integrations/snowflake/) and [AWS Data Exchange](../../integrations/third-party-integrations/aws-data-exchange/) (ADX) integrations.
 * The Placekey field is included in the [WebApp export](../getting-started/export-events-data-from-the-webapp.md)
 

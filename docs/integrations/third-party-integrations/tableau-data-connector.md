@@ -13,7 +13,7 @@ See [using-event-data-in-tableau.md](../../getting-started/guides/tutorials/usin
 <summary>Tableau Connector</summary>
 
 * [Log in](https://control.predicthq.com/) to your PredictHQ account or [sign up](https://signup.predicthq.com/) for a trial if you haven't got an account yet.
-* In the [API Clients](https://control.predicthq.com/clients) part of Control Center, create a new API Client. Save the Client Secret somewhere as you won't be able to see it again within Control Center. Then click "Create an access token". Select the scopes "Account", "Events" and "Places".
+* In the [API Clients](https://control.predicthq.com/clients) part of the WebApp, create a new API Client. Save the Client Secret somewhere as you won't be able to see it again within the WebApp. Then click "Create an access token". Select the scopes "Account", "Events" and "Places".
 * Open Tableau and select "Web Data Connector". Then in the pop up box enter the URL:
 
 ```

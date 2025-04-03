@@ -46,7 +46,7 @@ Most steps are handled by PredictHQ APIs; you just need to provide the following
 
 ### Step 1. Select Relevant Event Features
 
-With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access Beam via [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
+With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access Beam via [Demand Analysis](https://www.predicthq.com/support/beam-overview) in the [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
 
 There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. See below and choose the approach that best suits your operational needs.
 
@@ -54,7 +54,7 @@ There are two main strategies for determining a list of Important Features for a
 
 <summary>Important Features by Location</summary>
 
-If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](../../api/beam/get-feature-importance.md) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as [Category Importance](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam) on Control Center, these event features (or categories) are identified as having the greatest impact on your demand.
+If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](../../api/beam/get-feature-importance.md) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as [Category Importance](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam) in the WebApp, these event features (or categories) are identified as having the greatest impact on your demand.
 
 </details>
 

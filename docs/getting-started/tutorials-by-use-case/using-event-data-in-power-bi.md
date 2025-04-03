@@ -73,7 +73,7 @@ The end result of the exercise will be a report like this:
 
 There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods users can utilize to connect and start creating reports.
 
-[**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ Control Center into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
+[**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
 [**Snowflake Connection**](using-event-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
 
@@ -81,9 +81,9 @@ There are several ways to connect PHQ data to Power BI or other reporting softwa
 
 ### CSV Upload Method
 
-We will use PredictHQ [Control Center Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using Control Center Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
+We will use PredictHQ [WebApp Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using the WebApp Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
 
-<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>Control Center Example Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
 Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 

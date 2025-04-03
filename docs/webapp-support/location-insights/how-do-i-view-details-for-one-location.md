@@ -38,7 +38,7 @@ Click on **Advanced Search** to refine the search results for a location and loo
 
 Here's what the buttons and options for this page do:
 
-* Share - Allows you to share the event with other users without the need for them to log into Control Center.
+* Share - Allows you to share the event with other users without the need for them to log into the WebApp.
 * Edit - Allows you to edit the location details (name, radius, address, latitude & longitude, etc)
 * Delete - Deletes the location. Please note this cannot be undone.
 * View Events button - Scrolls down to the events list at the bottom of the page

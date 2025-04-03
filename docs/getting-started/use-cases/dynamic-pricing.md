@@ -12,7 +12,7 @@ Businesses from these industries often use PredictHQ data to fuel their sales fo
 
 To implement PredictHQ data to inform dynamic pricing for your accommodation or hospitality business, review the options below:
 
-* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
@@ -50,7 +50,7 @@ See [How Hoteliers Achieved a 10% RevPar Increase with HQ revenue](https://www.p
 
 To implement PredictHQ data to inform dynamic pricing for your leisure and travel business, review the options below:
 
-* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md).&#x20;
@@ -74,7 +74,7 @@ With PredictHQ's products and data, businesses in the leisure and travel sector 
 
 To implement PredictHQ data to inform dynamic pricing for your retail business, review the options below:
 
-* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
@@ -120,7 +120,7 @@ With a refined forecasting model, businesses can adjust prices dynamically in re
 
 To implement PredictHQ data to inform dynamic pricing for your parking or transportation business, review the options below:
 
-* **No code:** Use Control Center, the PredictHQ web application, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://www.predicthq.com/support/see-total-daily-event-impact-in-control-center) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your pricing by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial. ](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)

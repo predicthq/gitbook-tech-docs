@@ -18,7 +18,7 @@ See also, other videos on [getting-started-with-the-webapp.md](../onboarding-tut
 
 #### The Sidebar
 
-The sidebar gives you access to all the functionalities within Control Center, which includes:
+The sidebar gives you access to all the functionalities within the WebApp, which includes:
 
 1. Saved Locations
 2. Search Events
@@ -41,7 +41,7 @@ See [events-search.md](events-search.md "mention").
 
 ### Event Trends
 
-The **Event Trends** tab in Control Center gives you access to a graph view of predicted attendance and predicted event spend at a location to allow you to easily identify trends and demand fluctuations. Use the tabs at the top of the page to toggle between viewing Predicted Attendance or Predicted Event Spend, then filter by location, rank, and date range to view the total impact of all events by day for the selected time period.
+The **Event Trends** tab in the WebApp gives you access to a graph view of predicted attendance and predicted event spend at a location to allow you to easily identify trends and demand fluctuations. Use the tabs at the top of the page to toggle between viewing Predicted Attendance or Predicted Event Spend, then filter by location, rank, and date range to view the total impact of all events by day for the selected time period.
 
 [see-event-trends-in-the-webapp.md](../tools/see-event-trends-in-the-webapp.md "mention").
 
@@ -59,7 +59,7 @@ This links to the [technical documentation](../../).
 
 ### The Dashboard
 
-When you log into Control Center, you are taken to the dashboard. The dashboard shows a list of tiles that are shortcuts to common operations (like search). It also includes your top five [Location Insights](../location-insights/) locations. These are the locations with the highest [predicted attendance](../location-insights/what-do-each-of-the-columns-mean.md).
+When you log in to WebApp, you are taken to the dashboard. The dashboard shows a list of tiles that are shortcuts to common operations (like search). It also includes your top five [Location Insights](../location-insights/) locations. These are the locations with the highest [predicted attendance](../location-insights/what-do-each-of-the-columns-mean.md).
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>WebApp dashboard</p></figcaption></figure>
 

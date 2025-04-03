@@ -11,7 +11,7 @@ Please note that you will not receive an error when requesting a date range or l
 
 This is sometimes confused with missing data. If you're not seeing the results you expect to see then please ensure your subscription covers the location or time period you're searching for.
 
-Your subscription settings can be viewed in [Control Center](https://control.predicthq.com/settings/plans).
+Your subscription settings can be viewed in our [WebApp](https://control.predicthq.com/settings/plans).
 {% endhint %}
 
 {% openapi src="https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml" path="/v1/events/" method="get" %}
