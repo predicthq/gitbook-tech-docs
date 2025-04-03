@@ -10,7 +10,7 @@ This guide provides details on how to use PredictHQ APIs when you have purchased
 
 The summary of how to use our APIs with location-based access is as follows:
 
-* Use the [Location Insights feature](https://www.predicthq.com/support/category/location-insights) in our WebApp or our [Saved Locations API](../../../../api/saved-locations/) to create saved locations for each of your business locations
+* Use the [Location Insights feature](../../../../webapp-support/location-insights/an-overview-of-location-insights.md) in our WebApp or our [Saved Locations API](../../../../api/saved-locations/) to create saved locations for each of your business locations
 * To access events you then use our [Events API](../../../../api/events/search-events.md) and call it using the `saved_location.location_id` filter to access events for your locations. Alternatively, you can also access events using the `/events` call in the [Saved Locations API](../../../../api/saved-locations/search-saved-locations.md) (see Get a list of events for a location).
 * If you add or delete locations ensure you update the location\_id values used to query the API.
 

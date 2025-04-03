@@ -38,7 +38,7 @@ Below are the main steps involved in this guide:
 1. Access to PredictHQ data via 3 methods with 3 different requirements:
    * CSV: PredictHQ account - [Sign up here](https://signup.predicthq.com/) if you don’t already have an account.
    * Snowflake: PredictHQ [Snowflake Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake)
-   * API: [API Access Token](https://www.predicthq.com/support/how-to-create-an-api-token)
+   * API: [API Access Token](../../webapp-support/webapp-overview/how-to-create-an-api-token.md)
 2. [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) reporting software
 
 ## Building Report Parameters around a Location
@@ -81,11 +81,11 @@ There are several ways to connect PHQ data to Power BI or other reporting softwa
 
 ### CSV Upload Method
 
-We will use PredictHQ [WebApp Search](https://www.predicthq.com/support/control-center-search) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using the WebApp Search use [this guide](https://www.predicthq.com/support/control-center-search). Fill in the parameters and hit search.
+We will use PredictHQ [WebApp Search](../../webapp-support/webapp-overview/events-search.md) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). For more information on using the WebApp Search use [this guide](../../webapp-support/webapp-overview/events-search.md). Fill in the parameters and hit search.
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
-Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](https://www.predicthq.com/support/getting-started-with-data-exporter). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
+Once the search has completed hit the Export button on the right to get a CSV. For more details on exporting see the [CSV Export Guide](../../webapp-support/getting-started/export-events-data-from-the-webapp.md). Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
 In Power BI, create a new report and press Get Data -> Text/CSV
 

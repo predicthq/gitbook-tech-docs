@@ -54,7 +54,7 @@ There are two main strategies for determining a list of Important Features for a
 
 <summary>Important Features by Location</summary>
 
-If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](../../../api/beam/get-feature-importance.md) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as [Category Importance](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam) in our WebApp, these event features (or categories) are identified as having the greatest impact on your demand.
+If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](../../../api/beam/get-feature-importance.md) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as [Category Importance](../../../webapp-support/beam-relevancy-engine/viewing-the-category-importance-information-in-beam.md) in our WebApp, these event features (or categories) are identified as having the greatest impact on your demand.
 
 </details>
 
@@ -62,7 +62,7 @@ If you are able to implement individual models for each store or location, the B
 
 <summary>Important Features by Group of Locations</summary>
 
-If you manage multiple stores or locations and require a unified set of features, the Beam API’s [Aggregated Feature Importance](../../../api/beam/analysis-groups/get-aggregated-feature-importance.md) endpoint is recommended. It provides a consolidated list of Important Features across all stores or locations within an [Analysis Group](https://www.predicthq.com/support/grouping-analyses-in-beam) based on aggregating Feature Importance results from contributing stores or locations.
+If you manage multiple stores or locations and require a unified set of features, the Beam API’s [Aggregated Feature Importance](../../../api/beam/analysis-groups/get-aggregated-feature-importance.md) endpoint is recommended. It provides a consolidated list of Important Features across all stores or locations within an [Analysis Group](../../../webapp-support/beam-relevancy-engine/grouping-analyses-in-beam.md) based on aggregating Feature Importance results from contributing stores or locations.
 
 </details>
 
@@ -80,11 +80,11 @@ Ensure you have enough time-series data that meets [Beam’s requirements](../..
 
 Specify your industry as there are several industry-specific settings required in this step such as when using the [Suggested Radius API](../../../api/suggested-radius/). If your industry is not covered, please use the default `other`:
 
-* `accommodation`
-* `retail`
-* `parking`
-* `food_and_beverage` (also referred to as `restaurants`)
-* `other` (for all other industries)
+- `accommodation`
+- `retail`
+- `parking`
+- `food_and_beverage` (also referred to as `restaurants`)
+- `other` (for all other industries)
 
 **Location**
 
@@ -99,16 +99,16 @@ Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [i
 {% hint style="info" %}
 For technical details, visit:
 
-* [upload-demand-data.md](../../../api/beam/upload-demand-data.md "mention")
-* [suggested-radius](../../../api/suggested-radius/ "mention")
-* [beam](../../../api/beam/ "mention")
-* [analysis-groups](../../../api/beam/analysis-groups/ "mention")
+- [upload-demand-data.md](../../../api/beam/upload-demand-data.md 'mention')
+- [suggested-radius](../../../api/suggested-radius/ 'mention')
+- [beam](../../../api/beam/ 'mention')
+- [analysis-groups](../../../api/beam/analysis-groups/ 'mention')
 
 For practical implementation:
 
-* [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md "mention")
-* [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
-{% endhint %}
+- [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md 'mention')
+- [ml-features-by-group.md](../beam-guides/ml-features-by-group.md 'mention')
+  {% endhint %}
 
 ### Step 2. Get Features
 
@@ -116,7 +116,7 @@ The [Features API](../../../api/features/) provides access to a library of prebu
 
 [Responses](../../../api/features/get-features.md#response) from the Features API vary based on the [type of feature](../../../api/features/get-features.md#available-features). Most come with a suite of statistics that indicates how the underlying event data is aggregated daily for a location, e.g. sum, max, count. For `phq_rank_*` features, the response is the daily number of events for each of the [five rank bands](https://www.predicthq.com/features/rankings/phq-rank). We recommend the following aggregations:
 
-| Feature Type       |     stat    |       other       |
+| Feature Type       |    stat     |       other       |
 | ------------------ | :---------: | :---------------: |
 | `phq_attendance_*` |     sum     |    <p><br></p>    |
 | `phq_impact_*`     |     max     |    <p><br></p>    |
@@ -131,13 +131,13 @@ Some features consider the additional impact from events before and after schedu
 {% hint style="info" %}
 For technical details, visit:
 
-* [features](../../../api/features/ "mention")
-* [beam](../../../api/beam/ "mention")
+- [features](../../../api/features/ 'mention')
+- [beam](../../../api/beam/ 'mention')
 
 For practical implementation:
 
-* [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
-{% endhint %}
+- [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md 'mention')
+  {% endhint %}
 
 ### Step 3. ML Model and Future Predictions
 
@@ -148,8 +148,8 @@ For future predictions, you can access forward-facing data, such as the next two
 {% hint style="info" %}
 For practical implementation:
 
-* [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md "mention")
-{% endhint %}
+- [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md 'mention')
+  {% endhint %}
 
 ## Conclusion
 

@@ -23,7 +23,7 @@ The sidebar gives you access to all the functionalities within the WebApp, which
 1. Saved Locations
 2. Search Events
 3. Event Trends
-4. Demand Analysis
+4. Beam
 5. API Tools
 6. Documentation
 

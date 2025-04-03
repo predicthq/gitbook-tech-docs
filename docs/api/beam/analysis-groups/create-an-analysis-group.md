@@ -95,4 +95,4 @@ print(response.json())
 
 ## Best Practices
 
-Please refer to this guide for the best practices on grouping analyses: [https://www.predicthq.com/support/grouping-analyses-in-beam](https://www.predicthq.com/support/grouping-analyses-in-beam)
+Please refer to this guide for the best practices on grouping analyses: [Grouping Analyses in Beam](../../../webapp-support/beam-relevancy-engine/grouping-analyses-in-beam)

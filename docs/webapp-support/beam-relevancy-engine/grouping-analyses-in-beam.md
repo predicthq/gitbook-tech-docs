@@ -41,7 +41,7 @@ At least two Analyses are required to create a meaningful Group. First create An
 
 ### How to use Category Importance <a href="#how-to-use-category-importance" id="how-to-use-category-importance"></a>
 
-Category importance at the group-level follows a similar interpretation as that of single [Analyses](https://www.predicthq.com/support/viewing-the-category-importance-notebook-in-beam). It represents a weighted aggregation of the Category Importance from each contributing Analysis, where the weights are proportional to the average daily demand of each. This gives more influence to Analyses with a larger share of the overall group demand.&#x20;
+Category importance at the group-level follows a similar interpretation as that of single [Analyses](./viewing-the-category-importance-information-in-beam.md). It represents a weighted aggregation of the Category Importance from each contributing Analysis, where the weights are proportional to the average daily demand of each. This gives more influence to Analyses with a larger share of the overall group demand.&#x20;
 
 As with single Analyses, the important categories highlight key drivers of demand for your stores or locations, though with a more generalized view. Different strategic actions can be taken based on these insights, for example:
 
