@@ -6,7 +6,7 @@ description: Using the API tools to explore and use the API
 
 ### API Tokens
 
-This part of Control Center allows you to create an API token in order to use the API. See [how-to-create-an-api-token.md](how-to-create-an-api-token.md "mention").
+This part of the WebApp allows you to create an API token in order to use the API. See [how-to-create-an-api-token.md](how-to-create-an-api-token.md "mention").
 
 ### API Explorer
 

@@ -10,7 +10,7 @@ Events such as concerts, expos and public holidays can shift consumer behavior a
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [Control Center](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../api/saved-locations/).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in the [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../api/saved-locations/).
 
 ## Use Cases
 
@@ -129,7 +129,7 @@ print(response.json())
 
 Select the types of events for the search.
 
-* **Relevant Event Categories**: To identify [event categories](../predicthq-data/event-categories/) that are most relevant to your location, use [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, start with our [industry recommendations](../guides/industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
+* **Relevant Event Categories**: To identify [event categories](../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, start with our [industry recommendations](../guides/industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 
 <!---->
 
@@ -145,7 +145,7 @@ params={
   } 
 ```
 
-Next, Tom plans to use use [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
+Next, Tom plans to use use [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
 
 </details>
 
@@ -522,7 +522,7 @@ For more details, visit:
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 
 * **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
-* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Demand Analysis](https://www.predicthq.com/support/beam-overview) in [Control Center](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
+* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
 * **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 
 ## Conclusion

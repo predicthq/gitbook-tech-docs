@@ -77,7 +77,7 @@ The notebook can also be [compiled and downloaded](https://observablehq.com/docu
 
 ### Extension
 
-Another approach to using calendars is to showcase the most impactful events, including links to their respective pages on Control Center. This method involves fetching event data from the [Events API](../../api/events/search-events.md), sorting by attendance, and then directly displaying the top events on the calendar.
+Another approach to using calendars is to showcase the most impactful events, including links to their respective pages in the WebApp. This method involves fetching event data from the [Events API](../../api/events/search-events.md), sorting by attendance, and then directly displaying the top events on the calendar.
 
 {% hint style="info" %}
 For more information on using the Events API, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention").

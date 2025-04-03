@@ -24,7 +24,7 @@ When viewing your Value Quantification results, you can expand the results to vi
 
 #### Current Annual Revenue due to Events <a href="#current-annual-revenue-due-to-events" id="current-annual-revenue-due-to-events"></a>
 
-This represents the annual revenue that the Beam Value Quantification model has identified as attributable to events. The model looks at the proportion of positive variability ([positive remainder](https://www.predicthq.com/support/viewing-the-time-series-impact-analysis)) then leverages an attribution model to associate a percentage of the remainder to the impact of events taking place on a given day. Once those elements are worked out, it applies the unit you specified in order to calculate the annual revenue gain that is being caused by events.
+This represents the annual revenue that the Beam Value Quantification model has identified as attributable to events. The model looks at the proportion of positive variability ([positive remainder](./viewing-the-time-series-impact-analysis-in-beam.md)) then leverages an attribution model to associate a percentage of the remainder to the impact of events taking place on a given day. Once those elements are worked out, it applies the unit you specified in order to calculate the annual revenue gain that is being caused by events.
 
 #### **Demand Variability**
 

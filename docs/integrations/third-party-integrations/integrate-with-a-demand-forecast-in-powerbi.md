@@ -51,13 +51,13 @@ print(suggested_radius.radius, suggested_radius.radius_unit, suggested_radius.lo
 
 Next, the Beam API decomposes our demand data into baseline and remainders. This separation allows us to distinguish regular demand from anomalies and understand the factors driving these demand anomalies, providing a foundation for a more targeted forecasting approach.
 
-<figure><img src="../../.gitbook/assets/beam-result-screenshot.png" alt=""><figcaption><p>Beam correlation results shown in Control Center</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/beam-result-screenshot.png" alt=""><figcaption><p>Beam correlation results shown in the WebApp</p></figcaption></figure>
 
 ### Feature Importance using Beam
 
 We then utilized Beam's [Feature Importance API](../../api/beam/get-feature-importance.md) to evaluate the impact of various events on demand fluctuations. This API helped us identify which events significantly influenced demand, informing our model about the types of events to prioritize in our forecasting.
 
-<figure><img src="../../.gitbook/assets/feature-importance-result-screenshot.png" alt=""><figcaption><p>Feature Importance results shown in Control Center</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/feature-importance-result-screenshot.png" alt=""><figcaption><p>Feature Importance results shown in the WebApp</p></figcaption></figure>
 
 ### Forecast-Ready Features using Features API
 
