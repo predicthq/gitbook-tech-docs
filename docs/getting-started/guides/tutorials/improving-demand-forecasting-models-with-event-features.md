@@ -99,16 +99,16 @@ Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [i
 {% hint style="info" %}
 For technical details, visit:
 
-- [upload-demand-data.md](../../../api/beam/upload-demand-data.md 'mention')
-- [suggested-radius](../../../api/suggested-radius/ 'mention')
-- [beam](../../../api/beam/ 'mention')
-- [analysis-groups](../../../api/beam/analysis-groups/ 'mention')
+- [upload-demand-data.md](../../../api/beam/upload-demand-data.md "mention")
+- [suggested-radius](../../../api/suggested-radius/ "mention")
+- [beam](../../../api/beam/ "mention")
+- [analysis-groups](../../../api/beam/analysis-groups/ "mention")
 
 For practical implementation:
 
-- [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md 'mention')
-- [ml-features-by-group.md](../beam-guides/ml-features-by-group.md 'mention')
-  {% endhint %}
+- [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md "mention")
+- [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
+{% endhint %}
 
 ### Step 2. Get Features
 
@@ -131,13 +131,13 @@ Some features consider the additional impact from events before and after schedu
 {% hint style="info" %}
 For technical details, visit:
 
-- [features](../../../api/features/ 'mention')
-- [beam](../../../api/beam/ 'mention')
+- [features](../../../api/features/ "mention")
+- [beam](../../../api/beam/ "mention")
 
 For practical implementation:
 
-- [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md 'mention')
-  {% endhint %}
+- [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
+{% endhint %}
 
 ### Step 3. ML Model and Future Predictions
 
@@ -148,8 +148,8 @@ For future predictions, you can access forward-facing data, such as the next two
 {% hint style="info" %}
 For practical implementation:
 
-- [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md 'mention')
-  {% endhint %}
+- [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md "mention")
+{% endhint %}
 
 ## Conclusion
 

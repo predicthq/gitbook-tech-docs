@@ -59,7 +59,7 @@ This links to the [technical documentation](../../).
 
 ### The Dashboard
 
-When you log in to WebApp, you are taken to the dashboard. The dashboard shows a list of tiles that are shortcuts to common operations (like search). It also includes your top five [Location Insights](../location-insights/) locations. These are the locations with the highest [predicted attendance](../location-insights/what-do-each-of-the-columns-mean.md).
+When you log in to the WebApp, you are taken to the dashboard. The dashboard shows a list of tiles that are shortcuts to common operations (like search). It also includes your top five [Location Insights](../location-insights/) locations. These are the locations with the highest [predicted attendance](../location-insights/what-do-each-of-the-columns-mean.md).
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>WebApp dashboard</p></figcaption></figure>
 
