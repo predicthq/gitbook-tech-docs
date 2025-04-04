@@ -124,9 +124,9 @@ The [Features API](../../api/features/) provides access to a library of prebuilt
 | `phq_spend_*`      |     sum     |    <p><br></p>    |
 | `phq_viewership_*` |     max     |    <p><br></p>    |
 
-**Demand Impact Patterns**
+**Predicted Impact Patterns**
 
-Some features consider the additional impact from events before and after scheduled dates, offering a more accurate representation of event impacts on demand. This is known as [Demand Impact Patterns (DIP)](https://www.predicthq.com/blog/use-demand-impact-patterns-to-predict-how-events-shape-consumer-behavior), which vary by event category and industry. Features including DIP are denoted with an industry suffix, such as `phq_attendance_sports_accommodation` or `phq_impact_severe_weather_air_quality_retail`.
+Some features consider the additional impact from events before and after scheduled dates, offering a more accurate representation of event impacts on demand. This is known as [Predicted Impact Patterns)](https://www.predicthq.com/blog/use-demand-impact-patterns-to-predict-how-events-shape-consumer-behavior), which vary by event category and industry. Features including Predicted Impact Patterns are denoted with an industry suffix, such as `phq_attendance_sports_accommodation` or `phq_impact_severe_weather_air_quality_retail`.
 
 {% hint style="info" %}
 For technical details, visit:
