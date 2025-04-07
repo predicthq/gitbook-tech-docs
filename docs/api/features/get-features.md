@@ -153,7 +153,7 @@ PHQ Impact features provide daily-level aggregated stats based on the predicted 
 
 **Holidays and Observances Impact Pattern Features**
 
-These features include the demand impact patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
+These features include the Predicted Impact Patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
 
 {% hint style="success" %}
 We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
@@ -277,7 +277,7 @@ We recommend that if you operate in the supported industries you use the demand 
 
 ### PHQ Rank Generic Features
 
-These are generic features that do not include demand impact patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
+These are generic features that do not include Predicted Impact Patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
 
 <table><thead><tr><th width="369">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr><tr><td><code>phq_rank_daylight_savings</code></td><td>Daylight savings</td></tr><tr><td><code>phq_rank_health_warnings</code></td><td>Health Warnings</td></tr><tr><td><code>phq_rank_politics</code></td><td>Politics</td></tr></tbody></table>
 

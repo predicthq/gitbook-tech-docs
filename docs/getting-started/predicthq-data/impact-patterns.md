@@ -1,6 +1,6 @@
-# Impact Patterns
+# Predicted Impact Patterns
 
-Also known as “Demand impact patterns”. This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into their hotel before the concert begins. The demand impact pattern for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries.&#x20;
+This field shows the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. For example, if someone is taking a flight to a location to attend a concert, they are typically not going to be arriving on the day of the event. They will often arrive a couple of days before and check into their hotel before the concert begins. The Predicted Impact Patterns for accommodation reflects the fact that this demand will be felt before the event starts and often after it ends. Impact patterns are industry-specific and reflect the varying leading and lagging impact of events on different industries.&#x20;
 
 {% hint style="success" %}
 We recommend that if you operate in the supported industries you use demand impact features instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes. In our testing we have found significant forecasting accuracy improvements from using impact pattern features in demand forecast machine learning models.
@@ -10,7 +10,7 @@ Below is a visual representation of impact patterns:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-You can use Demand Impact Patterns in your demand forecasting so that your machine learning models will take account of the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.&#x20;
+You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models will take account of the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.&#x20;
 
 #### Vertical, type, and category mapping
 
@@ -135,4 +135,4 @@ or for `retail` for severe weather events
 
 ## Impact Patterns in the Features API
 
-You can also use Demand Impact Patterns with the Features API. The features API provides pre-built machine learning features for demand forecasting. See the[ features API ](../../api/features/get-features.md#impact-patterns)documentation. Use the features for your industry to get more accurate forecasting results. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. In order to use impact patterns with the features API you need to use the impact pattern features. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`.  If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.
+You can also use Predicted Impact Patterns with the Features API. The features API provides pre-built machine learning features for demand forecasting. See the[ features API ](../../api/features/get-features.md#impact-patterns)documentation. Use the features for your industry to get more accurate forecasting results. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. In order to use impact patterns with the features API you need to use the impact pattern features. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`.  If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.
