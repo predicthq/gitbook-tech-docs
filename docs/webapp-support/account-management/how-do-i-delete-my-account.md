@@ -1,7 +1,7 @@
 # How Do I Delete My Account?
 
 {% hint style="warning" %}
-### If you belong to multiple organizations, you will have to remove yourself from each organization individually first before you can delete your account.
+### If you belong to multiple organizations, you will have to remove yourself from each organization individually first before you can fully delete your account.
 {% endhint %}
 
 To delete your account, follow these steps:
@@ -11,6 +11,4 @@ To delete your account, follow these steps:
 3. Scroll to the bottom of the profile form
 4. Choose "Remove me from ..."
 
-Please note that once an account is deleted, you will also be unsubscribed from all our emails and any projects, saved searches, settings and work created within that account will be lost. If you have a paid plan then your access to our API will be removed. All your information will be wiped. Sorry, we cannot restore your account if you change your mind later.&#x20;
-
-If there are any outstanding fees, these must be paid before you can delete your account.
+Please note that once an account is deleted, you will also be unsubscribed from all our emails and any items created within that account will be lost. API access will be removed. All your information will be wiped. Sorry, we cannot restore your account if you change your mind later.
