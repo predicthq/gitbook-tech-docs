@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Swagger UI](https://api.predicthq.com/docs/)
 * [API Explorer](https://control.predicthq.com/explorer)
 * [Loop](https://loop.predicthq.com)
 * [System Status](https://www.predicthqstatus.com)

@@ -7,6 +7,7 @@ description: We provide OpenAPI specs for our APIs
 We're in the process of providing OpenAPI specs for all our APIs. These live in a Github repo. Our API Reference pages are auto-generated based on these specs.
 
 * [OpenAPI Specs Github Repo](https://github.com/predicthq/api-specs)
+* [Swagger UI](https://api.predicthq.com/docs/) - Test out our APIs in the familiar Swagger UI. Note the number of APIs available here will expand as we introduce more OpenAPI specs.
 
 {% hint style="success" %}
 You can also test-drive the PredictHQ API by importing our Postman Collection below.&#x20;
