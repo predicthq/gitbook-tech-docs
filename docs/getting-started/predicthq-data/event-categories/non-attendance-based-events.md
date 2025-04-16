@@ -59,7 +59,15 @@ School holiday events represent the general date range in an area where the scho
 
 **Note**: The School holidays category covers the holiday dates in primary schools and secondary schools. School holidays for higher education institutions are under the [Academic Events](attendance-based-events.md#academic) category.
 
-**LABELS**
+**Predicted School Holiday events**
+
+PredictHQ provides global estimates for School Holiday events that are not yet confirmed, predicting events up to three years into the future.
+
+These predicted events are marked with a `predicted` value in the event's `state` field and always occur in the future.
+
+Predicted School Holiday events contain the same data attributes as confirmed events, which are identified by a `state` value of `active`.
+
+**Labels**
 
 All school holidays events have both `school` and `holiday` labels. Some events may have an `estimated` label when there is no date available from the official source but a pattern from the previous years can be used to estimate the holiday dates.
 
@@ -75,13 +83,13 @@ School holiday is an area event, it scopes to either locality, localadmin, count
 
 The latitude and longitude is pointing to the center of the region or country.
 
-<table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina, Sweden, Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
+<table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina,  Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates, Chile</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
 
 #### School Holidays in the United Kingdom
 
 Our school holidays data goes to a more granular detailed level for the United Kingdom than for other countries. Our school holidays data includes local council level school holidays for England, Wales, North Ireland and Scotland.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Note**
 
 Our school holidays granularity changed in September 2021 to move from the country level for England, Wales, Scotland and Northern Ireland to the local council level.
