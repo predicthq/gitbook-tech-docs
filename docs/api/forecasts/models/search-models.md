@@ -1,0 +1,12 @@
+---
+description: Search forecast models.
+---
+
+# Search Models
+
+{% include "../../../.gitbook/includes/forecasts-api-public-preview-hint.md" %}
+
+{% openapi-operation spec="forecasts-api" path="/v1/forecasts/models" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
+

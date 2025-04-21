@@ -1,0 +1,11 @@
+---
+description: Replace an existing forecast model.
+---
+
+# Replace Model
+
+{% include "../../../.gitbook/includes/forecasts-api-public-preview-hint.md" %}
+
+{% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}" method="put" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
