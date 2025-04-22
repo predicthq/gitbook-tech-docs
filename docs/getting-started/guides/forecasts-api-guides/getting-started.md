@@ -313,11 +313,11 @@ To get the most accurate results from the Forecasts API, your input data needs t
 * Watch out for tiny values: Very small but non-zero demand can distort percentage-based metrics like MAPE.
 * Exclude outliers if needed: Remove early COVID-19 disruptions or other non-repeating anomalies if they don’t reflect current demand.
 
-For more detailed recommendations, see the [Troubleshooting Guide](troubleshooting-guide-for-forecasts-api.md).
+For more detailed recommendations, see the [Troubleshooting Guide](troubleshooting.md).
 
 ## Troubleshooting
 
-If your forecasts aren’t meeting expectations, don’t worry—there are several common reasons why accuracy might be lower than expected. We’ve put together a dedicated [Troubleshooting Guide](troubleshooting-guide-for-forecasts-api.md) to help you identify and resolve these issues.
+If your forecasts aren’t meeting expectations, don’t worry—there are several common reasons why accuracy might be lower than expected. We’ve put together a dedicated [Troubleshooting Guide](troubleshooting.md) to help you identify and resolve these issues.
 
 The guide covers topics like:
 
@@ -336,7 +336,7 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 
 * [Forecasts API Reference](../../../api/forecasts/) - Full schema, endpoints and parameters
 * [Understanding Forecast Accuracy Metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE and RMSE
-* [Troubleshooting Guide for Forecasts API](troubleshooting-guide-for-forecasts-api.md) - Common causes of low accuracy and how to fix them
+* [Troubleshooting Guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
 
 
 
