@@ -14,8 +14,12 @@ Why Use It?
 
 PredictHQ’s Forecasts API is the only event-driven, fully automated forecasting solution available—built to get you to accurate forecasts without the complexity.
 
+### SageMaker Demo
+
+Forecasts API can be used anywhere you can run code (SageMaker, Snowflake, Databricks etc). The demo here is running in AWS SageMaker.
+
 {% embed url="https://www.loom.com/share/f9c233261a8e4cb58ba8b2c752c4b542?sid=2366ebc2-4c16-4976-b9bc-ef6a0a1d8187" %}
-Forecasts API Notebook Run-Through
+Forecasts API Notebook Run-Through in AWS SageMaker
 {% endembed %}
 
 ## Forecasting Workflow
