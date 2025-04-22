@@ -78,3 +78,13 @@ What to try:
 * Use MAPE when your demand values aren’t near zero—it shows relative error in percentage terms.
 * Use RMSE if large deviations are especially costly in your business.
 * Compare forecasts visually as well—some patterns look worse in numbers than they are in practice.
+
+### Very Small but Non-Zero Demand Values
+
+MAPE is sensitive not just to zeros, but also to very small non-zero demand values. When actuals are consistently low (e.g. 0.1, 0.5), even minor absolute errors can result in disproportionately large percentage errors. This can make the forecast seem worse than it actually is.
+
+What to try:
+
+* Review your data for unusually small values—are they valid, or could they be artifacts of rounding, smoothing, or unit conversion?
+* Consider filtering, aggregating, or removing very low-volume series if they do not represent meaningful demand. This can reduce noise and improve the signal-to-noise ratio in your forecast evaluation.
+* Use alternative metrics such as Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE), which are less sensitive to small denominators and provide more stable evaluations.
