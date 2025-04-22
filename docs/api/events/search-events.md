@@ -14,9 +14,9 @@ This is sometimes confused with missing data. If you're not seeing the results y
 Your subscription settings can be viewed in our [WebApp](https://control.predicthq.com/settings/plans).
 {% endhint %}
 
-{% openapi src="https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml" path="/v1/events/" method="get" %}
-[https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml)
-{% endopenapi %}
+{% openapi-operation spec="events-api" path="/v1/events/" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## Examples
 

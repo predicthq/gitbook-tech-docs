@@ -4,9 +4,9 @@ description: Get the count of events by category, PHQ Label and more.
 
 # Get Event Counts
 
-{% openapi src="https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml" path="/v1/events/count/" method="get" %}
-[https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml)
-{% endopenapi %}
+{% openapi-operation spec="events-api" path="/v1/events/count/" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
 ## OpenAPI Spec
 
