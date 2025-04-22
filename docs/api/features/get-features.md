@@ -20,9 +20,7 @@ POST https://api.predicthq.com/v1/features/
 
 ### Query Parameters
 
-<table><thead><tr><th width="224">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>offset</code><br><br>number</td><td><p>The number of results to skip. The default is <code>0</code>.</p><p>E.g. <code>?offset=20</code></p></td></tr><tr><td><code>limit</code><br><br>number</td><td><p>The maximum number of results to return per page. </p><p>The default limit is <code>100</code> and the maximum per page is <code>100</code>. </p><p>E.g. <code>?limit=10</code></p></td></tr></tbody></table>
-
-
+<table><thead><tr><th width="224">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>offset</code><br><br>number</td><td><p>The number of results to skip. The default is <code>0</code>.</p><p>E.g. <code>?offset=20</code></p></td></tr><tr><td><code>limit</code><br><br>number</td><td><p>The maximum number of results to return per page.</p><p>The default limit is <code>100</code> and the maximum per page is <code>100</code>.</p><p>E.g. <code>?limit=10</code></p></td></tr></tbody></table>
 
 ### Request Body
 
@@ -32,12 +30,12 @@ POST https://api.predicthq.com/v1/features/
     "lte": "2019-11-29"
   }
 }
-</code></pre></td></tr><tr><td><code>beam</code><br><br>object</td><td><p></p><p>An optional <code>beam</code> analysis object which if provided will calculate the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including <code>stats</code> and <code>phq_rank</code> from the Beam analysis and optionally the Beam analysis group.</p><p></p><p>Supports the following fields:</p><ul><li><code>analysis_id</code> - Beam analysis id (Required if <code>beam</code> block is present in the request body)</li><li><code>group_id</code> - Beam analysis group id (Optional)</li></ul><p>If <code>beam.analysis_id</code> is provided, the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including<code>stats</code> and <code>phq_rank</code> will be calculated from the Beam analysis.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>beam</code><br><br>object</td><td><p>An optional <code>beam</code> analysis object which if provided will calculate the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including <code>stats</code> and <code>phq_rank</code> from the Beam analysis and optionally the Beam analysis group.</p><p>Supports the following fields:</p><ul><li><code>analysis_id</code> - Beam analysis id (Required if <code>beam</code> block is present in the request body)</li><li><code>group_id</code> - Beam analysis group id (Optional)</li></ul><p>If <code>beam.analysis_id</code> is provided, the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including<code>stats</code> and <code>phq_rank</code> will be calculated from the Beam analysis.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "beam": {
     "analysis_id": "0SXAmHsoZo0"
   }
 }
-</code></pre><p>If both <code>beam.analysis_id</code> and <code>beam.group_id</code> are provided, all the above fields will be calculated from the Beam analysis but the <code>phq_*</code> features will be calculated from the Beam analysis Group.</p><p><strong>Note:</strong> This is useful for when you want to request features for a variety of locations while maintaining feature consistency by limiting the returned features to those of the group's feature importance results.</p><p></p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre><p>If both <code>beam.analysis_id</code> and <code>beam.group_id</code> are provided, all the above fields will be calculated from the Beam analysis but the <code>phq_*</code> features will be calculated from the Beam analysis Group.</p><p><strong>Note:</strong> This is useful for when you want to request features for a variety of locations while maintaining feature consistency by limiting the returned features to those of the group's feature importance results.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "beam": {
     "analysis_id": "0SXaMHsoYo0",
     "group_id": "QxE9BcLq7ZY"
@@ -76,7 +74,7 @@ POST https://api.predicthq.com/v1/features/
     }
   }
 }
-</code></pre></td></tr><tr><td><code>interval</code><br>string<br>optional</td><td><p>Aggregation interval.<br><br><strong>Possible values:</strong></p><ul><li><code>day</code> (default) for daily aggregation</li><li><code>week</code> for weekly aggregation</li></ul></td></tr><tr><td><code>week_start_day</code><br>string<br>optional</td><td><p>The weekday to be treated as the start of the week.</p><p><strong>Possible values:</strong></p><ul><li><code>monday</code> (default)</li><li><code>tuesday</code></li><li><code>wednesday</code></li><li><code>thursday</code></li><li><code>friday</code></li><li><code>saturday</code></li><li><code>sunday</code></li></ul><p><br>Only applicable when <code>interval</code> is set to <code>week</code>.</p></td></tr><tr><td><p><code>predicted_events</code><br>object </p><p>optional</p></td><td><p>Include or Exclude predicted events.<br><br>Supports the following fields:</p><ul><li><p><code>exclude</code> Possible values: </p><ul><li><code>true</code></li><li><code>false</code>(default) Include predicted events</li></ul></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>interval</code><br>string<br>optional</td><td><p>Aggregation interval.<br><br><strong>Possible values:</strong></p><ul><li><code>day</code> (default) for daily aggregation</li><li><code>week</code> for weekly aggregation</li></ul></td></tr><tr><td><code>week_start_day</code><br>string<br>optional</td><td><p>The weekday to be treated as the start of the week.</p><p><strong>Possible values:</strong></p><ul><li><code>monday</code> (default)</li><li><code>tuesday</code></li><li><code>wednesday</code></li><li><code>thursday</code></li><li><code>friday</code></li><li><code>saturday</code></li><li><code>sunday</code></li></ul><p><br>Only applicable when <code>interval</code> is set to <code>week</code>.</p></td></tr><tr><td><p><code>predicted_events</code><br>object</p><p>optional</p></td><td><p>Include or Exclude predicted events.<br><br>Supports the following fields:</p><ul><li><p><code>exclude</code> Possible values:</p><ul><li><code>true</code></li><li><code>false</code>(default) Include predicted events</li></ul></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "predicted_events": {
     "exclude": false
   }
@@ -122,7 +120,7 @@ We recommend using impact pattern features instead of generic features if you ar
 
 <table><thead><tr><th width="462">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_community_accommodation</code></td><td>Community accommodation impact</td></tr><tr><td><code>phq_attendance_concerts_accommodation</code></td><td>Concerts accommodation impact</td></tr><tr><td><code>phq_attendance_conferences_accommodation</code></td><td>Conferences accommodation impact</td></tr><tr><td><code>phq_attendance_expos_accommodation</code></td><td>Expos accommodation impact</td></tr><tr><td><code>phq_attendance_festivals_accommodation</code></td><td>Festivals accommodation impact</td></tr><tr><td><code>phq_attendance_performing_arts_accommodation</code></td><td>Performing Arts accommodation impact</td></tr><tr><td><code>phq_attendance_sports_accommodation</code></td><td>Sports accommodation impact</td></tr><tr><td><code>phq_attendance_community_hospitality</code></td><td>Community hospitality impact</td></tr><tr><td><code>phq_attendance_concerts_hospitality</code></td><td>Concerts hospitality impact</td></tr><tr><td><code>phq_attendance_conferences_hospitality</code></td><td>Conferences hospitality impact</td></tr><tr><td><code>phq_attendance_expos_hospitality</code></td><td>Expos hospitality impact</td></tr><tr><td><code>phq_attendance_festivals_hospitality</code></td><td>Festivals hospitality impact</td></tr><tr><td><code>phq_attendance_performing_arts_hospitality</code></td><td>Performing Arts hospitality impact</td></tr><tr><td><code>phq_attendance_sports_hospitality</code></td><td>Sports hospitality impact</td></tr><tr><td><code>phq_attendance_community_retail</code></td><td>Community Retail impact</td></tr><tr><td><code>phq_attendance_concerts_retail</code></td><td>Concerts Retail impact</td></tr><tr><td><code>phq_attendance_conferences_retail</code></td><td>Conferences Retail impact</td></tr><tr><td><code>phq_attendance_expos_retail</code></td><td>Expos Retail impact</td></tr><tr><td><code>phq_attendance_festivals_retail</code></td><td>Festivals Retail impact</td></tr><tr><td><code>phq_attendance_performing_arts_retail</code></td><td>Performing Arts Retail impact</td></tr><tr><td><code>phq_attendance_sports_retail</code></td><td>Sports Retail impact</td></tr></tbody></table>
 
-### Configuration
+#### Configuration
 
 You can configure PHQ Attendance features using the options below.
 
@@ -139,7 +137,7 @@ You can configure PHQ Attendance features using the options below.
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -171,7 +169,7 @@ Currently supported industries are: Retail.
 
 See [#attended-events-impact-pattern-features](get-features.md#attended-events-impact-pattern-features "mention")
 
-### Configuration
+#### Configuration
 
 You can configure PHQ Impact features using the options below.
 
@@ -188,7 +186,7 @@ You can configure PHQ Impact features using the options below.
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -207,7 +205,7 @@ You can request industry-specific features which are tuned to one of three poten
 
 <table><thead><tr><th width="440">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_spend_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_spend_expos</code></td><td>Expos</td></tr><tr><td><code>phq_spend_sports</code></td><td>Sports</td></tr><tr><td><code>phq_spend_community</code></td><td>Community</td></tr><tr><td><code>phq_spend_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_spend_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_spend_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_spend_conferences_accommodation</code></td><td>Conferences - Accommodation</td></tr><tr><td><code>phq_spend_expos_accommodation</code></td><td>Expos - Accommodation</td></tr><tr><td><code>phq_spend_sports_accommodation</code></td><td>Sports - Accommodation</td></tr><tr><td><code>phq_spend_community_accommodation</code></td><td>Community - Accommodation</td></tr><tr><td><code>phq_spend_concerts_accommodation</code></td><td>Concerts - Accommodation</td></tr><tr><td><code>phq_spend_festivals_accommodation</code></td><td>Festivals - Accommodation</td></tr><tr><td><code>phq_spend_performing_arts_accommodation</code></td><td>Performing Arts - Accommodation</td></tr><tr><td><code>phq_spend_conferences_hospitality</code></td><td>Conferences - Hospitality</td></tr><tr><td><code>phq_spend_expos_hospitality</code></td><td>Expos - Hospitality</td></tr><tr><td><code>phq_spend_sports_hospitality</code></td><td>Sports - Hospitality</td></tr><tr><td><code>phq_spend_community_hospitality</code></td><td>Community - Hospitality</td></tr><tr><td><code>phq_spend_concerts_hospitality</code></td><td>Concerts - Hospitality</td></tr><tr><td><code>phq_spend_festivals_hospitality</code></td><td>Festivals - Hospitality</td></tr><tr><td><code>phq_spend_performing_arts_hospitality</code></td><td>Performing Arts - Hospitality</td></tr><tr><td><code>phq_spend_conferences_transportation</code></td><td>Conferences - Transportation</td></tr><tr><td><code>phq_spend_expos_transportation</code></td><td>Expos - Transportation</td></tr><tr><td><code>phq_spend_sports_transportation</code></td><td>Sports - Transportation</td></tr><tr><td><code>phq_spend_community_transportation</code></td><td>Community - Transportation</td></tr><tr><td><code>phq_spend_concerts_transportation</code></td><td>Concerts - Transportation</td></tr><tr><td><code>phq_spend_festivals_transportation</code></td><td>Festivals - Transportation</td></tr><tr><td><code>phq_spend_performing_arts_transportation</code></td><td>Performing Arts - Transportation</td></tr></tbody></table>
 
-### Configuration
+#### Configuration
 
 You can configure PHQ Spend features using the options below.
 
@@ -224,7 +222,7 @@ You can configure PHQ Spend features using the options below.
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -238,7 +236,7 @@ PHQ Viewership features provide daily-level aggregated stats based on the number
 
 <table><thead><tr><th width="596">Feature</th><th width="385">Description</th></tr></thead><tbody><tr><td><code>phq_viewership_sports</code></td><td>Sports - (All)</td></tr><tr><td><code>phq_viewership_sports_american_football</code></td><td>American Football - (All)</td></tr><tr><td><code>phq_viewership_sports_american_football_ncaa_men</code></td><td>American Footbal - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_american_football_nfl</code></td><td>American Football - NFL</td></tr><tr><td><code>phq_viewership_sports_auto_racing</code></td><td>Automotive Racing - All</td></tr><tr><td><code>phq_viewership_sports_auto_racing_indy_car</code></td><td>Automotive Racing - Indy Car</td></tr><tr><td><code>phq_viewership_sports_auto_racing_nascar</code></td><td>Automotive Racing - NASCAR</td></tr><tr><td><code>phq_viewership_sports_baseball</code></td><td>Baseball - (All)</td></tr><tr><td><code>phq_viewership_sports_baseball_mlb</code></td><td>Baseball - MLB</td></tr><tr><td><code>phq_viewership_sports_baseball_ncaa_men</code></td><td>Baseball - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_basketball</code></td><td>Basketball - (All)</td></tr><tr><td><code>phq_viewership_sports_basketball_nba</code></td><td>Basketball - NBA</td></tr><tr><td><code>phq_viewership_sports_basketball_ncaa_men</code></td><td>Basketball - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_basketball_ncaa_women</code></td><td>Basketball - NCAA Women's</td></tr><tr><td><code>phq_viewership_sports_boxing</code></td><td>Boxing - (All)</td></tr><tr><td><code>phq_viewership_sports_golf</code></td><td>Golf - (All)</td></tr><tr><td><code>phq_viewership_sports_golf_masters</code></td><td>Golf - Masters</td></tr><tr><td><code>phq_viewership_sports_golf_pga_championship</code></td><td>Golf - PGA Championships</td></tr><tr><td><code>phq_viewership_sports_golf_pga_tour</code></td><td>Golf - PGA Tours</td></tr><tr><td><code>phq_viewership_sports_golf_us_open</code></td><td>Golf - US Open</td></tr><tr><td><code>phq_viewership_sports_horse_racing</code></td><td>Horse Racing - (All)</td></tr><tr><td><code>phq_viewership_sports_horse_racing_belmont_stakes</code></td><td>Horse Racing - Belmont Stakes</td></tr><tr><td><code>phq_viewership_sports_horse_racing_kentucky_derby</code></td><td>Horse Racing - Kentucky Derby</td></tr><tr><td><code>phq_viewership_sports_horse_racing_preakness_stakes</code></td><td>Horse Racing - Preakness Stakes</td></tr><tr><td><code>phq_viewership_sports_ice_hockey</code></td><td>Ice Hockey - (All)</td></tr><tr><td><code>phq_viewership_sports_ice_hockey_nhl</code></td><td>Ice Hockey - NHL</td></tr><tr><td><code>phq_viewership_sports_mma</code></td><td>Mixed Martial Arts - (All)</td></tr><tr><td><code>phq_viewership_sports_mma_ufc</code></td><td>Mixed Martial Arts - UFC</td></tr><tr><td><code>phq_viewership_sports_soccer</code></td><td>Soccer - (All)</td></tr><tr><td><code>phq_viewership_sports_soccer_concacaf_champions_league</code></td><td>Soccer - CONCACAF Champions League</td></tr><tr><td><code>phq_viewership_sports_soccer_concacaf_gold_cup</code></td><td>Soccer - CONCACAF Gold Cup</td></tr><tr><td><code>phq_viewership_sports_soccer_copa_america_men</code></td><td>Soccer - COPA America Men's</td></tr><tr><td><code>phq_viewership_sports_soccer_fifa_world_cup_women</code></td><td>Soccer - FIFA World Cup Women's</td></tr><tr><td><code>phq_viewership_sports_soccer_fifa_world_cup_men</code></td><td>Soccer - FIFA World Cup Men's</td></tr><tr><td><code>phq_viewership_sports_soccer_mls</code></td><td>Soccer - MLS</td></tr><tr><td><code>phq_viewership_sports_soccer_uefa_champions_league_men</code></td><td>Soccer - UEFA Champions League Men's</td></tr><tr><td><code>phq_viewership_sports_softball</code></td><td>Softball - (All)</td></tr><tr><td><code>phq_viewership_sports_softball_ncaa_women</code></td><td>Softball - NCAA Women's</td></tr><tr><td><code>phq_viewership_sports_tennis</code></td><td>Tennis - (All)</td></tr><tr><td><code>phq_viewership_sports_tennis_us_open</code></td><td>Tennis - US Open</td></tr><tr><td><code>phq_viewership_sports_tennis_wimbledon</code></td><td>Tennis - Wimbledon</td></tr></tbody></table>
 
-### Configuration
+#### Configuration
 
 You can configure PHQ Attendance features using the options below.
 
@@ -255,7 +253,7 @@ You can configure PHQ Attendance features using the options below.
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optiona</td><td><p></p><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optiona</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -267,7 +265,7 @@ You can configure PHQ Attendance features using the options below.
 {% tab title="PHQ Rank Features" %}
 PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
 
-### PHQ Rank Impact Pattern Features
+#### PHQ Rank Impact Pattern Features
 
 See the "Holidays and Observances Impact Pattern Features" under PHQ Impact in the tab above. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
@@ -275,13 +273,13 @@ See the "Holidays and Observances Impact Pattern Features" under PHQ Impact in t
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
-### PHQ Rank Generic Features
+#### PHQ Rank Generic Features
 
 These are generic features that do not include Predicted Impact Patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
 
 <table><thead><tr><th width="369">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_rank_observances</code></td><td>Observances</td></tr><tr><td><code>phq_rank_public_holidays</code></td><td>Public Holidays</td></tr><tr><td><code>phq_rank_school_holidays</code></td><td>School Holidays</td></tr><tr><td><code>phq_rank_academic_session</code></td><td>Academic - Session</td></tr><tr><td><code>phq_rank_academic_exam</code></td><td>Academic - Exam</td></tr><tr><td><code>phq_rank_academic_holiday</code></td><td>Academic - Holiday</td></tr><tr><td><code>phq_rank_daylight_savings</code></td><td>Daylight savings</td></tr><tr><td><code>phq_rank_health_warnings</code></td><td>Health Warnings</td></tr><tr><td><code>phq_rank_politics</code></td><td>Politics</td></tr></tbody></table>
 
-### Configuration
+#### Configuration
 
 PHQ Rank features cannot currently be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
 {% endtab %}

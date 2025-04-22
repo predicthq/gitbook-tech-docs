@@ -10,6 +10,8 @@ MAPE measures the average size of the error as a percentage of actual values. It
 * Good for comparing forecasts across series with different scales.
 * Can produce very large values when actual demand is low, even if the forecast is reasonable.
 
+In our expanding window evaluation framework, the MAPE is calculated not just from a single forecast, but across multiple rolling forecast iterations—this simulates how the model would perform in a real-world setting where forecasts are generated repeatedly over time, and ensures the reported accuracy reflects consistent performance, not just a one-off result.
+
 ## MAE – Mean Absolute Error
 
 MAE shows the average difference between predicted and actual values, in the same units as your input (e.g. units sold, bookings). It treats all errors equally, making it a simple and intuitive measure of overall accuracy.
