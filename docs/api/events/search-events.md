@@ -77,7 +77,7 @@ curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,con
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Events API can be [found here](https://github.com/predicthq/api-specs/blob/main/openapi/events-api.yaml).
+The OpenAPI spec for Events API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
 
 ## Guides
 
