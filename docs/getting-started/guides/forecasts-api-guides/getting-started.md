@@ -39,14 +39,13 @@ flowchart LR
 
 To generate a forecast, you need to provide a daily time series with two columns:
 
-<table><thead><tr><th width="179.8515625">Column</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code></td><td>The date of the observation, in YYYY-MM-DD format (ISO 8601).</td></tr><tr><td><code>demand</code></td><td>The actual demand value for that date (e.g. units sold, bookings).</td></tr></tbody></table>
+<table><thead><tr><th width="179.8515625">Column</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code></td><td>The date of the observation, in <code>YYYY-MM-DD</code> format (ISO 8601).</td></tr><tr><td><code>demand</code></td><td>The actual demand value for that date (e.g. units sold, bookings).</td></tr></tbody></table>
 
 Requirements:
 
-* The data must be daily and chronologically ordered
+* The data must be daily level
 * Provide at least 18 months of history for best results
-* Gaps, duplicates, and non-numeric demand values will be rejected
-* Do not pre-fill missing dates or smooth demand values—just send what you have
+* Demand data will be rejected if it contains duplicated dates, missing values in the demand column, or non-numeric demand values
 
 Example:
 
@@ -65,6 +64,8 @@ date,demand
 ### Create a Model
 
 All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
+
+The configuration below specifies the location and other key inputs used to create a forecast model:
 
 ```python
 lat = 51.50396
@@ -106,7 +107,7 @@ response = requests.post(
     headers=headers,
     data=json.dumps(
         {
-            "name": config["name"],
+            "name": name,
             "geojson": {
                 "type": "Feature",
                 "properties": {"radius": radius, "radius_unit": radius_unit},
@@ -272,7 +273,7 @@ Every date in the forecast response includes a `forecast` value—that’s the c
 * `phq_features` - List of features (from Features API) that were identified through Beam's Feature Importance process as relevant to your demand, as well as their values. This field is only available to customers who have also purchase our Features product.
 
 {% hint style="info" %}
-Explainability is optional—include `phq_explainability` in your `include` query param to enable it.
+Explainability is optional—use `phq_explainability` in your `include` query param to enable it.
 {% endhint %}
 
 Here's an example truncated response for a single date showing `phq_explainability`:

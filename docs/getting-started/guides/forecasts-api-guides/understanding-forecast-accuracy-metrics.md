@@ -4,7 +4,11 @@ The Forecasts API provides three common metrics to help you evaluate how well th
 
 ## MAPE – Mean Absolute Percentage Error
 
-MAPE measures the average size of the error as a percentage of actual values. It’s easy to interpret and useful when comparing forecast performance across different products, locations, or scales. However, it can become distorted when actual values are close to zero.
+MAPE quantifies the average magnitude of forecast error as a percentage of actual values. It’s easy to interpret and especially useful for comparing forecast performance across products, locations, or scales. However, it can become distorted when actual values are close to zero.
+
+{% hint style="info" %}
+In plain English - MAPE shows how far off your forecasts are, on average, as a percentage. It’s great for comparing performance across different types of demand—but it may overstate errors when actual demand values are very low.
+{% endhint %}
 
 * Best used when actual values are consistently non-zero.
 * Good for comparing forecasts across series with different scales.
@@ -14,7 +18,11 @@ In our expanding window evaluation framework, the MAPE is calculated not just fr
 
 ## MAE – Mean Absolute Error
 
-MAE shows the average difference between predicted and actual values, in the same units as your input (e.g. units sold, bookings). It treats all errors equally, making it a simple and intuitive measure of overall accuracy.
+MAE measures the average absolute difference between predicted and actual values, expressed in the same units as your demand (e.g. units sold, bookings). It treats all errors equally, making it a simple and intuitive way to understand overall forecast accuracy.
+
+{% hint style="info" %}
+In plain English - MAE tells you how far off your forecast is on average, using the same units you care about—like “bookings” or “items sold.” Every mistake counts the same, so it gives a clear sense of typical error.
+{% endhint %}
 
 * Easy to interpret and compare against your typical daily volumes.
 * Treats all errors the same—no extra weight on large deviations.
@@ -22,7 +30,11 @@ MAE shows the average difference between predicted and actual values, in the sam
 
 ## RMSE – Root Mean Squared Error
 
-RMSE also measures error in the same units as your input, but gives more weight to large misses by squaring them before averaging. It’s useful when large errors are particularly disruptive.
+RMSE measures the square root of the average squared differences between predicted and actual values, placing greater weight on larger errors.
+
+{% hint style="info" %}
+In plain English - It tells you how far off your forecasts are on average, but it especially highlights big mistakes—so if you care about avoiding large misses, RMSE is useful.
+{% endhint %}
 
 * Penalizes larger errors more than MAE does.
 * Helpful for identifying volatility or occasional large misses.
