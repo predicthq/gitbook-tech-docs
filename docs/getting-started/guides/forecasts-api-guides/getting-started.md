@@ -22,6 +22,28 @@ Forecasts API can be used anywhere you can run code (SageMaker, Snowflake, Datab
 Forecasts API Notebook Run-Through in AWS SageMaker
 {% endembed %}
 
+### Requirements
+
+1. Before you get started make sure you have an [API Token](../../api-quickstart.md#create-an-access-token).
+2. [Use our Notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb) to run an example yourself and adapt it to your needs.
+
+All code snippets in this guide assume the appropriate config has already been set:
+
+```python
+PHQ_API_TOKEN = os.getenv("PHQ_API_TOKEN") or "REPLACE_WITH_YOUR_ACCESS_TOKEN"
+API_URL = "https://api.predicthq.com"
+
+headers = {
+    "Authorization": f"Bearer {PHQ_API_TOKEN}",
+    "Content-Type": "application/json"
+}
+
+lat = 51.50396
+lon = 0.00476
+industry = "restaurants"
+name = "Sample Restaurant Location"
+```
+
 ## Forecasting Workflow
 
 ```mermaid
@@ -64,16 +86,6 @@ date,demand
 ### Create a Model
 
 All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
-
-The configuration below specifies the location and other key inputs used to create a forecast model:
-
-```python
-lat = 51.50396
-lon = 0.00476
-industry = "restaurants"
-name = "Sample Restaurant Location"
-API_URL = "https://api.predicthq.com"
-```
 
 #### Create Saved Location (Using Suggested Radius)
 
