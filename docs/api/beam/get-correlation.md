@@ -48,21 +48,7 @@ Below is an example response:
             "baseline_demand": 1642.8505673206673,
             "remainder": 4250.149432679333,
             "impact_significance": "MEDIUM",
-            "impact_significance_score": 2,
-            "features": {
-                "phq_attendance_concerts": {
-                    "count": 2,
-                    "sum": 1300
-                },
-                "phq_attendance_performing_arts": {
-                    "count": 1,
-                    "sum": 500
-                }
-            },
-            "phq_impact_sum": 0,
-            "phq_spend_sum": 0,
-            "phq_attendance_sum": 1800,
-            "phq_rank_count": 0
+            "impact_significance_score": 2
         },
         {
             "date": "2021-01-02",
@@ -70,18 +56,7 @@ Below is an example response:
             "baseline_demand": 4373.972146649381,
             "remainder": -100.9721466493811,
             "impact_significance": "NO_IMPACT",
-            "impact_significance_score": 0,
-            "features": {
-                "phq_rank_health_warnings": {
-                    "rank_levels": {
-                        "5": 1
-                    }
-                }
-            },
-            "phq_impact_sum": 0,
-            "phq_spend_sum": 0,
-            "phq_attendance_sum": 0,
-            "phq_rank_count": 1
+            "impact_significance_score": 0
         },
     ]
 ...
