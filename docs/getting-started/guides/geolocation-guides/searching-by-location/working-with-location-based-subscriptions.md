@@ -1,5 +1,9 @@
 # Working with Location-Based Subscriptions
 
+{% hint style="info" %}
+**Please note:** If you are subscribed to location-based access and are making requests to our [Events API](../../../../api/events/) or [Features API](../../../../api/features/), you must filter your API calls using a Saved Location ID.
+{% endhint %}
+
 You can purchase access to PredictHQ's events in different ways. You can purchase access to geographic areas like cities, states, or countries. Or you can purchase access to a number of locations to get access to specific business locations. Business locations include stores, hotels, restaurants, parking garages, offices, or any other type of location you can think of.
 
 Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product will find the latitude and longitude for that location and set a [suggested radius](../../../../api/suggested-radius/get-suggested-radius.md) and save the location with those details.
