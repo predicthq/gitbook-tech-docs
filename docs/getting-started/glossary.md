@@ -16,7 +16,7 @@ If you have multiple locations/stores, events will impact them in different ways
 
 Beam saves you weeks and weeks of work by automating the process to filter out the noise.
 
-* Beam API Reference:[beam](../api/beam/ "mention")
+* Beam API Reference: [beam](../api/beam/ "mention")
 * [beam-guides](guides/beam-guides/ "mention")
 
 ## Local Rank
@@ -37,7 +37,7 @@ Customers can use the Loop UI to provide feedback, or use Loop Links - unique UR
 
 All submitted feedback is reviewed by PredictHQ’s data team, and accepted changes are integrated into the platform, enhancing data accuracy and model performance.
 
-* API Reference:[loop](../api/loop/ "mention")
+* API Reference: [loop](../api/loop/ "mention")
 * [Loop UI](https://loop.predicthq.com/)
 
 ## PHQ Rank
@@ -52,7 +52,7 @@ The score is presented on a logarithmic scale, meaning that higher scores repres
 
 Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is one of the core features provided by PredictHQ and is used across the Forecasts API and Features API to quantify the demand impact of events.
 
-* Getting Started Guide:[predicted-attendance.md](predicthq-data/predicted-attendance.md "mention")
+* Getting Started Guide: [predicted-attendance.md](predicthq-data/predicted-attendance.md "mention")
 
 ## Predicted End Times
 
@@ -60,7 +60,7 @@ Predicted End Time is a machine learning–generated estimate of when an event i
 
 Predicted End Time is especially useful when the original event data does not include a defined duration or end timestamp. It helps improve time-based demand modeling and enables better filtering, de-duplication, and overlap handling for events that span long periods.
 
-* Getting Started Guide:[predicted-end-times.md](predicthq-data/predicted-end-times.md "mention")
+* Getting Started Guide: [predicted-end-times.md](predicthq-data/predicted-end-times.md "mention")
 
 ## Predicted Event Spend
 
@@ -98,7 +98,7 @@ Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowin
 
 We strongly recommend all customers use Saved Locations to manage location-specific workflows. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
-* API Reference:[saved-locations](../api/saved-locations/ "mention")
+* API Reference: [saved-locations](../api/saved-locations/ "mention")
 
 ## Suggested Radius
 
@@ -108,4 +108,4 @@ We recommend all customers use Suggested Radius to determine the appropriate sea
 
 The output is relatively stable over time and can be safely cached, with monthly refreshes typically sufficient unless business context or location data changes.
 
-* API Reference:[get-suggested-radius.md](../api/suggested-radius/get-suggested-radius.md "mention")
+* API Reference: [get-suggested-radius.md](../api/suggested-radius/get-suggested-radius.md "mention")
