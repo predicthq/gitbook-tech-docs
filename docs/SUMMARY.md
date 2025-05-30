@@ -8,6 +8,7 @@
 ## Getting Started
 
 * [API Quickstart](getting-started/api-quickstart.md)
+* [Glossary](getting-started/glossary.md)
 * [Data Science Notebooks](getting-started/data-science-notebooks.md)
 * [PredictHQ Data](getting-started/predicthq-data/README.md)
   * [Data Accuracy](getting-started/predicthq-data/data-accuracy.md)
@@ -91,7 +92,6 @@
   * [Inventory Management](getting-started/tutorials-by-use-case/inventory-management.md)
   * [Workforce Optimization](getting-started/tutorials-by-use-case/workforce-optimization.md)
   * [Visualization and Insights](getting-started/tutorials-by-use-case/visualization-and-insights.md)
-* [Glossary](getting-started/glossary.md)
 
 ## Integrations
 

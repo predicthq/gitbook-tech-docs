@@ -16,7 +16,7 @@ If you have multiple locations/stores, events will impact them in different ways
 
 Beam saves you weeks and weeks of work by automating the process to filter out the noise.
 
-* Beam API Reference: [beam](../api/beam/ "mention")
+* API Reference: [beam](../api/beam/ "mention")
 * [beam-guides](guides/beam-guides/ "mention")
 
 ## Local Rank
