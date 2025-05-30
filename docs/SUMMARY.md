@@ -91,6 +91,7 @@
   * [Inventory Management](getting-started/tutorials-by-use-case/inventory-management.md)
   * [Workforce Optimization](getting-started/tutorials-by-use-case/workforce-optimization.md)
   * [Visualization and Insights](getting-started/tutorials-by-use-case/visualization-and-insights.md)
+* [Glossary](getting-started/glossary.md)
 
 ## Integrations
 
