@@ -4,8 +4,6 @@ description: Get forecast values for an existing model.
 
 # Get Forecast
 
-{% include "../../../.gitbook/includes/forecasts-api-public-preview-hint.md" %}
-
 {% hint style="info" %}
 Please note that `phq_features` can only be retrieved if you have also purchased the Features product.
 {% endhint %}
