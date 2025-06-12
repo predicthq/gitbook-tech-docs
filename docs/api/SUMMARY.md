@@ -1,6 +1,8 @@
 # Table of contents
 
-* [API Overview](README.md)
+* [API Reference](README.md)
+* [Swagger UI](https://api.predicthq.com/docs/)
+* [API Overview](<README (1).md>)
   * [Authenticating](overview/authenticating.md)
   * [API Specs](overview/api-specs.md)
   * [Rate Limits](overview/rate-limits.md)
