@@ -1,10 +1,6 @@
 # Table of contents
 
-* [Page](README.md)
-
-## API Reference <a href="#api" id="api"></a>
-
-* [API Overview](overview/README.md)
+* [API Overview](README.md)
   * [Authenticating](overview/authenticating.md)
   * [API Specs](overview/api-specs.md)
   * [Rate Limits](overview/rate-limits.md)
@@ -12,6 +8,9 @@
   * [API Changes](overview/api-changes.md)
   * [Attribution](overview/attribution.md)
   * [Troubleshooting](overview/troubleshooting.md)
+
+## API Reference <a href="#api" id="api"></a>
+
 * [Events](events/README.md)
   * [Search Events](events/search-events.md)
   * [Get Event Counts](events/get-event-counts.md)
