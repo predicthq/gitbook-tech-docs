@@ -117,4 +117,4 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [beam-guides](../../getting-started/guides/beam-guides/ "mention")
+* [beam-guides](../../../getting-started/guides/beam-guides/ "mention")

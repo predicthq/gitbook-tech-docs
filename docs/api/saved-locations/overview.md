@@ -1,7 +1,7 @@
-# Saved Locations
+# Overview
 
 {% hint style="info" %}
-This endpoint is currently in beta.
+This API is currently in beta.
 {% endhint %}
 
 Saved Locations are persistent, user-defined geographic entities that serve as reusable identifiers across PredictHQ’s platform. Defined using a name and a GeoJSON location shape, they may also include an external ID and optional labels for filtering or grouping.

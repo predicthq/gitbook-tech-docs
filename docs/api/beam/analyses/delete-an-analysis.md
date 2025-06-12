@@ -1,14 +1,14 @@
 ---
-description: Rerun the Beam correlation and analysis process.
+description: Delete an existing Analysis.
 ---
 
-# Refresh an Analysis
+# Delete an Analysis
 
 ## Request
 
 ### HTTP Request
 
-<pre class="language-http"><code class="lang-http">POST https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>/refresh
+<pre class="language-http"><code class="lang-http">DELETE https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>
 </code></pre>
 
 ### Path Parameters
@@ -24,8 +24,7 @@ If successful, the HTTP response code will be `202 Accepted`.
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-curl -X POST "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh" \
-     -H "Accept: application/json" \
+curl -X DELETE "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID" \
      -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
 {% endtab %}
@@ -34,11 +33,10 @@ curl -X POST "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh" \
 ```python
 import requests
 
-response = requests.post(
-    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh",
+response = requests.delete(
+    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
-        "Accept": "application/json"
+      "Authorization": "Bearer $ACCESS_TOKEN"
     }
 )
 
@@ -51,6 +49,6 @@ print(response.status_code)
 
 Below are some guides relevant to this API:
 
-* [beam-guides](../../getting-started/guides/beam-guides/ "mention")
+* [beam-guides](../../../getting-started/guides/beam-guides/ "mention")
 
 [^1]: An existing Beam Analysis ID.

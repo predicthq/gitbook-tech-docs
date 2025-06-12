@@ -8,5 +8,6 @@ PredictHQ helps you build smarter models and products with real-world demand int
 
 * [Events API](events/search-events.md) - Clean and enriched real-world event data
 * [Features API](features/get-features.md) - Pre-aggregated ML features
-* [Forecasts API](forecasts/) - Demand forecasting, out of the box
-* [Beam API](beam/) - Filter out the noise
+* [Forecasts API](broken-reference) - Demand forecasting, out of the box
+* [Beam API](broken-reference) - Filter out the noise
+

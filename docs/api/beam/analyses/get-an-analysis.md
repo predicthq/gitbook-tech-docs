@@ -150,6 +150,6 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [beam-guides](../../getting-started/guides/beam-guides/ "mention")
+* [beam-guides](../../../getting-started/guides/beam-guides/ "mention")
 
 [^1]: An existing Beam Analysis ID.

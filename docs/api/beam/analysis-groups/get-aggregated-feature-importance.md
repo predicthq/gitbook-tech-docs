@@ -22,7 +22,7 @@ GET https://api.predicthq.com/v1/beam/analysis-groups/$group_id/feature-importan
 
 ### Response Fields
 
-<table><thead><tr><th width="250">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>feature_importance</code><br>array</td><td>List of Feature Importance groups. The structure of the response matches that of an individual Analysis.<br><br>Please refer to the <a href="../get-feature-importance.md#feature-importance-response-fields">Feature Importance Response Fields</a> section for the structure of each record.</td></tr></tbody></table>
+<table><thead><tr><th width="250">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>feature_importance</code><br>array</td><td>List of Feature Importance groups. The structure of the response matches that of an individual Analysis.<br><br>Please refer to the <a href="../analyses/get-feature-importance.md#feature-importance-response-fields">Feature Importance Response Fields</a> section for the structure of each record.</td></tr></tbody></table>
 
 <details>
 
