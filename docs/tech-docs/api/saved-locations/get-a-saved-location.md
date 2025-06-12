@@ -35,7 +35,7 @@ description: Get an existing Saved Location.
     }
   }
 }
-</code></pre></td></tr><tr><td><code>place_ids</code><br>array</td><td><p>An array of place ids (see the <a href="../places/search-places.md">Places API</a>) for locations that are defined as covering an area (see <a href="../../webapp-support/location-insights/what-is-the-difference-between-center-point-and-radius-and-city-state-country.md">City, State, Country locations</a>) rather than a point and radius.</p><p><br>E.g. <code>[2750405]</code></p></td></tr><tr><td><code>formatted_address</code><br>string</td><td><p>The address of the location. This can be supplied when created a location. If it's not supplied it will be populated by a reverse geocode.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>place_ids</code><br>array</td><td><p>An array of place ids (see the <a href="../places/search-places.md">Places API</a>) for locations that are defined as covering an area (see <a href="https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/location-insights/what-is-the-difference-between-center-point-and-radius-and-city-state-country">City, State, Country locations</a>) rather than a point and radius.</p><p><br>E.g. <code>[2750405]</code></p></td></tr><tr><td><code>formatted_address</code><br>string</td><td><p>The address of the location. This can be supplied when created a location. If it's not supplied it will be populated by a reverse geocode.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "formatted_address": "666 Mission St, San Francisco, CA 94105, USA",
 }
 </code></pre></td></tr><tr><td><code>places</code><br>string</td><td><p>This is a list of (geonames) Places. It is based on the lowest level place_id in the <a href="../../getting-started/guides/geolocation-guides/understanding-place-hierarchies.md">place_hierarchies</a>. It will usually only contain 1 item in the list but will always be a list.</p><pre class="language-json"><code class="lang-json">{
@@ -60,7 +60,7 @@ description: Get an existing Saved Location.
     }
   ]
 }
-</code></pre></td></tr><tr><td><code>summary_insights</code><br>array</td><td><p>This object contains the <a href="../../webapp-support/location-insights/what-do-each-of-the-columns-mean.md">saved locations stats</a>. This includes values for each of the 4 stats as well as the <code>date_range</code> field. The stats reflect the number of events and attend happening for the location.</p><p><br>The date range field includes the start and end datetime for the period that the stats have been calculated for.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>summary_insights</code><br>array</td><td><p>This object contains the <a href="broken-reference">saved locations stats</a>. This includes values for each of the 4 stats as well as the <code>date_range</code> field. The stats reflect the number of events and attend happening for the location.</p><p><br>The date range field includes the start and end datetime for the period that the stats have been calculated for.</p><pre class="language-json"><code class="lang-json">{
   "summary_insights": [
     {
       "date_range": {
