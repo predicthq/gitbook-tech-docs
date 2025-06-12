@@ -17,14 +17,14 @@ layout:
 
 PredictHQ helps you build smarter models and products with real-world demand intelligence. Access high-quality event data, ready-to-use ML features, and a forecasting API designed for real impact. See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
 
-<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a>  <a href="api/overview/" class="button secondary">API Reference</a>
+<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a>  <a href="broken-reference" class="button secondary">API Reference</a>
 
 ## Core APIs
 
-* [Events API](api/events/) - Clean and enriched real-world event data
-* [Features API](api/features/) - Pre-aggregated ML features
-* [Forecasts API](api/forecasts/) - Demand forecasting, out of the box
-* [Beam API](api/beam/) - Filter out the noise
+* [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) - Clean and enriched real-world event data
+* [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) - Pre-aggregated ML features
+* [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Demand forecasting, out of the box
+* [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) - Filter out the noise
 
 ## Example
 
@@ -47,6 +47,6 @@ print(response.json())
 
 ## Dev Resources
 
-* [API Overview](api/overview/)
+* [API Overview](broken-reference)
 * [Guides](getting-started/guides/)
 * [SDKs](integrations/sdks/)
