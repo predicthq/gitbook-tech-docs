@@ -2,7 +2,7 @@
 
 If you click on a point on the graph it will bring up details for that date:
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt="" width="375"><figcaption><p>Details card for a specific day in the Beam Graph</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (63).png" alt="" width="375"><figcaption><p>Details card for a specific day in the Beam Graph</p></figcaption></figure>
 
 This shows you the Actual Demand, Baseline Demand, Remainder and Predicted Attendance as well as relevant events and their category on a given day.
 

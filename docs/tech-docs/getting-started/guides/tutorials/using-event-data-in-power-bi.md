@@ -52,14 +52,14 @@ All of our parameters are able to be modified based on user needs, see our [filt
 ### Example Parameters for this Guide:
 
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
-2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)&#x20;
+2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
 3. **Event State**: Active and Predicted
 4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
 
 Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to hone in on a specific shop location and pull only events within a more accurate radius based on those results. For now, we will look at the citywide events in San Francisco as our example.
 
-The report provided in this example shows a graph of the total number of people attending events around the location per day, as well as a list of the events happening at the location sorted by the highest attendance events first.&#x20;
+The report provided in this example shows a graph of the total number of people attending events around the location per day, as well as a list of the events happening at the location sorted by the highest attendance events first.
 
 We find many customers want to know what is happening around a business location such as around a hotel, restaurant, store, or other location. The graph of total attendance per day shows you peaks and dips in physically attended events. This allows you to see upcoming busy days or potential demand surges as well as quieter days. The list of events allows you to see events happening on a given day in more detail.
 
@@ -153,8 +153,7 @@ To connect using Snowflake you will need the following knowledge about your orga
 
 To start, navigate to the Snowflake data connection via:
 
-Get Data -> More -> Database -> Snowflake\
-
+Get Data -> More -> Database -> Snowflake\\
 
 <figure><img src="../../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
 
@@ -193,7 +192,7 @@ where val.value:date_local::DATE between '2024-01-01' and '2024-03-31'
 {% endcode %}
 
 This code is performing the data transformation and filtering in code. It filters to the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide) section, and transforms some columns we will be using for ease of use in the report.\
-The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.&#x20;
+The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.
 
 This is what it should look like when filled in - with all square bracket placeholder text in the FROM condition replaced.
 
@@ -213,7 +212,7 @@ See [loading-event-data-into-a-data-warehouse.md](loading-event-data-into-a-data
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).&#x20;
+Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -223,13 +222,13 @@ https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&
 ```
 {% endcode %}
 
-Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API. \
+Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API.\
 Time zone parameter (active.tz) filters results based on that given time zone.\
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
 
 See also our [filtering guide](filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
-With this API query string, event data can start to be loaded into Power BI.&#x20;
+With this API query string, event data can start to be loaded into Power BI.
 
 First, start a new report. Then select Get Data -> Web
 
@@ -240,7 +239,7 @@ Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bea
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
-2. **HTTP request header parameters**:&#x20;
+2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
    2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Just replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
@@ -248,9 +247,9 @@ The filled-out information should look like this:
 
 <figure><img src="../../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”,  the Data Transformation page will open where data shaping options can be made before building the report.
+After clicking “OK”, the Data Transformation page will open where data shaping options can be made before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.&#x20;
+Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.
 
 <figure><img src="../../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
@@ -260,7 +259,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 Replace the entire existing Power Query code with the one below, changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
-This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.&#x20;
+This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
 If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11.
@@ -327,11 +326,11 @@ Group as one (shift-click both boxes, right-click on one of them, and click the 
 <figure><img src="../../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
-drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.&#x20;
+drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.
 
 Change the drop-down to Advanced filtering and add the following:
 
-“_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click “apply filter” in the bottom right of the filter menu. \
+“_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click “apply filter” in the bottom right of the filter menu.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
 
 <figure><img src="../../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
@@ -372,7 +371,7 @@ Customers can add their own data to this chart to compare peaks and troughs of a
 
 Below is a downloadable Power BI template that will automatically create the example report used throughout this guide, using the API Connection method.
 
-Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide. \
+Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide.\
 Please wait 10-20 seconds between each step as data populates and data runs in the background.
 
 <figure><img src="../../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>

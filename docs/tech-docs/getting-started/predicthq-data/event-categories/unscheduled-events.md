@@ -56,7 +56,7 @@ Severe weather events have no entities available.
 
 Severe weather events have PHQ Rank available.
 
-The PHQ Rank indicates the severity of the bad weather, with using the [Common Alerting Protocol (CAP)](https://en.wikipedia.org/wiki/Common\_Alerting\_Protocol) data. CAP is an international non-proprietary digital message format for all-hazard emergency events. The benefit of using CAP is there is consistency in how it is implemented in different countries, making it easier to use. CAP alerts can be geographically targeted to a defined warning area.
+The PHQ Rank indicates the severity of the bad weather, with using the [Common Alerting Protocol (CAP)](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) data. CAP is an international non-proprietary digital message format for all-hazard emergency events. The benefit of using CAP is there is consistency in how it is implemented in different countries, making it easier to use. CAP alerts can be geographically targeted to a defined warning area.
 
 CAP features evaluate the event from three aspects: urgency, severity and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) will have a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
 
@@ -114,7 +114,7 @@ Disaster events have no entities available.
 
 Disaster events have PHQ Rank available, which indicates the severity of the disasters.
 
-* The natural disaster events consider [CAP](https://en.wikipedia.org/wiki/Common\_Alerting\_Protocol) information, number of injured, deaths, evacuated, etc.
+* The natural disaster events consider [CAP](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) information, number of injured, deaths, evacuated, etc.
 * The lockdown events consider the level of restriction, the maximum number of people allowed in a public social gathering, etc.
 
 **Local Rank**

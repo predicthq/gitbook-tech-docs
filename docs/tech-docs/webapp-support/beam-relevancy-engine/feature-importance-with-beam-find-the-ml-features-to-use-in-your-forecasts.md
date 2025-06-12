@@ -12,9 +12,9 @@ To improve the accuracy of your forecasts, start by incorporating event-based ML
 
 Below is a screenshot showing the new "Get Forecasting Features" option:
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Get Forecasting Features menu under the Category Importance section</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Get Forecasting Features menu under the Category Importance section</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption><p>Get Forecasting Features example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption><p>Get Forecasting Features example</p></figcaption></figure>
 
 This option returns code for calling the Features API including rank filters. By default, it calls features for the next 3 months.
 

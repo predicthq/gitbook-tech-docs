@@ -6,14 +6,14 @@ description: >-
 
 # Industry-Specific Event Filters
 
-With so many events taking place, it is important to filter out the noise and focus only on events that are relevant to your business. Use this guide in conjunction with our APIs, such as Events API and Features API, and consult [Broken link](broken-reference "mention") for detailed information.
+With so many events taking place, it is important to filter out the noise and focus only on events that are relevant to your business. Use this guide in conjunction with our APIs, such as Events API and Features API, and consult [broken-reference](../../../getting-started/guides/broken-reference/ "mention") for detailed information.
 
 \
 These recommendations are intended as starting points and may need to be adapted for your specific locations. Test out these filters and contact [our team](https://www.predicthq.com/contact) for additional guidance.
 
 ## Location Type
 
-How a catchment area is defined for a store or location varies by industry as events impact industries differently. Setting the area too small may result in important events being missed, while an excessively large area can introduce unnecessary noise.&#x20;
+How a catchment area is defined for a store or location varies by industry as events impact industries differently. Setting the area too small may result in important events being missed, while an excessively large area can introduce unnecessary noise.
 
 For stores and locations where proximity to events is important, such as those in Retail and Parking, a center point and radius approach is recommended. For industries like Transportation & Delivery, which may be influenced by broader regional events, city-level locations are advisable. We suggest the following location types as a starting point:
 

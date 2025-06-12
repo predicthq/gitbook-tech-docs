@@ -1,2 +1,2 @@
-# Places API
+# Places
 

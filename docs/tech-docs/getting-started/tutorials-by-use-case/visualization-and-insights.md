@@ -2,15 +2,7 @@
 
 Many vendors or platforms across industries such as accommodation, travel, retail, food and beverage, and transportation are continually seeking ways to provide their operational teams or end customers with deeper insights into demand trends over time and across various locations.
 
-<div data-full-width="false">
-
-<figure><img src="../../.gitbook/assets/img-homepage-460x305 (11) 1.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/img-homepage-460x305 (8) 1.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/img-homepage-460x305 (11) 1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/img-homepage-460x305 (8) 1.png" alt=""><figcaption></figcaption></figure></div>
 
 These insights are delivered through various visualizations, tailored to the size, maturity, unique tech stack, and workflows of the organization. Below are some common examples of how demand data can unlock further insights, efficiency, and improvement for multiple industries.
 

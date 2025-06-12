@@ -2,7 +2,7 @@
 
 Once you save a location, it will appear under All Location Insights, which is the Location Insights list view. It is your central hub for viewing all the locations you manage and that your company manages.
 
-<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption><p>Saved Locations list</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Saved Locations list</p></figcaption></figure>
 
 The location insights table shows you all the key details for each location including the address, latitude and longitude, the radius, who created it, and when it was created. The table also shows data for each location over the next 90 days (See [what-do-each-of-the-columns-mean.md](what-do-each-of-the-columns-mean.md "mention") for more details).
 
@@ -17,6 +17,6 @@ In this list view, you can sort by predicted attendance to show the locations wi
 
 The actions column for each location includes links to Beam, Events Search, Export, and Event Trends. It also allows you to view the location, edit the location, and delete the location.
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption><p>Saved Location actions</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Saved Location actions</p></figcaption></figure>
 
 Click on the row for one location to see more details for that individual location.\

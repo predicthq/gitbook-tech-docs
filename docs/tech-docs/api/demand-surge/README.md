@@ -1,2 +1,2 @@
-# Demand Surge API
+# Demand Surge
 

@@ -125,7 +125,7 @@ For more information on PredictHQ event fields, see [events](../../../api/events
    3. Update the y-axis title to 'Daily Event Day Impact' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis).
 4. Chart Preview:
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (97).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
 
 **Table**
 
@@ -141,7 +141,7 @@ For more information on PredictHQ event fields, see [events](../../../api/events
 
 3. Table Preview:
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Event Info worksheet</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (98).png" alt=""><figcaption><p>Event Info worksheet</p></figcaption></figure>
 
 ### Dashboard
 
@@ -151,7 +151,7 @@ For more information on PredictHQ event fields, see [events](../../../api/events
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click on specific dates in the chart to dynamically filter the events displayed in the table.&#x20;
 4. Dashboard Preview:
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (99).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
 For more information on creating dashboards, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).

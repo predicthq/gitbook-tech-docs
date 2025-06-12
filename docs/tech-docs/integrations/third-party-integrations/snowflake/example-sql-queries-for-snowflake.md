@@ -6,7 +6,7 @@ The following SQL examples are based on the Sample Data Shares we provide. Here 
 
 ### Filter on Labels
 
-Filtering on the `ARRAY` column `labels`, to find events with a `construction` label, using [ARRAY\_CONTAINS](https://docs.snowflake.com/en/sql-reference/functions/array\_contains.html#array-contains).
+Filtering on the `ARRAY` column `labels`, to find events with a `construction` label, using [ARRAY\_CONTAINS](https://docs.snowflake.com/en/sql-reference/functions/array_contains.html#array-contains).
 
 ```sql
 SELECT event_id,
@@ -30,7 +30,7 @@ Example Results:
 
 ### Filter on Latitude and Longitude
 
-Filtering the `GEOGRAPHY` column geo to find events around a 500-meter radius of [47.623257, -122.336498](https://goo.gl/maps/wxnLAufEpESLCcDj9) using [ST\_DISTANCE](https://docs.snowflake.com/en/sql-reference/functions/st\_distance.html#st-distance) and [ST\_MAKEPOINT](https://docs.snowflake.com/en/sql-reference/functions/st\_makepoint.html#st-makepoint-st-point).
+Filtering the `GEOGRAPHY` column geo to find events around a 500-meter radius of [47.623257, -122.336498](https://goo.gl/maps/wxnLAufEpESLCcDj9) using [ST\_DISTANCE](https://docs.snowflake.com/en/sql-reference/functions/st_distance.html#st-distance) and [ST\_MAKEPOINT](https://docs.snowflake.com/en/sql-reference/functions/st_makepoint.html#st-makepoint-st-point).
 
 ```sql
 SELECT event_id,
@@ -56,7 +56,7 @@ Example Results:
 
 ### Filter with a Polygon
 
-Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st\_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st\_makepolygon.html) and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to\_geography.html).
+Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st_makepolygon.html) and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to_geography.html).
 
 First, we define the shape we are interested in restricting the search to, as shown in the image below.
 

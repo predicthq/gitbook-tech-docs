@@ -9,4 +9,4 @@ It's easy to log into PredictHQ using your Google or LinkedIn accounts, however 
 
 Once you've connected your account(s), you'll be able to sign in with them the next time you log into PredictHQ.
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>

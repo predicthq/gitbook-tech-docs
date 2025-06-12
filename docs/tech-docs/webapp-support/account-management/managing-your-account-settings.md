@@ -2,7 +2,7 @@
 
 The [Account Settings](https://control.predicthq.com/settings/profile) lets you manage your plan, members in your organisation, details of your organization, and your personal profile. These settings are accessible from the menu options under the settings cog on the top navigation bar:
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Profile page with Account Settings menu open in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Profile page with Account Settings menu open in the WebApp</p></figcaption></figure>
 
 ### Profile <a href="#profile" id="profile"></a>
 
@@ -18,7 +18,7 @@ The profile page lets you:
 
 The organization tab lets you change details about your organization if you have the right access, including the name, description, industry, use case, and location of your organization. You can also delete the organization though we hope you don't!
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Organization page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Organization page in the WebApp</p></figcaption></figure>
 
 ### Members
 
@@ -26,7 +26,7 @@ The organization tab lets you change details about your organization if you have
 * You can invite new members to your organization to give them access to your API subscription.  See [how-do-i-invite-people-into-my-organization.md](how-do-i-invite-people-into-my-organization.md "mention")
 * You can remove members who no longer need access
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Members page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Members page in the WebApp</p></figcaption></figure>
 
 There are two roles you can choose from in the application which determines a users permission level.  The roles are "Admin" and "User".  See below for what each role can do.&#x20;
 
@@ -61,4 +61,4 @@ The "Admin" role can perform any action in the system including the actions belo
 * View full details of your API plan.&#x20;
 * Request changes to your plan - to request changes to your plan click on the on/off toggle items to request an upgrade or change to your plan. For example, if you want to make a change to the places you have access to, click on the edit icon under places. To change your event visibility click on the links to "Increase visibility."
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>

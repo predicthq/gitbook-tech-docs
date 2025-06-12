@@ -8,7 +8,7 @@ The table has two tabs:
 
 Beam's advanced models correlate your historical demand data with extensive, verified event data to identify days when events will significantly influence the demand for a business. This tab shows future events that are predicted to impact your demand.
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Predicted Future tab of impactful days in a Beam Analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Predicted Future tab of impactful days in a Beam Analysis</p></figcaption></figure>
 
 It also shows Predicted Attendance per day. This is based on the number of people who are predicted to attend events on those days in the radius set for the Beam analysis.
 
@@ -22,7 +22,7 @@ If you want to get a full list of events from the API use the "**Get all Event d
 
 Beam's advanced models analyze your historical demand data using verified event data. This helps identify past event impacts on demand, providing valuable insights for future planning.
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Historical tab of impactful days in a Beam Analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Historical tab of impactful days in a Beam Analysis</p></figcaption></figure>
 
 This tab shows the top impactful days in the past when events have impacted your demand. Not that this table doesn't show all the days where events have impacted demand just some of the top examples. You can use the APIs to download more details.
 

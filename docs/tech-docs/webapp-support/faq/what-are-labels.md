@@ -12,13 +12,13 @@ You can also filter by labels to get very granular results.  You can filter on l
 
 For example, if you select the labels "holiday-national" and "holiday-religious" then you can expect to get results like this:
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Christmas Day event, labeled as "holiday-national" and "holiday-religious"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Christmas Day event, labeled as "holiday-national" and "holiday-religious"</p></figcaption></figure>
 
 **"Match at least one selected label"** means that when you hit that search button, each event listing in your list of results should contain at least one _of your selected labels_.
 
 For example, if you select the labels "holiday-national" and "holiday-religious" then you can expect to get results like:
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p>Christmas Day and New Year's Day, two events matching at least one of the labels "holiday-religious" or "holiday-national"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Christmas Day and New Year's Day, two events matching at least one of the labels "holiday-religious" or "holiday-national"</p></figcaption></figure>
 
 Because labels get you down to a very granular filter, we recommend for starters searching with your main filters first such as Category, Locations, PHQ Rank, and Date then when looking at your results if you see a label appearing that you want just those results for, use the Labels filter to then refine.
 

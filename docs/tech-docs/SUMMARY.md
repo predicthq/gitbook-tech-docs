@@ -88,7 +88,7 @@
     * [Displaying Events on a Map](getting-started/guides/tutorials/displaying-events-on-a-map.md)
 * [Tutorials by Use Case](getting-started/tutorials-by-use-case/README.md)
   * [Demand Forecasting with ML Models](getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models.md)
-  * [Dynamic Pricing](getting-started/use-cases/dynamic-pricing.md)
+  * [Dynamic Pricing](getting-started/tutorials-by-use-case/dynamic-pricing.md)
   * [Inventory Management](getting-started/tutorials-by-use-case/inventory-management.md)
   * [Workforce Optimization](getting-started/tutorials-by-use-case/workforce-optimization.md)
   * [Visualization and Insights](getting-started/tutorials-by-use-case/visualization-and-insights.md)

@@ -1,2 +1,2 @@
-# Loop API
+# Loop
 

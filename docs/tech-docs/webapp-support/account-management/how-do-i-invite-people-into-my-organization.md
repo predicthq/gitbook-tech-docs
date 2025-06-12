@@ -11,7 +11,7 @@ description: Invite others to join your organization to use the WebApp
 5. Add additional invites by clicking Add Another Member.
 6. When you're ready to send the invites, click **Send Invite**
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption><p>Members page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Members page in the WebApp</p></figcaption></figure>
 
 If the person you're inviting doesn't already have a PredictHQ account, and as long as the person isn't already part of your Organization, the invite will appear under the Pending Invitations list below. Once they accept your invitation, they will be added to your Organization. If they already have a PredictHQ account set up, they will immediately be added to your Organization.&#x20;
 

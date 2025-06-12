@@ -2,7 +2,7 @@
 
 For this example, we will find public and school holidays for the United States of America in 2018.
 
-The Events endpoint allows you to specify a particular country by using the `country` parameter. This parameter supports the standard 2 character ISO 3166-1 country codes. A full list of these codes can be [found here](https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2).
+The Events endpoint allows you to specify a particular country by using the `country` parameter. This parameter supports the standard 2 character ISO 3166-1 country codes. A full list of these codes can be [found here](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 We use this parameter to find all _holidays_, `category=public-holidays,school-holidays`, which are happening in the _United States of America (US)_, `country=US`, in _2018_, `active.gte=2018-01-01&active.lte=2018-12-31`.
 

@@ -10,4 +10,4 @@ Alternatively, if you're already logged into PredictHQ and want to change your p
 
 The next time you log into PredictHQ, use your new password.
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>

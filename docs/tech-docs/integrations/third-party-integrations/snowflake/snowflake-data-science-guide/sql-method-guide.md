@@ -10,7 +10,7 @@ This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
 Please change this table name in all instances below with the name of the events data table that has been provisioned by PredictHQ as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
 
-The rest of the guide also uses temporary tables but these tables can be turned into permanent tables as needed.&#x20;
+The rest of the guide also uses temporary tables but these tables can be turned into permanent tables as needed.
 
 Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide, the following steps are required and blocked out:
 
@@ -26,7 +26,7 @@ Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide,
 
 ## Step 1: Modify the input table format
 
-Once the  **SAVED\_LOCATIONS** input table is created, the below code shapes that table to be in a day by day format of the input called **SAVED\_LOCATIONS\_DAILY**:
+Once the **SAVED\_LOCATIONS** input table is created, the below code shapes that table to be in a day by day format of the input called **SAVED\_LOCATIONS\_DAILY**:
 
 {% code fullWidth="true" %}
 ```sql
@@ -188,8 +188,6 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 ```
 {% endcode %}
 
-
-
 ### PHQ Rank Features
 
 Values are calculated as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it will have a result in each day until the event is over. Each rank level is returned as its own column.
@@ -289,8 +287,6 @@ SELECT * FROM phq_rank_features order by location, date;
 
 ```
 {% endcode %}
-
-
 
 ### PHQ Impact Features
 
@@ -405,8 +401,6 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 ```
 {% endcode %}
 
-
-
 ## Step 3: Final Select for all Features
 
 The following code will pull features generated above all into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
@@ -484,7 +478,5 @@ SELECT * FROM ml_features_for_locations ORDER BY location, date;
 The output table should look like this (Note: the below example is only showing the first 3 columns):
 
 <table data-full-width="true"><thead><tr><th width="141">DATE</th><th width="119">LOCATION</th><th>PHQ_ATTENDANCE_COMMUNITY</th><th>PHQ_ATTENDANCE_CONCERTS</th><th>PHQ_ATTENDANCE_CONFERENCES</th></tr></thead><tbody><tr><td>2024-01-01</td><td>Hyde Park</td><td>68</td><td>1,839</td><td>1,578</td></tr><tr><td>2024-01-02</td><td>Hyde Park</td><td>0</td><td>469</td><td>126</td></tr><tr><td>2024-01-03</td><td>Hyde Park</td><td>200</td><td>346</td><td>139</td></tr><tr><td>2024-01-04</td><td>Hyde Park</td><td>0</td><td>2,029</td><td>324</td></tr><tr><td>2024-01-05</td><td>Hyde Park</td><td>120</td><td>691</td><td>238</td></tr></tbody></table>
-
-
 
 ### Refer Back to [Main Guide](./)

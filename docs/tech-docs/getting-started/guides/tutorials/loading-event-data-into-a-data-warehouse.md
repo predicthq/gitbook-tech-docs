@@ -22,7 +22,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 **Requirements**:
 
-* Access to PredictHQ Data&#x20;
+* Access to PredictHQ Data
   * JSONL: Requires a PredictHQ account.[ Sign up here](https://predicthq.com/signup) if you don’t already have one.
   * API: An [API Access Token](../../../webapp-support/webapp-overview/how-to-create-an-api-token.md) is necessary for accessing the data programmatically.
 * GCP permissions:
@@ -45,8 +45,6 @@ Tom's Data Parameters:
 
 For the purposes of this guide, we have limited the example load to a single city for Tom to filter on. Users may bring through as much data as they have access to or require when doing an actual load. We find with data warehouse customers they may pull down all data they have access to into their data warehouse and then query it for relevant locations and data from their applications.
 
-
-
 ## Data Load Methods
 
 There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates will require API code.
@@ -57,13 +55,9 @@ There are several methods available for integrating PredictHQ data with GCP BigQ
 
 This guide will walk you through the initial data load, providing you with the tools and understanding necessary to create a robust connection to GCP. You'll learn how to structure your data effectively within your warehouse, setting the stage for potential automation and regular updates that you can implement as needed.
 
-
-
 ## Table Data Structure
 
 Regardless of the method chosen for initial data creation and loading, the table structure remains consistent. This ensures that both methods are interchangeable, delivering data in a uniform format. The data structure for the table is detailed below:
-
-
 
 | Field Name                          | Datatype  | Mode     |
 | ----------------------------------- | --------- | -------- |
@@ -141,8 +135,6 @@ Setting up a BigQuery table with a JSONL file is a straightforward process, prov
 <figure><img src="../../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
 
 This method allows initializing your BigQuery table with a JSONL dataset suitable for bulk data uploads. However, it does not support ongoing data refreshes. See the [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section for advice on setting up a regularly updated table after initialization.
-
-
 
 ## API Connection Method
 
@@ -299,8 +291,6 @@ To ensure seamless compatibility with the BigQuery table structure, we run a tra
 * Formatting complex fields to JSON, suitable for BigQuery ingestion.
 
 Append this transformation code to the extraction code from above. After successful data extraction and transformation, the processed data is ready for loading into BigQuery.
-
-
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -543,14 +533,11 @@ Visually this type of query allows you to pull all the events in a radius as sho
 
 A common example is customers often look at events occurring in the next 1 to 3 months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to store the radius and then look up your store locations in the table. For example you may have a table of locations like that below:
 
-
-
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
 You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the example above. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
 
-Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\
-
+Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\\
 
 ## Utilizing PredictHQ Data in Your Data Warehouse
 
@@ -564,7 +551,7 @@ Customers sometimes use fields like [Placekey ](https://docs.predicthq.com/getti
 
 #### 2. Demand Analysis and Forecasting
 
-PredictHQ data can significantly enhance your demand forecasting models, especially for businesses that are impacted by local events, such as retail, hospitality, and transportation. By understanding when significant events are happening, you can better predict and prepare for attendance surges or declines.&#x20;
+PredictHQ data can significantly enhance your demand forecasting models, especially for businesses that are impacted by local events, such as retail, hospitality, and transportation. By understanding when significant events are happening, you can better predict and prepare for attendance surges or declines.
 
 You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving Demand Forecasting Models with Event Features](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features).
 
@@ -581,7 +568,5 @@ Inform your customers about local events that might impact their experience with
 #### 5. Event-Driven Marketing
 
 Plan and execute marketing campaigns that align with upcoming events to capitalize on increased foot traffic or digital engagement. This targeted approach can improve marketing ROI by reaching audiences when they are most receptive.
-
-
 
 By tapping into the detailed and predictive insights provided by PredictHQ, your business can not only anticipate the impact of external events but also strategize proactively to harness potential opportunities or mitigate risks. Whether through enhancing predictive analytics, refining customer engagement strategies, or driving operational efficiencies, PredictHQ's events data serves as a powerful tool in your data-driven decision-making arsenal.

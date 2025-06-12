@@ -1,2 +1,2 @@
-# Suggested Radius API
+# Suggested Radius
 

@@ -32,7 +32,7 @@ Below are the main steps involved in this guide:
 ### Example Parameters for this Guide:
 
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
-2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)&#x20;
+2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
 3. **Event State**: Active and Predicted
 4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
@@ -43,9 +43,9 @@ Location could be substituted for a specific latitude and longitude relating to 
 
 This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. The examples have been provided for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
 
-PredictHQ has a number of different APIs that can be used to build reports, in  this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
+PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL  for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).&#x20;
+Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -56,38 +56,37 @@ https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&
 {% endcode %}
 
 {% hint style="info" %}
-Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API.&#x20;
+Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API.
 {% endhint %}
 
-Time zone parameter (active.tz) filters results based on that given time zone, even though date results are returned in UTC.&#x20;
+Time zone parameter (active.tz) filters results based on that given time zone, even though date results are returned in UTC.
 
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
 
 See also our [filtering guide](filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
-With this API query string, event data can start to be loaded into Microsoft Excel.&#x20;
+With this API query string, event data can start to be loaded into Microsoft Excel.
 
 First, create a new Spreadsheet. Click on the Data tab and choose Get Data as shown below:
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
 Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
-2. **HTTP request header parameters**:&#x20;
+2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
    2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PHQ API Access Token. Just replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
-      ![](<../../../.gitbook/assets/image (5).png>)\
-
+      ![](<../../../.gitbook/assets/image (90).png>)\\
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
 <figure><img src="../../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”,  the Data Transformation page will open where data shaping options can be made before building the report.
+After clicking “OK”, the Data Transformation page will open where data shaping options can be made before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. We recommend renaming it to “PredictHQ Connection”, but if you name it something else you will need to change the Power Query below too.
 
@@ -104,7 +103,7 @@ This example will not work unless you replace the \[api\_token] with your token.
 Lines 2 and 11 refer to the Query name, if you've named it something other than "PredictHQ Connection" you will need to replace it here aswell.
 {% endhint %}
 
-This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.&#x20;
+This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -158,6 +157,6 @@ Click Close & Apply and wait for the data transformation to finish processing th
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Microsoft Excel. You should see a Spreadsheet like that shown below:
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 You now have a connection to the API that you can refresh to get updated data.

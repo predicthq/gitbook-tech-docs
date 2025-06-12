@@ -2,7 +2,7 @@
 description: Get Feature Importance data for an Analysis Group.
 ---
 
-# Get Aggregated Feature Importance
+# Get Feature Importance for an Analysis Group
 
 This endpoint provides Feature Importance results aggregated across the Analyses in an existing Analysis Group, and returns a list of feature groups with associated Features API features and group p-values.
 

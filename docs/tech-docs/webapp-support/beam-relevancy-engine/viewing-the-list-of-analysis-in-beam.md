@@ -2,7 +2,7 @@
 
 When you log into Beam or click on the Beam tab you will see a list of all the analyses in Beam for your organization:
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 The screen shows the name of the analysis, and a summary of analysis details (including the time range), and will show you if sufficient data has been uploaded or not.
 

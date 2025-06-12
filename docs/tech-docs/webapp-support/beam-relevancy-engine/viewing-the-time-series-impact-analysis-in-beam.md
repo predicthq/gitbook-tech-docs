@@ -2,7 +2,7 @@
 
 Once these checks are done, and the data set has been accepted, Beam uses the data set provided and the event impact during that time period within the radius selected around the center point, to find the correlation between demand and events.
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Beam Analysis example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Beam Analysis example</p></figcaption></figure>
 
 Clicking on a point in the graph will show more details - see [this article](getting-more-details-on-a-date-on-the-beam-graph.md) for more details.
 

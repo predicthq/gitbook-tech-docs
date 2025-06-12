@@ -1,4 +1,4 @@
-# Working with Venues
+# Working with Venues Notebook
 
 Where events have a venue our events are linked to the venues they occur at. For example a sports stadium, a conference center or a concert hall. Venues are stored in our system as [entities](../../predicthq-data/entities.md). Venues are used with our [attended events](../../predicthq-data/event-categories/attendance-based-events.md). Once you know the venue id you can call the [Events API](../../../api/events/search-events.md) and retrieve all events at a venue.
 

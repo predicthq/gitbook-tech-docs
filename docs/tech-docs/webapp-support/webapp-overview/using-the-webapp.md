@@ -29,7 +29,7 @@ The sidebar gives you access to all the functionalities within the WebApp, which
 
 The sidebar is fully expanded by default. You can choose to toggle the arrow in the top right of the sidebar to collapse by default and only expand the sidebar when you are hovering over it. You can toggle it again to keep it fully expanded and visible.
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>WebApp Menu</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>WebApp Menu</p></figcaption></figure>
 
 ### Saved Locations
 
@@ -61,7 +61,7 @@ This links to the [technical documentation](../../).
 
 When you log in to the WebApp, you are taken to the dashboard. The dashboard shows a list of tiles that are shortcuts to common operations (like search). It also includes your top five [Location Insights](../location-insights/) locations. These are the locations with the highest [predicted attendance](../location-insights/what-do-each-of-the-columns-mean.md).
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>WebApp dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>WebApp dashboard</p></figcaption></figure>
 
 ### Options in the WebApp
 
@@ -76,7 +76,7 @@ Navigating within the WebApp is easy. At the top, you'll have four options:
 
 The colored tag in the top right will show the name of your current plan and you can then click on it to view more details about your plan. On the plans page, you can see all of the features you have access to on your plan including event visibility, category access and add-ons.
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Plans page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Plans page in the WebApp</p></figcaption></figure>
 
 You'll either start off with a free 14-day trial subscription, or you may be on a paid plan. If you're on a paid plan and want access to more cities, greater historic visibility, more categories, or add-ons, click on the relevant field to open the Upgrade Request feature. Select the options you would like to request to expand your subscription.
 
@@ -84,16 +84,16 @@ You'll either start off with a free 14-day trial subscription, or you may be on 
 
 The [Account Settings](https://control.predicthq.com/settings/profile) functionality allows you to manage your profile, [invite other users to your organization](https://control.predicthq.com/settings/members), view billing details and manage a range of other settings for your subscription.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Account Settings menu in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Account Settings menu in the WebApp</p></figcaption></figure>
 
 #### Help
 
 In the navigation options in the top right of the WebApp, you can also access Help details as shown below. Select this option to find API documentation, link to our Support knowledge base, and to Contact Us. You can also use submit missing events and feedback to us via our Loop feature.
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Help menu in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Help menu in the WebApp</p></figcaption></figure>
 
 #### Profile
 
 Clicking on your initials in the top right allows you to switch organizations and log out. Switching organizations is available if your account is a member of multiple organizations.
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Profile menu in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Profile menu in the WebApp</p></figcaption></figure>

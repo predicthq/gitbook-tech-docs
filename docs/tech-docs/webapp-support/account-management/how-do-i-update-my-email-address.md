@@ -7,4 +7,4 @@ To update your email address, follow these steps:&#x20;
 3. On your profile page, update your email address
 4. Click **Save Changes**
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>

@@ -2,7 +2,7 @@
 
 When viewing All Location Insights, click on one of your saved locations to see more details. Each of your saved locations has its own dedicated page which shows the data and a list of events at this location. See below for an example page for Union Square in San Francisco.
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption><p>Saved Location page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (77).png" alt=""><figcaption><p>Saved Location page</p></figcaption></figure>
 
 You can bookmark the location insights page for any of your saved locations in your browser – this way, you can easily come back to it and see what's happening at that location.
 
@@ -32,7 +32,7 @@ The list of events at a location is sorted by PHQ rank in descending order by de
 
 Click on **Advanced Search** to refine the search results for a location and look at specific categories, or filter down based on any other criteria.
 
-<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption><p>List of Attended Events in the Saved Location page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption><p>List of Attended Events in the Saved Location page</p></figcaption></figure>
 
 ### What You Can Do On This Page <a href="#what-you-can-do-on-this-page" id="what-you-can-do-on-this-page"></a>
 

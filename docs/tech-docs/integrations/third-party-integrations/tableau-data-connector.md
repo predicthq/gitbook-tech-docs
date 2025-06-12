@@ -25,4 +25,3 @@ https://tableau-connector.predicthq.com
 * Click "Get data" to import events into Tableau.
 
 </details>
-

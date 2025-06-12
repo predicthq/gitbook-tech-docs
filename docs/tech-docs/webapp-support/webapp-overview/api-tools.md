@@ -12,7 +12,7 @@ This part of the WebApp allows you to create an API token in order to use the AP
 
 Clicking on [API Explorer](https://control.predicthq.com/explorer/events) in the left navigation menu will allow you to explore the capabilities of the API and generate code.
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>API Explorer in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>API Explorer in the WebApp</p></figcaption></figure>
 
 _Note: Using an API Access token is optional since you're already logged in._
 
@@ -20,8 +20,8 @@ Now choose the parameters you want to search, filter, or sort by in order to fin
 
 Click on "**Run Request**" to run your API query and see the results.
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Example response from the API Explorer for Search Events</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Example response from the API Explorer for Search Events</p></figcaption></figure>
 
 Choose from the list of endpoints at the top of API Explorer to explore the API for each.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>

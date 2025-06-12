@@ -24,7 +24,7 @@ To see Event Trends in the WebApp, follow these steps:&#x20;
 3.  Set parameters for your search. Select the location, categories, date range, and rank. We recommend selecting a wide enough date range to get meaningful results (at least a month) - our default date range selection is 90 days.\
 
 
-    <figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 4.  You can hover over the results in the graph to see more details. In the example below you see that the results represented in the graph show that there was a peak day on the 25th of November, with a total attendance of 116,438 people.&#x20;
 
     <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/5rs1QDGT3Wdm0UKJC8CgyH/d674e422b6a5dcc8a314051fc1afccdb/DEI-peak-day.png" alt="Results"><figcaption></figcaption></figure>

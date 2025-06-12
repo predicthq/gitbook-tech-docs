@@ -8,4 +8,4 @@ With Location Insights, you can quickly access stats including the number of eve
 
 Learn how to [add your locations](how-do-i-add-a-location.md), [view insights for each of them](how-do-i-view-details-for-one-location.md), and [share these insights](how-do-i-share-location-insights-with-my-team.md) with your team.
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>Saved Locations list</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Saved Locations list</p></figcaption></figure>

@@ -8,9 +8,9 @@ Beam's Value Quantification module scans for anomalies in your uploaded demand d
 
 In order to gain the best results from Beam's Value Quantification module, please make sure to have specified your **demand unit price**, **unit description** and **currency**. This will not only ensure your results are accurate, but it will also make the page and any generated PDF reports more readable.
 
-<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Beam Analysis missing unit type </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Beam Analysis missing unit type</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (74).png" alt=""><figcaption><p>Add unit price, description and currency to the analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Add unit price, description and currency to the analysis</p></figcaption></figure>
 
 Your unit price can be the average, or blended costs of whichever type of unit they represent. For example, if the demand data represents food sales, you can set it as the average price of a meal at your establishment. If the demand data represents actual revenue, the unit price can remain at 1.
 
@@ -20,11 +20,11 @@ Your unit price can be the average, or blended costs of whichever type of unit t
 
 When viewing your Value Quantification results, you can expand the results to view more detailed information. The expanded section looks like this:
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption><p>Expanded insights for Value Quantification</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Expanded insights for Value Quantification</p></figcaption></figure>
 
 #### Current Annual Revenue due to Events <a href="#current-annual-revenue-due-to-events" id="current-annual-revenue-due-to-events"></a>
 
-This represents the annual revenue that the Beam Value Quantification model has identified as attributable to events. The model looks at the proportion of positive variability ([positive remainder](./viewing-the-time-series-impact-analysis-in-beam.md)) then leverages an attribution model to associate a percentage of the remainder to the impact of events taking place on a given day. Once those elements are worked out, it applies the unit you specified in order to calculate the annual revenue gain that is being caused by events.
+This represents the annual revenue that the Beam Value Quantification model has identified as attributable to events. The model looks at the proportion of positive variability ([positive remainder](viewing-the-time-series-impact-analysis-in-beam.md)) then leverages an attribution model to associate a percentage of the remainder to the impact of events taking place on a given day. Once those elements are worked out, it applies the unit you specified in order to calculate the annual revenue gain that is being caused by events.
 
 #### **Demand Variability**
 

@@ -4,7 +4,7 @@ description: >-
   Models in Databricks.
 ---
 
-# Databricks
+# Integrate with Databricks
 
 The best methods for getting PredictHQ data into Databricks is via S3 or Snowflake.
 

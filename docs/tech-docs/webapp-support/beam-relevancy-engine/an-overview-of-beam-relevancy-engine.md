@@ -8,7 +8,7 @@ Beam is an automated correlation engine that accurately reveals the events that 
 
 Beam also shows you how events will impact your business in the future. By analyzing your historical data, decomposing it, correlating event data with your unexplained demand, and analyzing the result data it predicts what events will impact your future demand.
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>A Beam analysis example in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>A Beam analysis example in the WebApp</p></figcaption></figure>
 
 Beam is accessible via our WebApp and via the [Beam API](../../api/beam/). To use Beam you upload demand data for a location. Beam decomposes your data into a baseline and remainder and shows you the correlation with events data. Beam will also show you the most important categories that are impacting your location. You can also export the decomposed data from Beam.
 

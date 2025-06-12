@@ -6,7 +6,7 @@ description: Instructions on how to create an API token
 
 Choose "[API Tokens](https://control.predicthq.com/tokens)", under API Tools in the left-hand navigation in the WebApp. The first time you create a token you will see the screen below.
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>API Tokens page when you don't have any token created</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>API Tokens page when you don't have any token created</p></figcaption></figure>
 
 Enter the name for your token and click "**Create Token**".
 
@@ -16,7 +16,7 @@ Optional: Select which scopes the token will have access to. If unsure leave all
 
 In the next screen choose "**Copy Token**". This copies the token to the clipboard. You can now paste it into another application.
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Success message after creating a new token</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Success message after creating a new token</p></figcaption></figure>
 
 {% hint style="warning" %}
 **Remember: You MUST save the token somewhere such as in a password manager, as you won't be able to see it again.**
@@ -32,7 +32,7 @@ You can also use the API Explorer feature in our WebApp to explore the capabilit
 
 Once you've created a token you will see the screen below that lists shows a list of tokens. From this screen, you can delete tokens, view token scopes, and edit the token name.
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption><p>API Tokens page with a list of created tokens</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>API Tokens page with a list of created tokens</p></figcaption></figure>
 
 * To delete click on the delete icon
 * To edit a tokens name click on the edit icon

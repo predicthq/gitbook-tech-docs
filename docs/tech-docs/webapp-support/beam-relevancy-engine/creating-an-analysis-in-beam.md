@@ -21,7 +21,7 @@ Each visualization contains information on the correlation analysis determined b
 
 To initiate the analysis in Beam, click on _Create New Analysis_ in the top right-hand corner, and you should see the screen below, prompting you to input details about your business.
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Create Beam Analysis page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Create Beam Analysis page in the WebApp</p></figcaption></figure>
 
 ### Name <a href="#name-object-object" id="name-object-object"></a>
 
@@ -41,8 +41,8 @@ When creating an analysis in Beam, it's essential to specify the location of int
 
 To add a location, click the "Add Location" button in the Location dropdown menu. Check [here](../location-insights/how-do-i-add-a-location.md) for more details.
 
-<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Selecting a location in the Create Beam Analysis page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Selecting a location in the Create Beam Analysis page</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Adding a Saved Location to the list of locations in the Beam Analysis page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Adding a Saved Location to the list of locations in the Beam Analysis page</p></figcaption></figure>
 
 When you create a location this sets a radius using the [Suggested Radius](https://www.predicthq.com/tools/suggested-radius) feature. The Beam analysis looks for events within this radius.

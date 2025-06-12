@@ -4,7 +4,7 @@
 
 In the Beam graph, you can zoom in on results and navigate the graph. When you place your pointer (mouse) over the graph you see the toolbar as shown below:
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption><p>Beam Graph toolbar: Select Range, Drag, Zoom and Expand</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Beam Graph toolbar: Select Range, Drag, Zoom and Expand</p></figcaption></figure>
 
 Using the toolbar icons:
 

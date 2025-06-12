@@ -1,4 +1,4 @@
-# Attendance-Based Events Data Science Guides
+# Attendance-Based Events Notebooks
 
 Attended Events are gatherings with a start and end date and time, where people come together in one location for entertainment or business, take the [2020 Super Bowl](https://control.predicthq.com/search/events/svbfg9xT4YSVUeeAKp) game or [San Diego Comic-Con](https://control.predicthq.com/search/events/yaREpZVlOX1P) as an example. PredictHQ uses machine-learning models to predict attendance and ranks for each of these events. This content is provided as a resource for Data Science teams to help get them up and running quickly.
 
@@ -8,6 +8,6 @@ Attended Events are scheduled to occur at a specific venue and usually depend on
 
 This How to Series consist of the following three  notebooks, allows you to quickly extract the data (Part 1), explore the data (Part 2), and experiment with different aggregations (Part 3):
 
-* [**Part 1: Data Engineering**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part\_1\_data\_engineering.ipynb) shows you how to call the Events API to extract the data to a DataFrame.
-* [**Part 2: Data Exploration**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part\_2\_data\_exploration.ipynb) is a guide to exploring PredictHQ's Attended Events data for Data Science teams.
-* [**Part 3: Feature Engineering**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part\_3\_feature\_engineering.ipynb) provides examples of how to aggregate and extract features from the data.
+* [**Part 1: Data Engineering**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_1_data_engineering.ipynb) shows you how to call the Events API to extract the data to a DataFrame.
+* [**Part 2: Data Exploration**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_2_data_exploration.ipynb) is a guide to exploring PredictHQ's Attended Events data for Data Science teams.
+* [**Part 3: Feature Engineering**](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_3_feature_engineering.ipynb) provides examples of how to aggregate and extract features from the data.

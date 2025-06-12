@@ -7,4 +7,4 @@ To update your name for your account, follow these steps:&#x20;
 3. On your profile page, update both your first and last name
 4. Click **Save Changes**
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Profile page in the WebApp</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Profile page in the WebApp</p></figcaption></figure>

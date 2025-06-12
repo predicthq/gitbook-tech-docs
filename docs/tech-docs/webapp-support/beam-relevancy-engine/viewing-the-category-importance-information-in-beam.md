@@ -12,7 +12,7 @@ Category Importance covers the attendance and non-attended categories shown plus
 
 Below is an example:
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Category Importance example in a Beam Analysis</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Category Importance example in a Beam Analysis</p></figcaption></figure>
 
 In this example, we can see a very high impact from conferences, expos, performing arts, observances, and academic category events. The other categories have less impact on this location and as shown as "Minor" or "Marginal" impact. If a category shows a "-" then it does not have a statistically significant impact on demand based on the data uploaded or there are no events from this category taking place within the selected radius around the location.
 
@@ -28,14 +28,14 @@ We also provide a "View ML Features" option for an analysis - see [Find the ML F
 
 _p_-values represent statistical significance and we assign a readable label to each category based on it's _p_-value. There is a toggle to view as _p_-values for advanced users. This is intended for use by data science teams interested in digging deeper into the results.
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Category Importance showing <em>p</em>-values</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p>Category Importance showing <em>p</em>-values</p></figcaption></figure>
 
 Note: very small _p_-values will be shown as <0.001. This can refer to results that are smaller than 0.001, e.g. 0.0005. A category that is considered to have no impact on the location will show a "-" label and no _p_-value will be shown.
 
 The mapping of _p_-values to the impact levels shown on the Category Importance graphs is below:\
 
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Mapping of <em>p</em>-values</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Mapping of <em>p</em>-values</p></figcaption></figure>
 
 * 0.6 ≤ _p_ < 1.0 - Marginal
 * 0.1 ≤ _p_ < 0.6 - Minor

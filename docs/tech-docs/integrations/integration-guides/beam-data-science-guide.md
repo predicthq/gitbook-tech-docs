@@ -15,11 +15,11 @@ Check out this video to see how easy it is to upload your demand data and start 
 Introduction to Beam
 {% endembed %}
 
-Need more details? Browse our [Support articles](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md).&#x20;
+Need more details? Browse our [Support articles](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md).
 
-## Scale with the Beam API&#x20;
+## Scale with the Beam API
 
-Refer to our [technical documentation](../../api/beam/) for how you can use Beam securely in your environment.&#x20;
+Refer to our [technical documentation](../../api/beam/) for how you can use Beam securely in your environment.
 
 ## How-To Data Science Guides
 

@@ -6,7 +6,7 @@ description: >-
 
 # Improving Demand Forecasting Models with Event Features
 
-The inclusion of PredictHQ's event data can significantly enhance the performance of machine learning models, such as those used in demand forecasting. For example, the delivery company [Favor reported a reduction of 5-6% in their forecasting error](https://www.predicthq.com/customers/favor), with others noting decreases of up to 5-10% or more.&#x20;
+The inclusion of PredictHQ's event data can significantly enhance the performance of machine learning models, such as those used in demand forecasting. For example, the delivery company [Favor reported a reduction of 5-6% in their forecasting error](https://www.predicthq.com/customers/favor), with others noting decreases of up to 5-10% or more.
 
 This tutorial will guide you through the process of identifying, retrieving and integrating relevant, demand-driving event data as features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
 
@@ -34,7 +34,7 @@ The sections below guide you through integrating event features into your demand
 
 ### Overview
 
-Adding event features to a demand forecasting model involves straightforward steps. These include pulling a list of Important Features from the [Beam API](../../../api/beam/) and retrieving prebuilt, forecast-ready features from the [Features API](../../../api/features/) for a store or location.&#x20;
+Adding event features to a demand forecasting model involves straightforward steps. These include pulling a list of Important Features from the [Beam API](../../../api/beam/) and retrieving prebuilt, forecast-ready features from the [Features API](../../../api/features/) for a store or location.
 
 <figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt=""><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
 
@@ -46,7 +46,7 @@ Most steps are handled by PredictHQ APIs; you just need to provide the following
 
 ### Step 1. Select Relevant Event Features
 
-With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](../../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.&#x20;
+With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](../../../api/beam/) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](../../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.
 
 There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. See below and choose the approach that best suits your operational needs.
 
@@ -80,11 +80,11 @@ Ensure you have enough time-series data that meets [Beam’s requirements](../..
 
 Specify your industry as there are several industry-specific settings required in this step such as when using the [Suggested Radius API](../../../api/suggested-radius/). If your industry is not covered, please use the default `other`:
 
-- `accommodation`
-- `retail`
-- `parking`
-- `food_and_beverage` (also referred to as `restaurants`)
-- `other` (for all other industries)
+* `accommodation`
+* `retail`
+* `parking`
+* `food_and_beverage` (also referred to as `restaurants`)
+* `other` (for all other industries)
 
 **Location**
 
@@ -92,22 +92,22 @@ Define the catchment area around your store or location using a center point and
 
 **Event Rank**
 
-Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [industry-specific recommendations](../industry-specific-event-filters.md#minimum-phq-rank) to focus on events that are likely to influence your demand, while excluding those that are too small or irrelevant.&#x20;
+Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [industry-specific recommendations](../industry-specific-event-filters.md#minimum-phq-rank) to focus on events that are likely to influence your demand, while excluding those that are too small or irrelevant.
 
 </details>
 
 {% hint style="info" %}
 For technical details, visit:
 
-- [upload-demand-data.md](../../../api/beam/upload-demand-data.md "mention")
-- [suggested-radius](../../../api/suggested-radius/ "mention")
-- [beam](../../../api/beam/ "mention")
-- [analysis-groups](../../../api/beam/analysis-groups/ "mention")
+* [upload-demand-data.md](../../../api/beam/upload-demand-data.md "mention")
+* [suggested-radius](../../../api/suggested-radius/ "mention")
+* [beam](../../../api/beam/ "mention")
+* [analysis-groups](../../../api/beam/analysis-groups/ "mention")
 
 For practical implementation:
 
-- [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md "mention")
-- [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
+* [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md "mention")
+* [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
 {% endhint %}
 
 ### Step 2. Get Features
@@ -116,7 +116,7 @@ The [Features API](../../../api/features/) provides access to a library of prebu
 
 [Responses](../../../api/features/get-features.md#response) from the Features API vary based on the [type of feature](../../../api/features/get-features.md#available-features). Most come with a suite of statistics that indicates how the underlying event data is aggregated daily for a location, e.g. sum, max, count. For `phq_rank_*` features, the response is the daily number of events for each of the [five rank bands](https://www.predicthq.com/features/rankings/phq-rank). We recommend the following aggregations:
 
-| Feature Type       |    stat     |       other       |
+| Feature Type       |     stat    |       other       |
 | ------------------ | :---------: | :---------------: |
 | `phq_attendance_*` |     sum     |    <p><br></p>    |
 | `phq_impact_*`     |     max     |    <p><br></p>    |
@@ -131,12 +131,12 @@ Some features consider the additional impact from events before and after schedu
 {% hint style="info" %}
 For technical details, visit:
 
-- [features](../../../api/features/ "mention")
-- [beam](../../../api/beam/ "mention")
+* [features](../../../api/features/ "mention")
+* [beam](../../../api/beam/ "mention")
 
 For practical implementation:
 
-- [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
+* [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
 {% endhint %}
 
 ### Step 3. ML Model and Future Predictions
@@ -148,7 +148,7 @@ For future predictions, you can access forward-facing data, such as the next two
 {% hint style="info" %}
 For practical implementation:
 
-- [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md "mention")
+* [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md "mention")
 {% endhint %}
 
 ## Conclusion

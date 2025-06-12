@@ -2,11 +2,11 @@
 
 To add a location, click on the pink button that says “**Add Saved Location**” on the upper right side of the screen.
 
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption><p>Saved Locations page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Saved Locations page</p></figcaption></figure>
 
 There are two types of locations - **Center Point & Radius** and **City, State, Country -** [see here](what-is-the-difference-between-center-point-and-radius-and-city-state-country.md) for more details. Add a **Center Point & Radius** location by typing in its street address, or enter the latitude and longitude coordinates. If you enter a street address, the latitude and longitude will automatically be calculated. Add a **City, State, Country** location by typing in the name of the city, state, or country you’d like to save.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt="" width="375"><figcaption><p>Add "Saved Location" form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72).png" alt="" width="375"><figcaption><p>Add "Saved Location" form</p></figcaption></figure>
 
 Next, give your location a name and add any identifying tags. Tags are used to filter and search your saved locations. You can use tags to tag a number of locations that have something in common. For example, you could tag all your stores by size (e.g. if they were small stores or larger stores) or tag hotels by type (budget or luxury). To add multiple tags use a comma to separate each tag. You can search on tags in the location list.
 

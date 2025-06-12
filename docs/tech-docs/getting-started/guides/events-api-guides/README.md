@@ -1,2 +1,2 @@
-# Event Data Science Guides
+# Events API Guides
 
