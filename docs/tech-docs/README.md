@@ -17,7 +17,7 @@ layout:
 
 PredictHQ helps you build smarter models and products with real-world demand intelligence. Access high-quality event data, ready-to-use ML features, and a forecasting API designed for real impact. See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
 
-<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a>  <a href="broken-reference" class="button secondary">API Reference</a>
+<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a>  <a href="https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/" class="button secondary">API Reference</a>
 
 ## Core APIs
 
@@ -47,6 +47,6 @@ print(response.json())
 
 ## Dev Resources
 
-* [API Overview](broken-reference)
+* [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview)
 * [Guides](getting-started/guides/)
 * [SDKs](integrations/sdks/)
