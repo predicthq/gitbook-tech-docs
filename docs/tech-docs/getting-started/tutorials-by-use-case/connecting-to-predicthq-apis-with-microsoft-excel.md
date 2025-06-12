@@ -26,7 +26,7 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. API: [API Access Token](../../webapp-support/webapp-overview/how-to-create-an-api-token.md)
+1. API: [API Access Token](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/webapp-overview/how-to-create-an-api-token.md)
 2. Microsoft Excel
 
 ### Example Parameters for this Guide:

@@ -11,7 +11,7 @@ These insights are delivered through various visualizations, tailored to the siz
 <summary>Accommodation</summary>
 
 1. To implement PredictHQ data in your accommodation demand analytics and planning workflows, review the options below:
-   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
+   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
    * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 2. To create **custom maps and filtered event lists,** check out our\
    [Accommodation Business Demo App](https://predicthq-accommodation-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-accommodation-demo).
@@ -25,7 +25,7 @@ These insights are delivered through various visualizations, tailored to the siz
 <summary>Retail</summary>
 
 1. To implement PredictHQ data in your retail demand analytics and planning workflows, review the options below:
-   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
+   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
    * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 2. To create **custom maps and filtered event lists,** check out our\
    [Retail Demo App](https://predicthq-location-insights-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-location-insights-demo).
@@ -39,7 +39,7 @@ These insights are delivered through various visualizations, tailored to the siz
 <summary>Transportation &#x26; Parking</summary>
 
 1. To implement PredictHQ data in your transportation or parking demand analytics and planning workflows, review the options below:
-   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
+   * **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your manual pricing updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends and Location Insights.
    * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI (or other analytics tool) dynamic pricing workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 2. To create **custom maps, polygons, and filtered event lists,** check out our\
    [Parking Business Demo App](https://predicthq-parking-example.streamlit.app/) or[ get the code from GitHub](https://github.com/predicthq/streamlit-parking-demo).
