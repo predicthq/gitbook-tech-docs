@@ -65,7 +65,7 @@ Impact pattern features for this industry use the name `hospitality` but this ca
 
 ## Impact Patterns in the Events API
 
-Impact patterns are returned in the [Events API](broken-reference) response in the `impact_patterns` field. This shows the Impact Pattern for each event. Below are the details of the data structure of that field.
+Impact patterns are returned in the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) response in the `impact_patterns` field. This shows the Impact Pattern for each event. Below are the details of the data structure of that field.
 
 `impact_patterns` is an array of impact pattern objects. The same event can have different impact patterns for different industry verticals. It contains the following fields:
 
@@ -135,4 +135,4 @@ or for `retail` for severe weather events
 
 ## Impact Patterns in the Features API
 
-You can also use Predicted Impact Patterns with the Features API. The features API provides pre-built machine learning features for demand forecasting. See the[ features API ](broken-reference)documentation. Use the features for your industry to get more accurate forecasting results. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. In order to use impact patterns with the features API you need to use the impact pattern features. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`. If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.
+You can also use Predicted Impact Patterns with the Features API. The features API provides pre-built machine learning features for demand forecasting. See the[ features API ](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features)documentation. Use the features for your industry to get more accurate forecasting results. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. In order to use impact patterns with the features API you need to use the impact pattern features. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`. If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.

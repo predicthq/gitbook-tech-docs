@@ -6,7 +6,7 @@ description: Transforming Event Data into ML-Ready Features in Snowflake
 
 ## This guide and the Features API
 
-This guide is intended to provide guidance on generating machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](https://docs.predicthq.com/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, please go to [this page](broken-reference) and for a more detailed guide on using the Features API for Machine Learning, please see the [Get ML Features](../../../../getting-started/guides/features-api-guides/feature-engineering-guide.md) guide.
+This guide is intended to provide guidance on generating machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](https://docs.predicthq.com/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, please go to [this page](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) and for a more detailed guide on using the Features API for Machine Learning, please see the [Get ML Features](../../../../getting-started/guides/features-api-guides/feature-engineering-guide.md) guide.
 
 If you don't know which is the best for you, please [reach out](https://www.predicthq.com/contact/sales)!
 
@@ -40,11 +40,11 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
 
 When querying events at the location level, a common way to retrieve those events is with a latitude, longitude, and radius to get the events within a given area. But, a common gap is knowing what radius to use when searching for events. Insert the Suggested Radius API.&#x20;
 
-The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) returns a radius that can be used to find attended events around a given location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
+The [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius) returns a radius that can be used to find attended events around a given location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
 
-As a first step, it is recommended to get the suggested radius for each location before moving forward with the guide. Below is an example of how to query the Suggested Radius API for a list of locations using the [PredictHQ Python SDK](https://docs.predicthq.com/integrations/sdks/python-sdk). Note: this code will need to be run in a separate environment than Snowflake.&#x20;
+As a first step, it is recommended to get the suggested radius for each location before moving forward with the guide. Below is an example of how to query the Suggested Radius API for a list of locations using the [PredictHQ Python SDK](../../../../sdks/python-sdk.md). Note: this code will need to be run in a separate environment than Snowflake.&#x20;
 
-For more information on the Suggested Radius API, visit [our documentation](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius).
+For more information on the Suggested Radius API, visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius).
 
 ```python
 # The code below uses the PredictHQ Python SDK

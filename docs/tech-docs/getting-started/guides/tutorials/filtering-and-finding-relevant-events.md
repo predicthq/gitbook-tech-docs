@@ -10,7 +10,7 @@ Events such as concerts, expos and public holidays can shift consumer behavior a
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](broken-reference).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
 ## Use Cases
 
@@ -34,7 +34,7 @@ The sections below will guide you through identifying the top 50 upcoming events
 
 ### Step 1. Define Query Parameters for the Events API
 
-Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](broken-reference), providing guidance on how to use them along with Tom’s choices:
+Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events), providing guidance on how to use them along with Tom’s choices:
 
 <details>
 
@@ -215,7 +215,7 @@ params={
 </details>
 
 {% hint style="info" %}
-For detailed information on all query parameters (including those not shown here), please consult [Events API](broken-reference).
+For detailed information on all query parameters (including those not shown here), please consult [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
 {% endhint %}
 
 ### Step 2. Call Events API
@@ -277,13 +277,13 @@ print("Total events fetched:", len(all_events))
 
 ```
 
-For information on how to search for events using our SDK, please refer to [sdks](../../../integrations/sdks/ "mention").
+For information on how to search for events using our SDK, please refer to [Broken link](broken-reference "mention").
 
 {% hint style="info" %}
 For more details, visit:
 
+* [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
 * [Broken link](broken-reference "mention")
-* [sdks](../../../integrations/sdks/ "mention")
 {% endhint %}
 
 ### Step 3. Interpret Response
@@ -458,7 +458,7 @@ Results are returned in a paginated format, where the number of events per page 
 * `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.&#x20;
 * `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.&#x20;
 
-For more comprehensive guidelines on navigating paginated results, refer to [Broken link](broken-reference "mention").
+For more comprehensive guidelines on navigating paginated results, refer to [Pagination](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/pagination "mention").
 
 </details>
 
@@ -466,7 +466,7 @@ For more comprehensive guidelines on navigating paginated results, refer to [Bro
 
 <summary>Events</summary>
 
-Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Broken link](broken-reference "mention"). Common response fields include:
+Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
 
 **Dates**
 
@@ -499,8 +499,8 @@ Events are detailed in the results section of the response, each represented as 
 {% hint style="info" %}
 For more details, visit:
 
-* [Broken link](broken-reference "mention")
-* [Broken link](broken-reference "mention")
+* [Pagination](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/pagination "mention")
+* [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
 * [working-with-dates-times-and-timezones.md](../date-and-time-guides/working-with-dates-times-and-timezones.md "mention")
 * [predicthq-data](../../predicthq-data/ "mention")
 {% endhint %}
@@ -510,7 +510,7 @@ For more details, visit:
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 
 * **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
-* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](broken-reference) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
+* **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
 * **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 
 ## Conclusion

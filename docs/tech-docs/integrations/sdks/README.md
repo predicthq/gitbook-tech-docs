@@ -1,2 +1,0 @@
-# PredictHQ SDKs
-

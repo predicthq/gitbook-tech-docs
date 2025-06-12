@@ -115,7 +115,7 @@ To find school holidays that impact your location you can use the standard featu
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
-* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](broken-reference) to retrieve events that impact a geographic location.
+* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
 See also the [FAQs for district-level school holidays](non-attendance-based-events.md#faqs-for-district-level-school-holidays)
 
@@ -151,7 +151,7 @@ To find school holidays that impact your location you can use the standard featu
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * You can search in the WebApp for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
-* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](broken-reference) to retrieve events that impact a geographic location.
+* Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
 #### FAQs for district-level school holidays
 

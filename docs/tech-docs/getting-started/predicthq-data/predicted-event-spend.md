@@ -26,4 +26,4 @@ Within each event category, the following industries/sectors are covered:
 
 ## Using Predicted Event Spend
 
-* [In the Events API](broken-reference)
+* [In the Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)

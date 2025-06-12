@@ -6,7 +6,7 @@ description: >-
 
 # Industry-Specific Event Filters
 
-With so many events taking place, it is important to filter out the noise and focus only on events that are relevant to your business. Use this guide in conjunction with our APIs, such as Events API and Features API, and consult [broken-reference](../../../getting-started/guides/broken-reference/ "mention") for detailed information.
+With so many events taking place, it is important to filter out the noise and focus only on events that are relevant to your business. Use this guide in conjunction with our APIs, such as Events API and Features API, and consult [API Reference](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/kEFs8urDbSJqBmXUI3Lv/ "mention") for detailed information.
 
 \
 These recommendations are intended as starting points and may need to be adapted for your specific locations. Test out these filters and contact [our team](https://www.predicthq.com/contact) for additional guidance.
@@ -66,12 +66,12 @@ To retrieve events for different location types, use the following approaches:
 </details>
 
 {% hint style="info" %}
-For more information on defining locations by API, see [Broken link](broken-reference "mention").
+For more information on defining locations by API, see [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention").
 {% endhint %}
 
 ## Relevant Event Categories
 
-With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](broken-reference). Alternatively, explore these industry-level categories as a starting point:
+With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, explore these industry-level categories as a starting point:
 
 | Industry                                      |                                   Relevant Event Categories                                  |
 | --------------------------------------------- | :------------------------------------------------------------------------------------------: |

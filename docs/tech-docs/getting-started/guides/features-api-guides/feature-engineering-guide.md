@@ -13,7 +13,7 @@ See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/
 Below are some technical documentation relevant to this guide:
 
 * [Broken link](broken-reference "mention")
-* [python-sdk.md](../../../integrations/sdks/python-sdk.md "mention")
+* [python-sdk.md](../../../sdks/python-sdk.md "mention")
 * [event-categories](../../predicthq-data/event-categories/ "mention")
 
 ## ML Features in Snowflake
