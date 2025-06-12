@@ -4,7 +4,7 @@ For this example we want to find all broadcasts televised in two counties in Cal
 
 The `location.place_id` parameter allows us to filter live sports events by their broadcast locations. For the counties in our example, we will use `location.place_id=5368381,5391832`, which are the respective Place IDs for Los Angeles County and San Diego County in California.
 
-These Place IDs were found using the [Places API](broken-reference). We provide a CSV file of broadcast counties to download, to make it easier to discover the `place_id` for all counties and states in the US.
+These Place IDs were found using the [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places). We provide a CSV file of broadcast counties to download, to make it easier to discover the `place_id` for all counties and states in the US.
 
 {% file src="../../../../api/.gitbook/assets/broadcast-events-place-mapping.csv" %}
 

@@ -12,7 +12,7 @@ PredictHQ also handles cases where one event (child) belongs to another (parent)
 
 ### Handling Attendance for Multi-Day Events
 
-The [Features API](broken-reference) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, there is additional logic for how phq\_attendance is distributed to each day. We encourage customers to use the Features API to find aggregations on attendance like the sum of daily attendance.
+The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, there is additional logic for how phq\_attendance is distributed to each day. We encourage customers to use the Features API to find aggregations on attendance like the sum of daily attendance.
 
 Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend.The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
@@ -76,7 +76,7 @@ Once you take into account Umbrella events and remove double counting, the real 
 
 ### **Using the Parent Filter in the Events API for Umbrella Events**
 
-See the documentation on the [parent filter](broken-reference) for umbrella events.
+See the documentation on the [parent filter](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) for umbrella events.
 
 You can use this filter with the events API to only get parent events or only retrieve child events from the Events API.
 

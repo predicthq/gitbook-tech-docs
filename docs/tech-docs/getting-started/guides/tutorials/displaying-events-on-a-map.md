@@ -35,7 +35,7 @@ An Access Token is required to access PredictHQ's APIs and run the notebook. Fol
 The event data used in this map is sourced from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
 
 {% hint style="info" %}
-For more information on the Events API, see this [documentation](broken-reference).
+For more information on the Events API, see this [documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
 {% endhint %}
 
 ### Parameters

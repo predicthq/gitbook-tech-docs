@@ -12,7 +12,7 @@ See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/
 
 Below are some technical documentation relevant to this guide:
 
-* [Broken link](broken-reference "mention")
+* [Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features "mention")
 * [python-sdk.md](../../../sdks/python-sdk.md "mention")
 * [event-categories](../../predicthq-data/event-categories/ "mention")
 

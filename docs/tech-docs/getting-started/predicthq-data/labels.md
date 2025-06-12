@@ -44,7 +44,7 @@ PHQ Labels are available for the following categories:
 
 #### PHQ Label Values
 
-PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](broken-reference) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
+PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
 
 Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.predicthq.com/events/ssZCJhGGKUswicJswa) at the Melbourne Cricket Ground in 2024 it has the following PHQ labels (pop, country, and rock) in the API response:
 
@@ -52,7 +52,7 @@ Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.pred
 "phq_labels": [ { "label": "pop", "weight": 0.51 }, { "label": "country", "weight": 0.25 }, { "label": "rock", "weight": 0.25 }
 ```
 
-You could also use [Query Parameters](broken-reference) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
+You could also use [Query Parameters](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
 
 ```python
 import requests
@@ -87,12 +87,8 @@ Legacy labels are still returned in order to preserve backward compatibility wit
 
 This field is named `labels`.&#x20;
 
-Legacy labels are available for all event categories.
-
-
-
-
+Legacy labels are available for all event categories but are only available to customers who already had access.
 
 ### Usage
 
-* [Labels in the Events API](broken-reference)
+* [Labels in the Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)

@@ -10,7 +10,7 @@ description: >-
 
 The Events API now provides event start and end times in UTC and in the event local time format (as of June 2024). The date and time fields available are:
 
-* The fields that provide local time are `start_local`, `end_local`, and `predicted_end_local`. These fields have the local time end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. This is the local time in the time zone at the event location. See the [Events API Response Fields](broken-reference) for more details on these fields.
+* The fields that provide local time are `start_local`, `end_local`, and `predicted_end_local`. These fields have the local time end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. This is the local time in the time zone at the event location. See the [Events API Response Fields](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for more details on these fields.
 * The fields `start`, `end` and `predicted_end` have date values in UTC format.
 
 {% hint style="info" %}

@@ -19,7 +19,7 @@ Need more details? Browse our [Support articles](https://app.gitbook.com/s/Ri9Ya
 
 ## Scale with the Beam API
 
-Refer to our [technical documentation](broken-reference) for how you can use Beam securely in your environment.
+Refer to our [technical documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) for how you can use Beam securely in your environment.
 
 ## How-To Data Science Guides
 

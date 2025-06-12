@@ -7,6 +7,10 @@ description: >-
 
 # Keep Data Updated via API
 
+{% hint style="success" %}
+We highly recommend using Snowflake or ADX to keep your copy of PredictHQ event data up-to-date. Using one of those methods removes all the complexity of having to implement a system using the API and results in far higher accuracy with fewer issues. Keeping up-to-date via the API is much more complicated than via Snowflake or ADX.
+{% endhint %}
+
 Events often change or get deleted because they’re cancelled, postponed, marked as duplicates or identified as spam. In February 2020, concerns about COVID-19 led to a 500% spike in cancellations and postponements of significant events when compared to February 2019. It’s important to make sure you keep your copy of PredictHQ in-sync with ours to stay up-to-date.
 
 Our records have an `updated` field which indicates the date/time the record was last updated.
@@ -49,5 +53,5 @@ print(response.json())
 ```
 
 {% hint style="success" %}
-Note that you can use the [Features API](broken-reference) to directly get daily-level aggregations of the data instead of downloading large volumes of event data and keeping it up to date. The Features API provides pre-built features that save you from writing a lot of code to aggregate data and create features on your side.
+Note that you can use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) to directly get daily-level aggregations of the data instead of downloading large volumes of event data and keeping it up to date. The Features API provides pre-built features that save you from writing a lot of code to aggregate data and create features on your side.
 {% endhint %}

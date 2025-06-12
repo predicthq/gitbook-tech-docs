@@ -8,4 +8,4 @@ Surge dates are defined as dates where the total daily attendance value is more 
 Tracking Demand Surges
 {% endembed %}
 
-Run through the [Demand Surge notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-surge/demand-surge-notebook.ipynb) or even easier, use our new [Demand Surge API](broken-reference).
+Run through the [Demand Surge notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-surge/demand-surge-notebook.ipynb) or even easier, use our new [Demand Surge API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/demand-surge).

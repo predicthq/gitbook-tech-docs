@@ -13,4 +13,4 @@ See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/
 
 Below are some technical documentation relevant to this guide:
 
-* [Broken link](broken-reference "mention")
+* [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")

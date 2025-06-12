@@ -4,7 +4,7 @@ In this example we want to find the broadcasts for the Super Bowl game, New Engl
 
 To find broadcasts for an event, we can use the `event.event_id` parameter. This parameter allows us to retrieve broadcast records for each county the game has viewership in. So, for a specific game televised nation-wide, the API would return over 3000 broadcast records with viewership per county.
 
-The 2019 Super Bowl game's `event_id` is `ePQLUqbPnMn3mQhe35`, so we need to filter broadcasts using `event.event_id=ePQLUqbPnMn3mQhe35`. The `event_id` was found using our Events API. See our [Events API documentation](broken-reference) to discover how to query for other sports events.
+The 2019 Super Bowl game's `event_id` is `ePQLUqbPnMn3mQhe35`, so we need to filter broadcasts using `event.event_id=ePQLUqbPnMn3mQhe35`. The `event_id` was found using our Events API. See our [Events API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) to discover how to query for other sports events.
 
 ```python
 import requests
