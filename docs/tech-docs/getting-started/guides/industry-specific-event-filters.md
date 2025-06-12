@@ -45,7 +45,7 @@ To retrieve events for different location types, use the following approaches:
 
 **Using location IDs**
 
-1. Create Saved Locations via [Location Insights](../../webapp-support/location-insights/an-overview-of-location-insights.md) in the WebApp or at scale using the [Saved Locations API](https://docs.predicthq.com/api/saved-locations).
+1. Create Saved Locations via [Location Insights](broken-reference) in the WebApp or at scale using the [Saved Locations API](https://docs.predicthq.com/api/saved-locations).
 2. Configuration:
    1. For the Events API, use the `saved_location.location_id` field.
    2. For the Features API, use the `location` field.
@@ -71,7 +71,7 @@ For more information on defining locations by API, see [overview](../../api/over
 
 ## Relevant Event Categories
 
-With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](../../webapp-support/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
+With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](broken-reference) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
 
 | Industry                                      |                                   Relevant Event Categories                                  |
 | --------------------------------------------- | :------------------------------------------------------------------------------------------: |

@@ -12,7 +12,7 @@ Using our product and tools as described below will allow you to anticipate and 
 
 To implement PredictHQ data to manage inventory for your consumer packaged goods business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
@@ -40,7 +40,7 @@ Incorporating event data into your demand forecasting significantly improves pre
 
 To implement PredictHQ data to manage inventory for your retail or restaurant business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
@@ -66,7 +66,7 @@ For example, pizza stores in New Jersey see a 50% drop in demand when the New Je
 
 To implement PredictHQ data to manage inventory for your business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](../../webapp-support/tools/see-event-trends-in-the-webapp.md) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)

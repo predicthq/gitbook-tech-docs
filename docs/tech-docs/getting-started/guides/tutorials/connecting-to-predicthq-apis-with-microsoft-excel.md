@@ -26,7 +26,7 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. API: [API Access Token](../../../webapp-support/webapp-overview/how-to-create-an-api-token.md)
+1. API: [API Access Token](broken-reference)
 2. Microsoft Excel
 
 ### Example Parameters for this Guide:
