@@ -2,14 +2,16 @@
 
 * [API Reference](README.md)
 * [Swagger UI](https://api.predicthq.com/docs/)
-* [API Overview](<README (1).md>)
-  * [Authenticating](overview/authenticating.md)
-  * [API Specs](overview/api-specs.md)
-  * [Rate Limits](overview/rate-limits.md)
-  * [Pagination](overview/pagination.md)
-  * [API Changes](overview/api-changes.md)
-  * [Attribution](overview/attribution.md)
-  * [Troubleshooting](overview/troubleshooting.md)
+
+## Overview
+
+* [Authenticating](overview/authenticating.md)
+* [API Specs](overview/api-specs.md)
+* [Rate Limits](overview/rate-limits.md)
+* [Pagination](overview/pagination.md)
+* [API Changes](overview/api-changes.md)
+* [Attribution](overview/attribution.md)
+* [Troubleshooting](overview/troubleshooting.md)
 
 ## Events
 

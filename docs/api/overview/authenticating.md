@@ -2,6 +2,8 @@
 
 All PredictHQ API endpoints require authentication. You can authenticate your request by sending a token in the `Authorization` header of your request. If you try to use an API endpoint without a token or that token has insufficient permissions, you will receive a `403 Forbidden` response.
 
+The PredictHQ API is a RESTful API and can be accessed from the `https://api.predicthq.com` URL. All data exchanges are performed using the JSON format by default.
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash
