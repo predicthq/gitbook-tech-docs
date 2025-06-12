@@ -30,7 +30,7 @@ GET https://api.predicthq.com/v1/broadcasts/
 
 Below is a CSV of broadcast counties. It contains the `place_id` and name of all counties and states in the US.
 
-{% file src="../../.gitbook/assets/broadcast-events-place-mapping.csv" %}
+{% file src="../.gitbook/assets/broadcast-events-place-mapping.csv" %}
 
 ## Response
 
