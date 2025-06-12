@@ -8,9 +8,6 @@
   * [API Changes](overview/api-changes.md)
   * [Attribution](overview/attribution.md)
   * [Troubleshooting](overview/troubleshooting.md)
-
-## API Reference <a href="#api" id="api"></a>
-
 * [Events](events/README.md)
   * [Search Events](events/search-events.md)
   * [Get Event Counts](events/get-event-counts.md)
