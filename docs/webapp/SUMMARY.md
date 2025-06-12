@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Page](README.md)
+* [WebApp Support](README.md)
 * [WebApp Overview](webapp-overview/README.md)
   * [Using the WebApp](webapp-overview/using-the-webapp.md)
   * [API Tools](webapp-overview/api-tools.md)
