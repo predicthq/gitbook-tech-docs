@@ -2,7 +2,7 @@
 
 Aggregating Predicted Viewership data to create features for forecasting is an impactful way to unlock the value of Live TV Events data. You can use the Features API to aggregate Predicted Viewership data.
 
-See the PHQ Viewership in the [endpoint documentation](../../../api/features/get-features.md). Using these features you can get the count, sum, min, max, avg, median, and std\_dev for any viewership feature in the features API. The features API will combine all the viewership data for a location and return these calculated values. For example, you can get the total NFL viewership and NBA viewership per day for a location as shown below
+See the PHQ Viewership in the [endpoint documentation](broken-reference). Using these features you can get the count, sum, min, max, avg, median, and std\_dev for any viewership feature in the features API. The features API will combine all the viewership data for a location and return these calculated values. For example, you can get the total NFL viewership and NBA viewership per day for a location as shown below
 
 ```python
 import requests

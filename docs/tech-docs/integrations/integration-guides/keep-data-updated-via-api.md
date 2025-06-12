@@ -49,5 +49,5 @@ print(response.json())
 ```
 
 {% hint style="success" %}
-Note that you can use the [Features API](../../api/features/get-features.md) to directly get daily-level aggregations of the data instead of downloading large volumes of event data and keeping it up to date. The Features API provides pre-built features that save you from writing a lot of code to aggregate data and create features on your side.
+Note that you can use the [Features API](broken-reference) to directly get daily-level aggregations of the data instead of downloading large volumes of event data and keeping it up to date. The Features API provides pre-built features that save you from writing a lot of code to aggregate data and create features on your side.
 {% endhint %}

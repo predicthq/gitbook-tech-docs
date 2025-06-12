@@ -100,7 +100,7 @@ Below is an example of a feature importance analysis - click to enlarge:
 
 Integrating Event Data
 
-Retrieve the identified features using the [Features API](../../api/features/get-features.md) and incorporate them into your forecasting model by following the [demand forecasting tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md).
+Retrieve the identified features using the [Features API](broken-reference) and incorporate them into your forecasting model by following the [demand forecasting tutorial](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md).
 
 Forecasting Demand
 

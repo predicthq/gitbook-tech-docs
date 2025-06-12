@@ -77,7 +77,7 @@ The notebook can also be [compiled and downloaded](https://observablehq.com/docu
 
 ### Extension
 
-Another approach to using calendars is to showcase the most impactful events, including links to their respective pages in the WebApp. This method involves fetching event data from the [Events API](../../../api/events/search-events.md), sorting by attendance, and then directly displaying the top events on the calendar.
+Another approach to using calendars is to showcase the most impactful events, including links to their respective pages in the WebApp. This method involves fetching event data from the [Events API](broken-reference), sorting by attendance, and then directly displaying the top events on the calendar.
 
 {% hint style="info" %}
 For more information on using the Events API, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention").
@@ -85,7 +85,7 @@ For more information on using the Events API, see [filtering-and-finding-relevan
 
 ## Customizing Event Data
 
-This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](../../../api/features/get-features.md#request-body):
+This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](broken-reference):
 
 <details>
 
@@ -112,7 +112,7 @@ This section provides guidance on how to customize the underlying event data usi
 
 * Identify the types of events of interest, such as concerts, sports, or community events.
 * Configuration: Add `<feature_name>` to the request body, specifying `stat` and `phq_rank` as needed (see next).&#x20;
-* Guidance: Start with [features](../../../api/features/get-features.md#available-features) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
+* Guidance: Start with [features](broken-reference) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
 
 </details>
 

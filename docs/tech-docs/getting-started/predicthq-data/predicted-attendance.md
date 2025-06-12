@@ -6,7 +6,7 @@ description: >-
 
 # Predicted Attendance
 
-Also known as PHQ Attendance. This value represents the number of people predicted to attend an event. The exact predicted attendance number is returned as the `phq_attendance` value in the [events API response](../../api/events/) for attendance events.&#x20;
+Also known as PHQ Attendance. This value represents the number of people predicted to attend an event. The exact predicted attendance number is returned as the `phq_attendance` value in the [events API response](broken-reference) for attendance events.&#x20;
 
 PHQ Rank also has a value between 0 and 100 that represents how many people will attend an event. For example, an event with a PHQ Rank 50 has around 1,000 attendance.&#x20;
 

@@ -84,7 +84,7 @@ Instead, we'll use the `start_around.origin` parameter to add proximity of an ev
 Add parameter `start_around.origin=$CURRENT_DATE` to our previous request.
 
 {% hint style="info" %}
-The other `start_around.*` parameters can be used to tune how the relevance of an event changes as its start date moves away from the origin. See the [parameter documentation](../../../api/events/search-events.md#query-parameters) for details.
+The other `start_around.*` parameters can be used to tune how the relevance of an event changes as its start date moves away from the origin. See the [parameter documentation](broken-reference) for details.
 {% endhint %}
 
 ```python
@@ -118,7 +118,7 @@ We'll assume they are happy to travel a km or so, setting `location_around.offse
 Add parameters `location_around.origin=40.782409,-73.971885&location_around.offset=1km` to our previous request.
 
 {% hint style="info" %}
-The other `location_around.*` parameters can be used to further tune how the relevance of an event changes as its location moves away from the origin. See the [parameter documentation](../../../api/events/search-events.md#query-parameters) for details.
+The other `location_around.*` parameters can be used to further tune how the relevance of an event changes as its location moves away from the origin. See the [parameter documentation](broken-reference) for details.
 {% endhint %}
 
 ```python
@@ -150,7 +150,7 @@ Our final relevance adjustment is to prioritize events with higher ranks, as the
 The `relevance` parameter controls which relevance components are multiplied together to produce the final `relevance` field. When it isn't explicitly set it defaults to including all the components from the relevance-influencing parameters used in the search - in our case, `q`, `start_around`, and `location_around`.
 
 {% hint style="info" %}
-See the [relevance parameter documentation](../../../api/events/search-events.md#query-parameters) for more information about the `relevance` parameter.
+See the [relevance parameter documentation](broken-reference) for more information about the `relevance` parameter.
 {% endhint %}
 
 We want to add the `rank` component into the mix, so we need to set the `relevance` parameter explicity. We still want the existing components, so need to include them, but we'll add `rank` as well.

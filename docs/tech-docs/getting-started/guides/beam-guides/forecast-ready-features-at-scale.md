@@ -12,5 +12,5 @@ See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/
 
 Below are some technical documentation relevant to this guide:
 
-* [beam](../../../api/beam/ "mention")
-* [suggested-radius](../../../api/suggested-radius/ "mention")
+* [Broken link](broken-reference "mention")
+* [Broken link](broken-reference "mention")

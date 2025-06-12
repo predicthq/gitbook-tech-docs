@@ -16,7 +16,7 @@ If you have multiple locations/stores, events will impact them in different ways
 
 Beam saves you weeks and weeks of work by automating the process to filter out the noise.
 
-* API Reference: [beam](../api/beam/ "mention")
+* API Reference: [Broken link](broken-reference "mention")
 * [beam-guides](guides/beam-guides/ "mention")
 
 ## Local Rank
@@ -37,7 +37,7 @@ Customers can use the Loop UI to provide feedback, or use Loop Links - unique UR
 
 All submitted feedback is reviewed by PredictHQ’s data team, and accepted changes are integrated into the platform, enhancing data accuracy and model performance.
 
-* API Reference: [loop](../api/loop/ "mention")
+* API Reference: [Broken link](broken-reference "mention")
 * [Loop UI](https://loop.predicthq.com/)
 
 ## PHQ Rank
@@ -98,14 +98,14 @@ Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowin
 
 We strongly recommend all customers use Saved Locations to manage location-specific workflows. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
-* API Reference: [saved-locations](../api/saved-locations/ "mention")
+* API Reference: [Broken link](broken-reference "mention")
 
 ## Suggested Radius
 
-Suggested Radius is a machine learning–generated spatial parameter that defines the optimal radius to use when retrieving events near a specific location. It is returned by the [Suggested Radius API](../api/suggested-radius/get-suggested-radius.md), which considers population density, event distribution, customer industry, and other contextual factors to produce a location-specific value.
+Suggested Radius is a machine learning–generated spatial parameter that defines the optimal radius to use when retrieving events near a specific location. It is returned by the [Suggested Radius API](broken-reference), which considers population density, event distribution, customer industry, and other contextual factors to produce a location-specific value.
 
 We recommend all customers use Suggested Radius to determine the appropriate search radius around their business locations, rather than relying on fixed or arbitrary distances. This ensures more relevant and accurate inclusion of events when building features, querying event data, or modeling demand.
 
 The output is relatively stable over time and can be safely cached, with monthly refreshes typically sufficient unless business context or location data changes.
 
-* API Reference: [get-suggested-radius.md](../api/suggested-radius/get-suggested-radius.md "mention")
+* API Reference: [Broken link](broken-reference "mention")

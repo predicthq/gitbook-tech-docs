@@ -3,7 +3,7 @@
 For this example, we will find conferences and expos that happened within a 2 mile radius of a specific location, in April 2018.
 
 {% hint style="info" %}
-It can be difficult working out a suitable radius around your location so to make it easier please use our [Suggested Radius API](../../../../api/suggested-radius/get-suggested-radius.md).
+It can be difficult working out a suitable radius around your location so to make it easier please use our [Suggested Radius API](broken-reference).
 {% endhint %}
 
 The Events endpoint supports the use of a `within` parameter to allow you to set specific latitude and longitude coordinates and search for events which occur within a radius from that point.

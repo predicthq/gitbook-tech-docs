@@ -10,7 +10,7 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 
 * [Features API](../../getting-started/guides/features-api-guides/)
 * [Beam](../integration-guides/beam-data-science-guide.md)
-* [Suggested Radius](../../api/suggested-radius/get-suggested-radius.md)
+* [Suggested Radius](broken-reference)
 * [WebApp](https://control.predicthq.com)
 * Tutorial: [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention")
 
@@ -32,7 +32,7 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 ### Improving Base Model Results with PredictHQ
 
-From here you should follow the [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](../../api/beam/) and [Features API](../../api/features/). When we have the relevant PredictHQ features we can enhance the model's accuracy.
+From here you should follow the [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](broken-reference) and [Features API](broken-reference). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 
 ### Suggested Radius
 
@@ -55,7 +55,7 @@ Next, the Beam API decomposes our demand data into baseline and remainders. This
 
 ### Feature Importance using Beam
 
-We then utilized Beam's [Feature Importance API](../../api/beam/get-feature-importance.md) to evaluate the impact of various events on demand fluctuations. This API helped us identify which events significantly influenced demand, informing our model about the types of events to prioritize in our forecasting.
+We then utilized Beam's [Feature Importance API](broken-reference) to evaluate the impact of various events on demand fluctuations. This API helped us identify which events significantly influenced demand, informing our model about the types of events to prioritize in our forecasting.
 
 <figure><img src="../../.gitbook/assets/feature-importance-result-screenshot.png" alt=""><figcaption><p>Feature Importance results shown in the WebApp</p></figcaption></figure>
 

@@ -351,7 +351,7 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 
 ## Next Steps
 
-* [Forecasts API Reference](../../../api/forecasts/) - Full schema, endpoints and parameters
+* [Forecasts API Reference](broken-reference) - Full schema, endpoints and parameters
 * [Understanding Forecast Accuracy Metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE and RMSE
 * [Troubleshooting Guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
 

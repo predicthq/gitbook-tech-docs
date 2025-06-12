@@ -44,7 +44,7 @@ PHQ Labels are available for the following categories:
 
 #### PHQ Label Values
 
-PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](../../api/events/get-event-counts.md) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
+PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](broken-reference) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
 
 Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.predicthq.com/events/ssZCJhGGKUswicJswa) at the Melbourne Cricket Ground in 2024 it has the following PHQ labels (pop, country, and rock) in the API response:
 
@@ -52,7 +52,7 @@ Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.pred
 "phq_labels": [ { "label": "pop", "weight": 0.51 }, { "label": "country", "weight": 0.25 }, { "label": "rock", "weight": 0.25 }
 ```
 
-You could also use [Query Parameters](../../api/events/search-events.md#query-parameters) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
+You could also use [Query Parameters](broken-reference) to retrieve a list and the count of PHQ Labels that match your criteria, e.g. PHQ Labels associated with the sports category or PHQ Labels of events that will be taking place in a specific time and place. Here is an example:
 
 ```python
 import requests
@@ -95,4 +95,4 @@ Legacy labels are available for all event categories.
 
 ### Usage
 
-* [Labels in the Events API](../../api/events/search-events.md#query-parameters)
+* [Labels in the Events API](broken-reference)

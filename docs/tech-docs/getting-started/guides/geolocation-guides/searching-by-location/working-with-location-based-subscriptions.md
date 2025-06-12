@@ -1,12 +1,12 @@
 # Working with Location-Based Subscriptions
 
 {% hint style="info" %}
-**Please note:** If you are subscribed to location-based access and are making requests to our [Events API](../../../../api/events/) or [Features API](../../../../api/features/), you must filter your API calls using a Saved Location ID.
+**Please note:** If you are subscribed to location-based access and are making requests to our [Events API](broken-reference) or [Features API](broken-reference), you must filter your API calls using a Saved Location ID.
 {% endhint %}
 
 You can purchase access to PredictHQ's events in different ways. You can purchase access to geographic areas like cities, states, or countries. Or you can purchase access to a number of locations to get access to specific business locations. Business locations include stores, hotels, restaurants, parking garages, offices, or any other type of location you can think of.
 
-Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product will find the latitude and longitude for that location and set a [suggested radius](../../../../api/suggested-radius/get-suggested-radius.md) and save the location with those details.
+Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product will find the latitude and longitude for that location and set a [suggested radius](broken-reference) and save the location with those details.
 
 You can purchase location-based access if you have a number of business locations across a region, country, or multiple countries that you want access to but you don't need access to larger geographic areas like cities, states, or countries. For example, you may have a hotel chain with 300 hotels across the US in 20 different states spread between smaller towns and bigger cities. You can purchase location-based access for 300 hotels rather than buying access to full cities or entire states. The same could apply to a chain of restaurants, parking locations, retail stores, or any other business locations.
 
@@ -14,8 +14,8 @@ This guide provides details on how to use PredictHQ APIs when you have purchased
 
 The summary of how to use our APIs with location-based access is as follows:
 
-* Use the [Location Insights feature](broken-reference) in our WebApp or our [Saved Locations API](../../../../api/saved-locations/) to create saved locations for each of your business locations
-* To access events you then use our [Events API](../../../../api/events/search-events.md) and call it using the `saved_location.location_id` filter to access events for your locations. Alternatively, you can also access events using the `/events` call in the [Saved Locations API](../../../../api/saved-locations/search-saved-locations.md) (see Get a list of events for a location).
+* Use the [Location Insights feature](broken-reference) in our WebApp or our [Saved Locations API](broken-reference) to create saved locations for each of your business locations
+* To access events you then use our [Events API](broken-reference) and call it using the `saved_location.location_id` filter to access events for your locations. Alternatively, you can also access events using the `/events` call in the [Saved Locations API](broken-reference) (see Get a list of events for a location).
 * If you add or delete locations ensure you update the location\_id values used to query the API.
 
 This guide is focused on using the APIs. You can also use our WebApp to manage and access locations. See the documentation on the [WebApp](https://www.predicthq.com/support) for more details.
@@ -36,11 +36,11 @@ You will have a list of locations for your business. Such as a list of addresses
 
 For example, you could create a file that has a list of lat/longs and names for each store and run a script over the file to create saved locations for each.
 
-See the [Saved Locations API documentation](../../../../api/saved-locations/). To upload a list of locations do the following:
+See the [Saved Locations API documentation](broken-reference). To upload a list of locations do the following:
 
 1. Find the lat/long of each location
-2. Call the [Suggested Radius API](../../../../api/suggested-radius/get-suggested-radius.md) for each store to find the radius to use
-3. Call the [Create Saved Locations](../../../../api/saved-locations/create-a-saved-location.md) endpoint (POST /saved-locations) to create a location with the lat/long and radius you have for the location
+2. Call the [Suggested Radius API](broken-reference) for each store to find the radius to use
+3. Call the [Create Saved Locations](broken-reference) endpoint (POST /saved-locations) to create a location with the lat/long and radius you have for the location
 4. Store the `location_id` return for the location
 
 This process only needs to be performed when you initially load in your locations or if locations change (such as a store closes or a new store opens).
@@ -68,9 +68,9 @@ response = requests.get(
 print(response.json())
 ```
 
-You can of course use [other filters in the Events API](../../../../api/events/search-events.md#query-parameters) to further filter down the response. Use paging to handle multiple pages of results.
+You can of course use [other filters in the Events API](broken-reference) to further filter down the response. Use paging to handle multiple pages of results.
 
-Alternatively, you can also access events using the `/events` call in the [Saved Locations API](../../../../api/saved-locations/search-events-for-a-saved-location.md) (see Get a list of events for a location). To get a list of events for a location make the following call with the location\_id `GET /saved-locations/<location_id>/insights/events`. E.g. `GET /saved-locations/0b6ZrOnTdB2Y7k4zC_9qBg/insights/events`.
+Alternatively, you can also access events using the `/events` call in the [Saved Locations API](broken-reference) (see Get a list of events for a location). To get a list of events for a location make the following call with the location\_id `GET /saved-locations/<location_id>/insights/events`. E.g. `GET /saved-locations/0b6ZrOnTdB2Y7k4zC_9qBg/insights/events`.
 
 See the example below:
 

@@ -19,7 +19,7 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 
 This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It will go straight to PredictHQ.
 
-To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](../../api/loop/loop-links/create-a-loop-link.md) for details on creating Loop Links.
+To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](broken-reference) for details on creating Loop Links.
 
 ## Overview
 
@@ -153,7 +153,7 @@ To **provide feedback on an existing event** - open the /event-feedback/ Loop Li
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
-Note that the event ID to use is the `id` field from the [Events API](../../api/events/search-events.md). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. A feedback link or icon is added next to the event to allow users to provide feedback.
+Note that the event ID to use is the `id` field from the [Events API](broken-reference). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. A feedback link or icon is added next to the event to allow users to provide feedback.
 
 #### To pre-fill the user's email address
 

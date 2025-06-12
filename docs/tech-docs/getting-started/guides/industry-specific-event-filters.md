@@ -66,12 +66,12 @@ To retrieve events for different location types, use the following approaches:
 </details>
 
 {% hint style="info" %}
-For more information on defining locations by API, see [overview](../../api/overview/ "mention").
+For more information on defining locations by API, see [Broken link](broken-reference "mention").
 {% endhint %}
 
 ## Relevant Event Categories
 
-With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../api/beam/). Alternatively, explore these industry-level categories as a starting point:
+With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine.md) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](broken-reference). Alternatively, explore these industry-level categories as a starting point:
 
 | Industry                                      |                                   Relevant Event Categories                                  |
 | --------------------------------------------- | :------------------------------------------------------------------------------------------: |

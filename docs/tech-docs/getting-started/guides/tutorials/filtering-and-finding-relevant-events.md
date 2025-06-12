@@ -10,7 +10,7 @@ Events such as concerts, expos and public holidays can shift consumer behavior a
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](../../../api/saved-locations/).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](broken-reference).
 
 ## Use Cases
 
@@ -34,7 +34,7 @@ The sections below will guide you through identifying the top 50 upcoming events
 
 ### Step 1. Define Query Parameters for the Events API
 
-Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](../../../api/events/search-events.md), providing guidance on how to use them along with Tom’s choices:
+Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](broken-reference), providing guidance on how to use them along with Tom’s choices:
 
 <details>
 
@@ -75,7 +75,7 @@ Define the catchment area for the search. Refer to our [industry recommendations
 
 Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the center point and radius approach.
 
-Tom first uses the [Suggested Radius API](../../../api/suggested-radius/get-suggested-radius.md) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
+Tom first uses the [Suggested Radius API](broken-reference) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
 
 ```python
 params={
@@ -125,7 +125,7 @@ print(response.json())
 
 Select the types of events for the search.
 
-* **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](broken-reference) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](../../../api/beam/). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
+* **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](broken-reference) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](broken-reference). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 
 - **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
 
@@ -215,7 +215,7 @@ params={
 </details>
 
 {% hint style="info" %}
-For detailed information on all query parameters (including those not shown here), please consult [Events API](../../../api/events/).
+For detailed information on all query parameters (including those not shown here), please consult [Events API](broken-reference).
 {% endhint %}
 
 ### Step 2. Call Events API
@@ -282,7 +282,7 @@ For information on how to search for events using our SDK, please refer to [sdks
 {% hint style="info" %}
 For more details, visit:
 
-* [search-events.md](../../../api/events/search-events.md "mention")
+* [Broken link](broken-reference "mention")
 * [sdks](../../../integrations/sdks/ "mention")
 {% endhint %}
 
@@ -458,7 +458,7 @@ Results are returned in a paginated format, where the number of events per page 
 * `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.&#x20;
 * `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.&#x20;
 
-For more comprehensive guidelines on navigating paginated results, refer to [pagination.md](../../../api/overview/pagination.md "mention").
+For more comprehensive guidelines on navigating paginated results, refer to [Broken link](broken-reference "mention").
 
 </details>
 
@@ -466,7 +466,7 @@ For more comprehensive guidelines on navigating paginated results, refer to [pag
 
 <summary>Events</summary>
 
-Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [#response-fields](../../../api/events/search-events.md#response-fields "mention"). Common response fields include:
+Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Broken link](broken-reference "mention"). Common response fields include:
 
 **Dates**
 
@@ -499,8 +499,8 @@ Events are detailed in the results section of the response, each represented as 
 {% hint style="info" %}
 For more details, visit:
 
-* [pagination.md](../../../api/overview/pagination.md "mention")
-* [search-events.md](../../../api/events/search-events.md "mention")
+* [Broken link](broken-reference "mention")
+* [Broken link](broken-reference "mention")
 * [working-with-dates-times-and-timezones.md](../date-and-time-guides/working-with-dates-times-and-timezones.md "mention")
 * [predicthq-data](../../predicthq-data/ "mention")
 {% endhint %}
