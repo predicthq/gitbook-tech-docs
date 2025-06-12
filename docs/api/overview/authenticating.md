@@ -32,7 +32,7 @@ print(response.json())
 
 ## Create an API Token
 
-Read a more in-depth guide to [creating a new API Token](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/webapp-overview/how-to-create-an-api-token.md) or follow the basic steps below:
+Read a more in-depth guide to [creating a new API Token](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/webapp-overview/how-to-create-an-api-token) or follow the basic steps below:
 
 1. Log into the WebApp and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
 2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
