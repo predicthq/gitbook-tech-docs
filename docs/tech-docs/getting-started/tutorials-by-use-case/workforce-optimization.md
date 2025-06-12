@@ -12,7 +12,7 @@ Companies are increasingly leveraging automated scheduling systems that incorpor
 
 To implement PredictHQ data to inform workforce optimization for your restaurant business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI and Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 * **Build a custom demand calendar:** See an example of how to implement a calendar heatmap view showing busy days. [Read tutorial](../guides/tutorials/displaying-events-in-a-heatmap-calendar.md).
@@ -40,7 +40,7 @@ By incorporating PredictHQ’s event data into their demand forecasting models, 
 
 To implement PredictHQ data to inform workforce optimization for your retail business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Load event data to your warehouse:** Take PredictHQ API data and load it into a data warehouse. [Read tutorial](../guides/tutorials/loading-event-data-into-a-data-warehouse.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
@@ -69,7 +69,7 @@ Read about how [Legion relies on PredictHQ to help retailers eliminate labor ine
 
 To implement PredictHQ data to inform workforce optimization for your business, review the options below:
 
-* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](broken-reference) about Event Trends.
+* **No code:** Use PredictHQ's WebApp, to unlock demand data weeks and months in advance to inform your inventory updates. [Read more](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/tools/see-event-trends-in-the-webapp.md) about Event Trends.
 * **Business Intelligence (BI) tools:** Integrate PredictHQ data with your Power BI or Tableau (or other analytics tool) inventory management workflows. See the [Power BI Tutorial ](../guides/tutorials/using-event-data-in-power-bi.md)and the [Tableau Tutorial](../guides/tutorials/using-event-data-in-tableau.md).
 * **Machine learning models:** Automatically and dynamically update your inventory management by integrating PredictHQ data directly into your demand forecasting models. [Read tutorial.](../guides/tutorials/improving-demand-forecasting-models-with-event-features.md)
 * **Build a custom demand calendar:** See an example of how to implement a calendar heatmap view showing busy days. [Read tutorial](../guides/tutorials/displaying-events-in-a-heatmap-calendar.md).
