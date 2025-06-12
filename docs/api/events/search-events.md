@@ -1,5 +1,5 @@
 ---
-description: The largest and most accurate source of global data.
+description: The largest and most accurate source of global real-world event data.
 ---
 
 # Search Events
