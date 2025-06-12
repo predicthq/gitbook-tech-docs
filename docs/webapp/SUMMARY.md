@@ -1,7 +1,7 @@
 # Table of contents
 
 * [WebApp Support](README.md)
-* [WebApp Overview](webapp-overview/README.md)
+* [Overview](webapp-overview/README.md)
   * [Using the WebApp](webapp-overview/using-the-webapp.md)
   * [API Tools](webapp-overview/api-tools.md)
   * [Events Search](webapp-overview/events-search.md)
