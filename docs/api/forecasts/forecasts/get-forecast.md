@@ -18,7 +18,6 @@ The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com
 
 ## Guides
 
-* [getting-started.md](../../../getting-started/guides/forecasts-api-guides/getting-started.md "mention")
-* [understanding-forecast-accuracy-metrics.md](../../../getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics.md "mention")
-* [troubleshooting.md](../../../getting-started/guides/forecasts-api-guides/troubleshooting.md "mention")
-
+* [Getting Started with Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started)
+* [Understanding Forecast Accuracy Metrics](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
+* [Troubleshooting Guide for Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/troubleshooting)
