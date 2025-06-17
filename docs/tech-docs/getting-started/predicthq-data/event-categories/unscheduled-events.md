@@ -12,12 +12,12 @@ description: >-
 
 Severe weather is any dangerous meteorological phenomenon with the potential to cause damage, serious social disruption, or loss of human life. Types of severe weather phenomena vary, depending on the latitude, altitude, topography, and atmospheric conditions.
 
-Severe weather warnings or alerts which may lead to disruption. Severe weather alerts include storms, extreme temperature, flood, etc. For example, a [tornado warning](https://control.predicthq.com/search/events/v3xwuouU62ZEzXhxWC) for southeastern Webster Parish in northwestern Louisiana alerts people that a severe thunderstorm along with damage in the nearby area is likely to occur in the upcoming hour.
+Severe weather warnings or alerts which may lead to disruption. Severe weather alerts include storms, extreme temperature, flood, etc. For example, a [tornado warning](https://events.predicthq.com/events/v3xwuouU62ZEzXhxWC) for southeastern Webster Parish in northwestern Louisiana alerts people that a severe thunderstorm along with damage in the nearby area is likely to occur in the upcoming hour.
 
 Severe weather storm events can change over time. Events like hurricanes, tornados and other storms move across different locations and change in strength as time goes on. This can be reflected by different warning events in our system. It’s possible to have multiple warnings about the same weather condition:
 
-* The bad weather condition lasts longer than expected. For example, a [flood advisory was issued at 11.48 AM](https://control.predicthq.com/search/events/jZEkmbAYqntSRo4Xgs) in east Tennessee that the potential threat may last until 3 PM. Another [flood advisory issued at 3.02 PM](https://control.predicthq.com/search/events/fxZjGT5Ehoe7brsCjd) that indicates additional rainfall may occur on the day and the following day, and the road closures will remain in place.
-* Multiple areas can be affected. For example, On March 14th, several regions in South Dakota have issued blizzard warnings, such as [Oglala Lakota](https://control.predicthq.com/search/events/tTjDpN7ZR2WVhzw47o), [Pennington](https://control.predicthq.com/search/events/ubp47jnAvuwos5fanc), [Fall River](https://control.predicthq.com/search/events/74ucjeYRYWG89Sw5rS), and [Custer](https://control.predicthq.com/search/events/6y3py8CPSLfeN29DYq).
+* The bad weather condition lasts longer than expected. For example, a [flood advisory was issued at 11.48 AM](https://events.predicthq.com/events/jZEkmbAYqntSRo4Xgs) in east Tennessee that the potential threat may last until 3 PM. Another [flood advisory issued at 3.02 PM](https://events.predicthq.com/events/fxZjGT5Ehoe7brsCjd) that indicates additional rainfall may occur on the day and the following day, and the road closures will remain in place.
+* Multiple areas can be affected. For example, On March 14th, several regions in South Dakota have issued blizzard warnings, such as [Oglala Lakota](https://events.predicthq.com/events/tTjDpN7ZR2WVhzw47o), [Pennington](https://events.predicthq.com/events/ubp47jnAvuwos5fanc), [Fall River](https://events.predicthq.com/events/74ucjeYRYWG89Sw5rS), and [Custer](https://events.predicthq.com/events/6y3py8CPSLfeN29DYq).
 * Warnings may be issued hours or days in advance. The event (warning) state will change to `cancelled` if the potential threat no longer exist. For example the storm didn't hit as expected. Past events with an `active` state mean the event has happened.
 * Severe weather data is updated in near real time with event details being refreshed on average every 15 mins.
 * PredictHQ provides historical severe weather data that can be used for purposes like training a demand forecasting model.
@@ -92,7 +92,7 @@ This category is classified into three buckets with the following labels used to
     `fire`, `wildfire`, `drought`
 3.  **Lockdown**
 
-    The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://control.predicthq.com/search/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://control.predicthq.com/search/events/Vat8acyAFAXQaNNTaK).
+    The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://events.predicthq.com/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://events.predicthq.com/events/Vat8acyAFAXQaNNTaK).
 
 #### Date & Time
 
@@ -236,10 +236,10 @@ An act of terrorism committed using violence against civilians, with the intenti
 Labels for a terror event provide more information about the event. The most common 5 labels are:
 
 1. `attack`: An aggressive and violent act against a person or place with weapons or armed force.
-2. `bombing` : The terrorism acts where the main injury or damage is caused by dropping or detonating a bomb somewhere, for example, [Bombing in Lahan, Nepal](https://control.predicthq.com/search/events/hnCL2axLWVJZyBN2AV).
+2. `bombing` : The terrorism acts where the main injury or damage is caused by dropping or detonating a bomb somewhere, for example, [Bombing in Lahan, Nepal](https://events.predicthq.com/events/hnCL2axLWVJZyBN2AV).
 3. `arson`: The terrorism acts also result in a fire damage, it may it may be combined with a `shooting`, `bombing`, etc.
-4. `hostage-crisis`: The terrorism acts when the hostage occurs, for example, [`assassination`](https://control.predicthq.com/search/events/ywfjG46u6KDmkqqsAa), a terror threat, etc.
-5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://control.predicthq.com/search/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, the `mass-shooting` label will be added, for example, [Shooting in Chicago, United States](https://control.predicthq.com/search/events/FtzZisWG6r8KZRp9Gp).
+4. `hostage-crisis`: The terrorism acts when the hostage occurs, for example, [`assassination`](https://events.predicthq.com/events/ywfjG46u6KDmkqqsAa), a terror threat, etc.
+5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, the `mass-shooting` label will be added, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
 
 #### Date & Time
 
@@ -249,7 +249,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Terror events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://control.predicthq.com/search/events/VGG78MrBvgZ4dartjv).
+Terror events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://events.predicthq.com/events/VGG78MrBvgZ4dartjv).
 
 #### Entities
 

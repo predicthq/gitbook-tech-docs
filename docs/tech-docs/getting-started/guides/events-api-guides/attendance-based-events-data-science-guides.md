@@ -1,6 +1,6 @@
 # Attendance-Based Events Notebooks
 
-Attended Events are gatherings with a start and end date and time, where people come together in one location for entertainment or business, take the [2020 Super Bowl](https://control.predicthq.com/search/events/svbfg9xT4YSVUeeAKp) game or [San Diego Comic-Con](https://control.predicthq.com/search/events/yaREpZVlOX1P) as an example. PredictHQ uses machine-learning models to predict attendance and ranks for each of these events. This content is provided as a resource for Data Science teams to help get them up and running quickly.
+Attended Events are gatherings with a start and end date and time, where people come together in one location for entertainment or business, take the [2020 Super Bowl](https://events.predicthq.com/events/svbfg9xT4YSVUeeAKp) game or [San Diego Comic-Con](https://events.predicthq.com/events/yaREpZVlOX1P) as an example. PredictHQ uses machine-learning models to predict attendance and ranks for each of these events. This content is provided as a resource for Data Science teams to help get them up and running quickly.
 
 We provide guides to using our API and data with common Data Science tools and libraries in Python. The articles include a link to Jupyter Notebooks that you can download and run. The guides include code samples and instructions for performing common tasks.
 
