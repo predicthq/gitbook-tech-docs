@@ -18,15 +18,15 @@ A holiday generally established and recognized by law when most businesses and s
 
 Labels for a public holiday event provide more information about the holiday. The most common 5 labels are:
 
-1. `holiday-national`: When the day is celebrated on a country level, e.g. the entire country was celebrating [Martin Luther King Jr. Day](https://control.predicthq.com/search/events/rXRfgke2wuD2zv55H7) on Jan 18, 2021
-2. `holiday-local-common`: When the holiday is celebrated in only some regions of the country. E.g. only 5 out of 13 provinces and territories of Canada ([British Columbia](https://control.predicthq.com/search/events/KAojdY57MdQqYKYJvf), [Alberta](https://control.predicthq.com/search/events/joBsZRtPMSCPaD9sTQ), [Ontario](https://control.predicthq.com/search/events/zG3Egb83333QcyviRL), [New Brunswick](https://control.predicthq.com/search/events/KoTZox2GDtA4nx3CBR), and [Saskatchewan](https://control.predicthq.com/search/events/uhTw7zBFdZjdPDSJHb)) celebrate Family Day on the first Monday in February.
-3. `holiday-local`: When the holiday is region-specific, e.g. only Texas state celebrates [Texas Independence Day](https://control.predicthq.com/search/events/kjqFBZH2qbzrswecDv) on Mar 2, 2021
-4. `holiday-religious`: When the holiday is celebrated for a religious reason, e.g. there are about 44 countries that celebrate [Eid al-Adha](https://control.predicthq.com/search/events/pYQSFxFcYgJJdzo3uc) Day
-5. `holiday-christian`: When the holiday is Christian related, e.g. [Corpus Christi](https://control.predicthq.com/search/events/3768MLSMzkSPo6HPjQ).
+1. `holiday-national`: When the day is celebrated on a country level, e.g. the entire country was celebrating [Martin Luther King Jr. Day](https://events.predicthq.com/events/rXRfgke2wuD2zv55H7) on Jan 18, 2021
+2. `holiday-local-common`: When the holiday is celebrated in only some regions of the country. E.g. only 5 out of 13 provinces and territories of Canada ([British Columbia](https://events.predicthq.com/events/KAojdY57MdQqYKYJvf), [Alberta](https://events.predicthq.com/events/joBsZRtPMSCPaD9sTQ), [Ontario](https://events.predicthq.com/events/zG3Egb83333QcyviRL), [New Brunswick](https://events.predicthq.com/events/KoTZox2GDtA4nx3CBR), and [Saskatchewan](https://events.predicthq.com/events/uhTw7zBFdZjdPDSJHb)) celebrate Family Day on the first Monday in February.
+3. `holiday-local`: When the holiday is region-specific, e.g. only Texas state celebrates [Texas Independence Day](https://events.predicthq.com/events/kjqFBZH2qbzrswecDv) on Mar 2, 2021
+4. `holiday-religious`: When the holiday is celebrated for a religious reason, e.g. there are about 44 countries that celebrate [Eid al-Adha](https://events.predicthq.com/events/pYQSFxFcYgJJdzo3uc) Day
+5. `holiday-christian`: When the holiday is Christian related, e.g. [Corpus Christi](https://events.predicthq.com/events/3768MLSMzkSPo6HPjQ).
 
 #### Date & Time
 
-<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday will break into individual days if it’s celebrated over multiple days, e.g. there are 4 days off in Japan during the New Year period, the four corresponded records are: <a href="https://control.predicthq.com/search/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://control.predicthq.com/search/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://control.predicthq.com/search/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://control.predicthq.com/search/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday will break into individual days if it’s celebrated over multiple days, e.g. there are 4 days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
 Note: datetime is used with the local timezone. E.g. New York is celebrating New Year’s Day on January 1st EST, while San Francisco is also celebrating New Year’s Day on January 1st but in PST.
 
@@ -55,7 +55,7 @@ Public holidays have no PHQ Attendance available as the rank/impact only reflect
 
 ### School Holidays
 
-School holiday events represent the general date range in an area where the schools are closed for the term/semester break. E.g. [Easter School Holidays](https://control.predicthq.com/search/events/tbZtoYD9mnArGQs5RW) in Bavaria, Germany is from March 27th, 2021 to April 11th, 2021.
+School holiday events represent the general date range in an area where the schools are closed for the term/semester break. E.g. [Easter School Holidays](https://events.predicthq.com/events/tbZtoYD9mnArGQs5RW) in Bavaria, Germany is from March 27th, 2021 to April 11th, 2021.
 
 **Note**: The School holidays category covers the holiday dates in primary schools and secondary schools. School holidays for higher education institutions are under the [Academic Events](attendance-based-events.md#academic) category.
 
@@ -79,7 +79,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
+School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
 
 The latitude and longitude is pointing to the center of the region or country.
 
@@ -160,7 +160,7 @@ These Frequently asked questions apply to district level school holidays (for th
 1. **Does the data include private school holidays as well?** The data set does not cover private schools. Private schools select their own calendars and are not necessarily governed by school district dates. That being said, some private schools might follow similar calendars.
 2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data will recognize changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. The weekend after a school holiday is included if the holiday ends on a Friday or Sunday.
-4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://control.predicthq.com/search/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
+4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
 5. **Teacher Only Days -** We do not currently include teacher-only days.
 
 #### Geoscoping
@@ -195,21 +195,21 @@ School holidays for the rest of the world, and from the US and UK before the tim
 
 ### Observances
 
-An Observance is a day that is recognized nationally or internationally, usually set by a major organization or government to commemorate a public health or ethical cause of importance on a national or international level. E.g. [Mother’s Day](https://control.predicthq.com/search/events/XLGbVwXCopCg2rnN89), [New Year’s Eve](https://control.predicthq.com/search/events/9sHnCzcaMEK3tRu9Wr), [World Cancer Day](https://control.predicthq.com/search/events/3jHMpFmP4Q5NEjGxMj), etc
+An Observance is a day that is recognized nationally or internationally, usually set by a major organization or government to commemorate a public health or ethical cause of importance on a national or international level. E.g. [Mother’s Day](https://events.predicthq.com/events/XLGbVwXCopCg2rnN89), [New Year’s Eve](https://events.predicthq.com/events/9sHnCzcaMEK3tRu9Wr), [World Cancer Day](https://events.predicthq.com/events/3jHMpFmP4Q5NEjGxMj), etc
 
 **Labels**
 
 Labels for an observance event provide more information about the event. The most common 5 labels are:
 
 1. `observance-season`
-   * When the observance marks the seasonal change: [June Solstice](https://control.predicthq.com/search/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://control.predicthq.com/search/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://control.predicthq.com/search/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://control.predicthq.com/search/events/5eVGwA82bfPEMdHXrM).
+   * When the observance marks the seasonal change: [June Solstice](https://events.predicthq.com/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://events.predicthq.com/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://events.predicthq.com/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://events.predicthq.com/events/5eVGwA82bfPEMdHXrM).
    * 227 countries observed the above four types of events.
-2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://control.predicthq.com/search/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://control.predicthq.com/search/events/aY7JYozjyDx35umEwG) in other countries.
-3. `holiday-christian`: When observing a Christian-related holiday, e.g. [Epiphany](https://control.predicthq.com/search/events/cMjzGaEAKnCWLTG4Lc).
+2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://events.predicthq.com/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://events.predicthq.com/events/aY7JYozjyDx35umEwG) in other countries.
+3. `holiday-christian`: When observing a Christian-related holiday, e.g. [Epiphany](https://events.predicthq.com/events/cMjzGaEAKnCWLTG4Lc).
 4. `observance-united-nations`:
-   * The United Nations created international days to promote global awareness and action on some issues. For example, March 22 is[ World Water Day](https://control.predicthq.com/search/events/NDj4W65XpbLLeA9kPu).
-   * The United Nations also observes anniversaries of key events in its history. E.g. May 8th is [Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War](https://control.predicthq.com/search/events/nLoWsBHWpVrHuW5FcC).
-5. `holiday-hebrew`: When observing a Hebrew-related holiday, e.g. many countries observe [Tu Bishvat](https://control.predicthq.com/search/events/FRgcTikSuwrJixHDdL).
+   * The United Nations created international days to promote global awareness and action on some issues. For example, March 22 is[ World Water Day](https://events.predicthq.com/events/NDj4W65XpbLLeA9kPu).
+   * The United Nations also observes anniversaries of key events in its history. E.g. May 8th is [Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War](https://events.predicthq.com/events/nLoWsBHWpVrHuW5FcC).
+5. `holiday-hebrew`: When observing a Hebrew-related holiday, e.g. many countries observe [Tu Bishvat](https://events.predicthq.com/events/FRgcTikSuwrJixHDdL).
 
 #### Date & Time
 
@@ -229,10 +229,10 @@ Observances have event group entities available.
 
 **PHQ Rank**
 
-* **Rank 80-90** observances are widely observed and typically associated with consumer spending on gifts, travel, and festivities. Examples include [Valentine's Day](https://control.predicthq.com/search/events/x957f7DyXpeCubLpWH) and [Christmas Eve](https://control.predicthq.com/search/events/AtVVBpX4bkXhLDNjBa).
-* **Rank 60-79** observances are mostly religious observances, national days, independence days, or cultural and historical dates which have a wide impact. Examples include [Constitution Day](https://control.predicthq.com/search/events/PmW2kvCVoxQ3AHgAZS) and [Ganesh Chaturthi](https://control.predicthq.com/search/events/N22YXJKJlGwL).
-* **Rank 40-59** observances include observances with the potential for increased localized economic activities such as awareness days, smaller historical observances, and regional celebrations. Examples include [Queensland Day](https://control.predicthq.com/search/events/4CJKDjxdQb5RCyckrN) and [National Indigenous Peoples Day](https://control.predicthq.com/search/events/AYd5LmshmHX5zjjc4k).
-* **Rank 20-39** observances generally do not have widespread commercialization, public holidays, or significant consumer behavior changes associated with them. Examples include [September Equinox](https://control.predicthq.com/search/events/wjjJldkg0jGj) and [World Bicycle Day](https://control.predicthq.com/search/events/Bkgr5cvHLa8ZEGNUbT).
+* **Rank 80-90** observances are widely observed and typically associated with consumer spending on gifts, travel, and festivities. Examples include [Valentine's Day](https://events.predicthq.com/events/x957f7DyXpeCubLpWH) and [Christmas Eve](https://events.predicthq.com/events/AtVVBpX4bkXhLDNjBa).
+* **Rank 60-79** observances are mostly religious observances, national days, independence days, or cultural and historical dates which have a wide impact. Examples include [Constitution Day](https://events.predicthq.com/events/PmW2kvCVoxQ3AHgAZS) and [Ganesh Chaturthi](https://events.predicthq.com/events/N22YXJKJlGwL).
+* **Rank 40-59** observances include observances with the potential for increased localized economic activities such as awareness days, smaller historical observances, and regional celebrations. Examples include [Queensland Day](https://events.predicthq.com/events/4CJKDjxdQb5RCyckrN) and [National Indigenous Peoples Day](https://events.predicthq.com/events/AYd5LmshmHX5zjjc4k).
+* **Rank 20-39** observances generally do not have widespread commercialization, public holidays, or significant consumer behavior changes associated with them. Examples include [September Equinox](https://events.predicthq.com/events/wjjJldkg0jGj) and [World Bicycle Day](https://events.predicthq.com/events/Bkgr5cvHLa8ZEGNUbT).
 
 **Local Rank**
 
@@ -263,7 +263,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-Politics events scope to a country level. For example [Election for the President of the United States of America](https://control.predicthq.com/search/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude point to the center of the covered area. The place scope will identify the full area of coverage.
+Politics events scope to a country level. For example [Election for US Senate](https://events.predicthq.com/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude point to the center of the covered area. The place scope will identify the full area of coverage.
 
 #### Entities
 

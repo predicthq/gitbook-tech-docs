@@ -7,7 +7,7 @@ description: >-
 
 # Live TV Events
 
-For example, during the basketball game [Villanova Wildcats vs Baylor Bears](https://control.predicthq.com/search/events/3pgcB4kTQdLv6FAhCb#broadcasts) on March 27, 2021, there were over 150,000 people in Cook County, Illinois watching the live broadcast of the basketball game, as well as over 130,000 people were watching the game in Los Angeles County, California, etc.
+For example, during the basketball game [Villanova Wildcats vs Baylor Bears](https://events.predicthq.com/events/3pgcB4kTQdLv6FAhCb) on March 27, 2021, there were over 150,000 people in Cook County, Illinois watching the live broadcast of the basketball game, as well as over 130,000 people were watching the game in Los Angeles County, California, etc.
 
 **Note**: Live TV Events covers live games. Replays of sporting events are not included.
 

@@ -44,7 +44,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Sports events are usually point events, meaning the latitude and longitude of the event represent the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://control.predicthq.com/search/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
+Sports events are usually point events, meaning the latitude and longitude of the event represent the location of the event’s venue. The event can also impact an area or region, for example, the location of the [2016 Rio Summer Olympics](https://events.predicthq.com/events/VMDqfHDg3PAbxL3PXh) is the state of Rio de Janeiro.
 
 #### Entities
 
@@ -66,17 +66,17 @@ Sports events have PHQ Attendance available.
 
 ### Conferences
 
-A formal meeting or forum relating to a certain topic between a group of people with shared interests. A major conference, especially an industry-related one, may last for several days and occur with regular frequency. An example of an annually occurring conference is the [ASH Annual Meeting](https://control.predicthq.com/search/events/2RxTdCucMNcLZSsEqW).
+A formal meeting or forum relating to a certain topic between a group of people with shared interests. A major conference, especially an industry-related one, may last for several days and occur with regular frequency. An example of an annually occurring conference is the [ASH Annual Meeting](https://events.predicthq.com/events/2RxTdCucMNcLZSsEqW).
 
 **LABELS**
 
 Labels for a conference event provide more information about the event. The most common 5 labels are:
 
-1. `business`: The conferences for a commercial purpose, for example, [Dreamforce](https://control.predicthq.com/search/events/HAnRjF9RUX8yFnWuGv) by Salesforce.
-2. `education`: The conferences for an educational purpose, for example, [Young Social Innovators of the Year Awards](https://control.predicthq.com/search/events/XoEPm68yHWWNw9ysDp).
-3. `health`: The conferences related to the health industry, for example, [CIOSP - Congresso Internacional de Odontologia de São Paulo](https://control.predicthq.com/search/events/kJ76dr1RmWPP).
-4. `technology`: The conferences related to the technology topic, for example, [FPD China](https://control.predicthq.com/search/events/YEKd1jV29rjV).
-5. `science`: The conferences related to the scientific topic, for example, [IAPM ASM](https://control.predicthq.com/search/events/RSJcHToM4Jy5MQcHZJ).
+1. `business`: The conferences for a commercial purpose, for example, [Dreamforce](https://events.predicthq.com/events/HAnRjF9RUX8yFnWuGv) by Salesforce.
+2. `education`: The conferences for an educational purpose, for example, [Young Social Innovators of the Year Awards](https://events.predicthq.com/events/XoEPm68yHWWNw9ysDp).
+3. `health`: The conferences related to the health industry, for example, [CIOSP - Congresso Internacional de Odontologia de São Paulo](https://events.predicthq.com/events/kJ76dr1RmWPP).
+4. `technology`: The conferences related to the technology topic, for example, [FPD China](https://events.predicthq.com/events/YEKd1jV29rjV).
+5. `science`: The conferences related to the scientific topic, for example, [IAPM ASM](https://events.predicthq.com/events/RSJcHToM4Jy5MQcHZJ).
 
 #### Date & Time
 
@@ -114,11 +114,11 @@ An industrial exhibition for communicating and trading purpose between business,
 
 Labels for an expo event provide more information about the event. The most common 5 labels are:
 
-1. `education`: The expos for an educational purpose or education-related topics, for example, [Riyadh International Book Fair](https://control.predicthq.com/search/events/cL7mv3QVd4PAwaRbvU).
-2. `technology`: The expos related to topics in technology, for example, [IIMS - Indonesia International Motor Show](https://control.predicthq.com/search/events/SDxxc8XymZGYWZ6nrX).
-3. `performing-arts`: The shows or fairs that have live performances or are art-related, for example, [Wizard World Comic Con](https://control.predicthq.com/search/events/i3VNEqMuZKpXUoBusH), and [Saint Louis Art Fair](https://control.predicthq.com/search/events/9uQWg42s8RziqNxPQb).
-4. `entertainment`: The shows or fairs for entertainment purposes, for example, [The Big E (The Eastern States Exposition)](https://control.predicthq.com/search/events/gPmLe5eSMCbjLnYWCg).
-5. `career`: A career or job fair that includes a number of businesses as well large numbers of candidates , for example, [HKTDC Education & Careers Expo](https://control.predicthq.com/search/events/ZkwcdaWxiMtbKZMrPK).
+1. `education`: The expos for an educational purpose or education-related topics, for example, [Riyadh International Book Fair](https://events.predicthq.com/events/cL7mv3QVd4PAwaRbvU).
+2. `technology`: The expos related to topics in technology, for example, [IIMS - Indonesia International Motor Show](https://events.predicthq.com/events/SDxxc8XymZGYWZ6nrX).
+3. `performing-arts`: The shows or fairs that have live performances or are art-related, for example, [Wizard World Comic Con](https://events.predicthq.com/events/i3VNEqMuZKpXUoBusH), and [Saint Louis Art Fair](https://events.predicthq.com/events/9uQWg42s8RziqNxPQb).
+4. `entertainment`: The shows or fairs for entertainment purposes, for example, [The Big E (The Eastern States Exposition)](https://events.predicthq.com/events/gPmLe5eSMCbjLnYWCg).
+5. `career`: A career or job fair that includes a number of businesses as well large numbers of candidates , for example, [HKTDC Education & Careers Expo](https://events.predicthq.com/events/ZkwcdaWxiMtbKZMrPK).
 
 #### Date & Time
 
@@ -150,7 +150,7 @@ Expos events have PHQ Attendance available.
 
 ### Concerts
 
-A musical performance where the primary intention of attendance is to see the musical artist or listen to music. Concerts usually last less than one day. Examples are a large [Eminem](https://control.predicthq.com/search/events/aYR4t59pGHA92FtNgK) concert, or a smaller nightclub event, for example, [Darude At Hq2 Nightclub Atlantic City](https://control.predicthq.com/search/events/xx8TPFE7XNh5pdxyRX).
+A musical performance where the primary intention of attendance is to see the musical artist or listen to music. Concerts usually last less than one day. Examples are a large [Eminem](https://events.predicthq.com/events/aYR4t59pGHA92FtNgK) concert, or a smaller nightclub event, for example, [Darude At Hq2 Nightclub Atlantic City](https://events.predicthq.com/events/xx8TPFE7XNh5pdxyRX).
 
 **LABELS**
 
@@ -186,17 +186,17 @@ Concerts events have PHQ Attendance available.
 
 ### Festivals
 
-A commonly known day or a period of time when people gather together to celebrate a specific reason; or a day or a period of time consisting of an organized series of shows and entertainment activities Festivals typically occur on a certain frequency. For example, the [Yosakoi Soran Festival](https://control.predicthq.com/search/events/ScR7u7EZSBuxZ8kK9J) is held annually.
+A commonly known day or a period of time when people gather together to celebrate a specific reason; or a day or a period of time consisting of an organized series of shows and entertainment activities Festivals typically occur on a certain frequency. For example, the [Yosakoi Soran Festival](https://events.predicthq.com/events/ScR7u7EZSBuxZ8kK9J) is held annually.
 
 **LABELS**
 
 Labels for a festival event provide more information about the festival. The most common 5 labels are:
 
-1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://control.predicthq.com/search/events/duHrbmUbpFSgwypGAK).
-2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry and art. For example, the [National Festival of Popular Arts in Marrakech](https://control.predicthq.com/search/events/cxSrjK82oWZGUWUvUJ).
-3. `family`: The festivals which are family-friendly and children-friendly, for example, [Magnificent Mile Lights Festival](https://control.predicthq.com/search/events/vFQK4H3yaujGqwnR4z).
-4. `community`: Traditional festivals in the local area. Community festivals are less formal than world-wide festivals and may also include street markets and entertainment activities. The [Odunde Festival](https://control.predicthq.com/search/events/dkbGjQW943KSL5hT8b) is an example of a community festival.
-5. `food`: Food festivals where communities or businesses trade food products, for example, [Bite of Seattle](https://control.predicthq.com/search/events/QDgCysY3kMnpoGYFi9).
+1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://events.predicthq.com/events/duHrbmUbpFSgwypGAK).
+2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
+3. `family`: The festivals which are family-friendly and children-friendly, for example, [Magnificent Mile Lights Festival](https://events.predicthq.com/events/vFQK4H3yaujGqwnR4z).
+4. `community`: Traditional festivals in the local area. Community festivals are less formal than world-wide festivals and may also include street markets and entertainment activities. The [Odunde Festival](https://events.predicthq.com/events/dkbGjQW943KSL5hT8b) is an example of a community festival.
+5. `food`: Food festivals where communities or businesses trade food products, for example, [Bite of Seattle](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9).
 
 #### Date & Time
 
@@ -206,7 +206,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-A festival event can be a point event or an area event. The latitude and longitude of a point event represents the location of the venue where the festival takes place. The latitude and longitude of an area event is the geometric center of the area of the festival - either the area impacted by the festival, or an area where the festival takes place since its location is not fixed. An example of a festival without a fixed location is the [Norwich St. Patrick’s Day Parade and Festival](https://control.predicthq.com/search/events/w5PNZxwvKAKLGXGrae).
+A festival event can be a point event or an area event. The latitude and longitude of a point event represents the location of the venue where the festival takes place. The latitude and longitude of an area event is the geometric center of the area of the festival - either the area impacted by the festival, or an area where the festival takes place since its location is not fixed. An example of a festival without a fixed location is the [Norwich St. Patrick’s Day Parade and Festival](https://events.predicthq.com/events/w5PNZxwvKAKLGXGrae).
 
 #### Entities
 
@@ -228,7 +228,7 @@ Festival events have PHQ Attendance available.
 
 ### Performing Arts
 
-A show or an exhibition of creative activities for an audience, for example, [a circus show](https://control.predicthq.com/search/events/EHKbvvKhLnVonwUUbD).
+A show or an exhibition of creative activities for an audience, for example, [a circus show](https://events.predicthq.com/events/EHKbvvKhLnVonwUUbD).
 
 **EVENT TYPES**
 
@@ -236,19 +236,19 @@ The most common 5 types of performing-arts events are:
 
 1.  **General Theatre**
 
-    Theatre plays, for example, [The Nutcracker ballet show](https://control.predicthq.com/search/events/wunsQfMcMgbB2wXedq).
+    Theatre plays, for example, [The Nutcracker ballet show](https://events.predicthq.com/events/wunsQfMcMgbB2wXedq).
 2.  **Comedy club**
 
-    Standup comedy shows, for example, [Eddie Izzard - Wunderbar World Tour](https://control.predicthq.com/search/events/k2bibyMXE4B42EECnv).
+    Standup comedy shows, for example, [Eddie Izzard - Wunderbar World Tour](https://events.predicthq.com/events/k2bibyMXE4B42EECnv).
 3.  **Concert**
 
-    Musical plays, for example, A [symphony](https://control.predicthq.com/search/events/MeswVtp3dMccSx5jEs), or an [opera](https://control.predicthq.com/search/events/ah6hg4UorgsaJ2PSFY), etc.
+    Musical plays, for example, A [symphony](https://events.predicthq.com/events/MeswVtp3dMccSx5jEs), or an [opera](https://events.predicthq.com/events/ah6hg4UorgsaJ2PSFY), etc.
 4.  **Family Theatre**
 
-    Shows or plays where the main audience are children, for example, [Magic On Ice](https://control.predicthq.com/search/events/8QJfuDQeqrKQftBnB3), a [dubbing show](https://control.predicthq.com/search/events/sjg2xuf27oeLQLrbpt), etc.
+    Shows or plays where the main audience are children, for example, [Magic On Ice](https://events.predicthq.com/events/8QJfuDQeqrKQftBnB3), a [dubbing show](https://events.predicthq.com/events/sjg2xuf27oeLQLrbpt), etc.
 5.  **Cultural Performances**
 
-    Traditional or cultural activities, for example, [Sewing & Quilt Expo](https://control.predicthq.com/search/events/NCErdrvw9R69ocqES9), a [poetry slam](https://control.predicthq.com/search/events/CEE7SzC2CmrWSbbDe4), etc.
+    Traditional or cultural activities, for example, [Sewing & Quilt Expo](https://events.predicthq.com/events/NCErdrvw9R69ocqES9), a [poetry slam](https://events.predicthq.com/events/CEE7SzC2CmrWSbbDe4), etc.
 
 #### Date & Time
 
@@ -280,17 +280,17 @@ Performing-arts events have PHQ Attendance available.
 
 ### Community
 
-This category includes various types of events, for example, a [college event](https://control.predicthq.com/search/events/7diCQtRZ5XQdso27v3), a [community party](https://control.predicthq.com/search/events/pS49Cvk4tiSPKdEAJ8), an [auction](https://control.predicthq.com/search/events/iC5BK62w3z9CLpqvif), or a [fan meeting](https://control.predicthq.com/search/events/CnNAFhLqffMQMsqg4R).
+This category includes various types of events, for example, a [college event](https://events.predicthq.com/events/7diCQtRZ5XQdso27v3), a [community party](https://events.predicthq.com/events/pS49Cvk4tiSPKdEAJ8), an [auction](https://events.predicthq.com/events/iC5BK62w3z9CLpqvif), or a [fan meeting](https://events.predicthq.com/events/CnNAFhLqffMQMsqg4R).
 
 **LABELS**
 
 Labels for a community event provide more information about the event. The most common 5 labels are:
 
-1. `music`, `concert`: Social events with musical activity, for example, a [karaoke at a bar](https://control.predicthq.com/search/events/TvzBomhs9m6JAdKRr3).
-2. `family`: Community events which are children and family-friendly, for example, a [book club breakfast in the library](https://control.predicthq.com/search/events/3pTSHhuXjQErhg9nwu).
-3. `food`: Social events about food or have food provided, for example, a [wine tasting event](https://control.predicthq.com/search/events/hk9SqnMEk2ywVAyQb9).
-4. `education`: Informal training workshops or clubs that consist of a group of people that share the same interest, for example, an [installation art workshop](https://control.predicthq.com/search/events/9sGedbBiSzq74ERvkS).
-5. `fundraiser`: Community [fundraising](https://control.predicthq.com/search/events/U7nFaVDxKEh6RAD5UD) events.
+1. `music`, `concert`: Social events with musical activity, for example, a [karaoke at a bar](https://events.predicthq.com/events/TvzBomhs9m6JAdKRr3).
+2. `family`: Community events which are children and family-friendly, for example, a [book club breakfast in the library](https://events.predicthq.com/events/3pTSHhuXjQErhg9nwu).
+3. `food`: Social events about food or have food provided, for example, a [wine tasting event](https://events.predicthq.com/events/hk9SqnMEk2ywVAyQb9).
+4. `education`: Informal training workshops or clubs that consist of a group of people that share the same interest, for example, an [installation art workshop](https://events.predicthq.com/events/9sGedbBiSzq74ERvkS).
+5. `fundraiser`: Community [fundraising](https://events.predicthq.com/events/U7nFaVDxKEh6RAD5UD) events.
 
 #### Date & Time
 
