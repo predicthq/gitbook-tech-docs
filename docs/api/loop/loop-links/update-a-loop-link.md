@@ -78,8 +78,8 @@ print(response.status_code)
 
 ## Guides
 
-Below are some guides relevant to this API:
+ow are some guides relevant to this API:
 
-* [Integrate with Loop Links](../../../integrations/integration-guides/integrate-with-loop-links.md)
+* [Integrate with Loop Links](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/integrate-with-loop-links)
 
 [^1]: An existing Loop Link ID.

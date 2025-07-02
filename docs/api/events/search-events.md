@@ -15,7 +15,7 @@ Your subscription settings can be viewed in our [WebApp](https://control.predict
 {% endhint %}
 
 {% openapi-operation spec="events-api" path="/v1/events/" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI events-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml)
 {% endopenapi-operation %}
 
 ## Examples
@@ -88,6 +88,6 @@ Airport codes are mapped to Place IDs. The current mapping of airport code to Pl
 
 Below are some guides relevant to this API:
 
-* [Geolocation Guides](../../getting-started/guides/geolocation-guides/)
-* [Date and Time Guides](../../getting-started/guides/date-and-time-guides/)
-* Other [Event API Guides](../../getting-started/guides/events-api-guides/)
+* [Geolocation Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides)
+* [Date and Time Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/date-and-time-guides)
+* Other [Events API Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/events-api-guides)

@@ -95,4 +95,4 @@ print(response.json())
 
 ## Best Practices
 
-Please refer to this guide for the best practices on grouping analyses: [Grouping Analyses in Beam](broken-reference)
+Please refer to this guide for the best practices on grouping analyses: [Grouping Analyses in Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/grouping-analyses-in-beam)

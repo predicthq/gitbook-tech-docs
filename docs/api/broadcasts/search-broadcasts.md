@@ -224,4 +224,4 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [Live TV Event Guides](../../getting-started/guides/live-tv-event-guides/)
+* [Live TV Event Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

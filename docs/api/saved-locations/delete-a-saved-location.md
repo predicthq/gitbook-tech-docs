@@ -49,6 +49,6 @@ print(response.status_code)
 
 Below are some guides relevant to this API:
 
-* [Working with Location-Based Subscriptions](../../getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions.md)
+* [Working with Location-Based Subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)
 
 [^1]: An existing Saved Location ID.

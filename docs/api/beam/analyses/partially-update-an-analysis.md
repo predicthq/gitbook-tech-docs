@@ -74,6 +74,6 @@ print(response.status_code)
 
 Below are some guides relevant to this API:
 
-* [beam-guides](../../../getting-started/guides/beam-guides/ "mention")
+* [Beam Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)
 
 [^1]: An existing Beam Analysis ID.

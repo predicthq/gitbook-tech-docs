@@ -137,4 +137,4 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [Understanding Place Hierarchies](../../getting-started/guides/geolocation-guides/understanding-place-hierarchies.md)
+* [Understanding Place Hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)

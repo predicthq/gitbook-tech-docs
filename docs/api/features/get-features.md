@@ -115,7 +115,7 @@ Predicted Impact Patterns model the impact of leading days (days before the even
 The features above are generic features and the features in the table below are the impact pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
 {% hint style="success" %}
-We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention") for more details.
+We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 {% endhint %}
 
 <table><thead><tr><th width="462">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_community_accommodation</code></td><td>Community accommodation impact</td></tr><tr><td><code>phq_attendance_concerts_accommodation</code></td><td>Concerts accommodation impact</td></tr><tr><td><code>phq_attendance_conferences_accommodation</code></td><td>Conferences accommodation impact</td></tr><tr><td><code>phq_attendance_expos_accommodation</code></td><td>Expos accommodation impact</td></tr><tr><td><code>phq_attendance_festivals_accommodation</code></td><td>Festivals accommodation impact</td></tr><tr><td><code>phq_attendance_performing_arts_accommodation</code></td><td>Performing Arts accommodation impact</td></tr><tr><td><code>phq_attendance_sports_accommodation</code></td><td>Sports accommodation impact</td></tr><tr><td><code>phq_attendance_community_hospitality</code></td><td>Community hospitality impact</td></tr><tr><td><code>phq_attendance_concerts_hospitality</code></td><td>Concerts hospitality impact</td></tr><tr><td><code>phq_attendance_conferences_hospitality</code></td><td>Conferences hospitality impact</td></tr><tr><td><code>phq_attendance_expos_hospitality</code></td><td>Expos hospitality impact</td></tr><tr><td><code>phq_attendance_festivals_hospitality</code></td><td>Festivals hospitality impact</td></tr><tr><td><code>phq_attendance_performing_arts_hospitality</code></td><td>Performing Arts hospitality impact</td></tr><tr><td><code>phq_attendance_sports_hospitality</code></td><td>Sports hospitality impact</td></tr><tr><td><code>phq_attendance_community_retail</code></td><td>Community Retail impact</td></tr><tr><td><code>phq_attendance_concerts_retail</code></td><td>Concerts Retail impact</td></tr><tr><td><code>phq_attendance_conferences_retail</code></td><td>Conferences Retail impact</td></tr><tr><td><code>phq_attendance_expos_retail</code></td><td>Expos Retail impact</td></tr><tr><td><code>phq_attendance_festivals_retail</code></td><td>Festivals Retail impact</td></tr><tr><td><code>phq_attendance_performing_arts_retail</code></td><td>Performing Arts Retail impact</td></tr><tr><td><code>phq_attendance_sports_retail</code></td><td>Sports Retail impact</td></tr></tbody></table>
@@ -151,7 +151,7 @@ PHQ Impact features provide daily-level aggregated stats based on the predicted 
 
 **Holidays and Observances Impact Pattern Features**
 
-These features include the Predicted Impact Patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [impact-patterns.md](../../getting-started/predicthq-data/impact-patterns.md "mention")
+These features include the Predicted Impact Patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 
 {% hint style="success" %}
 We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
@@ -609,7 +609,7 @@ for feature in phq.features.obtain_features(
 
 Below are some guides relevant to this API:
 
-* [increase-accuracy-with-the-features-api.md](../../getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api.md "mention")
-* [feature-engineering-guide.md](../../getting-started/guides/features-api-guides/feature-engineering-guide.md "mention")
-* [demand-forecasting-data-science-guides.md](../../getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md "mention")
-* [aggregating-live-tv-events.md](../../getting-started/guides/live-tv-event-guides/aggregating-live-tv-events.md "mention")
+* [Increase Accuracy with the Features API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api)
+* [Get ML Features](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/feature-engineering-guide)
+* [Demand Forecasting with Event Features](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/demand-forecasting-data-science-guides)
+* [Aggregating Live TV Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)

@@ -140,6 +140,6 @@ print(response.json())
 
 Below are some guides relevant to this API:
 
-* [Understanding Place Hierarchies](../../getting-started/guides/geolocation-guides/understanding-place-hierarchies.md)
-* [Find Events by Place ID](../../getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id.md)
-* [Find Broadcasts by County Place ID](../../getting-started/guides/live-tv-event-guides/find-broadcasts-by-county-place-id.md)
+* [Understanding Place Hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)
+* [Find Events by Place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)
+* [Find Broadcasts by County Place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/find-broadcasts-by-county-place-id)
