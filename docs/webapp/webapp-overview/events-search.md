@@ -18,8 +18,7 @@ Filters can be used to narrow down your search results. Your filters will be rem
 
 See below for a list of filters:
 
-* **Categories** - choose one or more categories to view events under those categories. See our [categories page](https://www.predicthq.com/intelligence/data-enrichment/event-categories) for an overview.\
-
+* **Categories** - choose one or more categories to view events under those categories. See our [categories page](https://www.predicthq.com/intelligence/data-enrichment/event-categories) for an overview.\\
 * **Date range** - specify the date range. You can search for future, or past events. Choose from preconfigured date ranges, or set a custom date range on the calendar. Note that the date ranges available are limited by what you have access to in your subscription.
 * **Labels** - Within categories, we have different labels. For example, labels within the sports category indicate what type of sporting event you are looking at.
 * **Event name** - This option searches the event title and description. It's a way to search for a specific event or to search for events with text in their title or description.
@@ -29,7 +28,7 @@ See below for a list of filters:
   * Active - Active events where the details are confirmed.
   * Canceled - Events that have been canceled.
   * Postponed - Events that have been postponed from the original announced dates and times.
-  * Predicted - Future events that we predict will occur but where all the details are not finalized. They could be events that haven’t been scheduled or even announced yet, but are expected to occur – based on years of historical event, entity, demand, and venue data. Or they could be events we know are going to occur like an upcoming sports semi-final game but where the location or timing isn't yet confirmed. See [predicted-events.md](../../getting-started/predicthq-data/predicted-events.md "mention") for more details.
+  * Predicted - Future events that we predict will occur but where all the details are not finalized. They could be events that haven’t been scheduled or even announced yet, but are expected to occur – based on years of historical event, entity, demand, and venue data. Or they could be events we know are going to occur like an upcoming sports semi-final game but where the location or timing isn't yet confirmed. See [Predicted Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/predicted-events "mention") for more details.
 
 #### Choose Your Location
 
@@ -57,7 +56,7 @@ See below for an example of entering multiple geographic area (city, state, coun
 
 <figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption><p>Selecting multiple locations by geographic area (city, state, country type) in the Location filter</p></figcaption></figure>
 
-Below is another example of searching on multiple saved locations (also known as [location insights](../location-insights/an-overview-of-location-insights.md) locations).
+Below is another example of searching on multiple saved locations (also known as [location insights](../location-insights/an-overview-of-location-insights.md)).
 
 <figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Selecting multiple locations by Saved Locations in the Location filter</p></figcaption></figure>
 
@@ -88,7 +87,7 @@ The WebApp List view shows a list of events. The events shown are based on the f
 
 Events are ordered by the sort parameter. Choose your sort values and run your search to see a list of events that you have access to under your plan.
 
-The list view calls our [Events API](../../api/events/) to get back the events data. All the data you see in the list view can be retrieved using the API. See our [tech docs](../../) for more info on using the API.
+The list view calls our [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) to get back the events data. All the data you see in the list view can be retrieved using the API. See our [tech docs](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/) for more info on using the API.
 
 ### Map View
 

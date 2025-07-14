@@ -17,18 +17,17 @@ Event Trends shows you statistics on the total impact per day caused by all even
 
 Because PredictHQ contains extensive information on future events and historic events you can use Event Trends to look at spikes in demand caused by events to help prepare your business for increased demand caused by demand surges or just busy days.
 
-To see Event Trends in the WebApp, follow these steps:&#x20;
+To see Event Trends in the WebApp, follow these steps:
 
 1. Log in to the [WebApp](https://control.predicthq.com)
 2. Select the "Event Trends" icon from the sidebar.
-3.  Set parameters for your search. Select the location, categories, date range, and rank. We recommend selecting a wide enough date range to get meaningful results (at least a month) - our default date range selection is 90 days.\
-
+3.  Set parameters for your search. Select the location, categories, date range, and rank. We recommend selecting a wide enough date range to get meaningful results (at least a month) - our default date range selection is 90 days.\\
 
     <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
-4.  You can hover over the results in the graph to see more details. In the example below you see that the results represented in the graph show that there was a peak day on the 25th of November, with a total attendance of 116,438 people.&#x20;
+4.  You can hover over the results in the graph to see more details. In the example below you see that the results represented in the graph show that there was a peak day on the 25th of November, with a total attendance of 116,438 people.
 
     <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/5rs1QDGT3Wdm0UKJC8CgyH/d674e422b6a5dcc8a314051fc1afccdb/DEI-peak-day.png" alt="Results"><figcaption></figcaption></figure>
-5.  You can click on a point on the graph to see more details. You can also scroll down to view the table below to see what types of events (categories) are contributing to the demand on a given day. In the case of the example below, sports and concerts are the biggest contributors to the total attendance on the selected day.&#x20;
+5.  You can click on a point on the graph to see more details. You can also scroll down to view the table below to see what types of events (categories) are contributing to the demand on a given day. In the case of the example below, sports and concerts are the biggest contributors to the total attendance on the selected day.
 
     <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/7bCmaqy5iHaNaDp29ZG7zl/4d1beb8bebb05d8bff129d4da69b5c3c/DEI-category-breakdown-pic.png" alt="Event categories"><figcaption></figcaption></figure>
 6.  You can also toggle the detailed view toggle to see the breakdown for all the selected categories or industries in the graph. For the predicted attendance view, this will show you lines for up to all 7 categories (unless you have used the categories filter to show fewer categories).
@@ -46,7 +45,7 @@ You use the Event Trends feature in the same way as detailed above to look at sp
 
 Our Predicted Event Spend model takes into account many factors when calculating spend per day. At the core of this figure sits our market-leading global event coverage, predicted event attendance, local accommodation demand, third-party data, and more which culminate into a contextual and attributable dollar figure that can be used to power both insights and forecasting models.
 
-Predicted Event Spend is calculated from our core PredictHQ data, enriched by local economic indicators and partner data. Find out more about predicted event spend in our [technical documentation](../../getting-started/predicthq-data/predicted-event-spend.md).
+Predicted Event Spend is calculated from our core PredictHQ data, enriched by local economic indicators and partner data. Find out more about predicted event spend in our [technical documentation](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/predicted-event-spend).
 
 <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/3yd9U7IppdLOcJkadFtKAU/b4268bdcd6135145467a16139f55faa4/DEI-PES.png" alt="Daily Event Impact - PES"><figcaption></figcaption></figure>
 
@@ -56,10 +55,10 @@ You can now export from the Event Trends page. Simply choose a location, set you
 
 This exports Features API data. Exporting historical data can be a quick way to get training data for training Machine Learning Models during R\&D. Or to use the data in a Spreadsheet, BI application or some other tool.
 
-The data format has 1 row per day and 1 column for each Features API feature for the attended event categories. See the [Available Features ](../../api/features/get-features.md#available-features)in the Features API for more info on the data include in each column. See the example below.
+The data format has 1 row per day and 1 column for each Features API feature for the attended event categories. See the [Available Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features#available-features) in the Features API for more info on the data include in each column. See the example below.
 
 <figure><img src="https://images.ctfassets.net/ihlmn42cjuv0/3uqrREqKe2yUs9PH17lt7v/fe44d8ce66c08d3bb022c4f53246b0c8/Screenshot_2024-06-07_143059.png" alt="Exported Event Trends Data"><figcaption></figcaption></figure>
 
 ### Getting this data via the API <a href="#getting-this-data-via-the-api" id="getting-this-data-via-the-api"></a>
 
-To get aggregated data on all events at a location from our APIs use our [Features API](../../getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api.md). Access forecast-ready prebuilt intelligence and features to enable your teams to extract value from intelligent event data rapidly. The Features API includes features such as the sum of attendance per day per category which you can use to get the same data as shown in the Event Trends graph. See our [technical documentation](../../getting-started/guides/features-api-guides/) for more info.
+To get aggregated data on all events at a location from our APIs use our [Features API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api). Access forecast-ready prebuilt intelligence and features to enable your teams to extract value from intelligent event data rapidly. The Features API includes features such as the sum of attendance per day per category which you can use to get the same data as shown in the Event Trends graph. See our [technical documentation](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides) for more info.

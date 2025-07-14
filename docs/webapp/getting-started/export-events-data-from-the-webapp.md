@@ -31,7 +31,7 @@ From this screen you can download exports or delete exports.
 
 ### Export File Format <a href="#export-file-format" id="export-file-format"></a>
 
-See the [Events API Response Fields documentation](../../api/events/search-events.md#response) for information on the fields included in the export.
+See the [Events API Response Fields documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or the [OpenAPI Spec](https://api.predicthq.com/docs/?urls.primaryName=Events+API) for information on the fields included in the export.
 
 JSONL format exports are very similar to the Events API response.
 

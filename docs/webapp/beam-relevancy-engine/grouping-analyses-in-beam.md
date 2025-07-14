@@ -2,7 +2,7 @@
 
 ### What is an Analysis? <a href="#what-is-an-analysis" id="what-is-an-analysis"></a>
 
-An Analysis in [Beam](./) is an evaluation of a particular demand data set for a specific location and date range. This can be created in the [WebApp](https://control.predicthq.com/beam) from any location you define or one of your saved locations in [Location Insights](https://control.predicthq.com/location-insights). Alternatively, you can create Analyses at scale via the [Beam API](../../api/beam/).
+An Analysis in [Beam](./) is an evaluation of a particular demand data set for a specific location and date range. This can be created in the [WebApp](https://control.predicthq.com/beam) from any location you define or one of your saved locations in [Location Insights](https://control.predicthq.com/location-insights). Alternatively, you can create Analyses at scale via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
 
 ### Why group Analyses? <a href="#why-group-analyses" id="why-group-analyses"></a>
 
@@ -30,12 +30,12 @@ At least two Analyses are required to create a meaningful Group. First create An
 
 **Analyses**:
 
-* Analysis creation: [Analyses](creating-an-analysis-in-beam.md) can be created in the [WebApp](https://control.predicthq.com/beam) or via the [Beam API](../../api/beam/).
+* Analysis creation: [Analyses](creating-an-analysis-in-beam.md) can be created in the [WebApp](https://control.predicthq.com/beam) or via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
 * Analysis name: This user-defined field serves labeling and identification purposes. Incorporating group membership details into the Analysis name helps in identifying relevant Analyses, thereby speeding up the group creation step. For example, ‘groupA\_\_store123\_\_instore\_pizza\_sales\_\_2022’.
 
 **Groups**:
 
-* Group creation: Groups can be created in the [WebApp](https://control.predicthq.com/beam/groups) by selecting specific Analyses or via the [Beam API](../../api/beam/analysis-groups/) by passing a list of Analysis IDs.
+* Group creation: Groups can be created in the [WebApp](https://control.predicthq.com/beam/groups) by selecting specific Analyses or via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups) by passing a list of Analysis IDs.
 * User-defined grouping: Users can define their own Groups based on business needs.
 * Flexible group membership: An Analysis can be part of more than one Group, providing greater flexibility.
 
@@ -46,7 +46,7 @@ Category importance at the group-level follows a similar interpretation as that 
 As with single Analyses, the important categories highlight key drivers of demand for your stores or locations, though with a more generalized view. Different strategic actions can be taken based on these insights, for example:
 
 1. **Improved demand forecasting accuracy**:
-   * Integrate Category Importance results using the [Beam API](../../api/beam/analysis-groups/get-aggregated-feature-importance.md) and [Features API](../../api/beam/get-feature-importance.md) by introducing specific event features to your models. See [this notebook](https://docs.predicthq.com/getting-started/guides/beam-guides/forecast-ready-features-at-scale) for an example of how to get features for all your stores or locations.
+   * Integrate Category Importance results using the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups/get-aggregated-feature-importance) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) by introducing specific event features to your models. See [this notebook](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides/ml-features-by-group) for an example of how to get features for all your stores or locations.
 2. **Informed marketing strategies**:
    * Run targeted campaigns to capitalize on events occurring near your stores or locations, taking advantage of the buzz around events.
    * Run off-season promotions during quiet periods to stimulate demand and maintain customer engagement.
@@ -58,4 +58,4 @@ As with single Analyses, the important categories highlight key drivers of deman
 ### Considerations and Watchouts <a href="#considerations-and-watchouts" id="considerations-and-watchouts"></a>
 
 1. **Impact of demand share**: The aggregation of Category Importance assigns weight to analyses based on their average daily demand, naturally giving more weight to those with a higher demand. This approach is designed to reflect the real-world impact of each analysis. If more balanced results are desired, consider grouping analyses with comparable levels of demand to prevent any single analysis dominating the overall results.
-2. **Integration with Features API**: The [Beam API](../../api/beam/analysis-groups/get-aggregated-feature-importance.md) provides a list of features for each important category, which can be incorporated into your models via the [Features API](../../api/features/get-features.md). Ideally, these features should be tailored to the store or location of interest but using group-level features is a viable alternative if store or location-level modeling is impractical. However, this may lead to some stores or locations having features that are entirely zeros, which is something to consider and take into account.
+2. **Integration with Features API**: The [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups/get-aggregated-feature-importance) provides a list of features for each important category, which can be incorporated into your models via the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). Ideally, these features should be tailored to the store or location of interest but using group-level features is a viable alternative if store or location-level modeling is impractical. However, this may lead to some stores or locations having features that are entirely zeros, which is something to consider and take into account.

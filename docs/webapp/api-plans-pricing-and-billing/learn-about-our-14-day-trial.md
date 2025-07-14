@@ -10,10 +10,10 @@ The trial allows you to get full access to our WebApp and our APIs for 14 days t
 * Use [Saved Locations](../location-insights/) (Location Insights) to add your locations to the WebApp
 * Use [Event Trends](../tools/see-event-trends-in-the-webapp.md) and our [Beam - Relevancy Engine ](../beam-relevancy-engine/)to find how events impact your business
 * Access Live TV events in the WebApp (and via the API)
-* The [Events API ](../../api/events/search-events.md)for downloading events
-* The [Features API](../../api/features/get-features.md) for pre-built features and aggregated insights over our data
-* [All other APIs](../../api/overview/) (Places API, the Broadcast API, and more)
-* Access to our Jupyter Notebook [data science guides](../../getting-started/data-science-notebooks.md) and all other technical resources to get started during your trial.
+* The [Events API ](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events)for downloading events
+* The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for pre-built features and aggregated insights over our data
+* [All other APIs](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/) (Places API, the Broadcast API, and more)
+* Access to our Jupyter Notebook [data science guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks) and all other technical resources to get started during your trial.
 
 Note that export on the free trial is limited to less than 1,000 records. You need to choose a location and a date range to export too.
 

@@ -10,9 +10,9 @@ Beam also shows you how events will impact your business in the future. By analy
 
 <figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>A Beam analysis example in the WebApp</p></figcaption></figure>
 
-Beam is accessible via our WebApp and via the [Beam API](../../api/beam/). To use Beam you upload demand data for a location. Beam decomposes your data into a baseline and remainder and shows you the correlation with events data. Beam will also show you the most important categories that are impacting your location. You can also export the decomposed data from Beam.
+Beam is accessible via our WebApp and via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). To use Beam you upload demand data for a location. Beam decomposes your data into a baseline and remainder and shows you the correlation with events data. Beam will also show you the most important categories that are impacting your location. You can also export the decomposed data from Beam.
 
-The Beam UI is good to use if you have a smaller number of analyses or if you are exploring how events impact your demand. Use the [Beam API](../../api/beam/) if you want to bulk upload a large number of analyses. Many customers use Beam to analyze which categories impact them the most and then use that information as input to build machine learning features.
+The Beam UI is good to use if you have a smaller number of analyses or if you are exploring how events impact your demand. Use the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) if you want to bulk upload a large number of analyses. Many customers use Beam to analyze which categories impact them the most and then use that information as input to build machine learning features.
 
 Beam is available to all customers with WebApp access. Simply sign up for your free 14-day trial and upload your data to Beam.
 
@@ -33,6 +33,6 @@ See the following articles for details on how to use Beam:
 
 The version of Beam in the WebApp allows you to perform a correlation analysis for individual locations. Please [get in touch](https://www.predicthq.com/contact/sales) with us if the following is of interest:
 
-* If you want to use Beam for a large number of locations please contact us.&#x20;
+* If you want to use Beam for a large number of locations please contact us.
 * The PredictHQ data science team can perform a more detailed analysis of your demand data to show you what categories are most impacting your demand.
 * The PredictHQ data science team can help you to build event-based machine learning features for use in your demand forecasting.

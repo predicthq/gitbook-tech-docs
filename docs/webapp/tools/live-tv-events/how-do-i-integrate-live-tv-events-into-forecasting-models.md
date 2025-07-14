@@ -12,4 +12,4 @@ We provide historic data from Jan 1, 2018 and predicted viewership for two weeks
 
 The Broadcasts API provides Live TV Events data by returning broadcast records. A broadcast record represents how many people will watch a physical event broadcasted on a television network, at a specific date, time and location.
 
-You would call the API in the same way that you would call our events data API. Please visit our [technical documentation](../../../api/broadcasts/search-broadcasts.md) for more details.
+You would call the API in the same way that you would call our events data API. Please visit our [technical documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/broadcasts/search-broadcasts) for more details.

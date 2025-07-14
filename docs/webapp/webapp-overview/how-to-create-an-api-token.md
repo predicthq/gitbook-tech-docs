@@ -22,9 +22,9 @@ In the next screen choose "**Copy Token**". This copies the token to the clipboa
 **Remember: You MUST save the token somewhere such as in a password manager, as you won't be able to see it again.**
 {% endhint %}
 
-Now that you have an API token, you can call the API. See[ PredictHQ Technical documentation ](../../)for more details.
+Now that you have an API token, you can call the API. See[ PredictHQ Technical documentation ](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/)for more details.
 
-In the guides where you see `Authorization: Bearer $ACCESS_TOKEN` replace `$ACCESS_TOKEN` with your token. For example, see our [api-quickstart.md](../../getting-started/api-quickstart.md "mention").
+In the guides where you see `Authorization: Bearer $ACCESS_TOKEN` replace `$ACCESS_TOKEN` with your token. For example, see our [API Quickstart Guide](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/api-quickstart).
 
 You can also use the API Explorer feature in our WebApp to explore the capabilities of the API.
 

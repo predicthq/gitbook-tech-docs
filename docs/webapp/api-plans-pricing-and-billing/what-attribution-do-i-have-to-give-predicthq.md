@@ -2,4 +2,4 @@
 
 If you are using PredictHQ's data, you are required to give attribution to PredictHQ.
 
-Please follow our [attribution requirement details](../../api/overview/attribution.md) in our developer docs.
+Please follow our [attribution requirement details](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/attribution).

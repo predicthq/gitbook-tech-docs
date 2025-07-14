@@ -55,7 +55,7 @@ See [api-tools.md](api-tools.md "mention").
 
 ### Documentation
 
-This links to the [technical documentation](../../).
+This links to the [technical documentation](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/).
 
 ### The Dashboard
 

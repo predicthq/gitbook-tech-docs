@@ -2,11 +2,11 @@
 
 The dataset is a time series where each record consists of a date and its corresponding value. The supported file format is CSV, with column names specified in the first row and each column separated by a comma.
 
-See also [Upload Demand Data](../../api/beam/upload-demand-data.md) in the Beam API documentation for more details on the upload format.
+See also [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data) in the Beam API documentation for more details on the upload format.
 
 ### Data Format and Specifications <a href="#data-format-and-specifications" id="data-format-and-specifications"></a>
 
-* The CSV file must contain two columns – `date` and `demand`. The column headings must be in the first row of the file as `date,demand`&#x20;
+* The CSV file must contain two columns – `date` and `demand`. The column headings must be in the first row of the file as `date,demand`
 * The date format required is ISO date format in the `YYYY-MM-DD` format. That is year, month, and day. For example 2017-03-29 for 29 March 2017. The file should contain one row per date.
 * Data can be daily or weekly. Daily data should have consecutive dates, while weekly data should have one entry per week.
 * Demand can be any integer or decimal value. In general, we recommend using the same value that is used in your demand forecasting.
@@ -77,4 +77,4 @@ If missing data occurs because the system was down or no record was available fo
 
 ### Bulk uploading Beam analyses <a href="#bulk-uploading-beam-analyses" id="bulk-uploading-beam-analyses"></a>
 
-If you want to upload a large amount of Beam analyses we recommend using the [Beam API](../../api/beam/).
+If you want to upload a large amount of Beam analyses we recommend using the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
