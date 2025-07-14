@@ -4,5 +4,3 @@ Local Rank is a numeric value on a logarithmic scale between 0 and 100 to repres
 
 * Local Rank is comparable between the attended events in terms of the event’s impact to its local area.
 * Local Rank is not available for area events, the field returns `null`.
-
-\

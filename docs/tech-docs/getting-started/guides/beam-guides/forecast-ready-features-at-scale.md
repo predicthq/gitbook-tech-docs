@@ -6,11 +6,11 @@ description: >-
 
 # ML Features by Location
 
-See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-list-of-important-features-by-location-with-beam-api.ipynb).
+See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
 
 ## Technical documentation
 
 Below are some technical documentation relevant to this guide:
 
-* [Broken link](broken-reference "mention")
-* [Broken link](broken-reference "mention")
+* [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
+* [Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features "mention")

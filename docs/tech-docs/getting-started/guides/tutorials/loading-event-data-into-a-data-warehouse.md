@@ -24,7 +24,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 * Access to PredictHQ Data
   * JSONL: Requires a PredictHQ account.[ Sign up here](https://predicthq.com/signup) if you don’t already have one.
-  * API: An [API Access Token](broken-reference) is necessary for accessing the data programmatically.
+  * API: An [API Access Token](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/webapp-overview/how-to-create-an-api-token) is necessary for accessing the data programmatically.
 * GCP permissions:
   * Ensure you have "BigQuery Data Owner" and "BigQuery User" permissions over the BigQuery environment.
   * A GCP BigQuery Service Account and its corresponding JSON key are required.[ See the GCP documentation](https://cloud.google.com/iam/docs/service-account-overview) for details.
@@ -110,7 +110,7 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, simply select the Export option. For more details on exporting see the[ CSV Export Guide](broken-reference) except select the JSONL file format instead of CSV. This JSONL can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+After configuring your filters and executing the search, simply select the Export option. For more details on exporting see the [CSV Export Guide](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/getting-started/export-events-data-from-the-webapp) except select the JSONL file format instead of CSV. This JSONL can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 

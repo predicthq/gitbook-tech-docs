@@ -7,7 +7,7 @@ description: >-
 
 # ML Features by Group
 
-See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-list-of-important-features-by-group-of-locations-with-beam-api.ipynb).
+See the [notebook on GitHub](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb).
 
 ## Technical documentation
 

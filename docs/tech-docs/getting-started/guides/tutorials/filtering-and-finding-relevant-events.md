@@ -75,7 +75,7 @@ Define the catchment area for the search. Refer to our [industry recommendations
 
 Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the center point and radius approach.
 
-Tom first uses the [Suggested Radius API](broken-reference) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
+Tom first uses the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
 
 ```python
 params={
@@ -125,7 +125,7 @@ print(response.json())
 
 Select the types of events for the search.
 
-* **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](broken-reference) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](broken-reference). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
+* **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 
 - **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
 
