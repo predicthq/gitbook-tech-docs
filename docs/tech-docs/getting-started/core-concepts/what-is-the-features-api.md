@@ -148,4 +148,10 @@ To get the most value from the Features API and avoid noisy or misleading result
 * [What Is Beam?](what-is-beam.md)
 * [Features API Guides](../guides/features-api-guides/)
 
-\
+## What to Do Next
+
+* [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
+* Use the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) - Get the optimal event radius for your location and industry. This improves both Beam and Features API accuracy.
+* Set up [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) - Define your key business locations once and reuse them across PredictHQ APIs for consistency and easier re-analysis.
+* Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - Use your beam.analysis\_id or saved\_location\_id to pull a clean time series of impactful event features for your model.
+* Need help? - Check out [Features API Guides](../guides/features-api-guides/) or contact support for help tuning your request.
