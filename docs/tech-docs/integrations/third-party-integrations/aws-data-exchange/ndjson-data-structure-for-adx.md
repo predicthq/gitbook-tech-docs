@@ -2,17 +2,6 @@
 description: >-
   Data can be provided as NDJSON, CSV or Parquet. This document describes the
   NDJSON data structure.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: true
 ---
 
 # NDJSON Data Structure for ADX

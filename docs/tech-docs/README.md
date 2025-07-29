@@ -1,16 +1,5 @@
 ---
 description: Docs, guides, and API references to help you build with PredictHQ.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: true
 ---
 
 # Introduction
