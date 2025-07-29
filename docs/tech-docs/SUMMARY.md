@@ -9,6 +9,7 @@
 * [API Quickstart](getting-started/api-quickstart.md)
 * [Core Concepts](getting-started/core-concepts/README.md)
   * [What is Beam?](getting-started/core-concepts/what-is-beam.md)
+  * [What is the Features API?](getting-started/core-concepts/what-is-the-features-api.md)
 * [Glossary](getting-started/glossary.md)
 * [Data Science Notebooks](getting-started/data-science-notebooks.md)
 * [PredictHQ Data](getting-started/predicthq-data/README.md)
