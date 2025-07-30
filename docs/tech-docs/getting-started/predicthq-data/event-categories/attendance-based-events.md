@@ -396,7 +396,7 @@ Academic events have PHQ Rank available.
 
 **Local Rank**
 
-Academic events have no Local Rank available.
+Academic events have Local Rank available.
 
 **PHQ Attendance**
 

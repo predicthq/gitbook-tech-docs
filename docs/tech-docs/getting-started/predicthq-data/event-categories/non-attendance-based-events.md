@@ -47,7 +47,7 @@ Public holidays have event group entities available.
 
 **Local Rank**
 
-Public holidays events have no Local Rank available as they impact an entire area instead of a specific point
+Public holidays events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -183,9 +183,9 @@ All school holidays for other countries and from the US and UK before the time p
 
 **Local Rank**
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+School holidays events have Local Rank available.
 
-School holidays events for other countries, and from the US and UK before the time periods stated above, have no Local Rank available as they do not have student numbers attached.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
 **PHQ Attendance**
 
@@ -236,7 +236,7 @@ Observances have event group entities available.
 
 **Local Rank**
 
-Observance events have no Local Rank available as they impact an entire area instead of a specific point.
+Observance events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -277,7 +277,7 @@ Politics events have PHQ Rank available. It considers the number of registered v
 
 **Local Rank**
 
-Politics events have no Local Rank available as they impact an entire country instead of a specific point.
+Politics events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -313,7 +313,7 @@ All daylight savings events have a PHQ Rank of 30.
 
 **Local Rank**
 
-Daylight savings events have no Local Rank available as they impact an entire area.
+Daylight savings events have Local Rank available.
 
 **PHQ Attendance**
 
