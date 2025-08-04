@@ -396,9 +396,8 @@ Academic events have PHQ Rank available.
 
 **Local Rank**
 
-Academic events have no Local Rank available.
+Academic events have Local Rank available.
 
 **PHQ Attendance**
 
 Academic events have PHQ Attendance available for all event types. PHQ Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.
-

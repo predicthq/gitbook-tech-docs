@@ -66,7 +66,7 @@ For example, An event with an urgency of immediate (15), a severity of severe (3
 
 **Local Rank**
 
-Severe weather events have no Local Rank available as they impact an entire area instead of a specific point.
+Severe weather events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -119,7 +119,7 @@ Disaster events have PHQ Rank available, which indicates the severity of the dis
 
 **Local Rank**
 
-Disaster events have no Local Rank available as they impact an entire area instead of a specific point.
+Disaster events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -160,7 +160,7 @@ Airport delays events have PHQ Rank available, indicating the severity of the de
 
 **Local Rank**
 
-Airport delays events have no Local Rank available as they impact an entire area instead of a specific point. To be specific, the fact of the flight delay happens in an airport, but the impact is applying to a region where the passengers are from.
+Airport delays events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -219,7 +219,7 @@ Health warnings events have PHQ Rank available.
 
 **Local Rank**
 
-Health warnings events have no Local Rank available as they impact an entire area instead of a specific point.
+Health warnings events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -263,7 +263,7 @@ Terror events have PHQ Rank available. It indicates the severity of the terroris
 
 **Local Rank**
 
-Terror events have no Local Rank available as they impact an entire area instead of a specific point. To be specific, the terrorism acts may happen at a specific location, but the impact is applying to all residents in the nearby area.
+Terror events have Local Rank available.
 
 **PHQ Attendance**
 

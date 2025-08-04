@@ -47,7 +47,7 @@ Public holidays have event group entities available.
 
 **Local Rank**
 
-Public holidays events have no Local Rank available as they impact an entire area instead of a specific point
+Public holidays events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -83,7 +83,7 @@ School holiday is an area event, it scopes to either locality, localadmin, count
 
 The latitude and longitude is pointing to the center of the region or country.
 
-<table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina,  Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates, Chile</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
+<table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina, Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates, Chile</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
 
 #### School Holidays in the United Kingdom
 
@@ -183,9 +183,9 @@ All school holidays for other countries and from the US and UK before the time p
 
 **Local Rank**
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+School holidays events have Local Rank available.
 
-School holidays events for other countries, and from the US and UK before the time periods stated above, have no Local Rank available as they do not have student numbers attached.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
 **PHQ Attendance**
 
@@ -236,7 +236,7 @@ Observances have event group entities available.
 
 **Local Rank**
 
-Observance events have no Local Rank available as they impact an entire area instead of a specific point.
+Observance events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -277,7 +277,7 @@ Politics events have PHQ Rank available. It considers the number of registered v
 
 **Local Rank**
 
-Politics events have no Local Rank available as they impact an entire country instead of a specific point.
+Politics events have Local Rank available.
 
 **PHQ Attendance**
 
@@ -313,7 +313,7 @@ All daylight savings events have a PHQ Rank of 30.
 
 **Local Rank**
 
-Daylight savings events have no Local Rank available as they impact an entire area.
+Daylight savings events have Local Rank available.
 
 **PHQ Attendance**
 
