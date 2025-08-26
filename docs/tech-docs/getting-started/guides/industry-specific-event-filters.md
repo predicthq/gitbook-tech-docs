@@ -8,6 +8,8 @@ description: Industry-level defaults for event relevancy when Beam can’t be ap
 
 The most accurate way to identify which events impact your business is with [Beam](../core-concepts/what-is-beam.md), PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
 
+Without Beam, you’re guessing which events matter. With Beam, your own demand data tells you - so you cut noise, focus on impact, and avoid costly mistakes.
+
 **If you have demand data, always run Beam first.**
 
 ## When You Can’t Use Beam
