@@ -2,11 +2,11 @@
 description: Industry-level defaults for event relevancy when Beam can’t be applied.
 ---
 
-# Industry-Specific Event Relevancy Defaults
+# Recommended Event Categories and Local Rank Thresholds
 
 ## Beam Comes First
 
-The most accurate way to identify which events impact your business is with Beam, PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
+The most accurate way to identify which events impact your business is with [Beam](../core-concepts/what-is-beam.md), PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
 
 **If you have demand data, always run Beam first.**
 
@@ -16,6 +16,7 @@ If demand data isn’t available, we’ve done research to provide industry-leve
 
 * Recommended Feature Groups (categories) per industry
 * Minimum Local Rank thresholds to filter out events too small to matter
+* As always, use [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) to work out a suitable area
 
 These are starting points only. Switch to Beam as soon as you can provide demand data.
 
