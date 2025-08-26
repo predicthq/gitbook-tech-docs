@@ -1,104 +1,32 @@
 ---
-description: >-
-  Learn how to effectively filter PredictHQ event data with industry-specific
-  recommendations.
+description: Industry-level defaults for event relevancy when Beam can’t be applied.
 ---
 
-# Industry-Specific Event Filters
+# Industry-Specific Event Relevancy Defaults
 
-With so many events taking place, it is important to filter out the noise and focus only on events that are relevant to your business. Use this guide in conjunction with our APIs, such as Events API and Features API, and consult [API Reference](https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/kEFs8urDbSJqBmXUI3Lv/ "mention") for detailed information.
+## Beam Comes First
 
-\
-These recommendations are intended as starting points and may need to be adapted for your specific locations. Test out these filters and contact [our team](https://www.predicthq.com/contact) for additional guidance.
+The most accurate way to identify which events impact your business is with Beam, PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
 
-## Location Type
+**If you have demand data, always run Beam first.**
 
-How a catchment area is defined for a store or location varies by industry as events impact industries differently. Setting the area too small may result in important events being missed, while an excessively large area can introduce unnecessary noise.
+## When You Can’t Use Beam
 
-For stores and locations where proximity to events is important, such as those in Retail and Parking, a center point and radius approach is recommended. For industries like Transportation & Delivery, which may be influenced by broader regional events, city-level locations are advisable. We suggest the following location types as a starting point:
+If demand data isn’t available, we’ve done research to provide industry-level defaults. These include:
 
-| Industry                                      |     Location Type     |
-| --------------------------------------------- | :-------------------: |
-| Accommodation                                 | Center Point & Radius |
-| Consumer Packaged Goods                       |          City         |
-| Food and Beverage (also known as Restaurants) | Center Point & Radius |
-| Grocery and Supermarkets                      | Center Point & Radius |
-| Leisure, Travel and Tourism                   |          City         |
-| Marketing                                     |          City         |
-| Parking                                       | Center Point & Radius |
-| Retail                                        | Center Point & Radius |
-| Transportation and Delivery                   |          City         |
-| Other                                         |          City         |
+* Recommended Feature Groups (categories) per industry
+* Minimum Local Rank thresholds to filter out events too small to matter
 
-To retrieve events for different location types, use the following approaches:
+These are starting points only. Switch to Beam as soon as you can provide demand data.
 
-<details>
+## Recommended Feature Groups / Categories
 
-<summary>Center Point &#x26; Radius</summary>
+<table><thead><tr><th width="236.2265625">Industry</th><th>Recommended Feature Groups / Categories</th></tr></thead><tbody><tr><td>Accommodation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Parking</td><td>concerts, expos, festivals, observances, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Restaurants</td><td>community, concerts, conferences, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Retail, CPG</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Transportation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Tourism, Marketing, and Others</td><td>concerts, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr></tbody></table>
 
-**Using latitude, longitude, and radius**
+## Minimum Local Rank Thresholds
 
-1. Determine the appropriate radius using the [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius).
-2. Configuration:
-   1. For the Events API, use the `within` field.
-   2. For the Features API and Beam API, use the `location` field.
+Local Rank is a location-sensitive scale (0–100, logarithmic) that predicts how much impact an event will have in its immediate vicinity - factoring in population density and local characteristics such as how built-up or accessible an area is ￼. For example, a 1,000-person conference may register a Local Rank of 43 in densely populated Hong Kong and 65 in less crowded Dublin—despite the same PHQ Rank ￼.
 
-**Using location IDs**
+**Beam already applies Local Rank filtering automatically** when identifying impactful event types for your demand modeling. However, if you’re setting up filters or queries manually, these thresholds offer a smart default to focus your analysis where it matters until you can rely solely on Beam.
 
-1. Create Saved Locations via [Location Insights](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/location-insights/an-overview-of-location-insights) in the WebApp or at scale using the [Saved Locations API](https://docs.predicthq.com/api/saved-locations).
-2. Configuration:
-   1. For the Events API, use the `saved_location.location_id` field.
-   2. For the Features API, use the `location` field.
-
-</details>
-
-<details>
-
-<summary>City Locations</summary>
-
-**Using place IDs**
-
-1. Find the place ID for a city using the [Places API](https://docs.predicthq.com/api/places/search-places).
-2. Configuration:
-   1. For the Events API, use the `place.scope` field.
-   2. For the Features API, use the `location` field.
-
-</details>
-
-{% hint style="info" %}
-For more information on defining locations by API, see [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention").
-{% endhint %}
-
-## Relevant Event Categories
-
-With [almost two dozen event categories](../predicthq-data/event-categories/) available, knowing which ones are relevant to your business is essential. We strongly recommend using [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) to automatically identify important categories for your specific stores or locations. Access Beam via our [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, explore these industry-level categories as a starting point:
-
-| Industry                                      |                                   Relevant Event Categories                                  |
-| --------------------------------------------- | :------------------------------------------------------------------------------------------: |
-| Accommodation                                 |                   concerts, conferences, expos, festivals, performing-arts                   |
-| Consumer Packaged Goods                       |             public holidays, performing-arts, conferences, conferences, community            |
-| Food and Beverage (also known as Restaurants) |              public holidays, performing-arts, conferences, concerts, festivals              |
-| Grocery and Supermarkets                      |             public holidays, performing-arts, conferences, conferences, community            |
-| Leisure, Travel and Tourism                   |             public holidays, performing-arts, conferences, conferences, community            |
-| Marketing                                     |             public holidays, performing-arts, conferences, conferences, community            |
-| Parking                                       |                 public holidays, community, concerts, expos, performing-arts                 |
-| Retail                                        |              public holidays, performing-arts, community, conferences, festivals             |
-| Transportation and Delivery                   |             public holidays, performing-arts, conferences, conferences, community            |
-| Other                                         | public holidays, performing-arts, concerts, conferences, community, festivals, expos, sports |
-
-## Minimum PHQ Rank
-
-Setting a minimum [PHQ Rank](../predicthq-data/ranks/phq-rank.md) is important for focusing on events that are likely to influence your demand, helping to exclude those that are too small or irrelevant. We recommend the following PHQ Rank thresholds:
-
-| Industry                                      | Minimum PHQ Rank |
-| --------------------------------------------- | :--------------: |
-| Accommodation                                 |        35        |
-| Consumer Packaged Goods                       |        30        |
-| Food and Beverage (also known as Restaurants) |        30        |
-| Grocery and Supermarkets                      |        30        |
-| Leisure, Travel and Tourism                   |        30        |
-| Marketing                                     |        30        |
-| Parking                                       |        35        |
-| Retail                                        |        50        |
-| Transportation and Delivery                   |        30        |
-| Other                                         |        30        |
+<table><thead><tr><th width="242.7578125">Industry</th><th>Minimum Local Rank</th></tr></thead><tbody><tr><td>Accommodation</td><td>50</td></tr><tr><td>Parking</td><td>60</td></tr><tr><td>Restaurants</td><td>65</td></tr><tr><td>Retail</td><td>35</td></tr><tr><td>Others</td><td>35</td></tr></tbody></table>
