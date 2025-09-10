@@ -32,7 +32,7 @@ When requesting features from Features API with a Beam ID we automatically confi
 
 ## Minimum Local Rank Thresholds
 
-Local Rank is a location-sensitive scale (0-100, logarithmic) that predicts how much impact an event will have in its immediate vicinity - factoring in population density and local characteristics such as how built-up or accessible an area is￼. For example, a 1,000-person conference may register a Local Rank of 43 in densely populated Hong Kong and 65 in less crowded Dublin - despite having the same PHQ Rank.
+Local Rank is a location-sensitive scale (0-100, logarithmic) that predicts how much impact an event will have in its immediate vicinity - factoring in population density and local characteristics such as how built-up or accessible an area is. For example, a 1,000-person conference may register a Local Rank of 43 in densely populated Hong Kong and 65 in less crowded Dublin - despite having the same PHQ Rank.
 
 **Beam automatically applies Local Rank filtering** when identifying impactful event types for your demand modeling. However, if you’re setting up filters or queries manually, these thresholds offer a smart default to focus your analysis where it matters until you can rely solely on Beam.
 
