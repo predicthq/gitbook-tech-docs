@@ -4,15 +4,15 @@
 
 Harness the power of events in your forecast by incorporating machine learning (ML) features for events into your models. Creating new ML features can be time-consuming and expensive, often requiring significant effort from data scientists, data engineers, and others. PredictHQ provides a toolkit to allow you to easily integrate prebuilt, forecast-ready ML features with Beam, and the Features API.
 
-To do this quickly and easily, the first step is to upload your aggregated demand data into [Beam](an-overview-of-beam-relevancy-engine.md) through the [WebApp](https://control.predicthq.com/beam) or via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Beam, our relevancy engine tool, returns category importance results (also known as feature importance) for individual business locations as well as large groups.
+To do this quickly and easily, the first step is to upload your aggregated demand data into [Beam](an-overview-of-beam-relevancy-engine.md) through the [WebApp](https://control.predicthq.com/beam) or via the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Beam, our relevancy engine tool, returns feature importance results (previously known as category importance) for individual business locations as well as large groups.
 
-Category importance uses our underlying [Feature Importance API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) and is generated from an analysis of the relevance of the results of that API. Under the hood in Beam, we have a list of ML features and their p-values.
+Feature importance uses our underlying [Feature Importance API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) and is generated from an analysis of the relevance of the results of that API. Under the hood in Beam, we have a list of ML features and their p-values.
 
 To improve the accuracy of your forecasts, start by incorporating event-based ML features from the Features API into your models. Open an individual Beam analysis or analysis group and you will see the "**Get Forecasting Features**" option. This provides a list of ML features that you can use to train your models. You can copy these features and use them in your code as described in our [Get ML Features](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/feature-engineering-guide) guide.
 
 Below is a screenshot showing the new "Get Forecasting Features" option:
 
-<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption><p>Get Forecasting Features menu under the Category Importance section</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption><p>Get Forecasting Features menu under the Feature Importance section</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption><p>Get Forecasting Features example</p></figcaption></figure>
 

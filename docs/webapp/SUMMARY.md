@@ -58,7 +58,7 @@
   * [Uploading Your Demand Data to Beam](beam-relevancy-engine/uploading-your-demand-data-to-beam.md)
   * [Viewing the List of Analysis in Beam](beam-relevancy-engine/viewing-the-list-of-analysis-in-beam.md)
   * [Viewing the Table of Results in Beam](beam-relevancy-engine/viewing-the-table-of-results-in-beam.md)
-  * [Viewing the Category Importance Information in Beam](beam-relevancy-engine/viewing-the-category-importance-information-in-beam.md)
+  * [Viewing the Feature Importance Information in Beam](beam-relevancy-engine/viewing-the-category-importance-information-in-beam.md)
   * [Feature Importance With Beam - Find the ML Features to Use in Your Forecasts](beam-relevancy-engine/feature-importance-with-beam-find-the-ml-features-to-use-in-your-forecasts.md)
   * [Beam Value Quantification](beam-relevancy-engine/beam-value-quantification.md)
   * [Exporting Correlation Data With Beam](beam-relevancy-engine/exporting-correlation-data-with-beam.md)
