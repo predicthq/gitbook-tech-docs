@@ -4,7 +4,12 @@ The Features API generates time-series signals from real-world events - structur
 
 Rather than returning raw event data, the Features API provides daily or weekly metrics grouped by event type (e.g. Concerts, Sports, Public Holidays). It accounts for important factors like multi-day events, expected attendance, and lead/lag effects using PredictHQ’s intelligence, including PHQ Rank, Local Rank, Umbrella Events and Impact Patterns.
 
-Instead of building your own event aggregation pipeline, you get structured, configurable features ready for modeling, analysis, or planning.
+{% hint style="success" %}
+**Why use the Features API?**\
+We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
+{% endhint %}
+
+Instead of building your own event feature engineering pipeline, you get structured, configurable features ready for modeling, analysis, or planning.
 
 You can:
 
