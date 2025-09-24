@@ -49,17 +49,18 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## Mapping File
-
-Below is a CSV of broadcast counties. It contains the `place_id` and name of all counties and states in the US.
-
-{% file src="../.gitbook/assets/broadcast-events-place-mapping.csv" %}
-
 ## OpenAPI Spec
 
 The OpenAPI spec for Broadcasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Broadcasts+API).
 
 ## Guides
+
+{% hint style="info" %}
+**USA Counties Mapping File**\
+Counties are mapped to Place IDs. The current mapping of counties to Place ID can be [found here](https://github.com/predicthq/api-specs/blob/main/data/broadcast-county-place-mapping.csv).
+{% endhint %}
+
+Below are some guides relevant to this&#x20;
 
 Below are some guides relevant to this API:
 
