@@ -1,7 +1,7 @@
 # How Do I Delete My Account?
 
 {% hint style="warning" %}
-### If you belong to multiple organizations, you will have to remove yourself from each organization individually first before you can fully delete your account.
+#### If you belong to multiple organizations, you will have to remove yourself from each organization individually first before you can fully delete your account.
 {% endhint %}
 
 To delete your account, follow these steps:
