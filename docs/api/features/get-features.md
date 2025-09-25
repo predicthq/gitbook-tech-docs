@@ -1,10 +1,12 @@
 ---
-description: Prebuilt intelligence for Machine Learning models.
+description: Prebuilt event-based features for Machine Learning models.
 ---
 
 # Get ML Features
 
-Access prebuilt Machine Learning features that will take your forecast models and results to the next level, fast. Gain access to over 100 ML-ready features that are guaranteed to improve your forecasting accuracy.
+Access prebuilt event-based Machine Learning features that will take your forecast models and results to the next level, fast.&#x20;
+
+We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 
 {% openapi-operation spec="features-api" path="/v1/features/" method="post" %}
 [OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
