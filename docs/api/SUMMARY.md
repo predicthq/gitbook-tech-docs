@@ -26,7 +26,6 @@
 ## Features
 
 * [Get ML Features](features/get-features.md)
-* [Get ML Features (OpenAPI Test)](features/get-ml-features-openapi-test.md)
 
 ## Forecasts
 

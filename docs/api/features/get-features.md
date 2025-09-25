@@ -6,93 +6,11 @@ description: Prebuilt intelligence for Machine Learning models.
 
 Access prebuilt Machine Learning features that will take your forecast models and results to the next level, fast. Gain access to over 100 ML-ready features that are guaranteed to improve your forecasting accuracy.
 
-## Request
+{% openapi-operation spec="features-api" path="/v1/features/" method="post" %}
+[OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
+{% endopenapi-operation %}
 
-### HTTP Request
-
-```
-POST https://api.predicthq.com/v1/features/
-```
-
-### Request Headers
-
-<table><thead><tr><th width="226">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Accept</code></td><td><p>Receive results in JSON or CSV by specifying the appropriate <code>Accept</code> header.</p><p>Supported values:</p><ul><li><code>application/json</code></li><li><code>text/csv</code></li></ul></td></tr></tbody></table>
-
-### Query Parameters
-
-<table><thead><tr><th width="224">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>offset</code><br><br>number</td><td><p>The number of results to skip. The default is <code>0</code>.</p><p>E.g. <code>?offset=20</code></p></td></tr><tr><td><code>limit</code><br><br>number</td><td><p>The maximum number of results to return per page.</p><p>The default limit is <code>100</code> and the maximum per page is <code>100</code>.</p><p>E.g. <code>?limit=10</code></p></td></tr></tbody></table>
-
-### Request Body
-
-<table><thead><tr><th width="243">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>active</code><br>object</td><td><p>The date range to calculate features for. This is named "active" because it includes events that are active within the date range. A multi-day event might start or end outside the specified date range - the days the event is active within the specified range will be included in the calculations.</p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>Note that all dates here are in local time (not UTC). Features API works on specific locations.</p><p>Please also note that the maximum supported date range is 90 days. If you require features over a wider date range please make multiple API requests.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "active": {
-    "gte": "2019-11-28",
-    "lte": "2019-11-29"
-  }
-}
-</code></pre></td></tr><tr><td><code>beam</code><br><br>object</td><td><p>An optional <code>beam</code> analysis object which if provided will calculate the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including <code>stats</code> and <code>phq_rank</code> from the Beam analysis and optionally the Beam analysis group.</p><p>Supports the following fields:</p><ul><li><code>analysis_id</code> - Beam analysis id (Required if <code>beam</code> block is present in the request body)</li><li><code>group_id</code> - Beam analysis group id (Optional)</li></ul><p>If <code>beam.analysis_id</code> is provided, the <code>location</code>, <code>interval</code>, <code>week_start_day</code> , <code>phq_*</code> features including<code>stats</code> and <code>phq_rank</code> will be calculated from the Beam analysis.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "beam": {
-    "analysis_id": "0SXAmHsoZo0"
-  }
-}
-</code></pre><p>If both <code>beam.analysis_id</code> and <code>beam.group_id</code> are provided, all the above fields will be calculated from the Beam analysis but the <code>phq_*</code> features will be calculated from the Beam analysis Group.</p><p><strong>Note:</strong> This is useful for when you want to request features for a variety of locations while maintaining feature consistency by limiting the returned features to those of the group's feature importance results.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "beam": {
-    "analysis_id": "0SXaMHsoYo0",
-    "group_id": "QxE9BcLq7ZY"
-  }
-}
-</code></pre></td></tr><tr><td><code>hour_of_day_start</code><br>object</td><td><p>Time range (per day) to calculate features for.</p><p><strong>Note:</strong> This field is currently only supported on <code>phq_viewership_*</code> features.</p><p>If your location only operates within certain hours of the day you can use this filter to only include records that are happening within those hours.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>The values are hours between 0 and 23 (i.e. 24h format).</p><p>E.g. only include events happening between 1pm and 3pm each day.</p><pre class="language-json"><code class="lang-json">{
-  "hour_of_day_start": {
-    "gte": 13,
-    "lte": 15
-  }
-}
-</code></pre></td></tr><tr><td><code>location</code><br>object</td><td><p>Location to calculate features for. You can specify the location as a latitude/longitude (with radius), Place ID(s) or <a href="broken-reference">Saved Location</a> ID(s).</p><p>We recommend using a lat/lon+radius or a saved location id (for a point and radius location) as they could define the location of your interest more accurately. To work out a suitable radius around your location we strongly recommend using our <a href="../suggested-radius/get-suggested-radius.md">Suggested Radius API</a>.<br></p><p><strong>Note:</strong> When using Place IDs or Saved Location IDs a maximum of 3 IDs may be used.</p><p><strong>Note:</strong> When using lat/lon+radius, the radius must be in the format <code>&#x3C;radius>&#x3C;radius_unit></code>, where <code>&#x3C;radius></code> is an integer or a float number up to 2 decimal places and <code>&#x3C;radius_unit></code> is one of:</p><ul><li><code>m</code> - meters</li><li><code>km</code> - kilometers</li><li><code>ft</code> - feet</li><li><code>mi</code> - miles</li></ul><p>E.g. using Place IDs:</p><pre class="language-json"><code class="lang-json">{
-  "location": {
-    "place_id": [
-      5224323,
-      5811704,
-      4887398
-    ]
-  }
-}
-</code></pre><p>E.g. using Saved Location IDs:</p><pre class="language-json"><code class="lang-json">{
-  "location": {
-    "saved_location_id": [
-      "BN7ZSw8xza9FviPVfyCycd",
-      "X3uyTFbDOUaX2q_Qh5i31b",
-      "X3uyTFbDOUhrfq_Qh5i31A"
-    ]
-  }
-}
-</code></pre><p>E.g. using a latitude/longitude and radius (recommended):</p><pre class="language-json"><code class="lang-json">{
-  "location": {
-    "geo": {
-      "lat": 41.75038,
-      "lon": -71.49978,
-      "radius": "2.62mi"
-    }
-  }
-}
-</code></pre></td></tr><tr><td><code>interval</code><br>string<br>optional</td><td><p>Aggregation interval.<br><br><strong>Possible values:</strong></p><ul><li><code>day</code> (default) for daily aggregation</li><li><code>week</code> for weekly aggregation</li></ul></td></tr><tr><td><code>week_start_day</code><br>string<br>optional</td><td><p>The weekday to be treated as the start of the week.</p><p><strong>Possible values:</strong></p><ul><li><code>monday</code> (default)</li><li><code>tuesday</code></li><li><code>wednesday</code></li><li><code>thursday</code></li><li><code>friday</code></li><li><code>saturday</code></li><li><code>sunday</code></li></ul><p><br>Only applicable when <code>interval</code> is set to <code>week</code>.</p></td></tr><tr><td><p><code>predicted_events</code><br>object</p><p>optional</p></td><td><p>Include or Exclude predicted events.<br><br>Supports the following fields:</p><ul><li><p><code>exclude</code> Possible values:</p><ul><li><code>true</code></li><li><code>false</code>(default) Include predicted events</li></ul></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
-  "predicted_events": {
-    "exclude": false
-  }
-}
-</code></pre></td></tr><tr><td><code>&#x3C;feature_name></code><br>object or boolean</td><td><p>The name of the feature you're requesting. You can request multiple features in a single request.<br><br>Features can be further configured here, or you can set the value as <code>true</code> to perform the default calculations for that feature.<br><br>Please see the tables below for a list of all currently supported features and how they can be further configured.<br></p><p>E.g. requesting certain stats fields and filtering for records with a PHQ Rank over 50.</p><pre class="language-json"><code class="lang-json">{
-  "phq_attendance_sports": {
-    "stats": ["count", "std_dev", "median"],
-    "phq_rank": { 
-      "gt": 50
-    }
-  }
-}
-</code></pre><p>E.g. requesting the default calculations for a feature.</p><pre class="language-json"><code class="lang-json">{
-  "phq_attendance_concerts": true
-}
-</code></pre></td></tr></tbody></table>
-
-### Available Features
+## Available Features
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
@@ -285,13 +203,7 @@ PHQ Rank features cannot currently be configured further. When requesting `phq_r
 {% endtab %}
 {% endtabs %}
 
-## Response
-
-### Response Fields
-
-<table><thead><tr><th width="203">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>results</code><br>array</td><td><p>List of results where each item is a Feature.</p><p><br>Please refer to the Feature Response Fields section below for the structure of each record.<br><br>Note that pagination is not required in this API.</p></td></tr></tbody></table>
-
-#### Feature Response Fields
+## Feature Response Fields
 
 Other than the date, the structure of each result here will depend on how you configured the feature in your request and the type of feature.
 
@@ -367,117 +279,6 @@ Other than the date, the structure of each result here will depend on how you co
   }
 }
 </code></pre></td></tr></tbody></table>
-{% endtab %}
-{% endtabs %}
-
-### Response Format
-
-You can receive responses formatted as JSON (default) or CSV. Use the `Accept` header when performing your request to define which format you would like to receive.
-
-{% tabs %}
-{% tab title="JSON" %}
-With the `Accept` header set to `application/json` you will receive the results as JSON like the example below:
-
-```json
-{
-  "results": [
-    {
-      "date": "2019-11-16",
-      "phq_attendance_concerts": {
-        "stats": {
-          "count": 20,
-          "sum": 6751
-        }
-      },
-      "phq_attendance_conferences": {
-        "stats": {
-          "min": 1500,
-          "max": 1500
-        }
-      },
-      "phq_attendance_sports": {
-        "stats": {
-          "count": 5,
-          "sum": 17307,
-          "min": 1000,
-          "max": 9215,
-          "avg": 3461.4,
-          "median": 2620.0,
-          "std_dev": 2978.810473997968
-        }
-      },
-      "phq_rank_public_holidays": {
-        "rank_levels": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
-        }
-      }
-    },
-    {
-      "date": "2019-11-17",
-      "phq_attendance_concerts": {
-        "stats": {
-          "count": 2,
-          "sum": 241
-        }
-      },
-      "phq_attendance_conferences": {
-        "stats": {
-          "min": 67,
-          "max": 67
-        }
-      },
-      "phq_attendance_sports": {
-        "stats": {
-          "count": 1,
-          "sum": 852,
-          "min": 852,
-          "max": 852,
-          "avg": 852.0,
-          "median": 852.0,
-          "std_dev": 0.0
-        }
-      },
-      "phq_rank_public_holidays": {
-        "rank_levels": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
-        }
-      }
-    }
-  ]
-}
-```
-{% endtab %}
-
-{% tab title="CSV" %}
-With the `Accept` header set to `text/csv` you will receive the results as CSV like the example below:
-
-```csv
-date,phq_attendance_concerts_stats_count,phq_attendance_concerts_stats_sum,phq_attendance_conferences_stats_min,phq_attendance_conferences_stats_max,phq_attendance_sports_stats_count,phq_attendance_sports_stats_sum,phq_attendance_sports_stats_min,phq_attendance_sports_stats_max,phq_attendance_sports_stats_avg,phq_attendance_sports_stats_median,phq_attendance_sports_stats_std_dev,phq_rank_public_holidays_rank_levels_1,phq_rank_public_holidays_rank_levels_2,phq_rank_public_holidays_rank_levels_3,phq_rank_public_holidays_rank_levels_4,phq_rank_public_holidays_rank_levels_5
-2019-11-16,43,24546,11,1000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-17,25,13440,11,146,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-18,6,2021,11,700,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-19,10,6047,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-20,14,59704,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-21,21,60851,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-22,35,25760,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-23,29,25425,11,394,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-24,18,23410,11,500,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-25,6,5122,11,1000,1,18064,18064,18064,18064.0,18064.0,0.0,0,0,0,0,0
-2019-11-26,8,6861,11,1000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-27,12,6225,11,500,1,18064,18064,18064,18064.0,18064.0,0.0,0,0,0,0,0
-```
-
-The same data represented as a table:
-
-<table><thead><tr><th width="139">date</th><th width="335">phq_attendance_concerts_stats_count</th><th width="322">phq_attendance_concerts_stats_sum</th><th width="344">phq_attendance_conferences_stats_min</th><th width="350">phq_attendance_conferences_stats_max</th><th width="309">phq_attendance_sports_stats_count</th><th width="303">phq_attendance_sports_stats_sum</th><th width="299">phq_attendance_sports_stats_min</th><th width="300">phq_attendance_sports_stats_max</th><th width="306">phq_attendance_sports_stats_avg</th><th width="331">phq_attendance_sports_stats_median</th><th width="328">phq_attendance_sports_stats_std_dev</th><th width="337" data-type="number">phq_rank_public_holidays_rank_levels_1</th><th width="347" data-type="number">phq_rank_public_holidays_rank_levels_2</th><th width="358" data-type="number">phq_rank_public_holidays_rank_levels_3</th><th width="353" data-type="number">phq_rank_public_holidays_rank_levels_4</th><th width="341" data-type="number">phq_rank_public_holidays_rank_levels_5</th></tr></thead><tbody><tr><td>2019-11-16</td><td>43</td><td>24546</td><td>11</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-17</td><td>25</td><td>13440</td><td>11</td><td>146</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-18</td><td>6</td><td>2021</td><td>11</td><td>700</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-19</td><td>10</td><td>6047</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-20</td><td>14</td><td>59704</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-21</td><td>21</td><td>60851</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-22</td><td>35</td><td>25760</td><td>11</td><td>171000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-23</td><td>29</td><td>25425</td><td>11</td><td>394</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-24</td><td>18</td><td>23410</td><td>11</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-25</td><td>6</td><td>5122</td><td>11</td><td>1000</td><td>1</td><td>18064</td><td>18064</td><td>18064</td><td>18064.0</td><td>18064.0</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-26</td><td>8</td><td>6861</td><td>11</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td><td>0.0</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>2019-11-27</td><td>12</td><td>6225</td><td>11</td><td>500</td><td>1</td><td>18064</td><td>18064</td><td>18064</td><td>18064.0</td><td>18064.0</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
@@ -604,6 +405,10 @@ for feature in phq.features.obtain_features(
 ```
 {% endtab %}
 {% endtabs %}
+
+## OpenAPI Spec
+
+The OpenAPI spec for Features API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Features+API).
 
 ## Guides
 
