@@ -8,33 +8,9 @@ description: >-
 
 Particularly for the Loop Links UI we take the `org_name` from Settings and display it at the top of the page.
 
-## Request
-
-### HTTP Request
-
-```http
-GET https://api.predicthq.com/v1/loop/settings
-```
-
-## Response
-
-### Response Fields
-
-<table><thead><tr><th width="162">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>org_name</code><br>string</td><td>Name to display at the top of the Loop UI for end-users.<br><br>This defaults to your Org name as per your PredictHQ account, however you can customize it here to make it different.<br><br>E.g. <code>My Org Name</code></td></tr></tbody></table>
-
-<details>
-
-<summary>Example response</summary>
-
-Below is an example response:
-
-```json
-{
-  "org_name": "My Org"
-}
-```
-
-</details>
+{% openapi-operation spec="loop-api" path="/v1/loop/settings" method="get" %}
+[OpenAPI loop-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/loop-api.yaml)
+{% endopenapi-operation %}
 
 ## Examples
 
@@ -63,6 +39,10 @@ print(response.json())
 ```
 {% endtab %}
 {% endtabs %}
+
+## OpenAPI Spec
+
+The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 

@@ -4,25 +4,9 @@ description: Update your Loop Settings.
 
 # Update Loop Settings
 
-## Request
-
-### HTTP Request
-
-```http
-PUT https://api.predicthq.com/v1/loop/settings
-```
-
-### Request Headers
-
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
-
-### Request Body
-
-<table><thead><tr><th width="162">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>org_name</code><br>string</td><td>Name to display at the top of the Loop UI for end-users.<br><br>This defaults to your Org name as per your PredictHQ account, however you can customize it here to make it different.<br><br>E.g. <code>My Org Name</code></td></tr></tbody></table>
-
-## Response
-
-If successful, the HTTP response code will be `204 No Content`.
+{% openapi-operation spec="loop-api" path="/v1/loop/settings" method="put" %}
+[OpenAPI loop-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/loop-api.yaml)
+{% endopenapi-operation %}
 
 ## Examples
 
@@ -60,6 +44,10 @@ print(response.status_code)
 ```
 {% endtab %}
 {% endtabs %}
+
+## OpenAPI Spec
+
+The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 
