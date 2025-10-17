@@ -4,34 +4,9 @@ description: Partially update an existing Analysis.
 
 # Partially Update an Analysis
 
-## Request
-
-### HTTP Request
-
-<pre class="language-http"><code class="lang-http">PATCH https://api.predicthq.com/v1/beam/analyses/<a data-footnote-ref href="#user-content-fn-1">$analysis_id</a>
-</code></pre>
-
-### Path Parameters
-
-<table><thead><tr><th width="211">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>analysis_id</code></td><td>An existing Beam Analysis ID.</td></tr></tbody></table>
-
-### Request Headers
-
-<table><thead><tr><th width="219">Header</th><th>Value</th></tr></thead><tbody><tr><td><code>Content-Type</code></td><td><code>application/json</code></td></tr></tbody></table>
-
-### Request Body
-
-{% hint style="info" %}
-This endpoint accepts the same request body fields as the Create an Analysis endpoint. Please refer to the [Create an Analysis](create-an-analysis.md#request-body) documentation for request body parameters.
-
-Remember this is a PATCH endpoint which means only the fields you provide will be updated.
-
-If you wish to replace all fields please use the [PUT endpoint](update-an-analysis.md).
-{% endhint %}
-
-## Response
-
-If successful, the HTTP response code will be `204 No Content`.
+{% openapi-operation spec="beam-api" path="/v1/beam/analyses/{analysis_id}" method="patch" %}
+[OpenAPI beam-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/beam-api.yaml)
+{% endopenapi-operation %}
 
 ## Examples
 
@@ -70,10 +45,12 @@ print(response.status_code)
 {% endtab %}
 {% endtabs %}
 
+## OpenAPI Spec
+
+The OpenAPI spec for Beam API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+
 ## Guides
 
 Below are some guides relevant to this API:
 
 * [Beam Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)
-
-[^1]: An existing Beam Analysis ID.
