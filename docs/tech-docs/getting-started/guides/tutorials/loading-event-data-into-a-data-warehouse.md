@@ -49,7 +49,7 @@ For the purposes of this guide, we have limited the example load to a single cit
 
 There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates will require API code.
 
-**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by [exporting data](broken-reference) from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
+**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by [exporting data](/broken/pages/L2VBQNTGfc5xxBJhcMXA) from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
 
 **API Connection Method**: Connect to the PredictHQ Events API to download the latest data from the API into your data lake. This guide takes you through using the Python API connection method for GCP but similar steps would apply to other programming languages. Events data is dynamic with events changing all the time as events are canceled, postponed, shift location, or have other details change. Also, new events are being announced all the time. We recommend having a process that updates your data on a regular frequency, such as daily.
 
@@ -100,7 +100,7 @@ This method is recommended for large data uploads, as it efficiently manages the
 
 ### Search Events in the WebApp and Export JSONL
 
-To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs. For detailed instructions on optimizing your search with the WebApp, please refer to [this guide](broken-reference) on the WebApp search capabilities.
+To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs. For detailed instructions on optimizing your search with the WebApp, please refer to [this guide](/broken/pages/mvnc6vl3YsJQI2JZLHtM) on the WebApp search capabilities.
 
 Typically you may download all the data you have access to into your data warehouse. In that case, run a search for all events and download them.
 

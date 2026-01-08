@@ -14,8 +14,7 @@ If you don't know which is the best for you, please [reach out](https://www.pred
 
 This guide assumes you have access to PredictHQ’s events data in Snowflake via a [Snowflake data share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake). The guide is to show customers how to generate aggregations similar to those provided by the Features API documented in the Features API [list of available features](https://docs.predicthq.com/api/features/get-features#available-features). These features provide daily aggregated data which shows the sum of data for all events happening in a location - for example, the amount of people attending events around a location. The goal is to generate aggregated features that can be used in demand forecasting.
 
-Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, machine learning ready daily level aggregated event data will be generated on a per-location basis intended to be similar to the data provided by the PredictHQ Features API and ready to be added to a training set as quickly as possible.\
-
+Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, machine learning ready daily level aggregated event data will be generated on a per-location basis intended to be similar to the data provided by the PredictHQ Features API and ready to be added to a training set as quickly as possible.<br>
 
 **Requirements:**
 
@@ -23,8 +22,7 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
 
 2\. Access to PredictHQ's intelligent event data via Snowflake
 
-3\. Understanding of SQL & Snowflake's SQL Interface.\
-
+3\. Understanding of SQL & Snowflake's SQL Interface.<br>
 
 **The process to follow:**
 

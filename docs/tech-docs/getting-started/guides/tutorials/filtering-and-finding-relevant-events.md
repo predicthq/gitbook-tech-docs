@@ -66,9 +66,7 @@ params={
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.&#x20;
 
 * **Center Point & Radius**: Define a circular area around your store or location by specifying latitude/longitude and a radius using the `within` parameter. The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) can assist in identifying an appropriate radius.
-
-- **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
-
+* **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
 * **Country-wide**: If your interest spans an entire country, the easiest way is to use the `country` parameter and set it to the res
 
 #### Settings for Tom’s Pizzeria
@@ -126,8 +124,7 @@ print(response.json())
 Select the types of events for the search.
 
 * **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
-
-- **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
+* **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
 
 #### Settings for Tom’s Pizzeria
 
@@ -139,7 +136,7 @@ params={
   } 
 ```
 
-Next, Tom plans to use [Beam](broken-reference) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
+Next, Tom plans to use [Beam](/broken/pages/bjT3u4aUcYD07PX90MX7) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
 
 </details>
 
@@ -151,10 +148,8 @@ Define the event impact for the search.
 
 * **PHQ Rank**: Use the `rank` parameter to target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
-
-- **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
+* **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
-
 * **PHQ Attendance**: For [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../../predicthq-data/predicted-attendance.md).
 
 #### Settings for Tom’s Pizzeria&#x20;
@@ -198,8 +193,7 @@ params={
 Optimize search results with useful parameters.
 
 * **Limit**: Specify the maximum number of events per page to return, managing the volume of results and focusing on the most relevant events. Use the `next` field in the API response to navigate to additional results (refer to [#handling-paginated-api-responses](filtering-and-finding-relevant-events.md#handling-paginated-api-responses "mention") for more details).
-
-- **Sort**: Order the search results according to specific attributes, most commonly event impact such as `rank` or `phq_attendance`, to prioritize high impact events.
+* **Sort**: Order the search results according to specific attributes, most commonly event impact such as `rank` or `phq_attendance`, to prioritize high impact events.
 
 #### Settings for Tom’s Pizzeria
 
@@ -277,13 +271,13 @@ print("Total events fetched:", len(all_events))
 
 ```
 
-For information on how to search for events using our SDK, please refer to [Broken link](broken-reference "mention").
+For information on how to search for events using our SDK, please refer to [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention").
 
 {% hint style="info" %}
 For more details, visit:
 
 * [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
-* [Broken link](broken-reference "mention")
+* [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention")
 {% endhint %}
 
 ### Step 3. Interpret Response

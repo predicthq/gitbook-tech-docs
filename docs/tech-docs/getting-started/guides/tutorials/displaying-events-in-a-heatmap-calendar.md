@@ -144,4 +144,4 @@ For an example of calling the API in JavaScript, see [here](https://observablehq
 
 This tutorial has demonstrated how to create a heatmap calendar with PredictHQ’s APIs, from fetching event data to visualizing it interactively. It is an effective tool that helps you plan for events and their impacts, supporting informed, data-driven decisions. Adapt the provided example and customize the heatmap to align with your specific operational needs.&#x20;
 
-\
+<br>

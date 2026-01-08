@@ -26,7 +26,7 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. API: [API Access Token](broken-reference)
+1. API: [API Access Token](/broken/pages/Lfw86RwSlwN1mzj7wvKy)
 2. Microsoft Excel
 
 ### Example Parameters for this Guide:

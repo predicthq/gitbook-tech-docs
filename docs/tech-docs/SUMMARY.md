@@ -113,6 +113,7 @@
   * [Receive Data via AWS Data Exchange](integrations/third-party-integrations/aws-data-exchange/README.md)
     * [CSV/Parquet Data Structure for ADX](integrations/third-party-integrations/aws-data-exchange/csv-parquet-data-structure-for-adx.md)
     * [NDJSON Data Structure for ADX](integrations/third-party-integrations/aws-data-exchange/ndjson-data-structure-for-adx.md)
+  * [Receive Data via SFTP](integrations/third-party-integrations/receive-data-via-sftp.md)
   * [Integrate with Databricks](integrations/third-party-integrations/integrate-with-databricks.md)
   * [Integrate with Tableau](integrations/third-party-integrations/tableau-data-connector.md)
   * [Integrate with a Demand Forecast in PowerBI](integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md)
