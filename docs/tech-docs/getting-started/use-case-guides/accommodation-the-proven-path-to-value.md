@@ -15,7 +15,7 @@ Two of the most effective ways accommodation businesses get value from PredictHQ
 
 ## Calendar Display
 
-<figure><img src="../../../.gitbook/assets/accommodation-calendar-mockup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/accommodation-calendar-mockup.png" alt=""><figcaption></figcaption></figure>
 
 Many accommodation businesses want to show local events in their calendars - to help hoteliers plan ahead, staff smarter, and spot high-demand dates early. It’s a valuable use case. But nearly everyone hits the same challenge:
 
@@ -66,7 +66,7 @@ A well-filtered event calendar isn’t just a feed - it’s an explainability la
 
 ## Forecasting Accuracy
 
-<figure><img src="../../../.gitbook/assets/accommodation-forecast-mockup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt=""><figcaption></figcaption></figure>
 
 Most forecasting teams know that events drive demand - the challenge is turning the underlying event data into features that actually work in a time-series model.
 
