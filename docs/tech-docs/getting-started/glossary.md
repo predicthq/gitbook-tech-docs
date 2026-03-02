@@ -8,20 +8,22 @@ description: >-
 
 ## Beam
 
-Beam helps you identify what events have impacted your demand in the past, so you can focus on the events that matter to your business. Beam provides relevancy by cutting out the noise.
+Beam is a demand calibration engine that identifies which types of real-world events materially impact your historical demand.
 
-The primary output of Beam is a set of Feature Importance results identifying which types of events impact your specific business. Use the Feature Importance results to filter down your Features API and Events API results to only those that are relevant to your business.
+Event-driven demand is sparse and uneven. A small number of events can create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
 
-If you have multiple locations/stores, events will impact them in different ways so it's vital you use Beam to analyse historical demand at each location/store and use the relevant Features/Events at each of those locations/stores.
+Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results that can be used to filter Events API and Features API outputs to those that are demand-relevant for a specific location.
 
-Beam saves you weeks and weeks of work by automating the process to filter out the noise.
+Beam analyses are location-specific. If you operate multiple locations, impact calibration should be performed per location, as event effects vary by geography and demand profile.
+
+Beam automates ongoing event impact calibration, reducing the need to build and maintain bespoke decomposition and feature selection pipelines.
 
 * API Reference: [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [beam-guides](guides/beam-guides/ "mention")
 
 ## Local Rank
 
-Local Rank is PredictHQ’s location-sensitive ranking score that measures an event’s impact relative to its surrounding population density. It ranges from 0 to 100 and is presented on a logarithmic scale.
+Local Rank is PredictHQ’s location-sensitive ranking score that measures an event’s impact relative to its surrounding population density. It ranges from 0 to 100 and is presented on a logarithmic scale, meaning higher scores represent exponentially greater local impact.
 
 Unlike PHQ Rank, which is normalized globally, Local Rank adjusts for how concentrated or sparse a population is in the area surrounding the event. This means that a 5,000-person event in a densely populated city will receive a lower Local Rank than a 5,000-person event in a rural or sparsely populated area - because the latter has a proportionally larger impact on local demand and activity.
 
@@ -42,7 +44,7 @@ All submitted feedback is reviewed by PredictHQ’s data team, and accepted chan
 
 ## PHQ Rank
 
-PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential impact of an event. It ranges from 0 to 100 and is calculated using a blend of signals such as predicted attendance, event type, and contextual features that influence demand.
+PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100 and is calculated using a blend of signals such as predicted attendance, event type, and contextual features that influence demand.
 
 The score is presented on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
 
@@ -50,7 +52,7 @@ The score is presented on a logarithmic scale, meaning that higher scores repres
 
 ## Predicted Attendance
 
-Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is one of the core features provided by PredictHQ and is used across the Forecasts API and Features API to quantify the demand impact of events.
+Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API and Forecasts API to quantify potential demand impact.
 
 * Getting Started Guide: [predicted-attendance.md](predicthq-data/predicted-attendance.md "mention")
 
@@ -86,9 +88,29 @@ Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are
 
 Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak 1–2 days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 
-Predicted Impact Patterns are industry-specific and are intended to replace static or date-anchored features in demand forecasting models. They’ve been shown to significantly improve forecast accuracy when used to encode time-aware event impact in supervised learning pipelines.
+Predicted Impact Patterns are industry-specific and are intended to replace static or date-anchored features in demand forecasting models. They are designed to improve forecast accuracy by encoding time-aware event impact into supervised learning pipelines.
 
 * Getting Started Guide: [impact-patterns.md](predicthq-data/impact-patterns.md "mention")
+
+## Real-World Context
+
+Real-World Context refers to structured representations of real-world activity that can materially influence demand.
+
+This includes events, venues, performers, categories, and associated quantitative signals such as predicted attendance, spend, rankings, and temporal impact patterns. Real-world context is spatial and time-bound. It answers questions such as:
+
+* What is happening?
+* Where is it happening?
+* When is it happening?
+* At what scale?
+
+Within PredictHQ’s platform, real-world context is:
+
+* Structured and deduplicated through the Events API
+* Scoped geographically using Suggested Radius and Saved Locations
+* Transformed into model-ready signals via the Features API
+* Calibrated against historical demand using Beam
+
+Real-world context is designed for integration into forecasting models, analytics pipelines, and operational systems where external activity materially affects outcomes.
 
 ## Saved Location
 
@@ -96,7 +118,7 @@ Saved Location is a persistent, user-defined geographic entity consisting of a n
 
 Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowing consistent and simplified access to features, events, and forecasts for specific business locations.
 
-We strongly recommend all customers use Saved Locations to manage location-specific workflows. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
+Saved Locations are recommended for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
 * API Reference: [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention")
 

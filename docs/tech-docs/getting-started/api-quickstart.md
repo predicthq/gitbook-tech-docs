@@ -1,10 +1,12 @@
 ---
 description: >-
-  This article describes how to quickly create an access token, view and
-  replicate a Streamlit demo app and explore our APIs.
+  This guide shows how to authenticate, make your first API call, and retrieve
+  structured real-world context from PredictHQ.
 ---
 
 # API Quickstart
+
+This guide shows how to make your first API call. For guidance on integrating event data into production forecasting or AI systems, see [Core Concepts](core-concepts/).
 
 #### What you need:
 
@@ -23,6 +25,8 @@ Read a more in-depth guide to [creating a new API Token](https://app.gitbook.com
 4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below
 
 ## Access Events API
+
+The Events API returns structured, deduplicated real-world events that can be integrated directly into forecasting, ML, and AI systems.
 
 Now you can use the new API Access Token in the `Authorization` header of your API requests as in the example below:
 
@@ -48,21 +52,19 @@ How to set up and access PredictHQ APIs
 {% endembed %}
 
 {% hint style="info" %}
-Refer to [filtering-and-finding-relevant-events.md](guides/tutorials/filtering-and-finding-relevant-events.md "mention") for guidance on how to identify events relevant to your business.
+For guidance on identifying which events materially impact your demand, [see the Beam guide](core-concepts/what-is-beam.md).
 {% endhint %}
 
 ## Streamlit Demo Apps
 
-To demonstrate how quick and easy it is to build extremely powerful apps using our APIs, we put together some Streamlit demos. All the code is available on GitHub and we encourage you to take the code, modify it, and use your own locations of interest to demo our APIs internally to your team or to simply better understand our technology.
+To demonstrate how PredictHQ APIs can be integrated into interactive applications, we provide several Streamlit examples. All the code is available on GitHub and we encourage you to take the code, modify it, and use your own locations of interest to demo our APIs internally to your team or to simply better understand our technology.
 
 {% content-ref url="guides/streamlit-demo-apps.md" %}
 [streamlit-demo-apps.md](guides/streamlit-demo-apps.md)
 {% endcontent-ref %}
 
-## Explore the API
+## Next: Understanding Event Driven Demand
 
-Below is a guide to point you in the right direction if you're new to the PredictHQ APIs:
+Calling the Events API is the first step. Successfully using event data in production systems requires addressing scope, relevance, feature engineering, and explainability.
 
-{% hint style="info" %}
-Did you know - The [WebApp](https://control.predicthq.com/) uses the same APIs you have access to. One of the easiest ways to learn how to use our APIs is to see it in action in the WebApp.
-{% endhint %}
+Read [Event-Driven Demand](core-concepts/event-driven-demand.md)￼ to understand the structural challenges of working with real-world events and how PredictHQ’s APIs are designed to address them.

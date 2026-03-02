@@ -6,7 +6,7 @@ The `location.place_id` parameter allows us to filter live sports events by thei
 
 These Place IDs were found using the [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places). We provide a CSV file of broadcast counties to download, to make it easier to discover the `place_id` for all counties and states in the US.
 
-{% file src="../../../../api/.gitbook/assets/broadcast-events-place-mapping.csv" %}
+{% file src="../../../.gitbook/assets/broadcast-events-place-mapping.csv" %}
 
 We can also use the `start.*` parameters to filter broadcasts by time. For the time range in our example, we will use `start.gte=2020-11-01` and `start.lte=2020-11-30`. Using `start.tz=America/Los_Angeles` will treat the parameter’s start dates and times in the America/Los\_Angeles time zone, otherwise the parameter dates and times will be treated as UTC.
 

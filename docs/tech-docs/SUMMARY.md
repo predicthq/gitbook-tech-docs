@@ -8,6 +8,7 @@
 
 * [API Quickstart](getting-started/api-quickstart.md)
 * [Core Concepts](getting-started/core-concepts/README.md)
+  * [Event-Driven Demand](getting-started/core-concepts/event-driven-demand.md)
   * [What is Beam?](getting-started/core-concepts/what-is-beam.md)
   * [What is the Features API?](getting-started/core-concepts/what-is-the-features-api.md)
   * [Industry-Tuned Predictions](getting-started/core-concepts/industry-tuned-predictions.md)
@@ -91,12 +92,6 @@
     * [Displaying Events on a Map](getting-started/guides/tutorials/displaying-events-on-a-map.md)
   * [Use Case Guides](getting-started/guides/use-case-guides/README.md)
     * [Accommodation: The Proven Path to Value](getting-started/guides/use-case-guides/accommodation-the-proven-path-to-value.md)
-* [Tutorials by Use Case](getting-started/tutorials-by-use-case/README.md)
-  * [Demand Forecasting with ML Models](getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models.md)
-  * [Dynamic Pricing](getting-started/tutorials-by-use-case/dynamic-pricing.md)
-  * [Inventory Management](getting-started/tutorials-by-use-case/inventory-management.md)
-  * [Workforce Optimization](getting-started/tutorials-by-use-case/workforce-optimization.md)
-  * [Visualization and Insights](getting-started/tutorials-by-use-case/visualization-and-insights.md)
 
 ## Integrations
 

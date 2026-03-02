@@ -1,52 +1,63 @@
 # What is the Features API?
 
-The Features API generates time-series signals from real-world events - structured for use in forecasting and other time-series models. It returns clean, numerical features like predicted attendance, impact scores, and spend estimates for your chosen locations and time range. These features are designed to help you quantify the potential impact of events on your business activity.
+The Features API transforms real-world events into structured time-series signals for forecasting, analytics, and other time-dependent models.
 
-Rather than returning raw event data, the Features API provides daily or weekly metrics grouped by event type (e.g. Concerts, Sports, Public Holidays). It accounts for important factors like multi-day events, expected attendance, and lead/lag effects using PredictHQ’s intelligence, including PHQ Rank, Local Rank, Umbrella Events and Impact Patterns.
+Instead of returning individual event records, it produces daily or weekly numerical aggregates grouped by event type (e.g. Concerts, Sports, Public Holidays). Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics.
+
+Outputs are deterministic, time-aligned feature series scoped to a specific location and date range.
 
 {% hint style="success" %}
 **Why use the Features API?**\
 We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 {% endhint %}
 
-Instead of building your own event feature engineering pipeline, you get structured, configurable features ready for modeling, analysis, or planning.
+## Why the Features API Exists
 
-You can:
+Individual events are not directly usable in forecasting models.
 
-* Pick the metrics you need (e.g. `sum`, `count`, `avg`, `std_dev`)
-* Filter by impact (e.g. `phq_rank` or `local_rank`)
-* Use industry-specific features for improved accuracy
-* Output results in JSON or CSV, daily or weekly
+Events vary in duration, scale, timing, and expected impact. Multi-day events introduce lead and lag effects. Attendance and spend signals must be aggregated consistently. Overlapping events must be handled without distortion.
 
-## Why Use the Features API
+Naïve aggregation often introduces noise.
 
-If you’re already using the Events API, you have access to rich, structured event data. But turning that into useful, time-aligned, numerical features for modeling is a separate challenge.
+The Features API standardizes how event data is transformed into numerical demand indicators. It encapsulates handling of:
 
-The Features API handles that for you.
+* Multi-day event duration
+* Lead and lag impact patterns
+* Attendance and spend aggregation
+* Rank-based filtering
+* Category-level grouping
 
-It takes care of:
+This replaces bespoke event feature engineering pipelines with consistent API outputs.
 
-* Distributing Predicted Attendance across multi-day events
-* Modeling leading and lagging demand effects using Predicted Impact Patterns
-* Aggregating metrics (e.g. attendance, spend, event counts) by event type and date
-* Filtering by relevance using rank or attendance thresholds
+## What the Features API Does
 
-Use the Features API when you want to:
+The Features API:
 
-* Add structured event signals to forecasting, or other models
-* Create demand indicators for dashboards or alerts
-* Standardize feature generation across locations or markets
-* Reduce time spent on feature engineering and event bucketing
+* Aggregates event metrics by category and date
+* Distributes attendance across multi-day spans
+* Applies temporal impact patterns
+* Supports rank-based and attendance-based filtering
+* Returns daily or weekly feature values
 
-You stay in control - choose the metric types, filters, and output format. Pair it with Beam to focus only on event features that matter.
+It does not determine which features are relevant to your business. Relevance calibration is handled by Beam. The Features API focuses on transforming scoped events into structured numerical signals.
 
-The Features API saves your team time and removes guesswork so you can focus on improving model performance, not preprocessing.
+## How It Works With Beam
+
+Using a `beam.analysis_id` is the most reliable way to configure the Features API.
+
+When provided, the API:
+
+* Uses the associated Saved Location
+* Applies demand-calibrated feature selection
+* Enforces category and rank filters derived from Beam
+
+Without Beam, feature configuration must be defined manually.
 
 ## Inputs and Outputs
 
 ### Inputs
 
-The easiest and most reliable way to use the Features API is by providing a beam.analysis\_id. This automatically applies:
+The easiest and most reliable way to use the Features API is by providing a `beam.analysis_id`. This automatically applies:
 
 * The correct location and timezone
 * A precomputed set of relevant features (from Beam Feature Importance)
@@ -57,18 +68,18 @@ Using a `beam.analysis_id` removes the need to manually define your location and
 If you’re not using Beam, you can also configure inputs manually:
 
 * Location
-  * Provide a saved\_location\_id (recommended), place\_id or geolocation + radius.
+  * Provide a `saved_location_id` (recommended), `place_id` or geolocation + radius.
 * Time range
   * Start and end date, aligned to local timezone.
 * Features to compute
   * Choose from the full list of available features.
   * Some features have industry-specific variants that use your industry’s Predicted Impact Patterns to better reflect lead/lag behavior.
 * Stat types (per feature)
-  * For each feature, choose one or more stat types: sum, avg, count, std\_dev, min, max.
+  * For each feature, choose one or more stat types: `sum`, `avg`, `count`, `std_dev`, `min`, `max`.
 * Granularity
   * Day or week intervals
 * Optional filters
-  * Filter events included in each feature using phq\_rank or local\_rank.
+  * Filter events included in each feature using `phq_rank` or `local_rank`.
 
 ### Outputs
 
