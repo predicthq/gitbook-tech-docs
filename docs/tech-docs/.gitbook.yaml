@@ -48,6 +48,8 @@ redirects:
     datascience/severe-weather-events-part2: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
     datascience/severe-weather-events-part3: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
     datascience/severe-weather-events: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
+    getting-started/guides/use-case-guides: getting-started/use-case-guides/README.md
+    getting-started/guides/use-case-guides/accommodation-the-proven-path-to-value: getting-started/use-case-guides/accommodation-the-proven-path-to-value.md
     getting-started/tutorials-by-use-case: getting-started/guides/tutorials/README.md
     getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models: getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md
     getting-started/tutorials-by-use-case/dynamic-pricing: getting-started/guides/tutorials/README.md
