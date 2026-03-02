@@ -48,6 +48,12 @@ redirects:
     datascience/severe-weather-events-part2: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
     datascience/severe-weather-events-part3: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
     datascience/severe-weather-events: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
+    getting-started/tutorials-by-use-case: getting-started/guides/tutorials/README.md
+    getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models: getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md
+    getting-started/tutorials-by-use-case/dynamic-pricing: getting-started/guides/tutorials/README.md
+    getting-started/tutorials-by-use-case/inventory-management: getting-started/guides/tutorials/README.md
+    getting-started/tutorials-by-use-case/workforce-optimization: getting-started/guides/tutorials/README.md
+    getting-started/tutorials-by-use-case/visualization-and-insights: getting-started/guides/tutorials/README.md
     guides/adx: predicthq-api/bulk-data-delivery/aws-data-exchange.md
     guides/api-quickstart: getting-started/api-quickstart.md
     guides/event-categories: getting-started/predicthq-data/event-categories.md
