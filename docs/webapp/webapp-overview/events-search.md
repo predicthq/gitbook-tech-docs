@@ -18,7 +18,7 @@ Filters can be used to narrow down your search results. Your filters will be rem
 
 See below for a list of filters:
 
-* **Categories** - choose one or more categories to view events under those categories. See our [categories page](https://www.predicthq.com/intelligence/data-enrichment/event-categories) for an overview.\\
+* **Categories** - choose one or more categories to view events under those categories. See our [categories page](https://www.predicthq.com/intelligence/data-enrichment/event-categories) for an overview.
 * **Date range** - specify the date range. You can search for future, or past events. Choose from preconfigured date ranges, or set a custom date range on the calendar. Note that the date ranges available are limited by what you have access to in your subscription.
 * **Labels** - Within categories, we have different labels. For example, labels within the sports category indicate what type of sporting event you are looking at.
 * **Event name** - This option searches the event title and description. It's a way to search for a specific event or to search for events with text in their title or description.
