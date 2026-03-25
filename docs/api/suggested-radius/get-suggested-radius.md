@@ -6,17 +6,15 @@ description: >-
 
 # Get Suggested Radius
 
-The Suggested Radius API returns a radius that can be used to find  events around a given location. When looking for events around a business location (such as a store, a hotel, or another business location) a key question is how far should you look for events. For example, should you look at events in a 0.5-mile radius, a 2-mile radius, or a 10-mile radius from your location? The Suggested Radius API answers this question by returning a radius based on a number of factors that can be used to retrieve events around a location. This radius returned by the API is commonly used as follows:
+The Suggested Radius API returns a radius for finding events around a business location. Rather than guessing an appropriate distance, the API calculates a radius based on factors including population density, local event patterns, and industry.
 
-* When querying the [Events API](../events/search-events.md) using the `within` parameter.
-* When calling the [Features API](../features/get-features.md) with a latitude, longitude, and radius to get aggregated features back for a location.
-* For retrieving events in a data lake by setting the radius around a store or location to the suggested radius.
-* In-demand forecasting when building event-based features for a location, use this radius when calculating features for a location.
-* For use with our Beam product when performing a correlation analysis
+Use the returned radius as the spatial input for Events API queries, Features API calls, Beam, and demand forecasting workflows.
 
-The Suggested Radius API is powered by a machine learning model that looks at factors like population density, the events around a location, the customer’s industry, and many other factors to determine the ideal radius.
+We recommend caching the response and refreshing monthly - the radius for a given location changes infrequently.
 
-We'd suggest caching the Suggested Radius API response where possible. The response will only change infrequently and it would be sufficient to refresh the cache once per month.
+{% hint style="success" %}
+[Predicted Impact Area](../impact-area/get-impact-area.md) is the successor to this API, providing a more accurate representation of event impact than a radius. Suggested Radius remains available and existing implementations are unaffected.
+{% endhint %}
 
 {% openapi-operation spec="suggested-radius-api" path="/v1/suggested-radius/" method="get" %}
 [OpenAPI suggested-radius-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/suggested-radius-api.yaml)

@@ -70,6 +70,10 @@
   * [Refresh an Analysis Group](beam/analysis-groups/refresh-an-analysis-group.md)
   * [Get Feature Importance for an Analysis Group](beam/analysis-groups/get-aggregated-feature-importance.md)
 
+## Predicted Impact Area <a href="#impact-area" id="impact-area"></a>
+
+* [Get Predicted Impact Area](impact-area/get-impact-area.md)
+
 ## Suggested Radius
 
 * [Get Suggested Radius](suggested-radius/get-suggested-radius.md)
