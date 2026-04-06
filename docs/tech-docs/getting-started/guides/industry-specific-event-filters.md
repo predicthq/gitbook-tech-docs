@@ -36,4 +36,4 @@ Local Rank is a location-sensitive scale (0-100, logarithmic) that predicts how 
 
 **Beam automatically applies Local Rank filtering** when identifying impactful event types for your demand modeling. However, if you’re setting up filters or queries manually, these thresholds offer a smart default to focus your analysis where it matters until you can rely solely on Beam.
 
-<table><thead><tr><th width="242.7578125">Industry</th><th>Minimum Local Rank</th></tr></thead><tbody><tr><td>Accommodation</td><td>50</td></tr><tr><td>Parking</td><td>60</td></tr><tr><td>Restaurants</td><td>65</td></tr><tr><td>Retail</td><td>35</td></tr><tr><td>Others</td><td>35</td></tr></tbody></table>
+<table><thead><tr><th width="242.7578125">Industry</th><th>Minimum Local Rank</th></tr></thead><tbody><tr><td>Accommodation</td><td>50</td></tr><tr><td>Parking</td><td>50</td></tr><tr><td>Restaurants</td><td>50</td></tr><tr><td>Retail</td><td>35</td></tr><tr><td>Others</td><td>35</td></tr></tbody></table>
