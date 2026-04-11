@@ -78,21 +78,15 @@ Ensure you have enough time-series data that meets [Beam’s requirements](https
 
 **Industry**
 
-Specify your industry as there are several industry-specific settings required in this step such as when using the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius). If your industry is not covered, please use the default `other`:
-
-* `accommodation`
-* `retail`
-* `parking`
-* `food_and_beverage` (also referred to as `restaurants`)
-* `other` (for all other industries)
+Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../how-industry-affects-results.md), please use the default `other`&#x20;
 
 **Location**
 
-Define the catchment area around your store or location using a center point and radius approach. The [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius) recommends a radius specific to your industry and latitude/longitude. Custom configuration is also available.
+Define the catchment area around your store or location using [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry, and the impact area boundary is calculated and stored automatically.
 
-**Event Rank**
+**Rank Thresholds**
 
-Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [industry-specific recommendations](../industry-specific-event-filters.md#minimum-phq-rank) to focus on events that are likely to influence your demand, while excluding those that are too small or irrelevant.
+Use Beam to automatically calibrate rank thresholds for your industry and location. Beam identifies which event types and rank levels materially influence your demand - removing the need to set these manually.
 
 </details>
 
@@ -100,7 +94,7 @@ Set a minimum [PHQ Rank](../../predicthq-data/ranks/phq-rank.md) based on our [i
 For technical details, visit:
 
 * [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data "mention")
-* [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius "mention")
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
 * [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [Analysis Groups](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups "mention")
 
