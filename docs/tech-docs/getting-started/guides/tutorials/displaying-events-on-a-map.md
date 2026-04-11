@@ -28,7 +28,7 @@ To experiment with this example, consider[ forking the notebook](https://observa
 
 ### Getting Started
 
-An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](/broken/pages/X3T2wGByh9B0c59ptnhJ) to obtain one if needed.
+An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
 
 ### Event Data
 

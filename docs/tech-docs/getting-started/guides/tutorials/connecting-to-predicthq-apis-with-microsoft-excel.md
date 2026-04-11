@@ -26,7 +26,7 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. API: [API Access Token](/broken/pages/Lfw86RwSlwN1mzj7wvKy)
+1. API: [API Access Token](../../api-quickstart.md)
 2. Microsoft Excel
 
 ### Example Parameters for this Guide:
