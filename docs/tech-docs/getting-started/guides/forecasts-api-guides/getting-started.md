@@ -87,47 +87,26 @@ date,demand
 
 All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
 
-#### Create Saved Location (Using Suggested Radius)
+#### Create Saved Location (Using Predicted Impact Area)
 
-Our Suggested Radius API calculates the optimal area around your business to capture the events that will provide an impact.
-
-```python
-# Get suggested radius
-response = requests.get(
-    url=f"{API_URL}/v1/suggested-radius/",
-    headers=headers,
-    params={
-        "location.origin": f"{lat},{lon}",
-        "industry": industry,
-        "radius_unit": "mi",
-    },
-)
-
-data = response.json()
-radius = data["radius"]
-radius_unit = data["radius_unit"]
-
-print(f"Suggested radius: {radius} {radius_unit}")
-
-# Suggested radius: 1.11 mi
-```
+Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. The easiest way to use it is to create a Saved Location with `origin_geojson` — the impact area is calculated automatically and stored against the location.
 
 ```python
-# Create Saved Location
+# Create Saved Location with Predicted Impact Area
 response = requests.post(
     url=f"{API_URL}/v1/saved-locations",
     headers=headers,
     data=json.dumps(
         {
             "name": name,
-            "geojson": {
+            "origin_geojson": {
                 "type": "Feature",
-                "properties": {"radius": radius, "radius_unit": radius_unit},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [lon, lat],  # GeoJSON order is lon,lat
                 },
             },
+            "industry": industry,
         }
     ),
 )
