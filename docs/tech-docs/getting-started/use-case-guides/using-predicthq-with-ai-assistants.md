@@ -95,6 +95,6 @@ PredictHQ is designed to integrate cleanly into forecasting models, analytics pi
 ## Next Steps
 
 * Define [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) for consistent geographic scope
-* Use [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) to establish practical boundaries
+* Use [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) to establish practical boundaries
 * Run [Beam](../core-concepts/what-is-beam.md) to calibrate event relevance (if historical demand is available)
 * Retrieve structured context via the [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features APIs](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
