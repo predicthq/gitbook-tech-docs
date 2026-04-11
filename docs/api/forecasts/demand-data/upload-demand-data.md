@@ -5,7 +5,7 @@ description: Upload historical demand data for an existing forecast model.
 # Upload Demand Data
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}/demand" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
 ## OpenAPI Spec

@@ -5,7 +5,7 @@ description: Get previously uploaded demand data.
 # Get Demand Data
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}/demand" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
 ## OpenAPI Spec

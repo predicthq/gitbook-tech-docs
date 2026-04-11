@@ -5,7 +5,7 @@ description: Get available algorithms.
 # Get Algorithms
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/algos" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
 ## OpenAPI Spec

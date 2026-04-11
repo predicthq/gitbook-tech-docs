@@ -1,6 +1,8 @@
 # API Reference
 
-PredictHQ helps you build smarter models and products with real-world demand intelligence. Access high-quality event data, ready-to-use ML features, and a forecasting API designed for real impact. See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
+PredictHQ provides structured, verified real-world context and demand-aware features for forecasting, ML, and AI systems. The platform is designed to be integrated directly into production models and decision workflows.
+
+See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
 
 
 
@@ -8,6 +10,6 @@ PredictHQ helps you build smarter models and products with real-world demand int
 
 * [Events API](events/search-events.md) - Clean and enriched real-world event data
 * [Features API](features/get-features.md) - Pre-aggregated ML features
-* [Forecasts API](/broken/pages/aOq4onBXbrd6LJ5DY78J) - Demand forecasting, out of the box
-* [Beam API](/broken/pages/T8ejWev7vPlFPUOoKvMm) - Filter out the noise
+* [Forecasts API](forecasts/get-forecasts.md) - Demand forecasting, out of the box
+* [Beam API](beam/get-beam.md) - Filter out the noise
 

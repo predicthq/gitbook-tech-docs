@@ -5,7 +5,7 @@ description: Update an existing forecast model.
 # Update Model
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}" method="patch" %}
-[Broken link](broken-reference)
+[OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
 ## OpenAPI Spec
