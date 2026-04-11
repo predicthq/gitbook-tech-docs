@@ -37,7 +37,7 @@ Below are the main steps involved in this guide:
 4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
 
-Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to hone in on a specific shop location and pull only events within a more accurate radius based on those results. For now, we will look at the citywide events in San Francisco as our example.
+Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
 
 ### How to get Events data via PredictHQ's API
 
@@ -56,7 +56,7 @@ https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&
 {% endcode %}
 
 {% hint style="info" %}
-Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the radius from the suggested radius API.
+Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the area from the Predicted Impact Area API.
 {% endhint %}
 
 Time zone parameter (active.tz) filters results based on that given time zone, even though date results are returned in UTC.

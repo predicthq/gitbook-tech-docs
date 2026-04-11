@@ -53,14 +53,14 @@ To enhance explainability and usability, consider displaying:
 
 By showing only the events that actually affect demand, you give hoteliers clear context for why certain days are different - empowering better decisions on pricing, staffing, and planning.
 
-A well-filtered event calendar isn’t just a feed - it’s an explainability layer that builds trust, supports human decision-making, and drives faster value without needing complex modeling or deep data integration.
+A well-filtered real-world context layer isn’t just raw events - it’s an explainability layer that builds trust, supports human decision-making, and drives faster value without needing complex modeling or deep data integration.
 
 ### PredictHQ Tools for Calendar Display
 
 * [Events API](https://docs.predicthq.com/api/events/search-events): Core event data, filtered by category, location, date, and more
-* [Snowflake / AWS Data Exchange Feeds](https://docs.predicthq.com/integrations/third-party-integrations): Simplified alternative to Events API - get event data delivered directly to your cloud data environment
+* [Snowflake / AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations): Simplified alternative to Events API - access real-world context data directly in your cloud data environment
 * [Beam API](https://docs.predicthq.com/api/beam/overview): Identify which event types impact demand using Feature Importance
-* [Suggested Radius](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius): Get radius recommendations for each hotel or location
+* [Predicted Impact Area](https://docs.predicthq.com/api/impact-area/get-impact-area): Get area recommendations for each hotel or location
 * [Predicted Impact Patterns](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns): Identify leading and lagging demand days around events
 * [Entities](https://docs.predicthq.com/getting-started/predicthq-data/entities): Group related events (e.g. concert residencies)
 
@@ -100,11 +100,11 @@ Once the fundamentals are in place, there are simple ways to drive even more val
 * Add alerts to notify your users about new and changed events
 * Use [Umbrella Events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) to simplify multi-day experiences - filter out individual sessions (like each race in an F1 weekend) and focus on the overarching event that actually drives bookings. This reduces clutter and makes calendars more explainable for hotel teams
 * Use [Concert Residencies](https://docs.predicthq.com/getting-started/predicthq-data/entities#residencies-entities) to notify on a sequence of upcoming concerts rather than each individual event
-* Apply an “onion radius” approach to surface major events beyond the immediate area - e.g. include all relevant events within the Suggested Radius, then expand to 3× with a Local Rank ≥ 95, and optionally 5× with Local Rank = 100 to capture rare, high-impact events.
+* Apply an “onion radius” approach to surface major events beyond the immediate area - e.g. include all relevant events within the Predicted Impact Area, then expand to 3× with a Local Rank ≥ 95, and optionally 5× with Local Rank = 100 to capture rare, high-impact events.
 
 ## Real Examples
 
-* [Lighthouse](https://www.predicthq.com/customers/lighthouse): Replaced brittle manual event feeds and reduced support overhead with trusted event insights at scale.
+* [Lighthouse](https://www.predicthq.com/customers/lighthouse): Replaced brittle manual event processes with trusted real-world context at scale, reducing support overhead.
 * [HQ revenue](https://www.predicthq.com/customers/hqrevenue): Automated demand monitoring and increased RevPAR by 10%.
 * [Wheelhouse](https://www.predicthq.com/customers/wheelhouse): Boosted nightly rates by up to 800% during major events with dynamic pricing powered by PredictHQ.
 
@@ -114,7 +114,7 @@ Even well-resourced teams hit the same traps when working with event data:
 
 * Trying to engineer model-ready features from event data - it’s harder than it looks. Features API handles timing, overlap, weighting and more so you get clean, usable signals without the complexity.
 * Hardcoding event categories or filters based on assumptions - what drives demand varies by location. Use Beam to validate which event types actually impact bookings in each market.
-* Assuming one-size-fits-all radius logic - different locations respond to events differently. Use Suggested Radius and filter by Local Rank to ensure you’re capturing meaningful impact, not noise.
+* Assuming one-size-fits-all radius logic - different locations respond to events differently. Use Predicted Impact Area and filter by Local Rank to ensure you’re capturing meaningful impact, not noise.
 
 ## Final Advice: Start Simple, Scale Smart
 

@@ -100,7 +100,7 @@ Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are
 
 Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak 1–2 days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 
-Predicted Impact Patterns are industry-specific and are intended to replace static or date-anchored features in demand forecasting models. They are designed to improve forecast accuracy by encoding time-aware event impact into supervised learning pipelines.
+Predicted Impact Patterns are industry-specific and are designed to improve upon static or date-anchored features in demand forecasting models. They are designed to improve forecast accuracy by encoding time-aware event impact into supervised learning pipelines.
 
 * Getting Started Guide: [impact-patterns.md](predicthq-data/impact-patterns.md "mention")
 

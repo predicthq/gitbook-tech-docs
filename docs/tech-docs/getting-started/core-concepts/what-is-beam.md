@@ -54,10 +54,8 @@ To run Beam, you’ll need:
   * Recommended: 6–12 months minimum
   * Required fields: date, demand
 * Saved Location
-  * Provides geographic context (lat/lon or polygon)
-  * Used to retrieve relevant event features
-* Suggested Radius
-  * Defines practical geographic scope for event retrieval
+  * Provides geographic context for event retrieval
+  * When created from a lat/lon origin, Predicted Impact Area is calculated automatically and defines the geographic scope used by Beam
 
 If historical demand data is unavailable, Beam can provide industry-based approximations. These are less precise than location-specific calibration.
 

@@ -78,7 +78,7 @@ Ensure you have enough time-series data that meets [Beam’s requirements](https
 
 **Industry**
 
-Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../how-industry-affects-results.md), please use the default `other`&#x20;
+Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../how-industry-affects-results.md), please use the default `other`.
 
 **Location**
 
@@ -94,7 +94,7 @@ Use Beam to automatically calibrate rank thresholds for your industry and locati
 For technical details, visit:
 
 * [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data "mention")
-* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
 * [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [Analysis Groups](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups "mention")
 

@@ -6,7 +6,7 @@
 
 You can purchase access to PredictHQ's events in different ways. You can purchase access to geographic areas like cities, states, or countries. Or you can purchase access to a number of locations to get access to specific business locations. Business locations include stores, hotels, restaurants, parking garages, offices, or any other type of location you can think of.
 
-Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product will find the latitude and longitude for that location and set a [suggested radius](/broken/pages/JXBh0nFzO4y3djWSW0Z1) and save the location with those details.
+Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product will find the latitude and longitude for that location and set a [predicted impact area](/broken/pages/JXBh0nFzO4y3djWSW0Z1) and save the location with those details.
 
 You can purchase location-based access if you have a number of business locations across a region, country, or multiple countries that you want access to but you don't need access to larger geographic areas like cities, states, or countries. For example, you may have a hotel chain with 300 hotels across the US in 20 different states spread between smaller towns and bigger cities. You can purchase location-based access for 300 hotels rather than buying access to full cities or entire states. The same could apply to a chain of restaurants, parking locations, retail stores, or any other business locations.
 
@@ -39,9 +39,8 @@ For example, you could create a file that has a list of lat/longs and names for 
 See the [Saved Locations API documentation](/broken/pages/LeVmMXJ0x0fplVUIQT8c). To upload a list of locations do the following:
 
 1. Find the lat/long of each location
-2. Call the [Suggested Radius API](/broken/pages/JXBh0nFzO4y3djWSW0Z1) for each store to find the radius to use
-3. Call the [Create Saved Locations](/broken/pages/5aTE0QoUxIIv3Qd3O7XQ) endpoint (POST /saved-locations) to create a location with the lat/long and radius you have for the location
-4. Store the `location_id` return for the location
+2. Call the [Create Saved Locations](/broken/pages/5aTE0QoUxIIv3Qd3O7XQ) endpoint (POST /saved-locations) using `origin_geojson` with the lat/lon for each location — Predicted Impact Area is calculated automatically and stored as the location boundary, so no separate API call is needed
+3. Store the `location_id` returned for each location
 
 This process only needs to be performed when you initially load in your locations or if locations change (such as a store closes or a new store opens).
 

@@ -63,55 +63,22 @@ params={
 
 <summary>Location Type</summary>
 
-Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.&#x20;
+Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
 
-* **Center Point & Radius**: Define a circular area around your store or location by specifying latitude/longitude and a radius using the `within` parameter. The [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) can assist in identifying an appropriate radius.
+* **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When created from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries — no manual boundary management needed.
+* **Center Point & Radius**: For a quick search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
 * **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
-* **Country-wide**: If your interest spans an entire country, the easiest way is to use the `country` parameter and set it to the res
+* **Country-wide**: If your interest spans an entire country, the easiest way is to use the `country` parameter and set it to the relevant ISO country code.
 
 #### Settings for Tom’s Pizzeria
 
-Tom is keen on monitoring events within close proximity to his pizzeria so he decides to set the search location using the center point and radius approach.
-
-Tom first uses the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) to establish the optimal search radius (see below for code snippet). The Suggested Radius API recommends a 1.48 mi radius based on typical foot traffic and local demographic data for Food and Beverage/Restaurant industries in urban settings.
+Tom creates a Saved Location for his pizzeria at (47.60, -122.33) in the `restaurants` industry. Predicted Impact Area is calculated automatically when the location is created, defining the polygon boundary where event-driven demand impact actually occurs for his location. Tom then queries events using `saved_location.location_id` — no separate area lookup needed:
 
 ```python
 params={
-  "within": "1.48mi@47.60,-122.33"
-  }
-```
-
-#### **Suggested Radius**
-
-Tom is in the Food and Beverage/Restaurants industry and the pizzeria is located in Downtown Seattle at (47.60, -122.33).  These are the two parameters for the Suggested Radius API:
-
-```python
-import requests
-
-response = requests.get(
-  url="https://api.predicthq.com/v1/suggested-radius",
-  headers={
-    "Authorization": "Bearer $ACCESS_TOKEN",
-    "Accept": "application/json"
-    },
-  params={
-    "location.origin": "47.60,-122.33",
-    "radius_unit": "mi",
-    "industry": "restaurants"
-    }
-)
-
-print(response.json())
-```
-
-```python
-{
-  "radius": 1.48,
-  "radius_unit": "mi",
-  "location": {
-    "lat": "47.6",
-    "lon": "-122.33"
-  }
+  "saved_location.location_id": "<location_id>",
+  "category": "concerts,sports,festivals,community,performing-arts",
+  "state": "active,predicted"
 }
 ```
 

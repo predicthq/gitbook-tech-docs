@@ -49,7 +49,7 @@ AI systems that consume real-world context must address the same structural chal
 
 PredictHQ’s APIs map directly to these challenges:
 
-* Suggested Radius defines practical geographic scope.
+* Predicted Impact Area defines practical geographic scope.
 * Beam calibrates event relevance using historical demand.
 * The Features API converts events into model-ready time-series signals.
 * The Events API provides verifiable event records that can be surfaced in explanations.

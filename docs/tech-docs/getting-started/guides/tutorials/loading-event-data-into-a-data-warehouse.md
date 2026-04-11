@@ -41,7 +41,7 @@ Tom's Data Parameters:
 * **Date Range**: Events active within the range June 1, 2024, to June 30, 2024.
 * **Event Rank**: Events with a rank greater than 30 indicate a significant likelihood of impacting local traffic and attendance.
 * **Event Status**: Both ‘active’ and ‘predicted’ events to ensure a comprehensive overview.
-* **Location**: Bring through all of Seattle first, and Tom can filter for his locations once it’s in BigQuery using our [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius).
+* **Location**: Bring through all of Seattle first, and Tom can filter for his locations once it’s in BigQuery using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area).
 
 For the purposes of this guide, we have limited the example load to a single city for Tom to filter on. Users may bring through as much data as they have access to or require when doing an actual load. We find with data warehouse customers they may pull down all data they have access to into their data warehouse and then query it for relevant locations and data from their applications.
 
@@ -520,18 +520,18 @@ WHERE category IN ('concerts','conferences','festivals','performing-arts')
           CAST(JSON_EXTRACT_SCALAR(geo, '$.geometry.coordinates[1]') AS FLOAT64)),
           ST_GeogPoint(-122.33, 47.60)  --Tom's store location in our example
       ) <= 2400 -- Approximately 1.48 miles in meters
-	--When implementing this use the Suggested Radius API to find the radius for your location
+	--When implementing this use the Predicted Impact Area API to find the area for your location
   AND state IN ('active', 'predicted');
 ```
 {% endcode %}
 
-This query will retrieve records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations with a radius suggested by our [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius).
+This query will retrieve records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
 
 Visually this type of query allows you to pull all the events in a radius as shown in the image below:
 
 <figure><img src="../../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
-A common example is customers often look at events occurring in the next 1 to 3 months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Suggested Radius API](https://docs.predicthq.com/api/suggested-radius/get-suggested-radius) to store the radius and then look up your store locations in the table. For example you may have a table of locations like that below:
+A common example is customers often look at events occurring in the next 1 to 3 months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like that below:
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 

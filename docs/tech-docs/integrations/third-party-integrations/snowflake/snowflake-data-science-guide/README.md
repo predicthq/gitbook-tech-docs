@@ -26,7 +26,7 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
 
 **The process to follow:**
 
-1. Get the Suggested Radius for Each Location
+1. Get the Predicted Impact Area for Each Location
 2. Create the input table filled with locations
 3. Set the date range that you want to retrieve data for
 4. Choose which method to follow
@@ -34,29 +34,25 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
    2. [SQL Method](sql-method-guide.md)
 5. Use the output in machine learning demand forecasting models or for other applications
 
-## Get the Suggested Radius for each Location
+## Get the Predicted Impact Area for each Location
 
-When querying events at the location level, a common way to retrieve those events is with a latitude, longitude, and radius to get the events within a given area. But, a common gap is knowing what radius to use when searching for events. Insert the Suggested Radius API.&#x20;
+When querying events at the location level, a common way to retrieve those events is with a latitude, longitude, and radius to get the events within a given area. But, a common gap is knowing what radius to use when searching for events. The Predicted Impact Area API is the recommended approach.&#x20;
 
-The [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius) returns a radius that can be used to find attended events around a given location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
+The [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns a polygon that defines the optimal area around a location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
 
-As a first step, it is recommended to get the suggested radius for each location before moving forward with the guide. Below is an example of how to query the Suggested Radius API for a list of locations using the [PredictHQ Python SDK](../../../../sdks/python-sdk.md). Note: this code will need to be run in a separate environment than Snowflake.&#x20;
+As a first step, get the predicted impact area for each location before moving forward with the guide. The example below uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
 
-For more information on the Suggested Radius API, visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius).
+{% hint style="info" %}
+This code needs to be run in a separate environment outside of Snowflake.
+{% endhint %}
 
 ```python
-# The code below uses the PredictHQ Python SDK
-# https://docs.predicthq.com/integrations/sdks/python-sdk
-from predicthq import Client 
+import httpx
 
-# Please copy paste your access token here
-# or read our Quickstart documentation if you don't have a token yet
+# Copy your access token here or see our Quickstart docs:
 # https://docs.predicthq.com/guides/quickstart/
 ACCESS_TOKEN = 'ABC123'
 
-phq_client = Client(access_token=ACCESS_TOKEN)
-
-# Specify a list of locations to retrieve the suggested radius for
 list_of_locations = [
     {'name': 'store1-chicago', 'latitude': '41.81310', 'longitude': '-87.65860', 'industry': 'retail'},
     {'name': 'Hyde Park', 'latitude': '51.50736', 'longitude': '-0.16411', 'industry': 'accommodation'},
@@ -64,15 +60,23 @@ list_of_locations = [
 ]
 
 for location in list_of_locations:
-	# Get suggested radius for a given location and the industry of interest
-	# to be used when retrieving events. supported industries: 'parking', 'restaurants', 'retail', 'accommodation'
-	suggested_radius = phq_client.radius.search(
-            location__origin=f"{location['latitude']},{location['longitude']}", 
-            radius_unit="mi", 
-            industry=location["industry"]
+    response = httpx.get(
+        "https://api.predicthq.com/v1/impact-area/",
+        headers={
+            "Authorization": f"Bearer {ACCESS_TOKEN}",
+            "Accept": "application/json",
+        },
+        params={
+            "location.origin": f"{location['latitude']},{location['longitude']}",
+            "industry": location["industry"],
+            "area_type": "radius",
+            "radius_unit": "mi",
+        },
     )
-	print(f"Suggested Radius for {location['name']} with the industry {location['industry']}: {suggested_radius.radius} {suggested_radius.radius_unit}")
-
+    result = response.json()
+    radius = result["geojson"]["properties"]["radius"]
+    radius_unit = result["geojson"]["properties"]["radius_unit"]
+    print(f"{location['name']} ({location['industry']}): {radius} {radius_unit}")
 ```
 
 
@@ -86,7 +90,7 @@ The **SAVED\_LOCATIONS** input table requires this format:
 
 * **location**: a unique identifier for the location.
 * **latitude**/**longitude**: it is recommended to include 5 decimal places.
-* **radius**: the value returned from the using the Suggested Radius API.
+* **radius**: the value returned from the using the Predicted Impact Area API.
 * **radius\_unit**: coded for either “km” (kilometers) or “mi” (miles).
 * **date\_start**/**date\_end**: the date range for the data to be returned. Can be changed.
 

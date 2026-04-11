@@ -22,8 +22,8 @@ PredictHQ APIs currently support the following industries. Use the Industry Valu
 
 Industry is used across our systems to tune how events are interpreted and modeled for your business. This includes areas like impact patterns, thresholds, and catchment radius recommendations.
 
-* **Suggested Radius API**\
-  Radius recommendations vary by industry, since the catchment area for demand differs across sectors.
+* **Predicted Impact Area API**\
+  Area recommendations vary by industry, since the catchment area for demand differs across sectors.
 * **Predicted Impact Patterns**\
   For each event, we calculate its leading and lagging impact per industry. These patterns are then used in the Features API to ensure event impacts reflect your sector.
 * **Beam**\

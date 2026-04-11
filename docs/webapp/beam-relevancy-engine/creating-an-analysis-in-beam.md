@@ -45,4 +45,4 @@ To add a location, click the "Add Location" button in the Location dropdown menu
 
 <figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption><p>Adding a Saved Location to the list of locations in the Beam Analysis page</p></figcaption></figure>
 
-When you create a location this sets a radius using the [Suggested Radius](https://www.predicthq.com/tools/suggested-radius) feature. The Beam analysis looks for events within this radius.
+When you create a location this uses [Predicted Impact Area](https://www.predicthq.com/tools/predicted-impact-area) to determine the relevant area. The Beam analysis looks for events within this area.

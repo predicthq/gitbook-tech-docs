@@ -10,7 +10,7 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 
 * [Features API](../../getting-started/guides/features-api-guides/)
 * [Beam](../integration-guides/beam-data-science-guide.md)
-* [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius)
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
 * [WebApp](https://control.predicthq.com)
 * Tutorial: [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention")
 
@@ -34,17 +34,30 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 From here you should follow the [improving-demand-forecasting-models-with-event-features.md](../../getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 
-### Suggested Radius
+### Predicted Impact Area
 
-When looking for events around a business location (such as a store, a hotel, or another business location) a key question is how far should you look for events. For example, should you look at events in a 0.5-mile radius, a 2-mile radius, or a 10-mile radius from your location? The Suggested Radius API answers this question by returning a radius based on a number of factors that can be used to retrieve events and features around a location.
+Most teams start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies—by industry, by location type, and by how people actually move in that area. A radius that works in one market will miss impact or introduce noise in another.
+
+The Predicted Impact Area API returns a location and industry-specific polygon boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies.
+
+The recommended approach is to use Saved Locations. When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the `location_id` across all PredictHQ APIs—Events, Features, and Beam—without needing to manage the boundary yourself.
 
 ```python
-from predicthq import Client
+import httpx
 
-phq = Client(access_token="YOUR_PREDICTHQ_API_TOKEN")
+response = httpx.get(
+    "https://api.predicthq.com/v1/impact-area/",
+    headers={
+        "Authorization": "Bearer YOUR_PREDICTHQ_API_TOKEN",
+        "Accept": "application/json",
+    },
+    params={
+        "location.origin": "45.5051,-122.6750",
+        "industry": "restaurants",
+    },
+)
 
-suggested_radius = phq.radius.search(location__origin="45.5051,-122.6750")
-print(suggested_radius.radius, suggested_radius.radius_unit, suggested_radius.location.to_dict())
+print(response.json())
 ```
 
 ### Demand Decomposition and Anomaly Detection using Beam

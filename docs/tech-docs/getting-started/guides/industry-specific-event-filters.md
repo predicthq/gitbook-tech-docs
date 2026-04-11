@@ -18,7 +18,7 @@ If demand data isn’t available, we’ve done research to provide industry-leve
 
 * Recommended Feature Groups (categories) per industry
 * Minimum Local Rank thresholds to filter out events too small to matter
-* As always, use [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) to work out a suitable area
+* Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations — this automatically generates a Predicted Impact Area that defines the geographic scope for event retrieval, so you don't need to manage the boundary manually
 
 These are starting points only. Switch to Beam as soon as you can provide demand data.
 

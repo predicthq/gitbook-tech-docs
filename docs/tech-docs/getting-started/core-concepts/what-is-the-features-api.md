@@ -8,7 +8,7 @@ Outputs are deterministic, time-aligned feature series scoped to a specific loca
 
 {% hint style="success" %}
 **Why use the Features API?**\
-We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
+We've built up years of expertise in transforming real-world events into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 {% endhint %}
 
 ## Why the Features API Exists
