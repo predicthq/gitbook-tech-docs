@@ -8,7 +8,7 @@ PredictHQ provides structured, verified real-world context and demand-aware feat
 
 See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
 
-<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a>  <a href="https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/" class="button secondary">API Reference</a>
+<a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a> <a href="https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/kEFs8urDbSJqBmXUI3Lv/" class="button secondary">API Reference</a>
 
 ## Core APIs
 
