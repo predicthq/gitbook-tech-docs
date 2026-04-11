@@ -96,6 +96,7 @@
 ## Integrations
 
 * [Integration Guides](integrations/integration-guides/README.md)
+  * [Standard Integration Pattern](integrations/integration-guides/standard-integration-pattern.md)
   * [Keep Data Updated via API](integrations/integration-guides/keep-data-updated-via-api.md)
   * [Integrate with Beam](integrations/integration-guides/beam-data-science-guide.md)
   * [Integrate with Loop Links](integrations/integration-guides/integrate-with-loop-links.md)
