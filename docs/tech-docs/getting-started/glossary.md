@@ -82,6 +82,18 @@ This feature helps prevent gaps in demand models by preemptively accounting for 
 
 * Getting Started Guide: [predicted-events.md](predicthq-data/predicted-events.md "mention")
 
+## Predicted Impact Area
+
+Most teams start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies - by industry, by location type, and by how people actually move in that area.
+
+Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies.
+
+The recommended approach is to use Saved Locations. When you create a location using origin\_geojson without specifying a geojson area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the location\_id across all PredictHQ APIs - Events, Features, and Beam - without needing to manage the boundary yourself.
+
+Predicted Impact Area is the successor to the Suggested Radius API.
+
+* API Reference: [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
+
 ## Predicted Impact Patterns
 
 Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. These patterns are derived from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and are tailored by event type and industry vertical.
@@ -106,7 +118,7 @@ This includes events, venues, performers, categories, and associated quantitativ
 Within PredictHQ’s platform, real-world context is:
 
 * Structured and deduplicated through the Events API
-* Scoped geographically using Suggested Radius and Saved Locations
+* Scoped geographically using Predicted Impact Area and Saved Locations
 * Transformed into model-ready signals via the Features API
 * Calibrated against historical demand using Beam
 
@@ -121,13 +133,3 @@ Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowin
 Saved Locations are recommended for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
 * API Reference: [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention")
-
-## Suggested Radius
-
-Suggested Radius is a machine learning–generated spatial parameter that defines the optimal radius to use when retrieving events near a specific location. It is returned by the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius), which considers population density, event distribution, customer industry, and other contextual factors to produce a location-specific value.
-
-We recommend all customers use Suggested Radius to determine the appropriate search radius around their business locations, rather than relying on fixed or arbitrary distances. This ensures more relevant and accurate inclusion of events when building features, querying event data, or modeling demand.
-
-The output is relatively stable over time and can be safely cached, with monthly refreshes typically sufficient unless business context or location data changes.
-
-* API Reference: [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius "mention")

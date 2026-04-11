@@ -146,7 +146,7 @@ To get the most value from the Features API and avoid noisy or misleading result
 
 * Use a `beam.analysis_id` whenever possible - This ensures you’re using only features that have proven impact on your business, and saves time configuring filters manually.
 * Use `saved_location_id` to define locations - Saved Locations are the most robust way to reference geographies in PredictHQ. They allow consistent use across Beam, Features API, Events API, and Forecasts API.
-* Use Suggested Radius to define location size - Suggested Radius is a data-backed, industry-specific recommendation for how far out to consider events for each location. Using this helps capture the right local context for demand-driving events - improving both feature accuracy and Beam relevance. Avoid guessing or applying the same radius everywhere.
+* Use Predicted Impact Area to define location scope - Predicted Impact Area provides an industry and location-specific boundary calibrated against real demand and event data. The recommended approach is to create a Saved Location using `origin_geojson`, which automatically calculates and stores the impact area - you can then reference it by `location_id` without managing the boundary yourself.
 * Segment by meaningful business unit or location - You’ll get the best results when your Beam Analysis and/or Features API requests are scoped to consistent demand signals e.g. a single store, hotel, area, or a product grouping. Avoid going too small (e.g. individual SKUs) or too large (e.g. entire countries or multi-state regions), as the Features API is not designed for large or fragmented geographies.
 * Choose the right granularity for your model - Daily granularity works well for high-frequency decisions like staffing or delivery. Weekly works better when individual day fluctuations are less meaningful.
 * Filter by event impact - Use thresholds on `phq_rank` or `local_rank` to avoid cluttering your signals with low-impact events.
@@ -155,7 +155,7 @@ To get the most value from the Features API and avoid noisy or misleading result
 ## Common Pitfalls
 
 * **Requesting too many features** - Pulling every available feature increases noise and reduces model performance. Use Beam or a curated set of relevant features.
-* **Skipping Suggested Radius** - Manually guessed radii often miss key events - or include irrelevant ones. Use the Suggested Radius API for each location + industry.
+* **Skipping Predicted Impact Area** - Manually defined boundaries often miss key events or include irrelevant ones. Use Predicted Impact Area for each location and industry, ideally via Saved Locations.
 * **Too broad or too narrow location scopes** - Very large areas (e.g. states, countries) or very small units (e.g. SKUs) dilute signal. Use Features API for city/suburb/store-scale use cases.
 
 ## Related
@@ -167,7 +167,7 @@ To get the most value from the Features API and avoid noisy or misleading result
 ## What to Do Next
 
 * [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
-* Use the [Suggested Radius API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) - Get the optimal event radius for your location and industry. This improves both Beam and Features API accuracy.
+* Set up [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) - Define the optimal impact boundary for your location and industry. The easiest way is via [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/create-a-saved-location), which calculates and stores it automatically.
 * Set up [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) - Define your key business locations once and reuse them across PredictHQ APIs for consistency and easier re-analysis.
 * Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - Use your beam.analysis\_id or saved\_location\_id to pull a clean time series of impactful event features for your model.
 * Need help? - Check out [Features API Guides](../guides/features-api-guides/) or contact support for help tuning your request.
