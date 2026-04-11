@@ -32,8 +32,8 @@ Incorrect scope decisions are easy to make and difficult to unwind. If scope is 
 
 **How PredictHQ address scope**
 
-* [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) provides an industry and location-aware radius for a given latitude and longitude.
-* [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) allow teams to define and reuse consistent geographic definitions across Events, Features, Forecasts, and Beam.
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns an industry and location-specific boundary calibrated against real demand and event data. Unlike a fixed radius, it accounts for travel behaviour, population density, venue clustering, and industry type - returning a polygon or radius that reflects where event-driven demand impact actually occurs.
+* The recommended workflow is to use [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then reference it by `location_id` across Events, Features, Forecasts, and Beam - without managing the boundary yourself.
 
 ## Relevance
 
@@ -98,9 +98,9 @@ Successfully using real-world events in production systems requires solving all 
 
 PredictHQ’s APIs map directly to these challenges:
 
-* Scope: [Suggested Radius](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/suggested-radius/get-suggested-radius) and [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview)
+* Scope: [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview)
 * Relevance: [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)
-* Usability: [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
+* Usability: [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) and [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
 * Trust: [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) (with calibrated filtering)
 
 These are structural problems. They do not disappear with more data or more sophisticated models. They require deliberate design across data, calibration, and delivery layers.
