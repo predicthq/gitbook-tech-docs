@@ -67,4 +67,4 @@ To demonstrate how PredictHQ APIs can be integrated into interactive application
 
 Calling the Events API is the first step. Successfully using event data in production systems requires addressing scope, relevance, feature engineering, and explainability.
 
-Read [Event-Driven Demand](core-concepts/event-driven-demand.md)￼ to understand the structural challenges of working with real-world events and how PredictHQ’s APIs are designed to address them.
+Read [Event-Driven Demand](core-concepts/event-driven-demand.md) to understand the structural challenges of working with real-world events and how PredictHQ’s APIs are designed to address them.
