@@ -45,9 +45,9 @@ Set the date range for the search.
 * **Active**: Use the `active` parameter to include all events that are ongoing in the date range.
 * **Start**: To focus on the start dates of events, the date range should be set using the `start` parameter.
 
-#### Settings for Tom’s Pizzeria
+**Settings for Tom’s Pizzeria**
 
-Tom is interested in events taking place in the month of June 2024. He will configure the search to include active events from June 1st to June 30th, considering the local time zone.&#x20;
+Tom is interested in events taking place in the month of June 2024. He will configure the search to include active events from June 1st to June 30th, considering the local time zone.
 
 ```python
 params={
@@ -70,7 +70,7 @@ Define the catchment area for the search. Refer to our [industry recommendations
 * **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
 * **Country-wide**: If your interest spans an entire country, the easiest way is to use the `country` parameter and set it to the relevant ISO country code.
 
-#### Settings for Tom’s Pizzeria
+**Settings for Tom’s Pizzeria**
 
 Tom creates a Saved Location for his pizzeria at (47.60, -122.33) in the `restaurants` industry. Predicted Impact Area is calculated automatically when the location is created, defining the polygon boundary where event-driven demand impact actually occurs for his location. Tom then queries events using `saved_location.location_id` — no separate area lookup needed:
 
@@ -93,7 +93,7 @@ Select the types of events for the search.
 * **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/an-overview-of-beam-relevancy-engine) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
 * **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
 
-#### Settings for Tom’s Pizzeria
+**Settings for Tom’s Pizzeria**
 
 For a broad initial survey of upcoming events, Tom has chosen to focus on categories that are likely to influence restaurant visits.
 
@@ -103,7 +103,7 @@ params={
   } 
 ```
 
-Next, Tom plans to use [Beam](/broken/pages/bjT3u4aUcYD07PX90MX7) in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
+Next, Tom plans to use Beam in the [WebApp](https://control.predicthq.com/beam) to help refine these categories further based on actual data-driven insights, tailored to his pizzeria.
 
 </details>
 
@@ -119,7 +119,7 @@ Define the event impact for the search.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
 * **PHQ Attendance**: For [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../../predicthq-data/predicted-attendance.md).
 
-#### Settings for Tom’s Pizzeria&#x20;
+**Settings for Tom’s Pizzeria**
 
 To focus his resources efficiently and avoid spending time on smaller, less impactful events, Tom sets a minimum PHQ rank threshold of 30, which is recommended for his industry.
 
@@ -141,7 +141,7 @@ Track events based on their likelihood of occurring.
 
 Focusing primarily on `active` and `predicted` event states ensures that only events which are relevant and likely to occur are tracked
 
-#### Settings for Tom’s Pizzeria
+**Settings for Tom’s Pizzeria**
 
 Tom is interested in all upcoming events in June 2024 and has decided to include `predicted` events as well.
 
@@ -162,7 +162,7 @@ Optimize search results with useful parameters.
 * **Limit**: Specify the maximum number of events per page to return, managing the volume of results and focusing on the most relevant events. Use the `next` field in the API response to navigate to additional results (refer to [#handling-paginated-api-responses](filtering-and-finding-relevant-events.md#handling-paginated-api-responses "mention") for more details).
 * **Sort**: Order the search results according to specific attributes, most commonly event impact such as `rank` or `phq_attendance`, to prioritize high impact events.
 
-#### Settings for Tom’s Pizzeria
+**Settings for Tom’s Pizzeria**
 
 Tom is interested in the top 50 upcoming events for June 2024 that could impact his business. He sets the search parameters to not only manage the scope of results but also ensure that the most significant events are returned first.
 
@@ -238,7 +238,7 @@ print("Total events fetched:", len(all_events))
 
 ```
 
-For information on how to search for events using our SDK, please refer to [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention").
+For information on how to search for events using our SDK, please refer to [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention")
 
 {% hint style="info" %}
 For more details, visit:
@@ -416,8 +416,8 @@ Once the API call is made, the Events API returns a structured JSON response con
 Results are returned in a paginated format, where the number of events per page is determined by your subscription limits. The key fields related to pagination include:
 
 * `count`: The total number of events that match the search criteria.
-* `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.&#x20;
-* `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.&#x20;
+* `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.
+* `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.
 
 For more comprehensive guidelines on navigating paginated results, refer to [Pagination](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/pagination "mention").
 
@@ -436,7 +436,7 @@ Events are detailed in the results section of the response, each represented as 
 
 **Location**
 
-* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover [an area](../geolocation-guides/working-with-polygons.md) rather than a point, such as parades.&#x20;
+* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover [an area](../geolocation-guides/working-with-polygons.md) rather than a point, such as parades.
 * `place_hierarchies`: Lists the [place IDs](../geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
 * `country`: Identifies the country where the event takes place.
 
