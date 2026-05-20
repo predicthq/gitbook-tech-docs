@@ -4,13 +4,7 @@ If you don't have your own demand data ready, you can use one of our sample data
 
 ## Available Datasets
 
-| Industry      | File                                                                                                                                                              |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Retail        | [`sample_demand_retail.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv)               |
-| Restaurant    | [`sample_demand_restaurants.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_restaurant.csv)      |
-| Accommodation | [`sample_demand_accommodation.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_accommodation.csv) |
-| Parking       | [`sample_demand_parking.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_parking.csv)             |
-| Other         | [`sample_demand_other.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_other.csv)                 |
+<table><thead><tr><th width="309.421875">Industry</th><th>File</th></tr></thead><tbody><tr><td>Retail</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv"><code>sample_demand_retail.csv</code></a></td></tr><tr><td>Restaurants</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_restaurant.csv"><code>sample_demand_restaurants.csv</code></a></td></tr><tr><td>Accommodation</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_accommodation.csv"><code>sample_demand_accommodation.csv</code></a></td></tr><tr><td>Parking</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_parking.csv"><code>sample_demand_parking.csv</code></a></td></tr><tr><td>Other</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_other.csv"><code>sample_demand_other.csv</code></a></td></tr></tbody></table>
 
 PredictHQ supports the following named industries: `accommodation`, `cpg`, `tourism`, `marketing`, `parking`, `restaurants`, `retail`, and `transportation`. If your business doesn't fit one of these, use `other`. See [How Industry Affects Results](../how-industry-affects-results.md) for the full list and guidance on choosing the right industry.
 
