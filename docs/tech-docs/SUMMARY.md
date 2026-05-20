@@ -74,6 +74,7 @@
   * [Beam Guides](getting-started/guides/beam-guides/README.md)
     * [ML Features by Location](getting-started/guides/beam-guides/forecast-ready-features-at-scale.md)
     * [ML Features by Group](getting-started/guides/beam-guides/ml-features-by-group.md)
+    * [Sample Demand Data](getting-started/guides/beam-guides/sample-demand-data.md)
   * [Demand Surge API Guides](getting-started/guides/demand-surge-api-guides/README.md)
     * [Demand Surge Notebook](getting-started/guides/demand-surge-api-guides/demand-surge-notebook.md)
   * [How Industry Affects Results](getting-started/guides/how-industry-affects-results.md)
