@@ -93,7 +93,13 @@
     * [Displaying Events on a Map](getting-started/guides/tutorials/displaying-events-on-a-map.md)
 * [Use Case Guides](getting-started/use-case-guides/README.md)
   * [Accommodation: The Proven Path to Value](getting-started/use-case-guides/accommodation-the-proven-path-to-value.md)
-  * [Using PredictHQ with AI Assistants](getting-started/use-case-guides/using-predicthq-with-ai-assistants.md)
+
+## AI & Agents <a href="#ai" id="ai"></a>
+
+* [Build with AI](ai/build-with-ai.md)
+* [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
+* [MCP Server](ai/mcp.md)
+* [Tech Docs MCP Server](ai/tech-docs-mcp-server.md)
 
 ## Integrations
 

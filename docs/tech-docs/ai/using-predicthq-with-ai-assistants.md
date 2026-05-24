@@ -40,7 +40,7 @@ PredictHQ APIs are stateless and deterministic. The same request returns the sam
 
 ## Scope, Relevance, and Usability
 
-AI systems that consume real-world context must address the same structural challenges described in [Event-Driven Demand](../core-concepts/event-driven-demand.md):
+AI systems that consume real-world context must address the same structural challenges described in [Event-Driven Demand](../getting-started/core-concepts/event-driven-demand.md):
 
 * Scope: defining where events matter
 * Relevance: identifying which events materially impact demand
@@ -96,5 +96,5 @@ PredictHQ is designed to integrate cleanly into forecasting models, analytics pi
 
 * Define [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) for consistent geographic scope
 * Use [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) to establish practical boundaries
-* Run [Beam](../core-concepts/what-is-beam.md) to calibrate event relevance (if historical demand is available)
+* Run [Beam](../getting-started/core-concepts/what-is-beam.md) to calibrate event relevance (if historical demand is available)
 * Retrieve structured context via the [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features APIs](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
