@@ -97,9 +97,9 @@
 ## AI & Agents <a href="#ai" id="ai"></a>
 
 * [Build with AI](ai/build-with-ai.md)
-* [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
 * [MCP Server](ai/mcp.md)
 * [Tech Docs MCP Server](ai/tech-docs-mcp-server.md)
+* [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
 
 ## Integrations
 

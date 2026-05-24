@@ -2,7 +2,6 @@
 description: >-
   Search PredictHQ's technical documentation from inside your code editor or AI
   assistant.
-hidden: true
 ---
 
 # Tech Docs MCP Server
