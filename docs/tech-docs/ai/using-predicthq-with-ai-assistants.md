@@ -1,12 +1,8 @@
 # Using PredictHQ with AI Assistants
 
-AI assistants and agent-based systems are increasingly embedded in operational workflows. These systems generate forecasts, recommend actions, answer analytical questions, and explain demand shifts in real time.
+PredictHQ provides structured real-world context that AI assistants and agent-based systems can retrieve at inference time - grounding responses, forecasts, and recommendations in verified, location-specific event data.
 
-Large language models are strong at reasoning over text and structured inputs. They are not inherently reliable at understanding time-bound, location-specific real-world activity.
-
-PredictHQ provides structured real-world context that can be retrieved at inference time and supplied to AI systems as grounded inputs.
-
-## The Role of Real-World Context in AI Systems
+### The Role of Real-World Context in AI Systems
 
 AI assistants frequently encounter questions such as:
 
@@ -26,7 +22,7 @@ PredictHQ supplies:
 
 This enables AI systems to reference concrete, time-bound drivers rather than relying on generic assumptions.
 
-## Architectural Pattern
+### Architectural Pattern
 
 A typical integration pattern is:
 
@@ -36,18 +32,20 @@ A typical integration pattern is:
 4. Structured context is returned.
 5. The assistant incorporates that context into its reasoning or response.
 
-PredictHQ APIs are stateless and deterministic. The same request returns the same result. This makes them suitable for use at inference time inside AI systems.
+PredictHQ APIs are stateless and deterministic. The same request always returns the same result, making them well-suited for use at inference time inside AI systems.
 
-## Scope, Relevance, and Usability
+The [MCP Server](mcp.md) is the simplest way to implement this pattern - it connects any MCP-compatible AI assistant directly to PredictHQ's APIs without requiring custom integration code.
+
+### Scope, Relevance, and Usability
 
 AI systems that consume real-world context must address the same structural challenges described in [Event-Driven Demand](../getting-started/core-concepts/event-driven-demand.md):
 
-* Scope: defining where events matter
-* Relevance: identifying which events materially impact demand
-* Usability: transforming events into structured signals
-* Trust: explaining decisions in terms of observable real-world drivers
+* **Scope** - defining where events matter
+* **Relevance** - identifying which events materially impact demand
+* **Usability** - transforming events into structured signals
+* **Trust** - explaining decisions in terms of observable real-world drivers
 
-PredictHQ’s APIs map directly to these challenges:
+PredictHQ's APIs map directly to these challenges:
 
 * Predicted Impact Area defines practical geographic scope.
 * Beam calibrates event relevance using historical demand.
@@ -56,32 +54,27 @@ PredictHQ’s APIs map directly to these challenges:
 
 This separation allows AI assistants to retrieve either raw event context or calibrated signals depending on the workflow.
 
-## Example Workflows
+### Example Workflows
 
-### Demand Explanation
+#### Demand Explanation
 
 An AI assistant receives a forecasted spike for a hotel location.
 
-It retrieves event context for the relevant dates and identifies:
+It retrieves event context for the relevant dates and identifies a major concert with high predicted attendance and a regional conference overlapping the same period. The assistant explains the forecast increase by referencing those specific events.
 
-* A major concert with high predicted attendance
-* A regional conference overlapping the same period
-
-The assistant explains the forecast increase by referencing those specific events.
-
-### Operational Copilot
+#### Operational Copilot
 
 A retail operations assistant evaluates staffing levels for an upcoming weekend.
 
 It retrieves demand-calibrated event signals via the Features API and flags elevated local activity driven by sports and entertainment events.
 
-### Planning and Scenario Analysis
+#### Planning and Scenario Analysis
 
 An AI system assesses exposure to future demand drivers across multiple locations.
 
 It retrieves scoped event context and identifies concentrations of high-impact events in certain regions.
 
-## When to Use PredictHQ in AI Workflows
+### When to Use PredictHQ in AI Workflows
 
 Use PredictHQ when:
 
@@ -90,11 +83,8 @@ Use PredictHQ when:
 * Forecasts need structured external context
 * Agent systems require deterministic, queryable signals
 
-PredictHQ is designed to integrate cleanly into forecasting models, analytics pipelines, and AI systems that operate at decision time.
+### Next Steps
 
-## Next Steps
-
-* Define [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) for consistent geographic scope
-* Use [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) to establish practical boundaries
-* Run [Beam](../getting-started/core-concepts/what-is-beam.md) to calibrate event relevance (if historical demand is available)
-* Retrieve structured context via the [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features APIs](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
+* [Build with AI](build-with-ai.md) - tools and resources for building PredictHQ integrations with AI assistants and coding agents
+* [MCP Server](mcp.md) - connect an AI assistant to PredictHQ's APIs directly
+* [Agent Skills](build-with-ai.md#agent-skills) - install PredictHQ integration best practices into your coding agent
