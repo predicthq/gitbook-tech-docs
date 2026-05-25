@@ -1,34 +1,31 @@
 ---
 description: >-
-  This guide shows how to authenticate, make your first API call, and retrieve
-  structured real-world context from PredictHQ.
+  Get your API key, make your first call, and understand how PredictHQ fits into
+  a production integration.
 ---
 
 # API Quickstart
 
-This guide shows how to make your first API call. For guidance on integrating event data into production forecasting or AI systems, see [Core Concepts](core-concepts/).
+## What you need
 
-#### What you need:
+1. A PredictHQ account - [log in](https://control.predicthq.com/) or [sign up for free](https://signup.predicthq.com/).
+2. An API Key - create one in the steps below.
 
-1. A PredictHQ account:
-   1. Existing users: [log in with your PredictHQ account](https://control.predicthq.com/)
-   2. New users: [Sign up for free to get started](https://signup.predicthq.com/).
-2. An API Access Token: We'll guide you through creating one below.
+## Create an API Key
 
-## Create an Access Token
+1. Log into the [WebApp](https://control.predicthq.com/tokens) and go to **API Tools → API Tokens**
+2. Click **Create Token**, enter a name, and click **Create**
+3. Click **Copy Token** - store it somewhere safe, it won't be shown again
 
-Read a more in-depth guide to [creating a new API Token](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/webapp-overview/how-to-create-an-api-token) or follow the basic steps below:
+Use your API key in the `Authorization` header of every API request:
 
-1. Log into the WebApp and visit the [API Tokens](https://control.predicthq.com/tokens) page under API tools.
-2. The first time you create a token - enter the name of the token and click "Create Token". For the second and subsequent times click the "Create New Token" button and enter the name, then click Create Token.
-3. Click "Copy Token" to copy your token to the clipboard. You can now paste the token into another application. Keep a copy of your new API Token, as it will not be shown again.
-4. Use the new API Access Token in the Authorization header of your API requests as shown in the example below
+```
+Authorization: Bearer $API_KEY
+```
 
-## Access Events API
+## Make Your First Call
 
-The Events API returns structured, deduplicated real-world events that can be integrated directly into forecasting, ML, and AI systems.
-
-Now you can use the new API Access Token in the `Authorization` header of your API requests as in the example below:
+The Events API returns structured, deduplicated real-world events. Use it to verify your API key is working and to explore what events look like in the response.
 
 ```python
 import requests
@@ -36,35 +33,42 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
-      "Accept": "application/json"
+        "Authorization": "Bearer $API_KEY",
+        "Accept": "application/json"
     },
     params={
-        "q": "taylor swift"
+        "place.scope": "5128581",  # New York City
+        "category": "concerts,sports,conferences",
+        "active.gte": "2026-06-01",
+        "active.lte": "2026-06-30",
+        "limit": 10
     }
 )
 
 print(response.json())
 ```
 
-{% embed url="https://youtu.be/_vD5GpQxXRg?si=7QMdU92ATASiELcj" %}
-How to set up and access PredictHQ APIs
-{% endembed %}
-
 {% hint style="info" %}
-For guidance on identifying which events materially impact your demand, [see the Beam guide](core-concepts/what-is-beam.md).
+**Note:** The Events API is for discovery and explainability - understanding which events are happening and why they matter. For demand forecasting and ML, use the Features API instead. See API Selection for guidance on which API to use for your use case.
 {% endhint %}
 
-## Streamlit Demo Apps
+## How PredictHQ APIs Work Together
 
-To demonstrate how PredictHQ APIs can be integrated into interactive applications, we provide several Streamlit examples. All the code is available on GitHub and we encourage you to take the code, modify it, and use your own locations of interest to demo our APIs internally to your team or to simply better understand our technology.
+A single API call is not a production integration. PredictHQ APIs are designed to work as a pipeline:
 
-{% content-ref url="guides/streamlit-demo-apps.md" %}
-[streamlit-demo-apps.md](guides/streamlit-demo-apps.md)
-{% endcontent-ref %}
+1. **Saved Locations** - define your business locations once using `origin_geojson`. Predicted Impact Area is calculated automatically and stored against each location.
+2. **Beam** - run a Beam analysis per location using your historical demand data. Beam identifies which event categories actually drive demand at each location and returns an `analysis_id`.
+3. **Features API** - call the Features API with your `analysis_id` to retrieve model-ready ML features, automatically scoped and filtered to your location.
+4. **Events API** - use the Events API with your `analysis_id` to retrieve the specific events driving demand - for explainability and operational context.
 
-## Next: Understanding Event Driven Demand
+The [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md) shows the full recommended architecture, including refresh cadence and data storage patterns.
 
-Calling the Events API is the first step. Successfully using event data in production systems requires addressing scope, relevance, feature engineering, and explainability.
+## What to Do Next
 
-Read [Event-Driven Demand](core-concepts/event-driven-demand.md) to understand the structural challenges of working with real-world events and how PredictHQ’s APIs are designed to address them.
+**I want to build a demand forecasting model** → Start with [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview), then run [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview), then call the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) with your `analysis_id`
+
+**I want event-driven forecasts without building a model** → Go straight to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
+
+**I want to connect an AI assistant to PredictHQ** → Set up the [MCP Server](../ai/mcp.md)
+
+**I want to understand the full integration architecture** → Read the [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md)

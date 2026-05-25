@@ -8,6 +8,7 @@
 
 * [API Quickstart](getting-started/api-quickstart.md)
 * [Core Concepts](getting-started/core-concepts/README.md)
+  * [Which API Should I Use?](getting-started/core-concepts/which-api-should-i-use.md)
   * [Event-Driven Demand](getting-started/core-concepts/event-driven-demand.md)
   * [What is Beam?](getting-started/core-concepts/what-is-beam.md)
   * [What is the Features API?](getting-started/core-concepts/what-is-the-features-api.md)
