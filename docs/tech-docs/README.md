@@ -2,11 +2,9 @@
 description: Docs, guides, and API references to help you build with PredictHQ.
 ---
 
-# Introduction
+# PredictHQ Docs
 
-PredictHQ provides structured, verified real-world context and demand-aware features for forecasting, ML, and AI systems. The platform is designed to be integrated directly into production models and decision workflows.
-
-See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
+Everything you need to integrate PredictHQ into your models, pipelines, and AI systems.
 
 <a href="getting-started/api-quickstart.md" class="button primary">API Quickstart</a> <a href="https://app.gitbook.com/o/WGid6DiA3ccvlkmvc17s/s/kEFs8urDbSJqBmXUI3Lv/" class="button secondary">API Reference</a>
 
@@ -20,25 +18,36 @@ See how others are using it on our [use cases page](https://www.predicthq.com/us
 
 ## Example
 
+Use your Beam Analysis ID to pull model-ready demand features for any date range - location, filters, and feature selection are applied automatically.
+
 ```python
 import requests
 
-response = requests.get(
-    url="https://api.predicthq.com/v1/events/",
+response = requests.post(
+    url="https://api.predicthq.com/v1/features/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
-      "Accept": "application/json"
+        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Accept": "application/json"
     },
-    params={
-        "q": "taylor swift"
+    json={
+        "beam": {
+            "analysis_id": "$ANALYSIS_ID"
+        },
+        "active": {
+            "gte": "2026-06-01",
+            "lte": "2026-06-30"
+        }
     }
 )
 
 print(response.json())
 ```
 
-## Dev Resources
+## Resources
 
-* [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview)
-* [Guides](getting-started/guides/)
-* [SDKs](/broken/pages/twewWeTyZJZV3NNEcFKM)
+* [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview) - Authentication, rate limits, and API conventions
+* [Guides](getting-started/guides/) - Step-by-step integration guides for core APIs and use cases
+* [Python SDK](sdks/python-sdk.md) - The official Python client for the PredictHQ API
+* [Data Science Notebooks](getting-started/data-science-notebooks.md) - Jupyter notebooks for Beam, Features API, and demand forecasting
+* [MCP Server](ai/mcp.md) - Connect AI assistants and agents directly to PredictHQ APIs
+* [System Status](https://www.predicthqstatus.com/) - Live status and incident history for PredictHQ services

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [PredictHQ Docs](README.md)
 * [Loop](https://loop.predicthq.com)
 * [System Status](https://www.predicthqstatus.com)
 
