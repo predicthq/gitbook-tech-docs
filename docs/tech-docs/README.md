@@ -2,7 +2,7 @@
 description: Docs, guides, and API references to help you build with PredictHQ.
 ---
 
-# PredictHQ Docs
+# Overview
 
 Everything you need to integrate PredictHQ into your models, pipelines, and AI systems.
 
@@ -18,7 +18,7 @@ Everything you need to integrate PredictHQ into your models, pipelines, and AI s
 
 ## Example
 
-Use your Beam Analysis ID to pull model-ready demand features for any date range - location, filters, and feature selection are applied automatically.
+Use your Beam Analysis ID to pull model-ready ML features for any date range - location, filters, and feature selection are applied automatically.
 
 ```python
 import requests
@@ -43,11 +43,16 @@ response = requests.post(
 print(response.json())
 ```
 
+## AI & Agents
+
+* [Build with AI](ai/build-with-ai.md) - Connect any MCP-compatible AI assistant to PredictHQ APIs through natural language
+* [MCP Server](ai/mcp.md) - Query events, demand intelligence, and all PredictHQ APIs without writing code
+* [Bolt](ai/bolt.md) - AI-native developer environment built into the WebApp
+
 ## Resources
 
 * [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview) - Authentication, rate limits, and API conventions
 * [Guides](getting-started/guides/) - Step-by-step integration guides for core APIs and use cases
 * [Python SDK](sdks/python-sdk.md) - The official Python client for the PredictHQ API
 * [Data Science Notebooks](getting-started/data-science-notebooks.md) - Jupyter notebooks for Beam, Features API, and demand forecasting
-* [MCP Server](ai/mcp.md) - Connect AI assistants and agents directly to PredictHQ APIs
 * [System Status](https://www.predicthqstatus.com/) - Live status and incident history for PredictHQ services
