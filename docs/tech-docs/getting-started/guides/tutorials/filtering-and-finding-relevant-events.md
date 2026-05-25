@@ -194,7 +194,7 @@ headers = {
 }
 
 params = {
-    "within": "1.48mi@47.60,-122.33",
+    "saved_location.location_id": "<location_id>",  # Use the location_id from the Saved Location created in Step 1
     "category": "public-holidays,school-holidays,conferences,concerts,performing-arts",
     "active.gte": "2024-06-01",
     "active.lte": "2024-06-30",
@@ -238,13 +238,13 @@ print("Total events fetched:", len(all_events))
 
 ```
 
-For information on how to search for events using our SDK, please refer to [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention")
+For information on how to search for events using our SDK, please refer to [python-sdk.md](../../../sdks/python-sdk.md "mention")
 
 {% hint style="info" %}
 For more details, visit:
 
 * [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
-* [Broken link](/broken/pages/twewWeTyZJZV3NNEcFKM "mention")
+* [python-sdk.md](../../../sdks/python-sdk.md "mention")
 {% endhint %}
 
 ### Step 3. Interpret Response
