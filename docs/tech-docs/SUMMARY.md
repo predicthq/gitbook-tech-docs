@@ -99,6 +99,7 @@
 * [Build with AI](ai/build-with-ai.md)
 * [MCP Server](ai/mcp.md)
 * [Tech Docs MCP Server](ai/tech-docs-mcp-server.md)
+* [Bolt](ai/bolt.md)
 * [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
 
 ## Integrations
