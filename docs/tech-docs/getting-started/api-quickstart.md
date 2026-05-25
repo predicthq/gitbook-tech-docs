@@ -49,7 +49,7 @@ print(response.json())
 ```
 
 {% hint style="info" %}
-**Note:** The Events API is for discovery and explainability - understanding which events are happening and why they matter. For demand forecasting and ML, use the Features API instead. See API Selection for guidance on which API to use for your use case.
+**Note:** The Events API is for discovery and explainability - understanding which events are happening and why they matter. For demand forecasting and ML, use the Features API instead. See [Which API Should I Use](core-concepts/which-api-should-i-use.md) for guidance on which API to use for your use case.
 {% endhint %}
 
 ## How PredictHQ APIs Work Together
