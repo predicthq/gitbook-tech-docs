@@ -128,3 +128,5 @@ This keeps forecast inputs aligned with historical demand drivers.
 ## What to Do Next
 
 After running Beam, use the Beam Analysis ID with the Features API or Events API to retrieve demand-calibrated signals. For automated forecasting, use the Forecasts API, which applies Beam internally.
+
+For the recommended production architecture — including how Beam fits into a full pipeline with refresh cadence and data storage patterns — see the [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md).

@@ -104,3 +104,5 @@ PredictHQ’s APIs map directly to these challenges:
 * Trust: [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) (with calibrated filtering)
 
 These are structural problems. They do not disappear with more data or more sophisticated models. They require deliberate design across data, calibration, and delivery layers.
+
+For the recommended production architecture — showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md).

@@ -148,3 +148,5 @@ For practical implementation:
 ## Conclusion
 
 By following this tutorial, you should now understand how to enhance your demand forecasting models by integrating PredictHQ's event features. As known drivers of demand, incorporating event signals can noticeably improve the accuracy of your forecasts, empowering you to make more informed decisions and strategize more effectively.
+
+To move from this tutorial into a production integration — covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline — see the [Standard Integration Pattern](../../../integrations/integration-guides/standard-integration-pattern.md).

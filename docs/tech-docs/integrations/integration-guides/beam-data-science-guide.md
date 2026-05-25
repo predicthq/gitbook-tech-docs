@@ -21,6 +21,8 @@ Need more details? Browse our [Support articles](https://app.gitbook.com/s/Ri9Ya
 
 Refer to our [technical documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) for how you can use Beam securely in your environment.
 
+For the recommended production architecture — including how Beam fits into a full pipeline with Saved Locations, the Features API, and the Events API, with the right refresh cadence and data storage patterns — see the [Standard Integration Pattern](standard-integration-pattern.md).
+
 ## How-To Data Science Guides
 
 Explore our [guides](../../getting-started/guides/beam-guides/) for detailed instructions on incorporating Beam into your data science processes.
