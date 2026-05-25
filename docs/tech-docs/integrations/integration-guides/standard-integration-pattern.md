@@ -69,8 +69,6 @@ flowchart TB
     style PredictHQ fill:#FF236420
 ```
 
-***
-
 ## Component Detail
 
 ### Location & Beam Management
