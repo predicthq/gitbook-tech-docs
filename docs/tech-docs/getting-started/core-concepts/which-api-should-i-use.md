@@ -18,11 +18,13 @@ PredictHQ has four core APIs. Choosing the right one for each task is the most i
 
 Use the Features API when you are building or improving a demand forecasting model, integrating event signals into an ML pipeline, or generating event-driven inputs for staffing, pricing, or inventory decisions.
 
-The Features API produces pre-engineered, attendance-weighted, duration-adjusted, impact-pattern-aware time-series signals. It encapsulates years of domain expertise in transforming raw event data into reliable demand signals. Do not attempt to replicate this by querying the Events API and aggregating manually — naive aggregation introduces noise and degrades model performance.
+The Features API produces pre-engineered, attendance-weighted, duration-adjusted, impact-pattern-aware time-series signals. It encapsulates years of domain expertise in transforming raw event data into reliable demand signals. Do not attempt to replicate this by querying the Events API and aggregating manually - naive aggregation introduces noise and degrades model performance.
 
-**Always use `beam.analysis_id`** when calling the Features API. Without it, feature selection must be configured manually — which is error-prone and produces worse results. Run Beam first, then pass the `analysis_id` to the Features API.
+**Always use `beam.analysis_id`** when calling the Features API. Without it, feature selection must be configured manually - which is error-prone and produces worse results. Run Beam first, then pass the `analysis_id` to the Features API.
 
-\{% hint style="warning" %\} The Events API is not a substitute for the Features API in forecasting pipelines. Looping over events, counting them per day, and using that count as a model feature is a common mistake that degrades forecast accuracy. \{% endhint %\}
+{% hint style="warning" %}
+The Events API is not a substitute for the Features API in forecasting pipelines. Looping over events, counting them per day, and using that count as a model feature is a common mistake that degrades forecast accuracy.
+{% endhint %}
 
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
 * [What is the Features API?](what-is-the-features-api.md)
@@ -31,7 +33,7 @@ The Features API produces pre-engineered, attendance-weighted, duration-adjusted
 
 Use the Forecasts API when you want accurate, event-driven demand forecasts without building and maintaining your own forecasting model, or when rapid time-to-value is the priority.
 
-The Forecasts API accepts your historical demand data, trains a model, and returns daily-level forecasts with event impact built directly into the output. Beam is applied automatically — there is no need to configure feature selection manually. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
+The Forecasts API accepts your historical demand data, trains a model, and returns daily-level forecasts with event impact built directly into the output. Beam is applied automatically - there is no need to configure feature selection manually. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
 
 The Forecasts API is appropriate whether you are starting from scratch or augmenting an existing forecast. Use it when reducing development time and complexity matters more than owning the underlying model. For teams that require full control over model architecture and feature engineering, the Features API is the recommended alternative.
 
