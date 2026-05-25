@@ -15,7 +15,7 @@ description: Update your Loop Settings.
 ```bash
 curl -X PUT "https://api.predicthq.com/v1/loop/settings" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "org_name": "My Org Name"
@@ -32,7 +32,7 @@ import requests
 response = requests.put(
     url="https://api.predicthq.com/v1/loop/settings",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

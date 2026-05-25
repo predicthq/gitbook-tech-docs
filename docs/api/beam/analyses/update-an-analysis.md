@@ -15,7 +15,7 @@ description: Update (replace) an existing Analysis.
 ```bash
 curl -X PUT "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "name": "Analysis 2",
@@ -43,7 +43,7 @@ import requests
 response = requests.put(
     url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

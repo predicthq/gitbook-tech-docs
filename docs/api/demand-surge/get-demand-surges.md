@@ -28,7 +28,7 @@ The OpenAPI spec for Demand Surge API can be [found here](https://api.predicthq.
 ```bash
 curl -X GET "https://api.predicthq.com/v1/demand-surge/?date_from=2021-05-12&min_surge_intensity=m&location.place_id=2643743" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -39,7 +39,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/demand-surge/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

@@ -19,7 +19,7 @@ The OpenAPI spec for Events API can be [found here](https://api.predicthq.com/do
 ```bash
 curl -X GET "https://api.predicthq.com/v1/events/count/?country=NZ" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -30,7 +30,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/count/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

@@ -13,7 +13,7 @@ response = requests.get(
     url="https://api.predicthq.com/v1/broadcasts/",
     headers={
         "Accept": "application/json",
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params={
         "location.origin": "37.7879,-122.4097",

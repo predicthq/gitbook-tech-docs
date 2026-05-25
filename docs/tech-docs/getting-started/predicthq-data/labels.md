@@ -60,7 +60,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/count",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     ## optional, get PHQ Labels and counts for sports category only

@@ -43,7 +43,7 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 ```bash
 curl -X POST "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink" \
      -H "Content-Type: text/csv" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @data.csv
 ```
 {% endtab %}
@@ -55,7 +55,7 @@ import requests
 response = requests.post(
     url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/sink",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Content-Type": "text/csv"
     },
     data=open("data.csv")

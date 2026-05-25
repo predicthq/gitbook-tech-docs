@@ -14,7 +14,7 @@ description: Delete an existing Loop Link.
 {% tab title="curl" %}
 ```bash
 curl -X DELETE "https://api.predicthq.com/v1/loop/links/$LINK_ID" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -25,7 +25,7 @@ import requests
 response = requests.delete(
     url="https://api.predicthq.com/v1/loop/links/$LINK_ID",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN"
+      "Authorization": "Bearer $API_TOKEN"
     }
 )
 

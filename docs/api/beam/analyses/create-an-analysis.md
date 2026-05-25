@@ -17,7 +17,7 @@ description: >-
 ```bash
 curl -X POST "https://api.predicthq.com/v1/beam/analyses" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "name": "Analysis 1",
@@ -48,7 +48,7 @@ import requests
 response = requests.post(
     url="https://api.predicthq.com/v1/beam/analyses",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

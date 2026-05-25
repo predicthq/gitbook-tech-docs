@@ -56,7 +56,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={
@@ -79,7 +79,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/saved-locations/sFlb8HlsLa1j-S4UDEMEkQ/events",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

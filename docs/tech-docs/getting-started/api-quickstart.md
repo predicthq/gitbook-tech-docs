@@ -20,7 +20,7 @@ description: >-
 Use your API key in the `Authorization` header of every API request:
 
 ```
-Authorization: Bearer $API_KEY
+Authorization: Bearer $API_TOKEN
 ```
 
 ## Make Your First Call
@@ -33,7 +33,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-        "Authorization": "Bearer $API_KEY",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     params={

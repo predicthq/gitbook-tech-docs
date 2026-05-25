@@ -32,7 +32,7 @@ For instance, if you specify `?location.origin=47.615337,-122.203981`, which is 
 ```bash
 curl -X GET "https://api.predicthq.com/v1/places/hierarchies/?location.origin=47.615337,-122.203981" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -43,7 +43,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/places/hierarchies/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

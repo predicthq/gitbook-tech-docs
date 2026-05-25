@@ -35,7 +35,7 @@ Make sure to properly load your access token from an environment variable or oth
 ```python
 from predicthq import Client
 
-phq = Client(access_token="$ACCESS_TOKEN")
+phq = Client(access_token="$API_TOKEN")
 
 for event in phq.events.search(
     place__scope=[5809844],
@@ -57,7 +57,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={
@@ -78,7 +78,7 @@ Make sure to properly load your access token from an environment variable or oth
 ```bash
 curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,concerts,festivals,performing-arts,community,sports&place.scope=5809844&active.gte=2025-03-01&active.lte=2025-04-01" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 {% endtabs %}

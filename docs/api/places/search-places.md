@@ -19,7 +19,7 @@ Places can be used to search and filter events using named geographic features r
 ```bash
 curl -X GET "https://api.predicthq.com/v1/places/?q=New+York&limit=5" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -30,7 +30,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/places/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

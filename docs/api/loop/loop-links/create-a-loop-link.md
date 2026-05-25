@@ -15,7 +15,7 @@ description: Create a new Loop Link to begin submitting events and feedback.
 ```bash
 curl -X POST "https://api.predicthq.com/v1/loop/links" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "name": "Hotel A",
@@ -36,7 +36,7 @@ import requests
 response = requests.post(
     url="https://api.predicthq.com/v1/loop/links",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

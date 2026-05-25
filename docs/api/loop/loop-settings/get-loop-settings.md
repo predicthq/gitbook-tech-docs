@@ -19,7 +19,7 @@ Particularly for the Loop Links UI we take the `org_name` from Settings and disp
 ```bash
 curl -X GET "https://api.predicthq.com/v1/loop/settings" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -30,7 +30,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/loop/settings",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     }
 )

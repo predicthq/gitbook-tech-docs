@@ -43,7 +43,7 @@ data = {
 response = requests.post(
     url="https://api.predicthq.com/v1/features/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     json=data
@@ -88,7 +88,7 @@ data = {
 response = requests.post(
     url="https://api.predicthq.com/v1/features/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     json=data
@@ -104,7 +104,7 @@ print(response.json())
 ```python
 from predicthq import Client
 
-phq = Client(access_token="$ACCESS_TOKEN")
+phq = Client(access_token="$API_TOKEN")
 
 for feature in phq.features.obtain_features(
         active__gte="2019-11-16",

@@ -15,7 +15,7 @@ description: Re-run the Beam Analysis Group aggregation process.
 ```bash
 curl -X POST "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/refresh" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -26,7 +26,7 @@ import requests
 response = requests.post(
     url="https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/refresh",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     }
 )

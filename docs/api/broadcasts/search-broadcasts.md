@@ -25,7 +25,7 @@ Your subscription settings can be viewed in the [WebApp](https://control.predict
 ```bash
 curl -X GET "https://api.predicthq.com/v1/broadcasts/?broadcast_id=u5aCvebffuNFpGSGNQFiU4" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -37,7 +37,7 @@ response = requests.get(
     url="https://api.predicthq.com/v1/broadcasts/",
     headers={
       "Accept": "application/json",
-      "Authorization": "Bearer $ACCESS_TOKEN"
+      "Authorization": "Bearer $API_TOKEN"
     },
     params={
         "broadcast_id": "u5aCvebffuNFpGSGNQFiU4"

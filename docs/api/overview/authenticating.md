@@ -8,7 +8,7 @@ The PredictHQ API is a RESTful API and can be accessed from the `https://api.pre
 {% tab title="curl" %}
 ```bash
 curl -X GET "https://api.predicthq.com/v1/events/" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" 
+     -H "Authorization: Bearer $API_TOKEN" 
 ```
 {% endtab %}
 
@@ -16,12 +16,12 @@ curl -X GET "https://api.predicthq.com/v1/events/" \
 ```python
 import requests
 
-access_token = "ACCESS_TOKEN"
+api_token = "$API_TOKEN"
 
 response = requests.get(
     url="https://api.predicthq.com/v1/events/",
     headers={
-      "Authorization": f"Bearer {access_token}"
+      "Authorization": f"Bearer {api_token}"
     }
 )
 

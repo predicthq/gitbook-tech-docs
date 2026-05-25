@@ -27,7 +27,7 @@ We recommend caching the response and refreshing monthly - the radius for a give
 ```bash
 curl -X GET "https://api.predicthq.com/v1/suggested-radius/?location.origin=37.747767,-122.455320&industry=parking&radius_unit=km" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -38,7 +38,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/suggested-radius/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

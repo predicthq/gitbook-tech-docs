@@ -23,7 +23,7 @@ from predicthq import Client
 
 # Initialises PredictHQ client library using your access token.
 # Note: You can find/create your access token at https://control.predicthq.com/clients
-phq = Client(access_token="$ACCESS_TOKEN")
+phq = Client(access_token="$API_TOKEN")
 ```
 
 ### Search Events

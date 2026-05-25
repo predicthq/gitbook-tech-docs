@@ -291,7 +291,7 @@ Other than the date, the structure of each result here will depend on how you co
 ```bash
 curl -X POST "https://api.predicthq.com/v1/features/?offset=0&limit=100" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "active": {
@@ -360,7 +360,7 @@ data = {
 response = requests.post(
     url="https://api.predicthq.com/v1/features/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={
@@ -378,7 +378,7 @@ print(response.json())
 ```python
 from predicthq import Client
 
-phq = Client(access_token="$ACCESS_TOKEN")
+phq = Client(access_token="$API_TOKEN")
 
 for feature in phq.features.obtain_features(
         active__gte="2019-11-16",

@@ -15,7 +15,7 @@ description: Update (replace) an existing Loop Link.
 ```bash
 curl -X PUT "https://api.predicthq.com/v1/loop/links/$LINK_ID" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "name": "Hotel A",
@@ -36,7 +36,7 @@ import requests
 response = requests.put(
     url="https://api.predicthq.com/v1/loop/links/$LINK_ID",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

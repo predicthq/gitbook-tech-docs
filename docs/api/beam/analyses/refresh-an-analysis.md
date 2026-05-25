@@ -15,7 +15,7 @@ description: Rerun the Beam correlation and analysis process.
 ```bash
 curl -X POST "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -26,7 +26,7 @@ import requests
 response = requests.post(
     url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID/refresh",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     }
 )

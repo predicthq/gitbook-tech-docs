@@ -14,7 +14,7 @@ description: Delete an existing Analysis Group.
 {% tab title="curl" %}
 ```bash
 curl -X DELETE "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -25,7 +25,7 @@ import requests
 response = requests.delete(
     url="https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN"
+      "Authorization": "Bearer $API_TOKEN"
     }
 )
 

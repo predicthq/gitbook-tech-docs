@@ -51,7 +51,7 @@ import httpx
 
 # Copy your access token here or see our Quickstart docs:
 # https://docs.predicthq.com/guides/quickstart/
-ACCESS_TOKEN = 'ABC123'
+API_TOKEN = 'ABC123'
 
 list_of_locations = [
     {'name': 'store1-chicago', 'latitude': '41.81310', 'longitude': '-87.65860', 'industry': 'retail'},
@@ -63,7 +63,7 @@ for location in list_of_locations:
     response = httpx.get(
         "https://api.predicthq.com/v1/impact-area/",
         headers={
-            "Authorization": f"Bearer {ACCESS_TOKEN}",
+            "Authorization": f"Bearer {API_TOKEN}",
             "Accept": "application/json",
         },
         params={

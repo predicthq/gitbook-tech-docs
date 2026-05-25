@@ -33,7 +33,7 @@ Polygon-based filtering across PredictHQ APIs requires a saved location. To use 
 ```bash
 curl -X GET "https://api.predicthq.com/v1/impact-area/?location.origin=37.747767,-122.455320&industry=parking" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -44,7 +44,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/impact-area/",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

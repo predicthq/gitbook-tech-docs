@@ -15,7 +15,7 @@ description: Partially update an existing Analysis Group.
 ```bash
 curl -X PATCH "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Authorization: Bearer $API_TOKEN" \
      --data @<(cat <<EOF
     {
         "name": "Analysis Group 2",
@@ -32,7 +32,7 @@ import requests
 response = requests.patch(
     url="https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json"
     },
     json={

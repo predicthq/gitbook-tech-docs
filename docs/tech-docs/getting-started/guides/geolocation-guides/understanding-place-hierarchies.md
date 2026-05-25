@@ -88,7 +88,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/places/",
     headers={
-        "Authorization": "Bearer $ACCESS_TOKEN",
+        "Authorization": "Bearer $API_TOKEN",
         "Accept": "application/json",
     },
     params={

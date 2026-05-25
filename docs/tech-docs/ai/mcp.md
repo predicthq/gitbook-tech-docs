@@ -24,7 +24,7 @@ The MCP server supports two authentication methods.
 
 **OAuth** - when you connect using a supported client, you will be redirected to PredictHQ to authorise access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
 
-**Bearer token** - pass your PredictHQ API key in the `Authorization: Bearer YOUR_API_KEY` header. Well-suited for agent and automation workflows where interactive login is not practical, or for clients that do not support OAuth. You [can create an API key in the PredictHQ WebApp](../getting-started/api-quickstart.md).
+**Bearer token** - pass your PredictHQ API key in the `Authorization: Bearer $API_TOKEN` header. Well-suited for agent and automation workflows where interactive login is not practical, or for clients that do not support OAuth. You [can create an API key in the PredictHQ WebApp](../getting-started/api-quickstart.md).
 
 ## Available Tools
 
@@ -62,7 +62,7 @@ To use a Bearer token instead:
 
 ```bash
 claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp \
-  --header "Authorization: Bearer YOUR_API_KEY"
+  --header "Authorization: Bearer $API_TOKEN"
 ```
 
 For full instructions, see [Claude Code MCP documentation](https://docs.anthropic.com/en/docs/claude-code/mcp).
@@ -102,7 +102,7 @@ Use the following details when configuring your client:
 
 * **Server URL:** `https://mcp.predicthq.com/v1/mcp`
 * **Transport:** Streamable HTTP
-* **Authentication:** OAuth, or Bearer token via `Authorization: Bearer YOUR_API_KEY` header
+* **Authentication:** OAuth, or Bearer token via `Authorization: Bearer $API_TOKEN` header
 
 Refer to your client's documentation for specific configuration steps.
 

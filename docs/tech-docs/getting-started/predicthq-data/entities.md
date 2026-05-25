@@ -113,7 +113,7 @@ For example the entity ID for the "Moscone Center - West" is hH4zrx9zYLiETvNZQrx
 ```
 GET https://api.predicthq.com/v1/events?entity.id=hH4zrx9zYLiETvNZQrx2de HTTP/1.1
 Accept: application/json
-Authorization: Bearer $ACCESS_TOKEN
+Authorization: Bearer $API_TOKEN
 ```
 
 Similar to finding all events for an event-group entity for recurring events you need to first find the ID for the entity. So, for example, to do that for Dreamforce first, find a Dreamforce event, then look at the event-group entity ID on that event and use that entity ID to call the API.

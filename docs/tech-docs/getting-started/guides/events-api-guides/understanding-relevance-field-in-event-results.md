@@ -28,7 +28,7 @@ import requests
 response = requests.get(
     url = "https://api.predicthq.com/v1/events/",
     headers = {
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params = {
         "category": "concerts",
@@ -60,7 +60,7 @@ import requests
 response = requests.get(
     url = "https://api.predicthq.com/v1/events/",
     headers = {
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params = {
         "q": "jazz",
@@ -93,7 +93,7 @@ import requests
 response = requests.get(
     url = "https://api.predicthq.com/v1/events/",
     headers = {
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params = {
         "start_around.origin": "$CURRENT_DATE",
@@ -127,7 +127,7 @@ import requests
 response = requests.get(
     url = "https://api.predicthq.com/v1/events/",
     headers = {
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params = {
         "location_around.origin": "40.782409,-73.971885",
@@ -163,7 +163,7 @@ import requests
 response = requests.get(
     url = "https://api.predicthq.com/v1/events/",
     headers = {
-        "Authorization": "Bearer $ACCESS_TOKEN"
+        "Authorization": "Bearer $API_TOKEN"
     },
     params = {
         "relevance": "rank,q,start_around,location_around",

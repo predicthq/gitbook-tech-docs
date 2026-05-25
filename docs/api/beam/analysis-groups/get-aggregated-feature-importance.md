@@ -17,7 +17,7 @@ This endpoint provides Feature Importance results aggregated across the Analyses
 ```bash
 curl -X GET "https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/feature-importance" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -28,7 +28,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/beam/analysis-groups/$GROUP_ID/feature-importance",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     }
 )

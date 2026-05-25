@@ -23,7 +23,7 @@ import Client from 'predicthq'
 
 // Initialises PredictHQ client library using your access token
 // Note: You can find/create your access token at https://control.predicthq.com/clients
-const client = new Client({access_token: 'ACCESS_TOKEN'})
+const client = new Client({access_token: '$API_TOKEN'})
 ```
 
 ### Search Events

@@ -17,7 +17,7 @@ Conversations are used to track feedback on existing events for example feedback
 ```bash
 curl -X GET "https://api.predicthq.com/v1/loop/feedback/conversations?link_id=m4Dk4g4DRA8Yqbp2PC54" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -28,7 +28,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/loop/events",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

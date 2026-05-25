@@ -15,7 +15,7 @@ description: Search for an existing Analysis Group.
 ```bash
 curl -X GET "https://api.predicthq.com/v1/beam/analysis-groups?status=active&sort=updated" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -26,7 +26,7 @@ import requests
 response = requests.get(
     url="https://api.predicthq.com/v1/beam/analysis-groups",
     headers={
-      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Authorization": "Bearer $API_TOKEN",
       "Accept": "application/json"
     },
     params={

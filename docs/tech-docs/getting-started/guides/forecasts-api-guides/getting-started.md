@@ -30,7 +30,7 @@ Forecasts API Notebook Run-Through in AWS SageMaker
 All code snippets in this guide assume the appropriate config has already been set:
 
 ```python
-PHQ_API_TOKEN = os.getenv("PHQ_API_TOKEN") or "REPLACE_WITH_YOUR_ACCESS_TOKEN"
+PHQ_API_TOKEN = os.getenv("PHQ_API_TOKEN") or "REPLACE_WITH_YOUR_API_TOKEN"
 API_URL = "https://api.predicthq.com"
 
 headers = {

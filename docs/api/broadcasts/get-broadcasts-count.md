@@ -15,7 +15,7 @@ description: Get the count of Live TV broadcasts by category, label and more.
 ```bash
 curl -X GET "https://api.predicthq.com/v1/broadcasts/count/?event.event_id=AdKtL974inQB7GURRd" \
      -H "Accept: application/json" \
-     -H "Authorization: Bearer $ACCESS_TOKEN"
+     -H "Authorization: Bearer $API_TOKEN"
 ```
 {% endtab %}
 
@@ -27,7 +27,7 @@ response = requests.get(
     url="https://api.predicthq.com/v1/broadcasts/count",
     headers={
       "Accept": "application/json",
-      "Authorization": "Bearer $ACCESS_TOKEN"
+      "Authorization": "Bearer $API_TOKEN"
     },
     params={
         "event.event_id": "AdKtL974inQB7GURRd"
