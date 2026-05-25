@@ -8,10 +8,10 @@
 
 * [API Quickstart](getting-started/api-quickstart.md)
 * [Core Concepts](getting-started/core-concepts/README.md)
-  * [Which API Should I Use?](getting-started/core-concepts/which-api-should-i-use.md)
   * [Event-Driven Demand](getting-started/core-concepts/event-driven-demand.md)
   * [What is Beam?](getting-started/core-concepts/what-is-beam.md)
   * [What is the Features API?](getting-started/core-concepts/what-is-the-features-api.md)
+  * [Which API Should I Use?](getting-started/core-concepts/which-api-should-i-use.md)
   * [Industry-Tuned Predictions](getting-started/core-concepts/industry-tuned-predictions.md)
   * [Understanding Demand Variability and Event Contribution in Beam](getting-started/core-concepts/understanding-demand-variability-and-event-contribution-in-beam.md)
 * [Glossary](getting-started/glossary.md)
