@@ -259,7 +259,7 @@ Once the API call is made, the Events API returns a structured JSON response con
 {
   "count": 388,
   "overflow": false,
-  "next": "https://api.predicthq.com/v1/events/?active.gte=2024-06-01&active.lte=2024-06-30&category=public-holidays%2Cschool-holidays%2Cconferences%2Cconcerts%2Cperforming-arts&limit=50&offset=50&rank.gte=30&sort=rank&state=active%2Cpredicted&within=1.48mi%4047.60%2C-122.33",
+  "next": "https://api.predicthq.com/v1/events/?active.gte=2024-06-01&active.lte=2024-06-30&category=public-holidays%2Cschool-holidays%2Cconferences%2Cconcerts%2Cperforming-arts&limit=50&offset=50&rank.gte=30&saved_location.location_id=%3Clocation_id%3E&sort=rank&state=active%2Cpredicted",
   "previous": null,
   "results": [
     {

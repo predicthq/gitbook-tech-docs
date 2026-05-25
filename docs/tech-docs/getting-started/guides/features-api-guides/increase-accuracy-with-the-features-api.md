@@ -8,9 +8,9 @@ Once you’ve familiarized yourself with our data, you’ll likely find that foc
 
 Features API aggregates PHQ Attendance figures, PHQ Viewership figures and PHQ Rank counts (in buckets by rank range) for a given category feature in a particular location on a given day, and returns desired statistics. These evaluated statistics can be used to quickly gauge and understand the demand impact on a location for a given day for a particular category. For example, at a future date in Sydney, there is a major sports game, a street fair, an international film festival, the Symphony orchestra playing, and more. The combined impact of all these events might result in a total aggregate attendance (when the various category aggregated attendance values are summed up) score of 150,000 and this could be across a hundred events or more. This represents a prediction of 150,000 people attending events on that day in the location.
 
-The Features API returns requested statistical values (`sum`, `count`, `average`, `min`, `max`, `median`, `std_dev`) per day for a specified date range, across a specified attendance category feature - _see_ [PHQ Attendance Response](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). Similarly, Features API returns requested statistical values, across a specified viewership category feature. For non-attendance-based events the rank of those events impacting that location on those days are bucketed into a relevant rank range in the response for evaluation. When calling the API you specify a number of filters to get events at a specific location, above a specific rank value, for specific categories, and so on. The values returned are the processed aggregations that serve to measure the impact (total predicted attendance for example) for all the events that match the filters specified.
+The Features API returns requested statistical values (`sum`, `count`, `average`, `min`, `max`, `median`, `std_dev`) per day for a specified date range, across a specified attendance category feature - _see_ [PHQ Attendance Response](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). Similarly, Features API returns requested statistical values, across a specified viewership category feature. For non-attendance-based events the rank of those events impacting that location on those days are bucketed into a relevant rank range in the response for evaluation.
 
-See [the API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) for more details on the API. See also [this tutorial](../tutorials/improving-demand-forecasting-models-with-event-features.md) for how to incorporate features from the Features API features into demand forecasting models.
+See [the API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) for more details on the API. See also [this tutorial](../tutorials/improving-demand-forecasting-models-with-event-features.md) for how to incorporate features from the Features API into demand forecasting models.
 
 ### Features API Endpoint
 
@@ -18,13 +18,43 @@ See [the API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/featu
 How to use Features API
 {% endembed %}
 
-In this example we will use PHQ Attendance features to find high demand days in the city of Chicago in February 2020.
+{% hint style="success" %}
+**Recommended: use `beam.analysis_id`**\
+The most reliable way to call the Features API is by supplying a `beam.analysis_id`. This automatically applies the correct location boundary (from your Saved Location), selects only the event categories that materially drive demand at that location, and applies calibrated rank thresholds — no manual configuration needed. [Run Beam first](../beam-guides/), then pass the returned `analysis_id` to the Features API.
+{% endhint %}
 
-When using the Features API endpoint you need to specify a location either as a latitude and longitude and radius or as a place id. A common use case is to look at the impact of events in a city, but you can choose whatever location makes sense for your use case. You need to also specify a date range. You can use the `active.gte` and `active.lte` parameters (or other active date range parameters) to specify the date range.
+#### With a Beam Analysis ID (Recommended)
 
-To find high demand days for the city of _Chicago_, `place_id=4887398`, during the month of _February 2020_, `active.gte=2020-02-01` and `active.lte=2020-02-29`, using `community`, `concerts`, `conferences`, and `sports` PHQ Attendance features, looking at `count`, `sum` and `avg` stats fields.
+Supplying `beam.analysis_id` automatically configures the location, feature selection, and rank filters from your Beam results. You do not need to specify individual feature names or a location separately.
 
+```python
+import requests
 
+data = {
+    "active": {
+        "gte": "2019-11-16",
+        "lte": "2019-11-27"
+    },
+    "beam": {
+        "analysis_id": "$ANALYSIS_ID"
+    }
+}
+
+response = requests.post(
+    url="https://api.predicthq.com/v1/features/",
+    headers={
+      "Authorization": "Bearer $ACCESS_TOKEN",
+      "Accept": "application/json"
+    },
+    json=data
+)
+
+print(response.json())
+```
+
+#### Without Beam (Manual Configuration)
+
+If you haven’t run Beam yet, you can configure the Features API manually by specifying a location and the feature names you want. Use a `saved_location_id` for location (preferred), or provide a `place_id` or lat/lon with radius. Choose feature names based on your industry’s [recommended categories](../industry-specific-event-filters.md) until you can run Beam.
 
 {% tabs %}
 {% tab title="python" %}
@@ -37,11 +67,7 @@ data = {
         "lte": "2019-11-27"
     },
     "location": {
-        "geo": {
-            "lat": "37.78428",
-            "lon": "-122.40075",
-            "radius": "2.6mi"
-        }
+        "saved_location_id": "$SAVED_LOCATION_ID"
     },
     "phq_attendance_conferences": {
         "stats": [
@@ -83,11 +109,7 @@ phq = Client(access_token="$ACCESS_TOKEN")
 for feature in phq.features.obtain_features(
         active__gte="2019-11-16",
         active__lte="2019-11-27",
-        location__geo={
-            "lat": "37.78428",
-            "lon": "-122.40075",
-            "radius": "2.6mi"
-        },
+        location__saved_location_id="$SAVED_LOCATION_ID",
         phq_attendance_conferences__stats=["min", "max"],
         phq_attendance_sports__stats=["count", "std_dev", "median"],
         phq_attendance_sports__phq_rank={
