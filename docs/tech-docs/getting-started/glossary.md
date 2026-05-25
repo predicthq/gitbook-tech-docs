@@ -8,18 +8,44 @@ description: >-
 
 ## Beam
 
-Beam is a demand calibration engine that identifies which types of real-world events materially impact your historical demand.
+Beam is a demand calibration engine that identifies which types of real-world events materially impact your historical demand at a specific location.
 
-Event-driven demand is sparse and uneven. A small number of events can create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
+Event-driven demand is sparse and uneven. A small number of events create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
 
-Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results that can be used to filter Events API and Features API outputs to those that are demand-relevant for a specific location.
+Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
-Beam analyses are location-specific. If you operate multiple locations, impact calibration should be performed per location, as event effects vary by geography and demand profile.
+Beam analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile — one analysis per location is required.
 
-Beam automates ongoing event impact calibration, reducing the need to build and maintain bespoke decomposition and feature selection pipelines.
+For customers operating many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
+
+Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate analyses - doing so loses accumulated correlation history.
 
 * API Reference: [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [beam-guides](guides/beam-guides/ "mention")
+
+## Features API
+
+The Features API transforms real-world events into structured, model-ready time-series signals for demand forecasting and ML pipelines.
+
+Rather than returning individual event records, it produces daily or weekly numerical aggregates grouped by event type — concerts, sports, public holidays, school holidays, and more. Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics, encapsulating the domain expertise required to turn raw event data into reliable demand signals.
+
+The Features API is the recommended integration surface for any use case involving forecasting, ML, staffing, pricing, or inventory decisions. It should be used in place of querying the Events API and constructing features manually — naive event aggregation introduces noise and degrades model performance.
+
+The recommended way to call the Features API is by passing a `beam.analysis_id`, which automatically applies the correct location, rank filters, and feature selection derived from Beam. Without a `beam.analysis_id`, features must be configured manually, which is error-prone and produces worse results.
+
+* API Reference: [Get ML Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")
+* [features-api-guides](guides/features-api-guides/ "mention")
+
+## Forecasts API
+
+The Forecasts API delivers event-driven demand forecasts directly, without requiring customers to build or maintain their own forecasting models.
+
+Customers supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PHQ feature attribution and explainability outputs. A baseline comparison metric is included so customers can measure the MAPE improvement attributable to PredictHQ event data.
+
+The Forecasts API is appropriate when rapid time-to-value is the priority, or when a team does not have the capacity to build and maintain a bespoke forecasting pipeline. For teams that require full control over the underlying model, the Features API with a `beam.analysis_id` is the recommended alternative.
+
+* API Reference: [Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview "mention")
+* [getting-started.md](guides/forecasts-api-guides/getting-started.md "mention")
 
 ## Local Rank
 
@@ -41,6 +67,16 @@ All submitted feedback is reviewed by PredictHQ’s data team, and accepted chan
 
 * API Reference: [Loop](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop "mention")
 * [Loop UI](https://loop.predicthq.com/)
+
+## PHQ Labels
+
+PHQ Labels are AI-generated sub-category classification tags applied to events, providing more granular and semantically consistent classification than legacy event labels.
+
+Where legacy labels are manually assigned and inconsistent in coverage, PHQ Labels are generated by machine learning models trained across the full event catalogue and cover all event categories. They enable more precise filtering - for example, distinguishing a charity run from a marathon within the broader sports category, or a product launch from an industry summit within conferences.
+
+PHQ Labels are available via the `phq_labels` field in the Events API response. They are particularly useful for customers who need fine-grained event segmentation in demand models or operational dashboards.
+
+* Getting Started Guide: [#phq-labels](predicthq-data/labels.md#phq-labels "mention")
 
 ## PHQ Rank
 
@@ -84,13 +120,13 @@ This feature helps prevent gaps in demand models by preemptively accounting for 
 
 ## Predicted Impact Area
 
-Most teams start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies - by industry, by location type, and by how people actually move in that area.
+Most integrations start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies by industry, location type, and how people actually move in that area - a fixed circle is an approximation that can include irrelevant events and exclude relevant ones.
 
-Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies.
+Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies, and account for real-world constraints such as bodies of water, terrain, and road networks.
 
-The recommended approach is to use Saved Locations. When you create a location using origin\_geojson without specifying a geojson area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the location\_id across all PredictHQ APIs - Events, Features, and Beam - without needing to manage the boundary yourself.
+The recommended approach is to create a Saved Location using `origin_geojson` without specifying a `geojson` area — Predicted Impact Area is then calculated automatically and stored against the location. The resulting `location_id` can be passed directly to Events API, Features API, Beam, and Forecasts API without needing to manage the boundary separately.
 
-Predicted Impact Area is the successor to the Suggested Radius API.
+Predicted Impact Area replaces the Suggested Radius API for all new integrations.
 
 * API Reference: [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
 
@@ -106,23 +142,16 @@ Predicted Impact Patterns are industry-specific and are designed to improve upon
 
 ## Real-World Context
 
-Real-World Context refers to structured representations of real-world activity that can materially influence demand.
+Real-world context refers to structured, verified representations of real-world activity that materially influence demand - events, venues, performers, and associated quantitative signals such as predicted attendance, spend, rankings, and temporal impact patterns.
 
-This includes events, venues, performers, categories, and associated quantitative signals such as predicted attendance, spend, rankings, and temporal impact patterns. Real-world context is spatial and time-bound. It answers questions such as:
+Within PredictHQ's platform, real-world context flows through a layered architecture:
 
-* What is happening?
-* Where is it happening?
-* When is it happening?
-* At what scale?
-
-Within PredictHQ’s platform, real-world context is:
-
-* Structured and deduplicated through the Events API
-* Scoped geographically using Predicted Impact Area and Saved Locations
-* Transformed into model-ready signals via the Features API
-* Calibrated against historical demand using Beam
-
-Real-world context is designed for integration into forecasting models, analytics pipelines, and operational systems where external activity materially affects outcomes.
+* **Events API** - structured and deduplicated event records for discovery and explainability
+* **Saved Locations + Predicted Impact Area** - geographic scoping calibrated to where impact actually occurs
+* **Beam** - demand calibration to identify which events drive demand at each location
+* **Features API** - event signals transformed into model-ready time-series features
+* **Forecasts API** - event-aware demand forecasts for customers who do not build their own models
+* [Core Concepts](core-concepts/)
 
 ## Saved Location
 
@@ -133,3 +162,11 @@ Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowin
 Saved Locations are recommended for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
 * API Reference: [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention")
+
+## Suggested Radius
+
+**Deprecated.** Suggested Radius was a PredictHQ API that returned a recommended search radius around a point location for a given industry. It has been superseded by Predicted Impact Area, which provides a more accurate, data-driven geographic boundary that accounts for real-world geography rather than a fixed circle.
+
+Existing integrations using Suggested Radius will continue to work, but new integrations should use Predicted Impact Area via Saved Locations instead.
+
+* See: [Get Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
