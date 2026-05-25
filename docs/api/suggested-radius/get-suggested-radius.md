@@ -61,4 +61,5 @@ The OpenAPI spec for Suggested Radius API can be [found here](https://api.predic
 
 Below are some guides relevant to this API:
 
-* [Find Events by Latitude/Longitude and Radius](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius)
+* [create-a-saved-location.md](../saved-locations/create-a-saved-location.md "mention")
+* [get-impact-area.md](../impact-area/get-impact-area.md "mention")
