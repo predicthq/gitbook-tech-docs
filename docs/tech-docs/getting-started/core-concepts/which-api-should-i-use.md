@@ -46,7 +46,7 @@ Use the Events API when a user or system needs to see specific individual events
 
 The Events API is for understanding what is happening and why demand shifted on a given day. It is the right tool for surfacing event context alongside forecast results, drilling into which events drove a demand spike, or building an interface that lets operators see upcoming events at their locations.
 
-Use the Events API with `beam.analysis_id` to automatically filter results to the event categories and rank thresholds that are relevant for a given location — the same calibration applied by the Features API.
+Use the Events API with `beam.analysis_id` to automatically filter results to the event categories and rank thresholds that are relevant for a given location - the same calibration applied by the Features API.
 
 The Events API is not designed for generating model inputs. Do not loop over events, count them per day, and use those counts as features.
 
