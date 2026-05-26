@@ -1,0 +1,28 @@
+- tag: data-quality
+  label: Data Quality
+  color: cyan
+- tag: python-sdk
+  label: Python SDK
+- tag: enhancement
+  label: Enhancement
+  color: blue
+- tag: new-feature
+  label: New Feature
+  color: green
+- tag: new-api
+  label: New API
+  color: violet
+- tag: beam
+  label: Beam
+- tag: events-api
+  label: Events API
+- tag: features-api
+  label: Features API
+- tag: forecasts-api
+  label: Forecasts API
+- tag: saved-locations
+  label: Saved Locations
+- tag: developer-tools
+  label: Developer Tools
+- tag: webapp
+  label: WebApp
