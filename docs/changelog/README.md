@@ -7,6 +7,12 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-05-08" tags="data-quality,enhancement" %}
+## Denmark School Holidays - Municipality-Level Granularity
+
+School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. Customers using Danish school holiday data will see increased granularity in event results; historical data has been backfilled to 2016.
+{% endupdate %}
+
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
 ## Restaurant Predicted Impact Patterns - Holiday & Observance Improvements
 
@@ -29,6 +35,12 @@ The Python SDK now includes full support for the Predicted Impact Area endpoint,
 ## Event Descriptions
 
 Descriptions have been added at scale to attended events that previously had none - approximately 79% of the catalogue. Higher-ranked events were prioritised. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
+{% endupdate %}
+
+{% update date="2026-04-15" tags="data-quality,enhancement" %}
+## US Academic Events - 2026–2027 Calendar Year
+
+Academic events for the 2026–2027 calendar year have been added to PredictHQ's dataset, covering 10,804 events across 958 US institutions.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
