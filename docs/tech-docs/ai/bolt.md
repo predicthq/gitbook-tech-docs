@@ -8,6 +8,10 @@ description: >-
 
 Bolt combines a conversational AI interface with a persistent notebook of interactive cards. Ask questions in natural language, and Bolt retrieves real data from PredictHQ's APIs, guides you toward the right products for your situation, and surfaces results as cards you can explore, share, and take directly into your integration.
 
+{% hint style="success" %}
+Bolt is currently in beta - please use the 👍 / 👎 feedback buttons in the interface to help us improve it
+{% endhint %}
+
 ### What You Can Do
 
 **Explore PredictHQ data through conversation.** Ask about events, demand signals, locations, and forecast inputs in plain language. Bolt queries PredictHQ's APIs on your behalf and returns real results - not synthetic examples.

@@ -11,6 +11,10 @@ The PredictHQ MCP server connects AI assistants and agent-based systems directly
 Once connected, your AI assistant can search events, retrieve demand intelligence, and access PredictHQ's full API surface through natural language - without leaving your AI client or writing API calls manually.
 
 {% hint style="success" %}
+PredictHQ MCP is currently in beta - functionality may change as we continue to develop and refine it.
+{% endhint %}
+
+{% hint style="success" %}
 **Expanded tools coming soon.** The MCP server currently exposes tools focused on event search. A full suite of tools covering all PredictHQ APIs - including Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area - will be available shortly.
 {% endhint %}
 
