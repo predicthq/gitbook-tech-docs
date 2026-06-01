@@ -7,6 +7,14 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-06-01" tags="new-feature,developer-tools,webapp" %}
+## Bolt - beta launch
+
+Bolt is now available to all users in the PredictHQ WebApp.
+
+Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest — Saved Locations, Beam analysis, calibrated features, forecasts — following PredictHQ best practices throughout.
+{% endupdate %}
+
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
 ## Denmark School Holidays - Municipality-Level Granularity
 
