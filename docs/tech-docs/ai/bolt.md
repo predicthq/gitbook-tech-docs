@@ -6,10 +6,6 @@ description: >-
 
 # Bolt
 
-{% hint style="success" %}
-**Bolt is coming soon.** It will be available to all PredictHQ customers shortly. If you have questions in the meantime, contact your PredictHQ account team.
-{% endhint %}
-
 Bolt combines a conversational AI interface with a persistent notebook of interactive cards. Ask questions in natural language, and Bolt retrieves real data from PredictHQ's APIs, guides you toward the right products for your situation, and surfaces results as cards you can explore, share, and take directly into your integration.
 
 ### What You Can Do
@@ -51,10 +47,6 @@ This means Bolt produces better results out of the box than querying the APIs di
 ### Getting Started
 
 Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bolt). Select **Bolt** from the navigation to open the interface.
-
-{% hint style="success" %}
-**Bolt is coming soon.** It will be available to all PredictHQ customers shortly. If you have questions in the meantime, contact your PredictHQ account team.
-{% endhint %}
 
 Start by describing your use case or location - for example:
 
