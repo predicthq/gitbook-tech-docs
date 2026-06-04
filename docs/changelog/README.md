@@ -7,6 +7,14 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-06-04" tags="new-feature,developer-tools" %}
+## MCP Server - Full API Coverage
+
+The PredictHQ MCP server now exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
+
+Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam analyses, retrieve ML-ready features, build and train forecast models, and query impact areas - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
+{% endupdate %}
+
 {% update date="2026-06-01" tags="new-feature,developer-tools,webapp" %}
 ## Bolt - beta launch
 
