@@ -14,10 +14,6 @@ Once connected, your AI assistant can search events, retrieve demand intelligenc
 PredictHQ MCP is currently in beta - functionality may change as we continue to develop and refine it.
 {% endhint %}
 
-{% hint style="success" %}
-**Expanded tools coming soon.** The MCP server currently exposes tools focused on event search. A full suite of tools covering all PredictHQ APIs - including Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area - will be available shortly.
-{% endhint %}
-
 ## Server Details
 
 <table><thead><tr><th width="303.16796875"></th><th></th></tr></thead><tbody><tr><td><strong>MCP Server URL</strong></td><td><code>https://mcp.predicthq.com/v1/mcp</code></td></tr><tr><td><strong>Transport</strong></td><td>Streamable HTTP</td></tr><tr><td><strong>Authentication</strong></td><td>OAuth or Bearer token (API key)</td></tr></tbody></table>
@@ -32,9 +28,22 @@ The MCP server supports two authentication methods.
 
 ## Available Tools
 
-The MCP server currently exposes tools for searching and retrieving events.
+The MCP server exposes tools across the full PredictHQ API surface:
 
-A full suite of tools covering all PredictHQ APIs - including Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area - is launching shortly. This page will be updated when available.
+* **Events** - search and count events
+* **Broadcasts** - search and count live TV broadcasts
+* **Features** - retrieve aggregated ML-ready demand intelligence features
+* **Saved Locations** - create and manage locations, retrieve insight events, opening hours, and closures
+* **Beam** - create and manage analyses and analysis groups, upload demand data, and retrieve feature importance and correlation results
+* **Forecasts** - create and manage forecast models, upload demand data, train models, and retrieve forecasts with explainability
+* **Predicted Impact Area** - get predicted impact areas by location and industry
+* **Places & Geocoding** - search places, look up place hierarchies, and geocode addresses
+
+## Access & Subscription
+
+Access to the MCP server is subject to your PredictHQ subscription. The MCP also enforces the same data access controls as the REST API - if your plan covers a specific set of locations or event categories, those same limits apply when using MCP.
+
+If you don't yet have access to the MCP server, contact your PredictHQ account manager.
 
 ## Connect Your AI Client
 
