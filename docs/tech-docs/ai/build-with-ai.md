@@ -10,19 +10,11 @@ AI assistants can query PredictHQ's APIs in natural language, search the documen
 
 ## MCP Server
 
-Connect any MCP-compatible AI assistant to PredictHQ's live APIs. Once connected, you can search events, retrieve demand intelligence, and work with Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area through natural language - without leaving your AI client or writing API calls manually.
+Connect any MCP-compatible AI assistant to PredictHQ's live APIs. Once connected, you can search events, retrieve demand intelligence, work with Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area, and search PredictHQ's technical documentation - all through natural language, without leaving your AI client or writing API calls manually.
 
 Supported clients include Claude, ChatGPT, Claude Code, Cursor, and any other client that supports the Model Context Protocol.
 
 [Set up the MCP Server →](mcp.md)
-
-## Tech Docs MCP Server
-
-Give your AI coding assistant access to PredictHQ's documentation while you build. Your agent can look up API parameters, find code examples, and surface integration guidance in context - without switching to a browser.
-
-The Tech Docs MCP server is publicly accessible with no authentication required.
-
-[Set up the Tech Docs MCP Server →](/broken/pages/nzLd3spwPoYr5B9WVgIy)
 
 ## Agent Skills
 
