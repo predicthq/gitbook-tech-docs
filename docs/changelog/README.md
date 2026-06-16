@@ -7,6 +7,12 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-06-16" tags="enhancement,developer-tools" %}
+## MCP Server - Tech Docs Search
+
+The PredictHQ MCP server now includes tools for searching and retrieving PredictHQ's technical documentation. AI assistants and coding agents can look up API parameters, integration guides, tutorials, and conceptual content directly through the MCP - without leaving the AI client or switching to a browser.
+{% endupdate %}
+
 {% update date="2026-06-04" tags="new-feature,developer-tools" %}
 ## MCP Server - Full API Coverage
 
