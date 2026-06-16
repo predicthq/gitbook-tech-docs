@@ -22,7 +22,7 @@ Give your AI coding assistant access to PredictHQ's documentation while you buil
 
 The Tech Docs MCP server is publicly accessible with no authentication required.
 
-[Set up the Tech Docs MCP Server →](tech-docs-mcp-server.md)
+[Set up the Tech Docs MCP Server →](/broken/pages/nzLd3spwPoYr5B9WVgIy)
 
 ## Agent Skills
 

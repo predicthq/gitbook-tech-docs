@@ -38,6 +38,7 @@ The MCP server exposes tools across the full PredictHQ API surface:
 * **Forecasts** - create and manage forecast models, upload demand data, train models, and retrieve forecasts with explainability
 * **Predicted Impact Area** - get predicted impact areas by location and industry
 * **Places & Geocoding** - search places, look up place hierarchies, and geocode addresses
+* **Tech Docs** - search PredictHQ's technical documentation and retrieve individual pages, covering API references, integration guides, tutorials, and conceptual content
 
 ## Access & Subscription
 

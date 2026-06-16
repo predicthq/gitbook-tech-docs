@@ -45,7 +45,7 @@ These buttons link to the screens shown in the following section.
 
 Below is a fictitious example app with examples of adding buttons for the two types of Loop Feedback
 
-<figure><img src="../../.gitbook/assets/example-app-with-loop-links (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt=""><figcaption></figcaption></figure>
 
 The diagram below shows how your app will integrate with the Loop Links event pages:
 
@@ -165,4 +165,4 @@ The Loop forms require a user email address. You can pre-populate the email addr
 
 * Loop Links can be reused unless an expiry date time is set
 * If an expiry date time is set they can no longer be used after they expire
-* If no expiry date time is set they can be reused indefinitely&#x20;
+* If no expiry date time is set they can be reused indefinitely
