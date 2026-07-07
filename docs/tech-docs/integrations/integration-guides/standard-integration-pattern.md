@@ -4,7 +4,7 @@ This page describes the recommended architecture for integrating PredictHQ into 
 
 ## Overview
 
-A PredictHQ integration has four logical components on the customer side:
+A PredictHQ integration has four logical components on your side:
 
 1. **Location & Beam Management** — creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
 2. **ML Features Management** — fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
@@ -17,7 +17,7 @@ The key principle across all of these: **store a local copy and query that, rath
 
 The diagram below is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
 
-Use this as the starting point when designing or reviewing a customer integration. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable.
+Use this as the starting point when designing your integration. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable.
 
 ```mermaid
 ---
