@@ -24,7 +24,7 @@ Use this as the starting point when designing your integration - your Solutions 
 ```mermaid
 ---
 config:
-  layout: dagre
+  layout: elk
 ---
 flowchart TB
  subgraph PredictHQ["**PredictHQ Platform**"]
