@@ -11,13 +11,15 @@ A PredictHQ integration has four logical components on your side:
 3. **Events Management** — fetches relevant events per location for explainability and operational context, refreshed daily or weekly
 4. **Forecasting & Decision System** — consumes features for model training and inference and surfaces events alongside results for explainability
 
+We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
+
 The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence.
 
 ## Architecture Diagram
 
 The diagram below is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
 
-Use this as the starting point when designing your integration. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable.
+Use this as the starting point when designing your integration - your Solutions Engineer can help tailor it to your specific locations, industry, and forecasting setup. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable.
 
 ```mermaid
 ---
