@@ -15,6 +15,7 @@
   * [Which API Should I Use?](getting-started/core-concepts/which-api-should-i-use.md)
   * [Industry-Tuned Predictions](getting-started/core-concepts/industry-tuned-predictions.md)
   * [Understanding Demand Variability and Event Contribution in Beam](getting-started/core-concepts/understanding-demand-variability-and-event-contribution-in-beam.md)
+  * [Data Leakage in Backtesting: Why It Doesn't Affect Forecast Accuracy](getting-started/core-concepts/data-leakage-in-backtesting.md)
 * [Glossary](getting-started/glossary.md)
 * [Data Science Notebooks](getting-started/data-science-notebooks.md)
 * [PredictHQ Data](getting-started/predicthq-data/README.md)
