@@ -7,6 +7,14 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
+## Bolt - Notebook Sharing and UI enhancements
+
+Bolt notebooks can now be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
+
+Bolt's interface has also been improved to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
+{% endupdate %}
+
 {% update date="2026-06-16" tags="enhancement,developer-tools" %}
 ## MCP Server - Tech Docs Search
 
