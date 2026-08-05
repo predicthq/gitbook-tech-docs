@@ -7,6 +7,14 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
+## Cricket Predicted Attendance - Accuracy Improvements in the UK & Australia
+
+Predicted Attendance for cricket events in the UK and Australia is now more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions now capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
+
+If you have locations near cricket grounds, this improves match-day demand forecasts and makes each fixture's expected impact easier to explain.
+{% endupdate %}
+
 {% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
 ## Bolt - Notebook Sharing and UI enhancements
 
