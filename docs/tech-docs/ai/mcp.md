@@ -58,7 +58,7 @@ Claude has native MCP support via Connectors. This is the lowest-friction setup 
 
 Once connected, PredictHQ tools are available in any Claude conversation.
 
-For full instructions, see [Claude's connector documentation](https://support.claude.ai/hc/en-us/articles/connecting-mcp-servers).
+For full instructions, see [Claude's connector documentation](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp).
 
 ### Claude Code
 
