@@ -87,7 +87,7 @@ For agents running autonomously, use Bearer token authentication. Bearer tokens 
 Authorization: Bearer $API_TOKEN
 ```
 
-Create an API token in the [PredictHQ WebApp](https://claude.ai/getting-started/api-quickstart). OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
+[Create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating). OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
 
 ### MCP Server URL
 
