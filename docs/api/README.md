@@ -4,9 +4,10 @@ PredictHQ provides structured, verified real-world context and demand-aware feat
 
 See how others are using it on our [use cases page](https://www.predicthq.com/use-cases).
 
-### Core APIs <a href="#core-apis" id="core-apis"></a>
+## Core APIs
 
-* [Events API](events/search-events.md) - Clean and enriched real-world event data
-* [Features API](features/get-features.md) - Pre-aggregated ML features
-* [Forecasts API](/broken/pages/aOq4onBXbrd6LJ5DY78J) - Demand forecasting, out of the box
-* [Beam API](/broken/pages/T8ejWev7vPlFPUOoKvMm) - Filter out the noise
+* [Events API](events/search-events.md) - Structured, deduplicated real-world events for discovery, explainability, and building trust in AI-driven decisions
+* [Features API](features/get-features.md) - Pre-built, model-ready demand features aggregated from real-world events
+* [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Event-driven demand forecasts without building or maintaining your own model
+* [Beam API](beam/overview.md) - Identify the real-world events that materially move your demand
+* [Saved Locations API](saved-locations/overview.md) - Define and manage reusable business locations for consistent querying across Events, Features, Beam, and Forecasts APIs
