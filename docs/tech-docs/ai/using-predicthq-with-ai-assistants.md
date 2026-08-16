@@ -1,3 +1,10 @@
+---
+description: >-
+  How AI assistants and agents retrieve verified real-world event context from
+  PredictHQ at inference time to ground responses, forecasts, and
+  recommendations.
+---
+
 # Using PredictHQ with AI Assistants
 
 PredictHQ provides structured real-world context that AI assistants and agent-based systems can retrieve at inference time - grounding responses, forecasts, and recommendations in verified, location-specific event data.
