@@ -69,7 +69,7 @@ With this API query string, event data can start to be loaded into Microsoft Exc
 
 First, create a new Spreadsheet. Click on the Data tab and choose Get Data as shown below:
 
-<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
 Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
@@ -80,7 +80,7 @@ Add the HTTP request header with the following information:
    1. Put `Authorization` in the first field
    2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PHQ API Access Token. Just replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
-      ![](<../../../.gitbook/assets/image (90).png>)\\
+      ![](<../../../.gitbook/assets/image (83).png>)\\
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
@@ -157,6 +157,6 @@ Click Close & Apply and wait for the data transformation to finish processing th
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Microsoft Excel. You should see a Spreadsheet like that shown below:
 
-<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 You now have a connection to the API that you can refresh to get updated data.
