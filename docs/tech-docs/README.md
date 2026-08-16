@@ -13,7 +13,7 @@ Everything you need to integrate PredictHQ into your models, pipelines, and AI s
 * [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) - Structured, deduplicated real-world events for discovery, explainability, and building trust in AI-driven decisions
 * [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) - Pre-built, model-ready demand features aggregated from real-world events
 * [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Event-driven demand forecasts without building or maintaining your own model
-* [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) - Identify the real-world events that materially move your demand
+* [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview) - Identify the real-world events that materially move your demand
 * [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) - Define and manage reusable business locations for consistent querying across Events, Features, Beam, and Forecasts APIs
 
 ## How It Fits Together
