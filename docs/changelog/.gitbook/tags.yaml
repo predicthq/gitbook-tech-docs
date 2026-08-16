@@ -12,8 +12,13 @@
 - tag: new-api
   label: New API
   color: violet
+- tag: deprecation
+  label: Deprecation
+  color: orange
 - tag: beam
   label: Beam
+- tag: broadcasts
+  label: Broadcasts
 - tag: events-api
   label: Events API
 - tag: features-api
@@ -26,3 +31,9 @@
   label: Developer Tools
 - tag: webapp
   label: WebApp
+- tag: data-delivery
+  label: Data Delivery
+- tag: loop
+  label: Loop
+- tag: places
+  label: Places
