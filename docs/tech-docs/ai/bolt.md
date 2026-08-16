@@ -12,7 +12,7 @@ Bolt combines a conversational AI interface with a persistent notebook of intera
 Bolt is currently in beta - please use the 👍 / 👎 feedback buttons in the interface to help us improve it
 {% endhint %}
 
-### What You Can Do
+## What You Can Do
 
 **Explore PredictHQ data through conversation.** Ask about events, demand signals, locations, and forecast inputs in plain language. Bolt queries PredictHQ's APIs on your behalf and returns real results - not synthetic examples.
 
@@ -22,7 +22,7 @@ Bolt is currently in beta - please use the 👍 / 👎 feedback buttons in the i
 
 **Work iteratively.** Cards persist across the session and accumulate in the notebook as the conversation progresses. Follow up, refine, and drill down - the notebook becomes an artefact you can revisit and share with your team.
 
-### How It Works
+## How It Works
 
 Bolt's interface has two panels that work together.
 
@@ -36,7 +36,7 @@ The **notebook panel** is where results appear as cards. Each card has three tab
 
 Cards are managed by Bolt as the conversation evolves - cards that are no longer relevant are collapsed, while cards you pin stay in view. The notebook is the persistent artefact; the chat is how you drive it.
 
-### PredictHQ Best Practices Built In
+## PredictHQ Best Practices Built In
 
 Bolt is configured with PredictHQ's integration best practices. It follows the recommended workflow automatically:
 
@@ -48,7 +48,7 @@ Bolt is configured with PredictHQ's integration best practices. It follows the r
 
 This means Bolt produces better results out of the box than querying the APIs directly without guidance - and helps you understand why each step matters as you work through it.
 
-### Getting Started
+## Getting Started
 
 Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bolt). Select **Bolt** from the navigation to open the interface.
 
@@ -60,7 +60,7 @@ Start by describing your use case or location - for example:
 
 Bolt will guide you from there.
 
-### Next Steps
+## Next Steps
 
 * [MCP Server](mcp.md) - connect Bolt's capabilities to your own AI assistant or coding environment
 * [Agent Skills](build-with-ai.md#agent-skills) - install PredictHQ best practices into your AI coding agent
