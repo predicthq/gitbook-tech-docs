@@ -1,5 +1,7 @@
 ---
-description: The largest and most accurate source of global real-world event data.
+description: >-
+  Verified real-world events for grounding AI systems, explaining forecasts, and
+  retrieval at decision time—structured, deduplicated, and enriched.
 ---
 
 # Search Events

@@ -1,10 +1,12 @@
 ---
-description: Prebuilt event-based features for Machine Learning models.
+description: >-
+  Model-ready features engineered from real-world events. Train forecasting
+  models on historical windows and retrieve future-dated values at inference.
 ---
 
 # Get ML Features
 
-Access prebuilt event-based Machine Learning features that will take your forecast models and results to the next level, fast.&#x20;
+Access prebuilt event-based Machine Learning features that will take your forecast models and results to the next level, fast.
 
 We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 
