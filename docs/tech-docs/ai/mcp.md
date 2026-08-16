@@ -79,7 +79,7 @@ claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp \
   --header "Authorization: Bearer $API_TOKEN"
 ```
 
-For full instructions, see [Claude Code MCP documentation](https://docs.anthropic.com/en/docs/claude-code/mcp).
+For full instructions, see [Claude Code MCP documentation](https://code.claude.com/docs/en/mcp).
 
 ### ChatGPT
 
