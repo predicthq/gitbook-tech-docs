@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [How to use PredictHQ](getting-started/how-to-use-predicthq.md)
 * [Swagger UI](https://api.predicthq.com/docs/)
 * [Loop](https://loop.predicthq.com)
 * [System Status](https://www.predicthqstatus.com)

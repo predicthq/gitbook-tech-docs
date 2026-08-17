@@ -1,8 +1,7 @@
 ---
 description: >-
   How AI assistants and agents retrieve verified real-world event context from
-  PredictHQ at inference time to ground responses, forecasts, and
-  recommendations.
+  PredictHQ at inference time to ground responses and reduce hallucinations.
 ---
 
 # Using PredictHQ with AI Assistants
@@ -18,7 +17,7 @@ AI assistants frequently encounter questions such as:
 * Why are prices elevated this weekend?
 * What events could impact staffing levels?
 
-Without structured context, language models generate plausible explanations based on general knowledge. These responses may be incomplete, outdated, or misaligned with the specific location and time window in question.
+Without structured context, language models hallucinate: they generate plausible explanations from general knowledge that may be incomplete, outdated, or misaligned with the specific location and time window in question. Grounding responses in verified real-world context reduces these hallucinations: the model answers from facts it retrieved, not facts it invented.
 
 PredictHQ supplies:
 

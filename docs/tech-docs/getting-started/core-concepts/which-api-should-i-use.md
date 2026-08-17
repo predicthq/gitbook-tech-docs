@@ -1,6 +1,6 @@
 # Which API Should I Use?
 
-PredictHQ has four core APIs. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
+PredictHQ has four core APIs, plus an MCP server for AI assistants and agents. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
 
 ## The Short Answer
 
@@ -13,6 +13,8 @@ PredictHQ has four core APIs. Choosing the right one for each task is the most i
 | Build a dashboard showing upcoming events             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
 | Explain a forecast spike to a stakeholder             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
 | Identify which event types drive demand at a location | [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)                                     |
+| Ground an LLM or agent inside your own environment    | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) synced to a local store (internal grounding) |
+| Give an AI agent on-demand access to verified context | [MCP server](../../ai/mcp.md) (external grounding)                                                           |
 
 ## Features API - for forecasting and ML
 
@@ -63,6 +65,17 @@ Beam should be run once per location and refreshed monthly. It is required for a
 * [Beam API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)
 * [What is Beam?](what-is-beam.md)
 
+## MCP server - for grounding AI assistants and agents
+
+Use the MCP server when an AI assistant or agent needs verified real-world context on demand - external grounding. It exposes the full API surface through tool calling with the same entitlements as the REST API, and there is no data pipeline to maintain.
+
+To ground AI systems inside your own environment instead (internal grounding), sync the Events API into a local store and retrieve from it at answer time - the same store the Standard Integration Pattern uses for explainability.
+
+The MCP server is the grounding path, not the bulk path: for training-scale feature retrieval, use the Features API directly.
+
+* [MCP Server](../../ai/mcp.md)
+* [Using PredictHQ with AI Assistants](../../ai/using-predicthq-with-ai-assistants.md)
+
 ## Common Mistakes
 
 * **Using the Events API for ML features** - The Events API returns individual event records. Aggregating these manually introduces errors in multi-day event handling, lead/lag effects, and rank filtering. Use the Features API instead.
@@ -71,6 +84,7 @@ Beam should be run once per location and refreshed monthly. It is required for a
 
 ## See Also
 
+* [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended integration paths, by job
 * [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture
 * [API Quickstart](../api-quickstart.md) - make your first API call
 * [Glossary](../glossary.md) - definitions for all core concepts
