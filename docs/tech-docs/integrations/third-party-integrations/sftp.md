@@ -1,12 +1,12 @@
 # Receive Data via SFTP
 
-PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files. This is a good option if you want file-based delivery without using AWS Data Exchange or APIs.
+PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files - deploying verified real-world context into your environment when Snowflake or AWS Data Exchange aren't options. The result is the same: an always-current local dataset for [model training and internal grounding](../integration-guides/standard-integration-pattern.md#grounding-paths), governed by you.
 
 SFTP delivery follows the same full + incremental data model used by our other bulk data integrations.
 
 ## Overview
 
-When integrating via SFTP, PredictHQ delivers data as a feed of files. Here’s what you can expect (same delivery model as our AWS Data Exchange exports):
+When integrating via SFTP, PredictHQ delivers data as full and incremental file exports (same delivery model as our AWS Data Exchange exports). Here’s what you can expect:
 
 * **Initial Full Dump**: upon setup, you will receive a full dataset covering all records you have access to.
 * **Incremental Updates**: after the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.

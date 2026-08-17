@@ -8,15 +8,15 @@ description: >-
 # Keep Data Updated via API
 
 {% hint style="success" %}
-We highly recommend using Snowflake or ADX to keep your copy of PredictHQ event data up-to-date. Using one of those methods removes all the complexity of having to implement a system using the API and results in far higher accuracy with fewer issues. Keeping up-to-date via the API is much more complicated than via Snowflake or ADX.
+We highly recommend using Snowflake or ADX to keep your local event store up to date. Managed delivery removes all the complexity of implementing a sync system against the API and results in far higher accuracy with fewer issues. Keeping up to date via the API is much more complicated than via Snowflake or ADX.
 {% endhint %}
 
-Events often change or get deleted because they’re cancelled, postponed, marked as duplicates or identified as spam. In February 2020, concerns about COVID-19 led to a 500% spike in cancellations and postponements of significant events when compared to February 2019. It’s important to make sure you keep your copy of PredictHQ in-sync with ours to stay up-to-date.
+Events change constantly: dates move, events are cancelled or postponed, attendance predictions are revised, and records are merged as duplicates or removed as spam. A stale local store degrades everything built on it - models score against outdated signals, and grounded AI systems answer from events that no longer exist. Keeping your store in sync is what keeps those outputs true.
 
 Our records have an `updated` field which indicates the date/time the record was last updated.
 
 {% hint style="info" %}
-For example an event for a conference that starts on 1 April 2020 may originally be created in our system on 1 Jan 2020. Then the event’s details don’t change until the 5 Feb 2020 when the event is cancelled. The event’s state field is then changed to `deleted` and the `deleted_reason` is changed to `cancelled`. The event’s updated field would show `2020-02-05T05:00:00Z` (for the cancellation change made to the event on 5 Feb 2020).
+For example an event for a conference that starts on 1 April 2026 may originally be created in our system on 1 Jan 2026. Then the event’s details don’t change until the 5 Feb 2026 when the event is cancelled. The event’s state field is then changed to `deleted` and the `deleted_reason` is changed to `cancelled`. The event’s updated field would show `2026-02-05T05:00:00Z` (for the cancellation change made to the event on 5 Feb 2026).
 {% endhint %}
 
 ## High-level Guide to Keeping Data Updated
@@ -41,8 +41,8 @@ response = requests.get(
       "Accept": "application/json"
     },
     params={
-        "updated.gte" : "2023-07-01",
-        "updated.lte" : "2023-07-10",
+        "updated.gte" : "2026-07-01",
+        "updated.lte" : "2026-07-10",
         "state" : "active,deleted",
         "sort": "-updated",
         "limit": 500

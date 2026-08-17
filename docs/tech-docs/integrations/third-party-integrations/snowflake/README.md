@@ -1,8 +1,8 @@
 # Receive Data via Snowflake
 
-Snowflake Secure Data Share enables companies to access PredictHQ’s data in a controlled and efficient way. Access to a Secure Share of our events means you will experience a familiar and high-performance SQL interface with an up-to-date, clean, and complete set of PredictHQ’s data.
+Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, governed by your own access controls. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/standard-integration-pattern.md#grounding-paths).
 
-This means you can immediately incorporate the data into your models, removing or greatly simplifying the need for ELT/ETL processes to pull event data into your data warehouse. You can check out [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
+Delivery is managed by PredictHQ, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
 
 ## Sample Data Shares
 
