@@ -8,7 +8,7 @@ description: >-
 
 ## Beam
 
-Beam is a demand calibration engine that identifies which types of real-world events materially impact your historical demand at a specific location.
+Beam is PredictHQ's relevancy engine: it identifies which types of real-world events materially impact your historical demand at a specific location.
 
 Event-driven demand is sparse and uneven. A small number of events create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
 
@@ -201,7 +201,7 @@ Existing integrations using Suggested Radius will continue to work, but new inte
 
 ## Time series foundation model
 
-Time series foundation models—such as Chronos, TimesFM, TabFM, and TimeGPT—are pre-trained forecasting models applied zero-shot or with light fine-tuning, with no per-location model training required. They learn temporal patterns across millions of series, which lowers the cost of deploying forecasts at scale.
+Time series foundation models—such as Chronos, TimesFM, and TimeGPT—are pre-trained forecasting models applied zero-shot or with light fine-tuning, with no per-location model training required. They learn temporal patterns across millions of series, which lowers the cost of deploying forecasts at scale.
 
 What they don't learn is real-world drivers. Pre-training corpora are dominated by generic numeric sequences, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. PredictHQ features fill that gap: pass forward-dated Features API output (keyed by a `beam.analysis_id`) as future covariates alongside your demand history.
 

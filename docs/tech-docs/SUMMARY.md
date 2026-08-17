@@ -61,6 +61,7 @@
     * [Increase Accuracy with the Features API](getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api.md)
     * [Get ML Features](getting-started/guides/features-api-guides/feature-engineering-guide.md)
     * [Demand Forecasting with Event Features](getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md)
+    * [Using event features with time series foundation models](getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models.md)
   * [Forecasts API Guides](getting-started/guides/forecasts-api-guides/README.md)
     * [Getting Started with Forecasts API](getting-started/guides/forecasts-api-guides/getting-started.md)
     * [Understanding Forecast Accuracy Metrics](getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics.md)

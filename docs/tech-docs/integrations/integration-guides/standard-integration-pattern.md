@@ -120,7 +120,7 @@ The decision or end-user system consumes:
 | --------------- | -------------------- | --------------------------------------------------------- |
 | Saved Locations | Monthly or as needed | Refresh monthly or if the location itself changes         |
 | Beam Analysis   | Monthly              | Append demand data to existing analysis - do not recreate |
-| ML Features     | Daily or weekly      | Align with model training / inference cycle               |
+| ML Features     | Daily or weekly      | Align with model training / inference cycle. Future-dated values are revised continuously - new events are announced, attendance predictions update - so refresh ahead of each forecast run rather than caching |
 | Events          | Daily or weekly      | Align with operational review cadence                     |
 
 ***

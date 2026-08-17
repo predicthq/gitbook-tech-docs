@@ -10,6 +10,32 @@ Access prebuilt event-based Machine Learning features that will take your foreca
 
 We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 
+## Training and inference windows
+
+The Features API serves both halves of a forecasting integration with the same call - only the direction of the `active` window changes.
+
+**Training** - retrieve historical features to train your model alongside your demand history:
+
+```json
+{
+  "beam": { "analysis_id": "$ANALYSIS_ID" },
+  "active": { "gte": "$TRAINING_START", "lte": "$NOW" }
+}
+```
+
+**Inference** - events are known in advance, so point the same window forward to retrieve real demand signals for the dates you are forecasting. Run this on every forecast cycle:
+
+```json
+{
+  "beam": { "analysis_id": "$ANALYSIS_ID" },
+  "active": { "gte": "$NOW", "lte": "$FORECAST_END" }
+}
+```
+
+The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam analysis is refreshed, retrain before pointing the serving path at it.
+
+Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard Integration Pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
+
 {% openapi-operation spec="features-api" path="/v1/features/" method="post" %}
 [OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
 {% endopenapi-operation %}

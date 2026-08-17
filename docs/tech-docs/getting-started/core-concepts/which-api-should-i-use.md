@@ -54,7 +54,7 @@ The Events API is not designed for generating model inputs. Do not loop over eve
 
 ## Beam - for demand calibration
 
-Beam is not a data retrieval API - it is a demand calibration engine that tells you which event types drive demand at each of your locations.
+Beam is not a data retrieval API - it is PredictHQ's relevancy engine, which tells you which event types drive demand at each of your locations.
 
 Run Beam before building forecasts or configuring the Features API. The `analysis_id` Beam produces is the key input to both the Features API and Events API, automatically applying the correct location boundary, event category filters, and rank thresholds.
 
