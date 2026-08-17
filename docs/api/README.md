@@ -6,8 +6,10 @@ See how others are using it on our [use cases page](https://www.predicthq.com/us
 
 ## Core APIs
 
-* [Events API](events/search-events.md) - Structured, deduplicated real-world events for discovery, explainability, and building trust in AI-driven decisions
+* [Events API](events/search-events.md) - Structured, deduplicated real-world events for grounding AI systems, explaining forecasts, and building trust in AI-driven decisions
 * [Features API](features/get-features.md) - Pre-built, model-ready demand features aggregated from real-world events
 * [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Event-driven demand forecasts without building or maintaining your own model
 * [Beam API](beam/overview.md) - Identify the real-world events that materially move your demand
 * [Saved Locations API](saved-locations/overview.md) - Define and manage reusable business locations for consistent querying across Events, Features, Beam, and Forecasts APIs
+
+Building with AI? Start with [Build with AI](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/build-with-ai): the MCP server for grounded access to all of these APIs at inference time, and agent skills that teach AI coding assistants the recommended integration patterns.

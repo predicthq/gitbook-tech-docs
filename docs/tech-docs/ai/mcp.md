@@ -1,17 +1,20 @@
 ---
 description: >-
-  Query PredictHQ's APIs through any MCP-compatible AI assistant using natural
-  language.
+  Connect AI agents to verified real-world event context on demand. External
+  grounding for LLMs via the Model Context Protocol—no data pipeline to
+  maintain.
 ---
 
 # MCP Server
 
 The PredictHQ MCP server connects AI assistants and agent-based systems directly to PredictHQ's APIs using the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) - an open standard for giving AI systems access to external tools and data at inference time.
 
-Once connected, your AI assistant can search events, retrieve demand intelligence, and access PredictHQ's full API surface through natural language - without leaving your AI client or writing API calls manually.
+This is PredictHQ's **external grounding** path: your agents retrieve verified real-world context at the moment they answer, and hold no copy of anything. Once connected, your AI assistant can search events, retrieve demand intelligence, and access PredictHQ's full API surface through natural language.
+
+MCP is the grounding path, not the bulk path. For training-scale feature retrieval, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). To maintain a verified event store inside your own environment (**internal grounding**), see the [data delivery integrations](../integrations/third-party-integrations/).
 
 {% hint style="success" %}
-PredictHQ MCP is currently in beta - functionality may change as we continue to develop and refine it.
+PredictHQ MCP is in beta - functionality may change as we continue to develop and refine it.
 {% endhint %}
 
 ## Server Details

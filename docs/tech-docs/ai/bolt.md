@@ -1,15 +1,17 @@
 ---
 description: >-
-  An AI-native notebook for exploring and building with PredictHQ - available
-  inside the PredictHQ WebApp.
+  An AI-native notebook inside the PredictHQ WebApp. Bolt answers from live
+  PredictHQ API data—a working example of a grounded agent.
 ---
 
 # Bolt
 
 Bolt combines a conversational AI interface with a persistent notebook of interactive cards. Ask questions in natural language, and Bolt retrieves real data from PredictHQ's APIs, guides you toward the right products for your situation, and surfaces results as cards you can explore, share, and take directly into your integration.
 
+Bolt is also a working example of **grounding**: it answers from verified, live PredictHQ data retrieved at the moment you ask—not from what a model guesses. The same capability is available to your own AI stack through the [MCP server](mcp.md).
+
 {% hint style="success" %}
-Bolt is currently in beta - please use the 👍 / 👎 feedback buttons in the interface to help us improve it
+Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help us improve it
 {% endhint %}
 
 ## What You Can Do

@@ -1,5 +1,7 @@
 ---
-description: Using the PredictHQ MCP server in autonomous agentic workflows.
+description: >-
+  Reference architectures for autonomous agents that query the PredictHQ MCP
+  server for verified demand context at decision time.
 ---
 
 # PredictHQ MCP in Agentic Workflows

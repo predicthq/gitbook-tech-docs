@@ -1,12 +1,14 @@
 ---
 description: >-
-  Tools and resources for building PredictHQ integrations with AI assistants and
-  coding agents.
+  Ground AI systems in verified real-world event data and build integrations
+  faster with the MCP server, agent skills, and AI-readable docs.
 ---
 
 # Build with AI
 
 AI assistants can query PredictHQ's APIs in natural language, search the documentation while you code, and follow best practice integration patterns automatically - reducing the time from first API call to a production-ready integration.
+
+These tools serve two distinct jobs: AI that helps you _build_ your integration (coding assistants, agent skills), and AI that PredictHQ _grounds_—assistants and agents retrieving verified real-world context at inference time.
 
 ## MCP Server
 
