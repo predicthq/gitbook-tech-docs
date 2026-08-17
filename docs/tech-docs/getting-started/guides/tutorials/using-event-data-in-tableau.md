@@ -55,10 +55,6 @@ For guidance on finding the most relevant events for your business, see [filteri
 4. Download Link: Once the export is ready, the dialog box will update with a download link. The link will also be sent via email.
 5. Save Export: Download the file and save it to a directory for later use.
 
-{% hint style="info" %}
-For more information on using our WebApp Search and exporting files, see [Broken link](/broken/pages/f979TfIoHXV79mSbJoBZ "mention").
-{% endhint %}
-
 ### Connect in Tableau
 
 **Connect to File**
