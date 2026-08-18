@@ -49,12 +49,13 @@ The Forecasts API also fits multi-model setups: run it as one candidate in a cha
 
 For ML platform and agent teams whose LLMs or agents make demand-related decisions, where an AI hallucination (a confident, plausible, wrong answer) carries real cost.
 
-Grounding gives a model verified real-world facts at the moment it answers, so it responds from what is true instead of hallucinating. Retrieval-augmented generation (RAG) is one technique for achieving it. PredictHQ supports two grounding architectures; they are alternatives to each other, and which one fits is mostly a governance and maintenance question:
+Grounding gives a model the real-world facts it lacks at the moment it answers, so it responds from what is true instead of hallucinating. Retrieval-augmented generation (RAG) is one technique for achieving it. PredictHQ supports two grounding architectures; most deployments choose one, and which fits is mostly a governance and maintenance question:
 
 * **Internal grounding** - verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
-* **External grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters and your stack already speaks tool-calling.
+* **External grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
-* [Using PredictHQ with AI Assistants](../ai/using-predicthq-with-ai-assistants.md)
+* [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md) - concepts, architectures, and FAQ
+* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
 * [PredictHQ MCP in Agentic Workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
 
 ## Understand what drives your demand

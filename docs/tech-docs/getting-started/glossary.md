@@ -49,13 +49,14 @@ The Forecasts API is appropriate when rapid time-to-value is the priority, or wh
 
 ## Grounding (RAG)
 
-Grounding is giving a model verified real-world facts it does not hold, at the moment it answers, so it reasons from what is true instead of what it guesses. It is the primary way to reduce AI hallucinations: the confident, plausible answers a model invents where it lacks real-world facts. Retrieval-augmented generation (RAG) is the most common technique for grounding: retrieving relevant context and supplying it to the model at inference time. Tool calling, where an agent queries an API at answer time, achieves the same outcome.
+Grounding is giving a model real-world facts it does not hold, at the moment it answers, so it reasons from what is true instead of what it guesses. It is the primary way to reduce AI hallucinations: the confident, plausible answers a model invents where it lacks real-world facts. Retrieval-augmented generation (RAG) is the most common technique for grounding: retrieving relevant context and supplying it to the model at inference time. Tool calling, where an agent queries an API at answer time, achieves the same outcome.
 
 PredictHQ supports two grounding architectures. **Internal grounding**: verified event context is delivered into your environment (via Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. **External grounding**: your agents query the PredictHQ MCP server on demand and hold no copy of anything.
 
 Grounding never touches the training model. Training improves a model before it runs; grounding supplies verified context while it runs. The two grounding architectures are alternatives to each other, not to training.
 
-* [Using PredictHQ with AI Assistants](../ai/using-predicthq-with-ai-assistants.md)
+* [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md)
+* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md)
 * [MCP Server](../ai/mcp.md)
 
 ## Inference

@@ -11,7 +11,7 @@ The PredictHQ MCP server connects AI assistants and agent-based systems directly
 
 This is PredictHQ's **external grounding** path: your agents retrieve verified real-world context at the moment they answer, and hold no copy of anything. Once connected, your AI assistant can search events, retrieve demand intelligence, and access PredictHQ's full API surface through natural language.
 
-MCP is the grounding path, not the bulk path. For training-scale feature retrieval, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). To maintain a verified event store inside your own environment (**internal grounding**), see the [data delivery integrations](../integrations/third-party-integrations/).
+MCP is the grounding path, not the bulk path. For training-scale feature retrieval, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). To retrieve from a verified event store inside your own environment instead, see [internal grounding](../integrations/integration-guides/internal-grounding.md).
 
 {% hint style="success" %}
 PredictHQ MCP is in beta - functionality may change as we continue to develop and refine it.

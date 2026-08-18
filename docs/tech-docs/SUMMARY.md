@@ -98,6 +98,7 @@
 ## AI & Agents <a href="#ai" id="ai"></a>
 
 * [Build with AI](ai/build-with-ai.md)
+* [Grounding LLMs in real-world event data (RAG)](ai/grounding-llms-in-real-world-data.md)
 * [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
 * [MCP Server](ai/mcp.md)
 * [PredictHQ MCP in Agentic Workflows](ai/predicthq-mcp-in-agentic-workflows.md)
@@ -107,6 +108,7 @@
 
 * [Integration Guides](integrations/integration-guides/README.md)
   * [Standard Integration Pattern](integrations/integration-guides/standard-integration-pattern.md)
+  * [Internal grounding: retrieval inside your environment](integrations/integration-guides/internal-grounding.md)
   * [Keep Data Updated via API](integrations/integration-guides/keep-data-updated-via-api.md)
   * [Integrate with Beam](integrations/integration-guides/beam-data-science-guide.md)
   * [Integrate with Loop Links](integrations/integration-guides/integrate-with-loop-links.md)

@@ -42,8 +42,8 @@ https://docs.predicthq.com/api/events/search-events.md
 
 A full index of all documentation pages is available at [/llms.txt](https://docs.predicthq.com/llms.txt).
 
-## Using PredictHQ with AI Assistants
+## Grounding
 
-New to using PredictHQ in AI workflows? The integration guide covers how PredictHQ fits into AI and agent-based systems - the architectural patterns, which APIs to use at inference time, and how to ground AI responses in verified real-world event context.
+New to grounding? [Grounding LLMs in real-world event data (RAG)](grounding-llms-in-real-world-data.md) covers what grounding is, how it reduces AI hallucinations, and the two architectures - retrieval inside your environment or on demand via MCP.
 
-[Read the guide →](using-predicthq-with-ai-assistants.md)
+For integration patterns and example workflows, see [Using PredictHQ with AI Assistants](using-predicthq-with-ai-assistants.md).
