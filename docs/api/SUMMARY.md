@@ -90,6 +90,7 @@
 
 ## Loop
 
+* [Overview](loop/overview.md)
 * [Loop Links](loop/loop-links/README.md)
   * [Create a Loop Link](loop/loop-links/create-a-loop-link.md)
   * [Search Loop Links](loop/loop-links/search-loop-links.md)
