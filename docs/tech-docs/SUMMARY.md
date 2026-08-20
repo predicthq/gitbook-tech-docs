@@ -102,6 +102,7 @@
 * [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
 * [MCP Server](ai/mcp.md)
 * [PredictHQ MCP in Agentic Workflows](ai/predicthq-mcp-in-agentic-workflows.md)
+* [Agent skills](ai/agent-skills.md)
 * [Bolt](ai/bolt.md)
 
 ## Integrations

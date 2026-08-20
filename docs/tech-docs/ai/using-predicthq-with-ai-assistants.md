@@ -93,4 +93,4 @@ Use PredictHQ when:
 
 * [Build with AI](build-with-ai.md) - tools and resources for building PredictHQ integrations with AI assistants and coding agents
 * [MCP Server](mcp.md) - connect an AI assistant to PredictHQ's APIs directly
-* [Agent Skills](build-with-ai.md#agent-skills) - install PredictHQ integration best practices into your coding agent
+* [Agent skills](agent-skills.md) - install PredictHQ integration best practices into your coding agent

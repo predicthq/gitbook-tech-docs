@@ -20,15 +20,13 @@ Supported clients include Claude, ChatGPT, Claude Code, Cursor, and any other cl
 
 ## Agent Skills
 
-Agent skills give your AI coding assistant specialised knowledge about how to integrate with PredictHQ correctly - the recommended workflow, API selection guidance, Beam best practices, and common mistakes to avoid.
-
-Once installed, the skill is applied automatically when you work on PredictHQ integrations. No prompting required.
+Agent skills give your AI coding assistant specialised knowledge about how to integrate with PredictHQ correctly - the recommended workflow, API selection guidance, Beam best practices, and common mistakes to avoid. Once installed, the skill is applied automatically when you work on PredictHQ integrations.
 
 ```bash
 npx skills add predicthq/agent-skills
 ```
 
-Works with Claude Code, Cursor, Gemini CLI, GitHub Copilot, and other compatible agents. Skills are available on [GitHub](https://github.com/predicthq/agent-skills).
+[Set up agent skills →](agent-skills.md)
 
 ## Plain Text Docs
 
