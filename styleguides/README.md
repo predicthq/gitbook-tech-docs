@@ -49,11 +49,12 @@ Terms inherited from the Google guide _(G-4)_. Delete any row you disagree with�
 
 **"Click" a button or link, not "click on"** _(G-7)_. ✅ "Click **Save**." ❌ "Click on **Save**."
 
-| Term                  | Use                   | Don't use           | Notes |
-| --------------------- | --------------------- | ------------------- | ----- |
-| Predicted Impact Area | Predicted Impact Area | Impact Area or PIA. |       |
-|                       |                       |                     |       |
-|                       |                       |                     |       |
+| Term                      | Use                       | Don't use            | Notes |
+| ------------------------- | ------------------------- | -------------------- | ----- |
+| Predicted Impact Area     | Predicted Impact Area     | Impact Area or PIA.  |       |
+| Predicted Impact Patterns | Predicted Impact Patterns | Impact Patterns      |       |
+| Predicted Attendance      | Predicted Attendance      | predicted attendance |       |
+|                           |                           |                      |       |
 
 ## Grammar and mechanics
 
