@@ -15,6 +15,8 @@ We've built up years of expertise in transforming real-world events into meaning
 
 Individual events are not directly usable in forecasting models.
 
+Correlating demand against individual events also runs into sparsity: a single event's spike rarely gives enough data points to prove anything. Aggregating by category at a daily level gives models the volume of observations that correlation requires.
+
 Events vary in duration, scale, timing, and expected impact. Multi-day events introduce lead and lag effects. Attendance and spend signals must be aggregated consistently. Overlapping events must be handled without distortion.
 
 Naïve aggregation often introduces noise.
@@ -38,6 +40,8 @@ The Features API:
 * Applies temporal impact patterns
 * Supports rank-based and attendance-based filtering
 * Returns daily or weekly feature values
+
+For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate predicted attendance of 150,000 across a hundred or more events - returned as one model-ready number per category, per day.
 
 It does not determine which features are relevant to your business. Relevance calibration is handled by Beam. The Features API focuses on transforming scoped events into structured numerical signals.
 

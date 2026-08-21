@@ -38,7 +38,7 @@ To view the code used to call the Features API, Events API, and other functions 
 * Alternatively, click 'Edit' in the cell menu.
 
 {% hint style="info" %}
-For more information on the Features API, see this [intro guide](../features-api-guides/increase-accuracy-with-the-features-api.md).
+For more information on the Features API, see [What is the Features API?](../../core-concepts/what-is-the-features-api.md)
 {% endhint %}
 
 ### Specifying Parameters

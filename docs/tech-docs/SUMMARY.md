@@ -62,7 +62,6 @@
     * [Displaying Events in a Heatmap Calendar](getting-started/guides/events-api-guides/displaying-events-in-a-heatmap-calendar.md)
     * [Displaying Events on a Map](getting-started/guides/events-api-guides/displaying-events-on-a-map.md)
   * [Features API Guides](getting-started/guides/features-api-guides/README.md)
-    * [Increase Accuracy with the Features API](getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api.md)
     * [Get ML Features](getting-started/guides/features-api-guides/feature-engineering-guide.md)
     * [Demand Forecasting with Event Features](getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md)
     * [Improving Demand Forecasting Models with Event Features](getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md)

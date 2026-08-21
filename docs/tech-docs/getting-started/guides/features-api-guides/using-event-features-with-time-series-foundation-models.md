@@ -40,5 +40,5 @@ Retrieve future features ahead of each forecast run rather than caching them: ne
 ## Related
 
 * [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) - available features and configuration
-* [Increase Accuracy with the Features API](increase-accuracy-with-the-features-api.md)
+* [What is the Features API?](../../core-concepts/what-is-the-features-api.md)
 * [Data Leakage in Backtesting](../../core-concepts/data-leakage-in-backtesting.md) - why forward-looking features don't leak future information into evaluation
