@@ -9,6 +9,8 @@
 ## Getting started
 
 * [API quickstart](getting-started/api-quickstart.md)
+* [Tutorials](getting-started/tutorials/README.md)
+  * [Measure the forecast lift on sample data](getting-started/tutorials/measure-the-forecast-lift.md)
 * [Core concepts](getting-started/core-concepts/README.md)
   * [Event-driven demand](getting-started/core-concepts/event-driven-demand.md)
   * [What is Beam?](getting-started/core-concepts/what-is-beam.md)
