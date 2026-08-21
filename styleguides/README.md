@@ -80,6 +80,7 @@ Terms inherited from the Google guide _(G-4)_. Delete any row you disagree with�
 | G-15 | UI elements | Bold UI element names as the user sees them, exact casing preserved           | ✅ Click **Create bucket**.                                                                                         |
 | G-16 | Links       | Descriptive link text; never "click here" or "this page"                      | ✅ See the \[authentication guide].                                                                                 |
 | G-17 | Lead-ins    | Introduce lists and code blocks with a sentence or fragment ending in a colon | ✅ "The response includes three fields:"                                                                            |
+| GB-1 | Page descriptions | Maximum 200 characters—GitBook cuts longer descriptions off mid-word at 200 when rendering the page (platform constraint, not Google style) | ✅ 194 characters ❌ 214 characters (renders as "…in your environment or on d") |
 
 ## Writing procedures
 
@@ -117,7 +118,7 @@ Terms inherited from the Google guide _(G-4)_. Delete any row you disagree with�
 
 Record every deliberate departure from Google style here, alongside other settled decisions, so debates don't reopen. Changing a rule above changes what the AI enforces; this log remembers why.
 
-<table><thead><tr><th width="132.89453125">Date</th><th width="252.62890625">Decision</th><th width="131.0703125">Differs from Google?</th><th>Rationale</th></tr></thead><tbody><tr><td>2026-08-17</td><td>Adopt Google Style Guide.</td><td></td><td></td></tr><tr><td>2026-08-21</td><td>Add PredictHQ terms and branded-terms capitalization to the word list.</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="132.89453125">Date</th><th width="252.62890625">Decision</th><th width="131.0703125">Differs from Google?</th><th>Rationale</th></tr></thead><tbody><tr><td>2026-08-17</td><td>Adopt Google Style Guide.</td><td></td><td></td></tr><tr><td>2026-08-21</td><td>Add PredictHQ terms and branded-terms capitalization to the word list.</td><td></td><td></td></tr><tr><td>2026-08-22</td><td>Cap page descriptions at 200 characters (GitBook truncation limit).</td><td></td><td></td></tr></tbody></table>
 
 ***
 
