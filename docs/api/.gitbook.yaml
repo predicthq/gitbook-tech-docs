@@ -1,0 +1,10 @@
+redirects:
+    api-changes: overview/api-changes.md
+    attribution: overview/attribution.md
+    authenticating: overview/authenticating.md
+    changes: overview/api-changes.md
+    errors: overview/troubleshooting.md
+    introduction: README.md
+    rate-limits: overview/rate-limits.md
+    requests: README.md
+    responses: README.md
