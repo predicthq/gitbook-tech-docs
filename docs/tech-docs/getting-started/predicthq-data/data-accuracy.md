@@ -18,4 +18,4 @@ Every event in our API goes through multiple steps to ensure quality and accurac
 
 **De-duplicating:** We combine duplicate records into one reliable event. E.g. Our system may find a football game with 30,000 expected attendees. It finds eight listings of this game from five different sources. Our unique model kicks in and keeps a single event with the aggregated detail from all of the listings.
 
-**Ranking:** See details above on what goes into our rankings. We track accuracy with a variety of metrics and we’re refining daily. The top metrics we track are: Spam rates, number of duplicated events, location and competitive comparison.
+**Ranking:** See [PHQ Rank](ranks/phq-rank.md) and [Local Rank](ranks/local-rank.md) for what goes into our rankings. We track accuracy with a variety of metrics and we’re refining daily. The top metrics we track are: Spam rates, number of duplicated events, location and competitive comparison.

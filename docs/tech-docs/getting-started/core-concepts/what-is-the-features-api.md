@@ -75,7 +75,7 @@ If you’re not using Beam, you can also configure inputs manually:
   * Choose from the full list of available features.
   * Some features have industry-specific variants that use your industry’s Predicted Impact Patterns to better reflect lead/lag behavior.
 * Stat types (per feature)
-  * For each feature, choose one or more stat types: `sum`, `avg`, `count`, `std_dev`, `min`, `max`.
+  * For each feature, choose which statistics to compute.
 * Granularity
   * Day or week intervals
 * Optional filters
@@ -85,60 +85,7 @@ If you’re not using Beam, you can also configure inputs manually:
 
 The Features API returns a time series of feature values for each date (or week) in your request, aligned to the timezone of the location.
 
-Each feature includes statistics (e.g. sum, avg, std\_dev) or level counts (e.g. for phq\_rank), depending on the field. The output is consistent across formats.
-
-#### Output Formats
-
-**JSON (default)**
-
-* Best for programmatic use.
-* Feature fields are nested by `<feature_name>` with their corresponding stats or rank\_levels.
-
-Example:
-
-```json
-{
-  "results": [
-    {
-      "date": "2019-11-16",
-      "phq_attendance_concerts": {
-        "stats": {
-          "count": 20,
-          "sum": 6751
-        }
-      },
-      "phq_rank_public_holidays": {
-        "rank_levels": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
-        }
-      }
-    },
-    ...
-  ]
-}
-```
-
-**CSV**
-
-* Best for spreadsheets or BI tools
-* One row per date, one column per stat-level feature
-* Column names use this pattern: `<feature_name>_stats_<stat>` or `<feature_name>_rank_levels_<rank_level>`
-
-Example:
-
-```csv
-date,phq_attendance_concerts_stats_count,phq_attendance_concerts_stats_sum,phq_attendance_conferences_stats_min,phq_attendance_conferences_stats_max,phq_attendance_sports_stats_count,phq_attendance_sports_stats_sum,phq_attendance_sports_stats_min,phq_attendance_sports_stats_max,phq_attendance_sports_stats_avg,phq_attendance_sports_stats_median,phq_attendance_sports_stats_std_dev,phq_rank_public_holidays_rank_levels_1,phq_rank_public_holidays_rank_levels_2,phq_rank_public_holidays_rank_levels_3,phq_rank_public_holidays_rank_levels_4,phq_rank_public_holidays_rank_levels_5
-2019-11-16,43,24546,11,1000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-17,25,13440,11,146,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-18,6,2021,11,700,0,0,0,0,0.0,0.0,,0,0,0,0,0
-2019-11-19,10,6047,11,171000,0,0,0,0,0.0,0.0,,0,0,0,0,0
-```
-
-Both formats are designed for downstream use with no extra post-processing - just plug into models, dashboards, or analysis workflows.
+Each feature includes statistics or level counts depending on the field, in JSON (best for programmatic use) or CSV (best for spreadsheets and BI tools). Both formats are designed for downstream use with no extra post-processing. For the exact field structure, column-naming pattern, and available stats, see the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features).
 
 ## Best Practices
 

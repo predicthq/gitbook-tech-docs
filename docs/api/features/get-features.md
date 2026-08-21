@@ -6,9 +6,7 @@ description: >-
 
 # Get ML Features
 
-Access prebuilt event-based Machine Learning features that will take your forecast models and results to the next level, fast.
-
-We've built up years of expertise in transforming raw event data into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
+The Features API delivers prebuilt, model-ready features aggregated from real-world events. Use it instead of aggregating raw events yourself - naïve aggregation produces noise rather than uplift.
 
 ## Training and inference windows
 

@@ -81,23 +81,11 @@ Tools: `features_api_get_features` (with `beam.analysis_id`), `events_api_list_e
 
 ## Setting Up for Agentic Use
 
-### Authentication
+### Connecting
 
-For agents running autonomously, use Bearer token authentication. Bearer tokens are configured at agent setup time and need no interactive login flow, which suits headless and scheduled workflows.
+For agents running autonomously, use Bearer token authentication: tokens are configured at agent setup time and need no interactive login flow, which suits headless and scheduled workflows. OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
 
-```
-Authorization: Bearer $API_TOKEN
-```
-
-[Create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating). OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
-
-### MCP Server URL
-
-```
-https://mcp.predicthq.com/v1/mcp
-```
-
-Transport: Streamable HTTP. Compatible with any agent framework that supports MCP over HTTP.
+The server URL, transport, and per-client setup are documented in the [MCP Server](mcp.md) reference, and you can [create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating) for Bearer authentication.
 
 ## Tool Selection for Agents
 

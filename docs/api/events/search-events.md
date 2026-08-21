@@ -17,11 +17,7 @@ Your subscription settings can be viewed in our [WebApp](https://control.predict
 {% endhint %}
 
 {% hint style="info" %}
-Best practice is to sync event data into your own data store and query your local copy at decision time—this is the **internal grounding** pattern: your models and AI systems retrieve verified event context from a store you govern, at inference time, instead of guessing. Querying the Events API per-request in a live application introduces unnecessary latency.
-
-The preferred sync methods are [Snowflake](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/third-party-integrations/snowflake) (managed delivery, no pipeline to maintain), [AWS Data Exchange](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/third-party-integrations/aws-data-exchange) or [SFTP](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/third-party-integrations/sftp) (file-based), or building your own pipeline via the API using the `updated` parameter - see [Keep Data Updated via API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/keep-data-updated-via-api).
-
-For pre-built time-series event-based signals ready for inference, see the [Features API](../features/get-features.md). For agents that query on demand instead of maintaining a local copy, see the [MCP server](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/mcp) (**external grounding**).
+Best practice is to sync event data into your own data store and query your local copy at decision time - see [internal grounding](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/internal-grounding) for the architecture and delivery options. For pre-built time-series signals ready for inference, see the [Features API](../features/get-features.md); for agents that query on demand, the [MCP server](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/mcp).
 {% endhint %}
 
 {% openapi-operation spec="events-api" path="/v1/events/" method="get" %}
