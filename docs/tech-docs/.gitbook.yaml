@@ -1,13 +1,4 @@
 redirects:
-    api/api-changes: predicthq-api/overview/api-changes.md
-    api/attribution: predicthq-api/overview/attribution.md
-    api/authenticating: predicthq-api/overview/authenticating.md
-    api/changes: predicthq-api/overview/api-changes.md
-    api/errors: predicthq-api/overview/troubleshooting.md
-    api/introduction: predicthq-api/overview/README.md
-    api/rate-limits: predicthq-api/overview/rate-limits.md
-    api/requests: predicthq-api/overview/README.md
-    api/responses: predicthq-api/overview/README.md
     categoryinfo/attended-events: getting-started/predicthq-data/event-categories/attendance-based-events.md
     categoryinfo/general-category-information: getting-started/predicthq-data/event-categories/README.md
     categoryinfo/general-info: getting-started/predicthq-data/event-categories/README.md
@@ -56,40 +47,27 @@ redirects:
     getting-started/tutorials-by-use-case/inventory-management: getting-started/guides/tutorials/README.md
     getting-started/tutorials-by-use-case/workforce-optimization: getting-started/guides/tutorials/README.md
     getting-started/tutorials-by-use-case/visualization-and-insights: getting-started/guides/tutorials/README.md
-    guides/adx: predicthq-api/bulk-data-delivery/aws-data-exchange.md
+    guides/adx: integrations/third-party-integrations/aws-data-exchange/README.md
     guides/api-quickstart: getting-started/api-quickstart.md
-    guides/event-categories: getting-started/predicthq-data/event-categories.md
+    guides/event-categories: getting-started/predicthq-data/event-categories/README.md
     guides/features-api: getting-started/guides/features-api-guides/README.md
     guides/geo-info-and-polygons: getting-started/guides/geolocation-guides/overview.md
     guides/live-tv-events: getting-started/guides/live-tv-event-guides/README.md
-    guides/locations: getting-started/guides/geolocation-guides.md
-    guides/loop-links-integration-guide: getting-started/guides/integrate-with-loop-links.md
+    guides/locations: getting-started/guides/geolocation-guides/README.md
+    guides/loop-links-integration-guide: integrations/integration-guides/integrate-with-loop-links.md
     guides/multi-day-and-umbrella-events: getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events.md
     guides/predicted-end-times: getting-started/predicthq-data/predicted-end-times.md
-    guides/predicthq-ranks: getting-started/predicthq-data/ranks.md
+    guides/predicthq-ranks: getting-started/predicthq-data/ranks/README.md
     guides/quickstart: getting-started/api-quickstart.md
     guides/recurring-events: getting-started/guides/date-and-time-guides/working-with-recurring-events.md
-    guides/relevance: getting-started/guides/understanding-relevance-field-in-event-results.md
-    guides/snowflake: predicthq-api/bulk-data-delivery/snowflake.md
-    guides/staying-updated: predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md
+    guides/relevance: getting-started/core-concepts/what-is-beam.md
+    guides/snowflake: integrations/third-party-integrations/snowflake/README.md
+    guides/staying-updated: integrations/integration-guides/keep-data-updated-via-api.md
     guides/using-placekey-with-poi-data: getting-started/guides/geolocation-guides/join-events-using-placekey.md
     guides/using-the-apis-with-location-based-access: getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions.md
-    oauth2: predicthq-api/overview/authenticating.md
-    oauth2/errors: predicthq-api/overview/troubleshooting.md
-    oauth2/introduction: predicthq-api/overview/authenticating.md
-    resources/beam: api/beam/search-analyses.md
-    resources/broadcasts: api/broadcasts/search-broadcasts.md
-    resources/demand-surge: api/demand-surge/get-demand-surges.md
-    resources/events: api/events/search-events.md
-    resources/features: api/features/get-features.md
-    resources/loop: api/loop/loop-links/search-loop-links.md
-    resources/places: api/places/search-places.md
-    resources/saved-locations-api: api/saved-locations/README.md
-    resources/saved-locations: api/saved-locations/search-saved-locations.md
-    resources/suggested-radius: api/suggested-radius/get-suggested-radius.md
-    sdks/javascript: predicthq-api/sdks/javascript-sdk.md
-    sdks/python: predicthq-api/sdks/python-sdk.md
-    start/adx: predicthq-api/bulk-data-delivery/aws-data-exchange.md
+    sdks/javascript: sdks/javascript-sdk.md
+    sdks/python: sdks/python-sdk.md
+    start/adx: integrations/third-party-integrations/aws-data-exchange/README.md
     start/aei: getting-started/guides/features-api-guides/README.md
     start/api-quickstart: getting-started/api-quickstart.md
     start/categories: getting-started/predicthq-data/event-categories/README.md
@@ -99,8 +77,8 @@ redirects:
     start/locations: getting-started/guides/geolocation-guides/README.md
     start/predicthq-ranks: getting-started/predicthq-data/ranks/README.md
     start/ranks: getting-started/predicthq-data/ranks/README.md
-    start/snowflake: predicthq-api/bulk-data-delivery/snowflake.md
-    start/staying-updated: predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md
-    start/updating: predicthq-api/bulk-data-delivery/keep-data-updated-via-api.md
-    tools/data-exporter: predicthq-api/bulk-data-delivery/export-data-via-control-center.md
-    tools/tableau-connector: tools/tableau-data-connector.md
+    start/snowflake: integrations/third-party-integrations/snowflake/README.md
+    start/staying-updated: integrations/integration-guides/keep-data-updated-via-api.md
+    start/updating: integrations/integration-guides/keep-data-updated-via-api.md
+    tools/data-exporter: integrations/third-party-integrations/README.md
+    tools/tableau-connector: integrations/third-party-integrations/tableau-data-connector.md
