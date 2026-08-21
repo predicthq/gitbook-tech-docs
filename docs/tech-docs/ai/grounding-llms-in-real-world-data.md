@@ -1,13 +1,14 @@
 ---
 description: >-
   What grounding is, how RAG relates to it, how grounding reduces AI
-  hallucinations, and how to ground LLMs and AI agents in verified real-world
-  event data - inside your environment or on demand via MCP.
+  hallucinations, and how to ground LLMs, AI assistants, and agents in
+  verified real-world event data - inside your environment or on demand via
+  MCP.
 ---
 
 # Grounding LLMs in real-world event data (RAG)
 
-Grounding is giving an AI model facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Retrieval-augmented generation (RAG) is the most common technique for grounding. PredictHQ grounds LLMs and AI agents in verified real-world context: the events, holidays, and demand signals that shape the physical world their decisions run in.
+Grounding is giving an AI model facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Retrieval-augmented generation (RAG) is the most common technique for grounding. PredictHQ grounds LLMs, AI assistants, and agents in verified real-world context: the events, holidays, and demand signals that shape the physical world their decisions run in.
 
 ## Why LLMs hallucinate about the real world
 
@@ -57,6 +58,27 @@ flowchart LR
 
 * [PredictHQ MCP in Agentic Workflows](predicthq-mcp-in-agentic-workflows.md) - reference workflows
 
+## Using PredictHQ with AI assistants
+
+Whichever architecture you choose, the request flow an AI assistant follows is the same:
+
+1. A user asks a question or requests a forecast.
+2. The assistant determines that external context is required.
+3. The assistant retrieves PredictHQ context for a specified location and time range - from your store (internal) or via MCP (external).
+4. Structured context is returned.
+5. The assistant incorporates that context into its reasoning or response.
+
+PredictHQ APIs are stateless and deterministic - the same request always returns the same result - which suits inference-time use inside AI systems.
+
+AI systems consuming real-world context face the same structural challenges described in [Event-Driven Demand](../getting-started/core-concepts/event-driven-demand.md), and the APIs map directly to them:
+
+* **Scope** - [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) defines where events matter for a location.
+* **Relevance** - [Beam](../getting-started/core-concepts/what-is-beam.md) calibrates which events materially impact demand, using historical demand data.
+* **Usability** - the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) converts events into structured, model-ready signals.
+* **Trust** - the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) provides verifiable event records that can be surfaced in explanations.
+
+This separation lets an assistant retrieve either raw event context or calibrated signals, depending on the workflow. For worked examples, see the [internal grounding workflows](../integrations/integration-guides/internal-grounding.md) and [agentic workflows](predicthq-mcp-in-agentic-workflows.md).
+
 ## How grounding reduces AI hallucinations
 
 A hallucination is a confident, plausible answer invented where the model lacks facts. Grounding attacks the cause: the model no longer has to invent, because the facts are in front of it. Three properties of the retrieved context determine how much hallucination it removes:
@@ -99,6 +121,5 @@ Yes, and the two don't interact: training uses event features to improve your mo
 
 ## Next steps
 
-* [Using PredictHQ with AI Assistants](using-predicthq-with-ai-assistants.md) - integration patterns and example workflows
 * [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
 * [MCP Server](mcp.md) - set up the MCP server

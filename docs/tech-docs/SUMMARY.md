@@ -92,8 +92,7 @@
 ## AI & Agents <a href="#ai" id="ai"></a>
 
 * [Build with AI](ai/build-with-ai.md)
-* [Grounding LLMs in real-world event data (RAG)](ai/grounding-llms-in-real-world-data.md)
-* [Using PredictHQ with AI Assistants](ai/using-predicthq-with-ai-assistants.md)
+* [Grounding LLMs in real-world event data](ai/grounding-llms-in-real-world-data.md)
 * [MCP Server](ai/mcp.md)
 * [PredictHQ MCP in Agentic Workflows](ai/predicthq-mcp-in-agentic-workflows.md)
 * [Agent skills](ai/agent-skills.md)
