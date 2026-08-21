@@ -4,7 +4,7 @@ description: Learn how to connect PredictHQ data to Tableau and build an example
 
 # Using Event Data in Tableau
 
-PredictHQ provides a rich repository of event data that can impact key business operations including demand forecasting and strategic planning. This tutorial demonstrates how to seamlessly integrate PredictHQ with Tableau to create dynamic visualizations, offering insights into how events may influence business trends. Follow along as we explore a quick and easy way to load a static event export as well as advice on connecting directly from data warehouses where PredictHQ data is stored.
+PredictHQ provides verified real-world events that impact key business operations, including demand forecasting and strategic planning. This tutorial shows how to connect PredictHQ to Tableau to visualize how events influence business trends - loading a static event export, and connecting directly to data warehouses where PredictHQ data is stored.
 
 ## Use Cases
 

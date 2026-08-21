@@ -10,11 +10,11 @@ In today's data-driven landscape, leveraging powerful analytical tools is essent
 
 ## Use Cases
 
-[Demand Forecasting](https://docs.predicthq.com/getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models), [Dynamic Pricing](https://docs.predicthq.com/getting-started/tutorials-by-use-case/dynamic-pricing), [Workforce Optimization](https://docs.predicthq.com/getting-started/tutorials-by-use-case/workforce-optimization), [Demand Analytics](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights), [Inventory Management](https://docs.predicthq.com/getting-started/tutorials-by-use-case/inventory-management), [Event Visibility](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights)
+Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, Inventory Management, Event Visibility
 
 ## Relevant Industries
 
-[Accommodation](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#accommodation-demand-analytics-calendar-and-map-tutorials), Consumer Packaged Goods, [Grocery and Supermarkets](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), Leisure, Travel and Tourism, Marketing and Advertising, [Parking](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials), Restaurants, [Retail](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#retail-demand-analytics-calendar-and-map-tutorials), [Transportation and Delivery](https://docs.predicthq.com/getting-started/tutorials-by-use-case/visualization-and-insights#transportation-and-parking-demand-analytics-calendar-and-map-tutorials) and Others
+Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
 
 ## Overview
 
@@ -63,7 +63,7 @@ The report provided in this example shows a graph of the total number of people 
 
 We find many customers want to know what is happening around a business location such as around a hotel, restaurant, store, or other location. The graph of total attendance per day shows you peaks and dips in physically attended events. This allows you to see upcoming busy days or potential demand surges as well as quieter days. The list of events allows you to see events happening on a given day in more detail.
 
-Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guide](https://docs.predicthq.com/getting-started/tutorials-by-use-case) for more examples.
+Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guides](../../use-case-guides/) for more examples.
 
 The end result of the exercise will be a report like this:
 

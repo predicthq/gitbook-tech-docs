@@ -10,7 +10,7 @@ This guide outlines the process for integrating PredictHQ's Events data into you
 
 We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide is designed for users with a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
 
-Please note that this guide focuses exclusively on integrating PredictHQ’s Events API data and does not cover the Features API.
+This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../../../integrations/third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API Should I Use?](../../core-concepts/which-api-should-i-use.md)
 
 If you are using Snowflake or AWS Data Exchange (ADX) for your data lake PredictHQ integrates with those products. See [Receive Data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive Data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
 
@@ -102,7 +102,7 @@ This method is recommended for large data uploads, as it efficiently manages the
 
 To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs.
 
-Typically you may download all the data you have access to into your data warehouse. In that case, run a search for all events and download them.
+You can download everything you have access to, but most integrations are better served by scoping the export to the locations that matter - and production deployments by [managed delivery](../../../integrations/third-party-integrations/) rather than manual exports.
 
 In the context of our example [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) for Tom's Pizzeria, they would be downloading events for all of the US and then querying for specific locations. Many customers may bulk load all the data they have access to by exporting it all and then importing it into their data lake. In this example, we’ll download events only for Seattle.
 
@@ -110,7 +110,7 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, simply select the Export option. For more details on exporting see the [CSV Export Guide](/broken/spaces/Ri9YaBiPckypV66Jggc2/pages/HUmWcfw6WD1Oj5rPZSQJ) except select the JSONL file format instead of CSV. This JSONL can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+After configuring your filters and executing the search, select the Export option and choose the JSONL file format. The JSONL file can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 

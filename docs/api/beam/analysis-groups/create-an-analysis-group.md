@@ -61,7 +61,7 @@ print(response.json())
 
 ## Best Practices
 
-Please refer to this guide for the best practices on grouping analyses: [Grouping Analyses in Beam](https://app.gitbook.com/s/Ri9YaBiPckypV66Jggc2/beam-relevancy-engine/grouping-analyses-in-beam)
+See [ML Features by Group](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides/ml-features-by-group) for best practices on grouping analyses.
 
 ## OpenAPI Spec
 

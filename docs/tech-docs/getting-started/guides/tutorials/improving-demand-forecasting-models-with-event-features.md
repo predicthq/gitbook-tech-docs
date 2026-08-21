@@ -6,9 +6,9 @@ description: >-
 
 # Improving Demand Forecasting Models with Event Features
 
-The inclusion of PredictHQ's event data can significantly enhance the performance of machine learning models, such as those used in demand forecasting. For example, the delivery company [Favor reported a reduction of 5-6% in their forecasting error](https://www.predicthq.com/customers/favor), with others noting decreases of up to 5-10% or more.
+Adding PredictHQ event features to a demand forecasting model reduces forecast error in a way you can measure and attribute - and what a point of accuracy is worth is relative to your business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
 
-This tutorial will guide you through the process of identifying, retrieving and integrating relevant, demand-driving event data as features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
+This tutorial guides you through the process of identifying, retrieving and integrating relevant, demand-driving event features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
 
 ## Use Cases
 
