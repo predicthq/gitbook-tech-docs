@@ -39,23 +39,23 @@ HEADERS = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/json"}
 
 ## Step 1: Create a Saved Location
 
-The tutorial's fictional store is in the Chicago Loop. Create a Saved Location for it, supplying only the origin point and the industry - PredictHQ calculates a Predicted Impact Area automatically, the boundary where events actually affect a retail location there. Don't supply a radius: fixed circles include irrelevant events and miss relevant ones.
+The tutorial's fictional store is on Lower Broadway in Nashville - a district dense with concerts and live events, chosen so the event effect is easy to see. Create a Saved Location for it, supplying only the origin point and the industry - PredictHQ calculates a Predicted Impact Area automatically, the boundary where events actually affect a retail location there. Don't supply a radius: fixed circles include irrelevant events and miss relevant ones.
 
 ```python
 response = requests.post(
     "https://api.predicthq.com/v1/saved-locations",
     headers=HEADERS,
     json={
-        "name": "Tutorial - Chicago Loop Retail",
+        "name": "Tutorial - Nashville Broadway Retail",
         "industry": "retail",
         "origin_geojson": {
             "type": "Feature",
-            "geometry": {"type": "Point", "coordinates": [-87.6298, 41.8781]},
+            "geometry": {"type": "Point", "coordinates": [-86.7775, 36.1612]},
         },
     },
 )
 location_id = response.json()["location_id"]
-print(location_id)  # a short ID like "DArsAWxGkKR5uoyN9NAD0g"
+print(location_id)  # a short ID like "rfiTpN63KVbeuyZemz0zog"
 ```
 
 Keep the `location_id` - everything else in this tutorial hangs off it.
@@ -69,7 +69,7 @@ response = requests.post(
     "https://api.predicthq.com/v1/beam/analyses",
     headers=HEADERS,
     json={
-        "name": "Tutorial - Chicago Loop Retail",
+        "name": "Tutorial - Nashville Broadway Retail",
         "location": {"saved_location_id": location_id},
         "demand_type": {"industry": "retail", "interval": "day", "unit_descriptor": "Sales"},
     },
@@ -123,13 +123,13 @@ for group in response.json()["feature_importance"]:
     print(f'{group["feature_group"]:18} p={group["p_value"]:<8} important={group["important"]}')
 ```
 
-When we ran this, Beam found ten event groups significant for this location - conferences, expos, public holidays, community events, and concerts all at p-values of zero - and rejected two. Look at what it rejected:
+When we ran this, Beam found eight event groups significant for this location - concerts, conferences, public holidays, performing arts, and severe weather all at p-values of zero - and rejected four. Look at what it rejected:
 
 ```text
-sports             p=0.9786   important=False
+sports             p=0.9999   important=False
 ```
 
-Sports events don't drive this store's demand - in Chicago, a famous sports town. This is the point of Beam: the categories a person would guess into a model aren't necessarily the ones the demand data supports, and every irrelevant category included adds noise. Your own demand data decides, not intuition.
+Sports events don't drive this store's demand - in Nashville, home of the Titans and the Predators. This is the point of Beam: the categories a person would guess into a model aren't necessarily the ones the demand data supports, and every irrelevant category included adds noise. Your own demand data decides, not intuition.
 
 ## Step 6: Retrieve the model-ready features
 
@@ -152,23 +152,21 @@ The response contains one row per day - 24 in total for this window. The first r
 ```json
 {
   "date": "2026-04-01",
-  "phq_attendance_community_retail": {"stats": {"sum": 243}},
-  "phq_attendance_concerts_retail": {"stats": {"sum": 7441}},
-  "phq_attendance_conferences_retail": {"stats": {"sum": 1994}},
-  "phq_attendance_expos_retail": {"stats": {"sum": 11721}},
-  "phq_attendance_festivals_retail": {"stats": {"sum": 0}},
-  "phq_attendance_performing_arts_retail": {"stats": {"sum": 5902}},
+  "phq_attendance_concerts_retail": {"stats": {"sum": 3561}},
+  "phq_attendance_conferences_retail": {"stats": {"sum": 1137}},
+  "phq_attendance_performing_arts_retail": {"stats": {"sum": 0}},
+  "phq_impact_academic_exam": {"stats": {"sum": 0}},
   "phq_impact_observances_retail": {"stats": {"sum": 0}},
-  "phq_impact_public_holidays_retail": {"stats": {"sum": 0}},
+  "phq_impact_public_holidays_retail": {"stats": {"sum": 12}},
   "phq_impact_school_holidays_retail": {"stats": {"sum": 0}},
   "phq_impact_severe_weather_cold_wave_retail": {"stats": {"max": 0}},
   "phq_impact_severe_weather_cold_wave_storm_retail": {"stats": {"max": 0}},
-  "phq_impact_severe_weather_dust_retail": {"stats": {"max": 0}},
-  "phq_impact_severe_weather_tornado_retail": {"stats": {"max": 16}}
+  "phq_impact_severe_weather_flood_retail": {"stats": {"max": 0}},
+  "phq_impact_severe_weather_tornado_retail": {"stats": {"max": 0}}
 }
 ```
 
-Each row is a date with one value per Beam-selected feature: predicted attendance sums for the significant attendance categories, impact values for holidays and severe weather. In production, you join this table to your demand history to train your model, then call the same endpoint with a **future-dated** window at every forecast run - the events behind these features are announced and scheduled in advance, so a future window carries known signals about what's coming rather than extrapolations of your history. That training-and-serving loop lives in your ML pipeline and is out of scope here; the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) covers the window mechanics, and the [demand forecasting notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb) shows a worked ML example.
+Each row is a date with one value per Beam-selected feature: predicted attendance sums for the significant attendance categories, impact values for holidays and severe weather. Scan forward two rows and Friday 2026-04-03 jumps out: 19,290 predicted concert attendees against Wednesday's 3,561 - exactly the kind of swing a model can't see in demand history alone. In production, you join this table to your demand history to train your model, then call the same endpoint with a **future-dated** window at every forecast run - the events behind these features are announced and scheduled in advance, so a future window carries known signals about what's coming rather than extrapolations of your history. That training-and-serving loop lives in your ML pipeline and is out of scope here; the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) covers the window mechanics, and the [demand forecasting notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb) shows a worked ML example.
 
 ## Step 7: Measure what the features are worth
 
@@ -181,7 +179,7 @@ response = requests.post(
     "https://api.predicthq.com/v1/forecasts/models",
     headers=HEADERS,
     json={
-        "name": "Tutorial - Chicago Loop Retail",
+        "name": "Tutorial - Nashville Broadway Retail",
         "location": {"saved_location_id": location_id},
         "demand_type": {"industry": "retail", "interval": "day"},
         "forecast_window": "7d",
@@ -222,12 +220,14 @@ From our run:
 
 ```json
 {
-  "accuracy": {"mape": 12.03, "mae": 4192.97, "rmse": 6965.95, "wape": 9.87},
-  "baseline_comparison": {"mape_improvement_pct": 5.66, "baseline_mape": 12.75, "baseline_mae": 4415.23}
+  "accuracy": {"mape": 9.37, "mae": 3661.25, "rmse": 5963.11, "wape": 8.62},
+  "baseline_comparison": {"mape_improvement_pct": 26.52, "baseline_mape": 12.75, "baseline_mae": 4415.23, "baseline_rmse": 7169.4, "baseline_wape": 10.39}
 }
 ```
 
-The enhanced model's error (MAPE 12.03) beat the baseline (12.75) - that difference is the event features, measured by a like-for-like comparison on the same demand data. Two honest caveats: your number may differ slightly between training runs, and this demand data is synthetic - the result demonstrates the measurement workflow, not a claim about your business. The run that matters is this same comparison on your own demand data.
+The enhanced model's error (MAPE 9.37) beat the baseline (12.75) - a 26.5% improvement, and the difference is the event features, measured by a like-for-like comparison on the same demand data.
+
+Don't read that number as a benchmark. This store sits in a deliberately event-exposed district, and the demand data is synthetic - the result demonstrates the measurement workflow, not a claim about your business. When we ran this exact workflow on the same demand data at other locations, the measured lift ranged from about 1% to 26%: event exposure is a property of the location. That's the point of measuring instead of assuming - this workflow tells you what events are worth at your locations, on your own demand data.
 
 ## Step 8: See the events behind the forecast
 
@@ -244,11 +244,24 @@ response = requests.get(
     },
 )
 for day in response.json()["results"]:
-    top = day["phq_explainability"]["events"][0]
+    events = day["phq_explainability"]["events"]
+    top = max(events, key=lambda e: e["local_rank"])
     print(day["date"], round(day["forecast"]), "-", top["title"])
 ```
 
-From our run, the top demand drivers were real, verifiable events: a three-day festival ("One of a Kind Spring Show and Sale Chicago", Local Rank 85), a Lewis Capaldi concert (Local Rank 89), and two expos. Every forecast traces back to observable real-world activity - the same explainability your operators and stakeholders get in production.
+From our run:
+
+```text
+2026-04-25 48119 - Ben Rector with Nashville Symphony
+2026-04-26 43662 - Hayley Williams
+2026-04-27 40102 - Snarky Puppy
+2026-04-28 37587 - Severe Thunderstorm
+2026-04-29 37158 - Hayley Williams
+2026-04-30 39329 - RAYE
+2026-05-01 50026 - Spring Exams
+```
+
+The demand drivers are real, verifiable events: concerts with Local Ranks in the high 70s and 80s, a severe thunderstorm at Local Rank 86, and university spring exams. Every forecast traces back to observable real-world activity - the same explainability your operators and stakeholders get in production.
 
 ## Clean up
 
