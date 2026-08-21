@@ -9,11 +9,11 @@ description: >-
 
 In this tutorial you build the recommended PredictHQ integration end to end, on sample demand data, and finish with a measured accuracy improvement you produced yourself. Along the way you see each piece of the platform do its job: a Saved Location scopes the geography, Beam identifies which events drive the demand, the Features API returns the model-ready features your forecasting model would consume, and a baseline comparison measures what the event features are worth.
 
-It takes about 15 minutes, most of which is waiting for two short processing runs. This tutorial was built from a real end-to-end run against the live API - the responses you see are captured from that run.
+It takes about 15 minutes, most of which is waiting for two short processing runs. Every step in this tutorial was run against the live API before publishing - the responses you see are captured from those runs.
 
 ```mermaid
 flowchart LR
-    A["1-Create a<br>Saved Location"] --> B["2-4 Create a Beam analysis<br>and upload sample demand"]
+    A["1-Create a<br>Saved Location"] --> B["2-4 Create a Beam Analysis<br>and upload sample demand"]
     B --> C["5 Feature Importance:<br>what drives demand"]
     C --> D["6 Features API:<br>the model-ready table"]
     C --> E["7 Baseline comparison:<br>the measured lift"]
@@ -60,9 +60,9 @@ print(location_id)  # a short ID like "DArsAWxGkKR5uoyN9NAD0g"
 
 Keep the `location_id` - everything else in this tutorial hangs off it.
 
-## Step 2: Create a Beam analysis
+## Step 2: Create a Beam Analysis
 
-Beam is PredictHQ's relevancy engine: it analyzes your demand data to determine which event categories materially drive demand at this location. Create an analysis linked to your Saved Location:
+Beam is PredictHQ's relevancy engine: it analyzes your demand data to determine which event categories materially drive demand at this location. Create an Analysis linked to your Saved Location:
 
 ```python
 response = requests.post(
@@ -80,7 +80,7 @@ print(analysis_id)
 
 ## Step 3: Upload the sample demand data
 
-Upload the CSV to the analysis. This is the data Beam correlates against real-world events:
+Upload the CSV to the Analysis. This is the data Beam correlates against real-world events:
 
 ```python
 with open("sample_demand_retail.csv", "rb") as f:
@@ -147,7 +147,28 @@ response = requests.post(
 print(response.json()["results"][0])
 ```
 
-Each row is a date with one value per Beam-selected feature - `phq_attendance_concerts_retail`, `phq_impact_public_holidays_retail`, and so on. In production, you join this table to your demand history to train your model, then call the same endpoint with a **future-dated** window at every forecast run - the events behind these features are announced and scheduled in advance, so a future window carries known signals about what's coming rather than extrapolations of your history. That training-and-serving loop lives in your ML pipeline and is out of scope here; the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) covers the window mechanics, and the [demand forecasting notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb) shows a worked ML example.
+The response contains one row per day - 24 in total for this window. The first row from our run:
+
+```json
+{
+  "date": "2026-04-01",
+  "phq_attendance_community_retail": {"stats": {"sum": 243}},
+  "phq_attendance_concerts_retail": {"stats": {"sum": 7441}},
+  "phq_attendance_conferences_retail": {"stats": {"sum": 1994}},
+  "phq_attendance_expos_retail": {"stats": {"sum": 11721}},
+  "phq_attendance_festivals_retail": {"stats": {"sum": 0}},
+  "phq_attendance_performing_arts_retail": {"stats": {"sum": 5902}},
+  "phq_impact_observances_retail": {"stats": {"sum": 0}},
+  "phq_impact_public_holidays_retail": {"stats": {"sum": 0}},
+  "phq_impact_school_holidays_retail": {"stats": {"sum": 0}},
+  "phq_impact_severe_weather_cold_wave_retail": {"stats": {"max": 0}},
+  "phq_impact_severe_weather_cold_wave_storm_retail": {"stats": {"max": 0}},
+  "phq_impact_severe_weather_dust_retail": {"stats": {"max": 0}},
+  "phq_impact_severe_weather_tornado_retail": {"stats": {"max": 16}}
+}
+```
+
+Each row is a date with one value per Beam-selected feature: predicted attendance sums for the significant attendance categories, impact values for holidays and severe weather. In production, you join this table to your demand history to train your model, then call the same endpoint with a **future-dated** window at every forecast run - the events behind these features are announced and scheduled in advance, so a future window carries known signals about what's coming rather than extrapolations of your history. That training-and-serving loop lives in your ML pipeline and is out of scope here; the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) covers the window mechanics, and the [demand forecasting notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb) shows a worked ML example.
 
 ## Step 7: Measure what the features are worth
 
@@ -241,9 +262,9 @@ requests.delete(f"https://api.predicthq.com/v1/saved-locations/{location_id}", h
 
 ## What you built
 
-You ran the recommended integration workflow end to end: a Saved Location with an automatically calibrated Predicted Impact Area, a Beam analysis that identified which event categories drive this demand (and which don't), the model-ready feature table your own forecasting model would consume, and a measured, like-for-like accuracy comparison. What that measurement is worth is relative to the business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
+You ran the recommended integration workflow end to end: a Saved Location with an automatically calibrated Predicted Impact Area, a Beam Analysis that identified which event categories drive this demand (and which don't), the model-ready feature table your own forecasting model would consume, and a measured, like-for-like accuracy comparison. What that measurement is worth is relative to the business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
 
-With your own demand data, the path is identical - one Saved Location and one Beam analysis per location, refreshed monthly. To run it again closer to home first, pick [your industry's sample dataset](../guides/beam-guides/sample-demand-data.md) and change the `industry` value in steps 1, 2, and 7.
+With your own demand data, the path is identical - one Saved Location and one Beam Analysis per location, refreshed monthly. To run it again closer to home first, pick [your industry's sample dataset](../guides/beam-guides/sample-demand-data.md) and change the `industry` value in steps 1, 2, and 7.
 
 ## Where to go next
 

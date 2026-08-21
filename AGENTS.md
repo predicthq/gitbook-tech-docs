@@ -19,3 +19,7 @@ https://gitbook.com/docs/skill.md
 When making changes, preserve GitBook sync metadata such as frontmatter, `SUMMARY.md`, `docs.yaml`, `.gitbook/`, and asset links unless the requested edit explicitly requires changing them.
 
 <!-- gitbook-agent-instructions:end -->
+
+## Style
+
+All documentation edits must follow the styleguide at [styleguides/README.md](styleguides/README.md). It is the single source of truth for voice and tone, heading case, branded-term capitalization (for example Beam Analysis, Saved Location, Feature Importance), word choice, and the word list. Check it before writing or editing any page content.
