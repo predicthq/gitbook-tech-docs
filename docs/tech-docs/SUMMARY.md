@@ -122,7 +122,6 @@
   * [Using Event Data in Tableau](integrations/third-party-integrations/using-event-data-in-tableau.md)
   * [Using Event Data in Power BI](integrations/third-party-integrations/using-event-data-in-power-bi.md)
   * [Connecting to PredictHQ APIs with Microsoft Excel](integrations/third-party-integrations/connecting-to-predicthq-apis-with-microsoft-excel.md)
-  * [Google Cloud BigQuery](integrations/third-party-integrations/google-cloud-bigquery.md)
 
 ## PredictHQ SDKs <a href="#sdks" id="sdks"></a>
 
