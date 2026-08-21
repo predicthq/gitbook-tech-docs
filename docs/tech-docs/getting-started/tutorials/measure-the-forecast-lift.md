@@ -1,8 +1,8 @@
 ---
 description: >-
-  A hands-on tutorial: build the recommended PredictHQ integration on sample
-  demand data - Saved Location, Beam, model-ready features - and finish with a
-  measured forecast accuracy improvement you produced yourself.
+  Build the recommended PredictHQ integration on sample demand data - Saved
+  Location, Beam, model-ready features - and finish with a measured forecast
+  accuracy improvement you produced yourself.
 ---
 
 # Measure the forecast lift on sample data

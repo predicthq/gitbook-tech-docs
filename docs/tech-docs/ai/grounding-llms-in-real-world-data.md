@@ -1,9 +1,8 @@
 ---
 description: >-
   What grounding is, how RAG relates to it, how grounding reduces AI
-  hallucinations, and how to ground LLMs, AI assistants, and agents in
-  verified real-world event data - inside your environment or on demand via
-  MCP.
+  hallucinations, and how to ground LLMs and agents in verified real-world
+  event data - in your environment or on demand via MCP.
 ---
 
 # Grounding LLMs in real-world event data (RAG)
