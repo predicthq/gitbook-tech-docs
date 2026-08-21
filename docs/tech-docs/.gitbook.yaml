@@ -1,4 +1,5 @@
 redirects:
+    integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi: getting-started/guides/features-api-guides/integrate-with-a-demand-forecast-in-powerbi.md
     integrations/third-party-integrations/tableau-data-connector: integrations/third-party-integrations/using-event-data-in-tableau.md
     getting-started/core-concepts/industry-tuned-predictions: getting-started/guides/industry-specific-event-filters.md
     getting-started/guides/how-industry-affects-results: getting-started/guides/industry-specific-event-filters.md
