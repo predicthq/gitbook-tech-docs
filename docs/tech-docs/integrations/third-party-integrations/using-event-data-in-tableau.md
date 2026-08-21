@@ -113,7 +113,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
    3. Update the y-axis title to 'Daily Event Day Impact' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis).
 4. Chart Preview:
 
-<figure><img src="../../../.gitbook/assets/image (90).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
 
 **Table**
 
@@ -129,7 +129,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 3. Table Preview:
 
-<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Event Info worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Event Info worksheet</p></figcaption></figure>
 
 ### Dashboard
 
@@ -139,7 +139,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click on specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
-<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
 For more information on creating dashboards, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).
@@ -240,11 +240,11 @@ This tutorial has demonstrated how to connect PredictHQ data to Tableau and buil
 
 ## **Resources for Download**
 
-{% file src="../../../.gitbook/assets/Events-Export-San-Francisco-from-20240501-to-20240531 (1).jsonl" %}
+{% file src="../../.gitbook/assets/Events-Export-San-Francisco-from-20240501-to-20240531 (1).jsonl" %}
 JSON file
 {% endfile %}
 
-{% file src="../../../.gitbook/assets/PredictHQ Example Dashboard (1).twbx" %}
+{% file src="../../.gitbook/assets/PredictHQ Example Dashboard (1).twbx" %}
 Tableau workbook
 {% endfile %}
 
