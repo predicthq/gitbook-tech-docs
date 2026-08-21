@@ -1,4 +1,4 @@
-# Find Events by Place ID
+# Find events by place ID
 
 For this example, we want to find all the sports events that happened in Nottingham, England in March of 2018.
 

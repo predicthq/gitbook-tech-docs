@@ -4,7 +4,7 @@ description: >-
   interface to our API.
 ---
 
-# Javascript SDK
+# JavaScript SDK
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>NPM</strong></td><td></td><td></td><td><a href="https://www.npmjs.com/package/predicthq">https://www.npmjs.com/package/predicthq</a></td></tr><tr><td><strong>GitHub</strong></td><td></td><td></td><td><a href="https://github.com/predicthq/sdk-js">https://github.com/predicthq/sdk-js</a></td></tr></tbody></table>
 

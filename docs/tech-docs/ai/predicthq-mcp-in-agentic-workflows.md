@@ -4,7 +4,7 @@ description: >-
   server for verified demand context at decision time.
 ---
 
-# PredictHQ MCP in Agentic Workflows
+# PredictHQ MCP in agentic workflows
 
 The PredictHQ MCP server connects AI agents directly to real-world context at decision time. It's commonly used interactively, through Claude, ChatGPT, or another assistant. It's equally suited to autonomous agentic workflows, where an agent, or a system of agents, works toward a goal and calls PredictHQ for the real-world context it needs to make good decisions along the way.
 
@@ -85,7 +85,7 @@ Tools: `features_api_get_features` (with `beam.analysis_id`), `events_api_list_e
 
 For agents running autonomously, use Bearer token authentication: tokens are configured at agent setup time and need no interactive login flow, which suits headless and scheduled workflows. OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
 
-The server URL, transport, and per-client setup are documented in the [MCP Server](mcp.md) reference, and you can [create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating) for Bearer authentication.
+The server URL, transport, and per-client setup are documented in the [MCP server](mcp.md) reference, and you can [create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating) for Bearer authentication.
 
 ## Tool Selection for Agents
 
@@ -106,7 +106,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 
 ### Next Steps
 
-* [MCP Server](mcp.md) - connect your agent to PredictHQ via MCP
+* [MCP server](mcp.md) - connect your agent to PredictHQ via MCP
 * [Agent skills](agent-skills.md) - install PredictHQ's integration best practices directly into your coding agent
-* [API Quickstart](../getting-started/api-quickstart.md) - create an API token for bearer token authentication
+* [API quickstart](../getting-started/api-quickstart.md) - create an API token for bearer token authentication
 * [Grounding LLMs in real-world event data (RAG)](grounding-llms-in-real-world-data.md) - grounding concepts and architectural patterns for AI systems

@@ -4,7 +4,7 @@ description: >-
   models on historical windows and retrieve future-dated values at inference.
 ---
 
-# Get ML Features
+# Get ML features
 
 The Features API delivers prebuilt, model-ready features aggregated from real-world events. Use it instead of aggregating raw events yourself - naïve aggregation produces noise rather than uplift.
 
@@ -32,7 +32,7 @@ The Features API serves both halves of a forecasting integration with the same c
 
 The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam analysis is refreshed, retrain before pointing the serving path at it.
 
-Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard Integration Pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
+Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
 
 {% openapi-operation spec="features-api" path="/v1/features/" method="post" %}
 [OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
@@ -443,5 +443,5 @@ The OpenAPI spec for Features API can be [found here](https://api.predicthq.com/
 Below are some guides relevant to this API:
 
 * [What is the Features API?](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/core-concepts/what-is-the-features-api)
-* [Data Science Notebooks](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks)
-* [Aggregating Live TV Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)
+* [Data science notebooks](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks)
+* [Aggregating live TV events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)

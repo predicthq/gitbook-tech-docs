@@ -2,7 +2,7 @@
 description: Search feedback conversations submitted by your organization.
 ---
 
-# Search Feedback
+# Search feedback
 
 Conversations are used to track feedback on existing events for example feedback on incorrect attendance or start and end dates for an event. Each piece of feedback submitted by a user is tracked as a conversation and will be returned by this endpoint. You can use this to display a list of event feedback conversations submitted with Loop Links by users in your application.
 

@@ -1,4 +1,4 @@
-# Find Events by Country Code
+# Find events by country code
 
 For this example, we will find public and school holidays for the United States of America in 2018.
 
@@ -46,4 +46,4 @@ A snippet of the results are shown below:
 
 That’s helpful, but doesn’t tell us which region the event applies to. Using the `place_hierarchies` field in event results we can get more detailed information about the place(s) the event applies to. Each hierarchy is an array of Place IDs, e.g. `["6295630","6255149","6252001","5165418"]` which is _Earth > North America > United States > Ohio_.
 
-We can use the Places endpoint to find information about the Place IDs mentioned in the hierarchy or use the [Understanding Place Hierarchies](../understanding-place-hierarchies.md) guide.
+We can use the Places endpoint to find information about the Place IDs mentioned in the hierarchy or use the [Understanding place hierarchies](../understanding-place-hierarchies.md) guide.

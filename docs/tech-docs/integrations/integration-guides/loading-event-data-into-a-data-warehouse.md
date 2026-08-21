@@ -4,15 +4,15 @@ description: >-
   GCP BigQuery.
 ---
 
-# Loading Event Data into a Data Warehouse
+# Loading event data into a data warehouse
 
 This guide outlines the process for integrating PredictHQ's Events data into your data lake. It is common for customers to want to get data from our APIs and store it in their data lake. To support this, we have created this guide to help you with the integration process
 
 We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide is designed for users with a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
 
-This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API Should I Use?](../../getting-started/core-concepts/which-api-should-i-use.md)
+This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API should I use?](../../getting-started/core-concepts/which-api-should-i-use.md)
 
-If you are using Snowflake or AWS Data Exchange (ADX) for your data lake PredictHQ integrates with those products. See [Receive Data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive Data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
+If you are using Snowflake or AWS Data Exchange (ADX) for your data lake PredictHQ integrates with those products. See [Receive data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
 
 ## Overview
 
@@ -485,7 +485,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 Event data is dynamic and events can change frequently. This happens when events are canceled, posted, or have details updated. Also, PredictHQ’s pipeline is constantly fetching new events so new future events are always being added and can be downloaded via the API.
 
-To keep your data updated see [Keep Data Updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to [that above](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This will extract all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
+To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to [that above](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This will extract all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 
@@ -535,7 +535,7 @@ A common example is customers often look at events occurring in the next 1 to 3 
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
-You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the example above. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
+You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the example above. See our [Snowflake data science guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
 
 Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\\
 
@@ -553,7 +553,7 @@ Customers sometimes use fields like [Placekey ](https://docs.predicthq.com/getti
 
 PredictHQ data can significantly enhance your demand forecasting models, especially for businesses that are impacted by local events, such as retail, hospitality, and transportation. By understanding when significant events are happening, you can better predict and prepare for attendance surges or declines.
 
-You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving Demand Forecasting Models with Event Features](../../getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md).
+You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake data science guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving demand forecasting models with event features](../../getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md).
 
 #### 3. Building Tailored Reports
 

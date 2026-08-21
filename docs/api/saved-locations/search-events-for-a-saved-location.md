@@ -2,7 +2,7 @@
 description: Search for events happening in an existing Saved Location.
 ---
 
-# Search Events for a Saved Location
+# Search events for a Saved Location
 
 {% openapi-operation spec="saved-locations-api" path="/v1/saved-locations/{location_id}/insights/events" method="get" %}
 [OpenAPI saved-locations-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/saved-locations-api.yaml)
@@ -44,4 +44,4 @@ The OpenAPI spec for Saved Locations API can be [found here](https://api.predict
 
 Below are some guides relevant to this API:
 
-* [Working with Location-Based Subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)
+* [Working with location-based subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)

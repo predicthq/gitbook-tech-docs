@@ -4,7 +4,7 @@ description: >-
   a location.
 ---
 
-# Displaying Events in a Heatmap Calendar
+# Displaying events in a heatmap calendar
 
 Event data provides critical insights into activities that can impact businesses. By tracking when and where events occur, businesses can optimize operations, marketing, and resource allocation. For instance, a surge in local events could indicate an increase in customer traffic, enabling businesses to adjust staffing and inventory levels accordingly.
 

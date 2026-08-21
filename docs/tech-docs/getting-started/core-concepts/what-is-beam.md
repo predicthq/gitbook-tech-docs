@@ -123,10 +123,10 @@ This keeps forecast inputs aligned with historical demand drivers.
 * [Beam API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam)
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) (Beam uses this under the hood)
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) (Forecasts uses Beam under the hood)
-* [Beam Guides](../guides/beam-guides/)
+* [Beam guides](../guides/beam-guides/)
 
 ## What to Do Next
 
 After running Beam, use the Beam Analysis ID with the Features API or Events API to retrieve demand-calibrated signals. For automated forecasting, use the Forecasts API, which applies Beam internally.
 
-For the recommended production architecture — including how Beam fits into a full pipeline with refresh cadence and data storage patterns — see the [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md).
+For the recommended production architecture — including how Beam fits into a full pipeline with refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).

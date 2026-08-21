@@ -1,4 +1,4 @@
-# API Changes
+# API changes
 
 The PredictHQ API may change from time to time. Major changes that break backwards compatibility will be introduced with a new version, but backwards compatible changes may be introduced at any time without notice.
 

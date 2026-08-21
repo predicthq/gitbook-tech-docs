@@ -4,7 +4,7 @@ description: >-
   the same time and location.
 ---
 
-# Get Demand Surges
+# Get demand surges
 
 The Demand Surge API can be used to quickly scan a period of 90 days for abnormal increases in attendance for a given area. The API calculates the mean attendance for your requested location over the next 90 days after the `date_from` date and returns all the dates where attendance is a certain number of standard deviations over the mean. This is represented by the `min_surge_intensity` parameter, that corresponds to the number of standard deviations the API will look for.
 

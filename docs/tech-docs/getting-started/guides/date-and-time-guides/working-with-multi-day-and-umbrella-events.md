@@ -4,7 +4,7 @@ description: >-
   double-counting umbrella events when working with individual event records.
 ---
 
-# Working with Multi-day and Umbrella Events
+# Working with multi-day and umbrella events
 
 PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [7 attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
 
@@ -60,7 +60,7 @@ In the current release of Umbrella events you cannot yet find the child event ID
 
 ### **Why Umbrella Events Matter**
 
-Any view built from individual event records has to account for Umbrella events, or the attendance of parent events and their child events is double-counted, producing inflated figures. For daily or weekly aggregations of any kind, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) rather than aggregating records - see [Which API Should I Use?](../../core-concepts/which-api-should-i-use.md)
+Any view built from individual event records has to account for Umbrella events, or the attendance of parent events and their child events is double-counted, producing inflated figures. For daily or weekly aggregations of any kind, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) rather than aggregating records - see [Which API should I use?](../../core-concepts/which-api-should-i-use.md)
 
 Looking at the earlier [US F1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) example, the parent event spanning 3 days has a phq\_attendance of 258,000. The actual race event running for around 3 hours on the 3rd of November has a phq\_attendance of 120,000. If you count both the parent event and the race child event on the 3rd, you overcount the attendance - the same people are represented in both records.
 

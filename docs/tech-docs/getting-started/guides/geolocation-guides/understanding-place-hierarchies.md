@@ -1,4 +1,4 @@
-# Understanding Place Hierarchies
+# Understanding place hierarchies
 
 {% hint style="info" %}
 Places associated with our events are [Geonames](https://www.geonames.org/) Features, which can be either an Area, an Administrative Feature, or a Populated Place. Use our [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places) to explore Places data used in our events.

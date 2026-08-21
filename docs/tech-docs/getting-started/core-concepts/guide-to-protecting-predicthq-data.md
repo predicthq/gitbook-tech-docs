@@ -2,7 +2,7 @@
 description: It's important to protect PredictHQ data from unauthorized access and usage.
 ---
 
-# Guide to Protecting PredictHQ Data
+# Guide to protecting PredictHQ data
 
 This guide provides ideas on how to protect PredictHQ’s data from unauthorized usage due to what is known as web scraping or screen scraping, specifically when being used in public facing websites.
 

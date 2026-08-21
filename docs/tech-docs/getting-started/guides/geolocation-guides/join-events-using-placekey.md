@@ -1,4 +1,4 @@
-# Join Events using Placekey
+# Join events using Placekey
 
 Placekey is a free, universal standard identifier for any physical place, which enables the data pertaining to those places to be easily shared across organizations. PredictHQ provides Placekeys for events data to allow organizations to join our events data to other datasets that use Placekeys. See the [Placekey website](https://www.placekey.io/) for more information.
 

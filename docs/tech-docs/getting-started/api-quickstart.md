@@ -4,7 +4,7 @@ description: >-
   a production integration.
 ---
 
-# API Quickstart
+# API quickstart
 
 ## What you need
 
@@ -61,7 +61,7 @@ A single API call is not a production integration. PredictHQ APIs are designed t
 3. **Features API** - call the Features API with your `analysis_id` to retrieve model-ready ML features, automatically scoped and filtered to your location.
 4. **Events API** - use the Events API with your `analysis_id` to retrieve the specific events driving demand - for explainability and operational context.
 
-The [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md) shows the full recommended architecture, including refresh cadence and data storage patterns.
+The [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) shows the full recommended architecture, including refresh cadence and data storage patterns.
 
 ## What to Do Next
 
@@ -69,6 +69,6 @@ The [Standard Integration Pattern](../integrations/integration-guides/standard-i
 
 **I want event-driven forecasts without building a model** → Go straight to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
 
-**I want to connect an AI assistant to PredictHQ** → Set up the [MCP Server](../ai/mcp.md)
+**I want to connect an AI assistant to PredictHQ** → Set up the [MCP server](../ai/mcp.md)
 
-**I want to understand the full integration architecture** → Read the [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md)
+**I want to understand the full integration architecture** → Read the [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md)

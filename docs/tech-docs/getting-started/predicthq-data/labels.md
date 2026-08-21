@@ -44,7 +44,7 @@ PHQ Labels are available for the following categories:
 
 #### PHQ Label Values
 
-PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get Event Counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
+PHQ Labels are **constantly being improved and updated** by our team and LLM models therefore we recommend using [Get event counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts) to retrieve an **up-to-date and relevant** list of PHQ Labels and the count of events labeled with each, **within your PredictHQ plan**.&#x20;
 
 Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.predicthq.com/events/ssZCJhGGKUswicJswa) at the Melbourne Cricket Ground in 2024 it has the following PHQ labels (pop, country, and rock) in the API response:
 
@@ -77,7 +77,7 @@ print(phq_labels)
 
 ```
 
-You can also see a list of PHQ Labels in the "Labels" field on the [Search Events](https://control.predicthq.com/search/events) page of the WebApp:
+You can also see a list of PHQ Labels in the "Labels" field on the [Search events](https://control.predicthq.com/search/events) page of the WebApp:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The "Labels" field in the WebApp Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
 

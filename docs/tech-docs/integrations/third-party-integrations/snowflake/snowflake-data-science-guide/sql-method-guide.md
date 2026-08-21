@@ -2,7 +2,7 @@
 description: Transforming Event Data into ML-Ready Features using SQL
 ---
 
-# SQL Method Guide
+# SQL method guide
 
 ## Using Snowflake SQL to recreate Features-API
 

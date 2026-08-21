@@ -1,4 +1,4 @@
-# Find Events by Placekey
+# Find events by Placekey
 
 You can do the following with the Placekey filter:
 

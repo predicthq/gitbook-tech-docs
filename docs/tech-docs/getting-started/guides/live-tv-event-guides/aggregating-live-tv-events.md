@@ -1,4 +1,4 @@
-# Aggregating Live TV Events
+# Aggregating live TV events
 
 Aggregating Predicted Viewership data to create features for forecasting is an impactful way to unlock the value of Live TV Events data. You can use the Features API to aggregate Predicted Viewership data.
 

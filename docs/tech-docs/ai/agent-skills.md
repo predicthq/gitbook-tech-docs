@@ -31,5 +31,5 @@ The two are complementary and often installed together. Agent skills teach your 
 ## Next steps
 
 * [Build with AI](build-with-ai.md) - all the tools for building with AI assistants
-* [MCP Server](mcp.md) - live API access from any MCP-compatible client
-* [Which API Should I Use?](../getting-started/core-concepts/which-api-should-i-use.md) - the guidance the skill applies, in human-readable form
+* [MCP server](mcp.md) - live API access from any MCP-compatible client
+* [Which API should I use?](../getting-started/core-concepts/which-api-should-i-use.md) - the guidance the skill applies, in human-readable form

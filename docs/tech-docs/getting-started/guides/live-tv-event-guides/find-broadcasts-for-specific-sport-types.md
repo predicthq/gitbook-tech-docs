@@ -4,7 +4,7 @@ description: >-
   types.
 ---
 
-# Find Broadcasts for Specific Sport Types
+# Find Broadcasts for specific sport types
 
 In this example we explain when the different `broadcast_status` values are used and how to search for broadcasts for different sports.
 

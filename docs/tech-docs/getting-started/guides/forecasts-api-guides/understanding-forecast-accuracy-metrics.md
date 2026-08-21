@@ -1,4 +1,4 @@
-# Understanding Forecast Accuracy Metrics
+# Understanding forecast accuracy metrics
 
 The Forecasts API provides three common metrics to help you evaluate how well the model is performing. Each metric highlights a different aspect of error—use them together to get a complete picture.
 

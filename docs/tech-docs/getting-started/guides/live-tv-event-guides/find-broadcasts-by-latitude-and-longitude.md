@@ -1,4 +1,4 @@
-# Find Broadcasts by Latitude and Longitude
+# Find Broadcasts by latitude and longitude
 
 For this example we want to find all broadcasts televised in the county that corresponds to a geopoint (latitude and longitude coordinates).
 

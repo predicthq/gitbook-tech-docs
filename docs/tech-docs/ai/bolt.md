@@ -64,6 +64,6 @@ Bolt will guide you from there.
 
 ## Next Steps
 
-* [MCP Server](mcp.md) - connect Bolt's capabilities to your own AI assistant or coding environment
+* [MCP server](mcp.md) - connect Bolt's capabilities to your own AI assistant or coding environment
 * [Agent skills](agent-skills.md) - install PredictHQ best practices into your AI coding agent
-* [Integration Guides](../integrations/integration-guides/) - move from exploration to a production integration
+* [Integration guides](../integrations/integration-guides/) - move from exploration to a production integration

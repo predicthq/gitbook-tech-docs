@@ -2,7 +2,7 @@
 description: Get the list of hierarchies for a Place.
 ---
 
-# Get Place Hierarchies
+# Get place hierarchies
 
 {% hint style="info" %}
 This endpoint is in Beta.
@@ -64,4 +64,4 @@ The OpenAPI spec for Places API can be [found here](https://api.predicthq.com/do
 
 Below are some guides relevant to this API:
 
-* [Understanding Place Hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)
+* [Understanding place hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)

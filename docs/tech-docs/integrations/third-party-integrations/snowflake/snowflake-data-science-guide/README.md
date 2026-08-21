@@ -2,7 +2,7 @@
 description: Transforming Event Data into ML-Ready Features in Snowflake
 ---
 
-# Snowflake Data Science Guide
+# Snowflake data science guide
 
 ## This guide and the Features API
 
@@ -139,11 +139,11 @@ select
 
 ## Choose which Method to use
 
-### 1. [Snowpark Method Guide](snowpark-method-guide.md)
+### 1. [Snowpark method guide](snowpark-method-guide.md)
 
 Call the Features API with Python and save the output ML Features into Snowflake.
 
-### 2. [SQL Method Guide](sql-method-guide.md)
+### 2. [SQL method guide](sql-method-guide.md)
 
 Use SQL in Snowflake to run over the events table and create the ML Features.
 

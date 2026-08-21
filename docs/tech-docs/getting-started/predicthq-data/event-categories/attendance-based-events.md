@@ -4,7 +4,7 @@ description: >-
   come together in one location for entertainment or business.
 ---
 
-# Attendance-Based Events
+# Attendance-based events
 
 ## Categories
 

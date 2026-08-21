@@ -1,4 +1,4 @@
-# Troubleshooting Guide for Forecasts API
+# Troubleshooting guide for Forecasts API
 
 ## Forecast Accuracy Issues
 

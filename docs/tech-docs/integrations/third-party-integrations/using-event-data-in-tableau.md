@@ -2,7 +2,7 @@
 description: Learn how to connect PredictHQ data to Tableau and build an example dashboard.
 ---
 
-# Using Event Data in Tableau
+# Using event data in Tableau
 
 PredictHQ provides verified real-world events that impact key business operations, including demand forecasting and strategic planning. This tutorial shows how to connect PredictHQ to Tableau to visualize how events influence business trends - loading a static event export, and connecting directly to data warehouses where PredictHQ data is stored.
 
@@ -25,7 +25,7 @@ A JSON file export contains a structured list of events, much like a CSV export,
 
 **Search Events**
 
-1. Access our WebApp: Log in and navigate to [Search Events](https://control.predicthq.com/search/events).
+1. Access our WebApp: Log in and navigate to [Search events](https://control.predicthq.com/search/events).
 2. Configure Filters: Set relevant filters, such as those for category, date, and location. Once set, click 'Search'.
 
 > **Example Search**

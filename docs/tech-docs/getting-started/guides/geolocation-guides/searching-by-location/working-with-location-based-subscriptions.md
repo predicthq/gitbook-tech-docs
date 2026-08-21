@@ -1,4 +1,4 @@
-# Working with Location-Based Subscriptions
+# Working with location-based subscriptions
 
 {% hint style="info" %}
 **Please note:** If you are subscribed to location-based access and are making requests to our [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), you must filter your API calls using a Saved Location ID.

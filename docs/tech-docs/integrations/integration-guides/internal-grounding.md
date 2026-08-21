@@ -13,7 +13,7 @@ This page is the reference architecture. If your agents can query externally and
 
 ## Architecture
 
-Internal grounding extends the [Standard Integration Pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, internal grounding adds a retrieval interface and a consumer - nothing else changes.
+Internal grounding extends the [Standard integration pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, internal grounding adds a retrieval interface and a consumer - nothing else changes.
 
 ```mermaid
 flowchart TB
@@ -84,5 +84,5 @@ Some deployments run both: internal grounding for the high-volume serving path, 
 ## Next steps
 
 * [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md) - concepts and the two architectures
-* [Standard Integration Pattern](standard-integration-pattern.md) - the architecture this extends
-* [Receive Data via Snowflake](../third-party-integrations/snowflake/) - the lowest-friction delivery path
+* [Standard integration pattern](standard-integration-pattern.md) - the architecture this extends
+* [Receive data via Snowflake](../third-party-integrations/snowflake/) - the lowest-friction delivery path

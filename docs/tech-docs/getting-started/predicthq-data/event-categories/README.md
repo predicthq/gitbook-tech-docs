@@ -1,4 +1,4 @@
-# Event Categories
+# Event categories
 
 ## Attendance-Based Events
 

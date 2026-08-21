@@ -1,4 +1,4 @@
-# Find Broadcasts by County Place ID
+# Find Broadcasts by county place ID
 
 For this example we want to find all broadcasts televised in two counties in California during November 2020.
 

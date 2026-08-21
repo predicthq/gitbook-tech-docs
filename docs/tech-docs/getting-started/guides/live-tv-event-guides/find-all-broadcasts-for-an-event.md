@@ -1,4 +1,4 @@
-# Find all Broadcasts for an Event
+# Find all Broadcasts for an event
 
 In this example we want to find the broadcasts for the Super Bowl game, New England Patriots vs Los Angeles Rams, played on February 3rd 2019.
 

@@ -2,7 +2,7 @@
 description: Learn how to display events on a map for a specific location.
 ---
 
-# Displaying Events on a Map
+# Displaying events on a map
 
 Events can significantly impact businesses. Understanding when and where events are scheduled helps businesses optimize operations, marketing strategies, and resource management. Maps provide a visual representation of these events, allowing for quick identification of regions of interest and potential impact zones. For example, [a ride-sharing platform](https://www.predicthq.com/blog/4-ways-event-data-enhances-rideshare-and-mobility-app-ui) can use this data to predict areas of high demand, directing drivers to where upcoming events are likely to increase the need for rides.
 
@@ -77,7 +77,7 @@ For examples of maps created in Python, explore these [demo apps](../streamlit-d
 
 The event data retrieved from the Events API can be customized by adjusting parameters such as date range, location, and categories, among others.&#x20;
 
-For detailed guidance on configuring these parameters to meet your specific requirements, refer to the [Define Query Parameters](filtering-and-finding-relevant-events.md#step-1.-define-query-parameters-for-the-events-api) section in [Filtering and Finding Relevant Events](filtering-and-finding-relevant-events.md). This tutorial provides step-by-step instructions on how to retrieve the most relevant event data for your needs.
+For detailed guidance on configuring these parameters to meet your specific requirements, refer to the [Define Query Parameters](filtering-and-finding-relevant-events.md#step-1.-define-query-parameters-for-the-events-api) section in [Filtering and finding relevant events](filtering-and-finding-relevant-events.md). This tutorial provides step-by-step instructions on how to retrieve the most relevant event data for your needs.
 
 ## Conclusion
 

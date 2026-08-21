@@ -4,7 +4,7 @@ description: >-
   PredictHQ's Events API.
 ---
 
-# Filtering and Finding Relevant Events
+# Filtering and finding relevant events
 
 Events such as concerts, expos and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
 
@@ -14,7 +14,7 @@ Alternatively, use [Location Insights](https://www.predicthq.com/location-insigh
 
 ## Getting Started
 
-A valid access token is required for calling PredictHQ’s APIs. Refer to the [API Quickstart](../../api-quickstart.md) for guidance on creating an access token and quickly test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
+A valid access token is required for calling PredictHQ’s APIs. Refer to the [API quickstart](../../api-quickstart.md) for guidance on creating an access token and quickly test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
 
 ## Scenario
 
@@ -235,7 +235,7 @@ For information on how to search for events using our SDK, please refer to [pyth
 {% hint style="info" %}
 For more details, visit:
 
-* [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
+* [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
 * [python-sdk.md](../../../sdks/python-sdk.md "mention")
 {% endhint %}
 
@@ -419,7 +419,7 @@ For more comprehensive guidelines on navigating paginated results, refer to [Pag
 
 <summary>Events</summary>
 
-Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
+Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
 
 **Dates**
 
@@ -453,7 +453,7 @@ Events are detailed in the results section of the response, each represented as 
 For more details, visit:
 
 * [Pagination](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/pagination "mention")
-* [Search Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
+* [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention")
 * [working-with-dates-times-and-timezones.md](../date-and-time-guides/working-with-dates-times-and-timezones.md "mention")
 * [predicthq-data](../../predicthq-data/ "mention")
 {% endhint %}

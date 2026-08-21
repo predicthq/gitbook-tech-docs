@@ -2,7 +2,7 @@
 description: Update an existing forecast model.
 ---
 
-# Update Model
+# Update model
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}" method="patch" %}
 [OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
@@ -14,7 +14,7 @@ The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com
 
 ## Guides
 
-* [Getting Started with Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started)
-* [Understanding Forecast Accuracy Metrics](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
-* [Troubleshooting Guide for Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/troubleshooting)
+* [Getting started with Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started)
+* [Understanding forecast accuracy metrics](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
+* [Troubleshooting guide for Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/troubleshooting)
 

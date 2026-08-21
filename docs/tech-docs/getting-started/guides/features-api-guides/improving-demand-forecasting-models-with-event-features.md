@@ -4,7 +4,7 @@ description: >-
   model.
 ---
 
-# Improving Demand Forecasting Models with Event Features
+# Improving demand forecasting models with event features
 
 Adding PredictHQ event features to a demand forecasting model reduces forecast error in a way you can measure and attribute - and what a point of accuracy is worth is relative to your business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
 
@@ -85,7 +85,7 @@ Use Beam to automatically calibrate rank thresholds for your industry and locati
 {% hint style="info" %}
 For technical details, visit:
 
-* [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data "mention")
+* [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data "mention")
 * [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
 * [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [Analysis Groups](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups "mention")
@@ -141,4 +141,4 @@ For practical implementation:
 
 By following this tutorial, you should now understand how to enhance your demand forecasting models by integrating PredictHQ's event features. As known drivers of demand, incorporating event signals can noticeably improve the accuracy of your forecasts, empowering you to make more informed decisions and strategize more effectively.
 
-To move from this tutorial into a production integration — covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline — see the [Standard Integration Pattern](../../../integrations/integration-guides/standard-integration-pattern.md).
+To move from this tutorial into a production integration — covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline — see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md).

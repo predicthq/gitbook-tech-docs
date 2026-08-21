@@ -32,8 +32,8 @@ Retrieve model-ready features from the [Features API](https://app.gitbook.com/s/
 
 Using a pre-trained time series foundation model instead? There is no training step - supply the same future-dated features as covariates. See [Using event features with time series foundation models](guides/features-api-guides/using-event-features-with-time-series-foundation-models.md).
 
-* [Which API Should I Use?](core-concepts/which-api-should-i-use.md)
-* [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production architecture
+* [Which API should I use?](core-concepts/which-api-should-i-use.md)
+* [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production architecture
 
 ## Get forecasts without building a model
 
@@ -43,7 +43,7 @@ Supply historical demand data to the [Forecasts API](https://app.gitbook.com/s/k
 
 The Forecasts API also fits multi-model setups: run it as one candidate in a champion-challenger selection or an ensemble alongside your existing forecasts, and let measured accuracy decide which wins each series. Nothing needs replacing to adopt it.
 
-* [Getting Started with Forecasts API](guides/forecasts-api-guides/getting-started.md)
+* [Getting started with Forecasts API](guides/forecasts-api-guides/getting-started.md)
 
 ## Ground your AI in verified context
 
@@ -56,7 +56,7 @@ Grounding gives a model the real-world facts it lacks at the moment it answers, 
 
 * [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md) - concepts, architectures, and FAQ
 * [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
-* [PredictHQ MCP in Agentic Workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
+* [PredictHQ MCP in agentic workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
 
 ## Understand what drives your demand
 
@@ -64,7 +64,7 @@ For analysts and data scientists who need to know which real-world events matter
 
 Beam's [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) results rank the event categories that drive demand at each location and quantify how much of your demand variability is event-driven. PredictHQ explains more than 60 percent of real-world demand variability. Drill into the specific events behind any shift with the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) using the same `analysis_id`.
 
-* [Understanding Demand Variability and Event Contribution in Beam](guides/beam-guides/understanding-demand-variability-and-event-contribution-in-beam.md)
+* [Understanding demand variability and event contribution in Beam](guides/beam-guides/understanding-demand-variability-and-event-contribution-in-beam.md)
 
 ## How the paths fit together
 
@@ -74,6 +74,6 @@ The paths share the same foundation, so they combine naturally: the Saved Locati
 
 ## Next steps
 
-* [API Quickstart](api-quickstart.md) - make your first call
-* [Which API Should I Use?](core-concepts/which-api-should-i-use.md) - per-task API selection
-* [Standard Integration Pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production reference architecture
+* [API quickstart](api-quickstart.md) - make your first call
+* [Which API should I use?](core-concepts/which-api-should-i-use.md) - per-task API selection
+* [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production reference architecture

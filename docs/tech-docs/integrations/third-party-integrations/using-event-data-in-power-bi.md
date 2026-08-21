@@ -4,7 +4,7 @@ description: >-
   build an example report.
 ---
 
-# Using Event Data in Power BI
+# Using event data in Power BI
 
 In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that enables users to integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 

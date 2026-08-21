@@ -2,7 +2,7 @@
 description: We provide OpenAPI specs for all our APIs
 ---
 
-# API Specs
+# API specs
 
 We provide OpenAPI specs for all our APIs. These live in a Github repo. Our API Reference pages are auto-generated based on these specs.
 

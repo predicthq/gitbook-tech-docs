@@ -4,7 +4,7 @@ description: >-
   updates minute to minute to ensure accuracy.
 ---
 
-# Unscheduled Events
+# Unscheduled events
 
 ## Categories
 

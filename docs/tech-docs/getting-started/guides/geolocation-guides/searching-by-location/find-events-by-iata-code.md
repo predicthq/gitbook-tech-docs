@@ -1,4 +1,4 @@
-# Find Events by IATA Code
+# Find events by IATA code
 
 For this example, we will use an IATA airport code to search for events around Los Angeles Airport on March the 3rd, 2018.
 

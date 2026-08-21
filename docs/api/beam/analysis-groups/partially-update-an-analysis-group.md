@@ -2,7 +2,7 @@
 description: Partially update an existing Analysis Group.
 ---
 
-# Partially Update an Analysis Group
+# Partially update an Analysis Group
 
 {% openapi-operation spec="beam-api" path="/v1/beam/analysis-groups/{group_id}" method="patch" %}
 [OpenAPI beam-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/beam-api.yaml)

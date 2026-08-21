@@ -5,7 +5,7 @@ description: >-
   trust.
 ---
 
-# Event-Driven Demand
+# Event-driven demand
 
 Using real-world events to improve forecasting and operational decisions introduces structural challenges. These challenges are not unique to PredictHQ. Any organisation attempting to integrate event data into live systems will encounter them.
 
@@ -105,4 +105,4 @@ PredictHQ’s APIs map directly to these challenges:
 
 These are structural problems. They do not disappear with more data or more sophisticated models. They require deliberate design across data, calibration, and delivery layers.
 
-For the recommended production architecture — showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md).
+For the recommended production architecture — showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).

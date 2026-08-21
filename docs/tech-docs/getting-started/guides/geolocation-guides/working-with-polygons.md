@@ -1,4 +1,4 @@
-# Working with Polygons
+# Working with polygons
 
 Our Events API uses polygons data in the `geo.geometry` field when [searching](overview.md) to provide you with spatially relevant results. Once you have events with polygons, you can use them in your own systems. To do so, your systems will need to support GeoJSON and provide geospatial functionality.
 

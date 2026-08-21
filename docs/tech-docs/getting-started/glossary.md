@@ -33,7 +33,7 @@ The Features API is the recommended integration surface for any use case involvi
 
 The recommended way to call the Features API is by passing a `beam.analysis_id`, which automatically applies the correct location, rank filters, and feature selection derived from Beam. Without a `beam.analysis_id`, features must be configured manually, which is error-prone and produces worse results.
 
-* API Reference: [Get ML Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")
+* API Reference: [Get ML features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")
 * [features-api-guides](guides/features-api-guides/ "mention")
 
 ## Forecasts API
@@ -57,7 +57,7 @@ Grounding never touches the training model. Training improves a model before it 
 
 * [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md)
 * [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md)
-* [MCP Server](../ai/mcp.md)
+* [MCP server](../ai/mcp.md)
 
 ## Inference
 
@@ -94,7 +94,7 @@ MCP is an open standard for connecting AI assistants and agents to external tool
 
 The MCP server is PredictHQ's external grounding path: agents query for verified real-world context on demand, with no data pipeline to maintain. For training-scale feature retrieval, use the Features API directly.
 
-* [MCP Server](../ai/mcp.md)
+* [MCP server](../ai/mcp.md)
 
 ## PHQ Labels
 
@@ -180,7 +180,7 @@ Within PredictHQ's platform, real-world context flows through a layered architec
 * **Features API** - event signals transformed into model-ready time-series features
 * **Forecasts API** - event-aware demand forecasts for customers who do not build their own models
 * **Grounding (MCP server + Events API)** - verified context retrieved by AI systems at answer time, from a store inside your environment (internal grounding) or on demand via MCP (external grounding)
-* [Core Concepts](core-concepts/)
+* [Core concepts](core-concepts/)
 
 ## Saved Location
 
@@ -208,4 +208,4 @@ What they don't learn is real-world drivers. Pre-training corpora are dominated 
 
 As forecasting shifts from bespoke trained models toward pre-trained ones, the training step shrinks and inference-time context matters more, not less.
 
-* API Reference: [Get ML Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")
+* API Reference: [Get ML features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")

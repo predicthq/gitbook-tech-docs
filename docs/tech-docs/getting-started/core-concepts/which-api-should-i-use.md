@@ -1,4 +1,4 @@
-# Which API Should I Use?
+# Which API should I use?
 
 PredictHQ has four core APIs, plus an MCP server for AI assistants and agents. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
 
@@ -40,7 +40,7 @@ The Forecasts API accepts your historical demand data, trains a model, and retur
 The Forecasts API is appropriate whether you are starting from scratch or augmenting an existing forecast. Use it when reducing development time and complexity matters more than owning the underlying model. For teams that require full control over model architecture and feature engineering, the Features API is the recommended alternative.
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
-* [Getting Started with Forecasts API](../guides/forecasts-api-guides/getting-started.md)
+* [Getting started with Forecasts API](../guides/forecasts-api-guides/getting-started.md)
 
 ## Events API - for discovery and explainability
 
@@ -73,7 +73,7 @@ To ground AI systems inside your own environment instead (internal grounding), s
 
 The MCP server is the grounding path, not the bulk path: for training-scale feature retrieval, use the Features API directly.
 
-* [MCP Server](../../ai/mcp.md)
+* [MCP server](../../ai/mcp.md)
 * [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md)
 
 ## Common Mistakes
@@ -85,6 +85,6 @@ The MCP server is the grounding path, not the bulk path: for training-scale feat
 ## See Also
 
 * [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended integration paths, by job
-* [Standard Integration Pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture
-* [API Quickstart](../api-quickstart.md) - make your first API call
+* [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture
+* [API quickstart](../api-quickstart.md) - make your first API call
 * [Glossary](../glossary.md) - definitions for all core concepts

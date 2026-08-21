@@ -4,7 +4,7 @@ description: >-
   inside the Loop UI.
 ---
 
-# Get Loop Settings
+# Get Loop settings
 
 Particularly for the Loop Links UI we take the `org_name` from Settings and display it at the top of the page.
 

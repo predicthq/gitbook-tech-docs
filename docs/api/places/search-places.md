@@ -2,7 +2,7 @@
 description: Search for a Place.
 ---
 
-# Search Places
+# Search places
 
 The Places API gives you a read-only interface to PredictHQ's places data. A place represents a [Geonames](http://www.geonames.org/) Feature, which can be either an Area, an Administrative Feature, or a Populated Place.
 
@@ -52,6 +52,6 @@ The OpenAPI spec for Places API can be [found here](https://api.predicthq.com/do
 
 Below are some guides relevant to this API:
 
-* [Understanding Place Hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)
-* [Find Events by Place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)
-* [Find Broadcasts by County Place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/find-broadcasts-by-county-place-id)
+* [Understanding place hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)
+* [Find events by place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)
+* [Find Broadcasts by county place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/find-broadcasts-by-county-place-id)

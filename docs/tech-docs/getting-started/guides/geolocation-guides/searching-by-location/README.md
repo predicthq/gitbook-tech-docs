@@ -1,4 +1,4 @@
-# Searching by Location
+# Searching by location
 
 Performing a radial search using our Events API's `within` parameter is a common way to find events that impact your locations of interest. See our guide on [radial searches](find-events-by-latitude-longitude-and-radius.md) and the within search parameter.
 

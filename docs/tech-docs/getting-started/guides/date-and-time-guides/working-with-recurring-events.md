@@ -1,4 +1,4 @@
-# Working with Recurring Events
+# Working with recurring events
 
 The Recurring Events feature provides a linkage between recurrences of the same event:
 

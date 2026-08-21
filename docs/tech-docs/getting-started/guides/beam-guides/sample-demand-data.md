@@ -1,4 +1,4 @@
-# Sample Demand Data
+# Sample demand data
 
 If you don't have your own demand data ready, you can use one of our sample datasets to explore Beam and the Forecasts API. Each dataset contains synthetic daily demand data modelled on realistic industry patterns. Use any dataset with your own location — the industry type matters more than the specific location when getting started.
 
@@ -12,7 +12,7 @@ PredictHQ is optimized for the following named industries: `accommodation`, `cpg
 
 ### **With Beam**
 
-Upload the sample data to an existing Beam analysis using the [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data) endpoint:
+Upload the sample data to an existing Beam analysis using the [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data) endpoint:
 
 ```python
 import requests
@@ -33,11 +33,11 @@ with open("sample_demand_retail.csv", "rb") as f:
 print("Upload successful" if response.status_code == 202 else response.json())
 ```
 
-See the [Beam Guides](./) for a full walkthrough.
+See the [Beam guides](./) for a full walkthrough.
 
 ### **With Forecasts API**
 
-Upload the sample data to an existing forecast model using the [Upload Demand Data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/demand-data/upload-demand-data) endpoint:
+Upload the sample data to an existing forecast model using the [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/demand-data/upload-demand-data) endpoint:
 
 ```python
 import requests
@@ -61,7 +61,7 @@ response = requests.post(
 print("Upload successful" if response.status_code == 201 else response.json())
 ```
 
-See the [Getting Started with Forecasts API](../forecasts-api-guides/getting-started.md) guide for a full walkthrough including how to create a model and generate a forecast.
+See the [Getting started with Forecasts API](../forecasts-api-guides/getting-started.md) guide for a full walkthrough including how to create a model and generate a forecast.
 
 {% hint style="info" %}
 These datasets are provided for testing and exploration purposes only. For production use, replace them with your own demand data.

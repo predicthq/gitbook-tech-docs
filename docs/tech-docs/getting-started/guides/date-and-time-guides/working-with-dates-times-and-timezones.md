@@ -4,7 +4,7 @@ description: >-
   how to work with these with PredictHQ data.
 ---
 
-# Working with Dates, Times and Timezones
+# Working with dates, times and timezones
 
 ## Event start and end local time
 

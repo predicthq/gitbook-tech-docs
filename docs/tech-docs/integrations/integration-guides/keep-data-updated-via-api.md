@@ -5,7 +5,7 @@ description: >-
   to date.
 ---
 
-# Keep Data Updated via API
+# Keep data updated via API
 
 {% hint style="success" %}
 We highly recommend using Snowflake or ADX to keep your local event store up to date. Managed delivery removes all the complexity of implementing a sync system against the API and results in far higher accuracy with fewer issues. Keeping up to date via the API is much more complicated than via Snowflake or ADX.

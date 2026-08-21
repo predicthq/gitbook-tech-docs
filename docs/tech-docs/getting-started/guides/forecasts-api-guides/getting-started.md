@@ -1,4 +1,4 @@
-# Getting Started with Forecasts API
+# Getting started with Forecasts API
 
 ## Overview
 
@@ -218,7 +218,7 @@ Evaluation metrics:
 """
 ```
 
-Lower values indicate better accuracy. See the [Understanding Forecast Accuracy Metrics](understanding-forecast-accuracy-metrics.md) guide for help interpreting MAPE, MAE, and RMSE.
+Lower values indicate better accuracy. See the [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) guide for help interpreting MAPE, MAE, and RMSE.
 
 ### Retrieve Forecast
 
@@ -331,8 +331,8 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 ## Next Steps
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints and parameters
-* [Understanding Forecast Accuracy Metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE and RMSE
-* [Troubleshooting Guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
+* [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE and RMSE
+* [Troubleshooting guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
 
 
 

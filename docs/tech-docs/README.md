@@ -18,7 +18,7 @@ Everything you need to integrate PredictHQ into your models, pipelines, and AI s
 
 ## How It Fits Together
 
-Start with [How to use PredictHQ](getting-started/how-to-use-predicthq.md) - the recommended integration paths by job, from model training to grounding AI systems. PredictHQ APIs work as a pipeline, not in isolation: the [Standard Integration Pattern](integrations/integration-guides/standard-integration-pattern.md) shows the recommended production architecture, from location setup through to forecasting and explainability.
+Start with [How to use PredictHQ](getting-started/how-to-use-predicthq.md) - the recommended integration paths by job, from model training to grounding AI systems. PredictHQ APIs work as a pipeline, not in isolation: the [Standard integration pattern](integrations/integration-guides/standard-integration-pattern.md) shows the recommended production architecture, from location setup through to forecasting and explainability.
 
 ## Example
 
@@ -50,7 +50,7 @@ print(response.json())
 ## AI & Agents
 
 * [Build with AI](ai/build-with-ai.md) - Connect any MCP-compatible AI assistant to PredictHQ APIs through natural language
-* [MCP Server](ai/mcp.md) - Query events, demand intelligence, and all PredictHQ APIs without writing code
+* [MCP server](ai/mcp.md) - Query events, demand intelligence, and all PredictHQ APIs without writing code
 * [Bolt](ai/bolt.md) - AI-native developer environment built into the WebApp
 
 ## Resources
@@ -58,5 +58,5 @@ print(response.json())
 * [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview) - Authentication, rate limits, and API conventions
 * [Guides](getting-started/guides/) - Step-by-step integration guides for core APIs and use cases
 * [Python SDK](sdks/python-sdk.md) - The official Python client for the PredictHQ API
-* [Data Science Notebooks](getting-started/data-science-notebooks.md) - Jupyter notebooks for Beam, Features API, and demand forecasting
+* [Data science notebooks](getting-started/data-science-notebooks.md) - Jupyter notebooks for Beam, Features API, and demand forecasting
 * [System Status](https://www.predicthqstatus.com/) - Live status and incident history for PredictHQ services

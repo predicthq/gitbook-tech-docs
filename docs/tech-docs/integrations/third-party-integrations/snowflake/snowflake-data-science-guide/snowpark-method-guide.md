@@ -2,7 +2,7 @@
 description: Transforming Event Data into ML-Ready Features using Snowpark and Python
 ---
 
-# Snowpark Method Guide
+# Snowpark method guide
 
 ## Calling the Features API from Snowflake to calculate features
 

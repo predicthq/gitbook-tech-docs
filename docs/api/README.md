@@ -1,4 +1,4 @@
-# API Reference
+# API reference
 
 PredictHQ provides structured, verified real-world context and demand-aware features for forecasting, ML, and AI systems. The platform is designed to be integrated directly into production models and decision workflows.
 

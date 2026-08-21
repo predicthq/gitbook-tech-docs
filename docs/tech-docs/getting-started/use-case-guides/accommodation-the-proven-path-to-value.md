@@ -1,4 +1,4 @@
-# Accommodation: The Proven Path to Value
+# Accommodation: the proven path to value
 
 Most hotels and platforms know that local events drive demand - but turning that knowledge into actionable insight at scale is hard.
 

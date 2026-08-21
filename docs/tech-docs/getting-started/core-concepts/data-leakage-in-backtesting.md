@@ -1,4 +1,4 @@
-# Data Leakage in Backtesting: Why It Doesn't Affect Forecast Accuracy
+# Data leakage in backtesting: why it doesn't affect forecast accuracy
 
 Real-world events change. A concert gets postponed, a festival is cancelled, a venue changes, an attendance estimate gets refined as an event gets closer. Because PredictHQ continuously enriches event records with the latest available information, some customers evaluating PredictHQ ask a reasonable question: **if the event data underlying a feature can change over time, does that mean historical training data contains information that wouldn't have been available at the time, and would that make backtesting results overstate what we'll see in production?**
 

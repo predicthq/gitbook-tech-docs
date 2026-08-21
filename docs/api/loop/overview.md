@@ -9,9 +9,9 @@ Contributions come through the [Loop UI](https://loop.predicthq.com/) or through
 The API covers the full workflow:
 
 * [Loop Links](loop-links/) - create and manage submission links for your teams
-* [Loop Settings](loop-settings/) - configure how your links behave
-* [Loop Submissions](loop-submissions/) - review submitted events and their status
-* [Loop Feedback](loop-feedback/) - review reported corrections to existing events
+* [Loop settings](loop-settings/) - configure how your links behave
+* [Loop submissions](loop-submissions/) - review submitted events and their status
+* [Loop feedback](loop-feedback/) - review reported corrections to existing events
 
 ## Guides
 

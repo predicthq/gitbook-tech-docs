@@ -1,4 +1,4 @@
-# Find Events by Latitude/Longitude and Radius
+# Find events by latitude/longitude and radius
 
 For this example, we will find conferences and expos that happened within a 2 mile radius of a specific location, in April 2018.
 

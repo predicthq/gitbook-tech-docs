@@ -2,7 +2,7 @@
 description: Search events submitted by your organization.
 ---
 
-# Search Submitted Events
+# Search submitted events
 
 For example, you can use this to display a list of events submitted via Loop Links within your application to your users. See also the [Events API documentation](../../events/search-events.md#query-parameters) for more detail on many of the parameters mentioned below.
 

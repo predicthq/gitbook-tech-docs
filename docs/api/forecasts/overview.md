@@ -16,6 +16,6 @@ The Forecasts API also fits multi-model setups: run it as one candidate in a cha
 
 ## Guides
 
-* [Getting Started with Forecasts API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/getting-started)
-* [Understanding Forecast Accuracy Metrics](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
-* [Troubleshooting Guide for Forecasts API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/troubleshooting)
+* [Getting started with Forecasts API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/getting-started)
+* [Understanding forecast accuracy metrics](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
+* [Troubleshooting guide for Forecasts API](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/forecasts-api-guides/troubleshooting)

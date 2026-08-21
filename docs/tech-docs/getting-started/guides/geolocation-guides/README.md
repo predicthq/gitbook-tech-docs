@@ -1,4 +1,4 @@
-# Geolocation Guides
+# Geolocation guides
 
 How to scope PredictHQ queries to the places your business cares about.
 

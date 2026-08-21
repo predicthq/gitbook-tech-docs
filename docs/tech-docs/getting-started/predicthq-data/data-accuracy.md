@@ -1,4 +1,4 @@
-# Data Accuracy
+# Data accuracy
 
 We have a rigorous set of models and algorithms to ensure we’re providing a clean and verified data set. Our machine learning models are working day-in and day-out, which is especially crucial for event data, which is changing all of the time.
 

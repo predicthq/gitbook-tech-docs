@@ -1,4 +1,4 @@
-# Streamlit Demo Apps
+# Streamlit demo apps
 
 To demonstrate how quick and easy it is to build extremely powerful apps using our APIs, we put together some Streamlit demos. All the code is available on GitHub and we encourage you to take the code, modify it, and use your own locations of interest to demo our APIs internally to your team or to simply better understand our technology.
 

@@ -2,7 +2,7 @@
 description: Update your Loop Settings.
 ---
 
-# Update Loop Settings
+# Update Loop settings
 
 {% openapi-operation spec="loop-api" path="/v1/loop/settings" method="put" %}
 [OpenAPI loop-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/loop-api.yaml)

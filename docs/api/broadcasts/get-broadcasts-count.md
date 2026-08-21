@@ -2,7 +2,7 @@
 description: Get the count of Live TV broadcasts by category, label and more.
 ---
 
-# Get Broadcasts Count
+# Get Broadcasts count
 
 {% openapi-operation spec="broadcasts-api" path="/v1/broadcasts/count/" method="get" %}
 [OpenAPI broadcasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/broadcasts-api.yaml)
@@ -47,4 +47,4 @@ The OpenAPI spec for Broadcasts API can be [found here](https://api.predicthq.co
 
 Below are some guides relevant to this API:
 
-* [Live TV Event Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)
+* [Live TV event guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

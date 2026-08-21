@@ -4,7 +4,7 @@ description: >-
   fluid and distributed in impact, such as observances or school holidays.
 ---
 
-# Non-Attendance-Based Events
+# Non-Attendance-based events
 
 ## Categories
 

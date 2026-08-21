@@ -60,8 +60,6 @@ The OpenAPI spec for Broadcasts API can be [found here](https://api.predicthq.co
 Counties are mapped to Place IDs. The current mapping of counties to Place ID can be [found here](https://github.com/predicthq/api-specs/blob/main/data/broadcast-county-place-mapping.csv).
 {% endhint %}
 
-Below are some guides relevant to this&#x20;
-
 Below are some guides relevant to this API:
 
-* [Live TV Event Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)
+* [Live TV event guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

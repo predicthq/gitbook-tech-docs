@@ -56,7 +56,7 @@ flowchart LR
     Agent --> Answer["Grounded answer"]
 ```
 
-* [PredictHQ MCP in Agentic Workflows](predicthq-mcp-in-agentic-workflows.md) - reference workflows
+* [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - reference workflows
 
 ## Using PredictHQ with AI assistants
 
@@ -70,7 +70,7 @@ Whichever architecture you choose, the request flow an AI assistant follows is t
 
 PredictHQ APIs are stateless and deterministic - the same request always returns the same result - which suits inference-time use inside AI systems.
 
-AI systems consuming real-world context face the same structural challenges described in [Event-Driven Demand](../getting-started/core-concepts/event-driven-demand.md), and the APIs map directly to them:
+AI systems consuming real-world context face the same structural challenges described in [Event-driven demand](../getting-started/core-concepts/event-driven-demand.md), and the APIs map directly to them:
 
 * **Scope** - [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) defines where events matter for a location.
 * **Relevance** - [Beam](../getting-started/core-concepts/what-is-beam.md) calibrates which events materially impact demand, using historical demand data.
@@ -122,4 +122,4 @@ Yes, and the two don't interact: training uses event features to improve your mo
 ## Next steps
 
 * [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
-* [MCP Server](mcp.md) - set up the MCP server
+* [MCP server](mcp.md) - set up the MCP server

@@ -1,4 +1,4 @@
-# Rate Limits
+# Rate limits
 
 Your requests to the API will be rate limited, based on the limit specified in your plan. Rate limits are specified in `rps` (requests per second) and your request rate is measured across a one second window.
 

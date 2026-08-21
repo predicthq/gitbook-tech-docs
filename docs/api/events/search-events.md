@@ -4,7 +4,7 @@ description: >-
   retrieval at decision time—structured, deduplicated, and enriched.
 ---
 
-# Search Events
+# Search events
 
 {% hint style="info" %}
 **Results are limited by your subscription**
@@ -94,6 +94,6 @@ Airport codes are mapped to Place IDs. The current mapping of airport code to Pl
 
 Below are some guides relevant to this API:
 
-* [Geolocation Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides)
-* [Date and Time Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/date-and-time-guides)
-* Other [Events API Guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/events-api-guides)
+* [Geolocation guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides)
+* [Date and time guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/date-and-time-guides)
+* Other [Events API guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/events-api-guides)
