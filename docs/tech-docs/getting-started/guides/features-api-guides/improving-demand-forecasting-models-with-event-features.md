@@ -10,14 +10,6 @@ Adding PredictHQ event features to a demand forecasting model reduces forecast e
 
 This tutorial guides you through the process of identifying, retrieving and integrating relevant, demand-driving event features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
 
-## Use Cases
-
-Demand Forecasting
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Harnessing Event Signals
 
 ### Events Driving Demand

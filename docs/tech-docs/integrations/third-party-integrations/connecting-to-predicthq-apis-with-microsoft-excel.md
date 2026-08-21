@@ -4,14 +4,6 @@ description: Learn how to connect PredictHQ data to Microsoft Excel using APIs.
 
 # Connecting to PredictHQ APIs with Microsoft Excel
 
-## Use Cases
-
-Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, Inventory Management, Event Visibility
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Overview
 
 The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Please change the location from San Francisco to the location you want to look at.
@@ -26,7 +18,7 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. API: [API Access Token](../../api-quickstart.md)
+1. API: [API Access Token](../../getting-started/api-quickstart.md)
 2. Microsoft Excel
 
 ### Example Parameters for this Guide:
@@ -63,7 +55,7 @@ Time zone parameter (active.tz) filters results based on that given time zone, e
 
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
 
-See also our [filtering guide](filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
+See also our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
 With this API query string, event data can start to be loaded into Microsoft Excel.
 

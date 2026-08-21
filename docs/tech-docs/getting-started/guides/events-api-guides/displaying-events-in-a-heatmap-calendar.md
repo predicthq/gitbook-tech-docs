@@ -10,14 +10,6 @@ Event data provides critical insights into activities that can impact businesses
 
 This tutorial demonstrates how to use PredictHQ event data to build a heatmap calendar, starting with a simple build using [JavaScript D3](https://d3js.org/), followed by guidance on filtering and retrieving the underlying event data from PredictHQ's Features API. The goal is to provide a simple example so you can incorporate events into your own calendar view.
 
-## Use Cases
-
-Visualization and Insights, Workforce Optimization
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Heatmap Calendars
 
 Heatmap calendars display data density over time, making it easier to identify patterns and trends, such as busy days. This visual tool allows users to quickly view upcoming peak periods at a glance. For example, a hotel booking platform might use a heatmap calendar to visualize peak booking periods associated with local events, aiding in pricing strategy, inventory management, and customer satisfaction by preempting high-demand times.

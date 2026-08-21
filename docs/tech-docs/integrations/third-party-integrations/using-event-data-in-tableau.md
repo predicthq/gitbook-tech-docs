@@ -6,14 +6,6 @@ description: Learn how to connect PredictHQ data to Tableau and build an example
 
 PredictHQ provides verified real-world events that impact key business operations, including demand forecasting and strategic planning. This tutorial shows how to connect PredictHQ to Tableau to visualize how events influence business trends - loading a static event export, and connecting directly to data warehouses where PredictHQ data is stored.
 
-## Use Cases
-
-Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, Inventory Management, Event Visibility
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Getting Started
 
 This tutorial requires access to both Tableau and PredictHQ.
@@ -27,7 +19,7 @@ Tableau supports [various methods](https://help.tableau.com/current/pro/desktop/
 
 Connecting via a JSON file in Tableau involves downloading a static snapshot of event data through bulk exporting from PredictHQ's WebApp. It is particularly useful for scenarios where real-time data updates are not essential. Ideal for quick testing or one-off analyses, this approach provides an efficient way to get started with event data in Tableau. This is a good way to try PredictHQ's data for the first time and explore how it can be useful in your business.
 
-A JSON file export contains a structured list of events, much like a CSV export, but with better handling of nested data. While Tableau also [supports CSV file connections](https://help.tableau.com/current/pro/desktop/en-us/examples_text.htm), accessing nested data, such as [Impact Patterns](../../predicthq-data/impact-patterns.md), is more challenging. In contrast, Tableau's native support for JSON files simplifies the integration and manipulation of nested information, making it the preferred method for connecting PredictHQ data.
+A JSON file export contains a structured list of events, much like a CSV export, but with better handling of nested data. While Tableau also [supports CSV file connections](https://help.tableau.com/current/pro/desktop/en-us/examples_text.htm), accessing nested data, such as [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md), is more challenging. In contrast, Tableau's native support for JSON files simplifies the integration and manipulation of nested information, making it the preferred method for connecting PredictHQ data.
 
 ### Export File
 
@@ -38,12 +30,12 @@ A JSON file export contains a structured list of events, much like a CSV export,
 
 > **Example Search**
 >
-> To view all [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md) in San Francisco scheduled or predicted to take place in May 2024, use the following URL with pre-configured filters:
+> To view all [attendance-based events](../../getting-started/predicthq-data/event-categories/attendance-based-events.md) in San Francisco scheduled or predicted to take place in May 2024, use the following URL with pre-configured filters:
 >
 > [https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq\_attendance,-start](https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq_attendance,-start\&t=1716862100079)
 
 {% hint style="info" %}
-For guidance on finding the most relevant events for your business, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention"). For searches around specific locations or stores, exporting a JSON file from our WebApp [Saved Locations](https://control.predicthq.com/location-insights) is recommended.
+For guidance on finding the most relevant events for your business, see [filtering-and-finding-relevant-events.md](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md "mention"). For searches around specific locations or stores, exporting a JSON file from our WebApp [Saved Locations](https://control.predicthq.com/location-insights) is recommended.
 {% endhint %}
 
 **Export as JSON**
@@ -99,7 +91,7 @@ For more information on data types, see this [Tableau article](https://help.tabl
 
 ## Dashboard with Event Data
 
-This section will guide you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../predicthq-data/impact-patterns.md) and a table listing relevant events. PredictHQ data is connected via a JSON file.
+This section will guide you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. PredictHQ data is connected via a JSON file.
 
 ### Worksheets
 
@@ -177,7 +169,7 @@ This connection method involves accessing PredictHQ data through Snowflake’s S
 1. Setup: Coordinate with your Snowflake administrator to set up a Data Share with PredictHQ.
 2. Database: Create a database from the Data Share and ensure that the necessary permissions are granted to users.
 
-For more information on receiving PredictHQ data via Snowflake, see this [guide](../../../integrations/third-party-integrations/snowflake/).
+For more information on receiving PredictHQ data via Snowflake, see this [guide](snowflake/).
 
 **Connect to Snowflake in Tableau**
 
@@ -207,7 +199,7 @@ This connection method involves accessing PredictHQ data through AWS Data Exchan
 1. Setup: Subscribe to PredictHQ data on AWS Data Exchange
 2. Amazon S3: Copy the data to your specified S3 bucket. Ensure that your AWS IAM user or role has read permissions for this bucket.
 
-For more information on receiving PredictHQ data via AWS Data Exchange, see this [guide](../../../integrations/third-party-integrations/aws-data-exchange/).
+For more information on receiving PredictHQ data via AWS Data Exchange, see this [guide](aws-data-exchange/).
 
 **Connect to Amazon S3 in Tableau**
 
@@ -236,7 +228,7 @@ Some other connectors commonly used with PredictHQ data include the following:
 * [Azure SQL Database](https://help.tableau.com/current/pro/desktop/en-us/examples_azure_sql_database.htm)
 * [Amazon Redshift](https://help.tableau.com/current/pro/desktop/en-us/examples_amazonredshift.htm)
 
-For more information on loading PredictHQ data into data warehouses, see this [guide](loading-event-data-into-a-data-warehouse.md) which provides an example using Google BigQuery.
+For more information on loading PredictHQ data into data warehouses, see this [guide](../integration-guides/loading-event-data-into-a-data-warehouse.md) which provides an example using Google BigQuery.
 
 See this [article](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm) for all connectors supported by Tableau. Once PredictHQ data is connected to a data warehouse, techniques similar to those described in this guide can be applied for querying data from these sources.
 

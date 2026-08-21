@@ -10,7 +10,7 @@ This guide outlines the process for integrating PredictHQ's Events data into you
 
 We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide is designed for users with a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
 
-This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../../../integrations/third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API Should I Use?](../../core-concepts/which-api-should-i-use.md)
+This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API Should I Use?](../../getting-started/core-concepts/which-api-should-i-use.md)
 
 If you are using Snowflake or AWS Data Exchange (ADX) for your data lake PredictHQ integrates with those products. See [Receive Data via Snowflake](https://docs.predicthq.com/integrations/third-party-integrations/snowflake) and [Receive Data via AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations/aws-data-exchange) for details.
 
@@ -18,7 +18,7 @@ If you are using Snowflake or AWS Data Exchange (ADX) for your data lake Predict
 
 This guide details the data structure of our Events API within a data warehouse environment and outlines two methodologies for creating an Events data table in GCP.
 
-Throughout this guide, we will use the fictional example from our [Filtering Guide](https://docs.predicthq.com/getting-started/guides/tutorials/filtering-and-finding-relevant-events), "Tom’s Pizzeria". This scenario will give us a practical illustration of the methods described and demonstrate how to tailor API queries to specific business needs. For an understanding of how parameters were selected for this example, refer to the [Filtering Guide](https://docs.predicthq.com/getting-started/guides/tutorials/filtering-and-finding-relevant-events).
+Throughout this guide, we will use the fictional example from our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md), "Tom’s Pizzeria". This scenario will give us a practical illustration of the methods described and demonstrate how to tailor API queries to specific business needs. For an understanding of how parameters were selected for this example, refer to the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md).
 
 **Requirements**:
 
@@ -33,7 +33,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 In this guide, we'll explore a hypothetical use case for “Tom’s Pizzeria”, a chain of restaurants with locations throughout the US headquartered in Seattle, Washington. Tom is interested in understanding how local events might influence his business operations and customer flow. Tom’s inventory system, website, and tools run off GCP. Tom wants to use event data in his staffing and inventory management systems to help anticipate the demand caused by events. He wants to show upcoming events near stores to his staff. To do this he needs to download events into his data lake.
 
-For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](https://docs.predicthq.com/getting-started/guides/tutorials/filtering-and-finding-relevant-events). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the Loaded Data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
+For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the Loaded Data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
 
 Tom's Data Parameters:
 
@@ -102,7 +102,7 @@ This method is recommended for large data uploads, as it efficiently manages the
 
 To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs.
 
-You can download everything you have access to, but most integrations are better served by scoping the export to the locations that matter - and production deployments by [managed delivery](../../../integrations/third-party-integrations/) rather than manual exports.
+You can download everything you have access to, but most integrations are better served by scoping the export to the locations that matter - and production deployments by [managed delivery](../third-party-integrations/) rather than manual exports.
 
 In the context of our example [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) for Tom's Pizzeria, they would be downloading events for all of the US and then querying for specific locations. Many customers may bulk load all the data they have access to by exporting it all and then importing it into their data lake. In this example, we’ll download events only for Seattle.
 
@@ -500,7 +500,7 @@ Some common fields to query are:
 * **rank:** is commonly used to filter out smaller events. Filter where rank is equal to or greater than a specific field to filter out smaller events.
 * **geo:** This field contains geojson data ([see here](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#geojson) for more details) on the location event. For attended events, this field typically holds the latitude and longitude of the point at which the event is occurring. It can also hold [polygon](https://docs.predicthq.com/getting-started/guides/geolocation-guides/working-with-polygons) information for events that cover a wide area like marathons or severe weather events. For marathons, the polygon shows the route of the marathon. Query on this field to find all events in an area like a radius.
 
-See the [Filtering Guide](https://docs.predicthq.com/getting-started/guides/tutorials/filtering-and-finding-relevant-events) for more examples. The SQL example below shows how to query these fields in the database.
+See the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for more examples. The SQL example below shows how to query these fields in the database.
 
 Below is a sample BigQuery SQL query that aligns with the parameters specified for our example. This query filters events based on the categories, date range, event rank, and geographical proximity to Tom’s location.
 
@@ -553,13 +553,13 @@ Customers sometimes use fields like [Placekey ](https://docs.predicthq.com/getti
 
 PredictHQ data can significantly enhance your demand forecasting models, especially for businesses that are impacted by local events, such as retail, hospitality, and transportation. By understanding when significant events are happening, you can better predict and prepare for attendance surges or declines.
 
-You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving Demand Forecasting Models with Event Features](https://docs.predicthq.com/getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features).
+You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake Data Science Guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving Demand Forecasting Models with Event Features](../../getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md).
 
 #### 3. Building Tailored Reports
 
 Use the data within BigQuery to create detailed reports and dashboards that monitor the effects of events on your business operations. These reports can provide actionable insights to business users across your organization, from marketing teams planning campaigns around major events to supply chain management preparing for increased activity.
 
-See [Use Events Data in Power BI](https://docs.predicthq.com/getting-started/guides/tutorials/use-events-data-in-power-bi) for an example of building reports in Power BI. You can connect Power BI or other BI tools to your database to build dashboards and reports. See also [How to Connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
+See [Use Events Data in Power BI](../third-party-integrations/using-event-data-in-power-bi.md) for an example of building reports in Power BI. You can connect Power BI or other BI tools to your database to build dashboards and reports. See also [How to Connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
 #### 4. Enhancing Customer Experience
 

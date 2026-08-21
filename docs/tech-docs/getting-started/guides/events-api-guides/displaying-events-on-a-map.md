@@ -8,14 +8,6 @@ Events can significantly impact businesses. Understanding when and where events 
 
 This tutorial demonstrates how to create a dynamic map using PredictHQ event data to visualize events geographically. It begins with a simple JavaScript example using [Leaflet](https://leafletjs.com/) and then looks at how to retrieve relevant events using PredictHQ's Events API. The goal is to provide a straightforward example to help you incorporate events into any map view.
 
-## Use Cases
-
-Visualization and Insights, Workforce Optimization
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Example Map
 
 This section presents a simple example demonstrating the basic functionality of a map integrated with PredictHQ data. Explore this through the following Observable notebook:

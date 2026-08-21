@@ -1,4 +1,13 @@
 redirects:
+    getting-started/guides/tutorials: getting-started/guides/README.md
+    getting-started/guides/tutorials/filtering-and-finding-relevant-events: getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md
+    getting-started/guides/tutorials/displaying-events-in-a-heatmap-calendar: getting-started/guides/events-api-guides/displaying-events-in-a-heatmap-calendar.md
+    getting-started/guides/tutorials/displaying-events-on-a-map: getting-started/guides/events-api-guides/displaying-events-on-a-map.md
+    getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features: getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md
+    getting-started/guides/tutorials/using-event-data-in-power-bi: integrations/third-party-integrations/using-event-data-in-power-bi.md
+    getting-started/guides/tutorials/using-event-data-in-tableau: integrations/third-party-integrations/using-event-data-in-tableau.md
+    getting-started/guides/tutorials/connecting-to-predicthq-apis-with-microsoft-excel: integrations/third-party-integrations/connecting-to-predicthq-apis-with-microsoft-excel.md
+    getting-started/guides/tutorials/loading-event-data-into-a-data-warehouse: integrations/integration-guides/loading-event-data-into-a-data-warehouse.md
     categoryinfo/attended-events: getting-started/predicthq-data/event-categories/attendance-based-events.md
     categoryinfo/general-category-information: getting-started/predicthq-data/event-categories/README.md
     categoryinfo/general-info: getting-started/predicthq-data/event-categories/README.md
@@ -41,12 +50,12 @@ redirects:
     datascience/severe-weather-events: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
     getting-started/guides/use-case-guides: getting-started/use-case-guides/README.md
     getting-started/guides/use-case-guides/accommodation-the-proven-path-to-value: getting-started/use-case-guides/accommodation-the-proven-path-to-value.md
-    getting-started/tutorials-by-use-case: getting-started/guides/tutorials/README.md
-    getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models: getting-started/guides/tutorials/improving-demand-forecasting-models-with-event-features.md
-    getting-started/tutorials-by-use-case/dynamic-pricing: getting-started/guides/tutorials/README.md
-    getting-started/tutorials-by-use-case/inventory-management: getting-started/guides/tutorials/README.md
-    getting-started/tutorials-by-use-case/workforce-optimization: getting-started/guides/tutorials/README.md
-    getting-started/tutorials-by-use-case/visualization-and-insights: getting-started/guides/tutorials/README.md
+    getting-started/tutorials-by-use-case: getting-started/how-to-use-predicthq.md
+    getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models: getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md
+    getting-started/tutorials-by-use-case/dynamic-pricing: getting-started/how-to-use-predicthq.md
+    getting-started/tutorials-by-use-case/inventory-management: getting-started/how-to-use-predicthq.md
+    getting-started/tutorials-by-use-case/workforce-optimization: getting-started/how-to-use-predicthq.md
+    getting-started/tutorials-by-use-case/visualization-and-insights: getting-started/how-to-use-predicthq.md
     guides/adx: integrations/third-party-integrations/aws-data-exchange/README.md
     guides/api-quickstart: getting-started/api-quickstart.md
     guides/event-categories: getting-started/predicthq-data/event-categories/README.md

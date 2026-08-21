@@ -8,14 +8,6 @@ description: >-
 
 In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that enables users to integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 
-## Use Cases
-
-Demand Forecasting, Dynamic Pricing, Workforce Optimization, Demand Analytics, Inventory Management, Event Visibility
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Overview
 
 This tutorial covers how to connect PredictHQ data to Power BI via two sources, CSV upload and direct API connection using one of our APIs - the Events API.
@@ -46,7 +38,7 @@ Below are the main steps involved in this guide:
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
 
 {% hint style="info" %}
-All of our parameters are able to be modified based on user needs, see our [filtering guide](filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
+All of our parameters are able to be modified based on user needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
 {% endhint %}
 
 ### Example Parameters for this Guide:
@@ -63,7 +55,7 @@ The report provided in this example shows a graph of the total number of people 
 
 We find many customers want to know what is happening around a business location such as around a hotel, restaurant, store, or other location. The graph of total attendance per day shows you peaks and dips in physically attended events. This allows you to see upcoming busy days or potential demand surges as well as quieter days. The list of events allows you to see events happening on a given day in more detail.
 
-Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guides](../../use-case-guides/) for more examples.
+Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guides](../../getting-started/use-case-guides/) for more examples.
 
 The end result of the exercise will be a report like this:
 
@@ -206,7 +198,7 @@ After completing these steps, we have successfully connected Events data from Sn
 
 #### Connecting to other Data Warehouses
 
-See [loading-event-data-into-a-data-warehouse.md](loading-event-data-into-a-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
+See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-event-data-into-a-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
 ### API Connection Method
 
@@ -226,7 +218,7 @@ Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech doc
 Time zone parameter (active.tz) filters results based on that given time zone.\
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
 
-See also our [filtering guide](filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
+See also our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
 With this API query string, event data can start to be loaded into Power BI.
 

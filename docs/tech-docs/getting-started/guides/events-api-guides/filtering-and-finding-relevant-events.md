@@ -12,14 +12,6 @@ This tutorial will walk through the [Events API](https://www.predicthq.com/apis/
 
 Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
-## Use Cases
-
-Demand Forecasting, Visualization and Insights, Dynamic Pricing, Inventory Management, Workforce Optimization and Others
-
-## Relevant Industries
-
-Accommodation, Consumer Packaged Goods, Grocery and Supermarkets, Leisure, Travel and Tourism, Marketing and Advertising, Parking, Restaurants, Retail, Transportation and Delivery and Others
-
 ## Getting Started
 
 A valid access token is required for calling PredictHQ’s APIs. Refer to the [API Quickstart](../../api-quickstart.md) for guidance on creating an access token and quickly test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
@@ -470,7 +462,7 @@ For more details, visit:
 
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 
-* **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](using-event-data-in-power-bi.md "mention") for step-by-step instructions.
+* **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](../../../integrations/third-party-integrations/using-event-data-in-power-bi.md "mention") for step-by-step instructions.
 * **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in the [WebApp](https://control.predicthq.com/beam). This will help him allocate his resources more effectively.
 * **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../../../integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
 
