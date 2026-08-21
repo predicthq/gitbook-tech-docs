@@ -116,7 +116,7 @@ This keeps forecast inputs aligned with historical demand drivers.
 
 * **Skipping Beam entirely** - Leads to unstable feature sets and noise.
 * **Including all event categories** - More features does not imply better performance.
-* **Reusing one Beam analysis across dissimilar locations** - Impact varies by geography and demand profile.
+* **Reusing one Beam Analysis across dissimilar locations** - Impact varies by geography and demand profile.
 
 ## Related
 

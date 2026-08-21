@@ -34,9 +34,9 @@ PredictHQ's value in an agent loop comes from calibrated demand intelligence, wh
 
 **Saved Locations** define geographic scope. Each location is created with an `origin_geojson` point and an `industry`, and PredictHQ automatically calculates a Predicted Impact Area calibrated to that location. Do not use a hardcoded radius.
 
-**Beam** identifies which real-world activity actually drives demand at each location, using historical demand data. Beam is not optional. Without it, category selection is guesswork and the demand signals an agent acts on are weaker for it. Run one Beam analysis per location, and refresh both Saved Locations and Beam at least monthly so calibration tracks PredictHQ's latest models.
+**Beam** identifies which real-world activity actually drives demand at each location, using historical demand data. Beam is not optional. Without it, category selection is guesswork and the demand signals an agent acts on are weaker for it. Run one Beam Analysis per location, and refresh both Saved Locations and Beam at least monthly so calibration tracks PredictHQ's latest models.
 
-An autonomous agent can own this end to end as part of its normal flow. Before querying a location, it checks whether a Saved Location and Beam analysis already exist, creates them if not, and refreshes them if they are more than a month old, then proceeds to query calibrated demand intelligence. There is no separate setup step a human has to run first. It is ordinary conditional logic inside the agent.
+An autonomous agent can own this end to end as part of its normal flow. Before querying a location, it checks whether a Saved Location and Beam Analysis already exist, creates them if not, and refreshes them if they are more than a month old, then proceeds to query calibrated demand intelligence. There is no separate setup step a human has to run first. It is ordinary conditional logic inside the agent.
 
 When calling the Features API, always pass `beam.analysis_id`. This applies the correct location boundary, event relevance, and rank thresholds automatically, and returns model-ready features. Do not specify individual feature names alongside it, and never use raw event counts as model inputs.
 
@@ -49,7 +49,7 @@ flowchart TD
     A[Agent working toward a goal] --> B{Decision depends on<br/>real-world context?}
     B -->|No| A
     B -->|Yes| C{Location calibrated<br/>and fresh?}
-    C -->|No or stale| D[Create or refresh<br/>Saved Location and Beam analysis]
+    C -->|No or stale| D[Create or refresh<br/>Saved Location and Beam Analysis]
     D --> E[Query PredictHQ via MCP:<br/>calibrated demand intelligence<br/>and explainability]
     C -->|Yes| E
     E --> F[Reason over the<br/>real-world drivers]
@@ -59,7 +59,7 @@ flowchart TD
 
 ## Example Workflows
 
-These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam analysis first, as described above.
+These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam Analysis first, as described above.
 
 ### Revenue Management
 

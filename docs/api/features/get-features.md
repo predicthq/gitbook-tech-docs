@@ -30,7 +30,7 @@ The Features API serves both halves of a forecasting integration with the same c
 }
 ```
 
-The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam analysis is refreshed, retrain before pointing the serving path at it.
+The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam Analysis is refreshed, retrain before pointing the serving path at it.
 
 Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
 
@@ -339,9 +339,9 @@ curl -X POST "https://api.predicthq.com/v1/features/?offset=0&limit=100" \
         },
         "phq_attendance_sports": {
             "stats": ["count", "std_dev", "median"],
-            "phq_rank": { 
+            "phq_rank": {
                 "gt": 50
-            }    
+            }
         },
         "phq_attendance_concerts": true,
         "phq_rank_public_holidays": true
@@ -375,9 +375,9 @@ data = {
     },
     "phq_attendance_sports": {
         "stats": ["count", "std_dev", "median"],
-        "phq_rank": { 
+        "phq_rank": {
             "gt": 50
-        }    
+        }
     },
     "phq_attendance_concerts": True,
     "phq_rank_public_holidays": True
@@ -422,7 +422,7 @@ for feature in phq.features.obtain_features(
         phq_attendance_concerts=True,
         phq_rank_public_holidays=True
 ):
-    print(feature.date, feature.phq_attendance_conferences.stats.min, 
+    print(feature.date, feature.phq_attendance_conferences.stats.min,
         feature.phq_attendance_conferences.stats.max,
         feature.phq_attendance_sports.stats.count,
         feature.phq_attendance_sports.stats.std_dev,

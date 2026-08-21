@@ -56,16 +56,16 @@ Values are calculated as the sum of predicted attendance for the day at a given 
 <pre class="language-sql" data-title="PHQ Attended Features" data-full-width="true"><code class="lang-sql"><strong>----PHQ Attendance Features
 </strong><strong>CREATE OR REPLACE TEMP TABLE phq_attendance_features AS
 </strong>WITH events_attended AS (           --Attendance Features for main 7 categories
-  SELECT 
+  SELECT
     e.event_id,
     s.date,
     s.location,
-    e.category, 
+    e.category,
     imp.value:value::int as phq_attendance
   FROM predicthq.predicthq_events_retail_london e
   RIGHT JOIN saved_locations_daily s
-    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) &#x3C;= 
-      CASE 
+    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) &#x3C;=
+      CASE
         WHEN s.radius_unit = 'mi' THEN s.radius * 1609.34
         WHEN s.radius_unit = 'km' THEN s.radius * 1000
       END
@@ -74,25 +74,25 @@ Values are calculated as the sum of predicted attendance for the day at a given 
   latERAL FlatTEN(INPUT => e.IMPACT_PATTERNS) vert,
   latERAL FlatTEN(INPUT => vert.value:impacts) imp
   WHERE imp.value:date_local::DATE = s.date
-    AND vert.value:vertical::STRING = 'accommodation' 
+    AND vert.value:vertical::STRING = 'accommodation'
     AND imp.value:position::STRING = 'event_day'
     AND e.phq_attendance IS NOT NULL
     AND e.category in ('community','concerts','conferences','expos','festivals','performing-arts','sports')
 ),
 events_attended_other AS (          --Attendance Features for special categories
-  SELECT 
+  SELECT
     e.event_id,
     s.date,
     s.location,
-    e.category, 
+    e.category,
     e.phq_attendance,
     CASE WHEN category = 'academic' and ARRAY_CONTAINS('social'::variant, e.labels) THEN 'social'
-        WHEN category = 'academic' and ARRAY_CONTAINS('social'::variant, e.labels) THEN 'graduation' 
+        WHEN category = 'academic' and ARRAY_CONTAINS('social'::variant, e.labels) THEN 'graduation'
         ELSE '' END as academic_split
   FROM predicthq.predicthq_events_retail_london e
   RIGHT JOIN saved_locations_daily s
-    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) &#x3C;= 
-      CASE 
+    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) &#x3C;=
+      CASE
         WHEN s.radius_unit = 'mi' THEN s.radius * 1609.34
         WHEN s.radius_unit = 'km' THEN s.radius * 1000
       END
@@ -122,7 +122,7 @@ attendance_group AS (               --Group the 7 main categories daily and make
 attendance_group_other AS (         --Group the other categories daily and make sure a result is displayed each day even if it's just 0
     SELECT
       data_range.date,
-      data_range.location, 
+      data_range.location,
       SUM(CASE WHEN ao.category = 'school-holidays' THEN ao.phq_attendance ELSE 0 END) AS phq_attendance_school_holidays,
       SUM(CASE WHEN ao.academic_split = 'graduation' THEN ao.phq_attendance ELSE 0 END) AS phq_attendance_academic_graduation,
       SUM(CASE WHEN ao.academic_split = 'social' THEN ao.phq_attendance ELSE 0 END) AS phq_attendance_academic_social
@@ -145,7 +145,7 @@ SELECT                              --final select for phq_attendance_features
   ag.phq_attendance_sports,
   ago.phq_attendance_school_holidays,
   ago.phq_attendance_academic_graduation,
-  ago.phq_attendance_academic_social      
+  ago.phq_attendance_academic_social
 FROM attendance_group ag
 LEFT JOIN attendance_group_other ago
     ON ag.location = ago.location
@@ -195,19 +195,19 @@ Values are calculated as a count of events occurring at each rank level, per day
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql
 ----PHQ Rank Features
-CREATE OR REPLACE TEMP TABLE phq_rank_features as 
+CREATE OR REPLACE TEMP TABLE phq_rank_features as
 WITH events_ranked AS (             --Pull ranked events within range
-  SELECT 
+  SELECT
     e.event_id,
     s.date,
     s.location,
     e.category,
     e.phq_rank,
     CASE WHEN category = 'academic' and ARRAY_CONTAINS('academic-session'::variant, e.labels) THEN 'session'
-        WHEN category = 'academic' and ARRAY_CONTAINS('exam'::variant, e.labels) THEN 'exam' 
-        WHEN category = 'academic' and ARRAY_CONTAINS('holiday'::variant, e.labels) THEN 'holiday' 
+        WHEN category = 'academic' and ARRAY_CONTAINS('exam'::variant, e.labels) THEN 'exam'
+        WHEN category = 'academic' and ARRAY_CONTAINS('holiday'::variant, e.labels) THEN 'holiday'
         ELSE '' END AS academic_split,
-    CASE 
+    CASE
       WHEN e.phq_rank between 0 and 20 THEN 1
       WHEN e.phq_rank between 21 and 40 THEN 2
       WHEN e.phq_rank between 41 and 60 THEN 3
@@ -216,8 +216,8 @@ WITH events_ranked AS (             --Pull ranked events within range
     END as rank_level
   FROM predicthq.predicthq_events_retail_london e
   RIGHT JOIN saved_locations_daily s
-    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) <= 
-      CASE 
+    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) <=
+      CASE
         WHEN s.radius_unit = 'mi' THEN s.radius * 1609.34
         WHEN s.radius_unit = 'km' THEN s.radius * 1000
       END
@@ -227,7 +227,7 @@ WITH events_ranked AS (             --Pull ranked events within range
     AND e.category in ('academic','public-holidays','school-holidays','observances')
  ),
  events_ranked_distinct AS (        --Get count per rank level
-   SELECT 
+   SELECT
      r.date,
      r.location,
      r.category,
@@ -249,17 +249,17 @@ SELECT                             --Final formatting and select for phq_rank_fe
   SUM(CASE WHEN r.category = 'observances' AND r.rank_level = 2 THEN r.distinct_event_count ELSE 0 END)  AS phq_rank_observances_rank_level2,
   SUM(CASE WHEN r.category = 'observances' AND r.rank_level = 3 THEN r.distinct_event_count ELSE 0 END)  AS phq_rank_observances_rank_level3,
   SUM(CASE WHEN r.category = 'observances' AND r.rank_level = 4 THEN r.distinct_event_count ELSE 0 END)  AS phq_rank_observances_rank_level4,
-  SUM(CASE WHEN r.category = 'observances' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END)  AS phq_rank_observances_rank_level5,                                   
+  SUM(CASE WHEN r.category = 'observances' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END)  AS phq_rank_observances_rank_level5,
   SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 1 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level1,
   SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 2 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level2,
   SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 3 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level3,
   SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 4 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level4,
-  SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level5,      
+  SUM(CASE WHEN r.category = 'public-holidays' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_public_holidays_rank_level5,
   SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 1 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level1,
   SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 2 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level2,
   SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 3 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level3,
   SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 4 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level4,
-  SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level5,                                   
+  SUM(CASE WHEN r.category = 'school-holidays' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_school_holidays_rank_level5,
   SUM(CASE WHEN r.academic_split = 'session' AND r.rank_level = 1 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_session_rank_level1,
   SUM(CASE WHEN r.academic_split = 'session' AND r.rank_level = 2 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_session_rank_level2,
   SUM(CASE WHEN r.academic_split = 'session' AND r.rank_level = 3 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_session_rank_level3,
@@ -274,7 +274,7 @@ SELECT                             --Final formatting and select for phq_rank_fe
   SUM(CASE WHEN r.academic_split = 'holiday' AND r.rank_level = 2 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_holiday_rank_level2,
   SUM(CASE WHEN r.academic_split = 'holiday' AND r.rank_level = 3 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_holiday_rank_level3,
   SUM(CASE WHEN r.academic_split = 'holiday' AND r.rank_level = 4 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_holiday_rank_level4,
-  SUM(CASE WHEN r.academic_split = 'holiday' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_holiday_rank_level5                                        
+  SUM(CASE WHEN r.academic_split = 'holiday' AND r.rank_level = 5 THEN r.distinct_event_count ELSE 0 END) AS phq_rank_academic_holiday_rank_level5
 FROM (SELECT date, location FROM saved_locations_daily) data_range
 LEFT JOIN events_ranked_distinct r
     ON data_range.date = r.date
@@ -295,7 +295,7 @@ Values are calculated as MAX of the Ranks of events occurring over each day, sho
 {% code title="PHQ Impact Features" fullWidth="true" %}
 ```sql
 ----PHQ Impact Features
-CREATE OR REPLACE TEMP TABLE phq_impact_features as 
+CREATE OR REPLACE TEMP TABLE phq_impact_features as
 WITH events_impact AS (             --Pull impact events within range
   SELECT DISTINCT
     e.event_id,
@@ -303,7 +303,7 @@ WITH events_impact AS (             --Pull impact events within range
     s.location,
     e.category,
     imp.value:value::int AS phq_rank,
-    CASE 
+    CASE
         WHEN ARRAY_CONTAINS('blizzard'::variant, e.labels) THEN 'blizzard'
         WHEN ARRAY_CONTAINS('snow'::variant, e.labels) THEN 'cold-wave-snow'
         WHEN ARRAY_CONTAINS('cold-wave'::variant, e.labels) AND ARRAY_CONTAINS('storm'::variant, e.labels) THEN 'cold-wave-storm'
@@ -321,16 +321,16 @@ WITH events_impact AS (             --Pull impact events within range
     END AS weather_category
   FROM predicthq.events_0 e
   RIGHT JOIN saved_locations_daily s
-    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) <= 
-      CASE 
-        WHEN s.radius_unit = 'mi' THEN s.radius * 1609.34   
+    ON ST_DISTANCE(e.geo, ST_MAKEPOINT(s.lon, s.lat)) <=
+      CASE
+        WHEN s.radius_unit = 'mi' THEN s.radius * 1609.34
         WHEN s.radius_unit = 'km' THEN s.radius * 1000
       END
     AND TO_DATE(CONVERT_TIMEZONE(CASE WHEN e.timezone IS NOT NULL THEN e.timezone ELSE 'UTC' END, e.event_start)) <= s.date
     AND TO_DATE(CONVERT_TIMEZONE(CASE WHEN e.timezone IS NOT NULL THEN e.timezone ELSE 'UTC' END, e.event_end)) >= s.date,
   latERAL FlatTEN(INPUT => IMPACT_PATTERNS) vert,
   latERAL FlatTEN(INPUT => vert.value:impacts) imp
-  WHERE vert.value:vertical::STRING = 'retail' 
+  WHERE vert.value:vertical::STRING = 'retail'
     AND e.category = 'severe-weather'
     AND weather_category IS NOT NULL
  )
@@ -349,7 +349,7 @@ SELECT                          --final formatting and select for phq_impact_fea
   IFNULL(MAX(CASE WHEN i.weather_category = 'hurricane' THEN i.phq_rank ELSE NULL END),0) AS phq_impact_severe_weather_hurricane_retail,
   IFNULL(MAX(CASE WHEN i.weather_category = 'thunderstorm' THEN i.phq_rank ELSE NULL END),0) AS phq_impact_severe_weather_thunderstorm_retail,
   IFNULL(MAX(CASE WHEN i.weather_category = 'tornado' THEN i.phq_rank ELSE NULL END),0) AS phq_impact_severe_weather_tornado_retail,
-  IFNULL(MAX(CASE WHEN i.weather_category = 'tropical-storm' THEN i.phq_rank ELSE NULL END),0) AS phq_impact_severe_weather_tropical_storm_retail 
+  IFNULL(MAX(CASE WHEN i.weather_category = 'tropical-storm' THEN i.phq_rank ELSE NULL END),0) AS phq_impact_severe_weather_tropical_storm_retail
 FROM (SELECT date, location FROM saved_locations_daily) data_range
 LEFT JOIN events_impact i
     ON data_range.date = i.date
@@ -405,14 +405,14 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 
 The following code will pull features generated above all into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \
-This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam analysis for the locations and use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
+This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam Analysis for the locations and use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
 
 {% code title="Combined Table" fullWidth="true" %}
 ```sql
 ----Combine Select for viewing all in one
 CREATE OR REPLACE TEMP TABLE ml_features_for_locations AS
-SELECT 
-  a.date, 
+SELECT
+  a.date,
   a.location,
   a.phq_attendance_community,       --Attendance columns
   a.phq_attendance_concerts,

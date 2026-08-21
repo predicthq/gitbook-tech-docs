@@ -62,7 +62,7 @@ NHL fixtures played in the postseason now carry the postseason label. Customers 
 
 Bolt is now available to all users in the PredictHQ WebApp.
 
-Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest — Saved Locations, Beam analysis, calibrated features, forecasts — following PredictHQ best practices throughout.
+Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest — Saved Locations, Beam Analysis, calibrated features, forecasts — following PredictHQ best practices throughout.
 {% endupdate %}
 
 {% update date="2026-05-27" tags="data-quality,enhancement,events-api" %}
@@ -156,7 +156,7 @@ Customers now see these holidays scoped to the places they apply to.
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}
 ## Beam Charts - Independent Axis Scaling
 
-The demand and predicted attendance axes on Beam analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
+The demand and predicted attendance axes on Beam Analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
 {% endupdate %}
 
 {% update date="2026-02-19" tags="data-quality,enhancement" %}

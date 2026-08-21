@@ -12,7 +12,7 @@ PredictHQ is optimized for the following named industries: `accommodation`, `cpg
 
 ### **With Beam**
 
-Upload the sample data to an existing Beam analysis using the [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data) endpoint:
+Upload the sample data to an existing Beam Analysis using the [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data) endpoint:
 
 ```python
 import requests

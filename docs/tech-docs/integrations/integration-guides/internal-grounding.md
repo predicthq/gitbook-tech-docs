@@ -22,7 +22,7 @@ flowchart TB
   end
  subgraph Customer["**Customer Environment**"]
         Store[("Event store<br>refreshed daily")]
-        Retrieval["**Retrieval interface**<br>location + date + category filters<br>scoped by Beam analysis"]
+        Retrieval["**Retrieval interface**<br>location + date + category filters<br>scoped by Beam Analysis"]
         AI["**LLM or agent**<br>assistant, copilot, or<br>autonomous workflow"]
         User(["User or downstream system"])
   end
@@ -58,7 +58,7 @@ Real-world context changes daily: events are announced, revised, cancelled, and 
 | Component | Cadence |
 | --- | --- |
 | Event store | Daily refresh via managed delivery, or [API sync](keep-data-updated-via-api.md) using the `updated` parameter |
-| Beam analysis (retrieval scoping) | Monthly - append new demand data |
+| Beam Analysis (retrieval scoping) | Monthly - append new demand data |
 | Retrieval | Live against the store at every answer - never cache retrieved context across questions |
 
 ## Example workflows

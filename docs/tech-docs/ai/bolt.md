@@ -18,7 +18,7 @@ Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help 
 
 **Explore PredictHQ data through conversation.** Ask about events, demand signals, locations, and forecast inputs in plain language. Bolt queries PredictHQ's APIs on your behalf and returns real results - not synthetic examples.
 
-**Get guided to the right solution.** Bolt understands PredictHQ's products and how they fit together. Rather than returning a generic answer, it steers you toward the right approach for your use case - running a Beam analysis before querying features, using Predicted Impact Area rather than a fixed radius, and following the integration patterns that produce the best outcomes.
+**Get guided to the right solution.** Bolt understands PredictHQ's products and how they fit together. Rather than returning a generic answer, it steers you toward the right approach for your use case - running a Beam Analysis before querying features, using Predicted Impact Area rather than a fixed radius, and following the integration patterns that produce the best outcomes.
 
 **Build with the results.** Every card in the notebook includes a production-ready API code snippet alongside the visualisation and raw data. When you find something useful, the code to reproduce it is already there.
 
@@ -28,7 +28,7 @@ Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help 
 
 Bolt's interface has two panels that work together.
 
-The **chat panel** is where you type questions and see responses. Bolt can execute multi-step workflows - creating a Saved Location, running a Beam analysis, and returning demand-calibrated features - from a single conversational exchange.
+The **chat panel** is where you type questions and see responses. Bolt can execute multi-step workflows - creating a Saved Location, running a Beam Analysis, and returning demand-calibrated features - from a single conversational exchange.
 
 The **notebook panel** is where results appear as cards. Each card has three tabs:
 
@@ -57,7 +57,7 @@ Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bo
 Start by describing your use case or location - for example:
 
 * _"What events are impacting demand at my hotel in Chicago next month?"_
-* _"Set up a Beam analysis for our restaurant in Sydney"_
+* _"Set up a Beam Analysis for our restaurant in Sydney"_
 * _"Show me demand signals for a retail location in London"_
 
 Bolt will guide you from there.

@@ -35,7 +35,7 @@ Most foundation model interfaces accept these as known future covariates - vario
 
 ## Keep the covariates fresh
 
-Retrieve future features ahead of each forecast run rather than caching them: new events are announced inside the forecast horizon continuously, attendance predictions are revised as events approach, and events are cancelled. Refresh the Beam analysis monthly by appending new demand data - see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md) for the production architecture and refresh cadences.
+Retrieve future features ahead of each forecast run rather than caching them: new events are announced inside the forecast horizon continuously, attendance predictions are revised as events approach, and events are cancelled. Refresh the Beam Analysis monthly by appending new demand data - see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md) for the production architecture and refresh cadences.
 
 ## Related
 
