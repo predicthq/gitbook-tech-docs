@@ -1,4 +1,15 @@
 redirects:
+    getting-started/guides/events-api-guides/attendance-based-events-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/events-api-guides/non-attendance-based-events-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/events-api-guides/severe-weather-events-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/events-api-guides/academic-events-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/events-api-guides/working-with-venues: getting-started/data-science-notebooks.md
+    getting-started/guides/features-api-guides/feature-engineering-guide: getting-started/data-science-notebooks.md
+    getting-started/guides/features-api-guides/demand-forecasting-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides: getting-started/data-science-notebooks.md
+    getting-started/guides/beam-guides/forecast-ready-features-at-scale: getting-started/data-science-notebooks.md
+    getting-started/guides/beam-guides/ml-features-by-group: getting-started/data-science-notebooks.md
+    integrations/integration-guides/beam-data-science-guide: getting-started/core-concepts/what-is-beam.md
     getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api: getting-started/core-concepts/what-is-the-features-api.md
     ai/using-predicthq-with-ai-assistants: ai/grounding-llms-in-real-world-data.md
     integrations/third-party-integrations/google-cloud-bigquery: integrations/integration-guides/loading-event-data-into-a-data-warehouse.md
@@ -24,38 +35,38 @@ redirects:
     categoryinfo/non-attended-events: getting-started/predicthq-data/event-categories/non-attendance-based-events.md
     categoryinfo/predicted-end-time: getting-started/predicthq-data/predicted-end-times.md
     categoryinfo/unscheduled-events: getting-started/predicthq-data/event-categories/unscheduled-events.md
-    datascience/academic-events-part1: getting-started/guides/events-api-guides/academic-events-data-science-guides.md
-    datascience/academic-events-part2: getting-started/guides/events-api-guides/academic-events-data-science-guides.md
-    datascience/academic-events-part3: getting-started/guides/events-api-guides/academic-events-data-science-guides.md
-    datascience/academic-events: getting-started/guides/events-api-guides/academic-events-data-science-guides.md
-    datascience/attended-events-part1: getting-started/guides/events-api-guides/attendance-based-events-data-science-guides.md
-    datascience/attended-events-part2: getting-started/guides/events-api-guides/attendance-based-events-data-science-guides.md
-    datascience/attended-events-part3: getting-started/guides/events-api-guides/attendance-based-events-data-science-guides.md
-    datascience/attended-events: getting-started/guides/events-api-guides/attendance-based-events-data-science-guides.md
+    datascience/academic-events-part1: getting-started/data-science-notebooks.md
+    datascience/academic-events-part2: getting-started/data-science-notebooks.md
+    datascience/academic-events-part3: getting-started/data-science-notebooks.md
+    datascience/academic-events: getting-started/data-science-notebooks.md
+    datascience/attended-events-part1: getting-started/data-science-notebooks.md
+    datascience/attended-events-part2: getting-started/data-science-notebooks.md
+    datascience/attended-events-part3: getting-started/data-science-notebooks.md
+    datascience/attended-events: getting-started/data-science-notebooks.md
     datascience/beam-api-guide: getting-started/guides/beam-guides/README.md
     datascience/correlation: getting-started/guides/beam-guides/README.md
-    datascience/demand-forecasting: getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md
+    datascience/demand-forecasting: getting-started/data-science-notebooks.md
     datascience/demand-surge-notebook: getting-started/guides/features-api-guides/README.md
-    datascience/demandforecasting: getting-started/guides/features-api-guides/demand-forecasting-data-science-guides.md
-    datascience/example-notebooks: getting-started/guides/events-api-guides/working-with-venues.md
+    datascience/demandforecasting: getting-started/data-science-notebooks.md
+    datascience/example-notebooks: getting-started/data-science-notebooks.md
     datascience/faq: getting-started/guides/events-api-guides/README.md
-    datascience/feature-engineering-guide: getting-started/guides/features-api-guides/feature-engineering-guide.md
+    datascience/feature-engineering-guide: getting-started/data-science-notebooks.md
     datascience/features-api-usage: getting-started/guides/features-api-guides/README.md
     datascience/features-api: getting-started/guides/features-api-guides/README.md
     datascience/gettingstarted: getting-started/guides/features-api-guides/README.md
     datascience/introduction: getting-started/data-science-notebooks.md
-    datascience/live-tv-events-part1: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
-    datascience/live-tv-events-part2: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
-    datascience/live-tv-events-part3: getting-started/guides/live-tv-event-guides/live-tv-events-data-science-guides.md
+    datascience/live-tv-events-part1: getting-started/data-science-notebooks.md
+    datascience/live-tv-events-part2: getting-started/data-science-notebooks.md
+    datascience/live-tv-events-part3: getting-started/data-science-notebooks.md
     datascience/live-tv-events: getting-started/guides/live-tv-event-guides/README.md
-    datascience/non-attended-events-part1: getting-started/guides/events-api-guides/non-attendance-based-events-data-science-guides.md
-    datascience/non-attended-events-part2: getting-started/guides/events-api-guides/non-attendance-based-events-data-science-guides.md
-    datascience/non-attended-events-part3: getting-started/guides/events-api-guides/non-attendance-based-events-data-science-guides.md
-    datascience/non-attended-events: getting-started/guides/events-api-guides/non-attendance-based-events-data-science-guides.md
-    datascience/severe-weather-events-part1: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
-    datascience/severe-weather-events-part2: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
-    datascience/severe-weather-events-part3: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
-    datascience/severe-weather-events: getting-started/guides/events-api-guides/severe-weather-events-data-science-guides.md
+    datascience/non-attended-events-part1: getting-started/data-science-notebooks.md
+    datascience/non-attended-events-part2: getting-started/data-science-notebooks.md
+    datascience/non-attended-events-part3: getting-started/data-science-notebooks.md
+    datascience/non-attended-events: getting-started/data-science-notebooks.md
+    datascience/severe-weather-events-part1: getting-started/data-science-notebooks.md
+    datascience/severe-weather-events-part2: getting-started/data-science-notebooks.md
+    datascience/severe-weather-events-part3: getting-started/data-science-notebooks.md
+    datascience/severe-weather-events: getting-started/data-science-notebooks.md
     getting-started/guides/use-case-guides: getting-started/use-case-guides/README.md
     getting-started/guides/use-case-guides/accommodation-the-proven-path-to-value: getting-started/use-case-guides/accommodation-the-proven-path-to-value.md
     getting-started/tutorials-by-use-case: getting-started/how-to-use-predicthq.md

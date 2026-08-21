@@ -443,6 +443,5 @@ The OpenAPI spec for Features API can be [found here](https://api.predicthq.com/
 Below are some guides relevant to this API:
 
 * [What is the Features API?](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/core-concepts/what-is-the-features-api)
-* [Get ML Features](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/feature-engineering-guide)
-* [Demand Forecasting with Event Features](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/demand-forecasting-data-science-guides)
+* [Data Science Notebooks](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks)
 * [Aggregating Live TV Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)

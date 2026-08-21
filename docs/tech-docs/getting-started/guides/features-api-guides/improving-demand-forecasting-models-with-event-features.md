@@ -92,8 +92,8 @@ For technical details, visit:
 
 For practical implementation:
 
-* [forecast-ready-features-at-scale.md](../beam-guides/forecast-ready-features-at-scale.md "mention")
-* [ml-features-by-group.md](../beam-guides/ml-features-by-group.md "mention")
+* [ML features by location with Beam](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb)
+* [ML features by group with Beam Analysis Groups](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb)
 {% endhint %}
 
 ### Step 2. Get Features
@@ -122,7 +122,7 @@ For technical details, visit:
 
 For practical implementation:
 
-* [feature-engineering-guide.md](../features-api-guides/feature-engineering-guide.md "mention")
+* [Get features with the Features API](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb)
 {% endhint %}
 
 ### Step 3. ML Model and Future Predictions
@@ -134,7 +134,7 @@ For future predictions, you can access forward-facing data, such as the next two
 {% hint style="info" %}
 For practical implementation:
 
-* [demand-forecasting-data-science-guides.md](../features-api-guides/demand-forecasting-data-science-guides.md "mention")
+* [Demand forecasting with event features](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb)
 {% endhint %}
 
 ## Conclusion

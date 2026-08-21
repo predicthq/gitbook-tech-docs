@@ -128,7 +128,7 @@ Below is an example of an [event with a MultiPolygon geometry](https://events.pr
 
 <figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt=""><figcaption></figcaption></figure>
 
-We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](../events-api-guides/severe-weather-events-data-science-guides.md) notebook.
+We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) notebook.
 
 ### Simplified Polygons
 

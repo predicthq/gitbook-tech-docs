@@ -405,7 +405,7 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 
 The following code will pull features generated above all into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \
-This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam analysis for the locations and use the Feature Importance results to select them - see [ML Features by Location](../../../../getting-started/guides/beam-guides/forecast-ready-features-at-scale.md).
+This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam analysis for the locations and use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
 
 {% code title="Combined Table" fullWidth="true" %}
 ```sql

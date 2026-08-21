@@ -9,9 +9,63 @@ description: >-
 
 PredictHQ features exist to make forecasts more accurate. Adding event features to a demand forecasting model reduces forecast error in a way you can measure and attribute - and what a point of accuracy is worth is relative to your business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions. These Jupyter notebooks show how to capture that lift in your own models: calibrating with Beam, retrieving model-ready features, and training and forecasting with them.
 
-If you're new, work through the first four notebooks in order—they follow the recommended workflow: Beam identifies which event categories drive demand at each location, the Features API turns them into model-ready signals, and your model (or the Forecasts API) does the rest. Before you backtest, read [Data Leakage in Backtesting](core-concepts/data-leakage-in-backtesting.md) so historical evaluation reflects what the model sees in production.
+If you're new, work through the forecasting workflow notebooks in order - they follow the recommended path: Beam identifies which event categories drive demand at each location, the Features API turns them into model-ready signals, and your model (or the Forecasts API) does the rest. Before you backtest, read [Data Leakage in Backtesting](core-concepts/data-leakage-in-backtesting.md) so historical evaluation reflects what the model sees in production.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Forecasts API Notebook</strong></td><td>Use the Forecasts API to get event-driven forecasts without building your own model - it applies Beam automatically and returns forecasts with a baseline comparison so you can measure the accuracy lift.</td><td><a href="../.gitbook/assets/forecasts-api-time-series-chart.png">forecasts-api-time-series-chart.png</a></td><td></td><td><a href="https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb">https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb</a></td></tr><tr><td><strong>Beam Notebooks</strong></td><td>Run Beam to identify which event categories drive demand at each of your locations - the calibration step that configures feature selection for everything downstream. Start here.</td><td><a href="../.gitbook/assets/beam-notebook.png">beam-notebook.png</a></td><td></td><td><a href="guides/beam-guides/">beam-guides</a></td></tr><tr><td><strong>Features API Notebook</strong></td><td>Retrieve model-ready event features keyed by your Beam analysis - historical windows for training, future-dated windows at inference.</td><td><a href="../.gitbook/assets/features-api-notebook.jpg">features-api-notebook.jpg</a></td><td></td><td><a href="guides/features-api-guides/feature-engineering-guide.md">feature-engineering-guide.md</a></td></tr><tr><td><strong>Demand Forecasting Notebook</strong></td><td>Step-by-step guide on how to use PredictHQ event features in your existing demand forecasting models.</td><td><a href="../.gitbook/assets/demand-forecasting-notebook.jpg">demand-forecasting-notebook.jpg</a></td><td></td><td><a href="guides/features-api-guides/demand-forecasting-data-science-guides.md">demand-forecasting-data-science-guides.md</a></td></tr><tr><td><strong>Attendance-Based Events Notebooks</strong></td><td>Attended Events are scheduled to occur at a specific location and usually depend on attendance, such as conferences, expos, concerts, festivals, performing-arts, sports and community.</td><td><a href="../.gitbook/assets/attended-events-notebook.jpg">attended-events-notebook.jpg</a></td><td></td><td><a href="guides/events-api-guides/attendance-based-events-data-science-guides.md">attendance-based-events-data-science-guides.md</a></td></tr><tr><td><strong>Non-Attendance-Based Events Notebooks</strong></td><td>Non-Attendance-Based Events are events with a start and end date, but are more fluid and distributed in impact, such as observances or school holidays.</td><td><a href="../.gitbook/assets/non-attended-events-notebook.jpg">non-attended-events-notebook.jpg</a></td><td></td><td><a href="guides/events-api-guides/non-attendance-based-events-data-science-guides.md">non-attendance-based-events-data-science-guides.md</a></td></tr><tr><td><strong>Severe Weather Event Notebooks</strong></td><td>Severe weather is any dangerous meteorological phenomenon with the potential to cause damage, serious social disruption, or loss of human life.</td><td><a href="../.gitbook/assets/severe-weather-notebook.png">severe-weather-notebook.png</a></td><td></td><td><a href="guides/events-api-guides/severe-weather-events-data-science-guides.md">severe-weather-events-data-science-guides.md</a></td></tr><tr><td><strong>Academic Events Notebooks</strong></td><td>Academic Events are captured from an individual higher education institute’s academic calendar. They outline the general undergraduate activities, for example instruction period, break, exams, graduation, social, etc.</td><td><a href="../.gitbook/assets/academic-events-notebook.jpg">academic-events-notebook.jpg</a></td><td></td><td><a href="guides/events-api-guides/academic-events-data-science-guides.md">academic-events-data-science-guides.md</a></td></tr><tr><td><strong>Live TV Events Notebooks</strong></td><td>Live TV Events covers live broadcast sports games with a large number of people watching at a particular time across different counties across the United States.</td><td><a href="../.gitbook/assets/live-tv-events-notebook.jpg">live-tv-events-notebook.jpg</a></td><td></td><td><a href="guides/live-tv-event-guides/live-tv-events-data-science-guides.md">live-tv-events-data-science-guides.md</a></td></tr><tr><td><strong>Working with Venues Notebook</strong></td><td>Guide to exploring PredictHQ’s venue information.</td><td><a href="../.gitbook/assets/venues-notebook.png">venues-notebook.png</a></td><td></td><td><a href="guides/events-api-guides/working-with-venues.md">working-with-venues.md</a></td></tr></tbody></table>
+## The forecasting workflow
+
+Work through these in order.
+
+1. [**ML features by location with Beam**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb) - run Beam per location and use Feature Importance to identify the relevant, forecast-ready features.
+2. [**ML features by group with Beam Analysis Groups**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb) - an aggregated feature set across several locations, for a single shared model.
+3. [**Get features with the Features API**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) - retrieve model-ready features at scale, keyed by your Beam analysis. If your data lives in Snowflake, the [Snowflake Data Science Guide](../integrations/third-party-integrations/snowflake/snowflake-data-science-guide/) covers building features there instead.
+4. [**Demand forecasting with event features**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb) - incorporate the features into a demand forecasting model. Self-contained: it can be run independently of the notebooks above.
+5. [**Forecasts API**](https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb) - the managed alternative: train a model and get event-driven forecasts without building your own, with a baseline comparison to measure the lift.
+
+## Exploring event categories
+
+Per-category notebook series for exploring the data itself. Each series has three parts: data engineering (extract to a DataFrame), data exploration, and feature engineering.
+
+### Attendance-based events
+
+Conferences, expos, concerts, festivals, performing arts, sports, and community events - see [Attendance-Based Events](predicthq-data/event-categories/attendance-based-events.md) for the category reference.
+
+* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_1_data_engineering.ipynb)
+* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_2_data_exploration.ipynb)
+* [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_3_feature_engineering.ipynb)
+
+### Non-attendance-based events
+
+Observances, public holidays, and school holidays - see [Non-Attendance-Based Events](predicthq-data/event-categories/non-attendance-based-events.md).
+
+* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_1_data_engineering.ipynb)
+* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_2_data_exploration.ipynb)
+* [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_3_feature_engineering.ipynb)
+
+### Severe weather events
+
+See [Severe Weather](predicthq-data/event-categories/unscheduled-events.md#severe-weather) for the category reference.
+
+* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_1_data_engineering.ipynb)
+* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb)
+* [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_3_feature_engineering.ipynb)
+
+### Academic events
+
+* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_1_data_engineering.ipynb)
+* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_2_data_exploration.ipynb)
+* [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_3_feature_engineering.ipynb)
+
+### Live TV events
+
+Broadcast sports viewership by county in the United States - see [Live TV Events](predicthq-data/event-categories/live-tv-events.md).
+
+* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_1_data_engineering.ipynb)
+* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_2_data_exploration.ipynb)
+* [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_3_feature_engineering.ipynb)
+
+### Venues
+
+Events are linked to the venues they occur at - stadiums, conference centers, concert halls - stored as [entities](predicthq-data/entities.md). A major venue near your location is often a key source of demand. The [venues notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/venues/venues-example.ipynb) covers extracting venue information, mapping venues, event types by venue, and estimated capacities.
 
 All our Data Science Notebooks can be found in our [GitHub repo](https://github.com/predicthq/phq-data-science-docs/tree/master).
 

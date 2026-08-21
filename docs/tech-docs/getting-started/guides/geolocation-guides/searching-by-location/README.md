@@ -16,4 +16,4 @@ When searching for events around a specific business location — a store, hotel
 
 If you need a simpler point-and-radius search without a Saved Location, you can use the `within` parameter directly as described above. In that case, see the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry.
 
-You can also search for events occurring, in particular, Geonames Places using the `place.scope` parameter with Place ids. In our [Severe-Weather Events Data Engineering notebook](../../events-api-guides/severe-weather-events-data-science-guides.md), we provide code examples to find Place ids for your locations of interest.<br>
+You can also search for events occurring, in particular, Geonames Places using the `place.scope` parameter with Place ids. In our [Severe-Weather Events Data Engineering notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_1_data_engineering.ipynb), we provide code examples to find Place ids for your locations of interest.<br>
