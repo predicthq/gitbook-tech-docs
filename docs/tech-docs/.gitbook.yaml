@@ -1,4 +1,8 @@
 redirects:
+    integrations/third-party-integrations/tableau-data-connector: integrations/third-party-integrations/using-event-data-in-tableau.md
+    getting-started/core-concepts/industry-tuned-predictions: getting-started/guides/industry-specific-event-filters.md
+    getting-started/guides/how-industry-affects-results: getting-started/guides/industry-specific-event-filters.md
+    getting-started/guides/guide-to-protecting-predicthq-data: getting-started/core-concepts/guide-to-protecting-predicthq-data.md
     getting-started/guides/tutorials: getting-started/guides/README.md
     getting-started/guides/tutorials/filtering-and-finding-relevant-events: getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md
     getting-started/guides/tutorials/displaying-events-in-a-heatmap-calendar: getting-started/guides/events-api-guides/displaying-events-in-a-heatmap-calendar.md
@@ -90,4 +94,4 @@ redirects:
     start/staying-updated: integrations/integration-guides/keep-data-updated-via-api.md
     start/updating: integrations/integration-guides/keep-data-updated-via-api.md
     tools/data-exporter: integrations/third-party-integrations/README.md
-    tools/tableau-connector: integrations/third-party-integrations/tableau-data-connector.md
+    tools/tableau-connector: integrations/third-party-integrations/using-event-data-in-tableau.md

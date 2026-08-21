@@ -1,8 +1,42 @@
 ---
-description: Industry-level defaults for event relevancy when Beam can’t be used.
+description: >-
+  How PredictHQ tailors results to your industry, the named industry values,
+  and industry-level default categories and rank thresholds for when Beam
+  can't be used.
 ---
 
-# Recommended Event Categories and Local Rank Thresholds
+# Industry recommendations
+
+PredictHQ applies to any business whose demand is shaped by the real world. For a set of named industries, we have gone further and optimized the product directly: industry-specific impact patterns, thresholds, and catchment radii, tuned to how events affect that sector. Specifying a named industry gives you those optimizations out of the box - and either way, Beam personalizes results using your own demand data, which is more specific than any industry preset.
+
+## Named industries
+
+Use the Industry Value when specifying an industry in an API request. If your business doesn’t map exactly, use the Examples / Adjacent column to find the closest fit, or use `other` - an unlisted industry doesn't limit which events, features, or APIs you can use.
+
+| Named Industry                         | Industry Value   | Examples / Adjacent Industries                                                       |
+| -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |
+| Accommodation                          | `accommodation`  | Hotels, hostels, co-working spaces with short-term stays.                            |
+| Consumer Packaged Goods (CPG)          | `cpg`            | Packaged food & beverages, household goods.                                          |
+| Leisure, Travel & Tourism              | `tourism`        | Entertainment venues (cinemas, casinos, theme parks), attractions, DMOs, OTAs.       |
+| Marketing and Advertising              | `marketing`      | Agencies, ad networks, campaign platforms.                                           |
+| Parking                                | `parking`        | Car parks, garages.                                                                  |
+| Food and Beverage (Restaurants & Bars) | `restaurants`    | Cafes, pubs, quick service restaurants, hospitality venues.                          |
+| Retail                                 | `retail`         | Supermarkets, fashion, electronics, gyms/fitness centers (if sales-oriented).        |
+| Transportation and Delivery            | `transportation` | Rail, buses, rideshare, delivery services.                                           |
+| Other                                  | `other`          | If your business does not clearly fit into one of the above industries, use `other`. |
+
+## Where industry matters
+
+Industry is used across our systems to tune how events are interpreted and modeled for your business. This includes areas like impact patterns, thresholds, and catchment radius recommendations.
+
+* **Predicted Impact Area API**\
+  Area recommendations vary by industry, since the catchment area for demand differs across sectors.
+* **Predicted Impact Patterns**\
+  For each event, we calculate its leading and lagging impact per industry. These patterns are then used in the Features API to ensure event impacts reflect your sector.
+* **Beam**\
+  Beam builds on these industry-tuned patterns and thresholds, and further personalizes results with your own demand data.
+* **Forecasts API**\
+  Uses industry in the same way as Beam (industry is passed through to Beam behind the scenes).
 
 ## Beam Comes First
 

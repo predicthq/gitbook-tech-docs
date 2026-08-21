@@ -10,4 +10,6 @@ Recommended order:
 4. [Which API Should I Use?](which-api-should-i-use.md) - the right tool per task, including grounding
 5. [Data Leakage in Backtesting](data-leakage-in-backtesting.md) - why forward-looking features evaluate honestly
 
+[Guide to Protecting PredictHQ Data](guide-to-protecting-predicthq-data.md) covers the obligations that come with using the data.
+
 For the recommended path by job - training, grounding, managed forecasts, or demand analysis - start with [How to use PredictHQ](../how-to-use-predicthq.md).

@@ -70,7 +70,7 @@ Ensure you have enough time-series data that meets [Beam’s requirements](https
 
 **Industry**
 
-Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../how-industry-affects-results.md), please use the default `other`.
+Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../industry-specific-event-filters.md), please use the default `other`.
 
 **Location**
 
