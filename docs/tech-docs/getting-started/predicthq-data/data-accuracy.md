@@ -12,7 +12,7 @@ Every event in our API goes through multiple steps to ensure quality and accurac
 
 **Spam Filtering:** Bad data is worse than no data at all. We ensure you only have access to events that are actually happening.
 
-30% to 40% of events we receive are spam, add-ons or duplicates. We have a 0% spam rate.
+30% to 40% of events we receive are spam, add-ons or duplicates. After filtering, our spam rate is below 0.1% - our quality-control checks consistently measure it at 0%.
 
 **Geocoding:** Every event has a lat/long, allowing for precise mapping. Events also follow identification patterns from the open-source Geonames database. For instance, all events in California will have multiple IDs, of which 5332921 (the ID for California) will always be included. We also provide venue name and formatted address whenever possible.
 
