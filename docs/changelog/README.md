@@ -10,7 +10,7 @@ description: >-
 {% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
 ## Bolt - Loop Feedback and Individual Card Sharing
 
-Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt will generate the details needed, confirm them with you and submit the feedback on your behalf, returning a Loop link so you can follow the progress.
+Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt will generate the details needed, confirm them with you and submit the feedback on your behalf, returning a link so you can follow the progress.
 
 Bolt sharing now supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
 {% endupdate %}
