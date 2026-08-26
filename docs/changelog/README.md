@@ -7,6 +7,14 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
+## Bolt - Loop Feedback and Individual Card Sharing
+
+Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt will generate the details needed, confirm them with you and submit the feedback on your behalf, returning a Loop link so you can follow the progress.
+
+Bolt sharing now supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
+{% endupdate %}
+
 {% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
 ## Cricket Predicted Attendance - Accuracy Improvements in the UK & Australia
 
@@ -16,7 +24,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 {% endupdate %}
 
 {% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
-## Bolt - Notebook Sharing and UI enhancements
+## Bolt - Notebook Sharing and UI Enhancements
 
 Bolt notebooks can now be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
