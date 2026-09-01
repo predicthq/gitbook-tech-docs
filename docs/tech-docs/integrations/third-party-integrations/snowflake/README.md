@@ -1,6 +1,6 @@
 # Receive data via Snowflake
 
-Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, governed by your own access controls. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/internal-grounding.md).
+Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, governed by your own access controls. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
 Delivery is managed by PredictHQ, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
 

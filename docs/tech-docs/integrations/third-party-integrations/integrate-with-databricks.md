@@ -18,7 +18,7 @@ Once landed, the data serves each integration path:
 
 * **Model training** - join event features to your demand history and train in your existing Databricks ML workflow. Features are keyed by a `beam.analysis_id`, so feature selection reflects what actually drives demand at each location.
 * **Inference** - retrieve future-dated features at every forecast run. [Pre-trained time series foundation models](../../getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models.md) consume features as covariates across both the demand history and the forecast horizon.
-* **Provisioned grounding** - the event tables double as the retrieval corpus for LLMs and agents built on Databricks, so AI systems answer from verified real-world context governed by your own platform - see [provisioned grounding](../integration-guides/internal-grounding.md).
+* **Provisioned grounding** - the event tables double as the retrieval corpus for LLMs and agents built on Databricks, so AI systems answer from verified real-world context governed by your own platform - see [provisioned grounding](../integration-guides/provisioned-grounding.md).
 
 Databricks resources for reading data from S3 or Snowflake:
 

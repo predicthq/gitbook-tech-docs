@@ -53,7 +53,7 @@ sequenceDiagram
     Note over Agent,Store: The answer path stays inside your environment
 ```
 
-* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 
 ### On-demand grounding - query at answer time
 
@@ -94,7 +94,7 @@ AI systems consuming real-world context face the same structural challenges desc
 * **Usability** - the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) converts events into structured, model-ready signals.
 * **Trust** - the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) provides verifiable event records that can be surfaced in explanations.
 
-This separation lets an assistant retrieve either raw event context or calibrated signals, depending on the workflow. For worked examples, see the [provisioned grounding workflows](../integrations/integration-guides/internal-grounding.md) and [agentic workflows](predicthq-mcp-in-agentic-workflows.md).
+This separation lets an assistant retrieve either raw event context or calibrated signals, depending on the workflow. For worked examples, see the [provisioned grounding workflows](../integrations/integration-guides/provisioned-grounding.md) and [agentic workflows](predicthq-mcp-in-agentic-workflows.md).
 
 ## How grounding reduces AI hallucinations
 
@@ -138,5 +138,5 @@ Yes, and the two don't interact: training uses event features to improve your mo
 
 ## Next steps
 
-* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 * [MCP server](mcp.md) - set up the MCP server

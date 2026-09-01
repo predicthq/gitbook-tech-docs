@@ -55,7 +55,7 @@ Grounding gives a model the real-world facts it lacks at the moment it answers, 
 * **On-demand grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
 * [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md) - concepts, architectures, and FAQ
-* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 * [PredictHQ MCP in agentic workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
 
 ## Understand what drives your demand

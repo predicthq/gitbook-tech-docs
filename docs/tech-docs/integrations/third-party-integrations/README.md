@@ -1,6 +1,6 @@
 # Third-party integrations
 
-Managed delivery of PredictHQ's verified real-world context into your own environment - the foundation for model training, explainability, and [provisioned grounding](../integration-guides/internal-grounding.md), with no sync pipeline to build.
+Managed delivery of PredictHQ's verified real-world context into your own environment - the foundation for model training, explainability, and [provisioned grounding](../integration-guides/provisioned-grounding.md), with no sync pipeline to build.
 
 * [Snowflake](snowflake/) - shared tables, queried in place. The lowest-friction path if you're on Snowflake.
 * [AWS Data Exchange](aws-data-exchange/) - full and incremental exports to S3.

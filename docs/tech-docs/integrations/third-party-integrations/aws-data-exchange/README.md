@@ -1,6 +1,6 @@
 # Receive data via AWS Data Exchange
 
-AWS Data Exchange (ADX) deploys PredictHQ's verified real-world context into your own AWS environment - delivered to S3, where your data warehouse, data science platform, and AI systems already operate. An always-current local dataset, governed by you, is the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/internal-grounding.md).
+AWS Data Exchange (ADX) deploys PredictHQ's verified real-world context into your own AWS environment - delivered to S3, where your data warehouse, data science platform, and AI systems already operate. An always-current local dataset, governed by you, is the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
 The data is provided as CSV, JSON or Parquet, arrives as full and incremental exports, and requires no ELT/ETL pipeline to build or maintain. You can check out the AWS Data Exchange Overview page if you're interested to read more on how AWS Data Exchange works.
 

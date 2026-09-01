@@ -118,7 +118,7 @@ The decision or end-user system consumes:
 
 This architecture also supports [grounding](../../getting-started/glossary.md#grounding) - supplying verified real-world context to LLMs and AI agents at the moment they answer, so they respond from facts instead of hallucinating. Grounding sits alongside the forecasting pipeline, not inside it: training improves your model before it runs, grounding supplies verified context while it runs, and the two never mix.
 
-**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, governed by your own access controls, with freshness set by your refresh cadence. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](internal-grounding.md) for the reference architecture.
+**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, governed by your own access controls, with freshness set by your refresh cadence. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
 
 **On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
 

@@ -17,7 +17,7 @@ Your subscription settings can be viewed in our [WebApp](https://control.predict
 {% endhint %}
 
 {% hint style="info" %}
-Best practice is to sync event data into your own data store and query your local copy at decision time - see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern) for the architecture and delivery options. If the consumer is an LLM or agent, that same local store is your grounding corpus - see [provisioned grounding](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/internal-grounding). For pre-built time-series signals ready for inference, see the [Features API](../features/get-features.md); for agents that query on demand, the [MCP server](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/mcp).
+Best practice is to sync event data into your own data store and query your local copy at decision time - see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern) for the architecture and delivery options. If the consumer is an LLM or agent, that same local store is your grounding corpus - see [provisioned grounding](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/provisioned-grounding). For pre-built time-series signals ready for inference, see the [Features API](../features/get-features.md); for agents that query on demand, the [MCP server](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/mcp).
 {% endhint %}
 
 {% openapi-operation spec="events-api" path="/v1/events/" method="get" %}
