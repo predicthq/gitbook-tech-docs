@@ -13,9 +13,9 @@ A PredictHQ integration has four logical components on your side:
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
 
-The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths](#grounding-paths) below.
+The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
 
-## Architecture Diagram
+## Architecture diagram
 
 The diagram below is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
 
@@ -71,9 +71,9 @@ flowchart TB
     style PredictHQ fill:#FF236420
 ```
 
-## Component Detail
+## Component detail
 
-### Location & Beam Management
+### Location & Beam management
 
 **Refresh: monthly**
 
@@ -85,7 +85,7 @@ For each business location:
 
 Saved Locations are also the only way to use polygon-based boundaries with PredictHQ APIs. Polygons are stored once against the location and referenced by `location_id` across all subsequent calls.
 
-### ML Features Management
+### ML features management
 
 **Refresh: daily or weekly or other, depending on model cadence**
 
@@ -95,17 +95,17 @@ Store the results locally. Pull from your local store at training and inference 
 
 **Alternative delivery:** PredictHQ can deliver Features API output per Beam Analysis via Snowflake Private Share, AWS Data Exchange, or SFTP. Contact PredictHQ to discuss this option.
 
-### Events Management
+### Events management
 
 **Refresh: daily or weekly**
 
 Using the `analysis_id`, call the Events API to retrieve the specific events driving demand at each location. Store results locally.
 
-Events are used for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths](#grounding-paths) below.
+Events are used for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
 
 **Alternative delivery:** PredictHQ can deliver events filtered by Beam Analysis or Saved Location via Snowflake Private Share, AWS Data Exchange, or SFTP. For most production use cases, this is the preferred approach over live Events API calls.
 
-### Forecasting & Decision System
+### Forecasting & decision system
 
 The forecasting model pulls ML features from your local store - both historical (for training) and future (for inference). Event features represent demand signal - your model learns the relationship between event magnitude and demand impact at each location.
 
@@ -114,18 +114,18 @@ The decision or end-user system consumes:
 * **Forecast results** from the modeling system
 * **Events** from your local Events store, used to explain forecast anomalies or expected demand shifts to operators or end users
 
-## Grounding paths
+## Grounding paths for AI systems
 
-This architecture also supports [grounding](../../getting-started/glossary.md#grounding-rag) - supplying verified real-world context to LLMs and AI agents at the moment they answer, so they respond from facts instead of hallucinating. Grounding sits alongside the forecasting pipeline, not inside it: training improves your model before it runs, grounding supplies verified context while it runs, and the two never mix.
+This architecture also supports [grounding](../../getting-started/glossary.md#grounding) - supplying verified real-world context to LLMs and AI agents at the moment they answer, so they respond from facts instead of hallucinating. Grounding sits alongside the forecasting pipeline, not inside it: training improves your model before it runs, grounding supplies verified context while it runs, and the two never mix.
 
-**Internal grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, governed by your own access controls, with freshness set by your refresh cadence. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Internal grounding: retrieval inside your environment](internal-grounding.md) for the reference architecture.
+**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, governed by your own access controls, with freshness set by your refresh cadence. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](internal-grounding.md) for the reference architecture.
 
-**External grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
+**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
 
 * [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md)
 * [PredictHQ MCP in agentic workflows](../../ai/predicthq-mcp-in-agentic-workflows.md)
 
-## Refresh Cadence Summary
+## Refresh cadence summary
 
 | Component       | Cadence              | Notes                                                     |
 | --------------- | -------------------- | --------------------------------------------------------- |
@@ -136,7 +136,7 @@ This architecture also supports [grounding](../../getting-started/glossary.md#gr
 
 ***
 
-### Key Decisions
+### Key decisions
 
 **Features API vs. Snowflake / ADX / SFTP** For smaller deployments or early integration, the Features API is the simplest path. For production at scale - particularly when feature freshness and API latency are concerns - talk to PredictHQ about bulk delivery options.
 

@@ -1,19 +1,19 @@
 ---
 description: >-
-  Reference architecture for internal grounding: retrieving verified PredictHQ
+  Reference architecture for provisioned grounding: retrieving verified PredictHQ
   event context inside your own environment at answer time, so your AI systems
   respond from facts they can cite.
 ---
 
-# Internal grounding: retrieval inside your environment
+# Provisioned grounding: retrieval inside your environment
 
-Internal grounding gives your LLMs and agents verified real-world context from a store inside your own environment - governed by your access controls, resident in your infrastructure, retrieved at the moment a model answers. It is the grounding architecture for teams where data residency, governance, or retrieval scale rule out live external calls.
+Provisioned grounding gives your LLMs and agents verified real-world context from a store inside your own environment - governed by your access controls, resident in your infrastructure, retrieved at the moment a model answers. It is the grounding architecture for teams where data residency, governance, or retrieval scale rule out live external calls.
 
-This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [external grounding via the MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md).
+This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [on-demand grounding via the MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md).
 
 ## Architecture
 
-Internal grounding extends the [Standard integration pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, internal grounding adds a retrieval interface and a consumer - nothing else changes.
+Provisioned grounding extends the [Standard integration pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, provisioned grounding adds a retrieval interface and a consumer - nothing else changes.
 
 ```mermaid
 flowchart TB
@@ -43,6 +43,25 @@ The components:
 3. **Retrieval interface** - the query layer your AI systems call at answer time. Because events are structured, retrieval is structured too: filter by location, date window, and the event categories that matter, rather than embedding everything and hoping vector similarity finds the right concert.
 4. **The model** - any LLM, assistant, or agent in your environment. It receives verified, scoped context in its input and answers from retrieved facts, not invented ones.
 
+At answer time, the flow looks like this - the answer path stays inside your environment, and PredictHQ's only runtime role is keeping the store current:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Agent as Your AI agent (LLM)
+    participant Store as Your context store
+    participant PHQ as PredictHQ
+    loop Kept verified and current
+        PHQ->>Store: Verified, demand-relevant context - delivered and refreshed
+    end
+    User->>Agent: How should we staff the downtown store next week?
+    Agent->>Agent: Decides it needs real-world context
+    Agent->>Store: Retrieve relevant context for the downtown store, next 7 days
+    Store-->>Agent: Verified context, served from your own store
+    Agent->>Agent: Synthesizes the answer using the context
+    Agent-->>User: Grounded answer, events cited
+```
+
 ## Retrieval design
 
 Three decisions determine whether grounded answers are relevant or noisy:
@@ -67,11 +86,11 @@ Real-world context changes daily: events are announced, revised, cancelled, and 
 
 **Operational copilot.** A staffing copilot preparing next week's roster retrieves upcoming high-rank events for each store's location before recommending shift levels, and cites the events behind each recommendation.
 
-**Customer-facing explanations.** A pricing platform explains rate changes to end users from the same store - internal grounding keeps the retrieval path inside the platform's own trust boundary, with no external call in the serving path.
+**Customer-facing explanations.** A pricing platform explains rate changes to end users from the same store - provisioned grounding keeps the retrieval path inside the platform's own trust boundary, with no external call in the serving path.
 
-## When to choose internal over external grounding
+## When to choose provisioned over on-demand grounding
 
-| Choose internal grounding | Choose [external grounding (MCP)](../../ai/mcp.md) |
+| Choose provisioned grounding | Choose [on-demand grounding (MCP)](../../ai/mcp.md) |
 | --- | --- |
 | Data residency or compliance requires context inside your boundary | Agents can call external tools |
 | Retrieval volume is high enough that per-query external calls don't make sense | Query volume is modest and bursty |
@@ -79,7 +98,7 @@ Real-world context changes daily: events are announced, revised, cancelled, and 
 | Your AI serving path can't take an external dependency | Always-current context matters more than residency |
 | The integration has a place on your platform roadmap | You want to be querying today - no integration to scope, nothing to wait on |
 
-Some deployments run both: internal grounding for the high-volume serving path, MCP for ad-hoc agent and analyst queries.
+Some deployments run both: provisioned grounding for the high-volume serving path, MCP for ad-hoc agent and analyst queries.
 
 ## Next steps
 

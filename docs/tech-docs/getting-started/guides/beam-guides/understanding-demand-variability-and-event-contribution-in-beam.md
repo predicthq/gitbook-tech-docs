@@ -11,7 +11,7 @@ Beam analyses your historical demand data and decomposes it into two components:
 * **Baseline demand**: The stable, predictable portion of demand. This captures long-term trends, regular seasonal patterns, and recurring cycles - the demand you'd expect even without any unusual external influences.
 * **Anomalous demand**: Everything left over after the baseline is removed. This is the variable, irregular portion of demand - the spikes and dips that can't be explained by your regular structured patterns alone. External factors like events, weather, or promotions tend to show up here.
 
-The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means more of your demand is being driven by anomalous, external factors - which in turn means there's more opportunity for event intelligence to improve your forecasts.
+The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means more of your demand is being driven by anomalous, external factors - which in turn means there's more opportunity for real-world context to improve your forecasts.
 
 > Beam's decomposition is optimised for identifying event-driven anomalies and may differ from decompositions produced by other tools such as STL or Prophet.
 

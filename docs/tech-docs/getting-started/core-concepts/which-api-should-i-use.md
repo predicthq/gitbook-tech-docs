@@ -13,8 +13,8 @@ PredictHQ has four core APIs, plus an MCP server for AI assistants and agents. C
 | Build a dashboard showing upcoming events             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
 | Explain a forecast spike to a stakeholder             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
 | Identify which event types drive demand at a location | [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)                                     |
-| Ground an LLM or agent inside your own environment    | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) synced to a local store (internal grounding) |
-| Give an AI agent on-demand access to verified context | [MCP server](../../ai/mcp.md) (external grounding)                                                           |
+| Ground an LLM or agent inside your own environment    | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) synced to a local store (provisioned grounding) |
+| Give an AI agent on-demand access to verified context | [MCP server](../../ai/mcp.md) (on-demand grounding)                                                           |
 
 ## Features API - for forecasting and ML
 
@@ -67,9 +67,9 @@ Beam should be run once per location and refreshed monthly. It is required for a
 
 ## MCP server - for grounding AI assistants and agents
 
-Use the MCP server when an AI assistant or agent needs verified real-world context on demand - external grounding. It exposes the full API surface through tool calling with the same entitlements as the REST API, and there is no data pipeline to maintain.
+Use the MCP server when an AI assistant or agent needs verified real-world context on demand - on-demand grounding. It exposes the full API surface through tool calling with the same entitlements as the REST API, and there is no data pipeline to maintain.
 
-To ground AI systems inside your own environment instead (internal grounding), sync the Events API into a local store and retrieve from it at answer time - the same store the Standard Integration Pattern uses for explainability.
+To ground AI systems inside your own environment instead (provisioned grounding), sync the Events API into a local store and retrieve from it at answer time - the same store the Standard Integration Pattern uses for explainability.
 
 The MCP server is the grounding path, not the bulk path: for training-scale feature retrieval, use the Features API directly.
 

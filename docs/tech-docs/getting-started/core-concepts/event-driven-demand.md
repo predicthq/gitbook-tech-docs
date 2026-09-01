@@ -75,7 +75,7 @@ Even statistically accurate models can fail operationally if users do not trust 
 
 Forecast improvements alone rarely drive adoption. Operational teams want to understand why demand is expected to change.
 
-Trust increases when predicted demand shifts can be linked to observable real-world drivers. Concrete explanations grounded in actual events are often more important than marginal improvements in error metrics.
+Trust increases when predicted demand shifts can be linked to observable real-world drivers. Concrete explanations anchored to actual events are often more important than marginal improvements in error metrics.
 
 Trust determines time to value. If users hesitate to act on model outputs, operational impact is delayed regardless of model quality.
 

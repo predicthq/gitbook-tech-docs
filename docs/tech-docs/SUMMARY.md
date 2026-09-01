@@ -93,7 +93,7 @@
 
 * [Integration guides](integrations/integration-guides/README.md)
   * [Standard integration pattern](integrations/integration-guides/standard-integration-pattern.md)
-  * [Internal grounding: retrieval inside your environment](integrations/integration-guides/internal-grounding.md)
+  * [Provisioned grounding: retrieval inside your environment](integrations/integration-guides/internal-grounding.md)
   * [Keep data updated via API](integrations/integration-guides/keep-data-updated-via-api.md)
   * [Loading event data into a data warehouse](integrations/integration-guides/loading-event-data-into-a-data-warehouse.md)
   * [Integrate with Loop Links](integrations/integration-guides/integrate-with-loop-links.md)

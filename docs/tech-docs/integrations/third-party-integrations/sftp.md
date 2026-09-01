@@ -1,6 +1,6 @@
 # Receive data via SFTP
 
-PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files - deploying verified real-world context into your environment when Snowflake or AWS Data Exchange aren't options. The result is the same: an always-current local dataset for [model training and internal grounding](../integration-guides/internal-grounding.md), governed by you.
+PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files - deploying verified real-world context into your environment when Snowflake or AWS Data Exchange aren't options. The result is the same: an always-current local store for model training, explainability, and [provisioned grounding](../integration-guides/internal-grounding.md), governed by you.
 
 SFTP delivery follows the same full + incremental data model used by our other bulk data integrations.
 

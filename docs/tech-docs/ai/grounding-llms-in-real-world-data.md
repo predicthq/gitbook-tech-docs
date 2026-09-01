@@ -29,30 +29,48 @@ Grounding is the outcome; RAG is one way to achieve it. Tool calling, where an a
 
 ## Two grounding architectures
 
-PredictHQ supports both. Most deployments choose one, and the choice is mostly a governance and maintenance question.
+Together, these are **Grounding with PredictHQ**: verified real-world context as a grounding source, delivered two ways. Most deployments choose one, and the choice is mostly a governance and maintenance question. The distinguishing question: at the instant the model answers, does the context come from your store or from ours?
 
-### Internal grounding - retrieval inside your environment
+### Provisioned grounding - retrieval inside your environment
 
 Verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, access control, or retrieval scale matter.
 
 ```mermaid
-flowchart LR
-    PHQ["PredictHQ platform"] -- managed delivery --> Store[("Your event store")]
-    Store -- retrieval at answer time --> LLM["Your LLM or agent"]
-    LLM --> Answer["Grounded answer"]
+sequenceDiagram
+    participant User
+    participant Agent as Your AI agent (LLM)
+    participant Store as Your context store
+    participant PHQ as PredictHQ
+    loop Kept verified and current
+        PHQ->>Store: Verified, demand-relevant context - delivered and refreshed
+    end
+    User->>Agent: How should we staff the downtown store next week?
+    Agent->>Agent: Decides it needs real-world context
+    Agent->>Store: Retrieve relevant context for the downtown store, next 7 days
+    Store-->>Agent: Verified context, served from your own store
+    Agent->>Agent: Synthesizes the answer using the context
+    Agent-->>User: Grounded answer, events cited
+    Note over Agent,Store: The answer path stays inside your environment
 ```
 
-* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
 
-### External grounding - context on demand
+### On-demand grounding - query at answer time
 
 Your agents query the [PredictHQ MCP server](mcp.md) live at decision time and hold no copy of anything. Choose this when speed matters - there is no integration to scope and nothing to wait on from your platform team or roadmap, so an agent can be querying the same day - or when zero pipeline maintenance suits a stack that already speaks tool calling.
 
 ```mermaid
-flowchart LR
-    Agent["Your AI agent"] -- live query --> MCP["PredictHQ MCP server"]
-    MCP -- verified context --> Agent
-    Agent --> Answer["Grounded answer"]
+sequenceDiagram
+    participant User
+    participant Agent as Your AI agent (LLM)
+    participant MCP as PredictHQ MCP server
+    User->>Agent: How should we staff the downtown store next week?
+    Agent->>Agent: Decides it needs real-world context
+    Agent->>MCP: Query relevant context for the downtown store, next 7 days
+    MCP-->>Agent: Verified, relevance-ranked context - events, features, forecasts
+    Agent->>Agent: Synthesizes the answer using the context
+    Agent-->>User: Grounded answer, events cited
+    Note over Agent,MCP: Nothing stored - every answer uses context current at that moment
 ```
 
 * [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - reference workflows
@@ -63,7 +81,7 @@ Whichever architecture you choose, the request flow an AI assistant follows is t
 
 1. A user asks a question or requests a forecast.
 2. The assistant determines that external context is required.
-3. The assistant retrieves PredictHQ context for a specified location and time range - from your store (internal) or via MCP (external).
+3. The assistant retrieves PredictHQ context for a specified location and time range - from your store (provisioned) or via MCP (on-demand).
 4. Structured context is returned.
 5. The assistant incorporates that context into its reasoning or response.
 
@@ -76,7 +94,7 @@ AI systems consuming real-world context face the same structural challenges desc
 * **Usability** - the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) converts events into structured, model-ready signals.
 * **Trust** - the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) provides verifiable event records that can be surfaced in explanations.
 
-This separation lets an assistant retrieve either raw event context or calibrated signals, depending on the workflow. For worked examples, see the [internal grounding workflows](../integrations/integration-guides/internal-grounding.md) and [agentic workflows](predicthq-mcp-in-agentic-workflows.md).
+This separation lets an assistant retrieve either raw event context or calibrated signals, depending on the workflow. For worked examples, see the [provisioned grounding workflows](../integrations/integration-guides/internal-grounding.md) and [agentic workflows](predicthq-mcp-in-agentic-workflows.md).
 
 ## How grounding reduces AI hallucinations
 
@@ -104,15 +122,15 @@ No. Grounding is the outcome; retrieval-augmented generation (RAG) is the most c
 
 ### How do I reduce LLM hallucinations about real-world demand?
 
-Ground the model in verified, location-specific, current event context. Retrieve from a PredictHQ-fed store in your own environment (internal grounding) or query the PredictHQ MCP server on demand (external grounding), and scope retrieval with Beam so the model sees relevant signal.
+Ground the model in verified, location-specific, current event context. Retrieve from a PredictHQ-fed store in your own environment (provisioned grounding) or query the PredictHQ MCP server on demand (on-demand grounding), and scope retrieval with Beam so the model sees relevant signal.
 
 ### Do I need to retrain my model to ground it?
 
 No. Grounding happens at inference time and never touches model weights. It works with any model, including ones you have no training rights to.
 
-### Should I use internal or external grounding?
+### Should I use provisioned or on-demand grounding?
 
-It's mostly a governance and maintenance question. If context must live inside your own trust boundary, or retrieval volume is high, run internal grounding over a store you govern. If you'd rather maintain nothing, or want to be querying today without waiting on a platform roadmap, use the MCP server. Some deployments use both.
+It's mostly a governance and maintenance question. If context must live inside your own trust boundary, or retrieval volume is high, run provisioned grounding over a store you govern. If you'd rather maintain nothing, or want to be querying today without waiting on a platform roadmap, use the MCP server. Some deployments use both.
 
 ### Can I use PredictHQ for training and grounding at the same time?
 
@@ -120,5 +138,5 @@ Yes, and the two don't interact: training uses event features to improve your mo
 
 ## Next steps
 
-* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
 * [MCP server](mcp.md) - set up the MCP server

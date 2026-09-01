@@ -30,7 +30,7 @@ For data science teams who own a forecasting model and want it more accurate.
 
 Retrieve model-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) keyed by your `beam.analysis_id`: historical windows to train on alongside your demand history, and future-dated windows at every forecast run. Because events are known in advance, the future values are real demand signals rather than estimates - no zero-filling the forecast horizon.
 
-Using a pre-trained time series foundation model instead? There is no training step - supply the same future-dated features as covariates. See [Using event features with time series foundation models](guides/features-api-guides/using-event-features-with-time-series-foundation-models.md).
+Using a pre-trained time series foundation model instead? There is no training step - supply features covering both your demand history and the forecast horizon as covariates. See [Using event features with time series foundation models](guides/features-api-guides/using-event-features-with-time-series-foundation-models.md).
 
 * [Which API should I use?](core-concepts/which-api-should-i-use.md)
 * [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production architecture
@@ -51,11 +51,11 @@ For ML platform and agent teams whose LLMs or agents make demand-related decisio
 
 Grounding gives a model the real-world facts it lacks at the moment it answers, so it responds from what is true instead of hallucinating. Retrieval-augmented generation (RAG) is one technique for achieving it. PredictHQ supports two grounding architectures; most deployments choose one, and which fits is mostly a governance and maintenance question:
 
-* **Internal grounding** - verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
-* **External grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
+* **Provisioned grounding** - verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
+* **On-demand grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
 * [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md) - concepts, architectures, and FAQ
-* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md) - the reference architecture
 * [PredictHQ MCP in agentic workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
 
 ## Understand what drives your demand

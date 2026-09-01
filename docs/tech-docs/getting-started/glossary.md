@@ -47,25 +47,23 @@ The Forecasts API is appropriate when rapid time-to-value is the priority, or wh
 * API Reference: [Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview "mention")
 * [getting-started.md](guides/forecasts-api-guides/getting-started.md "mention")
 
-## Grounding (RAG)
+## Grounding
 
-Grounding is giving a model real-world facts it does not hold, at the moment it answers, so it reasons from what is true instead of what it guesses. It is the primary way to reduce AI hallucinations: the confident, plausible answers a model invents where it lacks real-world facts. Retrieval-augmented generation (RAG) is the most common technique for grounding: retrieving relevant context and supplying it to the model at inference time. Tool calling, where an agent queries an API at answer time, achieves the same outcome.
+Grounding is giving an LLM or agent the real-world facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Grounding reduces AI hallucinations. Retrieval-augmented generation (RAG) is the most common technique; tool calling at answer time achieves the same outcome.
 
-PredictHQ supports two grounding architectures. **Internal grounding**: verified event context is delivered into your environment (via Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. **External grounding**: your agents query the PredictHQ MCP server on demand and hold no copy of anything.
-
-Grounding never touches the training model. Training improves a model before it runs; grounding supplies verified context while it runs. The two grounding architectures are alternatives to each other, not to training.
+Grounding with PredictHQ comes in two architectures: **provisioned grounding** - verified context delivered into your environment, retrieved from a store you govern - and **on-demand grounding** - your agents query the PredictHQ MCP server and hold no copy of anything. Earlier versions of these docs called them internal and external grounding.
 
 * [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md)
-* [Internal grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md)
+* [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/internal-grounding.md)
 * [MCP server](../ai/mcp.md)
 
 ## Inference
 
 Inference is the moment a model is used in a live system to produce a prediction or action. It applies equally to models you train yourself and to pre-trained models applied without training, such as time series foundation models used zero-shot.
 
-Either way, a forecast is only as good as the context the model sees at inference. Events are known in advance, so a Features API call with a forward-dated `active` window supplies future-dated demand signals at every forecast run. For models you train, this is the serving half of the loop: the model learned from PredictHQ features, so it needs them at every scoring run. For pre-trained models, inference is where all the context enters: PredictHQ features are supplied as covariates alongside your demand history.
+Either way, a forecast is only as good as the context the model sees at inference. Events are known in advance, so a Features API call with a forward-dated `active` window supplies future-dated demand signals at every forecast run. For models you train, this is the serving half of the loop: the model learned from PredictHQ features, so it needs them at every scoring run. For pre-trained models, inference is where all the context enters: features covering both the demand history and the forecast horizon are supplied as covariates.
 
-For LLMs and agents, retrieving verified context at inference time is grounding - see Grounding (RAG).
+For LLMs and agents, retrieving verified context at inference time is grounding - see [Grounding](#grounding).
 
 ## Local Rank
 
@@ -92,7 +90,7 @@ All submitted feedback is reviewed by PredictHQ’s data team, and accepted chan
 
 MCP is an open standard for connecting AI assistants and agents to external tools and data at inference time. The PredictHQ MCP server exposes the full API surface (events, features, Beam, forecasts, and documentation search) to any MCP-compatible client, with the same entitlements as the REST API.
 
-The MCP server is PredictHQ's external grounding path: agents query for verified real-world context on demand, with no data pipeline to maintain. For training-scale feature retrieval, use the Features API directly.
+The MCP server is PredictHQ's on-demand grounding path: agents query for verified real-world context on demand, with no data pipeline to maintain. For training-scale feature retrieval, use the Features API directly.
 
 * [MCP server](../ai/mcp.md)
 
@@ -179,7 +177,7 @@ Within PredictHQ's platform, real-world context flows through a layered architec
 * **Beam** - demand calibration to identify which events drive demand at each location
 * **Features API** - event signals transformed into model-ready time-series features
 * **Forecasts API** - event-aware demand forecasts for customers who do not build their own models
-* **Grounding (MCP server + Events API)** - verified context retrieved by AI systems at answer time, from a store inside your environment (internal grounding) or on demand via MCP (external grounding)
+* **Grounding (MCP server + Events API)** - verified context retrieved by AI systems at answer time, from a store inside your environment (provisioned grounding) or on demand via MCP (on-demand grounding)
 * [Core concepts](core-concepts/)
 
 ## Saved Location
@@ -202,9 +200,9 @@ Existing integrations using Suggested Radius will continue to work, but new inte
 
 ## Time series foundation model
 
-Time series foundation models such as Chronos, TimesFM, and TimeGPT are pre-trained forecasting models applied zero-shot or with light fine-tuning, with no per-location model training required. They learn temporal patterns across millions of series, which lowers the cost of deploying forecasts at scale.
+Time series foundation models such as Chronos-2, TimesFM, and TimeGPT are pre-trained forecasting models applied zero-shot or with light fine-tuning, with no per-location model training required. They learn temporal patterns across millions of series, which lowers the cost of deploying forecasts at scale.
 
-What they don't learn is real-world drivers. Pre-training corpora are dominated by generic numeric sequences, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. PredictHQ features fill that gap: pass forward-dated Features API output (keyed by a `beam.analysis_id`) as future covariates alongside your demand history.
+What they don't learn is real-world drivers. Pre-training corpora are dominated by generic numeric sequences, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. Where the model accepts covariates (Chronos-2, TimeGPT, and TimesFM do; the earlier Chronos and Chronos-Bolt models are univariate), PredictHQ features fill that gap: pass Features API output (keyed by a `beam.analysis_id`) covering both the demand history and the forecast horizon.
 
 As forecasting shifts from bespoke trained models toward pre-trained ones, the training step shrinks and inference-time context matters more, not less.
 

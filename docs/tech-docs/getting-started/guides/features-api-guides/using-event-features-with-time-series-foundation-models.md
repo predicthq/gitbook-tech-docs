@@ -1,7 +1,7 @@
 ---
 description: >-
   Supply PredictHQ event features as future covariates to pre-trained
-  forecasting models such as Chronos, TimesFM, and TimeGPT.
+  forecasting models such as Chronos-2, TimesFM, and TimeGPT.
 ---
 
 # Using event features with time series foundation models
@@ -9,6 +9,22 @@ description: >-
 Pre-trained forecasting models are applied zero-shot or with light fine-tuning - there is no per-location training step. They learn temporal patterns from large generic corpora, which means real-world drivers such as concerts, sports fixtures, and holidays are invisible to them unless supplied as covariates. Because events are known in advance, PredictHQ features provide real covariate values across the forecast horizon - no zero-filling or lagged proxies.
 
 Most foundation model interfaces accept these as known future covariates - variously called future covariates, exogenous variables, or dynamic features depending on the model. Support varies by model and version: some accept covariates natively, some only through a wrapper framework, and some not at all - so check your model's documentation rather than assuming the covariates are being used.
+
+One difference from a model you train yourself: a trained ML model learned the event-to-demand relationship at training, so inference needs only forward-looking features. A foundation model learns that relationship from its context window, so every forecast run supplies features for both windows - the demand history and the horizon:
+
+```mermaid
+sequenceDiagram
+    participant Pipe as Your pipeline
+    participant Model as Time series foundation model
+    participant PHQ as PredictHQ Features API
+    Note over Pipe,Model: No training phase - the model arrives pre-trained
+    loop Every forecast run
+        Pipe->>PHQ: Features for the demand-history window plus the forecast horizon
+        PHQ-->>Pipe: Historical + forward-looking features
+        Pipe->>Model: Demand history + features, both windows, in context
+        Model-->>Pipe: Forecast
+    end
+```
 
 ## Prepare the covariates
 

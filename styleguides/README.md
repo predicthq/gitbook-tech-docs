@@ -57,6 +57,7 @@ Terms inherited from the Google guide _(G-4)_. Delete any row you disagree withâ
 | Beam epithet              | "PredictHQ's relevancy engine" | "demand calibration engine" | Describing its function as calibration is fine; the epithet is standardized. |
 | named industries          | "named industries" / "optimized for the named industries" | "supported industries" as the general framing | The product applies to all industries; the named list is where it's optimized. "Supported" stays correct for true feature-availability constraints. |
 | grounding (RAG)           | Lead with "grounding", pair "(RAG)" on first use | "RAG" alone as the concept | Grounding is the outcome; RAG is one technique. Tool calling (MCP) is grounding that isn't classically RAG. |
+| provisioned / on-demand grounding | "provisioned grounding" (our context in your environment), "on-demand grounding" (query us at answer time); umbrella phrase "Grounding with PredictHQ" | "internal grounding", "external grounding" | Renamed 2026-08: "internal grounding" reads as grounding on your own internal data; both architectures ground on our data. |
 | AI hallucinations         | "reduces hallucinations"  | "eliminates hallucinations" |       |
 
 **Branded terms keep their capitals in sentence-case headings** _(G-14 exception list)_: PredictHQ, Beam, Loop, Bolt, Analysis / Analyses (the Beam resource), Analysis Group(s), Feature Importance, Broadcasts, Saved Location(s), Loop Link(s), PHQ Rank, Local Rank, Suggested Radius, the Predicted&#x20;\* features above, and API/product names (Events API, Features API, Forecasts API, MCP). Generic words lowercase in headings: events, models, demand data, guides, settings.
@@ -118,7 +119,7 @@ Terms inherited from the Google guide _(G-4)_. Delete any row you disagree withâ
 
 Record every deliberate departure from Google style here, alongside other settled decisions, so debates don't reopen. Changing a rule above changes what the AI enforces; this log remembers why.
 
-<table><thead><tr><th width="132.89453125">Date</th><th width="252.62890625">Decision</th><th width="131.0703125">Differs from Google?</th><th>Rationale</th></tr></thead><tbody><tr><td>2026-08-17</td><td>Adopt Google Style Guide.</td><td></td><td></td></tr><tr><td>2026-08-21</td><td>Add PredictHQ terms and branded-terms capitalization to the word list.</td><td></td><td></td></tr><tr><td>2026-08-22</td><td>Cap page descriptions at 200 characters (GitBook truncation limit).</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="132.89453125">Date</th><th width="252.62890625">Decision</th><th width="131.0703125">Differs from Google?</th><th>Rationale</th></tr></thead><tbody><tr><td>2026-08-17</td><td>Adopt Google Style Guide.</td><td></td><td></td></tr><tr><td>2026-08-21</td><td>Add PredictHQ terms and branded-terms capitalization to the word list.</td><td></td><td></td></tr><tr><td>2026-08-22</td><td>Cap page descriptions at 200 characters (GitBook truncation limit).</td><td></td><td></td></tr><tr><td>2026-08-28</td><td>Rename grounding architectures to provisioned/on-demand grounding; umbrella phrase is Grounding with PredictHQ.</td><td></td><td></td></tr></tbody></table>
 
 ***
 
