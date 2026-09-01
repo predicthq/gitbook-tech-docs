@@ -5,9 +5,9 @@ description: >-
   event data - in your environment or on demand via MCP.
 ---
 
-# Grounding LLMs in real-world event data (RAG)
+# Grounding with PredictHQ
 
-Grounding is giving an AI model facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Retrieval-augmented generation (RAG) is the most common technique for grounding. PredictHQ grounds LLMs, AI assistants, and agents in verified real-world context: the events, holidays, and demand signals that shape the physical world their decisions run in.
+Grounding is giving an AI model facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Retrieval-augmented generation (RAG) is the most common technique for grounding. Grounding with PredictHQ supplies the verified real-world context your LLMs, AI assistants, and agents lack: the events, holidays, and demand signals that shape the physical world their decisions run in.
 
 ## Why LLMs hallucinate about the real world
 
@@ -29,7 +29,7 @@ Grounding is the outcome; RAG is one way to achieve it. Tool calling, where an a
 
 ## Two grounding architectures
 
-Together, these are **Grounding with PredictHQ**: verified real-world context as a grounding source, delivered two ways. Most deployments choose one, and the choice is mostly a governance and maintenance question. The distinguishing question: at the instant the model answers, does the context come from your store or from ours?
+Grounding with PredictHQ delivers verified real-world context two ways. Most deployments choose one, and the choice is mostly a governance and maintenance question. The distinguishing question: at the instant the model answers, does the context come from your store or from ours?
 
 ### Provisioned grounding - retrieval inside your environment
 

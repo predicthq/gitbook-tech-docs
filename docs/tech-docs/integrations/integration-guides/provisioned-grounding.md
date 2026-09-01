@@ -9,7 +9,7 @@ description: >-
 
 Provisioned grounding gives your LLMs and agents verified real-world context from a store inside your own environment - governed by your access controls, resident in your infrastructure, retrieved at the moment a model answers. It is the grounding architecture for teams where data residency, governance, or retrieval scale rule out live external calls.
 
-This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [on-demand grounding via the MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md).
+This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [on-demand grounding via the MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md).
 
 ## Architecture
 
@@ -102,6 +102,6 @@ Some deployments run both: provisioned grounding for the high-volume serving pat
 
 ## Next steps
 
-* [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md) - concepts and the two architectures
+* [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md) - concepts and the two architectures
 * [Standard integration pattern](standard-integration-pattern.md) - the architecture this extends
 * [Receive data via Snowflake](../third-party-integrations/snowflake/) - the lowest-friction delivery path

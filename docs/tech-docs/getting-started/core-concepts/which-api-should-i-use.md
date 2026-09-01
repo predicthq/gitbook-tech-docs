@@ -74,7 +74,7 @@ To ground AI systems inside your own environment instead (provisioned grounding)
 The MCP server is the grounding path, not the bulk path: for training-scale feature retrieval, use the Features API directly.
 
 * [MCP server](../../ai/mcp.md)
-* [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md)
+* [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
 
 ## Common Mistakes
 

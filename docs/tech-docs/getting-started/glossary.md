@@ -53,7 +53,7 @@ Grounding is giving an LLM or agent the real-world facts it does not hold, at th
 
 Grounding with PredictHQ comes in two architectures: **provisioned grounding** - verified context delivered into your environment, retrieved from a store you govern - and **on-demand grounding** - your agents query the PredictHQ MCP server and hold no copy of anything. Earlier versions of these docs called them internal and external grounding.
 
-* [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md)
+* [Grounding with PredictHQ](../ai/grounding-with-predicthq.md)
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md)
 * [MCP server](../ai/mcp.md)
 

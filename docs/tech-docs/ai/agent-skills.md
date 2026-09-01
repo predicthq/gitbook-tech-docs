@@ -26,7 +26,7 @@ Works with Claude Code, Cursor, Gemini CLI, GitHub Copilot, and other compatible
 
 ## Skills and the MCP server
 
-The two are complementary and often installed together. Agent skills teach your coding assistant how to *build* the integration correctly. The [MCP server](mcp.md) gives assistants and agents live access to PredictHQ data - for exploring while you build, and for [grounding](grounding-llms-in-real-world-data.md) AI systems in production.
+The two are complementary and often installed together. Agent skills teach your coding assistant how to *build* the integration correctly. The [MCP server](mcp.md) gives assistants and agents live access to PredictHQ data - for exploring while you build, and for [grounding](grounding-with-predicthq.md) AI systems in production.
 
 ## Next steps
 

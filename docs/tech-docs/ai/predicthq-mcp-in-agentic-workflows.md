@@ -109,4 +109,4 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 * [MCP server](mcp.md) - connect your agent to PredictHQ via MCP
 * [Agent skills](agent-skills.md) - install PredictHQ's integration best practices directly into your coding agent
 * [API quickstart](../getting-started/api-quickstart.md) - create an API token for bearer token authentication
-* [Grounding LLMs in real-world event data (RAG)](grounding-llms-in-real-world-data.md) - grounding concepts and architectural patterns for AI systems
+* [Grounding with PredictHQ](grounding-with-predicthq.md) - grounding concepts and architectural patterns for AI systems

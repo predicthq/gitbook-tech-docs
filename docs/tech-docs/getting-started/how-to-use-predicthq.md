@@ -54,7 +54,7 @@ Grounding gives a model the real-world facts it lacks at the moment it answers, 
 * **Provisioned grounding** - verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
 * **On-demand grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
-* [Grounding LLMs in real-world event data (RAG)](../ai/grounding-llms-in-real-world-data.md) - concepts, architectures, and FAQ
+* [Grounding with PredictHQ](../ai/grounding-with-predicthq.md) - concepts, architectures, and FAQ
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 * [PredictHQ MCP in agentic workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
 

@@ -143,6 +143,6 @@ Refer to your client's documentation for specific configuration steps.
 
 ## Next steps
 
-* [Grounding LLMs in real-world event data (RAG)](grounding-llms-in-real-world-data.md) - what grounding is and how PredictHQ fits into AI and agent workflows
+* [Grounding with PredictHQ](grounding-with-predicthq.md) - what grounding is and how PredictHQ fits into AI and agent workflows
 * [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - use the MCP in autonomous and multi-agent workflows, where agents call PredictHQ for real-world context and explainability at decision time
 * [API quickstart](../getting-started/api-quickstart.md) - create an API key for Bearer token authentication

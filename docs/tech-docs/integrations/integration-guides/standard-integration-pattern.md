@@ -122,7 +122,7 @@ This architecture also supports [grounding](../../getting-started/glossary.md#gr
 
 **On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
 
-* [Grounding LLMs in real-world event data (RAG)](../../ai/grounding-llms-in-real-world-data.md)
+* [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
 * [PredictHQ MCP in agentic workflows](../../ai/predicthq-mcp-in-agentic-workflows.md)
 
 ## Refresh cadence summary

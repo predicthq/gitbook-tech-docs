@@ -11,7 +11,8 @@ redirects:
     getting-started/guides/beam-guides/ml-features-by-group: getting-started/data-science-notebooks.md
     integrations/integration-guides/beam-data-science-guide: getting-started/core-concepts/what-is-beam.md
     getting-started/guides/features-api-guides/increase-accuracy-with-the-features-api: getting-started/core-concepts/what-is-the-features-api.md
-    ai/using-predicthq-with-ai-assistants: ai/grounding-llms-in-real-world-data.md
+    ai/using-predicthq-with-ai-assistants: ai/grounding-with-predicthq.md
+    ai/grounding-llms-in-real-world-data: ai/grounding-with-predicthq.md
     integrations/integration-guides/internal-grounding: integrations/integration-guides/provisioned-grounding.md
     integrations/third-party-integrations/google-cloud-bigquery: integrations/integration-guides/loading-event-data-into-a-data-warehouse.md
     integrations/third-party-integrations/integrate-with-a-demand-forecast-in-powerbi: getting-started/guides/features-api-guides/integrate-with-a-demand-forecast-in-powerbi.md
