@@ -13,10 +13,6 @@ This is the **on-demand grounding** path of Grounding with PredictHQ: your agent
 
 MCP is the grounding path, not the bulk path. For training-scale feature retrieval, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features). To retrieve from a verified event store inside your own environment instead, see [provisioned grounding](../integrations/integration-guides/provisioned-grounding.md).
 
-{% hint style="success" %}
-PredictHQ MCP is in beta - functionality may change as we continue to develop and refine it.
-{% endhint %}
-
 ## How it works
 
 Your agent decides per question whether it needs real-world context, writes its own query, and answers from what comes back:
@@ -71,15 +67,14 @@ If you don't yet have access to the MCP server, contact your PredictHQ account m
 
 ### Claude (claude.ai)
 
-Claude has native MCP support via Connectors. This is the lowest-friction setup - no configuration files required.
+PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). This is the lowest-friction setup, just click **Connect**.
 
-1. Go to **Settings > Connectors** in Claude.
-2. Click **Add connector** and enter the server URL: `https://mcp.predicthq.com/v1/mcp`
-3. Follow the OAuth flow to authenticate with your PredictHQ account.
+1. Open the [PredictHQ connector listing link](https://claude.ai/directory/connectors/predicthq) and select **Connect** (or, in Claude, go to **Settings > Connectors > Browse connectors** and search for **PredictHQ**).
+2. Follow the OAuth flow to authenticate with your PredictHQ account.
 
 Once connected, PredictHQ tools are available in any Claude conversation.
 
-For full instructions, see [Claude's connector documentation](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp).
+For more information, see [Claude's connector directory documentation](https://claude.com/docs/connectors/directory).
 
 ### Claude Code
 
