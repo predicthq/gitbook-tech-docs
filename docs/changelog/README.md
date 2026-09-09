@@ -7,6 +7,16 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-09-09" tags="developer-tools,enhancement" %}
+## MCP Server - General Availability & Listed in Claude's Connectors Directory
+
+PredictHQ's MCP server has moved out of beta. MCP access is currently available as a trial period, contact your account manager for details.
+
+It's also listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq), so connecting the PredictHQ MCP in Claude is now done straight through the connectors page, no custom connector setup required.&#x20;
+
+See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
+{% endupdate %}
+
 {% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
 ## Bolt - Loop Feedback and Individual Card Sharing
 
