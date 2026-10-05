@@ -120,7 +120,7 @@ Similar to finding all events for an event-group entity for recurring events you
 
 ## How can I use entities in Snowflake
 
-Entities information is returned in Snowflake in the ENTITIES column. That contains all the entities' information mentioned above. Customers can query that column to find all events for an entity or to retrieve the relevant entities for an event
+Entities information is returned in Snowflake in the ENTITIES column. That contains all the entities' information mentioned above. You can query that column to find all events for an entity or to retrieve the relevant entities for an event
 
 ## What is the difference between labels and entities?
 

@@ -246,7 +246,7 @@ Observances have no PHQ Attendance available as the rank/impact only reflects it
 
 Politics events include the main dates of elections and referendums around the world.
 
-**Note** the politics category currently does not cover physically attended events to do with politics such as rallies and debates.
+**Note** the politics category does not cover physically attended events to do with politics such as rallies and debates.
 
 **LABELS**
 

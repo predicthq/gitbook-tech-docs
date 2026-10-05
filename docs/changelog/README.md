@@ -20,7 +20,7 @@ See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for mor
 {% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
 ## Bolt - Loop Feedback and Individual Card Sharing
 
-Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt will generate the details needed, confirm them with you and submit the feedback on your behalf, returning a link so you can follow the progress.
+Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt generates the details needed, confirms them with you, and submits the feedback on your behalf, returning a link so you can follow the progress.
 
 Bolt sharing now supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
 {% endupdate %}
@@ -46,7 +46,7 @@ Bolt's interface has also been improved to include an activity pane showing exac
 
 Juneteenth is now published under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardised the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardised to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
 
-The change covers US states and the US territories of Puerto Rico, the United States Virgin Islands, the Northern Mariana Islands, and American Samoa. Customers whose models learn holiday effects by name now see one consistent event.
+The change covers US states and the US territories of Puerto Rico, the United States Virgin Islands, the Northern Mariana Islands, and American Samoa.
 {% endupdate %}
 
 {% update date="2026-06-19" tags="data-quality,enhancement,places" %}
@@ -78,7 +78,7 @@ NHL fixtures played in the postseason now carry the postseason label. Customers 
 {% update date="2026-06-01" tags="new-feature,developer-tools,webapp" %}
 ## Bolt - beta launch
 
-Bolt is now available to all users in the PredictHQ WebApp.
+Bolt is available to all users in the PredictHQ WebApp.
 
 Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest — Saved Locations, Beam Analysis, calibrated features, forecasts — following PredictHQ best practices throughout.
 {% endupdate %}

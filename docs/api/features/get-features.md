@@ -227,17 +227,17 @@ These are generic features that do not include Predicted Impact Patterns and sho
 
 **Configuration**
 
-PHQ Rank features cannot currently be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
+PHQ Rank features cannot be configured further. When requesting `phq_rank_*` features set the value as `true` indicating you require the default calculations.
 {% endtab %}
 {% endtabs %}
 
 ## Feature Response Fields
 
-Other than the date, the structure of each result here will depend on how you configured the feature in your request and the type of feature.
+Other than the date, the structure of each result here depends on how you configured the feature in your request and the type of feature.
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
-<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Attendance features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Attendance features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -252,7 +252,7 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -280,7 +280,7 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 
 {% tab title="PHQ Spend Features" %}
-<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Spend features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Spend features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -295,7 +295,7 @@ Other than the date, the structure of each result here will depend on how you co
 {% endtab %}
 
 {% tab title="PHQ Viewership Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here will depend on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,

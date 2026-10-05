@@ -59,7 +59,7 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Microsoft Excel.
 
-First, create a new Spreadsheet. Click on the Data tab and choose Get Data as shown below:
+First, create a new Spreadsheet. Click the **Data** tab and choose Get Data as shown below:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 

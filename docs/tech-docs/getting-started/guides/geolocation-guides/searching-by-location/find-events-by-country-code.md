@@ -26,7 +26,7 @@ response = requests.get(
 print(response.json())
 ```
 
-One thing you might notice in the results are multiple events with the same title - this can happen when an event applies to multiple locations or occurs at different times. For example, a public holiday might apply to a number of states but not to the whole country - in this case there would be an event per state. A good indication of what area the event applies to is the `scope` field in the event information. If the event applies to the whole country this value will be `country`, otherwise it may be `region`.
+One thing you might notice in the results are multiple events with the same title - this can happen when an event applies to multiple locations or occurs at different times. For example, a public holiday might apply to a number of states but not to the whole country - in this case there would be an event per state. A good indication of what area the event applies to is the `scope` field in the event information. If the event applies to the whole country this value is `country`, otherwise it may be `region`.
 
 A snippet of the results are shown below:
 

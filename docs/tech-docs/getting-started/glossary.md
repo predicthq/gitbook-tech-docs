@@ -69,7 +69,7 @@ For LLMs and agents, retrieving verified context at inference time is grounding 
 
 Local Rank is PredictHQ’s location-sensitive ranking score that measures an event’s impact relative to its surrounding population density. It ranges from 0 to 100 and is presented on a logarithmic scale, meaning higher scores represent exponentially greater local impact.
 
-Unlike PHQ Rank, which is normalized globally, Local Rank adjusts for how concentrated or sparse a population is in the area surrounding the event. This means that a 5,000-person event in a densely populated city will receive a lower Local Rank than a 5,000-person event in a rural or sparsely populated area - because the latter has a proportionally larger impact on local demand and activity.
+Unlike PHQ Rank, which is normalized globally, Local Rank adjusts for how concentrated or sparse a population is in the area surrounding the event. This means that a 5,000-person event in a densely populated city receives a lower Local Rank than a 5,000-person event in a rural or sparsely populated area - because the latter has a proportionally larger impact on local demand and activity.
 
 Local Rank is most useful for identifying events that are significant in context, such as when optimizing logistics, staffing, or marketing at a local level.
 
@@ -79,7 +79,7 @@ Local Rank is most useful for identifying events that are significant in context
 
 Loop is PredictHQ’s event feedback and contribution tool that allows customers to submit missing events and report incorrect attributes on existing events. It serves as a direct input channel to improve event data quality and completeness.
 
-Customers can use the Loop UI to provide feedback, or use Loop Links - unique URLs generated via API- to enable distributed teams or frontline staff to contribute feedback without requiring full access to PredictHQ’s WebApp.
+You can use the Loop UI to provide feedback, or use Loop Links - unique URLs generated via API - to enable distributed teams or frontline staff to contribute feedback without requiring full access to PredictHQ’s WebApp.
 
 All submitted feedback is reviewed by PredictHQ’s data team, and accepted changes are integrated into the platform, enhancing data accuracy and model performance.
 

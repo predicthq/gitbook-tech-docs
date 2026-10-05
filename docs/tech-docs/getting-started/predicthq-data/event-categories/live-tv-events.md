@@ -14,7 +14,7 @@ For example, during the basketball game [Villanova Wildcats vs Baylor Bears](htt
 {% hint style="info" %}
 Live TV events provide viewership data that is attached to events in other categories. Initially, it was launched for the sports category. In future it will be extended to other categories. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
 
-The current release of Live TV events shows the number of people watching sports events per county in the US.
+Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
 
 Live TV events include live streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV).
@@ -93,7 +93,7 @@ The Live TV Events machine learning models predicted the viewership for sports g
 
 #### Physical Event Details
 
-The broadcast API also returns the physical event details accordingly with all available information. Users don’t need an event subscription to access relevant information.
+The broadcast API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
 
 * **Event ID**: `event_id` of the physical event can be used to find all broadcasts nationwide for that specific sport game.
 * **Label**: `event.label` for the physical sports event provides more information about the sports type and league. It can be used to find broadcasts for the specific sports type.

@@ -67,7 +67,7 @@ Requirements:
 
 * The data must be daily level
 * Provide at least 18 months of history for best results
-* Demand data will be rejected if it contains duplicated dates, missing values in the demand column, or non-numeric demand values
+* The API rejects demand data that contains duplicated dates, missing values in the demand column, or non-numeric demand values
 
 Example:
 
@@ -261,7 +261,7 @@ flowchart LR
 Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. There are 2 key pieces of explainability that can be provided:
 
 * `phq_explainability` - Top events the model has determined are impacting your demand on this date.
-* `phq_features` - List of features (from Features API) that were identified through Beam's Feature Importance process as relevant to your demand, as well as their values. This field is only available to customers who have also purchase our Features product.
+* `phq_features` - List of features (from Features API) that were identified through Beam's Feature Importance process as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.
 
 {% hint style="info" %}
 Explainability is optional—use `phq_explainability` in your `include` query param to enable it.

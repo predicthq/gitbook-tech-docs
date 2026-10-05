@@ -63,7 +63,7 @@ The end result of the exercise will be a report like this:
 
 ## Select an Input Method
 
-There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods users can utilize to connect and start creating reports.
+There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods you can use to connect and start creating reports.
 
 [**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): This method connects data straight from the PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
@@ -233,7 +233,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
-   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Just replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
+   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
 The filled-out information should look like this:
 
@@ -343,7 +343,7 @@ For phq\_attendance in the table use the drop down to remove the summary, this s
 
 <figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
-Rename the chart title by clicking on the chart and going to the Visualizations tab -> General -> Title. Let’s rename it to “Event Attendance per day in San Francisco”.
+Rename the chart title by clicking the chart and going to the Visualizations tab -> General -> Title. Let’s rename it to “Event Attendance per day in San Francisco”.
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
@@ -368,7 +368,7 @@ Please wait 10-20 seconds between each step as data populates and data runs in t
 
 <figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
-Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Please select Anonymous and click Connect.
+Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Select Anonymous and click Connect.
 
 <figure><img src="../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 

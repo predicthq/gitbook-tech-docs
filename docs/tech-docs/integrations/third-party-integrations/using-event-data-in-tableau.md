@@ -262,7 +262,7 @@ Tableau workbook
 https://tableau-connector.predicthq.com
 ```
 
-* Click on "Begin" and enter the Access Token you generated.
+* Click **Begin** and enter the Access Token you generated.
 * Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for a full list of fields and parameters.
 * Click "Get data" to import events into Tableau.
 

@@ -11,7 +11,7 @@ description: >-
 
 Note that you don't receive an error when requesting a date range or location that is outside of your subscription settings.
 
-This is sometimes confused with missing data. If you're not seeing the results you expect to see then please ensure your subscription covers the location or time period you're searching for.
+This is sometimes confused with missing data. If you're not seeing the results you expect to see then ensure your subscription covers the location or time period you're searching for.
 
 Your subscription settings can be viewed in our [WebApp](https://control.predicthq.com/settings/plans).
 {% endhint %}

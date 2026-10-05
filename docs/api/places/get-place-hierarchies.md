@@ -17,7 +17,7 @@ This endpoint allows you to get the full place hierarchies for
 
 A place hierarchy is a list of place identifiers and types from the `planet` level down to the `level` specified in your query (note that `level` defaults to `locality` if not specified in your query).
 
-The response might include more than one hierarchy for a given coordinate. The reason for this is that we try to match the closest place's hierarchy but we also include the closest major city's hierarchy within a radius of 50km. This only applies if the `level` is below `region` and, if it exists, the major city's hierarchy will always be the second item in the list.
+The response might include more than one hierarchy for a given coordinate. The reason for this is that we try to match the closest place's hierarchy but we also include the closest major city's hierarchy within a radius of 50km. This only applies if the `level` is below `region` and, if it exists, the major city's hierarchy is always the second item in the list.
 
 For instance, if you specify `?location.origin=47.615337,-122.203981`, which is a coordinate located in Bellevue, Washington, you'll get two hierarchies, one for Bellevue but also one for [Seattle](https://en.wikipedia.org/wiki/Seattle).
 

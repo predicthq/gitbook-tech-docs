@@ -34,7 +34,7 @@ Powered by aggregated event data from the [Features API](https://www.predicthq.c
 
 To view the code used to call the Features API, Events API, and other functions (if not already pinned):
 
-* Click on the left margin of the cells in the Observable notebook.
+* Click the left margin of the cells in the Observable notebook.
 * Alternatively, click 'Edit' in the cell menu.
 
 {% hint style="info" %}

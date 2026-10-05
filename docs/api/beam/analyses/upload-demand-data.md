@@ -21,7 +21,7 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `ndjson_no_data`                            | An empty NDJSON body was uploaded.                                                                                                             |
 | `ndjson_invalid_format`                     | The NDJSON body is formatted incorrectly. Please ensure NDJSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
 | `csv_invalid_row`                           | The uploaded CSV has an invalid row.                                                                                                           |
-| `csv_invalid_header`                        | The uploaded CSV headers are incorrect. Please use `date,demand`.                                                                              |
+| `csv_invalid_header`                        | The uploaded CSV headers are incorrect. Use `date,demand`.                                                                              |
 | `csv_no_data`                               | The uploaded CSV is empty or only has headers set.                                                                                             |
 | `csv_invalid_format`                        | The uploaded CSV is formatted incorrectly. Please ensure CSV data is correctly UTF-8 encoded and that there are no invalid escape sequences.   |
 | `start_date_invalid`                        | The earliest date in the uploaded demand data is before `2017-01-01`.                                                                          |

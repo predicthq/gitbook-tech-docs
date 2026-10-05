@@ -8,7 +8,7 @@ These Place IDs were found using the [Places API](https://app.gitbook.com/s/kEFs
 
 {% file src="../../../.gitbook/assets/broadcast-events-place-mapping.csv" %}
 
-We can also use the `start.*` parameters to filter broadcasts by time. For the time range in our example, we will use `start.gte=2020-11-01` and `start.lte=2020-11-30`. Using `start.tz=America/Los_Angeles` will treat the parameter’s start dates and times in the America/Los\_Angeles time zone, otherwise the parameter dates and times will be treated as UTC.
+We can also use the `start.*` parameters to filter broadcasts by time. For the time range in our example, we will use `start.gte=2020-11-01` and `start.lte=2020-11-30`. Using `start.tz=America/Los_Angeles` will treat the parameter’s start dates and times in the America/Los\_Angeles time zone, otherwise the API treats the parameter dates and times as UTC.
 
 ```python
 import requests

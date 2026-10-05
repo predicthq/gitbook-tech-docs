@@ -49,4 +49,4 @@ Browse through our [use case examples](https://github.com/predicthq/sdk-js/tree/
 
 ## Found an Issue?
 
-Please [log an issue](https://github.com/predicthq/sdk-js/issues/new) on our GitHub repository.
+[Log an issue](https://github.com/predicthq/sdk-js/issues/new) on our GitHub repository.

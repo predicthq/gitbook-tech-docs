@@ -99,7 +99,7 @@ response = requests.get(
 print(response.json())
 ```
 
-The response will look like:
+The response looks like:
 
 ```json
 {

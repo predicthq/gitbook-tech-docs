@@ -39,7 +39,7 @@ By default, the event search will only return the first ten results. If you want
 
 ## Further Examples
 
-Please browse through our [use case examples](https://github.com/predicthq/sdk-py/tree/master/usecases) on our GitHub repository.
+Browse our [use case examples](https://github.com/predicthq/sdk-py/tree/master/usecases) on our GitHub repository.
 
 ## Found an Issue?
 
