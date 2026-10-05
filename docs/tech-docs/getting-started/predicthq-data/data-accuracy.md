@@ -14,7 +14,7 @@ Every event in our API goes through multiple steps to ensure quality and accurac
 
 30% to 40% of events we receive are spam, add-ons or duplicates. After filtering, our spam rate is below 0.1% - our quality-control checks consistently measure it at 0%.
 
-**Geocoding:** Every event has a lat/long, allowing for precise mapping. Events also follow identification patterns from the open-source Geonames database. For instance, all events in California will have multiple IDs, of which 5332921 (the ID for California) will always be included. We also provide venue name and formatted address whenever possible.
+**Geocoding:** Every event has a lat/long, allowing for precise mapping. Events also follow identification patterns from the open source Geonames database. For instance, all events in California will have multiple IDs, of which 5332921 (the ID for California) will always be included. We also provide venue name and formatted address whenever possible.
 
 **De-duplicating:** We combine duplicate records into one reliable event. E.g. Our system may find a football game with 30,000 expected attendees. It finds eight listings of this game from five different sources. Our unique model kicks in and keeps a single event with the aggregated detail from all of the listings.
 

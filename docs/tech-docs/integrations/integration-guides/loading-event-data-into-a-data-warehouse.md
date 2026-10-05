@@ -144,7 +144,7 @@ This method works well for smaller datasets as initial upload and must be used f
 
 To establish the required data structure in BigQuery, you can utilize the following Python script. This script explicitly defines the columns and data types as laid out in our [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure), configuring them precisely as needed for your BigQuery table. Before executing this script, ensure you have the following prerequisites:
 
-* **SERVICE\_ACCOUNT\_JSON**: This is your service account JSON key, which is typically stored in a secure file. If your organization uses a different method to handle service account keys, please modify the code accordingly.
+* **SERVICE\_ACCOUNT\_JSON**: This is your service account JSON key, which is typically stored in a secure file. If your organization uses a different method to handle service account keys, modify the code accordingly.
 * **dataset\_id**: Specify whether this is a new dataset or an existing one in which you want to place this table.
 * **table\_id**: Determine a name for your new PredictHQ data table in BigQuery.
 

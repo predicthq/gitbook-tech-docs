@@ -7,7 +7,7 @@ description: Search for Live TV broadcasts happening in a location.
 {% hint style="info" %}
 **Results are limited by your subscription**
 
-Please note that you will not receive an error when requesting a date range or location that is outside of your subscription settings.
+Note that you don't receive an error when requesting a date range or location that is outside of your subscription settings.
 
 This is sometimes confused with missing data. If you're not seeing the results you expect to see then please ensure your subscription covers the location or time period you're searching for.
 

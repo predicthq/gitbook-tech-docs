@@ -161,7 +161,7 @@ These Frequently asked questions apply to district level school holidays (for th
 2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data will recognize changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. The weekend after a school holiday is included if the holiday ends on a Friday or Sunday.
 4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
-5. **Teacher Only Days -** We do not currently include teacher-only days.
+5. **Teacher Only Days -** We do not include teacher-only days.
 
 #### Geoscoping
 

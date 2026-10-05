@@ -67,7 +67,7 @@ If you don't yet have access to the MCP server, contact your PredictHQ account m
 
 ### Claude (claude.ai)
 
-PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). This is the lowest-friction setup, just click **Connect**.
+PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up, click **Connect**.
 
 1. Open the [PredictHQ connector listing link](https://claude.ai/directory/connectors/predicthq) and select **Connect** (or, in Claude, go to **Settings > Connectors > Browse connectors** and search for **PredictHQ**).
 2. Follow the OAuth flow to authenticate with your PredictHQ account.

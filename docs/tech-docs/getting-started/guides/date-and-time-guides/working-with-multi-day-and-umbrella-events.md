@@ -55,7 +55,7 @@ Child events are indicated by the presence of the `parent_event` field. Child ev
 ```
 
 {% hint style="info" %}
-In the current release of Umbrella events you cannot yet find the child event IDs of a parent event via the API. This feature will be supported in a future release.
+You cannot find the child event IDs of a parent event via the API.
 {% endhint %}
 
 ### **Why Umbrella Events Matter**

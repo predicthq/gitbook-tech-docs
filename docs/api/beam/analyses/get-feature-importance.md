@@ -5,7 +5,7 @@ description: Get relevant ML features based on a Beam Analysis.
 # Get Feature Importance
 
 {% hint style="info" %}
-The easiest way to get these ML features from our Features API to be used in your models is by using the Beam `analysis_id` in your Features API request.
+To get these ML features from the Features API for your models, use the Beam `analysis_id` in your Features API request.
 {% endhint %}
 
 {% openapi-operation spec="beam-api" path="/v1/beam/analyses/{analysis_id}/feature-importance" method="get" %}

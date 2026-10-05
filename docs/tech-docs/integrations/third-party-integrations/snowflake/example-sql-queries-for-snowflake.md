@@ -1,6 +1,6 @@
 # Example SQL queries for Snowflake
 
-Using SQL queries in Snowflake the shared data can be manipulated to fit into a variety of tasks. Feeding the data into analyses, dashboards and machine learning models are only a few examples that are easily possible with PredictHQ's data and SQL data manipulation in Snowflake.
+Using SQL queries in Snowflake the shared data can be manipulated to fit into a variety of tasks. Feeding the data into analyses, dashboards and machine learning models are only a few examples of what you can do with PredictHQ's data and SQL data manipulation in Snowflake.
 
 The following SQL examples are based on the Sample Data Shares we provide. Here our database name is marketplace but in your account, it would be the custom name that was chosen when the sample data shares were being added to your Snowflake account.
 

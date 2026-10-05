@@ -26,7 +26,7 @@ Xuxu Wang (CDO) demoing this approach with PowerBI
 
 ### Base Model in PowerBI
 
-The starting point is developing a base model in PowerBI (without PredictHQ data). Using a combination of historical data and time trend features, we quickly developed a base model in PowerBI. This initial version yielded a performance of 48%, a good starting point for further enhancement.
+The starting point is developing a base model in PowerBI (without PredictHQ data). Using a combination of historical data and time trend features, we developed a base model in PowerBI. This initial version yielded a performance of 48%, a good starting point for further enhancement.
 
 <figure><img src="../../../.gitbook/assets/powerbi-screenshot.png" alt=""><figcaption><p>Base model performance in PowerBI (without PredictHQ data)</p></figcaption></figure>
 

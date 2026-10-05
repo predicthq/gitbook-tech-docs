@@ -8,13 +8,13 @@ description: Transforming Event Data into ML-Ready Features in Snowflake
 
 This guide is intended to provide guidance on generating machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](../../../../getting-started/core-concepts/what-is-the-features-api.md), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, please go to [this page](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) and for a more detailed guide on using the Features API for Machine Learning, please see the [Get features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) guide.
 
-If you don't know which is the best for you, please [reach out](https://www.predicthq.com/contact/sales)!
+If you don't know which is the best for you, please [reach out](https://www.predicthq.com/contact/sales).
 
 ## Overview
 
 This guide assumes you have access to PredictHQ’s events data in Snowflake via a [Snowflake data share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake). The guide is to show customers how to generate aggregations similar to those provided by the Features API documented in the Features API [list of available features](https://docs.predicthq.com/api/features/get-features#available-features). These features provide daily aggregated data which shows the sum of data for all events happening in a location - for example, the amount of people attending events around a location. The goal is to generate aggregated features that can be used in demand forecasting.
 
-Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, machine learning ready daily level aggregated event data will be generated on a per-location basis intended to be similar to the data provided by the PredictHQ Features API and ready to be added to a training set as quickly as possible.<br>
+Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, machine learning ready daily level aggregated event data will be generated on a per-location basis intended to be similar to the data provided by the PredictHQ Features API and ready to be added to a training set.<br>
 
 **Requirements:**
 
@@ -83,7 +83,7 @@ for location in list_of_locations:
 
 ## Create Input table used in both methods
 
-To be able to reference the locations further in the guide, a table of locations is required as input (called **SAVED\_LOCATIONS**). Please fill this table with \
+To be able to reference the locations further in the guide, a table of locations is required as input (called **SAVED\_LOCATIONS**). Fill this table with \
 The **SAVED\_LOCATIONS** input table requires this format:
 
 <table data-full-width="true"><thead><tr><th width="190">location</th><th>latitude</th><th>longitude</th><th data-type="number">radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.81310</td><td>-87.65860</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-york</td><td>40.73061</td><td>-73.93524</td><td>null</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>

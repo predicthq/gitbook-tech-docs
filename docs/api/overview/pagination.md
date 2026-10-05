@@ -30,7 +30,7 @@ Individual API Endpoint documentation will describe specific response formats.
 
 You can control the result records that are returned using the standard `offset` and `limit` query string parameters. If no limit is specified, then a default of `10` applies.
 
-The maximum number of results and pagination limits are specified in [your plan](https://control.predicthq.com/settings/plans). If you require higher limits please [contact us](https://www.predicthq.com/contact) to discuss your needs.
+The maximum number of results and pagination limits are specified in [your plan](https://control.predicthq.com/settings/plans). If you require higher limits [contact us](https://www.predicthq.com/contact) to discuss your needs.
 
 ## Maximum Number of Results
 

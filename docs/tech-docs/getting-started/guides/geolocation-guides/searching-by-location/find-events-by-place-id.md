@@ -79,6 +79,6 @@ A snippet of the results are shown below:
 }
 ```
 
-We use Geonames data for our Places, so the id _2641170_ is also a Geoname ID for the same location. Please see the [official Geonames site](http://www.geonames.org/) for more information.
+We use Geonames data for our Places, so the id _2641170_ is also a Geoname ID for the same location. See the [official Geonames site](http://www.geonames.org/) for more information.
 
 Using `place.scope` will return events that apply to the parent and children places of the specified place (e.g. holidays and other events that apply to a country or region). Alternatively you can use `place.exact` to return events that apply to the specified place only.

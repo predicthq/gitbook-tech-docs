@@ -26,7 +26,7 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `csv_invalid_format`                        | The uploaded CSV is formatted incorrectly. Please ensure CSV data is correctly UTF-8 encoded and that there are no invalid escape sequences.   |
 | `start_date_invalid`                        | The earliest date in the uploaded demand data is before `2017-01-01`.                                                                          |
 | `end_date_invalid`                          | The latest date in the uploaded demand data is more than 1 year into the future.                                                               |
-| `duplicate_rows`                            | The uploaded demand data contains duplicate dates. Please remove all duplicates before uploading.                                              |
+| `duplicate_rows`                            | The uploaded demand data contains duplicate dates. Remove all duplicates before uploading.                                              |
 | `no_data`                                   | There is no demand data.                                                                                                                       |
 | `weekly_demand_date_check_failed`           | The weekly demand dates do not start on the same weekday.                                                                                      |
 | `below_minimum_threshold`                   | There are not enough data points in the uploaded demand data.                                                                                  |

@@ -1,7 +1,7 @@
 # Working with location-based subscriptions
 
 {% hint style="info" %}
-**Please note:** If you are subscribed to location-based access and are making requests to our [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), you must filter your API calls using a Saved Location ID.
+**Note:** If you have location-based access and make requests to the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) or [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), filter your API calls by a Saved Location ID.
 {% endhint %}
 
 You can purchase access to PredictHQ's events in different ways. You can purchase access to geographic areas like cities, states, or countries. Or you can purchase access to a number of locations to get access to specific business locations. Business locations include stores, hotels, restaurants, parking garages, offices, or any other type of location you can think of.
@@ -67,7 +67,7 @@ response = requests.get(
 print(response.json())
 ```
 
-You can of course use other filters in the Events API to further filter down the response. Use paging to handle multiple pages of results.
+You can use other filters in the Events API to further filter down the response. Use paging to handle multiple pages of results.
 
 Alternatively, you can also access events using the `/events` call in the Saved Locations API (see Get a list of events for a location). To get a list of events for a location make the following call with the location\_id `GET /saved-locations/<location_id>/insights/events`. E.g. `GET /saved-locations/0b6ZrOnTdB2Y7k4zC_9qBg/insights/events`.
 

@@ -5,7 +5,7 @@ description: Get forecast values for an existing model.
 # Get forecast
 
 {% hint style="info" %}
-Please note that `phq_features` can only be retrieved if you have also purchased the Features product.
+Note that `phq_features` can only be retrieved if you have also purchased the Features product.
 {% endhint %}
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}/forecast" method="get" %}

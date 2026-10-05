@@ -26,6 +26,6 @@ See Retrying Failed Requests for guidance on backoff and retry behaviour.
 
 ### Retrying Failed Requests
 
-Please ensure you are using appropriate retries and exponential backoff's to work within the rate limits. Please see the following page with advice on retrying failed requests.
+Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. Please see the following page with advice on retrying failed requests.
 
 * [#retrying-failed-requests](troubleshooting.md#retrying-failed-requests "mention")

@@ -89,7 +89,7 @@ All forecast models are tied to a Saved Location so you can define the location 
 
 #### Create Saved Location (Using Predicted Impact Area)
 
-Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. The easiest way to use it is to create a Saved Location with `origin_geojson` — the impact area is calculated automatically and stored against the location.
+Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson` — the impact area is calculated automatically and stored against the location.
 
 ```python
 # Create Saved Location with Predicted Impact Area

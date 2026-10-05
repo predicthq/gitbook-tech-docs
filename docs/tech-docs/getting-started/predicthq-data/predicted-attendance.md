@@ -24,7 +24,7 @@ PredictHQ monitors the accuracy of their models and periodically retrains them t
 
 ### Examples of models used for Predicted Attendance
 
-We have ML models to predict attendance for all our attended categories. Some types of events within some categories may use expert systems instead of machine learning models. For example, at the time of writing although most of our main sports within the sports category used ML models Formula 1 race events did not use a ML model.
+We have ML models to predict attendance for all our attended categories. Some types of events within some categories may use expert systems instead of machine learning models. For example, although most of our main sports within the sports category use ML models, Formula 1 race events do not use an ML model.
 
 ML models use machine learning features as inputs to predict attendance. These features are different pieces of data that allow the model to make an accurate prediction based on different factors. For example, the sports teams playing, the type of sport, and the venue a sports game is played all affect the predicted attendance. If two very popular sports teams play at a large stadium then they are more likely to have more people attending the game.
 
