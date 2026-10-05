@@ -10,7 +10,7 @@ Web scraping, web harvesting, or web data extraction is data scraping used for e
 
 ## Technical Deterrents and Protection
 
-Customers must use any reasonable endeavors to prevent unauthorized access to, or use of PredictHQ Data and, in the event of any such unauthorized access or use, promptly notify PredictHQ. Reasonable endeavors to prevent web scraping may include any of the following (**but are not limited to**):
+You must use any reasonable endeavors to prevent unauthorized access to, or use of PredictHQ Data and, in the event of any such unauthorized access or use, promptly notify PredictHQ. Reasonable endeavors to prevent web scraping may include any of the following (**but are not limited to**):
 
 ### Require Authentication to View Data
 

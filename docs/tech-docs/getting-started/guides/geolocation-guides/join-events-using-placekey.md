@@ -4,7 +4,7 @@ Placekey is a free, universal standard identifier for any physical place, which 
 
 A common use of Placekey and events data is to provide additional information about the  Point of Interest (POI) where the event took place. POI data provides detailed information about a location such as address, latitude/longitude, and open hours, and can also be enriched with data including spend data to reveal what’s happening at a location. The combination of events and POI data helps clarify exactly what is driving demand at a location. For example, combining events data with spend data to identify what is driving a spike in spend at a particular location.
 
-Placekey is attached to PredictHQ events records that happen at a particular location. The PredictHQ pipeline looks at the address and other location information like latitude and longitude and attaches the appropriate Placekey based on these values. An example of a Placekey is `222-22t@5yv-j89-g6k`. This is for the following address “The Mirage Theatre, 3400 Las Vegas Boulevard South, Las Vegas, NV 89109”. Events that happen at the Mirage Theatre will have this Placekey value.
+Placekey is attached to PredictHQ events records that happen at a particular location. The PredictHQ pipeline looks at the address and other location information like latitude and longitude and attaches the appropriate Placekey based on these values. An example of a Placekey is `222-22t@5yv-j89-g6k`. This is for the following address “The Mirage Theatre, 3400 Las Vegas Boulevard South, Las Vegas, NV 89109”. Events that happen at the Mirage Theatre have this Placekey value.
 
 <figure><img src="../../../.gitbook/assets/placekey-example.png" alt=""><figcaption></figcaption></figure>
 

@@ -75,7 +75,7 @@ This concept refers to events that are known to happen on a certain date (includ
 }
 ```
 
-The above event is happening on Tue, 24 Oct 2023 (a single day) and using the `convert_to_local` function from the earlier Python code would produce:
+The above event is happening on Tue, 24 Oct 2023 (a single day) and using the `convert_to_local` function from the earlier Python code produces:
 
 ```json
 {

@@ -34,6 +34,6 @@ The maximum number of results and pagination limits are specified in [your plan]
 
 ## Maximum Number of Results
 
-When the number of results exceeds the maximum number of records allowed by your subscription the `overflow` field will be set to `true`. This indicates there are more results available but you are unable to paginate to them.
+When the number of results exceeds the maximum number of records allowed by your subscription the `overflow` field is set to `true`. This indicates there are more results available but you are unable to paginate to them.
 
 You can work around this limitation by performing more specific searches resulting in fewer results.

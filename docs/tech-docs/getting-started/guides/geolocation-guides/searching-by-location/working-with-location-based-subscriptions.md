@@ -96,4 +96,4 @@ You can then use the events or store them in your data store. Ensure you keep ev
 
 For example, you may write code to loop over your list of locations and retrieve updated events for each and update your data store.
 
-Note if you have location-based access you need to supply a value for this filter. If you do not supply a value then the API will return an error.
+Note if you have location-based access you need to supply a value for this filter. If you do not supply a value, the API returns an error.

@@ -45,7 +45,7 @@ In the `geo.geometry` field we follow the GeoJSON standard which orders coordina
 
 For a point event, its `location` coordinates are where the event occurs. This may be the location of a venue. For example, a [San Francisco Giants MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) has a latitude and longitude of `-122.38926979999997, 37.7785951`, which corresponds to the address of Oracle Park, 24 Willie Mays Plaza.
 
-For an area event that does not have a polygon, its coordinates will be the center of the area where the event occurs.
+For an area event that does not have a polygon, its coordinates are the center of the area where the event occurs.
 
 Area events cover either a Geonames Place, for example [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n), or a specific geographic area bounded by a geometry (polygon). The next section details geometries and polygons, additional geometric data available in the `geo` field for area events. See [GeoJSON ](overview.md#geojson)for more information.
 
@@ -55,7 +55,7 @@ The `location` field was previously used for latitude and longitude information.
 
 ## Address data in the geo field
 
-The `geo` field also contains address information (as of June 2024). The **address** subfield within the `geo` field can contain the following information:
+The `geo` field also contains address information. The **address** subfield within the `geo` field can contain the following information:
 
 * `country_code` (required) - 2 letter country code
 * `formatted_address` (optional) - a fully formatted address which can include street address, locality, postcode, region and country

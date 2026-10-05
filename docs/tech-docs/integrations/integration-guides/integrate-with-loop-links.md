@@ -36,7 +36,7 @@ The advantage is customers don’t need to build a UI. The UI is responsive and 
 
 ## Loop Links Integration
 
-Customers integrate two functions in their application:
+You integrate two functions in your application:
 
 * One for submitting missing events
 * Another for feedback on events - event feedback should be linked to a part of your application that displays an event

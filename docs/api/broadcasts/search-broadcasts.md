@@ -9,7 +9,7 @@ description: Search for Live TV broadcasts happening in a location.
 
 Note that you don't receive an error when requesting a date range or location that is outside of your subscription settings.
 
-This is sometimes confused with missing data. If you're not seeing the results you expect to see then please ensure your subscription covers the location or time period you're searching for.
+This is sometimes confused with missing data. If you're not seeing the results you expect to see then ensure your subscription covers the location or time period you're searching for.
 
 Your subscription settings can be viewed in the [WebApp](https://control.predicthq.com/settings/plans).
 {% endhint %}
@@ -57,7 +57,7 @@ The OpenAPI spec for Broadcasts API can be [found here](https://api.predicthq.co
 
 {% hint style="info" %}
 **USA Counties Mapping File**\
-Counties are mapped to Place IDs. The current mapping of counties to Place ID can be [found here](https://github.com/predicthq/api-specs/blob/main/data/broadcast-county-place-mapping.csv).
+Counties are mapped to Place IDs. The mapping of counties to Place ID can be [found here](https://github.com/predicthq/api-specs/blob/main/data/broadcast-county-place-mapping.csv).
 {% endhint %}
 
 Below are some guides relevant to this API:

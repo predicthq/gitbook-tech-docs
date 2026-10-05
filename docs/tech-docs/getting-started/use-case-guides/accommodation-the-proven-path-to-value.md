@@ -2,7 +2,7 @@
 
 Most hotels and platforms know that local events drive demand - but turning that knowledge into actionable insight at scale is hard.
 
-Teams often spend months trying to work out which event types actually impact demand, define the right radius for each hotel, and transform underlying events into data that can power forecasting and pricing models. These are hard, foundational problems - and they’ve already been solved.
+You may spend months trying to work out which event types actually impact demand, define the right radius for each hotel, and transform underlying events into data that can power forecasting and pricing models. These are hard, foundational problems - and they’ve already been solved.
 
 This guide shows the proven, fastest path to value - based on what’s worked across thousands of hotels and the platforms that serve them.
 

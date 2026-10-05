@@ -122,7 +122,7 @@ Workspace admins enable Developer Mode via **Workspace Settings > Permissions & 
 
 Click `+` in the chat field, then **More**, and select **PredictHQ**.
 
-**Note:** ChatGPT's MCP support is evolving and the exact steps may vary depending on your plan and workspace configuration. If the steps above don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
+**Note:** The exact steps may vary depending on your plan and workspace configuration. If the steps above don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
 
 ### Other clients
 

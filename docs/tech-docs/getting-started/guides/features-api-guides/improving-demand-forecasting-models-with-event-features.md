@@ -30,7 +30,7 @@ Adding event features to a demand forecasting model involves straightforward ste
 
 <figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt=""><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
 
-Most steps are handled by PredictHQ APIs; you just need to provide the following for each store or location:
+Most steps are handled by PredictHQ APIs; you provide the following for each store or location:
 
 1. Historical demand data
 2. Latitude and longitude

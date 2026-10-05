@@ -60,7 +60,7 @@ Start by describing your use case or location - for example:
 * _"Set up a Beam Analysis for our restaurant in Sydney"_
 * _"Show me demand signals for a retail location in London"_
 
-Bolt will guide you from there.
+Bolt guides you from there.
 
 ## Next Steps
 

@@ -43,7 +43,7 @@ Tom's Data Parameters:
 * **Event Status**: Both ‘active’ and ‘predicted’ events to ensure a comprehensive overview.
 * **Location**: Bring through all of Seattle first, and Tom can filter for his locations once it’s in BigQuery using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area).
 
-For the purposes of this guide, we have limited the example load to a single city for Tom to filter on. Users may bring through as much data as they have access to or require when doing an actual load. We find with data warehouse customers they may pull down all data they have access to into their data warehouse and then query it for relevant locations and data from their applications.
+For the purposes of this guide, we have limited the example load to a single city for Tom to filter on. You can bring through as much data as you have access to or require when doing an actual load. We find with data warehouse customers they may pull down all data they have access to into their data warehouse and then query it for relevant locations and data from their applications.
 
 ## Data Load Methods
 

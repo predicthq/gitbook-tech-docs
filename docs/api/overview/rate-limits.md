@@ -1,6 +1,6 @@
 # Rate limits
 
-Your requests to the API will be rate limited, based on the limit specified in your plan. Rate limits are specified in `rps` (requests per second) and your request rate is measured across a one second window.
+The API rate limits your requests based on the limit specified in your plan. Rate limits are specified in `rps` (requests per second) and your request rate is measured across a one second window.
 
 E.g. a rate limit of 50 rps means you can make 50 requests in a second.
 
@@ -26,6 +26,6 @@ See Retrying Failed Requests for guidance on backoff and retry behaviour.
 
 ### Retrying Failed Requests
 
-Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. Please see the following page with advice on retrying failed requests.
+Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. See the following page with advice on retrying failed requests.
 
 * [#retrying-failed-requests](troubleshooting.md#retrying-failed-requests "mention")

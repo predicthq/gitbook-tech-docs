@@ -48,7 +48,7 @@ For guidance on effectively querying the Events API, see [#customizing-event-dat
 This example displays the most impactful sports event in San Francisco for the upcoming week. Interact with the map by:
 
 * Zooming in and out to view all events.
-* Clicking on specific events for more details.
+* Clicking specific events for more details.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdFMd0QGP6NB67jU-826iGqRO-u5vNx4o4TEAKbgk9HI0uEJFLm-l84383lOPmK78hGVIEi_m5Jz8_Ed2H-qNVwBI0qFvBwjcaLGkDAvgX6jWsyGpiTU1CMUqV95V8AYfC21U8hlCqNr1QGcXLofXG8zjBf?key=Zcee3-lj9wWgy6r9JpJLQw" alt="" width="563"><figcaption><p>Interacting with the map</p></figcaption></figure>
 

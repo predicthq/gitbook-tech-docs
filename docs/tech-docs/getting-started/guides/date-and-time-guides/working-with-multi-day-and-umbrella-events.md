@@ -40,7 +40,7 @@ When reading individual event records, interpret phq\_attendance as follows:
 
 Umbrella events refer to the case where we have a parent event that contains one or more child events. For example, the [United States Formula 1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) has child events for [the qualification](https://events.predicthq.com/events/hZ5fGHaxHKgJTBpqyQ), 3 practice events, [a concert](https://events.predicthq.com/events/N4LWVHvicH5YiCHQKe) that occurs at the Grand Prix, and the [actual race event](https://events.predicthq.com/events/5uRg7CqGu7DTtu4Rfk) (there are 12 child events in total). The parent event is for the entire Grand Prix that runs from the 1st of November to the 3rd of November 2019. Both the parent and child events are part of the wider Umbrella event.
 
-Child events are indicated by the presence of the `parent_event` field. Child events will have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is `5uRg7CqGu7DTtu4Rfk` and the Formula 1 parent event is `w7dYyrFwTUQGYE6euv`. The Formula 1 race child event has the following parent event info:
+Child events are indicated by the presence of the `parent_event` field. Child events have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is `5uRg7CqGu7DTtu4Rfk` and the Formula 1 parent event is `w7dYyrFwTUQGYE6euv`. The Formula 1 race child event has the following parent event info:
 
 ```json
 {
