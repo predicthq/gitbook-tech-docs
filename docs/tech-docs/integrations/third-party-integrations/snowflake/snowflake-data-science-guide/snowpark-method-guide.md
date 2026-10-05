@@ -15,7 +15,7 @@ If either of the above approaches are taken, the Features API can be called for 
 
 Below is an example of calling the Features API with Python in Snowpark. This uses the PredictHQ Python SDK. It loops over the **SAVED\_LOCATIONS** table, calls the Features API using the SDK, and outputs the results into a table. So, it achieves a similar result to the SQL method but using the API. This code needs to be modified to include relevant features for what is desired to be fetched.
 
-Note this is not designed to be production-ready code that can be used without modifications. It is provided as an example. Please test and optimize as needed.
+This code is an example, not production-ready. Test and optimize it before you use it.
 
 ### Python Code
 

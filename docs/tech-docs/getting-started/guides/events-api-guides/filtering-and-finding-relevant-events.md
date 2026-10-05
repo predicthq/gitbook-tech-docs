@@ -10,7 +10,7 @@ Events such as concerts, expos and public holidays can shift consumer behavior a
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Setting up a location is quick and easy in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Set up a location in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
 ## Getting Started
 
@@ -168,7 +168,7 @@ params={
 </details>
 
 {% hint style="info" %}
-For detailed information on all query parameters (including those not shown here), please consult [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
+For detailed information on all query parameters (including those not shown here), consult [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
 {% endhint %}
 
 ### Step 2. Call Events API

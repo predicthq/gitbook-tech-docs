@@ -11,7 +11,7 @@ All our events occur within a category. We also have labels that indicate the cl
 For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
 
 * Each event record has two separate label fields (`phq_labels` and the legacy `labels` field).
-* All categories have the new `phq_labels` and should be used by default.&#x20;
+* All categories have `phq_labels`, which you should use by default.&#x20;
 * Event labels can be searched by using the`phq_labels` parameter.
 * Some `labels` which repeats the category name such as `label: academic` have been removed.
 

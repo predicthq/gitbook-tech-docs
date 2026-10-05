@@ -70,7 +70,7 @@ Ensure you have enough time-series data that meets [Beam’s requirements](https
 
 **Industry**
 
-Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../industry-specific-event-filters.md), please use the default `other`.
+Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../industry-specific-event-filters.md), use the default `other`.
 
 **Location**
 
@@ -98,7 +98,7 @@ For practical implementation:
 
 ### Step 2. Get Features
 
-The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) provides access to a library of prebuilt, forecast-ready features ready for direct integration into your machine-learning models. Simply specify the date range, location and list of features, all of which can be sourced from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
+The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) provides access to a library of prebuilt, forecast-ready features ready for direct integration into your machine-learning models. Specify the date range, location, and list of features, all of which can be sourced from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
 
 Responses from the Features API vary based on the type of feature. Most come with a suite of statistics that indicates how the underlying event data is aggregated daily for a location, e.g. sum, max, count. For `phq_rank_*` features, the response is the daily number of events for each of the [five rank bands](https://www.predicthq.com/features/rankings/phq-rank). We recommend the following aggregations:
 

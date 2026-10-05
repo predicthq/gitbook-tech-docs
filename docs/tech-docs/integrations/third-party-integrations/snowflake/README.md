@@ -16,7 +16,7 @@ PredictHQ Sample Data Shares on Snowflake Marketplace
 
 ## Customized Data Shares
 
-Customized Data Shares can be set up to match your preferences in terms of data type, location, time window and business use case. They are secure, easy to set up and usually don't require business resources for data integrations if you're already in the Snowflake platform.
+Customized Data Shares can be set up to match your preferences in terms of data type, location, time window and business use case. They are secure, and PredictHQ manages delivery, so they usually don't require business resources for data integrations if you're already in the Snowflake platform.
 
 [Get in touch](https://www.predicthq.com/contact) with us to discuss your needs and we will come back to you as soon as possible.
 

@@ -8,14 +8,14 @@ description: Get the list of hierarchies for a Place.
 This endpoint is in Beta.
 {% endhint %}
 
-The currently available filters and response data change are subject to change.
+The available filters and the response data are subject to change.
 
 This endpoint allows you to get the full place hierarchies for
 
 * a given coordinate
 * list of `place_id`.
 
-A place hierarchy is a list of place identifiers and types from the `planet` level down to the `level` specified in your query (please note that `level` defaults to `locality` if not specified in your query).
+A place hierarchy is a list of place identifiers and types from the `planet` level down to the `level` specified in your query (note that `level` defaults to `locality` if not specified in your query).
 
 The response might include more than one hierarchy for a given coordinate. The reason for this is that we try to match the closest place's hierarchy but we also include the closest major city's hierarchy within a radius of 50km. This only applies if the `level` is below `region` and, if it exists, the major city's hierarchy will always be the second item in the list.
 

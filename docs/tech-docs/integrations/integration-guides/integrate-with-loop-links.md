@@ -1,7 +1,7 @@
 ---
 description: >-
-  Loop Links provide an easy way for you submit missing Events and provide
-  feedback on existing Events.
+  Loop Links let you submit missing events and provide
+  feedback on existing events.
 ---
 
 # Integrate with Loop Links

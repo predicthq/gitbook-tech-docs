@@ -47,7 +47,7 @@ Live TV Events via the Broadcast API covers sports games that started from Novem
 
 **Location**
 
-Live TV Events are currently available in the US at the current stage.
+Live TV Events are available in the US.
 
 #### Broadcast Status
 

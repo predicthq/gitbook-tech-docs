@@ -12,7 +12,7 @@ In today's data-driven landscape, leveraging powerful analytical tools is essent
 
 This tutorial covers how to connect PredictHQ data to Power BI via two sources, CSV upload and direct API connection using one of our APIs - the Events API.
 
-The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Please change the location from San Francisco to the location you want to look at.
+The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Change the location from San Francisco to the location you want to look at.
 
 Below are the main steps involved in this guide:
 
@@ -65,7 +65,7 @@ The end result of the exercise will be a report like this:
 
 There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods users can utilize to connect and start creating reports.
 
-[**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): The quick and easy way to connect data straight from our PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
+[**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): This method connects data straight from the PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
 [**Snowflake Connection**](using-event-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
 

@@ -51,7 +51,7 @@ The Forecasts API is appropriate when rapid time-to-value is the priority, or wh
 
 Grounding is giving an LLM or agent the real-world facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Grounding reduces AI hallucinations. Retrieval-augmented generation (RAG) is the most common technique; tool calling at answer time achieves the same outcome.
 
-Grounding with PredictHQ comes in two architectures: **provisioned grounding** - verified context delivered into your environment, retrieved from a store you govern - and **on-demand grounding** - your agents query the PredictHQ MCP server and hold no copy of anything. Earlier versions of these docs called them internal and external grounding.
+Grounding with PredictHQ comes in two architectures: **provisioned grounding** - verified context delivered into your environment, retrieved from a store you govern - and **on-demand grounding** - your agents query the PredictHQ MCP server and hold no copy of anything.
 
 * [Grounding with PredictHQ](../ai/grounding-with-predicthq.md)
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md)

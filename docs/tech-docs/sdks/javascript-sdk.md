@@ -45,7 +45,7 @@ client.events.search({title: 'Aviation Festival'})
 
 ## Further Examples
 
-Please browse through our [use case examples](https://github.com/predicthq/sdk-js/tree/master/usecases) on our GitHub repository.
+Browse through our [use case examples](https://github.com/predicthq/sdk-js/tree/master/usecases) on our GitHub repository.
 
 ## Found an Issue?
 

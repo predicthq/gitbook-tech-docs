@@ -327,7 +327,7 @@ Academic Events are captured from an individual higher education institute’s a
 Note:
 
 * Academic Events currently covers institutions where full-time undergraduate enrollment (or FTE, full-time equivalent) is over 5,000. The student number is campus-based instead of the overall enrollment across different locations.
-* Academic Events currently covers institutions in the United States of America.
+* Academic Events cover institutions in the United States of America.
 
 **LABELS / EVENT TYPES**
 

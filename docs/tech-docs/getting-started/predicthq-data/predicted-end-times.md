@@ -29,7 +29,7 @@ For sports, these models use features such as gender, season, and leagues. For e
 
 ## Predicted End Times in PredictHQ API
 
-The events endpoint of the PredictHQ API has been updated with changes for the Predicted End times feature:
+The Events API supports the Predicted End Times feature through the following:
 
 * You can sort events on the predicted end-time value by using the `sort` parameter with a value of `predicted_end` or `-predicted_end`.
 * You can filter on predicted end times by specifying a date range with the `predicted_end.*` parameter.
@@ -45,7 +45,7 @@ You can also use the `sort` parameter to sort by the end time and the predicted\
 
 Note
 
-* Predicted end times is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Please take this into account when you use the value.
+* Predicted end times is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
 * For events that don’t have an end time the end time is set to the same as the start time in our events API response.
 
 ## Examples

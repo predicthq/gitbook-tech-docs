@@ -7,7 +7,7 @@ Geographic information for an event describes where the event is located and the
 Events also have the `formatted_address` field for [venue entities](../../predicthq-data/entities.md) with the street address of an event where it is present.
 
 {% hint style="info" %}
-The `location` field was previously used for geographic information but is now deprecated.
+The `location` field is deprecated. Use the `geo` field for geographic information.
 {% endhint %}
 
 ## **Points and Areas**

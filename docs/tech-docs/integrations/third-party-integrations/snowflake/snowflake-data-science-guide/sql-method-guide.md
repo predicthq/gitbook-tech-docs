@@ -8,7 +8,7 @@ description: Transforming Event Data into ML-Ready Features using SQL
 
 This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
-Please change this table name in all instances below with the name of the events data table that has been provisioned by PredictHQ as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
+Change this table name in all instances below with the name of the events data table that has been provisioned by PredictHQ as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
 
 The rest of the guide also uses temporary tables but these tables can be turned into permanent tables as needed.
 
