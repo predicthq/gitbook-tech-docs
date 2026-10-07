@@ -7,12 +7,30 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-10-06" tags="webapp,developer-tools,new-feature" %}
+## Bolt - Projects
+
+You can now create Projects in Bolt to group your notebooks together. Create a project for a use case, add your notebooks to it, and set the instructions once so every notebook in the project follows them.
+
+Share a project with anyone in your organization as a viewer or a collaborator, so your team can work together and see each other's notebooks instead of duplicating work or waiting to be unblocked.
+
+Projects are available now in Bolt. [Try it out for yourself.](https://control.predicthq.com/bolt/projects)
+{% endupdate %}
+
+{% update date="2026-10-06" tags="enhancement,developer-tools" %}
+## MCP Server - Listed in ChatGPT's Plugin Directory
+
+The PredictHQ MCP Server is now listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
+
+See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
+{% endupdate %}
+
 {% update date="2026-09-09" tags="developer-tools,enhancement" %}
 ## MCP Server - General Availability & Listed in Claude's Connectors Directory
 
 PredictHQ's MCP server has moved out of beta. MCP access is available as a trial period. Contact your account manager for details.
 
-It's also listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq), so connecting the PredictHQ MCP in Claude is now done straight through the connectors page, no custom connector setup required.&#x20;
+It's also listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq), so connecting the PredictHQ MCP in Claude is now done straight through the connectors page, no custom connector setup required.
 
 See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
 {% endupdate %}
