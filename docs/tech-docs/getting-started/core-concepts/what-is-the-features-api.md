@@ -105,17 +105,23 @@ To get the most value from the Features API and avoid noisy or misleading result
 
 ## Common Pitfalls
 
+Avoid these common pitfalls:
+
 * **Requesting too many features** - Pulling every available feature increases noise and reduces model performance. Use Beam or a curated set of relevant features.
 * **Skipping Predicted Impact Area** - Manually defined boundaries often miss key events or include irrelevant ones. Use Predicted Impact Area for each location and industry, ideally via Saved Locations.
 * **Too broad or too narrow location scopes** - Very large areas (e.g. states, countries) or very small units (e.g. SKUs) dilute signal. Use Features API for city/suburb/store-scale use cases.
 
 ## Related
 
+Related resources:
+
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
 * [What Is Beam?](what-is-beam.md)
 * [Features API guides](../guides/features-api-guides/)
 
 ## What to Do Next
+
+Continue with these steps:
 
 * [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
 * Set up [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) - Define the optimal impact boundary for your location and industry. The easiest way is via [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/create-a-saved-location), which calculates and stores it automatically.

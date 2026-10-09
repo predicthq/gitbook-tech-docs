@@ -32,6 +32,8 @@ Retrieve model-ready features from the [Features API](https://app.gitbook.com/s/
 
 Using a pre-trained time series foundation model instead? There is no training step - supply features covering both your demand history and the forecast horizon as covariates. See [Using event features with time series foundation models](guides/features-api-guides/using-event-features-with-time-series-foundation-models.md).
 
+Related guides:
+
 * [Which API should I use?](core-concepts/which-api-should-i-use.md)
 * [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) - the production architecture
 
@@ -42,6 +44,8 @@ For teams that want event-driven forecast accuracy with rapid time-to-value, wit
 Supply historical demand data to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview) and it trains a model, applies Beam automatically, and returns daily-level forecasts with event impact and explainability built in. A baseline comparison shows the accuracy improvement attributable to PredictHQ data - measured on your own demand.
 
 The Forecasts API also fits multi-model setups: run it as one candidate in a champion-challenger selection or an ensemble alongside your existing forecasts, and let measured accuracy decide which wins each series. Nothing needs replacing to adopt it.
+
+Related guides:
 
 * [Getting started with Forecasts API](guides/forecasts-api-guides/getting-started.md)
 
@@ -54,6 +58,8 @@ Grounding gives a model the real-world facts it lacks at the moment it answers, 
 * **Provisioned grounding** - PredictHQ delivers verified event context into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
 * **On-demand grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
+Learn more:
+
 * [Grounding with PredictHQ](../ai/grounding-with-predicthq.md) - concepts, architectures, and FAQ
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 * [PredictHQ MCP in agentic workflows](../ai/predicthq-mcp-in-agentic-workflows.md)
@@ -64,6 +70,8 @@ For analysts and data scientists who need to know which real-world events matter
 
 Beam's [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) results rank the event categories that drive demand at each location and quantify how much of your demand variability is event-driven. PredictHQ explains more than 60 percent of real-world demand variability. Drill into the specific events behind any shift with the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) using the same `analysis_id`.
 
+Related guides:
+
 * [Understanding demand variability and event contribution in Beam](guides/beam-guides/understanding-demand-variability-and-event-contribution-in-beam.md)
 
 ## How the paths fit together
@@ -73,6 +81,8 @@ Training improves your model before it runs. Grounding supplies verified context
 The paths share the same foundation, so they combine naturally: the Saved Locations and Beam Analyses you set up for a forecasting integration are the same ones that scope a grounding corpus or an agent's MCP queries. Many production deployments run a training path and a grounding path side by side - a model trained on event features, and an AI layer that explains its outputs from verified event context.
 
 ## Next steps
+
+Continue with these pages:
 
 * [API quickstart](api-quickstart.md) - make your first call
 * [Which API should I use?](core-concepts/which-api-should-i-use.md) - per-task API selection

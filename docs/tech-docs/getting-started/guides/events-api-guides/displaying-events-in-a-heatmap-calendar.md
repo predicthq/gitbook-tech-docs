@@ -43,6 +43,8 @@ For more information on the Features API, see [What is the Features API?](../../
 
 ### Specifying parameters
 
+Set the following parameters:
+
 * **Date Range Start**: Set the start date for the period of interest.
 * **Location**: Select one of the predefined locations.&#x20;
 * **Categories**: Choose the event categories to consider.&#x20;
@@ -83,6 +85,8 @@ This section provides guidance on how to customize the underlying event data usi
 
 <summary>Date Range</summary>
 
+Set the date range as follows:
+
 * Define a date range for the period of interest.
 * Configuration: Use the `active` field.
 
@@ -91,6 +95,8 @@ This section provides guidance on how to customize the underlying event data usi
 <details>
 
 <summary>Location of Interest</summary>
+
+Set the location as follows:
 
 * Determine the geographical area for which event data is required.&#x20;
 * Configuration: Use the `location` field to specify a latitude, longitude, and radius or place ID for a specific city or region (as in the above example).
@@ -102,6 +108,8 @@ This section provides guidance on how to customize the underlying event data usi
 
 <summary>Event Categories</summary>
 
+Choose the categories as follows:
+
 * Identify the types of events of interest, such as concerts, sports, or community events.
 * Configuration: Add `<feature_name>` to the request body, specifying `stat` and `phq_rank` as needed (see next).&#x20;
 * Guidance: Start with [features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features#available-features) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
@@ -112,6 +120,8 @@ This section provides guidance on how to customize the underlying event data usi
 
 <summary>Aggregation Statistic</summary>
 
+Choose the aggregation as follows:
+
 * Choose how to aggregate event data at the daily level.
 * Configuration: Use the `stat` field under `<feature_name>`.
 * Guidance: Set as `sum` for visualizing the total daily attendance, which offers insights into people movement. Set as `count` to monitor the daily count of events, though it should be noted that this does not reflect event attendance or size.
@@ -121,6 +131,8 @@ This section provides guidance on how to customize the underlying event data usi
 <details>
 
 <summary>Minimum Event Rank</summary>
+
+Set the minimum rank as follows:
 
 * Set a threshold to filter out small events that are unlikely to have a significant impact based on [PHQ Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/phq-rank).
 * Configuration: Use the `phq_rank` field under `<feature_name>`.

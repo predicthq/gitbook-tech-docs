@@ -28,6 +28,8 @@ The Features API produces pre-engineered, attendance-weighted, duration-adjusted
 The Events API is not a substitute for the Features API in forecasting pipelines. Looping over events, counting them per day, and using that count as a model feature is a common mistake that degrades forecast accuracy.
 {% endhint %}
 
+Related resources:
+
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features)
 * [What is the Features API?](what-is-the-features-api.md)
 
@@ -38,6 +40,8 @@ Use the Forecasts API when you want accurate, event-driven demand forecasts with
 The Forecasts API accepts your historical demand data, trains a model, and returns daily-level forecasts with event impact built directly into the output. The Forecasts API applies Beam automatically, so you don't need to configure feature selection manually. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
 
 The Forecasts API is appropriate whether you are starting from scratch or augmenting an existing forecast. Use it when reducing development time and complexity matters more than owning the underlying model. For teams that require full control over model architecture and feature engineering, the Features API is the recommended alternative.
+
+Related resources:
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
 * [Getting started with Forecasts API](../guides/forecasts-api-guides/getting-started.md)
@@ -51,6 +55,8 @@ The Events API is for understanding what is happening and why demand shifted on 
 Use the Events API with `beam.analysis_id` to automatically filter results to the event categories and rank thresholds that are relevant for a given location - the same calibration applied by the Features API.
 
 The Events API is not designed for generating model inputs. Do not loop over events, count them per day, and use those counts as features.
+
+Related resources:
 
 * [Events API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)
 
@@ -73,16 +79,22 @@ To ground AI systems inside your own environment instead (provisioned grounding)
 
 The MCP server is the grounding path, not the bulk path: for training-scale feature retrieval, use the Features API directly.
 
+Related resources:
+
 * [MCP server](../../ai/mcp.md)
 * [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
 
 ## Common Mistakes
+
+Avoid these common mistakes:
 
 * **Using the Events API for ML features** - The Events API returns individual event records. Aggregating these manually introduces errors in multi-day event handling, lead/lag effects, and rank filtering. Use the Features API instead.
 * **Skipping Beam** - Without Beam, feature selection in the Features API must be configured manually. This is error-prone and produces feature sets that are not calibrated to your actual demand patterns.
 * **Calling Features API without `beam.analysis_id`** - Without a Beam Analysis, you must manually specify location, features, and rank thresholds. This is valid for early exploration but should not be used in production.
 
 ## See Also
+
+Related pages:
 
 * [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended integration paths, by job
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture

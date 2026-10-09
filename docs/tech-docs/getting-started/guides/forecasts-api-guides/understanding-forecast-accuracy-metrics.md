@@ -10,6 +10,8 @@ MAPE quantifies the average magnitude of forecast error as a percentage of actua
 In plain English – MAPE shows how far off your forecasts are, on average, as a percentage. It’s great for comparing performance across different types of demand—but it may overstate errors when actual demand values are very low.
 {% endhint %}
 
+Key points about MAPE:
+
 * Best used when actual values are consistently non-zero.
 * Good for comparing forecasts across series with different scales.
 * Can produce very large values when actual demand is low, even if the forecast is reasonable.
@@ -24,6 +26,8 @@ WAPE quantifies the total forecast error as a percentage of the total actual dem
 In plain English – WAPE shows the share of your total demand that was mis-forecast, with bigger-demand periods counting more. It gives a more balanced view than MAPE when actual values vary a lot or include small numbers that could distort results. WAPE is a good way to measure forecasting accuracy for businesses with regular low-demand or off-peak periods.
 {% endhint %}
 
+Key points about WAPE:
+
 * Defined even when some actual values are zero (unlike MAPE, which is undefined in those cases).
 * Weights errors by demand size, reducing distortion from very small actual values.
 * Best used with stationary series; results may be misleading when demand has strong trends, seasonality, or shifting volatility.
@@ -36,6 +40,8 @@ MAE measures the average absolute difference between predicted and actual values
 In plain English – MAE tells you how far off your forecast is on average, using the same units you care about—like “bookings” or “items sold”. Every mistake counts the same, so it gives a clear sense of typical error.
 {% endhint %}
 
+Key points about MAE:
+
 * Easy to interpret and compare against your typical daily volumes.
 * Treats all errors the same—no extra weight on large deviations.
 * Best used when actual values are on a consistent scale across time or series.
@@ -47,6 +53,8 @@ RMSE measures the square root of the average squared differences between predict
 {% hint style="info" %}
 In plain English – RMSE tells you how far off your forecasts are on average, but it especially highlights big mistakes—so if you care about avoiding large misses, RMSE is useful.
 {% endhint %}
+
+Key points about RMSE:
 
 * Penalizes larger errors more than MAE does.
 * Helpful for identifying volatility or occasional large misses.

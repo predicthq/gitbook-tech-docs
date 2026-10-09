@@ -67,7 +67,7 @@ If you don't yet have access to the MCP server, contact your PredictHQ account m
 
 ### Claude (claude.ai)
 
-PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up, click **Connect**.
+PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up:
 
 1. Open the [PredictHQ connector listing link](https://claude.ai/directory/connectors/predicthq) and select **Connect** (or, in Claude, go to **Settings > Connectors > Browse connectors** and search for **PredictHQ**).
 2. Follow the OAuth flow to authenticate with your PredictHQ account.
@@ -137,6 +137,8 @@ Use the following details when configuring your client:
 Refer to your client's documentation for specific configuration steps.
 
 ## Next steps
+
+Continue with these pages:
 
 * [Grounding with PredictHQ](grounding-with-predicthq.md) - what grounding is and how PredictHQ fits into AI and agent workflows
 * [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - use the MCP in autonomous and multi-agent workflows, where agents call PredictHQ for real-world context and explainability at decision time

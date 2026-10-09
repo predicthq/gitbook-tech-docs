@@ -20,6 +20,8 @@ If you operate many locations with a single shared model, Beam Analysis Groups a
 
 Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate analyses - doing so loses accumulated correlation history.
 
+Related resources:
+
 * API Reference: [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
 * [beam-guides](guides/beam-guides/ "mention")
 
@@ -33,6 +35,8 @@ The Features API is the recommended integration surface for any use case involvi
 
 The recommended way to call the Features API is by passing a `beam.analysis_id`, which automatically applies the correct location, rank filters, and feature selection derived from Beam. Without a `beam.analysis_id`, features must be configured manually, which is error-prone and produces worse results.
 
+Related resources:
+
 * API Reference: [Get ML features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")
 * [features-api-guides](guides/features-api-guides/ "mention")
 
@@ -44,6 +48,8 @@ You supply historical demand data for a location. The Forecasts API trains a mod
 
 The Forecasts API is appropriate when rapid time-to-value is the priority, or when a team does not have the capacity to build and maintain a bespoke forecasting pipeline. For teams that require full control over the underlying model, the Features API with a `beam.analysis_id` is the recommended alternative.
 
+Related resources:
+
 * API Reference: [Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview "mention")
 * [getting-started.md](guides/forecasts-api-guides/getting-started.md "mention")
 
@@ -52,6 +58,8 @@ The Forecasts API is appropriate when rapid time-to-value is the priority, or wh
 Grounding is giving an LLM or agent the real-world facts it does not hold, at the moment it answers, so it responds from what is true instead of what it guesses. Grounding reduces AI hallucinations. Retrieval-augmented generation (RAG) is the most common technique; tool calling at answer time achieves the same outcome.
 
 Grounding with PredictHQ comes in two architectures: **provisioned grounding** - verified context delivered into your environment, retrieved from a store you govern - and **on-demand grounding** - your agents query the PredictHQ MCP server and hold no copy of anything.
+
+Related resources:
 
 * [Grounding with PredictHQ](../ai/grounding-with-predicthq.md)
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md)
@@ -73,6 +81,8 @@ Unlike PHQ Rank, which is normalized globally, Local Rank adjusts for how concen
 
 Local Rank is most useful for identifying events that are significant in context, such as when optimizing logistics, staffing, or marketing at a local level.
 
+Related resources:
+
 * Getting Started Guide: [local-rank.md](predicthq-data/ranks/local-rank.md "mention")
 
 ## Loop
@@ -83,6 +93,8 @@ You can use the Loop UI to provide feedback, or use Loop Links - unique URLs gen
 
 PredictHQ’s data team reviews all submitted feedback and integrates accepted changes into the platform, enhancing data accuracy and model performance.
 
+Related resources:
+
 * API Reference: [Loop](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop "mention")
 * [Loop UI](https://loop.predicthq.com/)
 
@@ -91,6 +103,8 @@ PredictHQ’s data team reviews all submitted feedback and integrates accepted c
 MCP is an open standard for connecting AI assistants and agents to external tools and data at inference time. The PredictHQ MCP server exposes the full API surface (events, features, Beam, forecasts, and documentation search) to any MCP-compatible client, with the same entitlements as the REST API.
 
 The MCP server is PredictHQ's on-demand grounding path: agents query for verified real-world context on demand, with no data pipeline to maintain. For training-scale feature retrieval, use the Features API directly.
+
+Related resources:
 
 * [MCP server](../ai/mcp.md)
 
@@ -102,6 +116,8 @@ Where legacy labels are manually assigned and inconsistent in coverage, PHQ Labe
 
 PHQ Labels are available via the `phq_labels` field in the Events API response. They are particularly useful for customers who need fine-grained event segmentation in demand models or operational dashboards.
 
+Related resources:
+
 * Getting Started Guide: [#phq-labels](predicthq-data/labels.md#phq-labels "mention")
 
 ## PHQ Rank
@@ -110,11 +126,15 @@ PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the p
 
 The score is presented on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
 
+Related resources:
+
 * Getting Started Guide: [phq-rank.md](predicthq-data/ranks/phq-rank.md "mention")
 
 ## Predicted Attendance
 
 Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API, and Forecasts API to quantify potential demand impact.
+
+Related resources:
 
 * Getting Started Guide: [predicted-attendance.md](predicthq-data/predicted-attendance.md "mention")
 
@@ -124,6 +144,8 @@ Predicted End Time is a machine learning–generated estimate of when an event i
 
 Predicted End Time is especially useful when the original event data does not include a defined duration or end timestamp. It helps improve time-based demand modeling and enables better filtering, de-duplication, and overlap handling for events that span long periods.
 
+Related resources:
+
 * Getting Started Guide: [predicted-end-times.md](predicthq-data/predicted-end-times.md "mention")
 
 ## Predicted Event Spend
@@ -131,6 +153,8 @@ Predicted End Time is especially useful when the original event data does not in
 Predicted Event Spend is a model-generated estimate of the total consumer spend—across accommodation, hospitality, and transportation—expected to occur as a result of a specific event. Values are expressed in United States Dollars (USD).
 
 This feature leverages predicted attendance, local accommodation demand, third-party economic indicators, and contextual event metadata to produce an event-attributable dollar value. It represents an approximation of spending activity in the area surrounding the event.
+
+Related resources:
 
 * Getting Started Guide: [predicted-event-spend.md](predicthq-data/predicted-event-spend.md "mention")
 
@@ -141,6 +165,8 @@ Predicted Events are machine-generated event records that have not yet been sche
 Predicted Events have a distinct `state: predicted` and can be queried via the Events API or surfaced in the WebApp using state filters. If a real event is later scheduled that matches the prediction, its state is updated automatically (e.g., to `active`), and additional confirmed details - such as start time - are added. If the predicted event does not materialize, the status may transition to `canceled` or `postponed`.
 
 This feature helps prevent gaps in demand models by preemptively accounting for likely-but-unconfirmed events and is particularly useful in high-volume, lead-time-sensitive use cases.
+
+Related resources:
 
 * Getting Started Guide: [predicted-events.md](predicthq-data/predicted-events.md "mention")
 
@@ -154,6 +180,8 @@ The recommended approach is to create a Saved Location using `origin_geojson` wi
 
 Predicted Impact Area replaces the Suggested Radius API for all new integrations.
 
+Related resources:
+
 * API Reference: [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
 
 ## Predicted Impact Patterns
@@ -163,6 +191,8 @@ Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are
 Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak one to two days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 
 Predicted Impact Patterns are industry-specific and are designed to improve upon static or date-anchored features in demand forecasting models. They are designed to improve forecast accuracy by encoding time-aware event impact into supervised learning pipelines.
+
+Related resources:
 
 * Getting Started Guide: [impact-patterns.md](predicthq-data/impact-patterns.md "mention")
 
@@ -188,6 +218,8 @@ Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowin
 
 Saved Locations are recommended for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
+Related resources:
+
 * API Reference: [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations "mention")
 
 ## Suggested Radius
@@ -195,6 +227,8 @@ Saved Locations are recommended for managing location-specific workflows and ens
 **Deprecated.** Suggested Radius was a PredictHQ API that returned a recommended search radius around a point location for a given industry. It has been superseded by Predicted Impact Area, which provides a more accurate, data-driven geographic boundary that accounts for real-world geography rather than a fixed circle.
 
 Existing integrations using Suggested Radius continue to work, but new integrations should use Predicted Impact Area via Saved Locations instead.
+
+Related resources:
 
 * See: [Get Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
 
@@ -205,5 +239,7 @@ Time series foundation models such as Chronos-2, TimesFM, and TimeGPT are pre-tr
 What they don't learn is real-world drivers. Pre-training corpora are dominated by generic numeric sequences, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. Where the model accepts covariates (Chronos-2, TimeGPT, and TimesFM do; the earlier Chronos and Chronos-Bolt models are univariate), PredictHQ features fill that gap: pass Features API output (keyed by a `beam.analysis_id`) covering both the demand history and the forecast horizon.
 
 As forecasting shifts from bespoke trained models toward pre-trained ones, the training step shrinks and inference-time context matters more, not less.
+
+Related resources:
 
 * API Reference: [Get ML features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features "mention")

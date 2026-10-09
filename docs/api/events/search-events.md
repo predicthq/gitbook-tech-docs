@@ -28,7 +28,7 @@ Best practice is to sync event data into your own data store and query your loca
 
 {% tabs %}
 {% tab title="python sdk" %}
-Make sure to properly load your access token from an environment variable or other secure method.
+Make sure to properly load your access token from an environment variable or other secure method:
 
 ```python
 from predicthq import Client
@@ -47,7 +47,7 @@ for event in phq.events.search(
 {% endtab %}
 
 {% tab title="python" %}
-Make sure to properly load your access token from an environment variable or other secure method.
+Make sure to properly load your access token from an environment variable or other secure method:
 
 ```python
 import requests
@@ -71,7 +71,7 @@ print(response.json())
 {% endtab %}
 
 {% tab title="curl" %}
-Make sure to properly load your access token from an environment variable or other secure method.
+Make sure to properly load your access token from an environment variable or other secure method:
 
 ```bash
 curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,concerts,festivals,performing-arts,community,sports&place.scope=5809844&active.gte=2025-03-01&active.lte=2025-04-01" \
