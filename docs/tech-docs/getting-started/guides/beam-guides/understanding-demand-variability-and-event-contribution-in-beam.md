@@ -13,7 +13,7 @@ Beam analyses your historical demand data and decomposes it into two components:
 
 The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means anomalous, external factors drive more of your demand - which in turn means there's more opportunity for real-world context to improve your forecasts.
 
-> Beam's decomposition is optimised for identifying event-driven anomalies and may differ from decompositions produced by other tools such as STL or Prophet.
+> Beam's decomposition is optimised for identifying event-driven anomalies and may differ from decompositions that other tools such as STL or Prophet produce.
 
 <table><thead><tr><th width="228.62890625">Demand Variability Ratio</th><th>What it means</th></tr></thead><tbody><tr><td>0–5%</td><td>Most demand follows predictable baseline patterns</td></tr><tr><td>5–10%</td><td>Some variability exists, likely influenced by external factors</td></tr><tr><td>>10%</td><td>Anomalies are a significant driver of demand fluctuations</td></tr></tbody></table>
 
@@ -37,7 +37,7 @@ Based on analysis of over 300,000 Beam analyses across 59,000+ locations in 171 
 
 Like the demand variability ratio, Beam calculates this separately for positive and negative anomalies, so you can see how events drive both demand surges and demand drops.
 
-## Why This Matters for Forecasting
+## Why this matters for forecasting
 
 Understanding demand variability and event contribution gives you two practical advantages:
 
@@ -48,5 +48,5 @@ Understanding demand variability and event contribution gives you two practical 
 
 To continue:
 
-* Use the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview) to run an analysis on your demand data.
+* To run an analysis on your demand data, use the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview).
 * See [Feature Importance in Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) to understand which event categories are driving your demand.

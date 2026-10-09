@@ -47,7 +47,7 @@ select
 
 ## Step 2: Calculating daily aggregated ML features with SQL in Snowflake
 
-Each Feature set will be calculated in blocks, see the column headers in each code block below for which Features are available to be generated.
+The code calculates each Feature set in blocks. See the column headers in each code block for which Features are available to generate.
 
 ### PHQ Attendance Features
 
@@ -190,7 +190,7 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 
 ### PHQ Rank Features
 
-Values are calculated as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column.
+The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column.
 
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql
@@ -479,4 +479,4 @@ The output table should look like this (Note: the example here shows only the fi
 
 <table data-full-width="true"><thead><tr><th width="141">DATE</th><th width="119">LOCATION</th><th>PHQ_ATTENDANCE_COMMUNITY</th><th>PHQ_ATTENDANCE_CONCERTS</th><th>PHQ_ATTENDANCE_CONFERENCES</th></tr></thead><tbody><tr><td>2024-01-01</td><td>Hyde Park</td><td>68</td><td>1,839</td><td>1,578</td></tr><tr><td>2024-01-02</td><td>Hyde Park</td><td>0</td><td>469</td><td>126</td></tr><tr><td>2024-01-03</td><td>Hyde Park</td><td>200</td><td>346</td><td>139</td></tr><tr><td>2024-01-04</td><td>Hyde Park</td><td>0</td><td>2,029</td><td>324</td></tr><tr><td>2024-01-05</td><td>Hyde Park</td><td>120</td><td>691</td><td>238</td></tr></tbody></table>
 
-### Refer Back to [Main Guide](./)
+### Refer back to [main guide](./)

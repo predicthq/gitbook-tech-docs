@@ -28,7 +28,7 @@ We have ML models to predict attendance for all our attended categories. Some ty
 
 ML models use machine learning features as inputs to predict attendance. These features are different pieces of data that allow the model to make an accurate prediction based on different factors. For example, the sports teams playing, the type of sport, and the venue a sports game is played all affect the predicted attendance. If two very popular sports teams play at a large stadium then they are more likely to have more people attending the game.
 
-Below are examples of three ML models and what factors they used to predict attendance.
+The following sections give examples of ML models and the factors they use to predict attendance.
 
 #### Sports model - features used
 

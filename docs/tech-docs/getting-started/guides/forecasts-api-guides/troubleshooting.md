@@ -15,7 +15,7 @@ What to try:
 * Focus on stable patterns: if your business underwent recent changes, exclude outdated data that no longer reflects reality.
 * Ensure consistent time intervals: avoid gaps or overlapping dates in your time series.
 
-### Weak or Unstable Signal
+### Weak or unstable signal
 
 Even if your demand data passes basic data quality checks, forecast quality still depends on the strength and consistency of the demand signal. Flat lines, irregular spikes, or inconsistent patterns can make it harder for the model to detect meaningful trends.
 

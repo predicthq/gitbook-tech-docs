@@ -35,7 +35,7 @@ Below are the main steps involved in this guide:
 
 ## Building report parameters around a location
 
-For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
+For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a three-month period.
 
 {% hint style="info" %}
 You can modify all of our parameters based on your needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
@@ -59,7 +59,7 @@ Our customers use this in a variety of ways, for example, an accommodation custo
 
 The end result of the exercise will be a report like this:
 
-<figure><img src="../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Final Result.png" alt="Power BI report with a chart of total event attendance per day in San Francisco and a table of events sorted by highest attendance"><figcaption><p>Final Report Result</p></figcaption></figure>
 
 ## Select an input method
 
@@ -87,7 +87,7 @@ Upload the CSV export and hit the transform data option.
 
 <figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
-Right-click the Query under Queries and go to the Advanced Editor option. The Query will be named the same as the uploaded CSV name.
+Right-click the Query under Queries and go to the Advanced Editor option. The Query is named the same as the uploaded CSV name.
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
@@ -128,8 +128,8 @@ As you can see we start with a comma to add on to the existing line, its positio
 
 <figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt=""><figcaption><p>CSV Power Query</p></figcaption></figure>
 
-Hit Done.\
-Hit Close & Apply and wait for the data transformation to finish processing.
+Hit **Done**.\
+Hit **Close & Apply** and wait for the data transformation to finish processing.
 
 <figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
@@ -159,7 +159,7 @@ It should look something like the below, replacing square bracket placeholder va
 Expand Advanced options and scroll down.
 
 Fill the Database where the PredictHQ Events table lies in your Snowflake structure (case sensitive).\
-Paste this SQL in the SQL box after substituting the Schema and Table Name. This code assumes no columns have been renamed:
+Substitute your Schema and Table Name for the placeholders in the following SQL. Then, in the SQL box, paste the SQL. This code assumes no columns have been renamed:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```sql
@@ -190,7 +190,7 @@ This is what it should look like when filled in - with all square bracket placeh
 
 <figure><img src="../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
 
-Click "OK". Click "Load Data" on the next screen.
+Click "OK". On the next screen, click "Load Data".
 
 Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
 
@@ -245,7 +245,7 @@ Rename the Query to something relevant, as it defaults to the connection URL str
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
-In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right click on the Query name under Queries and click Advanced Editor:
+In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
@@ -309,7 +309,7 @@ After this step the data is now ready to start building a report with, as it has
 
 Using either of the two methods above will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. Not all the columns were transformed, just the ones used in this guide.
 
-This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. Date results are shown in UTC, use the "\_local" date columns for the local date.
+This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
 To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
 
@@ -343,7 +343,7 @@ For phq\_attendance in the table use the drop down to remove the summary, this s
 
 <figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
-Rename the chart title by clicking the chart and going to the Visualizations tab -> General -> Title. Let’s rename it to “Event Attendance per day in San Francisco”.
+Rename the chart title by clicking the chart and going to the Visualizations tab -> General -> Title. Rename it to “Event Attendance per day in San Francisco”.
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 

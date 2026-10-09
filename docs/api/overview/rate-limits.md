@@ -7,7 +7,7 @@ E.g. a rate limit of 50 rps means you can make 50 requests in a second.
 The rate limit applies to your entire Organization as a whole, regardless of IP address or API Token. If you exceed your rate limit, the API may reject requests with the `429 Too Many Requests` response code until the rate limit resets at the start of the next window.
 
 {% hint style="info" %}
-From time-to-time we may introduce additional temporary rate limits to ensure the reliability of our service is maintained.
+From time-to-time we may introduce additional temporary rate limits to maintain the reliability of our service.
 {% endhint %}
 
 ### Concurrent requests

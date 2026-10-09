@@ -32,7 +32,7 @@ Key points about WAPE:
 * Weights errors by demand size, reducing distortion from very small actual values.
 * Best used with stationary series; results may be misleading when demand has strong trends, seasonality, or shifting volatility.
 
-## MAE – Mean Absolute Error
+## MAE – mean absolute error
 
 MAE measures the average absolute difference between predicted and actual values, expressed in the same units as your demand (e.g. units sold, bookings). It treats all errors equally, making it a simple and intuitive way to understand overall forecast accuracy.
 

@@ -24,7 +24,7 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 
 **LABELS**
 
-This category is classified into three buckets with the following labels used to identify the type of severe weather.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather.
 
 1.  **Storm**
 
@@ -58,7 +58,7 @@ Severe weather events have PHQ Rank available.
 
 The PHQ Rank indicates the severity of the bad weather, with using the [Common Alerting Protocol (CAP)](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) data. CAP is an international non-proprietary digital message format for all-hazard emergency events. The benefit of using CAP is there is consistency in how it is implemented in different countries, making it easier to use. CAP alerts can be geographically targeted to a defined warning area.
 
-CAP features evaluate the event from three aspects: urgency, severity, and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) will have a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
+CAP features evaluate the event from three aspects: urgency, severity, and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) has a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
 
 For example, An event with an urgency of immediate (15), a severity of severe (36), and a certainty of observed (35) would have a PHQ Rank of 86.
 
@@ -80,7 +80,7 @@ These events tend to be high-impact disasters noticed at a regional or country l
 
 **Labels**
 
-This category is classified into three buckets with the following labels used to identify the type of disasters.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of disasters.
 
 1.  **Hydrological\_geophysical**
 
@@ -166,13 +166,13 @@ Airport delays events have Local Rank available.
 
 Airport delays events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
-### Health Warnings
+### Health warnings
 
 This category covers events related to infectious diseases. Some events will refer to localised outbreaks, some to nationwide epidemics, some to government mandated restrictions due to COVID-19.
 
 Labels
 
-This category is classified into three buckets with the following labels used to identify the type of health warnings.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of health warnings.
 
 1.  **Epidemic**
 
@@ -190,7 +190,7 @@ This category is classified into three buckets with the following labels used to
     * `restaurant-open` / `restaurant-closed` : On-site dining facilities are open or closed.
     * `retail-open` / `retail-closed` : On-premise / physical activity of selling goods and services to consumers are open or closed.
     * `recreation-open` / `recreation-closed` : Activity or recreation engaged in out of doors, most commonly in natural settings (gyms, pools, beaches, camping grounds) are open or closed.
-    * `entertainment-open` / `entertainment-closed` : an event, performance, location or activity designed to entertain others (casinos, movie theaters, museums, galleries and aquariums) are open or closed.
+    * `entertainment-open` / `entertainment-closed` : an event, performance, location or activity designed to entertain others (casinos, movie theaters, museums, galleries, and aquariums) are open or closed.
     * `personal-care-open` / `personal-care-closed` : Both physical assistance and/or prompting and supervising the performance of direct personal care tasks as determined by the consumer's needs (salons, barbers, nail salons) are open or closed.
     * `worship-open` / `worship-closed` : Any building where congregations gather for prayer are open or closed.
 

@@ -74,7 +74,7 @@ parsed_polygon.intersects(point_2)
 
 As you can see in the picture below, `point_1` is inside the polygon but `point_2` is not:
 
-<figure><img src="../../../.gitbook/assets/shapely-polygon-intersects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/shapely-polygon-intersects.png" alt="A map of the event polygon with point_1 inside it and point_2 outside it"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Coordinate reference systems

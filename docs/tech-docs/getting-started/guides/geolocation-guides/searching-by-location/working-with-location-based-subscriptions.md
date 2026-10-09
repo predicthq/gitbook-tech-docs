@@ -26,7 +26,7 @@ Within the WebApp on the [plans page](https://control.predicthq.com/settings/pla
 
 If you add more locations than you have purchased, you keep access to the extra locations for a limited time. To keep them, upgrade your subscription to purchase more, or remove the locations you added. The PredictHQ team reaches out to discuss your options.
 
-<figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt="The Location Insights view showing the number of locations purchased and the number used"><figcaption></figcaption></figure>
 
 ## How to use the APIs with location-based access
 
@@ -44,7 +44,7 @@ See the [Saved Locations API documentation](https://app.gitbook.com/s/kEFs8urDbS
 
 This process only needs to be performed when you initially load in your locations or if locations change (such as a store closes or a new store opens).
 
-### Fetching Events for Your Locations
+### Fetching events for your locations
 
 Once you have uploaded your locations you will have a list of `location_id`'s for each location. To get the latest events for each location you can call the Events API with the `saved_location.location_id` filter to get back events for the location.
 

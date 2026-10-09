@@ -48,7 +48,7 @@ PHQ Attendance features provide daily-level aggregated stats based on the number
 We recommend using Predicted Impact Pattern features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
 {% endhint %}
 
-**Attended Events Generic Features**
+**Attended events generic features**
 
 Use the generic features in this table if you are not in one of the industries covered by the impact pattern features listed below.
 
@@ -58,7 +58,7 @@ Use the generic features in this table if you are not in one of the industries c
 
 Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
-The features above are generic features and the features in the table below are the Predicted Impact Pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
+The features in the Attended Events Generic Features table are generic features, and the features in this table are the Predicted Impact Pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
 {% hint style="success" %}
 We recommend using Predicted Impact Patterns features instead of generic features if you are in one of the supported industries. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)

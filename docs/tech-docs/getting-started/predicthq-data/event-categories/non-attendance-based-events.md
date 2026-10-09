@@ -92,10 +92,10 @@ Our school holidays data goes to a more granular detailed level for the United K
 {% hint style="warning" %}
 **Note**
 
-Our school holidays granularity changed in September 2021 to move from the country level for England, Wales, Scotland and Northern Ireland to the local council level.
+Our school holidays granularity changed in September 2021 to move from the country level for England, Wales, Scotland, and Northern Ireland to the local council level.
 {% endhint %}
 
-For the granular school holiday data for the United Kingdom we have historic data from September 2017 to the present day. School holidays are updated every week.
+For the granular school holiday data for the United Kingdom we have historic data from September 2017 to the present day. We update school holidays every week.
 
 We have events for 212 school districts in the UK including 157 districts for England. For the UK per year we have the following number of events:
 
@@ -119,13 +119,13 @@ To find school holidays that impact your location you can use the standard featu
 
 See also the [FAQs for district-level school holidays](non-attendance-based-events.md#faqs-for-district-level-school-holidays)
 
-#### School Holidays in the United States
+#### School holidays in the United States
 
 Our school holidays data goes to a more granular detailed level for the United States (US) than for other countries. School holidays are defined at a district level for the US. See our [school holidays category page](https://www.predicthq.com/intelligence/data-enrichment/event-categories/school-holidays) for an overview of our school holidays data.
 
 There are around 98,469 public schools in the US in around 13,000 school districts. We provide school holidays at a school district level for the US. We have approximately 55,000 - 58,000 school holiday events per year.
 
-For the district school holiday data for the US we have historic data from September 2018 to the present day. School holidays are updated every week. For school holidays before September 2018 they are shown at the state level.
+For the district school holiday data for the US we have historic data from September 2018 to the present day. We update school holidays every week. For school holidays before September 2018 they are shown at the state level.
 
 {% hint style="info" %}
 **Note**
@@ -133,7 +133,7 @@ For the district school holiday data for the US we have historic data from Septe
 Our school holidays granularity changed in October 2021 to move from the state level to the district level.
 {% endhint %}
 
-<div data-full-width="false"><figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="alt"><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="Comparison of US school holidays at the state level and at the district level"><figcaption></figcaption></figure></div>
 
 We rank our school holidays based on student numbers in the school district.
 
@@ -263,7 +263,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-Politics events scope to a country level. For example [Election for US Senate](https://events.predicthq.com/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude point to the center of the covered area. The place scope will identify the full area of coverage.
+Politics events scope to a country level. For example [Election for US Senate](https://events.predicthq.com/events/U9Q6MExfzBmwgjAXBE) in the United States. The latitude and longitude point to the center of the covered area. The place scope identifies the full area of coverage.
 
 #### Entities
 

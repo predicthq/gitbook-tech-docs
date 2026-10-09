@@ -174,9 +174,9 @@ Related resources:
 
 Most integrations start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies by industry, location type, and how people actually move in that area - a fixed circle is an approximation that can include irrelevant events and exclude relevant ones.
 
-Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies, and account for real-world constraints such as bodies of water, terrain, and road networks.
+Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. PredictHQ calibrates boundaries against real demand and event data across industries and geographies, and accounts for real-world constraints such as bodies of water, terrain, and road networks.
 
-The recommended approach is to create a Saved Location using `origin_geojson` without specifying a `geojson` area — Predicted Impact Area is then calculated automatically and stored against the location. The resulting `location_id` can be passed directly to Events API, Features API, Beam, and Forecasts API without needing to manage the boundary separately.
+The recommended approach is to create a Saved Location using `origin_geojson` without specifying a `geojson` area—Predicted Impact Area is then calculated automatically and stored against the location. The resulting `location_id` can be passed directly to Events API, Features API, Beam, and Forecasts API without needing to manage the boundary separately.
 
 Predicted Impact Area replaces the Suggested Radius API for all new integrations.
 

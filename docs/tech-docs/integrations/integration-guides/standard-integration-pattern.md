@@ -9,7 +9,7 @@ A PredictHQ integration has four logical components on your side:
 1. **Location & Beam Management** creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
 2. **ML Features Management** - fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
 3. **Events Management** - fetches relevant events per location for explainability and operational context, refreshed daily or weekly
-4. **Forecasting & Decision System** — consumes features for model training and inference and surfaces events alongside results for explainability
+4. **Forecasting & Decision System**  - consumes  features for model training and inference and surfaces events alongside results for explainability
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
 
@@ -81,7 +81,9 @@ For each business location:
 
 1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope. Store the returned `location_id`.
 2. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
-3. **Monthly refresh:** append new demand data to the existing Beam Analysis - do not delete and recreate it. Update your stored Feature Importance results with the latest output.
+3. **Monthly refresh:**
+   1. Append new demand data to the existing Beam Analysis - do not delete and recreate it.
+   2. Update your stored Feature Importance results with the latest output.
 
 Saved Locations are also the only way to use polygon-based boundaries with PredictHQ APIs. You store a polygon once against the location and reference it by `location_id` across all subsequent calls.
 

@@ -28,7 +28,7 @@ The following is an example response:
 
 Individual API Endpoint documentation describes specific response formats.
 
-You can control the result records that are returned using the standard `offset` and `limit` query string parameters. If no limit is specified, then a default of `10` applies.
+You can control which records the API returns using the standard `offset` and `limit` query string parameters. If no limit is specified, then a default of `10` applies.
 
 [Your plan](https://control.predicthq.com/settings/plans) specifies the maximum number of results and pagination limits. If you require higher limits [contact us](https://www.predicthq.com/contact) to discuss your needs.
 

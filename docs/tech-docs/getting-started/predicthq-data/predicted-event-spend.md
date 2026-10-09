@@ -20,7 +20,7 @@ Predicted Event Spend is available for the following [event categories](event-ca
 
 Within each event category, Predicted Event Spend covers the following industries/sectors:
 
-* Accommodation - Hotels, lodgings and hosts.
+* Accommodation - Hotels, lodgings, and hosts.
 * Hospitality - Food and Beverage. Hotel restaurant spend is contained here.
 * Transportation - Ground-based public and private transportation.
 

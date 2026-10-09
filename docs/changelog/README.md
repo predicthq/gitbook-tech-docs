@@ -54,7 +54,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 {% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
 ## Bolt - Notebook Sharing and UI Enhancements
 
-Bolt notebooks can now be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
+Bolt notebooks can be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
 Bolt's interface has also been improved to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
 {% endupdate %}
@@ -74,7 +74,7 @@ Region-level places in the Places index that did not already have a polygon or m
 {% endupdate %}
 
 {% update date="2026-06-16" tags="enhancement,developer-tools" %}
-## MCP Server - Tech Docs Search
+## MCP server - Tech docs search
 
 The PredictHQ MCP server now includes tools for searching and retrieving PredictHQ's technical documentation. AI assistants and coding agents can look up API parameters, integration guides, tutorials, and conceptual content directly through the MCP - without leaving the AI client or switching to a browser.
 {% endupdate %}
@@ -116,7 +116,7 @@ Aviation Rank has been retired, and the `aviation_rank` field is no longer popul
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
 ## Denmark School Holidays - Municipality-Level Granularity
 
-School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. Customers using Danish school holiday data see increased granularity in event results; historical data has been backfilled to 2016.
+School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; historical data has been backfilled to 2016.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
@@ -152,7 +152,7 @@ We added descriptions at scale to attended events that previously had none - app
 {% update date="2026-04-29" tags="enhancement,webapp" %}
 ## Stronger password policy
 
-Password requirements across the PredictHQ WebApp, signup, and account flows have been updated. New passwords use a 12-character minimum, with no complexity requirements beyond the minimum length.
+We updated the password requirements across the PredictHQ WebApp, signup, and account flows. New passwords use a 12-character minimum, with no complexity requirements beyond the minimum length.
 {% endupdate %}
 
 {% update date="2026-04-15" tags="data-quality,enhancement" %}

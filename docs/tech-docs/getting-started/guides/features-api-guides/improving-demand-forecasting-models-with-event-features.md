@@ -28,7 +28,7 @@ The sections below guide you through integrating event features into your demand
 
 Adding event features to a demand forecasting model involves two main steps: pulling a list of Important Features from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and retrieving prebuilt, forecast-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for a store or location.
 
-<figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt=""><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
+<figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt="Diagram of the integration flow: the Beam API supplies a list of Important Features, the Features API returns those features for a store or location, and they feed into a machine learning model."><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
 
 PredictHQ APIs handle most steps; you provide the following for each store or location:
 
@@ -36,7 +36,7 @@ PredictHQ APIs handle most steps; you provide the following for each store or lo
 2. Latitude and longitude
 3. Industry
 
-### Step 1. Select Relevant Event Features
+### Step 1. Select relevant event features
 
 With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.
 
@@ -66,7 +66,7 @@ The sections below highlight what you need to provide for determining a list of 
 
 **Historical Demand Data**
 
-Ensure you have enough time-series data that meets [Beam’s requirements](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants and revPAR for hotels.
+Ensure you have enough time-series data that meets [Beam’s requirements](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants, and revPAR for hotels.
 
 **Industry**
 
@@ -127,7 +127,7 @@ For practical implementation:
 
 ### Step 3. ML Model and Future Predictions
 
-Event features provided by the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) are prebuilt, forecast-ready and ready for immediate use. They can be integrated into your existing dataset by merging based on location ID and date. Incorporating these event features can enhance your model's performance by adding valuable demand-driving event data.
+Event features provided by the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) are prebuilt, forecast-ready and ready for immediate use. You can merge them into your existing dataset by location ID and date. Incorporating these event features can enhance your model's performance by adding valuable demand-driving event data.
 
 For future predictions, you can access forward-facing data, such as the next two weeks or the upcoming month, by querying the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). Work closely with your engineering team to ensure these new features are effectively incorporated into your production pipeline.
 

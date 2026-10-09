@@ -54,13 +54,13 @@ Example Results:
 | FAmiEHQvanW3cfpRzB | Parlor Tricks Comedy Night                                   | performing-arts |       0       | \[ "concert", "music", "performing-arts" ] | { "coordinates": \[ -122.3421581, 47.62294079999999 ], "type": "Point" } |
 | B7T6izj2gSJSr6Um5u | The Collective Patio Sets: Sarah Christine                   | community       |       0       |           \[ "concert", "music" ]          | { "coordinates": \[ -122.3421581, 47.62294079999999 ], "type": "Point" } |
 
-### Filter with a Polygon
+### Filter with a polygon
 
 Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st_makepolygon.html), and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to_geography.html).
 
 First, we define the shape we are interested in restricting the search to, as shown in the image below.
 
-<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt="Map of Seattle with a polygon drawn around the area used to restrict the event search"><figcaption></figcaption></figure>
 
 ```sql
 SELECT seattle_events.event_id,

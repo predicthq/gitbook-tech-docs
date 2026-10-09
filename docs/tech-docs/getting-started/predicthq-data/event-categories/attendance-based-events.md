@@ -68,7 +68,7 @@ Sports events have Predicted Attendance available.
 
 A formal meeting or forum relating to a certain topic between a group of people with shared interests. A major conference, especially an industry-related one, may last for several days and occur with regular frequency. An example of an annually occurring conference is the [ASH Annual Meeting](https://events.predicthq.com/events/2RxTdCucMNcLZSsEqW).
 
-**LABELS**
+**Labels**
 
 Labels for a conference event provide more information about the event. The most common five labels are:
 
@@ -110,7 +110,7 @@ Conference events have Predicted Attendance available.
 
 An industrial exhibition for communicating and trading purpose between business, or a trade fair that connects business and customers.
 
-**LABELS**
+**Labels**
 
 Labels for an expo event provide more information about the event. The most common five labels are:
 
@@ -152,7 +152,7 @@ Expos events have Predicted Attendance available.
 
 A musical performance where the primary intention of attendance is to see the musical artist or listen to music. Concerts usually last less than one day. Examples are a large [Eminem](https://events.predicthq.com/events/aYR4t59pGHA92FtNgK) concert, or a smaller nightclub event, for example, [Darude At Hq2 Nightclub Atlantic City](https://events.predicthq.com/events/xx8TPFE7XNh5pdxyRX).
 
-**LABELS**
+**Labels**
 
 All concert events have a `music` label as concert events are expected to be music-related.
 
@@ -188,7 +188,7 @@ Concerts events have Predicted Attendance available.
 
 A commonly known day or a period of time when people gather together to celebrate a specific reason; or a day or a period of time consisting of an organized series of shows and entertainment activities Festivals typically occur on a certain frequency. For example, the [Yosakoi Soran Festival](https://events.predicthq.com/events/ScR7u7EZSBuxZ8kK9J) is held annually.
 
-**LABELS**
+**Labels**
 
 Labels for a festival event provide more information about the festival. The most common five labels are:
 
@@ -230,7 +230,7 @@ Festival events have Predicted Attendance available.
 
 A show or an exhibition of creative activities for an audience, for example, [a circus show](https://events.predicthq.com/events/EHKbvvKhLnVonwUUbD).
 
-**EVENT TYPES**
+**Event types**
 
 The most common five types of performing-arts events are:
 
@@ -282,7 +282,7 @@ Performing-arts events have Predicted Attendance available.
 
 This category includes various types of events, for example, a [college event](https://events.predicthq.com/events/7diCQtRZ5XQdso27v3), a [community party](https://events.predicthq.com/events/pS49Cvk4tiSPKdEAJ8), an [auction](https://events.predicthq.com/events/iC5BK62w3z9CLpqvif), or a [fan meeting](https://events.predicthq.com/events/CnNAFhLqffMQMsqg4R).
 
-**LABELS**
+**Labels**
 
 Labels for a community event provide more information about the event. The most common five labels are:
 
@@ -329,7 +329,7 @@ Note:
 * Academic Events cover institutions where full-time undergraduate enrollment (or FTE, full-time equivalent) is over 5,000. The student number is campus-based instead of the overall enrollment across different locations.
 * Academic Events cover institutions in the United States of America.
 
-**LABELS / EVENT TYPES**
+**Labels / event types**
 
 The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates.
 

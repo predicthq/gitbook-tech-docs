@@ -23,7 +23,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 **Requirements**:
 
 * Access to PredictHQ Data
-  * JSONL: Requires a PredictHQ account.[ Sign up here](https://predicthq.com/signup) if you don’t already have one.
+  * JSONL: Requires a PredictHQ account. [Sign up for a PredictHQ account](https://predicthq.com/signup) if you don’t already have one.
   * API: An [API Access Token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating) is necessary for accessing the data programmatically.
 * GCP permissions:
   * Ensure you have "BigQuery Data Owner" and "BigQuery User" permissions over the BigQuery environment.
@@ -47,7 +47,7 @@ For the purposes of this guide, we have limited the example load to a single cit
 
 ## Data load methods
 
-There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates will require API code.
+There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates require API code.
 
 **JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by exporting data from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
 
@@ -57,7 +57,7 @@ This guide will walk you through the initial data load, providing you with the t
 
 ## Table data structure
 
-Regardless of the method chosen for initial data creation and loading, the table structure remains consistent. This ensures that both methods are interchangeable, delivering data in a uniform format. The data structure for the table is detailed below:
+Regardless of the method chosen for initial data creation and loading, the table structure remains consistent. This ensures that both methods are interchangeable, delivering data in a uniform format. The following table details the data structure:
 
 | Field Name                          | Datatype  | Mode     |
 | ----------------------------------- | --------- | -------- |
@@ -116,21 +116,21 @@ After configuring your filters and executing the search, select **Export** and c
 
 To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
-1. **Click Create Table**: Navigate to the dataset you wish to create the table in, click the hamburger menu and select “Create Table”.
+1. **Click Create Table**: In the dataset you wish to create the table in, click the hamburger menu, and then select **Create Table**.
 
-<figure><img src="../../.gitbook/assets/Create Table.png" alt=""><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create Table.png" alt="The BigQuery dataset menu open with the Create table option highlighted"><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 
 2. **Select the File Location**: Select the JSONL export that you have downloaded somewhere on your computer.
 3. **Name the Table**: Give the table about to be created a name that suits
 
 <figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
-4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
+4. **Manually Define Schema**: Specify the schema details manually. Define each column accurately, and make sure the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
 5. **Advanced Options**: Expand the Advanced Options and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
-6. **Create the Table**: Click the "Create Table" button to finalize the creation.
+6. **Create the Table**: Click the **Create Table** button to finalize the creation.
 
 <figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
 
@@ -334,7 +334,7 @@ transformed_events_data = prepare_data_for_bigquery(events_data)
 ```
 {% endcode %}
 
-### Load Data into the Table
+### Load data into the table
 
 Once the data has been successfully extracted from the API and transformed to meet our [schema requirements](loading-event-data-into-a-data-warehouse.md#table-data-structure), the next step involves loading this data into the previously established BigQuery table. This process utilizes Python code integrated with the BigQuery API to load the data.
 

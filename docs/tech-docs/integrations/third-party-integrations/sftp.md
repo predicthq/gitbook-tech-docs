@@ -24,11 +24,11 @@ For incremental updates, make sure to check the `change_action` column to work o
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
 ```
 
-<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>PredictHQ splits each delivery into multiple files to keep file sizes manageable. Individual files vary in size but don't exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data is compressed using Snappy and the file extension is prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
+<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>PredictHQ splits each delivery into multiple files to keep file sizes manageable. Individual files vary in size but don't exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) PredictHQ compresses the data using Snappy and the file extension is prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
 
 Within a single delivery, files can be processed in any order. Deliveries themselves should be processed oldest to newest.
 
-## Data Retention
+## Data retention
 
 The SFTP server retains files for a limited period and automatically deletes them after that period.
 
@@ -36,7 +36,7 @@ Your ingestion process should fetch and persist data promptly. Do not rely on lo
 
 ## Access and Authentication
 
-PredictHQ will provide:
+PredictHQ provides:
 
 * An SFTP URL
 * A private SSH key for authentication
@@ -52,7 +52,7 @@ Implement an automated process that:
 3. Selects the next unprocessed delivery
 4. Downloads all files for that delivery
 5. Applies records in order, using `change_action` for incrementals
-6. Records the delivery as processed in their own system
+6. Records the delivery as processed in your own system
 
 ## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
 

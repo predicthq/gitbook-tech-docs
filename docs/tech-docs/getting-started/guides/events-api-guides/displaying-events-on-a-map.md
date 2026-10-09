@@ -18,7 +18,7 @@ This section presents a simple example demonstrating the basic functionality of 
 To experiment with this example, consider[ forking the notebook](https://observablehq.com/documentation/notebooks/forking). This allows you to edit and modify the code as needed. For more information on Observable notebooks, see this[ demo](https://observablehq.com/@observablehq/demo).
 {% endhint %}
 
-### Getting Started
+### Getting started
 
 An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
 
@@ -32,7 +32,7 @@ For more information on the Events API, see the [Events API documentation](https
 
 ### Parameters
 
-For this example, [events are retrieved](https://observablehq.com/@predicthq/events-map-example#fetchEvents) from the Events API based on the following criteria:
+For this example, the [fetchEvents code in the example notebook](https://observablehq.com/@predicthq/events-map-example#fetchEvents) retrieves events from the Events API based on the following criteria:
 
 1. **Date Range**: Events taking place within the next seven days from today are considered to ensure the data remains current and actionable.
 2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
@@ -50,13 +50,13 @@ This example displays the most impactful sports event in San Francisco for the u
 * Zooming in and out to view all events.
 * Clicking specific events for more details.
 
-<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdFMd0QGP6NB67jU-826iGqRO-u5vNx4o4TEAKbgk9HI0uEJFLm-l84383lOPmK78hGVIEi_m5Jz8_Ed2H-qNVwBI0qFvBwjcaLGkDAvgX6jWsyGpiTU1CMUqV95V8AYfC21U8hlCqNr1QGcXLofXG8zjBf?key=Zcee3-lj9wWgy6r9JpJLQw" alt="" width="563"><figcaption><p>Interacting with the map</p></figcaption></figure>
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdFMd0QGP6NB67jU-826iGqRO-u5vNx4o4TEAKbgk9HI0uEJFLm-l84383lOPmK78hGVIEi_m5Jz8_Ed2H-qNVwBI0qFvBwjcaLGkDAvgX6jWsyGpiTU1CMUqV95V8AYfC21U8hlCqNr1QGcXLofXG8zjBf?key=Zcee3-lj9wWgy6r9JpJLQw" alt="A map of San Francisco showing the location of an upcoming sports event, with a pop-up of event details" width="563"><figcaption><p>Interacting with the map</p></figcaption></figure>
 
 ### Geographic features
 
 The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 
-The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). Events covering larger areas, such as parades, are classified as `polygon` or `multipolygon`. All relevant geometry information needed for rendering these types of events on a map is also contained within the `geo` field.
+The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. All relevant geometry information needed for rendering these types of events on a map is also contained within the `geo` field.
 
 {% hint style="info" %}
 For more information on how PredictHQ events are geographically represented, see this [overview](../geolocation-guides/overview.md).
@@ -67,7 +67,7 @@ For more information on how PredictHQ events are geographically represented, see
 The notebook can also be[ compiled and downloaded](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) as a JavaScript module. To do this:
 
 1. Use the notebook menu to select **Export**.
-2. Then choose **Download code** for a local copy.
+2. For a local copy, choose **Download code**.
 
 ## Additional Examples
 
