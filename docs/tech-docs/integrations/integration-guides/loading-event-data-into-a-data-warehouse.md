@@ -344,7 +344,7 @@ transformed_events_data = prepare_data_for_bigquery(events_data)
 
 Once the data has been successfully extracted from the API and transformed to meet our [schema requirements](loading-event-data-into-a-data-warehouse.md#table-data-structure), the next step involves loading this data into the previously established BigQuery table. This process utilizes Python code integrated with the BigQuery API to load the data.
 
-Below is the code block that you need to append to the end of the extraction and transformation script. It includes a basic retry mechanism to handle occasional upload failures, which is common in network-related operations. However, depending on your requirements for reliability and data integrity, you might consider implementing a more advanced retry logic.
+Below is the code block that you need to append to the end of the extraction and transformation script. It includes a basic retry mechanism to handle occasional upload failures, which is common in network-related operations. However, depending on your requirements for reliability and data integrity, you might consider implementing a more advanced retry logic. Append the following code:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
