@@ -13,7 +13,7 @@ Beam analyzes your historical demand data and decomposes it into two components:
 
 The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means anomalous, external factors drive more of your demand - which in turn means there's more opportunity for real-world context to improve your forecasts.
 
-> Beam's decomposition is optimized for identifying event-driven anomalies and may differ from decompositions that other tools such as STL or Prophet produce.
+> PredictHQ optimized Beam's decomposition to identify event-driven anomalies, so it may differ from decompositions that other tools such as STL or Prophet produce.
 
 <table><thead><tr><th width="228.62890625">Demand Variability Ratio</th><th>What it means</th></tr></thead><tbody><tr><td>0–5%</td><td>Most demand follows predictable baseline patterns</td></tr><tr><td>5–10%</td><td>Some variability exists, likely influenced by external factors</td></tr><tr><td>>10%</td><td>Anomalies are a significant driver of demand fluctuations</td></tr></tbody></table>
 

@@ -60,7 +60,7 @@ If you manage multiple stores or locations and require a unified set of features
 
 <details>
 
-<summary>User Inputs</summary>
+<summary>User inputs</summary>
 
 The following sections highlight what you need to provide for determining a list of Important Features. Explore the accompanying Jupyter notebooks to see how this fits together practically.
 

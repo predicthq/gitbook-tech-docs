@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
+If metrics other than SUM are desired, use the following code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -190,7 +190,7 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 
 ### PHQ Rank Features
 
-The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column in the following code:
+The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. The following code returns each rank level as its own column:
 
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql
@@ -290,7 +290,7 @@ SELECT * FROM phq_rank_features order by location, date;
 
 ### PHQ Impact Features
 
-The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day.
+The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day:
 
 {% code title="PHQ Impact Features" fullWidth="true" %}
 ```sql
@@ -363,7 +363,7 @@ SELECT * FROM phq_impact_features order by location, date;
 ```
 {% endcode %}
 
-If metrics other than MAX are desired, use the below code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the column code above for the available weather\_category features.
+If metrics other than MAX are desired, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the column code above for the available weather\_category features.
 
 {% code title="Count" fullWidth="true" %}
 ```sql

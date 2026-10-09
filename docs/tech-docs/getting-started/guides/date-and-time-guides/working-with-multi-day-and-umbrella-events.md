@@ -76,7 +76,7 @@ Another example can be seen when looking at the daily attendance for events in L
 
 Once you take into account Umbrella events and remove double counting, the real attendance on that day is closer to 400,000.
 
-<figure><img src="../../../.gitbook/assets/graph-umbrella-events-removed.png" alt=""><figcaption><p>Example showing correct attendance due to correct handling of Umbrella Events</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/graph-umbrella-events-removed.png" alt="Chart of daily attendance for events in Las Vegas in March 2019 after removing double counting, with attendance of about 400,000 around the 2nd of March"><figcaption><p>Example showing correct attendance due to correct handling of Umbrella Events</p></figcaption></figure>
 
 ### **Using the parent filter in the Events API for umbrella events**
 
@@ -84,7 +84,7 @@ See the documentation on the [parent filter](https://app.gitbook.com/s/kEFs8urDb
 
 You can use this filter with the Events API to only get parent events or only retrieve child events from the Events API.
 
-Note that in the API **parent** events includes events that have child events and also events without any child events. So, for the API filter parent events also include non-umbrella events. **Child** events are defined as only those events that have a link to a parent event.
+Note that in the API **parent** events includes events that have child events and also events without any child events. So, for the API filter parent events also include non-umbrella events. **Child** events are only those events that have a link to a parent event.
 
 ### **Definitions**
 

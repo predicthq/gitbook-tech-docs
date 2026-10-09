@@ -20,9 +20,9 @@ To experiment with this example, consider[ forking the notebook](https://observa
 
 ### Getting started
 
-An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
+An Access Token is required to access PredictHQ's APIs and run the notebook. If you need one, follow these [instructions](../../api-quickstart.md) to obtain it.
 
-### Event Data
+### Event data
 
 The map uses event data from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
 
@@ -54,7 +54,7 @@ This example displays the most impactful sports event in San Francisco for the u
 
 ### Geographic features
 
-The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
+The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means the Events API returns longitude first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 
 The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. The `geo` field also contains all the relevant geometry information you need to render these types of events on a map.
 

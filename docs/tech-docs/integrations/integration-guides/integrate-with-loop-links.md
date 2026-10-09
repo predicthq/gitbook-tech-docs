@@ -74,14 +74,14 @@ When a user submits a missing event:
 3. Approved events show as visible to the customer as active events
 4. Users receive an email when an event is approved or rejected
 
-<figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt="The Loop Links page where users enter details of a missing event"><figcaption></figcaption></figure>
 
-### Providing Feedback on Events
+### Providing feedback on events
 
 When a user gives feedback on an event:
 
 1. User reviews the event details on the page and can provide feedback
-2. This requires an event ID to be passed to the Loop Links' URL
+2. Pass an event ID to the Loop Link URL
 3. PredictHQ approves or rejects the feedback
 4. Users receive an email if there are any questions about their feedback
 
@@ -117,7 +117,7 @@ See an example below of the email template for rejected events and replies to ev
 
 ## Tracking Loop Feedback
 
-Users with admin access can track Loop feedback at [loop.predicthq.com](https://loop.predicthq.com/) :
+If you have admin access, you can track Loop feedback at [loop.predicthq.com](https://loop.predicthq.com/) :
 
 * Needs a PredictHQ login
 * Shows if Loop submissions are approved or rejected
@@ -155,11 +155,11 @@ To **provide feedback on an existing event** - open the /event-feedback/ Loop Li
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
-Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. Add a feedback link or icon next to the event so users can provide feedback.
+Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. To let users provide feedback, add a feedback link or icon next to each event.
 
 #### To pre-fill the user's email address
 
-The Loop forms require a user email address. You can pre-populate the email address by passing it in the query string. The name of the parameter is `email`.
+The Loop forms require a user email address. You can pre-populate the email address by passing it in the query string. The name of the parameter is `email`, as in this example:
 
 `https://loop.phq.link/event/kt9fJZXpWFGSA5ky1Cunb2?email=example@example.com` (note: this is not a valid link just an example)
 

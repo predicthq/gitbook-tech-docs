@@ -72,7 +72,7 @@ The change covers US states and the US territories of Puerto Rico, the United St
 {% endupdate %}
 
 {% update date="2026-06-19" tags="data-quality,enhancement,places" %}
-## Region Polygons Across the Places Index
+## Region polygons across the Places index
 
 Region-level places in the Places index that did not already have a polygon or multipolygon geometry now have one, sourced from PredictHQ's high-resolution polygon dataset. This was applied across the 3,885 region-level places in the index.
 {% endupdate %}
@@ -108,7 +108,7 @@ Bolt is an AI-native developer environment that guides you through the right Pre
 {% update date="2026-05-27" tags="data-quality,enhancement,events-api" %}
 ## Concert Venue and Attendance Accuracy
 
-Two refinements to concert data quality. We now identify and filter out events from organisers who announce their venue only shortly before the show - where a large default venue stands in until then - so we don't publish intimate gigs with the attendance profile of a large venue. Separately, we also filter out concert records that arrive attached to a sports team entity.
+Two refinements to concert data quality. We now identify and filter out events from organizers who announce their venue only shortly before the show - where a large default venue stands in until then - so we don't publish intimate gigs with the attendance profile of a large venue. Separately, we also filter out concert records that arrive attached to a sports team entity.
 {% endupdate %}
 
 {% update date="2026-05-25" tags="events-api,features-api,deprecation" %}
@@ -162,7 +162,7 @@ We updated the password requirements across the PredictHQ WebApp, signup, and ac
 {% update date="2026-04-15" tags="data-quality,enhancement" %}
 ## US Academic Events - 2026–2027 Calendar Year
 
-Academic events for the 2026–2027 calendar year have been added to PredictHQ's dataset, covering 10,804 events across 958 US institutions.
+We added academic events for the 2026–2027 calendar year to PredictHQ's dataset, covering 10,804 events across 958 US institutions.
 {% endupdate %}
 
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
@@ -182,7 +182,7 @@ Event Trends now includes an **Include Predicted Events** toggle, bringing it in
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
 ## Predicted Impact Area - General Availability
 
-Predicted Impact Area is now generally available across Events API, Features API, Beam. It replaces Suggested Radius as the recommended approach for defining the geographic catchment area around a business location. Unlike a simple radius, Predicted Impact Area uses a data-driven model to define the area where events actually influence demand - accounting for real-world geography. The Suggested Radius endpoint remains available but is no longer the recommended default.
+Predicted Impact Area is generally available across Events API, Features API, Beam. It replaces Suggested Radius as the recommended approach for defining the geographic catchment area around a business location. Unlike a simple radius, Predicted Impact Area uses a data-driven model to define the area where events actually influence demand - accounting for real-world geography. The Suggested Radius endpoint is deprecated and replaced by Predicted Impact Area.
 {% endupdate %}
 
 {% update date="2026-03-13" tags="data-quality,enhancement,events-api" %}

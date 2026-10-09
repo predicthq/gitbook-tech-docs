@@ -81,7 +81,7 @@ Even if you're an experienced data science team, you can spend weeks or months d
 
 PredictHQ’s Features API generates demand-relevant, time-series signals at request time designed for forecasting - so your teams can skip the foundational complexity of event aggregation and focus on building reliable, explainable, high-performing models faster.
 
-For teams with mature pipelines, or those exploring model comparisons, PredictHQ’s Forecasts API offers another path. Forecasts API provides demand forecasts that already factor in the impact of events, seasonality, and local dynamics. It’s designed for teams that already have forecasting pipelines and want to:
+For teams with mature pipelines, or those exploring model comparisons, PredictHQ’s Forecasts API offers another path. Forecasts API provides demand forecasts that already factor in the impact of events, seasonality, and local dynamics. It suits teams that already have forecasting pipelines and want to:
 
 * Use it as a baseline, racehorse, or ensemble component
 * Evaluate the isolated contribution of event-aware demand
@@ -114,9 +114,9 @@ These customers have followed this path:
 * [HQ revenue](https://www.predicthq.com/customers/hqrevenue): Automated demand monitoring and increased RevPAR by 10%.
 * [Wheelhouse](https://www.predicthq.com/customers/wheelhouse): Boosted nightly rates by up to 800% during major events with dynamic pricing powered by PredictHQ.
 
-## Common Pitfalls
+## Common pitfalls
 
-Even well-resourced teams hit the same traps when working with event data:
+Even well-resourced teams like yours can hit the same traps when working with event data:
 
 * Trying to engineer model-ready features from event data - it’s harder than it looks. Features API handles timing, overlap, weighting, and more so you get clean, usable signals without the complexity.
 * Hardcoding event categories or filters based on assumptions - what drives demand varies by location. Use Beam to validate which event types actually impact bookings in each market.

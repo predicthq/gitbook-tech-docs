@@ -112,7 +112,7 @@ Disaster events have no entities available.
 
 **PHQ Rank**
 
-Disaster events have PHQ Rank available, which indicates the severity of the disasters.
+Disaster events have PHQ Rank available, which indicates the severity of the disasters:
 
 * The natural disaster events consider [CAP](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) information, number of injured, deaths, evacuated, etc.
 * The lockdown events consider the level of restriction, the maximum number of people allowed in a public social gathering, etc.
@@ -176,7 +176,7 @@ PredictHQ classifies this category into three buckets with the following labels 
 
 1.  **Epidemic**
 
-    Pandemic, `epidemic` or `epidemic-hazard`, for example, COVID-19, Cholera, etc
+    Pandemic, `epidemic`, or `epidemic-hazard`, for example, COVID-19, Cholera, etc
 2.  **`biological-hazard`**
 
     Diseases and insect infestations, for example, food poisoning warnings, infection warnings, etc.

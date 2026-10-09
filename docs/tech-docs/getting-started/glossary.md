@@ -16,7 +16,7 @@ Beam analyses your historical demand time series to isolate event-driven variabi
 
 Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
 
-If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
+If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location Analyses are preferable in most cases.
 
 Refresh Beam monthly by appending new demand data to the existing Analysis. Do not delete and recreate Analyses - doing so loses accumulated correlation history.
 
@@ -186,7 +186,7 @@ Related resources:
 
 ## Predicted Impact Patterns
 
-Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. These patterns are derived from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and are tailored by event type and industry vertical.
+Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. These patterns are derived from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and PredictHQ tailors them by event type and industry vertical.
 
 Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak one to two days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 

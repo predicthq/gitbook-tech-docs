@@ -8,7 +8,7 @@ The Recurring Events feature provides a linkage between recurrences of the same 
 As well as being able to see that an event is recurring, it’s also possible to find all recurrences of the same event.
 
 {% hint style="info" %}
-**Example Use Cases**
+**Example use cases**
 
 Recurring Events supports use cases such as:
 
@@ -75,7 +75,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results is shown below:
+A snippet of the results follows:
 
 ```json
 {
@@ -171,7 +171,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results is shown below:
+A snippet of the results follows:
 
 ```json
 {

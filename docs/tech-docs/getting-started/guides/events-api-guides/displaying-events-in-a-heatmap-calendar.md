@@ -28,7 +28,7 @@ To experiment with this example, consider [forking the notebook](https://observa
 
 You need an Access Token to call PredictHQ's APIs and run the notebook. Follow the [API quickstart instructions](../../api-quickstart.md) to obtain one if needed.
 
-### Event Data
+### Event data
 
 The heatmap calendar uses aggregated event data from the [Features API](https://www.predicthq.com/apis/features-api) to display the total attendance per day. Selecting a specific day reveals additional event details via the [Events API](https://www.predicthq.com/apis/event-api), adding an interactive layer to the experience.
 
@@ -111,7 +111,7 @@ Set the location as follows:
 Choose the categories as follows:
 
 * Identify the types of events of interest, such as concerts, sports, or community events.
-* Configuration: Add `<feature_name>` to the request body, specifying `stat` and `phq_rank` as needed (see next).&#x20;
+* Configuration: In the request body, add `<feature_name>`, specifying `stat` and `phq_rank` as needed (see the Aggregation Statistic and Minimum Event Rank sections).&#x20;
 * Guidance: Start with [features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features#available-features) prefixed by `phq_attendance` for [attendance-based categories](../../predicthq-data/event-categories/attendance-based-events.md); other categories may require additional adjustments. For details on how to set event categories, refer to [#relevant-event-categories](../industry-specific-event-filters.md#relevant-event-categories "mention").
 
 </details>

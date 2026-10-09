@@ -124,7 +124,7 @@ If you're a workspace admin:
 2. Enter a name (e.g. `PredictHQ`) and optionally a description.
 3. Enter the **MCP Server URL**: `https://mcp.predicthq.com/v1/mcp`
 4. Select your authentication method:
-   * **OAuth** - follow the login flow to authenticate with your PredictHQ account.
+   * **OAuth** - to authenticate with your PredictHQ account, follow the login flow.
    * **Access token / API key** - select **Bearer** as the scheme and enter your PredictHQ API key.
 
 **To use it in a conversation:**

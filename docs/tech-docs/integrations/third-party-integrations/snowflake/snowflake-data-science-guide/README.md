@@ -88,6 +88,8 @@ The **SAVED\_LOCATIONS** input table requires this format:
 
 <table data-full-width="true"><thead><tr><th width="190">location</th><th>latitude</th><th>longitude</th><th data-type="number">radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.81310</td><td>-87.65860</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-york</td><td>40.73061</td><td>-73.93524</td><td>null</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
+The columns are:
+
 * **location**: a unique identifier for the location.
 * **latitude**/**longitude**: we recommend including five decimal places.
 * **radius**: the value the Predicted Impact Area API returns.

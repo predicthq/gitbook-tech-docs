@@ -61,7 +61,7 @@ How you apply these results depends on your forecast horizon:
 ## Frequently asked questions
 
 **Does PredictHQ backtesting reflect what I'll see in production?**
-Yes, for forecast horizons up to around six weeks — which covers most demand forecasting use cases — our internal analysis found no measurable difference between backtested and production-time accuracy.
+Yes, for forecast horizons up to around six weeks—which covers most demand forecasting use cases—our internal analysis found no measurable difference between backtested and production-time accuracy.
 
 **If PredictHQ updates event data after an event happens (e.g. actual attendance), doesn't that leak into my historical training data?**
 Post-event updates refine PredictHQ's records for future accuracy, but they don't change the features that were available at your forecast point for that event. The relevant question is whether a feature value changed *within* your forecast horizon, not whether PredictHQ later updated it after the event occurred — and our results show that within typical horizons, the two produce effectively the same forecast accuracy.

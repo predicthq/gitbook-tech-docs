@@ -29,7 +29,7 @@ Details for each Place, such as its name can be retrieved from the [Places API](
   ]
 ```
 
-This reveals an event with the above `place_hierarchy` occurs in Bellevue, which belongs to King County, which is in Washington state, USA.
+This reveals an event with the earlier `place_hierarchy` occurs in Bellevue, which belongs to King County, which is in Washington state, USA.
 
 The `place_hierarchy` value when understood with the `scope` of an event reveals if an event is a point event or an area event. Point events have a `scope` value "locality"; Area events have "localadmin", "county", "region", or "country".
 

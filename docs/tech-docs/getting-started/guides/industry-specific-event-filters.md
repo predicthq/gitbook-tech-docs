@@ -23,7 +23,7 @@ Use the Industry Value when specifying an industry in an API request. If your bu
 | Food and Beverage (Restaurants & Bars) | `restaurants`    | Cafes, pubs, quick service restaurants, hospitality venues.                          |
 | Retail                                 | `retail`         | Supermarkets, fashion, electronics, gyms/fitness centers (if sales-oriented).        |
 | Transportation and Delivery            | `transportation` | Rail, buses, rideshare, delivery services.                                           |
-| Other                                  | `other`          | If your business does not clearly fit into one of the above industries, use `other`. |
+| Other                                  | `other`          | If your business does not clearly fit into one of the named industries, use `other`. |
 
 ## Where industry matters
 

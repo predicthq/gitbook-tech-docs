@@ -57,7 +57,7 @@ When provided, the API:
 
 Without Beam, you must define the feature configuration manually.
 
-## Inputs and Outputs
+## Inputs and outputs
 
 ### Inputs
 

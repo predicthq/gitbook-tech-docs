@@ -34,7 +34,7 @@ If you add more locations than you have purchased, you keep access to the extra 
 
 You will have a list of locations for your business. Such as a list of addresses for your stores. The first stage is to find the latitude and longitude (lat/long) of each store. Once you have done that you can create Saved Locations for each using the API.
 
-For example, you could create a file that has a list of lat/longs and names for each store and run a script over the file to create saved locations for each.
+For example, you could create a file that has a list of lat/longs and names for each store and run a script over the file to create Saved Locations for each.
 
 See the [Saved Locations API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). To upload a list of locations do the following:
 

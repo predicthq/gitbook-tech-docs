@@ -47,7 +47,7 @@ Predicted Impact Patterns are available for these industry segments and categori
 {% endtab %}
 
 {% tab title="Hospitality (Restaurants)" %}
-Impact pattern features for this industry use the name `hospitality` but this category covers food & beverage including restaurants.
+Predicted Impact Patterns features for this industry use the name `hospitality` but this category covers food & beverage including restaurants.
 
 | Impact Type      | Category          |
 | ---------------- | ----------------- |

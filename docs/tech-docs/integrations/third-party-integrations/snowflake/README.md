@@ -22,7 +22,7 @@ PredictHQ can set up Customized Data Shares to match your preferences in terms o
 
 ## Backwards compatible changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
 
-Be aware that we may make backwards compatible changes to the Snowflake tables from time-to-time. Examples of some changes we might make that don't break backwards compatibility and may be introduced at any time without warning:
+Be aware that we may make backwards compatible changes to the Snowflake tables from time-to-time. Examples of some changes we might make that don't break backwards compatibility, and that we may introduce at any time without warning:
 
 * New columns added to existing tables.
 * New tables in addition to existing tables.
