@@ -113,7 +113,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
    3. To update the y-axis title, follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
 4. Chart Preview:
 
-<figure><img src="../../.gitbook/assets/image (90).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt="The Time Series worksheet in Tableau with a chart of daily event day impact by date" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
 
 **Table**
 
@@ -129,7 +129,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 3. Table Preview:
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Event Info worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt="The Event Info worksheet in Tableau with a table of events and their daily impact values"><figcaption><p>Event Info worksheet</p></figcaption></figure>
 
 ### Dashboard
 
@@ -139,7 +139,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
 For more information on creating dashboards, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).

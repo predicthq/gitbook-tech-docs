@@ -83,7 +83,10 @@ In Power BI, create a new report and press **Get Data** -> **Text/CSV**
 
 <figure><img src="../../.gitbook/assets/New CSV Connection.png" alt="Power BI Get Data menu with the Text/CSV option selected to create a new CSV connection"><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
 
-Upload the CSV export and hit the transform data option.
+To transform the CSV export:
+
+1. Upload the CSV export.
+2. Click **Transform Data**.
 
 <figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
@@ -128,8 +131,8 @@ As you can see we start with a comma to add on to the existing line, its positio
 
 <figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt=""><figcaption><p>CSV Power Query</p></figcaption></figure>
 
-Hit **Done**.\
-Hit **Close & Apply** and wait for the data transformation to finish processing.
+Click **Done**.\
+Click **Close & Apply** and wait for the data transformation to finish processing.
 
 <figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 

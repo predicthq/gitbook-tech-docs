@@ -51,11 +51,15 @@ print(response.json())
 
 ## AI & agents
 
+These resources cover building with AI:
+
 * [Build with AI](ai/build-with-ai.md) - Connect any MCP-compatible AI assistant to PredictHQ APIs through natural language
 * [MCP server](ai/mcp.md) - Query events, demand intelligence, and all PredictHQ APIs without writing code
 * [Bolt](ai/bolt.md) - AI-native developer environment built into the WebApp
 
 ## Resources
+
+These resources support your integration:
 
 * [API Overview](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview) - Authentication, rate limits, and API conventions
 * [Guides](getting-started/guides/) - Step-by-step integration guides for core APIs and use cases
