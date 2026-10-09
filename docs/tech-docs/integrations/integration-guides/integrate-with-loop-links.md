@@ -45,7 +45,7 @@ These buttons link to the screens shown in the following section.
 
 Below is a fictitious example app with examples of adding buttons for the two types of Loop Feedback
 
-<figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt="A fictitious example app with buttons for submitting a missing event and providing event feedback through Loop Links"><figcaption></figcaption></figure>
 
 The following diagram shows how your app integrates with the Loop Links event pages:
 

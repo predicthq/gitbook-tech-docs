@@ -59,7 +59,10 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Microsoft Excel.
 
-First, create a new Spreadsheet. Click the **Data** tab and choose **Get Data**:
+First, create a new Spreadsheet. Then, to open the data connection options:
+
+1. Click the **Data** tab.
+2. On the **Data** tab, click **Get Data**.
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
@@ -76,7 +79,7 @@ Add the HTTP request header with the following information:
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
-<figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Connection.png" alt="The Excel web connection dialog with the Events API URL and the Authorization header filled in"><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
 After clicking **OK**, the Data Transformation page opens where you can choose data shaping options before building the report.
 
@@ -91,7 +94,10 @@ To format and expand some columns, paste the following code into the Advanced Ed
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.**
+To update the Power Query code:
+
+1. Replace the entire existing Power Query code with the following code.
+2. In Lines 4 and 8, replace ‘\[api\_token]’ with the PredictHQ API Access Token you used previously.
 
 {% hint style="info" %}
 This example doesn't work unless you replace the \[api\_token] with your token.\

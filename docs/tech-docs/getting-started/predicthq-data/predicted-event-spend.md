@@ -26,4 +26,6 @@ Within each event category, Predicted Event Spend covers the following industrie
 
 ## Using Predicted Event Spend
 
+You can access Predicted Event Spend here:
+
 * [In the Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)

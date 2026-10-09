@@ -20,6 +20,8 @@ For incremental updates, make sure to check the `change_action` column to work o
 
 ### File naming
 
+PredictHQ names files using this pattern:
+
 ```
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
 ```

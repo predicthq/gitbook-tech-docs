@@ -61,7 +61,7 @@ For all other countries where Placekey does not support addresses, these events 
 
 The following image shows the hexagon area covered by `@7f7-mcy-ndv`:
 
-<figure><img src="../../../.gitbook/assets/placekey-hex-france-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/placekey-hex-france-example.png" alt="Map of the hexagon area around Toulouse, France, covered by the Placekey @7f7-mcy-ndv"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Note that attended events that have a polygon representing an area do not use Placekey. For example marathons, parades, and festivals have a geojson polygon representing the area impacted by the event. Placekeys are best suited for events that occur at a specific location rather than events that cover a broad area. See our guide to [using polygons events data](working-with-polygons.md) to find polygons events around a location.

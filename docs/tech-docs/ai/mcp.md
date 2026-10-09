@@ -110,7 +110,11 @@ To set up the connector:
 
 **Workspace-wide setup**
 
-If you're a workspace admin, enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**. Then, in **Workspace Settings > Connectors**, create a connector. Publish the connector for the whole organization. Once published, the connector is available to all users in the workspace without any individual setup.
+If you're a workspace admin:
+
+1. In **Workspace Settings > Permissions & Roles > Connected Data**, enable **Developer Mode**.
+2. In **Workspace Settings > Connectors**, create a connector.
+3. Publish the connector for the whole organization. Once published, the connector is available to all users in the workspace without any individual setup.
 
 **Adding the PredictHQ connector:**
 

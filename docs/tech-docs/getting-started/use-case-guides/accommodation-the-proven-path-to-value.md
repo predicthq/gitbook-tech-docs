@@ -66,7 +66,7 @@ A well-filtered real-world context layer isn’t just raw events - it’s an exp
 
 ## Forecasting Accuracy
 
-<figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt="A demand forecast chart for a hotel with event-driven demand peaks marked on the timeline"><figcaption></figcaption></figure>
 
 Most forecasting teams know that events drive demand - the challenge is turning the underlying event data into features that actually work in a time-series model.
 

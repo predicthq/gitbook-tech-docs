@@ -91,9 +91,12 @@ Saved Locations are also the only way to use polygon-based boundaries with Predi
 
 **Refresh: daily or weekly or other, depending on model cadence**
 
-Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features for each location. The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed.
+For each location:
 
-Store the results locally. Pull from your local store at training and inference time, not directly from the API.
+1. Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features.
+2. In your local store, save the results.
+
+The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed. Pull from your local store at training and inference time, not directly from the API.
 
 **Alternative delivery:** PredictHQ can deliver Features API output per Beam Analysis via Snowflake Private Share, AWS Data Exchange, or SFTP. Contact PredictHQ to discuss this option.
 

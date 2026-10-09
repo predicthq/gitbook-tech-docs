@@ -20,6 +20,8 @@ For incremental updates, make sure to check the `change_action` column to work o
 
 ### File naming
 
+Files use this naming pattern:
+
 ```
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
 ```

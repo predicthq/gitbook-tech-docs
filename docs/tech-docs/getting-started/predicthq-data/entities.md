@@ -14,7 +14,8 @@ A venue can be found on an event record as an array of entities with the type of
 
 All events happening at the same venue have the same latitude/longitude and street address.
 
-Below is an example of the venue entity information returned in the Events API response
+Below is an example of the venue entity information returned in the Events API response:
+
 
 ```json
 {
@@ -37,7 +38,7 @@ See [working with recurring events ](../guides/date-and-time-guides/working-with
 
 Residencies are a subset of event groups. Residencies describe a type of concert where an artist performs at the same venue for two or more shows. This means that residencies can last for several weeks or months, as long as each instance of a performance by the same artist is within one week (7 days) of one another.
 
-The `residency` label attached to the event group identifies residencies.
+The `residency` label attached to the event group identifies residencies, as in this example:
 
 ```json
         {

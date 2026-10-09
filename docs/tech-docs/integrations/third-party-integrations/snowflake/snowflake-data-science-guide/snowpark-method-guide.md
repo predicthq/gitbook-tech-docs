@@ -19,6 +19,8 @@ This code is an example, not production-ready. Test and optimize it before you u
 
 ### Python code
 
+The following code calls the Features API for each location in the **SAVED\_LOCATIONS** table:
+
 {% code fullWidth="true" %}
 ```python
 from snowflake.snowpark import Session

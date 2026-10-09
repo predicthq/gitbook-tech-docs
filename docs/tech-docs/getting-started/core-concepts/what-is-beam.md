@@ -116,11 +116,15 @@ This keeps forecast inputs aligned with historical demand drivers.
 
 ## Common pitfalls
 
+Avoid these mistakes:
+
 * **Skipping Beam entirely** - Leads to unstable feature sets and noise.
 * **Including all event categories** - More features does not imply better performance.
 * **Reusing one Beam Analysis across dissimilar locations** - Impact varies by geography and demand profile.
 
 ## Related
+
+For more information, see:
 
 * [Beam API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam)
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) (Beam uses this under the hood)

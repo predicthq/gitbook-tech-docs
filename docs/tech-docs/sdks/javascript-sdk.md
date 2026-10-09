@@ -12,11 +12,15 @@ description: >-
 
 ### Installation
 
+Install the SDK from npm:
+
 ```bash
 npm install predicthq
 ```
 
 ### Setup the SDK
+
+Import the client and initialize it with your access token:
 
 ```javascript
 import Client from 'predicthq'
@@ -28,7 +32,7 @@ const client = new Client({access_token: '$API_TOKEN'})
 
 ### Search events
 
-Perform a basic search of events using the `title` parameter.
+Perform a basic search of events using the `title` parameter:
 
 ```javascript
 client.events.search({title: 'Aviation Festival'})

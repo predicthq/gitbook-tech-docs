@@ -10,7 +10,11 @@ description: >-
 {% update date="2026-10-06" tags="webapp,developer-tools,new-feature" %}
 ## Bolt - Projects
 
-You can create Projects in Bolt to group your notebooks together. Create a project for a use case, add your notebooks to it, and set the instructions once so every notebook in the project follows them.
+You can create Projects in Bolt to group your notebooks together. To set up a project so every notebook in it follows the same instructions:
+
+1. Create a project for a use case.
+2. Add your notebooks to the project.
+3. Set the instructions once.
 
 Share a project with anyone in your organization as a viewer or a collaborator, so your team can work together and see each other's notebooks instead of duplicating work or waiting to be unblocked.
 

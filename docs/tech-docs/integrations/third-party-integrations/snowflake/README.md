@@ -30,6 +30,8 @@ Be aware that we may make backwards compatible changes to the Snowflake tables f
 
 ## Frequently asked questions
 
+These questions come up most often:
+
 * **How does costing work on the data shares?**\
   Snowflake's architecture separates data warehousing into different distinct layers: storage, virtual warehouses (compute), and cloud services. By using PredictHQ's data through Snowflake, you would only pay for the amount of computation that you would perform on the shared data. In other words, there is no cost for you to store the data and you would only be billed for running queries on the shared data. You can read more about [Snowflake's costing on their website](https://www.snowflake.com/pricing-page-registration-page/).
 * **How frequently is the shared data updated?**\

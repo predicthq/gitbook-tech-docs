@@ -11,7 +11,9 @@ You can do the following with the Placekey filter:
 
 For this example, we find events happening at Las Vegas Convention Center in July 2023. This query gives you all events happening at this specific venue but not nearby events.
 
-<figure><img src="../../../../.gitbook/assets/placekey-hex-las-vegas-convention-center.png" alt=""><figcaption><p>Placekey example for the Las Vegas Convention Center</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/placekey-hex-las-vegas-convention-center.png" alt="Map of the Las Vegas Convention Center with the H3 hexagon for its Placekey outlined"><figcaption><p>Placekey example for the Las Vegas Convention Center</p></figcaption></figure>
+
+The following query uses the full Placekey of the venue:
 
 ```python
 import requests

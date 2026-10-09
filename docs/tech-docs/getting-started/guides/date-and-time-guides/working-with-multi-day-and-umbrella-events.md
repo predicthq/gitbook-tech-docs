@@ -12,7 +12,7 @@ For example, the phq\_attendance for a big event like the [2019 Tour de France](
 
 PredictHQ also handles cases where one event (child) belongs to another (parent). This type of event is called an Umbrella event. Umbrella events are often multi-day events but can also be single-day events with multiple sessions if the same attendees are expected, for example the games of a rugby sevens tournament. When looking at events it’s important to use either parent events or child events, but not both.
 
-<figure><img src="../../../.gitbook/assets/umbrella-events.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/umbrella-events.png" alt="Diagram of an umbrella event, with a parent event spanning the full duration and child events nested within it"><figcaption></figcaption></figure>
 
 This page covers how to interpret these events correctly when working with individual event records - event lists, explainability surfaces, and grounding corpora. For daily or weekly aggregations of any kind - model features, dashboards, analytics - use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), which handles all of the complications on this page for you.
 

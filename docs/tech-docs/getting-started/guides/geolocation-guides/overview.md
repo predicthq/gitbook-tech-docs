@@ -122,7 +122,7 @@ Where an area event has a Point-type geometry, it means the event applies to the
 
 The example event snippet is a [flood warning in Missouri](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). The GeoJSON data in the `geo.geometry` field can be plotted using tools that accept GeoJSON such as [geojson.io](https://geojson.io/). All our events with a Polygon or MultiPolygon display the geometry's shape when viewed in our [WebApp](https://control.predicthq.com/search/events/268aCtdaPgDJNurMeP) or our [Public Event page](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). A plot of the flood warning event's geometry is shown below.
 
-<figure><img src="../../../.gitbook/assets/event-polygon-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/event-polygon-example.png" alt="Plot of the flood warning event's polygon geometry on a map"><figcaption></figcaption></figure>
 
 Below is an example of an [event with a MultiPolygon geometry](https://events.predicthq.com/events/8qbpLh7PDjK3Crpj6b); you can see it has two polygons for one event.
 

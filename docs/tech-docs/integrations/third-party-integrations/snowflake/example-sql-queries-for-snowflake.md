@@ -87,4 +87,4 @@ Example Results:
 
 Using the geo field of the events, these can be plotted on a map as shown below.
 
-<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-results-ex.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-results-ex.png" alt="Map of Seattle with the events returned by the polygon query plotted as points inside the polygon area"><figcaption></figcaption></figure>

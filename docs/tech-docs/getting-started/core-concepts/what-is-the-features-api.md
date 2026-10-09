@@ -75,7 +75,8 @@ If you’re not using Beam, you can also configure inputs manually:
   * Provide a `saved_location_id` (recommended), `place_id`, or geolocation + radius.
 * Time range
   * Start and end date, aligned to local timezone.
-* Features to compute
+* Features to compute:
+
   * Choose from the full list of available features.
   * Some features have industry-specific variants that use your industry’s Predicted Impact Patterns to better reflect lead/lag behavior.
 * Stat types (per feature)
