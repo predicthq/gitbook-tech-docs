@@ -83,7 +83,7 @@ print(phq_labels)
 
 You can also see a list of PHQ Labels in the **Labels** field on the [Search events](https://control.predicthq.com/search/events) page of the WebApp:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The <strong>Labels</strong> field in the WebApp contains a list of PHQ Labels </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt="The Labels field on the WebApp Search events page, showing a list of PHQ Labels"><figcaption><p>The <strong>Labels</strong> field in the WebApp contains a list of PHQ Labels </p></figcaption></figure>
 
 #### All PHQ Label values
 

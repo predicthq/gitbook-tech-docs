@@ -60,7 +60,7 @@ The calendar updates automatically based on the specified parameters. In this ex
 * Hovering over the days to reveal more detailed information about the events.
 * Clicking specific days to surface the specific events occurring, providing more granular details.
 
-<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe91XOWCl6CkoPUeqz46MlUxCvuzyakT2cKIeKaRUhM8LNXaZf-dkjDmKZ66xSHw8OrJmvlLQcZrP4ZlwU4LC9A7O83H1bGpJ4vEdpJwHwXcceBx-adNwQV7GcBHdMU5NssX8zGHEkraTe28PGHZqLdFpGI?key=yHYQOK_XUxkGtvg9Am0g5g" alt="" width="563"><figcaption><p>Interacting with the heatmap calendar</p></figcaption></figure>
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe91XOWCl6CkoPUeqz46MlUxCvuzyakT2cKIeKaRUhM8LNXaZf-dkjDmKZ66xSHw8OrJmvlLQcZrP4ZlwU4LC9A7O83H1bGpJ4vEdpJwHwXcceBx-adNwQV7GcBHdMU5NssX8zGHEkraTe28PGHZqLdFpGI?key=yHYQOK_XUxkGtvg9Am0g5g" alt="A heatmap calendar in which darker shading marks days with higher total event attendance" width="563"><figcaption><p>Interacting with the heatmap calendar</p></figcaption></figure>
 
 ### Exporting Code
 

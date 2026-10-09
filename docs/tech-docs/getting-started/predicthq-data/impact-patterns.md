@@ -8,7 +8,7 @@ We recommend that if you operate in the supported industries you use demand impa
 
 Below is a visual representation of impact patterns:
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt="Diagram of a Predicted Impact Pattern showing impact on leading days before an event, on event days, and on lagging days after it"><figcaption></figcaption></figure>
 
 You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models account for the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.
 

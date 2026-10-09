@@ -78,7 +78,7 @@ To find events that are further away match the first x characters of `@Where` fr
 
 See the [Placekey documentation ](https://docs.placekey.io/Placekey_Technical_White_Paper.pdf)on “The structure of a Placekey”. The table with the “Length of shared prefix” and the “Maximal distance (meters)” gives you the approximate size of the H3 hex you get when you match the first X characters of the `@Where` part of Placekey. The minimum number of characters you can use when matching on the `@Where` part is five. See also [Joining POI and non-POI datasets with Placekey](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey). See the image below where you can see smaller hexes encompassed in larger hexes.
 
-<figure><img src="../../../../.gitbook/assets/hex-levels-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/hex-levels-example.png" alt="Map showing smaller H3 hexagons nested inside larger hexagons at lower resolutions"><figcaption></figcaption></figure>
 
 Typically for looking at events around a location, we'd recommend looking at the first 6 to 9 characters of Placekey, depending on how large of an area you want to look at.
 

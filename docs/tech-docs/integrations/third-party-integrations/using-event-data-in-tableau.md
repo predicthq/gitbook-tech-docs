@@ -108,9 +108,9 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 2. Apply Filters Globally: Apply the above filters to 'all worksheets using this data source' by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
-   1. Drag `Value` from 'Source Measures' to the Row shelf.
-   2. Drag `Date Local` from 'Impacts' to the Column shelf. Then right-click the `Date Local` pill and select the 'Exact Date' format.
-   3. Update the y-axis title to 'Daily Event Day Impact' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis).
+   1. On the Row shelf, drag `Value` from 'Source Measures'.
+   2. On the Column shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the 'Exact Date' format.
+   3. To update the y-axis title, follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
 4. Chart Preview:
 
 <figure><img src="../../.gitbook/assets/image (90).png" alt="" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>

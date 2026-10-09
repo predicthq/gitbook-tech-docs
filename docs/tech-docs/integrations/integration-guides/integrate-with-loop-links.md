@@ -49,7 +49,7 @@ Below is a fictitious example app with examples of adding buttons for the two ty
 
 The following diagram shows how your app integrates with the Loop Links event pages:
 
-<figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt="Diagram showing how the buttons in an app link to the Loop Links pages for submitting a missing event and providing event feedback"><figcaption></figcaption></figure>
 
 The heading at the top of the Loop pages defaults to your organization name in the WebApp. You can update it to change it via the API.
 
@@ -131,11 +131,10 @@ This is typically used by support teams if issues are raised about event feedbac
    2. Use the link immediately.
 2. If required update the **`org_name`** name field via the settings API to set the name displayed at the top of the Loop pages
 3. In your application, implement the links.
-4. End-user clicks the link which opens the Public Loop UI in a browser.
-   1. No login is needed.
-   2. The end-user is presented with the form to submit an event (or feedback - depending on which type of link was clicked).
-5. End-user fills in the form.
-6. End-user receives an email when the event they submitted is approved or rejected.
+4. Open the link in a browser. The Public Loop UI needs no login and shows the form to submit an event (or feedback, depending on which type of link you open).
+5. Complete the form.
+
+The end-user receives an email when the event they submitted is approved or rejected.
 
 ### Types of links
 

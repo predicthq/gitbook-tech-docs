@@ -24,7 +24,7 @@ The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-f
 
 Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend. The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
-<figure><img src="../../../.gitbook/assets/chart-sports.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/chart-sports.png" alt="Bar chart of daily attendance for a golf tournament, with higher attendance on the weekend days than on the weekdays" width="375"><figcaption></figcaption></figure>
 
 For supported industries, the Features API goes further: [Predicted Impact Patterns](../../predicthq-data/impact-patterns.md) are daily impact curves derived from machine learning models trained on historical demand data, specific to event category and industry, extending into the lead-up and lag days around an event. This distribution logic is not reproducible with rules of thumb - which is why daily and weekly aggregations belong in the Features API rather than in your own pipeline.
 

@@ -60,7 +60,7 @@ Using the GEOGRAPHY column geo to find all events within a user defined area (eg
 
 First, we define the shape we are interested in restricting the search to, as shown in the image below.
 
-<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt="Map of Seattle with a polygon drawn around the area used to restrict the event search"><figcaption></figcaption></figure>
 
 ```sql
 SELECT seattle_events.event_id,

@@ -22,7 +22,10 @@ Use the Features API when you are building or improving a demand forecasting mod
 
 The Features API produces pre-engineered, attendance-weighted, duration-adjusted, impact-pattern-aware time-series signals. It encapsulates years of domain expertise in transforming raw event data into reliable demand signals. Do not attempt to replicate this by querying the Events API and aggregating manually - naive aggregation introduces noise and degrades model performance.
 
-**Always use `beam.analysis_id`** when calling the Features API. Without it, you must configure feature selection manually - which is error-prone and produces worse results. Run Beam first, then pass the `analysis_id` to the Features API.
+**Always use `beam.analysis_id`** when calling the Features API. Without it, you must configure feature selection manually - which is error-prone and produces worse results. To use it:
+
+1. Run Beam.
+2. Pass the resulting `analysis_id` to the Features API.
 
 {% hint style="warning" %}
 The Events API is not a substitute for the Features API in forecasting pipelines. Looping over events, counting them per day, and using that count as a model feature is a common mistake that degrades forecast accuracy.

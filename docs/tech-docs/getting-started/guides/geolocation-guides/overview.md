@@ -18,7 +18,7 @@ Area events impact a geographic area such as a region, or an entire country. For
 
 Area events can be represented by a polygon. The example image shows this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) for several rivers in Mississippi, USA.
 
-<figure><img src="../../../.gitbook/assets/flood-warning-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/flood-warning-example.png" alt="Map showing a polygon that outlines the area covered by a flood warning for several rivers in Mississippi, USA"><figcaption></figcaption></figure>
 
 Our APIs offer spatial search parameters to discover all events that impact your locations of interest.
 

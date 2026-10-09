@@ -49,7 +49,8 @@ To prepare the covariates:
 }
 ```
 
-4. Join both windows to your demand series on date, and pass them through the model's covariates interface alongside the demand history.
+4. Join both windows to your demand series on date.
+5. Pass the joined features through the model's covariates interface alongside the demand history.
 
 ## Keep the covariates fresh
 

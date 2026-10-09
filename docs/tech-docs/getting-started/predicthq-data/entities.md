@@ -116,7 +116,11 @@ Accept: application/json
 Authorization: Bearer $API_TOKEN
 ```
 
-Similar to finding all events for an event-group entity for recurring events, first find the ID for the entity. So, for example, to do that for Dreamforce first, find a Dreamforce event, then look at the event-group entity ID on that event and use that entity ID to call the API.
+Similar to finding all events for an event-group entity for recurring events, first find the ID for the entity. For example, to do that for Dreamforce:
+
+1. Find a Dreamforce event.
+2. On that event, look at the event-group entity ID.
+3. To call the API, use that entity ID.
 
 ## How can I use entities in Snowflake
 

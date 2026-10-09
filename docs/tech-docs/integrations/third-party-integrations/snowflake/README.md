@@ -4,7 +4,7 @@ Snowflake Secure Data Share deploys PredictHQ's verified real-world context dire
 
 PredictHQ manages delivery, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
 
-## Sample Data Shares
+## Sample data shares
 
 PredictHQ offers multiple up-to-date event Data Shares on Snowflake's Marketplace. This, bundled up with Snowflake's 30-day trial, offers you a commitment-free opportunity to try PredictHQ's data for free.
 
@@ -14,7 +14,7 @@ The sample Data Shares are not limited in terms of columns or fields making them
 PredictHQ Sample Data Shares on Snowflake Marketplace
 {% endembed %}
 
-## Customized Data Shares
+## Customized data shares
 
 Customized Data Shares can be set up to match your preferences in terms of data type, location, time window, and business use case. They are secure, and PredictHQ manages delivery, so they usually don't require business resources for data integrations if you're already in the Snowflake platform.
 

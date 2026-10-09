@@ -13,9 +13,13 @@ description: >-
 
 ## Create an API Key
 
-1. Log into the [WebApp](https://control.predicthq.com/tokens) and go to **API Tools → API Tokens**
-2. Click **Create Token**, enter a name, and click **Create**
-3. Click **Copy Token** - store it somewhere safe, the WebApp doesn't show it again
+1. Log in to the [WebApp](https://control.predicthq.com/tokens).
+2. Go to **API Tools → API Tokens**.
+3. Click **Create Token**.
+4. Enter a name.
+5. Click **Create**.
+6. Click **Copy Token**.
+7. Store the token somewhere safe. The WebApp doesn't show it again.
 
 Use your API key in the `Authorization` header of every API request:
 

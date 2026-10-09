@@ -123,9 +123,9 @@ Related resources:
 
 Continue with these steps:
 
-* [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
-* Set up [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) - Define the optimal impact boundary for your location and industry. The easiest way is via [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/create-a-saved-location), which calculates and stores it automatically.
-* Set up [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) - Define your key business locations once and reuse them across PredictHQ APIs for consistency and easier re-analysis.
-* Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - Use your beam.analysis\_id or saved\_location\_id to pull a clean time series of impactful event features for your model.
-* See how it fits together in production - The [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) shows how Saved Locations, Beam, the Features API, and the Events API connect as a pipeline, with the right refresh cadence and data storage patterns.
-* Need help? - Check out [Features API guides](../guides/features-api-guides/) or contact support for help tuning your request.
+1. [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
+2. Set up [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) - Define the optimal impact boundary for your location and industry. The easiest way is via [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/create-a-saved-location), which calculates and stores it automatically.
+3. Set up [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) - Define your key business locations once and reuse them across PredictHQ APIs for consistency and easier re-analysis.
+4. Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - Use your beam.analysis\_id or saved\_location\_id to pull a clean time series of impactful event features for your model.
+5. See how it fits together in production - The [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) shows how Saved Locations, Beam, the Features API, and the Events API connect as a pipeline, with the right refresh cadence and data storage patterns.
+6. Need help? - Check out [Features API guides](../guides/features-api-guides/) or contact support for help tuning your request.

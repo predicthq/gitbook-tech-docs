@@ -239,7 +239,7 @@ forecasts_df = pd.DataFrame(results)
 
 Visualize the actual demand we uploaded as well as the forecasted demand we just retrieved:
 
-<figure><img src="../../../.gitbook/assets/forecasts-api-time-series-chart.png" alt=""><figcaption><p>Time series chart showing the actual and forecasted demand</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/forecasts-api-time-series-chart.png" alt="Time series chart of the uploaded actual demand and the forecasted demand over time"><figcaption><p>Time series chart showing the actual and forecasted demand</p></figcaption></figure>
 
 ### Ongoing Forecasting
 

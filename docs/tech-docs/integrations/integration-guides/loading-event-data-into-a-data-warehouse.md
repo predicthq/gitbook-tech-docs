@@ -118,7 +118,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 1. **Click Create Table**: In the dataset you wish to create the table in, click the hamburger menu, and then select **Create Table**.
 
-<figure><img src="../../.gitbook/assets/Create Table.png" alt=""><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create Table.png" alt="The BigQuery dataset menu open with the Create table option highlighted"><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 
 2. **Select the File Location**: Select the JSONL export that you have downloaded somewhere on your computer.
 3. **Name the Table**: Give the table about to be created a name that suits

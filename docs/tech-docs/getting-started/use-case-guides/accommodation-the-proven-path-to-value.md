@@ -15,7 +15,7 @@ Two of the most effective ways accommodation businesses get value from PredictHQ
 
 ## Calendar Display
 
-<figure><img src="../../.gitbook/assets/accommodation-calendar-mockup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/accommodation-calendar-mockup.png" alt="A hotel calendar showing local events on each day, with the highest Local Rank events listed first"><figcaption></figcaption></figure>
 
 Many accommodation businesses want to show local events in their calendars - to help hoteliers plan ahead, staff smarter, and spot high-demand dates early. It’s a valuable use case. But nearly everyone hits the same challenge:
 

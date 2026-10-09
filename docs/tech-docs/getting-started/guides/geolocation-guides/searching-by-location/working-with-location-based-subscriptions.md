@@ -26,7 +26,7 @@ Within the WebApp on the [plans page](https://control.predicthq.com/settings/pla
 
 If you add more locations than you have purchased, you keep access to the extra locations for a limited time. To keep them, upgrade your subscription to purchase more, or remove the locations you added. The PredictHQ team reaches out to discuss your options.
 
-<figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt="The Location Insights view showing the number of locations purchased and the number used"><figcaption></figcaption></figure>
 
 ## How to use the APIs with location-based access
 

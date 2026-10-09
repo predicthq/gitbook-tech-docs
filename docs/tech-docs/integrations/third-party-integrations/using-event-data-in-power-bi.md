@@ -59,7 +59,7 @@ Our customers use this in a variety of ways, for example, an accommodation custo
 
 The end result of the exercise will be a report like this:
 
-<figure><img src="../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Final Result.png" alt="Power BI report with a chart of total event attendance per day in San Francisco and a table of events sorted by highest attendance"><figcaption><p>Final Report Result</p></figcaption></figure>
 
 ## Select an input method
 

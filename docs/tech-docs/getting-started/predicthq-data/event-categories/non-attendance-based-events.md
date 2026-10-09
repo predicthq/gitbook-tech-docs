@@ -133,7 +133,7 @@ For the district school holiday data for the US we have historic data from Septe
 Our school holidays granularity changed in October 2021 to move from the state level to the district level.
 {% endhint %}
 
-<div data-full-width="false"><figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="alt"><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../../.gitbook/assets/school-holidays-us-district-comparison-white.png" alt="Comparison of US school holidays at the state level and at the district level"><figcaption></figcaption></figure></div>
 
 We rank our school holidays based on student numbers in the school district.
 

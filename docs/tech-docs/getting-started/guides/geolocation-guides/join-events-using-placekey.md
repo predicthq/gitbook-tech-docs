@@ -6,7 +6,7 @@ A common use of Placekey and events data is to provide additional information ab
 
 PredictHQ attaches a Placekey to event records that happen at a particular location. The PredictHQ pipeline looks at the address and other location information like latitude and longitude and attaches the appropriate Placekey based on these values. An example of a Placekey is `222-22t@5yv-j89-g6k`. This is for the following address “The Mirage Theatre, 3400 Las Vegas Boulevard South, Las Vegas, NV 89109”. Events that happen at the Mirage Theatre have this Placekey value.
 
-<figure><img src="../../../.gitbook/assets/placekey-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/placekey-example.png" alt="Example Placekey 222-22t@5yv-j89-g6k for The Mirage Theatre in Las Vegas"><figcaption></figcaption></figure>
 
 The format of the Placekey is `What@Where`. Take the above example: `222-22t@5yv-j89-g6k`. For the What component, the first three characters refer to the Address Encoding and the second set of three characters refers to the POI Encoding. The Where part, on the other hand, is made up of three unique character sequences, built upon Uber’s open source H3 grid system. See the [Placekey site ](https://www.placekey.io/how-it-works)for an excellent description of what Placekey is and how it works.
 

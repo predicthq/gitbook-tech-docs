@@ -61,7 +61,7 @@ With this API query string, event data can start to be loaded into Microsoft Exc
 
 First, create a new Spreadsheet. Click the **Data** tab and choose **Get Data**:
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
 Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 

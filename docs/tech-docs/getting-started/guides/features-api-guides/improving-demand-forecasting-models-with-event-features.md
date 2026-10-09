@@ -28,7 +28,7 @@ The sections below guide you through integrating event features into your demand
 
 Adding event features to a demand forecasting model involves two main steps: pulling a list of Important Features from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and retrieving prebuilt, forecast-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for a store or location.
 
-<figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt=""><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
+<figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt="Diagram of the integration flow: the Beam API supplies a list of Important Features, the Features API returns those features for a store or location, and they feed into a machine learning model."><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
 
 PredictHQ APIs handle most steps; you provide the following for each store or location:
 

@@ -7,4 +7,4 @@ To demonstrate what you can build with our APIs, we put together some Streamlit 
 * [Restaurant Business Demo App](https://predicthq-restaurant-example.streamlit.app/) _**or**_ [get the code from GitHub](https://github.com/predicthq/streamlit-restaurant-demo).
 * [Location Insights Demo App](https://predicthq-location-insights-example.streamlit.app/) _**or**_ [get the code from GitHub](https://github.com/predicthq/streamlit-location-insights-demo).
 
-<figure><img src="../../.gitbook/assets/streamlit-parking-demo-map-screenshot.png" alt="alt"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/streamlit-parking-demo-map-screenshot.png" alt="The map view in the Parking Business Demo App"><figcaption></figcaption></figure>

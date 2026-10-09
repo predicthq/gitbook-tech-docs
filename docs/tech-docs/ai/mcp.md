@@ -103,7 +103,10 @@ ChatGPT supports remote MCP servers via Connectors. There are two ways to set th
 
 **Individual setup**
 
-Enable **Developer Mode** under **Settings > Advanced Settings**, then add a connector under **Settings > Connectors > Create**.
+To set up the connector:
+
+1. Under **Settings > Advanced Settings**, enable **Developer Mode**.
+2. Under **Settings > Connectors**, click **Create**.
 
 **Workspace-wide setup**
 
