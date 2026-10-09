@@ -122,7 +122,7 @@ You can then upload the JSONL file directly to your BigQuery setup, as detailed 
 
 To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
-1. **Click Create Table**: In the dataset you wish to create the table in, click the **hamburger menu**, and then select **Create Table**.
+1. **Click Create Table**: In the dataset you wish to create the table in, click the **hamburger menu**, and then select **Create table**.
 
 <figure><img src="../../.gitbook/assets/Create Table.png" alt="The BigQuery dataset menu open with the Create table option highlighted"><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 
@@ -367,7 +367,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 ```
 {% endcode %}
 
-With this step completed, the data from PredictHQ Events API is now populated into your BigQuery table and is ready for analytical querying. This setup initially caters to a single load of data; however, to maintain the relevance and timeliness of your data, consider adapting this script to periodically update the dataset based on changes reflected in the "updated" timestamp column of the source data. See the [section below](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) on updating your data.
+With this step completed, the script has loaded the data from the PredictHQ Events API into your BigQuery table, and the data is ready for analytical querying. This setup initially caters to a single load of data; however, to maintain the relevance and timeliness of your data, consider adapting this script to periodically update the dataset based on changes reflected in the "updated" timestamp column of the source data. See the [Keep event data updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section on updating your data.
 
 The full code that follows combines all three code parts into one executable:
 
@@ -549,7 +549,7 @@ Using BigQuery for these queries ensures that you leverage powerful, scalable SQ
 
 Having integrated PredictHQ's rich events data into your data warehouse, the opportunities to leverage this data are extensive. By now, you've successfully set up your data structure within Google Cloud Platform's BigQuery and have a solid understanding of the JSONL file Upload or the API Connection methods. Here’s how you can maximize the value of PredictHQ data within your organization:
 
-#### 1. Cross-referencing with Internal Datasets
+#### 1. Cross-referencing with internal datasets
 
 Enhance the granularity and relevance of your internal analytics by cross-referencing PredictHQ events data with your own datasets. For instance, you can correlate sales data with event occurrences to analyze the impact of local events on sales performance. This cross-analysis can be crucial for demand forecasting and strategic planning.
 

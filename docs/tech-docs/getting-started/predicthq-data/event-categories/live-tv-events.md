@@ -31,7 +31,7 @@ Live TV Events covers all televised sports games from the following seven sports
 
 `NFL`, `NBA`, `NHL`, `MLB`, `MLS`, `D1 NCAA Basketball`, `D1 NCAA Football`
 
-**TOP VIEWERSHIP SPORTS**
+**Top viewership sports**
 
 Live TV Events extends coverage to some popular sports games beyond the seven major sports leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
 
@@ -76,9 +76,9 @@ Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/p
 
 ## Ranking
 
-**PHQ Viewership**
+**Predicted Viewership**
 
-PHQ Viewership is the number of people who watch the live broadcast game in a county. Broadcast records have PHQ Viewership available:
+Predicted Viewership is the number of people who watch the live broadcast game in a county. Broadcast records have Predicted Viewership available:
 
 ```json
   "geopoint": {

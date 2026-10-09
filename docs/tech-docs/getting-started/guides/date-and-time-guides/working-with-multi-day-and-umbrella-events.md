@@ -16,7 +16,7 @@ PredictHQ also handles cases where one event (child) belongs to another (parent)
 
 This page covers how to interpret these events correctly when working with individual event records - event lists, explainability surfaces, and grounding corpora. For daily or weekly aggregations of any kind - model features, dashboards, analytics - use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), which handles all of the complications on this page for you.
 
-## Multi-Day Events
+## Multi-day events
 
 ### Handling attendance for multi-day events
 

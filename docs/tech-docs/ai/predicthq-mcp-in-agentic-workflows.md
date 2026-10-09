@@ -73,7 +73,7 @@ A workforce scheduling agent sets rosters across hundreds of locations. Several 
 
 Tools: `forecasts_api_get_forecast` (with `phq_explainability`), `saved_locations_api_list_saved_location_insight_events`, `events_api_list_events` (with `beam.analysis_id`)
 
-### Demand Planning
+### Demand planning
 
 A demand planning agent manages replenishment across a retail network. A forecast spike appears in part of the network. The agent pulls the real-world context and finds it concentrated around specific high-attendance events in a few catchments. It pre-positions inventory where a durable real-world driver justifies it and holds where the spike has no clear cause, avoiding both stockouts and over-ordering.
 

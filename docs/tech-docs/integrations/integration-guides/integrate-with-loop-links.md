@@ -19,7 +19,7 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 
 This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It goes straight to PredictHQ.
 
-To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop) for details on creating Loop Links.
+To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details). See also, our [Loop Links API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop) for details on creating Loop Links.
 
 ## Overview
 
@@ -72,7 +72,7 @@ When a user submits a missing event:
 1. Users enter event details
 2. PredictHQ teams review events and approve or reject them
 3. Approved events show as visible to the customer as active events
-4. Users receive an email when an event is approved or rejected
+4. PredictHQ emails users when it approves or rejects an event
 
 <figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt="The Loop Links page where users enter details of a missing event"><figcaption></figcaption></figure>
 
@@ -108,10 +108,10 @@ The following image is an example of the email template for approved events:
 <figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt="Example Loop Links email telling a user that the event they submitted was approved"><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Reply to Submission/Feedback Email" %}
+{% tab title="Reply to submission/feedback email" %}
 See an example of the email template for rejected events and replies to event feedback:
 
-<figure><img src="../../.gitbook/assets/reply-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/reply-event-loop-links-email.png" alt="Example Loop Links email telling a user that PredictHQ replied to their event submission or feedback"><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
@@ -122,7 +122,7 @@ If you have admin access, you can track Loop feedback at [loop.predicthq.com](ht
 * Needs a PredictHQ login
 * Shows if Loop submissions are approved or rejected
 * Shows details of the discussion about the Loop events with responses from PredictHQ
-* Allows administrators to track the status of events submitted by their end users
+* Lets you track the status of events your end users submit
 
 Support teams typically use this if issues are raised about event feedback and they want to review the feedback.
 

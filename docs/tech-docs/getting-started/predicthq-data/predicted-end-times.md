@@ -33,7 +33,7 @@ The Events API supports the Predicted End Times feature through the following:
 
 * You can sort events on the Predicted End Time value by using the `sort` parameter with a value of `predicted_end` or `-predicted_end`.
 * You can filter on Predicted End Times by specifying a date range with the `predicted_end.*` parameter.
-* The Events API returns the Predicted End Time as the `predicted_end` field in the events response data. This field is present only if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
+* The Events API returns the Predicted End Time as the `predicted_end` field in the events response data. This field is present only if an actual end time is not available for the event and we have a Predicted End Time. The predicted end date of the event in ISO 8601 format.
 
 **Note**: The Predicted End Time and all other start and end times are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the timezone and has a null time zone.
 

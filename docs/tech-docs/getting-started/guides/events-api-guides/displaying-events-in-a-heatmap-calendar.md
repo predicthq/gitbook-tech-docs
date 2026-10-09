@@ -83,7 +83,7 @@ This section provides guidance on how to customize the underlying event data usi
 
 <details>
 
-<summary>Date Range</summary>
+<summary>Date range</summary>
 
 Set the date range as follows:
 
@@ -106,7 +106,7 @@ Set the location as follows:
 
 <details>
 
-<summary>Event Categories</summary>
+<summary>Event categories</summary>
 
 Choose the categories as follows:
 
@@ -118,7 +118,7 @@ Choose the categories as follows:
 
 <details>
 
-<summary>Aggregation Statistic</summary>
+<summary>Aggregation statistic</summary>
 
 Choose the aggregation as follows:
 
@@ -130,7 +130,7 @@ Choose the aggregation as follows:
 
 <details>
 
-<summary>Minimum Event Rank</summary>
+<summary>Minimum event rank</summary>
 
 Set the minimum rank as follows:
 

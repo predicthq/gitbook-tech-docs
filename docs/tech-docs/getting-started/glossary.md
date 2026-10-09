@@ -12,7 +12,7 @@ Beam is PredictHQ's relevancy engine: it identifies which types of real-world ev
 
 Event-driven demand is sparse and uneven. A small number of events create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
 
-Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
+Beam analyzes your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
 Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
 

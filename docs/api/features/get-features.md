@@ -42,7 +42,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
-PHQ Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
+Predicted Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
 {% hint style="success" %}
 We recommend using Predicted Impact Patterns features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").

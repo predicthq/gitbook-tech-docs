@@ -87,7 +87,7 @@ date,demand
 
 ### Create a model
 
-All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
+The API ties each forecast model to a Saved Location, so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
 
 #### Create a Saved Location using Predicted Impact Area
 

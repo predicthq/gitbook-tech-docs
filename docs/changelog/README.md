@@ -80,7 +80,7 @@ Region-level places in the Places index that did not already have a polygon or m
 {% update date="2026-06-16" tags="enhancement,developer-tools" %}
 ## MCP server - Tech docs search
 
-The PredictHQ MCP server now includes tools for searching and retrieving PredictHQ's technical documentation. AI assistants and coding agents can look up API parameters, integration guides, tutorials, and conceptual content directly through the MCP - without leaving the AI client or switching to a browser.
+The PredictHQ MCP server includes tools for searching and retrieving PredictHQ's technical documentation. AI assistants and coding agents can look up API parameters, integration guides, tutorials, and conceptual content directly through the MCP - without leaving the AI client or switching to a browser.
 {% endupdate %}
 
 {% update date="2026-06-04" tags="new-feature,developer-tools" %}
@@ -92,7 +92,7 @@ Previously limited to event search, the MCP server now supports the complete Pre
 {% endupdate %}
 
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
-## NHL Postseason Labeling
+## NHL postseason labeling
 
 NHL fixtures played in the postseason carry the postseason label. If you filter or weight NHL games by season stage, you get an accurate stage label on these games.
 {% endupdate %}
@@ -168,7 +168,7 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
 ## UK Local Authority Boundaries - Updated Polygons
 
-We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganisations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
+We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
 
 If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}
@@ -182,7 +182,7 @@ Event Trends now includes an **Include Predicted Events** toggle, bringing it in
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
 ## Predicted Impact Area - General Availability
 
-Predicted Impact Area is generally available across Events API, Features API, Beam. It replaces Suggested Radius as the recommended approach for defining the geographic catchment area around a business location. Unlike a simple radius, Predicted Impact Area uses a data-driven model to define the area where events actually influence demand - accounting for real-world geography. The Suggested Radius endpoint is deprecated and replaced by Predicted Impact Area.
+Predicted Impact Area is generally available across Events API, Features API, Beam. It replaces Suggested Radius as the recommended approach for defining the geographic catchment area around a business location. Unlike a simple radius, Predicted Impact Area uses a data-driven model to define the area where events actually influence demand - accounting for real-world geography. Predicted Impact Area replaces the Suggested Radius endpoint, which is deprecated.
 {% endupdate %}
 
 {% update date="2026-03-13" tags="data-quality,enhancement,events-api" %}
