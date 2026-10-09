@@ -28,7 +28,7 @@ What to try:
 
 ### Early COVID-19 Disruption
 
-The early months of the COVID-19 pandemic (typically March–June 2020 or longer for many businesses) created extreme, non-recurring shifts in demand across nearly all industries. These sudden drops or surges were driven by lockdowns, panic buying, or closures—none of which represent repeatable patterns the model can learn from.
+The early months of the COVID-19 pandemic (typically March–June 2020 or longer for many businesses) created extreme, non-recurring shifts in demand across nearly all industries. Lockdowns, panic buying, or closures drove these sudden drops or surges—none of which represent repeatable patterns the model can learn from.
 
 Including this period in your training data may reduce accuracy, especially if your business has since stabilized or operates differently now.
 

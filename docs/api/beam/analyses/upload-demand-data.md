@@ -1,5 +1,5 @@
 ---
-description: Upload your demand data as CSV, line-delimited JSON or JSON.
+description: Upload your demand data as CSV, line-delimited JSON, or JSON.
 ---
 
 # Upload demand data
@@ -17,7 +17,7 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `content_type_invalid`                      | The `Content-Type` header is unsupported.                                                                                                      |
 | `data_validation_failed`                    | The format of the data uploaded is incorrect.                                                                                                  |
 | `json_no_data`                              | An empty JSON body was uploaded.                                                                                                               |
-| `json_invalid_format`                       | The uploaded JSON is formatted incorrectly. Please ensure JSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
+| `json_invalid_format`                       | The uploaded JSON is formatted incorrectly. Ensure JSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
 | `ndjson_no_data`                            | An empty NDJSON body was uploaded.                                                                                                             |
 | `ndjson_invalid_format`                     | The NDJSON body is formatted incorrectly. Please ensure NDJSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
 | `csv_invalid_row`                           | The uploaded CSV has an invalid row.                                                                                                           |
@@ -66,9 +66,9 @@ print(response.status_code)
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Beam API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+See the [Beam API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
 
 ## Guides
 

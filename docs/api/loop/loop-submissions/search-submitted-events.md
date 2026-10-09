@@ -10,9 +10,9 @@ For example, you can use this to display a list of events submitted via Loop Lin
 [OpenAPI loop-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/loop-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
+See the [Loop API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 

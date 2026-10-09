@@ -43,7 +43,7 @@ The Features API:
 
 For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate predicted attendance of 150,000 across a hundred or more events - returned as one model-ready number per category, per day.
 
-It does not determine which features are relevant to your business. Relevance calibration is handled by Beam. The Features API focuses on transforming scoped events into structured numerical signals.
+It does not determine which features are relevant to your business. Beam handles relevance calibration. The Features API focuses on transforming scoped events into structured numerical signals.
 
 ## How It Works With Beam
 
@@ -72,7 +72,7 @@ Using a `beam.analysis_id` removes the need to manually define your location and
 If you’re not using Beam, you can also configure inputs manually:
 
 * Location
-  * Provide a `saved_location_id` (recommended), `place_id` or geolocation + radius.
+  * Provide a `saved_location_id` (recommended), `place_id`, or geolocation + radius.
 * Time range
   * Start and end date, aligned to local timezone.
 * Features to compute

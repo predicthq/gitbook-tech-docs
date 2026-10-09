@@ -36,7 +36,7 @@ The **notebook panel** is where results appear as cards. Each card has three tab
 * **Code** - a production-ready API snippet you can take directly into your integration
 * **Data** - the raw API response
 
-Cards are managed by Bolt as the conversation evolves - cards that are no longer relevant are collapsed, while cards you pin stay in view. The notebook is the persistent artefact; the chat is how you drive it.
+Bolt manages cards as the conversation evolves - it collapses cards that are no longer relevant, while cards you pin stay in view. The notebook is the persistent artefact; the chat is how you drive it.
 
 ## PredictHQ Best Practices Built In
 

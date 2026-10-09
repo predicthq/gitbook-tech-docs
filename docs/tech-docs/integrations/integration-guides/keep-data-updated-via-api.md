@@ -1,7 +1,7 @@
 ---
 description: >-
   Event information changes frequently. For example, a date changes, an event
-  gets cancelled or ranking is updated. It’s important to keep your data set up
+  gets cancelled, or ranking is updated. It’s important to keep your data set up
   to date.
 ---
 

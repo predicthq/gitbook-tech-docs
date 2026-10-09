@@ -35,7 +35,7 @@ The Events API is not a substitute for the Features API in forecasting pipelines
 
 Use the Forecasts API when you want accurate, event-driven demand forecasts without building and maintaining your own forecasting model, or when rapid time-to-value is the priority.
 
-The Forecasts API accepts your historical demand data, trains a model, and returns daily-level forecasts with event impact built directly into the output. Beam is applied automatically - there is no need to configure feature selection manually. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
+The Forecasts API accepts your historical demand data, trains a model, and returns daily-level forecasts with event impact built directly into the output. The Forecasts API applies Beam automatically, so you don't need to configure feature selection manually. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
 
 The Forecasts API is appropriate whether you are starting from scratch or augmenting an existing forecast. Use it when reducing development time and complexity matters more than owning the underlying model. For teams that require full control over model architecture and feature engineering, the Features API is the recommended alternative.
 

@@ -32,7 +32,7 @@ Industry is used across our systems to tune how events are interpreted and model
 * **Predicted Impact Area API**\
   Area recommendations vary by industry, since the catchment area for demand differs across sectors.
 * **Predicted Impact Patterns**\
-  For each event, we calculate its leading and lagging impact per industry. These patterns are then used in the Features API to ensure event impacts reflect your sector.
+  For each event, we calculate its leading and lagging impact per industry. The Features API then uses these patterns to ensure event impacts reflect your sector.
 * **Beam**\
   Beam builds on these industry-tuned patterns and thresholds, and further personalizes results with your own demand data.
 * **Forecasts API**\
@@ -52,7 +52,7 @@ If demand data isn’t available, we’ve done research to provide industry-leve
 
 * Recommended Feature Groups (categories) per industry
 * Minimum Local Rank thresholds to filter out events too small to matter
-* Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations — this automatically generates a Predicted Impact Area that defines the geographic scope for event retrieval, so you don't need to manage the boundary manually
+* Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations: this automatically generates a Predicted Impact Area that defines the geographic scope for event retrieval, so you don't need to manage the boundary manually
 
 These are starting points only. Switch to Beam as soon as you can provide demand data.
 

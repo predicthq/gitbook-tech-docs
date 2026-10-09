@@ -8,7 +8,7 @@ description: >-
 
 This guide outlines the process for integrating PredictHQ's Events data into your data lake. It is common for customers to want to get data from our APIs and store it in their data lake. To support this, we have created this guide to help you with the integration process
 
-We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide is designed for users with a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
+We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide assumes you have a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
 
 This guide covers Events API data only, loaded via the API - the do-it-yourself path. For production, [managed delivery](../third-party-integrations/) (Snowflake, ADX, or SFTP) keeps your store updated with nothing to build. And model features should come from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features), not from aggregating warehouse events - see [Which API should I use?](../../getting-started/core-concepts/which-api-should-i-use.md)
 
@@ -114,7 +114,7 @@ After configuring your filters and executing the search, select the Export optio
 
 ### Create a Table via JSONL Upload
 
-Setting up a BigQuery table with a JSONL file is a straightforward process, provided you have the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
+To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
 1. **Click Create Table**: Navigate to the dataset you wish to create the table in, click the hamburger menu and select “Create Table”.
 
@@ -129,7 +129,7 @@ Setting up a BigQuery table with a JSONL file is a straightforward process, prov
 
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table Data Structure</a> and check for spelling</p></figcaption></figure>
 
-5. **Advanced Options**: Expand the Advanced Options and tick the checkbox “Unknown Values”. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
+5. **Advanced Options**: Expand the Advanced Options and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: Click the "Create Table" button to finalize the creation.
 
 <figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
@@ -223,7 +223,7 @@ Before initiating the script, ensure you have configured the following prerequis
 * **table\_id**: Assign a name to your new PredictHQ data table in BigQuery.
 * **params**: Modify these parameters as needed to align with the data you intend to extract from PredictHQ.
 
-This Python script is crafted to fetch the necessary data from the Events API. This method loops through the paginated response from the API and pulls all results and columns. The [next section](loading-event-data-into-a-data-warehouse.md#transform-api-responses) covers transforming this data before we push for upload.\
+This Python script fetches the necessary data from the Events API. This method loops through the paginated response from the API and pulls all results and columns. The [next section](loading-event-data-into-a-data-warehouse.md#transform-api-responses) covers transforming this data before we push for upload.\
 For more details on any of the parameters we’ve used in the code below, see our [Events API](https://docs.predicthq.com/api/events/search-events) documentation, keeping in mind our [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) to pull attended results in Seattle for Tom.
 
 {% code lineNumbers="true" fullWidth="true" %}
@@ -498,7 +498,7 @@ Some common fields to query are:
 * **category:** filter down to the relevant categories most likely impacting your [industry](https://docs.predicthq.com/getting-started/guides/industry-specific-event-filters)
 * **start and end:** filter on start and end dates being in a specified time period. You might be looking at events in the next week or month or longer.
 * **rank:** is commonly used to filter out smaller events. Filter where rank is equal to or greater than a specific field to filter out smaller events.
-* **geo:** This field contains geojson data ([see here](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#geojson) for more details) on the location event. For attended events, this field typically holds the latitude and longitude of the point at which the event is occurring. It can also hold [polygon](https://docs.predicthq.com/getting-started/guides/geolocation-guides/working-with-polygons) information for events that cover a wide area like marathons or severe weather events. For marathons, the polygon shows the route of the marathon. Query on this field to find all events in an area like a radius.
+* **geo:** This field contains geojson data (see the [GeoJSON overview](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#geojson) for more details) on the location event. For attended events, this field typically holds the latitude and longitude of the point at which the event is occurring. It can also hold [polygon](https://docs.predicthq.com/getting-started/guides/geolocation-guides/working-with-polygons) information for events that cover a wide area like marathons or severe weather events. For marathons, the polygon shows the route of the marathon. Query on this field to find all events in an area like a radius.
 
 See the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for more examples. The SQL example below shows how to query these fields in the database.
 
@@ -525,13 +525,13 @@ WHERE category IN ('concerts','conferences','festivals','performing-arts')
 ```
 {% endcode %}
 
-This query will retrieve records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
+This query retrieves records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
 
 Visually this type of query allows you to pull all the events in a radius as shown in the image below:
 
 <figure><img src="../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
-A common example is customers often look at events occurring in the next 1 to 3 months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like that below:
+A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like that below:
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 

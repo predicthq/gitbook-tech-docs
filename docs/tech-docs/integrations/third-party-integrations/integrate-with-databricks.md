@@ -16,7 +16,7 @@ Databricks is where many teams train demand forecasting models and build AI syst
 
 Once landed, the data serves each integration path:
 
-* **Model training** - join event features to your demand history and train in your existing Databricks ML workflow. Features are keyed by a `beam.analysis_id`, so feature selection reflects what actually drives demand at each location.
+* **Model training** - join event features to your demand history and train in your existing Databricks ML workflow. Key features by `beam.analysis_id`, so feature selection reflects what actually drives demand at each location.
 * **Inference** - retrieve future-dated features at every forecast run. [Pre-trained time series foundation models](../../getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models.md) consume features as covariates across both the demand history and the forecast horizon.
 * **Provisioned grounding** - the event tables double as the retrieval corpus for LLMs and agents built on Databricks, so AI systems answer from verified real-world context governed by your own platform - see [provisioned grounding](../integration-guides/provisioned-grounding.md).
 

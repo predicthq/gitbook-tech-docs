@@ -1,6 +1,6 @@
 # API changes
 
-The PredictHQ API may change from time to time. Major changes that break backwards compatibility arrive with a new version, but backwards compatible changes may be introduced at any time without notice.
+The PredictHQ API may change from time to time. Major changes that break backwards compatibility arrive with a new version, but we may introduce backwards compatible changes at any time without notice.
 
 For a full history of product updates, new features, and data quality improvements, see the [Changelog](https://app.gitbook.com/s/kWAay641pSmEKQBQMPWx/).
 

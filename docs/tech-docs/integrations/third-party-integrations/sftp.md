@@ -16,7 +16,7 @@ When integrating via SFTP, PredictHQ delivers data as full and incremental file 
 
 To maintain a complete and accurate dataset, process deliveries in the order they are delivered (typically by the datetime folder, oldest to newest). Within a single delivery, the individual files can be processed in any order or in parallel.
 
-For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update` or `delete`).
+For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update`, or `delete`).
 
 ### File Naming
 
@@ -24,13 +24,13 @@ For incremental updates, make sure to check the `change_action` column to work o
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
 ```
 
-<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>Each delivery is split into multiple files to keep file sizes manageable. Individual files will vary in size but will not exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data will be compressed using Snappy and the file extension will be prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
+<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>Each delivery is split into multiple files to keep file sizes manageable. Individual files will vary in size but will not exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data is compressed using Snappy and the file extension is prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
 
 Within a single delivery, files can be processed in any order. Deliveries themselves should be processed oldest to newest.
 
 ## Data Retention
 
-Files on the SFTP server are retained for a limited period and are automatically deleted after that period.
+The SFTP server retains files for a limited period and automatically deletes them after that period.
 
 Your ingestion process should fetch and persist data promptly. Do not rely on long-term availability of files on the SFTP server.
 

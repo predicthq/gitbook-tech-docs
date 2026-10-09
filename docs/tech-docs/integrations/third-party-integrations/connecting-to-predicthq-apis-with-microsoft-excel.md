@@ -37,7 +37,7 @@ This guide provides details on how to load PredictHQ's event data into Microsoft
 
 PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
+Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -59,7 +59,7 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Microsoft Excel.
 
-First, create a new Spreadsheet. Click the **Data** tab and choose Get Data as shown below:
+First, create a new Spreadsheet. Click the **Data** tab and choose **Get Data**:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
@@ -78,17 +78,17 @@ The filled-out information should look like this (except that api\_key should be
 
 <figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”, the Data Transformation page will open where data shaping options can be made before building the report.
+After clicking “OK”, the Data Transformation page opens where data shaping options can be made before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. We recommend renaming it to “PredictHQ Connection”, but if you name it something else you will need to change the Power Query below too.
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
-In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right click on the Query name under Queries and click Advanced Editor:
+In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, **changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
+Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
 
 {% hint style="info" %}
 This example will not work unless you replace the \[api\_token] with your token.\

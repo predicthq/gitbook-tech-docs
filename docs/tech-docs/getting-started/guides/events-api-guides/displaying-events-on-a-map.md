@@ -27,7 +27,7 @@ An Access Token is required to access PredictHQ's APIs and run the notebook. Fol
 The event data used in this map is sourced from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
 
 {% hint style="info" %}
-For more information on the Events API, see this [documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
+For more information on the Events API, see the [Events API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
 {% endhint %}
 
 ### Parameters
@@ -54,7 +54,7 @@ This example displays the most impactful sports event in San Francisco for the u
 
 ### Geographic Features
 
-Event coordinates are returned by the Events API in the `geo` field. It is formatted in GeoJSON format which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
+The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 
 The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). Events covering larger areas, such as parades, are classified as `polygon` or `multipolygon`. All relevant geometry information needed for rendering these types of events on a map is also contained within the `geo` field.
 
@@ -66,8 +66,8 @@ For more information on how PredictHQ events are geographically represented, see
 
 The notebook can also be[ compiled and downloaded](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) as a JavaScript module. To do this:
 
-1. Use the notebook menu to select 'Export'.
-2. Then choose 'Download code' for a local copy.
+1. Use the notebook menu to select **Export**.
+2. Then choose **Download code** for a local copy.
 
 ## Additional Examples
 

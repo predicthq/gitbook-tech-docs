@@ -10,7 +10,7 @@ Sophisticated forecasting teams building their own models on top of PredictHQ fe
 
 The worry usually comes from two observations:
 
-* **Event records are updated over time.** PredictHQ refines predicted attendance, tracks cancellations and postponements, and corrects details as an event approaches or passes.
+* **PredictHQ updates event records over time.** PredictHQ refines predicted attendance, tracks cancellations and postponements, and corrects details as an event approaches or passes.
 * **Pulling the same historical feature twice, months apart, can return a different value**, because the underlying event data has been updated in the meantime.
 
 If those updates were bleeding *future* information into a *past* forecast point, that would be true data leakage, and it would make backtest accuracy an unreliable stand-in for production accuracy. It's a fair thing to check.
@@ -19,7 +19,7 @@ If those updates were bleeding *future* information into a *past* forecast point
 
 There's an important distinction between two kinds of change:
 
-* **Changes that happen before your forecast horizon starts.** If you're forecasting 5 weeks out, and an event's predicted attendance is refined 4 months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage — it's just PredictHQ's data getting more accurate over time, the same way it would in production.
+* **Changes that happen before your forecast horizon starts.** If you're forecasting five weeks out, and an event's predicted attendance is refined 4 months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage—it's just PredictHQ's data getting more accurate over time, the same way it would in production.
 * **Changes that would only be known *after* your forecast point.** This is the scenario that would matter: if a feature used to build a training example for a 5-week-out forecast only became available 2 weeks before the event, that's information your production model would never have had at decision time.
 
 Because most events enter PredictHQ's system well ahead of when they happen — commonly 3-6 months out, and often longer — the updates that follow (postponements, cancellations, attendance refinements, venue changes) are, in practice, absorbed well before most customers' forecast horizons begin. The dynamic nature of real-world events is expected and continuous; the question that actually matters is whether that continuous refinement changes the forecast accuracy you experience, at the horizon you actually operate on.
@@ -48,7 +48,7 @@ It can still feel counterintuitive that individual events change constantly, yet
 
 Forecasting models don't consume individual event records directly — they consume features that aggregate many events together for a given location, day, and category (for example, total predicted attendance across all concerts, sports, and festivals happening near a store on a given day). A single event being postponed, cancelled, or having its attendance estimate revised is a small perturbation to one input among many contributing to that aggregate. It rarely shifts the aggregate feature enough to change the resulting forecast in any meaningful way.
 
-Individual event-level details are genuinely dynamic — that's simply what real-world context looks like. What our results show is that this dynamism, once rolled up into the aggregated features models actually use, doesn't translate into meaningful forecast accuracy drift within the horizons that matter for real forecasting decisions.
+Individual event-level details are genuinely dynamic — that's what real-world context looks like. What our results show is that this dynamism, once rolled up into the aggregated features models actually use, doesn't translate into meaningful forecast accuracy drift within the horizons that matter for real forecasting decisions.
 
 ## What this means in practice
 

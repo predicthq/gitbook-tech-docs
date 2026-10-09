@@ -35,7 +35,7 @@ The `place_hierarchy` value when understood with the `scope` of an event reveals
 
 Point events happen at a point (its coordinate location) in the locality-level place it is scoped to. Example: This [MLB game at Oracle Park](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) is a point event with `scope`value "locality" and `place_hierarchy` value `[["6295630","6255149","6252001","5332921","5391997","5391959"]]`. 5391959 is the place id of San Francisco City.
 
-Area events without polygons apply to the place it is scoped to, which will either be a county-level, region-level, or country-level place. Example: This [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n) holiday is an area event with `scope` value "country" and `place_hierarchy` value `[["6295630","6255149","6252001"]]`. 6252001 is the place id of the United States.
+Area events without polygons apply to the place it is scoped to, which is either a county-level, region-level, or country-level place. Example: This [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n) holiday is an area event with `scope` value "country" and `place_hierarchy` value `[["6295630","6255149","6252001"]]`. 6252001 is the place id of the United States.
 
 Area events with polygons apply to the area defined by the polygon's geometry. Places in the event's `place_hierarchies` are those which overlap with the polygon.
 
@@ -45,7 +45,7 @@ Place hierarchies value can be an empty array in some cases.
 
 Some events can have multiple hierarchies.
 
-Point events can have up to two hierarchies. The second hierarchy, if it exists, is a nearby major city's hierarchy within a radius of 50km. This [Bite of Seattle community festival](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9), for example, is scoped to 2 places. Its `scope` and `place_hierarchies` values are shown below. 7153941 is the place id of Denny Regrade, the neighbourhood where the festival takes place; 5809844 is the place id of Seattle, a nearby major city. `{ "scope": "locality", "place_hierarchies": [ ["6295630", "6255149", "6252001", "5815135", "5799783", "7153941"], ["6295630", "6255149", "6252001", "5815135", "5799783", "5809844"] ] }`
+Point events can have up to two hierarchies. The second hierarchy, if it exists, is a nearby major city's hierarchy within a radius of 50km. This [Bite of Seattle community festival](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9), for example, is scoped to two places. Its `scope` and `place_hierarchies` values are shown below. 7153941 is the place id of Denny Regrade, the neighbourhood where the festival takes place; 5809844 is the place id of Seattle, a nearby major city. `{ "scope": "locality", "place_hierarchies": [ ["6295630", "6255149", "6252001", "5815135", "5799783", "7153941"], ["6295630", "6255149", "6252001", "5815135", "5799783", "5809844"] ] }`
 
 Area events have multiple hierarchies if the event applies to multiple counties or regions, or if its polygon overlaps with multiple counties or regions. For example: this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) event's polygon overlaps with 3 counties in the state of Mississippi. Its `scope` and `place_hierarchies` values are shown below. 4421859, 4429877, 4450285 are the respective place ids for Claiborne County, Hinds County, and Warren County.
 

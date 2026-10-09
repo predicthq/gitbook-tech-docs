@@ -14,7 +14,7 @@ This tutorial guides you through the process of identifying, retrieving and inte
 
 ### Events Driving Demand
 
-Events, such as concerts, expos and public holidays, are known to affect consumer behavior and [drive demand](https://www.predicthq.com/use-cases/demand-forecasting). PredictHQ offers event data across [more than a dozen categories](../../predicthq-data/event-categories/), featuring a [wide range of labels](../../predicthq-data/labels.md). The [powerful data processing pipeline](https://www.predicthq.com/intelligence) ensures the delivery of high-quality, enriched event data that can be seamlessly incorporated as features into any demand forecasting model.
+Events, such as concerts, expos, and public holidays, are known to affect consumer behavior and [drive demand](https://www.predicthq.com/use-cases/demand-forecasting). PredictHQ offers event data across [more than a dozen categories](../../predicthq-data/event-categories/), featuring a [wide range of labels](../../predicthq-data/labels.md). The [powerful data processing pipeline](https://www.predicthq.com/intelligence) ensures the delivery of high-quality, enriched event data that can be seamlessly incorporated as features into any demand forecasting model.
 
 ### Integrating Event Features
 
@@ -26,11 +26,11 @@ The sections below guide you through integrating event features into your demand
 
 ### Overview
 
-Adding event features to a demand forecasting model involves straightforward steps. These include pulling a list of Important Features from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and retrieving prebuilt, forecast-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for a store or location.
+Adding event features to a demand forecasting model involves two main steps: pulling a list of Important Features from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and retrieving prebuilt, forecast-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for a store or location.
 
 <figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt=""><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
 
-Most steps are handled by PredictHQ APIs; you provide the following for each store or location:
+PredictHQ APIs handle most steps; you provide the following for each store or location:
 
 1. Historical demand data
 2. Latitude and longitude
@@ -141,4 +141,4 @@ For practical implementation:
 
 By following this tutorial, you should now understand how to enhance your demand forecasting models by integrating PredictHQ's event features. As known drivers of demand, incorporating event signals can noticeably improve the accuracy of your forecasts, empowering you to make more informed decisions and strategize more effectively.
 
-To move from this tutorial into a production integration — covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline — see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md).
+To move from this tutorial into a production integration—covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline—see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md).

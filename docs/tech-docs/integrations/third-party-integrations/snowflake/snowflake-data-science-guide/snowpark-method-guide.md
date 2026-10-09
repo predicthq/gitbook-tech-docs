@@ -13,7 +13,7 @@ There are two options for calculating features in Snowflake:&#x20;
 
 If either of the above approaches are taken, the Features API can be called for each location and have the results saved into a table instead of using SQL. These options skip the maintenance of SQL and is the recommended approach if possible.
 
-Below is an example of calling the Features API with Python in Snowpark. This uses the PredictHQ Python SDK. It loops over the **SAVED\_LOCATIONS** table, calls the Features API using the SDK, and outputs the results into a table. So, it achieves a similar result to the SQL method but using the API. This code needs to be modified to include relevant features for what is desired to be fetched.
+Below is an example of calling the Features API with Python in Snowpark. This uses the PredictHQ Python SDK. It loops over the **SAVED\_LOCATIONS** table, calls the Features API using the SDK, and outputs the results into a table. So, it achieves a similar result to the SQL method but using the API. Modify this code to include the features you want to fetch.
 
 This code is an example, not production-ready. Test and optimize it before you use it.
 

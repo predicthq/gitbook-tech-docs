@@ -55,7 +55,7 @@ To run Beam, you’ll need:
   * Required fields: date, demand
 * Saved Location
   * Provides geographic context for event retrieval
-  * When created from a lat/lon origin, Predicted Impact Area is calculated automatically and defines the geographic scope used by Beam
+  * When you create it from a lat/lon origin, Saved Locations calculates Predicted Impact Area automatically, and that area defines the geographic scope Beam uses
 
 If historical demand data is unavailable, Beam can provide industry-based approximations. These are less precise than location-specific calibration.
 
@@ -129,4 +129,4 @@ This keeps forecast inputs aligned with historical demand drivers.
 
 After running Beam, use the Beam Analysis ID with the Features API or Events API to retrieve demand-calibrated signals. For automated forecasting, use the Forecasts API, which applies Beam internally.
 
-For the recommended production architecture — including how Beam fits into a full pipeline with refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).
+For the recommended production architecture, including how Beam fits into a full pipeline with refresh cadence and data storage patterns, see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).

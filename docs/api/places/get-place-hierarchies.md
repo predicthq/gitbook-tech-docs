@@ -19,7 +19,7 @@ A place hierarchy is a list of place identifiers and types from the `planet` lev
 
 The response might include more than one hierarchy for a given coordinate. The reason for this is that we try to match the closest place's hierarchy but we also include the closest major city's hierarchy within a radius of 50km. This only applies if the `level` is below `region` and, if it exists, the major city's hierarchy is always the second item in the list.
 
-For instance, if you specify `?location.origin=47.615337,-122.203981`, which is a coordinate located in Bellevue, Washington, you'll get two hierarchies, one for Bellevue but also one for [Seattle](https://en.wikipedia.org/wiki/Seattle).
+For instance, if you specify `?location.origin=47.615337,-122.203981`, which is a coordinate located in Bellevue, Washington, you get two hierarchies, one for Bellevue but also one for [Seattle](https://en.wikipedia.org/wiki/Seattle).
 
 {% openapi-operation spec="places-api" path="/v1/places/hierarchies" method="get" %}
 [OpenAPI places-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/places-api.yaml)
@@ -56,9 +56,9 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Places API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Places+API).
+Read the [OpenAPI spec for the Places API](https://api.predicthq.com/docs/?urls.primaryName=Places+API).
 
 ## Guides
 

@@ -34,9 +34,9 @@ print(response.status_code)
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Saved Locations API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Saved+Locations+API).
+See the [OpenAPI spec for the Saved Locations API](https://api.predicthq.com/docs/?urls.primaryName=Saved+Locations+API).
 
 ## Guides
 

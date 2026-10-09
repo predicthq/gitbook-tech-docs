@@ -1,6 +1,6 @@
 # Pagination
 
-When requesting a list of records, the response will usually contain the following fields:
+When requesting a list of records, the response usually contains the following fields:
 
 <table><thead><tr><th width="190">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>count</strong></td><td>The total number of results.</td></tr><tr><td><strong>previous</strong></td><td>A URL to the previous page, or <code>null</code> if this is the first page.</td></tr><tr><td><strong>next</strong></td><td>A URL to the next page, or <code>null</code> if this is the last page.</td></tr><tr><td><strong>overflow</strong></td><td>Boolean flag that indicates if the search has more results than your subscription allows you to view.</td></tr></tbody></table>
 
@@ -34,6 +34,6 @@ The maximum number of results and pagination limits are specified in [your plan]
 
 ## Maximum Number of Results
 
-When the number of results exceeds the maximum number of records allowed by your subscription the `overflow` field is set to `true`. This indicates there are more results available but you are unable to paginate to them.
+When the number of results exceeds the maximum number of records allowed by your subscription the API sets the `overflow` field to `true`. This indicates there are more results available but you are unable to paginate to them.
 
 You can work around this limitation by performing more specific searches resulting in fewer results.

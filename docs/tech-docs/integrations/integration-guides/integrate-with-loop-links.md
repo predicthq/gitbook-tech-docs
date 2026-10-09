@@ -14,8 +14,8 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 
 * Customers can integrate Loop into their products such as a web app, mobile app, or other tool
 * Each customer can generate a unique URL to allow their users to submit event feedback and missing event information
-* Events are processed by PredictHQ in the normal way and valid events or feedback are updated in the PredictHQ system
-* Events that are added and approved via Loop are returned via the Events API
+* PredictHQ processes events in the normal way and adds valid events or feedback to its system
+* The Events API returns events that PredictHQ approves via Loop
 
 This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It will go straight to PredictHQ.
 
@@ -30,7 +30,7 @@ The link does not require authentication. It has customer details embedded. For 
 * **Label**: My First Capture Link
 * **Link**: `https://phq.link/loop/jG5KnDpad5SAUMkUtR` (note: this is not a valid link, just an example)
 
-Customers can link to the URL from within their application and feedback will go straight into the Loop system.
+You can link to the URL from within your application, and feedback goes straight into the Loop system.
 
 The advantage is customers don’t need to build a UI. The UI is responsive and works on desktop, tablet, and mobile.
 
@@ -79,7 +79,7 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 * User reviews the event details on the page and can provide feedback
 * This requires an event ID to be passed to the loop links' URL
 * Feedback is approved or rejected
-* Users will receive an email if there are any questions about their feedback
+* Users receive an email if there are any questions about their feedback
 
 <figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
 

@@ -1,5 +1,5 @@
 ---
-description: Get the count of Live TV broadcasts by category, label and more.
+description: Get the count of Live TV broadcasts by category, label, and more.
 ---
 
 # Get Broadcasts count
@@ -39,9 +39,9 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Broadcasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Broadcasts+API).
+See the [Broadcasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Broadcasts+API).
 
 ## Guides
 

@@ -10,7 +10,7 @@ In this example we explain when the different `broadcast_status` values are used
 
 Our Broadcasts API provides broadcast and viewership data for sports with the top viewership in the US. These include broadcasts for games played in the seven top US leagues: NFL, NBA, NHL, MLB, MLS, D1 NCAA Basketball, D1 NCAA Football, and also broadcasts for other sports events with high viewership.
 
-Broadcasts for the seven top US leagues have a `broadcast_status` of `scheduled`. We enrich our data with television listings to determine their televised time and location (county). The `scheduled` `broadcast_status` is for these broadcasts where we know the date, time and location of a TV broadcast based on TV schedule information.
+Broadcasts for the seven top US leagues have a `broadcast_status` of `scheduled`. We enrich our data with television listings to determine their televised time and location (county). The `scheduled` `broadcast_status` is for these broadcasts where we know the date, time, and location of a TV broadcast based on TV schedule information.
 
 Broadcasts for sports other than the seven leagues have a `broadcast_status` of `predicted` since we predict their televised time and location (county). The `predicted` `broadcast_status` means we don’t have detailed TV schedule information for the sports event. These events have high viewership and are assumed to be televised nationally (in all counties). These are typically one-off events or are finals of their respective competitions, such as the 2019 NCAA Women's Basketball Final.
 

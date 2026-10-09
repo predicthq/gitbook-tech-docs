@@ -14,7 +14,7 @@ In plain English – MAPE shows how far off your forecasts are, on average, as a
 * Good for comparing forecasts across series with different scales.
 * Can produce very large values when actual demand is low, even if the forecast is reasonable.
 
-In our expanding window evaluation framework, the MAPE is calculated not just from a single forecast, but across multiple rolling forecast iterations—this simulates how the model would perform in a real-world setting where forecasts are generated repeatedly over time, and ensures the reported accuracy reflects consistent performance, not just a one-off result.
+In our expanding window evaluation framework, the Forecasts API calculates the MAPE not just from a single forecast, but across multiple rolling forecast iterations—this simulates how the model would perform in a real-world setting where forecasts are generated repeatedly over time, and ensures the reported accuracy reflects consistent performance, not just a one-off result.
 
 ## WAPE – Weighted Absolute Percentage Error
 

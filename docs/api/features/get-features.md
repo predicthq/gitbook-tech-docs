@@ -56,7 +56,7 @@ Use the generic features in this table if you are not in one of the industries c
 
 **Attended Events Impact Pattern Features**
 
-Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. In the Features API, Impact Patterns are provided as different features with a feature per industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
+Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
 The features above are generic features and the features in the table below are the impact pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
@@ -97,7 +97,7 @@ PHQ Impact features provide daily-level aggregated stats based on the predicted 
 
 **Holidays and Observances Impact Pattern Features**
 
-These features include the Predicted Impact Patterns for public holidays and observances. For example, these features will show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
+These features include the Predicted Impact Patterns for public holidays and observances. For example, these features show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 
 {% hint style="success" %}
 We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
@@ -147,7 +147,7 @@ You can request industry-specific features which are tuned to one of three poten
 
 * Accommodation: Event spend relating to hotels and hosts for the purposes of staying at during events. Spend can extend before and after an event actually starts/ends.
 * Hospitality: Event spend on restaurants, food and drinks. Hotel restaurants are included in this industry.
-* Transportation: Ground-based transportation for the purposes of getting to and from an event. Includes public and private transport, such as taxis, rails, busses and rideshares.
+* Transportation: Ground-based transportation for the purposes of getting to and from an event. Includes public and private transport, such as taxis, rails, busses, and rideshares.
 
 <table><thead><tr><th width="440">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_spend_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_spend_expos</code></td><td>Expos</td></tr><tr><td><code>phq_spend_sports</code></td><td>Sports</td></tr><tr><td><code>phq_spend_community</code></td><td>Community</td></tr><tr><td><code>phq_spend_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_spend_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_spend_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_spend_conferences_accommodation</code></td><td>Conferences - Accommodation</td></tr><tr><td><code>phq_spend_expos_accommodation</code></td><td>Expos - Accommodation</td></tr><tr><td><code>phq_spend_sports_accommodation</code></td><td>Sports - Accommodation</td></tr><tr><td><code>phq_spend_community_accommodation</code></td><td>Community - Accommodation</td></tr><tr><td><code>phq_spend_concerts_accommodation</code></td><td>Concerts - Accommodation</td></tr><tr><td><code>phq_spend_festivals_accommodation</code></td><td>Festivals - Accommodation</td></tr><tr><td><code>phq_spend_performing_arts_accommodation</code></td><td>Performing Arts - Accommodation</td></tr><tr><td><code>phq_spend_conferences_hospitality</code></td><td>Conferences - Hospitality</td></tr><tr><td><code>phq_spend_expos_hospitality</code></td><td>Expos - Hospitality</td></tr><tr><td><code>phq_spend_sports_hospitality</code></td><td>Sports - Hospitality</td></tr><tr><td><code>phq_spend_community_hospitality</code></td><td>Community - Hospitality</td></tr><tr><td><code>phq_spend_concerts_hospitality</code></td><td>Concerts - Hospitality</td></tr><tr><td><code>phq_spend_festivals_hospitality</code></td><td>Festivals - Hospitality</td></tr><tr><td><code>phq_spend_performing_arts_hospitality</code></td><td>Performing Arts - Hospitality</td></tr><tr><td><code>phq_spend_conferences_transportation</code></td><td>Conferences - Transportation</td></tr><tr><td><code>phq_spend_expos_transportation</code></td><td>Expos - Transportation</td></tr><tr><td><code>phq_spend_sports_transportation</code></td><td>Sports - Transportation</td></tr><tr><td><code>phq_spend_community_transportation</code></td><td>Community - Transportation</td></tr><tr><td><code>phq_spend_concerts_transportation</code></td><td>Concerts - Transportation</td></tr><tr><td><code>phq_spend_festivals_transportation</code></td><td>Festivals - Transportation</td></tr><tr><td><code>phq_spend_performing_arts_transportation</code></td><td>Performing Arts - Transportation</td></tr></tbody></table>
 
@@ -213,7 +213,7 @@ PHQ Rank features provide the daily-level aggregated sum of events bucketed by P
 
 **PHQ Rank Impact Pattern Features**
 
-See the "Holidays and Observances Impact Pattern Features" under PHQ Impact in the tab above. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+See the "Holidays and Observances Impact Pattern Features" in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
@@ -267,7 +267,7 @@ Other than the date, the structure of each result here depends on how you config
 {% endtab %}
 
 {% tab title="PHQ Rank Features" %}
-<table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here is always the same as PHQ Rank features cannot currently be configured.</p><p>Will contain a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result is always the same because you cannot configure PHQ Rank features.</p><p>Will contain a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
   "rank_levels": {
     "1": 0,
     "2": 0,
@@ -434,9 +434,9 @@ for feature in phq.features.obtain_features(
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Features API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Features+API).
+See the [Features API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Features+API).
 
 ## Guides
 

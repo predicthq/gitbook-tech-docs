@@ -8,7 +8,7 @@ description: Transforming Event Data into ML-Ready Features using SQL
 
 This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
-Change this table name in all instances below with the name of the events data table that has been provisioned by PredictHQ as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
+Change this table name in all instances below with the name of the events data table that PredictHQ has provisioned as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
 
 The rest of the guide also uses temporary tables but these tables can be turned into permanent tables as needed.
 
@@ -403,7 +403,7 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 
 ## Step 3: Final Select for all Features
 
-The following code will pull features generated above all into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
+The following code pulls all the features generated earlier into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \
 This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam Analysis for the locations and use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
 
@@ -475,7 +475,7 @@ SELECT * FROM ml_features_for_locations ORDER BY location, date;
 ```
 {% endcode %}
 
-The output table should look like this (Note: the below example is only showing the first 3 columns):
+The output table should look like this (Note: the example here shows only the first three columns):
 
 <table data-full-width="true"><thead><tr><th width="141">DATE</th><th width="119">LOCATION</th><th>PHQ_ATTENDANCE_COMMUNITY</th><th>PHQ_ATTENDANCE_CONCERTS</th><th>PHQ_ATTENDANCE_CONFERENCES</th></tr></thead><tbody><tr><td>2024-01-01</td><td>Hyde Park</td><td>68</td><td>1,839</td><td>1,578</td></tr><tr><td>2024-01-02</td><td>Hyde Park</td><td>0</td><td>469</td><td>126</td></tr><tr><td>2024-01-03</td><td>Hyde Park</td><td>200</td><td>346</td><td>139</td></tr><tr><td>2024-01-04</td><td>Hyde Park</td><td>0</td><td>2,029</td><td>324</td></tr><tr><td>2024-01-05</td><td>Hyde Park</td><td>120</td><td>691</td><td>238</td></tr></tbody></table>
 

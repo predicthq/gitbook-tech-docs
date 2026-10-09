@@ -6,7 +6,7 @@ This page describes the recommended architecture for integrating PredictHQ into 
 
 A PredictHQ integration has four logical components on your side:
 
-1. **Location & Beam Management** — creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
+1. **Location & Beam Management** creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
 2. **ML Features Management** — fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
 3. **Events Management** — fetches relevant events per location for explainability and operational context, refreshed daily or weekly
 4. **Forecasting & Decision System** — consumes features for model training and inference and surfaces events alongside results for explainability
@@ -83,7 +83,7 @@ For each business location:
 2. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
 3. **Monthly refresh:** append new demand data to the existing Beam Analysis - do not delete and recreate it. Update your stored Feature Importance results with the latest output.
 
-Saved Locations are also the only way to use polygon-based boundaries with PredictHQ APIs. Polygons are stored once against the location and referenced by `location_id` across all subsequent calls.
+Saved Locations are also the only way to use polygon-based boundaries with PredictHQ APIs. You store a polygon once against the location and reference it by `location_id` across all subsequent calls.
 
 ### ML features management
 

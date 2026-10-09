@@ -8,9 +8,9 @@ description: Replace an existing forecast model.
 [OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+Read the [OpenAPI spec for Forecasts API](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
 

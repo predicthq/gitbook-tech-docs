@@ -8,7 +8,7 @@ description: >-
 
 Most teams start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies - by industry, by location type, and by how people actually move in that area. A radius that works in one market will miss impact or introduce noise in another.
 
-Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies.
+Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. PredictHQ calibrates boundaries against real demand and event data across industries and geographies.
 
 Use it as the spatial input for Events API queries, Features API calls, and Beam. Getting scope right at this step improves the quality of everything downstream.
 
@@ -58,7 +58,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Impact Area API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Predicted+Impact+Area+API).
+See the [Predicted Impact Area API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Predicted+Impact+Area+API).
 

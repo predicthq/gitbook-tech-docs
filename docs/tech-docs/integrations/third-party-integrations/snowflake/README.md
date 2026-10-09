@@ -2,7 +2,7 @@
 
 Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, governed by your own access controls. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
-Delivery is managed by PredictHQ, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
+PredictHQ manages delivery, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
 
 ## Sample Data Shares
 
@@ -16,7 +16,7 @@ PredictHQ Sample Data Shares on Snowflake Marketplace
 
 ## Customized Data Shares
 
-Customized Data Shares can be set up to match your preferences in terms of data type, location, time window and business use case. They are secure, and PredictHQ manages delivery, so they usually don't require business resources for data integrations if you're already in the Snowflake platform.
+Customized Data Shares can be set up to match your preferences in terms of data type, location, time window, and business use case. They are secure, and PredictHQ manages delivery, so they usually don't require business resources for data integrations if you're already in the Snowflake platform.
 
 [Get in touch](https://www.predicthq.com/contact) with us to discuss your needs and we will come back to you as soon as possible.
 

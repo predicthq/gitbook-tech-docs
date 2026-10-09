@@ -27,8 +27,8 @@ Below are the main steps involved in this guide:
 
 **Requirements:**
 
-1. Access to PredictHQ data via 3 methods with 3 different requirements:
-   * CSV: PredictHQ account - [Sign up here](https://signup.predicthq.com/) if you don’t already have an account.
+1. Access to PredictHQ data via three methods with three different requirements:
+   * CSV: PredictHQ account - [Sign up for a PredictHQ account](https://signup.predicthq.com/) if you don’t already have an account.
    * Snowflake: PredictHQ [Snowflake Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake)
    * API: [API Access Token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating)
 2. [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) reporting software
@@ -77,7 +77,7 @@ We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/event
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
-Once the search has completed hit the Export button on the right to get a CSV. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
+Once the search has completed click **Export** to get a CSV. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
 In Power BI, create a new report and press Get Data -> Text/CSV
 
@@ -202,7 +202,7 @@ See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-
 
 ### API Connection Method
 
-PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
+PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
 Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
@@ -353,18 +353,18 @@ The final result should look like the following:
 
 <figure><img src="../../.gitbook/assets/Final Result (1).png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
-The picture above shows how this analysis can be used; by clicking on a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
+The picture above shows how this analysis can be used; by clicking a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
 
 A useful addition to this basic view could be a drill down on the table by adding a new table visual to the group that has the 'id', 'date\_local', and 'attendance\_per\_day' columns, showing how the attendance of an event has been spread out over multiple days (if it is a multi-day event). For more understanding of multi-day events, see our [Working with Multi-day Events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) documentation.
 
-Customers can add their own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
+You can add your own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
 
 ### Example API Connection Report Template
 
-Below is a downloadable Power BI template that will automatically create the example report used throughout this guide, using the API Connection method.
+Below is a downloadable Power BI template that automatically creates the example report used throughout this guide, using the API Connection method.
 
 Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide.\
-Please wait 10-20 seconds between each step as data populates and data runs in the background.
+Wait 10-20 seconds between each step as data populates and data runs in the background.
 
 <figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 

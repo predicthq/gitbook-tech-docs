@@ -16,10 +16,10 @@ A holiday generally established and recognized by law when most businesses and s
 
 #### **Labels**
 
-Labels for a public holiday event provide more information about the holiday. The most common 5 labels are:
+Labels for a public holiday event provide more information about the holiday. The most common five labels are:
 
 1. `holiday-national`: When the day is celebrated on a country level, e.g. the entire country was celebrating [Martin Luther King Jr. Day](https://events.predicthq.com/events/rXRfgke2wuD2zv55H7) on Jan 18, 2021
-2. `holiday-local-common`: When the holiday is celebrated in only some regions of the country. E.g. only 5 out of 13 provinces and territories of Canada ([British Columbia](https://events.predicthq.com/events/KAojdY57MdQqYKYJvf), [Alberta](https://events.predicthq.com/events/joBsZRtPMSCPaD9sTQ), [Ontario](https://events.predicthq.com/events/zG3Egb83333QcyviRL), [New Brunswick](https://events.predicthq.com/events/KoTZox2GDtA4nx3CBR), and [Saskatchewan](https://events.predicthq.com/events/uhTw7zBFdZjdPDSJHb)) celebrate Family Day on the first Monday in February.
+2. `holiday-local-common`: When the holiday is celebrated in only some regions of the country. E.g. only five out of 13 provinces and territories of Canada ([British Columbia](https://events.predicthq.com/events/KAojdY57MdQqYKYJvf), [Alberta](https://events.predicthq.com/events/joBsZRtPMSCPaD9sTQ), [Ontario](https://events.predicthq.com/events/zG3Egb83333QcyviRL), [New Brunswick](https://events.predicthq.com/events/KoTZox2GDtA4nx3CBR), and [Saskatchewan](https://events.predicthq.com/events/uhTw7zBFdZjdPDSJHb)) celebrate Family Day on the first Monday in February.
 3. `holiday-local`: When the holiday is region-specific, e.g. only Texas state celebrates [Texas Independence Day](https://events.predicthq.com/events/kjqFBZH2qbzrswecDv) on Mar 2, 2021
 4. `holiday-religious`: When the holiday is celebrated for a religious reason, e.g. there are about 44 countries that celebrate [Eid al-Adha](https://events.predicthq.com/events/pYQSFxFcYgJJdzo3uc) Day
 5. `holiday-christian`: When the holiday is Christian related, e.g. [Corpus Christi](https://events.predicthq.com/events/3768MLSMzkSPo6HPjQ).
@@ -63,7 +63,7 @@ School holiday events represent the general date range in an area where the scho
 
 PredictHQ provides global estimates for School Holiday events that are not yet confirmed, predicting events up to three years into the future.
 
-These predicted events are marked with a `predicted` value in the event's `state` field and always occur in the future.
+We mark these predicted events with a `predicted` value in the event's `state` field, and they always occur in the future.
 
 Predicted School Holiday events contain the same data attributes as confirmed events, which are identified by a `state` value of `active`.
 
@@ -113,7 +113,7 @@ Here are some examples of the school holidays for the United Kingdom:
 
 To find school holidays that impact your location you can use the standard features of our events API - as follows:
 
-* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
+* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
@@ -148,7 +148,7 @@ Here are some examples of the school holidays for the United States:
 
 To find school holidays that impact your location you can use the standard features of our events API and our WebApp to find events that impact your location - as follows:
 
-* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
+* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * You can search in the WebApp for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
@@ -158,7 +158,7 @@ To find school holidays that impact your location you can use the standard featu
 These Frequently asked questions apply to district level school holidays (for the US and UK):
 
 1. **Does the data include private school holidays as well?** The data set does not cover private schools. Private schools select their own calendars and are not necessarily governed by school district dates. That being said, some private schools might follow similar calendars.
-2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data will recognize changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
+2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data recognizes changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. The weekend after a school holiday is included if the holiday ends on a Friday or Sunday.
 4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf) School holidays in the UK are scoped to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
 5. **Teacher Only Days -** We do not include teacher-only days.
@@ -199,7 +199,7 @@ An Observance is a day that is recognized nationally or internationally, usually
 
 **Labels**
 
-Labels for an observance event provide more information about the event. The most common 5 labels are:
+Labels for an observance event provide more information about the event. The most common five labels are:
 
 1. `observance-season`
    * When the observance marks the seasonal change: [June Solstice](https://events.predicthq.com/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://events.predicthq.com/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://events.predicthq.com/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://events.predicthq.com/events/5eVGwA82bfPEMdHXrM).

@@ -35,7 +35,7 @@ Powered by aggregated event data from the [Features API](https://www.predicthq.c
 To view the code used to call the Features API, Events API, and other functions (if not already pinned):
 
 * Click the left margin of the cells in the Observable notebook.
-* Alternatively, click 'Edit' in the cell menu.
+* Alternatively, in the cell menu, click **Edit**.
 
 {% hint style="info" %}
 For more information on the Features API, see [What is the Features API?](../../core-concepts/what-is-the-features-api.md)
@@ -56,13 +56,13 @@ For guidance on effectively querying the Features API, see [#customizing-event-d
 The calendar updates automatically based on the specified parameters. In this example, the intensity of the shading on the calendar reflects the total attendance for each day, reflecting how busy each day is. Interact with the calendar by:
 
 * Hovering over the days to reveal more detailed information about the events.
-* Clicking on specific days to surface the specific events occurring, providing more granular details.
+* Clicking specific days to surface the specific events occurring, providing more granular details.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe91XOWCl6CkoPUeqz46MlUxCvuzyakT2cKIeKaRUhM8LNXaZf-dkjDmKZ66xSHw8OrJmvlLQcZrP4ZlwU4LC9A7O83H1bGpJ4vEdpJwHwXcceBx-adNwQV7GcBHdMU5NssX8zGHEkraTe28PGHZqLdFpGI?key=yHYQOK_XUxkGtvg9Am0g5g" alt="" width="563"><figcaption><p>Interacting with the heatmap calendar</p></figcaption></figure>
 
 ### Exporting Code
 
-The notebook can also be [compiled and downloaded](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) as a JavaScript module. To do this:
+You can also [compile](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) the notebook and download it as a JavaScript module. To do this:
 
 1. Use the notebook menu to select 'Export'.
 2. Then choose 'Download code' for a local copy.
@@ -129,7 +129,7 @@ This section provides guidance on how to customize the underlying event data usi
 </details>
 
 {% hint style="info" %}
-For an example of calling the API in JavaScript, see [here](https://observablehq.com/@predicthq/features_api_heatmap#data). For more information on using the Features API, see these [guides](../features-api-guides/).
+For an example of calling the API in JavaScript, see the [Observable notebook's data code](https://observablehq.com/@predicthq/features_api_heatmap#data). For more information on using the Features API, see these [guides](../features-api-guides/).
 {% endhint %}
 
 ## Conclusion

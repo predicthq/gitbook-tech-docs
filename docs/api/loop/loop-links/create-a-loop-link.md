@@ -53,9 +53,9 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
+Read the [Loop API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 

@@ -4,7 +4,7 @@ description: Search feedback conversations submitted by your organization.
 
 # Search feedback
 
-Conversations are used to track feedback on existing events for example feedback on incorrect attendance or start and end dates for an event. Each piece of feedback submitted by a user is tracked as a conversation, and this endpoint returns it. You can use this to display a list of event feedback conversations submitted with Loop Links by users in your application.
+Conversations are used to track feedback on existing events for example feedback on incorrect attendance or start and end dates for an event. The API tracks each piece of feedback a user submits as a conversation, and this endpoint returns it. You can use this to display a list of event feedback conversations submitted with Loop Links by users in your application.
 
 {% openapi-operation spec="loop-api" path="/v1/loop/feedback/conversations" method="get" %}
 [OpenAPI loop-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/loop-api.yaml)
@@ -41,9 +41,9 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
-The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
+See the [Loop API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 

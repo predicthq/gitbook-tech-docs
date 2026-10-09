@@ -99,7 +99,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 **Querying demand intelligence and explainability:**
 
 * `features_api_get_features` is the primary tool for demand intelligence. Call it with `beam.analysis_id` to get calibrated, model-ready time-series features ready to feed into a decision or model.
-* `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. Pass `phq_explainability` to get the top real-world drivers behind each forecasted date. Beam is applied automatically.
+* `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. Pass `phq_explainability` to get the top real-world drivers behind each forecasted date. The system applies Beam automatically.
 * `events_api_list_events` retrieves the specific real-world activity behind a demand signal, so an agent can explain or validate a decision. Use it with `beam.analysis_id`.
 * `saved_locations_api_list_saved_location_insight_events` surfaces the highest-impact upcoming drivers for a known location.
 * `saved_locations_api_get_saved_location` returns a location's summary insights, including predicted event spend and attendance for the next 90 days.

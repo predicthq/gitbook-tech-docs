@@ -12,7 +12,7 @@ The `location` field is deprecated. Use the `geo` field for geographic informati
 
 ## **Points and Areas**
 
-Point events' locations are represented by latitude, longitude coordinates. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at `37.77859,-122.38926`.
+Latitude and longitude coordinates represent a point event's location. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at `37.77859,-122.38926`.
 
 Area events impact a geographic area such as a region, or an entire country. For example, [Christmas Day in the United Kingdom](https://events.predicthq.com/events/KmzdXpxZEq9M), is a country-wide public holiday.
 
@@ -57,8 +57,8 @@ The `location` field was previously used for latitude and longitude information.
 
 The `geo` field also contains address information. The **address** subfield within the `geo` field can contain the following information:
 
-* `country_code` (required) - 2 letter country code
-* `formatted_address` (optional) - a fully formatted address which can include street address, locality, postcode, region and country
+* `country_code` (required) - two-letter country code
+* `formatted_address` (optional) - a fully formatted address which can include street address, locality, postcode, region, and country
 * `postcode` (optional)
 * `locality` (optional) - indicates the city or town the event occurs in
 * `region` (optional) - the region or state at which the event takes place
@@ -91,7 +91,7 @@ See below for an example of the address subfield within the `geo` field:
 
 ## GeoJSON
 
-The `geo` field contains geometry information about an event's location in [GeoJSON](https://geojson.org/) format. Point events will have a Point-type geometry, with the coordinates of the event's location (same as the `location` field). Area events may have Polygon or MultiPolygon-type geometries representing the specific area impacted by the event.
+The `geo` field contains geometry information about an event's location in [GeoJSON](https://geojson.org/) format. Point events have a Point-type geometry, with the coordinates of the event's location (same as the `location` field). Area events may have Polygon or MultiPolygon-type geometries representing the specific area impacted by the event.
 
 Where an area event has a Point-type geometry, it means the event applies to the Geonames Place of the event.
 

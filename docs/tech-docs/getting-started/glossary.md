@@ -14,7 +14,7 @@ Event-driven demand is sparse and uneven. A small number of events create large 
 
 Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
-Beam analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile — one analysis per location is required.
+Beam analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
 
 For customers operating many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
 
@@ -40,7 +40,7 @@ The recommended way to call the Features API is by passing a `beam.analysis_id`,
 
 The Forecasts API delivers event-driven demand forecasts directly, without requiring customers to build or maintain their own forecasting models.
 
-Customers supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PHQ feature attribution and explainability outputs. A baseline comparison metric is included so customers can measure the MAPE improvement attributable to PredictHQ data.
+You supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PHQ feature attribution and explainability outputs. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
 
 The Forecasts API is appropriate when rapid time-to-value is the priority, or when a team does not have the capacity to build and maintain a bespoke forecasting pipeline. For teams that require full control over the underlying model, the Features API with a `beam.analysis_id` is the recommended alternative.
 
@@ -120,7 +120,7 @@ Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estima
 
 ## Predicted End Times
 
-Predicted End Time is a machine learning–generated estimate of when an event is expected to end. It is calculated by PredictHQ using historical patterns from similar events, event type, scheduled start time, and other contextual features such as venue or location.
+Predicted End Time is a machine learning–generated estimate of when an event is expected to end. PredictHQ calculates it using historical patterns from similar events, event type, scheduled start time, and other contextual features such as venue or location.
 
 Predicted End Time is especially useful when the original event data does not include a defined duration or end timestamp. It helps improve time-based demand modeling and enables better filtering, de-duplication, and overlap handling for events that span long periods.
 
@@ -194,7 +194,7 @@ Saved Locations are recommended for managing location-specific workflows and ens
 
 **Deprecated.** Suggested Radius was a PredictHQ API that returned a recommended search radius around a point location for a given industry. It has been superseded by Predicted Impact Area, which provides a more accurate, data-driven geographic boundary that accounts for real-world geography rather than a fixed circle.
 
-Existing integrations using Suggested Radius will continue to work, but new integrations should use Predicted Impact Area via Saved Locations instead.
+Existing integrations using Suggested Radius continue to work, but new integrations should use Predicted Impact Area via Saved Locations instead.
 
 * See: [Get Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
 
