@@ -111,7 +111,7 @@ Supported industries are: Retail.
 
 <table><thead><tr><th width="560">Feature</th><th width="352">Description</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_severe_weather_air_quality_retail</code></td><td>Severe Weather - Air Quality</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_blizzard_retail</code></td><td>Severe Weather - Blizzard</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_retail</code></td><td>Severe Weather - Cold Wave - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_snow_retail</code></td><td>Severe Weather - Cold Wave - Snow</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_cold_wave_storm_retail</code></td><td>Severe Weather - Cold Wave - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_retail</code></td><td>Severe Weather - Dust - (All)</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_dust_storm_retail</code></td><td>Severe Weather - Dust - Storm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_flood_retail</code></td><td>Severe Weather - Flood</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_heat_wave_retail</code></td><td>Severe Weather - Heat Wave</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_hurricane_retail</code></td><td>Severe Weather - Hurricane</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_thunderstorm_retail</code></td><td>Severe Weather - Thunderstorm</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tornado_retail</code></td><td>Severe Weather - Tornado</td><td>Retail</td></tr><tr><td><code>phq_impact_severe_weather_tropical_storm_retail</code></td><td>Severe Weather - Tropical Storm</td><td>Retail</td></tr></tbody></table>
 
-**Attended Events Impact Features**
+**Attended events impact features**
 
 See [#attended-events-impact-pattern-features](get-features.md#attended-events-impact-pattern-features "mention")
 
@@ -211,7 +211,7 @@ You can configure PHQ Attendance features using the options in the following tab
 {% tab title="PHQ Rank Features" %}
 PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
 
-**PHQ Rank Impact Pattern Features**
+**PHQ Rank Predicted Impact Patterns features**
 
 See the "Predicted Impact Patterns for holidays and observances" features in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
@@ -442,7 +442,7 @@ See the [Features API OpenAPI spec](https://api.predicthq.com/docs/?urls.primary
 
 ## Guides
 
-Below are some guides relevant to this API:
+The following guides are relevant to this API:
 
 * [What is the Features API?](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/core-concepts/what-is-the-features-api)
 * [Data science notebooks](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks)

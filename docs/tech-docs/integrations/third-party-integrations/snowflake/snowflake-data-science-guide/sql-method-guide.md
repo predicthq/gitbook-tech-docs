@@ -190,7 +190,7 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 
 ### PHQ Rank Features
 
-The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column in the following code:
+The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. The following code returns each rank level as its own column:
 
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql
@@ -290,7 +290,7 @@ SELECT * FROM phq_rank_features order by location, date;
 
 ### PHQ Impact Features
 
-The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day.
+The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day:
 
 {% code title="PHQ Impact Features" fullWidth="true" %}
 ```sql

@@ -23,7 +23,7 @@ Note that the date fields in the Events API Query Parameters are in UTC. You can
 
 The Events API provides dates and times of events in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone use the Python example in this section.&#x20;
 
-Below is an example of converting UTC time to local time using the `pytz` library in Python:
+The following is an example of converting UTC time to local time using the `pytz` library in Python:
 
 ```python
 from datetime import datetime
@@ -93,7 +93,7 @@ The `start_local` and `end_local` fields show the event spans the entire day of 
 
 ### Fixed Time
 
-Refers to events covering an exact time range. The start and end times are known (or predicted). We represent these events in UTC, and they have a timezone.&#x20;
+Refers to events covering an exact time range. The start and end times are known (or predicted). We represent these events in UTC, and they have a timezone, as in this example:&#x20;
 
 ```json
 {

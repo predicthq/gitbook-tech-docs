@@ -1,6 +1,6 @@
 ---
 description: >-
-  Attended Events are gatherings with a start and end date/time, where people
+  Attendance-based events are gatherings with a start and end date/time, where people
   come together in one location for entertainment or business.
 ---
 
@@ -236,7 +236,7 @@ The most common five types of performing-arts events are:
 
 1.  **General Theatre**
 
-    Theatre plays, for example, [The Nutcracker ballet show](https://events.predicthq.com/events/wunsQfMcMgbB2wXedq).
+    Stage plays, for example, [The Nutcracker ballet show](https://events.predicthq.com/events/wunsQfMcMgbB2wXedq).
 2.  **Comedy club**
 
     Standup comedy shows, for example, [Eddie Izzard - Wunderbar World Tour](https://events.predicthq.com/events/k2bibyMXE4B42EECnv).
@@ -363,7 +363,7 @@ The Academic Events category has six main event types affecting students’ acti
    * Graduation events may have a specific start time where applicable.
    * Graduation venues may be outside the campus.
    * Graduation events include the institute’s name in the title.
-   * Graduation events are labeled with `academic` and `graduation`.
+   * PredictHQ labels graduation events with `academic` and `graduation`.
 5. **Social**
    * Social events cover homecoming where alumni come back to the campus to visit.
    * Homecoming events may last up to a week.

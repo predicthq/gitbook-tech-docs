@@ -75,7 +75,7 @@ There are several ways to connect PredictHQ data to Power BI or other reporting 
 
 We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and click **Search**.
 
-<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>WebApp Example Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
 Once the search has completed click **Export** to get a CSV. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
@@ -90,7 +90,7 @@ To transform the CSV export:
 
 <figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
-Right-click the Query under **Queries** and go to the **Advanced Editor** option. The Query is named the same as the uploaded CSV name.
+Under **Queries**, right-click the Query and select **Advanced Editor**. The Query is named the same as the uploaded CSV name.
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
@@ -207,7 +207,7 @@ See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
+Power BI connects using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -229,7 +229,7 @@ First, start a new report. Then select Get Data -> Web
 
 <figure><img src="../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
-Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
@@ -252,12 +252,12 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
+Replace the entire existing Power Query code with the one below. Then change the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
-If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11.
+If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11 of this code:
 {% endhint %}
 
 {% code lineNumbers="true" fullWidth="true" %}
@@ -310,7 +310,7 @@ After this step the data is now ready to start building a report with, as it has
 
 ## Guide to building the report
 
-Using either of the two methods above will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. Not all the columns were transformed, just the ones used in this guide.
+Using either of the two methods above will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. The Power Query code transforms only the columns this guide uses.
 
 This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
@@ -356,7 +356,7 @@ The final result should look like the following:
 
 <figure><img src="../../.gitbook/assets/Final Result (1).png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
-The picture above shows how this analysis can be used; by clicking a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
+The final report screenshot shows how this analysis can be used; by clicking a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
 
 A useful addition to this basic view could be a drill down on the table by adding a new table visual to the group that has the 'id', 'date\_local', and 'attendance\_per\_day' columns, showing how the attendance of an event has been spread out over multiple days (if it is a multi-day event). For more understanding of multi-day events, see our [Working with Multi-day Events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) documentation.
 

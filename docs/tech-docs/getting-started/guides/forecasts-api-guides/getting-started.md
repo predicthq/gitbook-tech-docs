@@ -243,7 +243,7 @@ Visualize the actual demand we uploaded as well as the forecasted demand we just
 
 ### Ongoing forecasting
 
-After you have trained a model you can keep using that model in your ongoing workflow.
+After you have trained a model you can keep using that model in your ongoing workflow:
 
 ```mermaid
 ---

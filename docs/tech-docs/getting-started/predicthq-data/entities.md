@@ -83,7 +83,7 @@ Not all plans and subscriptions have access to this type of entity. [Talk to us]
 
 People entities include individual performers like singers/musicians (e.g. Beyoncé), or comedians (e.g. Bill Burr). They also include individual sports people like golfers (e.g. Tiger Woods), tennis players (e.g. Roger Federer), motorsports drivers (e.g. Lewis Hamilton), and other types of individuals.
 
-Below is an example of people entities showing performers for a concert:
+The following is an example of people entities showing performers for a concert:
 
 ```json
 {
@@ -129,4 +129,4 @@ Snowflake returns entity information in the ENTITIES column. That contains all t
 
 ## What is the difference between labels and entities?
 
-The difference between labels and entities is that labels describe the type of event whereas entities provide a 'link' from an event to a venue, performer, sports team, or other type of entity. Labels tell you what type of sport an event is for (e.g. `nfl`) but they don't tell you what venue the event is held at or if the event is recurring. For concerts or festivals, labels will tell you whether the event is a rock music concert but not what band is playing. Entities provide information on the sports team for sports events, bands for music events, and so on.
+The difference between labels and entities is that labels describe the type of event whereas entities provide a 'link' from an event to a venue, performer, sports team, or other type of entity. Labels tell you what type of sport an event is for (e.g. `nfl`) but they don't tell you what venue the event is held at or if the event is recurring. For concerts or festivals, labels tell you whether the event is a rock music concert but not what band is playing. Entities provide information on the sports team for sports events, bands for music events, and so on.

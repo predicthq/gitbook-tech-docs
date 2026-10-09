@@ -32,7 +32,7 @@ Incorrect scope decisions are easy to make and difficult to unwind. If scope is 
 
 **How PredictHQ addresses scope:**
 
-* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns an industry and location-specific boundary calibrated against real demand and event data. Unlike a fixed radius, it accounts for travel behaviour, population density, venue clustering, and industry type - returning a polygon or radius that reflects where event-driven demand impact actually occurs.
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns an industry and location-specific boundary calibrated against real demand and event data. Unlike a fixed radius, it accounts for travel behavior, population density, venue clustering, and industry type - returning a polygon or radius that reflects where event-driven demand impact actually occurs.
 * The recommended workflow is to use [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). When you create a location using `origin_geojson` without specifying a `geojson` area, PredictHQ calculates Predicted Impact Area automatically and stores it against that location. You can then reference it by `location_id` across Events, Features, Forecasts, and Beam - without managing the boundary yourself.
 
 ## Relevance

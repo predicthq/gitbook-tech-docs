@@ -57,7 +57,7 @@ Limit parameter allows for more results returned per “page” which allows for
 
 See also our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on how to query the Events API for events impacting your locations.
 
-With this API query string, event data can start to be loaded into Microsoft Excel.
+With this API query string, you can start loading event data into Microsoft Excel.
 
 First, create a new Spreadsheet. Then, to open the data connection options:
 
@@ -66,14 +66,14 @@ First, create a new Spreadsheet. Then, to open the data connection options:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, select the **Advanced** tab to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, to include the API Access Token request header, in the connection dialog, select the **Advanced** tab.
 
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
-   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` stands for your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields look like once you enter your API key.\
+   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` stands for your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. The following screenshot shows the fields once you enter your API key.\
       \
       ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (83).png>)\\
 
@@ -95,7 +95,7 @@ To format and expand some columns, paste the following code into the **Advanced 
 1. Under **Queries**, right-click the Query name.
 2. Click **Advanced Editor**.
 
-<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt="The right-click menu for the renamed Query in the Queries pane with Advanced Editor selected"><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
 To update the Power Query code:
 
@@ -104,7 +104,7 @@ To update the Power Query code:
 
 {% hint style="info" %}
 This example doesn't work unless you replace the \[api\_token] with your token.\
-Lines 2 and 11 refer to the Query name, if you've named it something other than "PredictHQ Connection" you will need to replace it here aswell.
+Lines 2 and 11 refer to the Query name. If you've named it something other than "PredictHQ Connection", replace it here as well.
 {% endhint %}
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. The final output of this multi-stage transformation is the following Power Query:

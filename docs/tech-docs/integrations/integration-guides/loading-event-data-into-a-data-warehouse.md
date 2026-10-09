@@ -94,7 +94,7 @@ Regardless of the method chosen for initial data creation and loading, the table
 | predicted\_event\_spend             | INTEGER   | NULLABLE |
 | predicted\_event\_spend\_industries | JSON      | NULLABLE |
 
-## JSONL file Upload Method
+## JSONL file upload method
 
 We recommend this method for large data uploads, as it efficiently manages the transfer of large volumes of data better than direct API calls.
 
@@ -114,7 +114,7 @@ To export the events:
 
 1. In the WebApp Search, set your filters and run the search.
 2. Click **Export**.
-3. Choose the JSONL file format.
+3. Choose the **JSONL** file format.
 
 You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
@@ -369,7 +369,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 With this step completed, the data from PredictHQ Events API is now populated into your BigQuery table and is ready for analytical querying. This setup initially caters to a single load of data; however, to maintain the relevance and timeliness of your data, consider adapting this script to periodically update the dataset based on changes reflected in the "updated" timestamp column of the source data. See the [section below](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) on updating your data.
 
-Below is the full code where we have combined all these three code parts into one executable.
+The full code that follows combines all three code parts into one executable.
 
 <details>
 
@@ -510,7 +510,7 @@ See the [Filtering Guide](../../getting-started/guides/events-api-guides/filteri
 
 Below is a sample BigQuery SQL query that aligns with the parameters specified for our example. This query filters events based on the categories, date range, event rank, and geographical proximity to Tom’s location.
 
-This type of query is used to find all events around a location with a specified radius for a business location. For example a restaurant, hotel, store, parking garage, or any other business location. Once you have the data loaded into GCP you will want to find how events are impacting your locations. Use the type of query in the earlier example for each location to get all the events around that location.
+You use this type of query to find all events within a specified radius of a business location. For example a restaurant, hotel, store, parking garage, or any other business location. Once you have the data loaded into GCP you will want to find how events are impacting your locations. Use the type of query in the earlier example for each location to get all the events around that location:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```sql
@@ -535,7 +535,7 @@ This query retrieves records that meet all the specified criteria, allowing Tom 
 
 Visually, this type of query allows you to pull all the events in a radius, as shown in the Radius Map image that follows:
 
-<figure><img src="../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Radius Map.png" alt="A map showing a circular radius around a business location with the surrounding events plotted inside it"><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
 A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like that below:
 

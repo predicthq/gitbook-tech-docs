@@ -69,6 +69,6 @@ Broadcast sports viewership by county in the United States - see [Live TV Events
 
 Events are linked to the venues they occur at - stadiums, conference centers, concert halls - stored as [entities](predicthq-data/entities.md). A major venue near your location is often a key source of demand. The [venues notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/venues/venues-example.ipynb) covers extracting venue information, mapping venues, event types by venue, and estimated capacities.
 
-All our Data Science Notebooks can be found in our [GitHub repo](https://github.com/predicthq/phq-data-science-docs/tree/master).
+You can find all our Data Science Notebooks in our [GitHub repo](https://github.com/predicthq/phq-data-science-docs/tree/master).
 
 For the concepts behind the workflow, see [Which API should I use?](core-concepts/which-api-should-i-use.md) Using a pre-trained forecasting model instead of training your own? See [Using event features with time series foundation models](guides/features-api-guides/using-event-features-with-time-series-foundation-models.md)

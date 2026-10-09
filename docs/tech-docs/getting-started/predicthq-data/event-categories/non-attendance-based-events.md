@@ -75,7 +75,7 @@ All school holidays events have both `school` and `holiday` labels. Some events 
 
 #### Date & time
 
-<table><thead><tr><th width="216.33333333333331">Date &#x26; Time Fields</th><th width="137" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>The weekend before a school holiday is included if the school holiday starts on a Sunday or Monday</td></tr><tr><td>End date</td><td align="center">Yes</td><td>The weekend after a school holiday is included if the holiday ends on a Friday or Sunday</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="216.33333333333331">Date &#x26; Time Fields</th><th width="137" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>We include the weekend before a school holiday if the school holiday starts on a Sunday or Monday</td></tr><tr><td>End date</td><td align="center">Yes</td><td>The weekend after a school holiday is included if the holiday ends on a Friday or Sunday</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
 Note: Datetime is used with the local timezone.
 

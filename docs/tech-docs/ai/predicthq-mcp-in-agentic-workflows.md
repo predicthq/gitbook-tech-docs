@@ -67,7 +67,7 @@ A revenue management agent works across a portfolio of hotel properties. A prope
 
 Tools: `forecasts_api_get_forecast` (with `phq_explainability`), `events_api_list_events` (with `beam.analysis_id`), `features_api_get_features` (with `beam.analysis_id`)
 
-### Workforce Scheduling
+### Workforce scheduling
 
 A workforce scheduling agent sets rosters across hundreds of locations. Several stores show a midweek demand bump. The agent pulls the drivers and sees a mix of school holidays and a regional sports event, letting it distinguish a short, event-driven spike from a sustained shift. It staffs each location accordingly and gives managers a clear, real-world rationale for the change.
 

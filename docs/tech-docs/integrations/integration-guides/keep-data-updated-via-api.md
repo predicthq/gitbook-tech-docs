@@ -16,7 +16,7 @@ Events change constantly: dates move, events are canceled or postponed, attendan
 Our records have an `updated` field which indicates the date/time the record was last updated.
 
 {% hint style="info" %}
-For example an event for a conference that starts on 1 April 2026 may originally be created in our system on 1 Jan 2026. Then the event’s details don’t change until the 5 Feb 2026 when the event is canceled. The event’s state field is then changed to `deleted` and the `deleted_reason` is changed to `cancelled`. The event’s updated field would show `2026-02-05T05:00:00Z` (for the cancellation change made to the event on 5 Feb 2026).
+For example an event for a conference that starts on 1 April 2026 may originally be created in our system on 1 Jan 2026. Then the event’s details don’t change until the 5 Feb 2026 when the event is canceled. The event’s state field then changes to `deleted` and the `deleted_reason` changes to `cancelled`. The event’s updated field would show `2026-02-05T05:00:00Z` (for the cancellation change made to the event on 5 Feb 2026).
 {% endhint %}
 
 ## High-level guide to keeping data updated

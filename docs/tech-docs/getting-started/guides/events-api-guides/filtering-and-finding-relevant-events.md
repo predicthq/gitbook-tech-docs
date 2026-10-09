@@ -58,7 +58,7 @@ params={
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
 
 * **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When you create one from a lat/lon origin, PredictHQ automatically calculates the [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and stores it as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
-* **Center Point & Radius**: For a search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
+* **Center Point & Radius**: For a search without a Saved Location, use the `within` parameter with lat/lon and a radius. To get an appropriate radius for your location and industry rather than guessing, use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius`.
 * **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states, or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
 * **Country-wide**: If your interest spans an entire country, use the `country` parameter and set it to the relevant ISO country code.
 
@@ -87,7 +87,7 @@ Select the types of events for the search:
 
 **Settings for Tom’s Pizzeria**
 
-For a broad initial survey of upcoming events, Tom has chosen to focus on categories that are likely to influence restaurant visits.
+For a broad initial survey of upcoming events, Tom has chosen to focus on categories that are likely to influence restaurant visits:
 
 ```python
 params={
@@ -241,7 +241,7 @@ For more details, visit:
 
 ### Step 3. Interpret the response
 
-Once the API call is made, the Events API returns a structured JSON response containing detailed information about the events that match the query parameters. The following is an illustrative example of what the first page of this response might look like, demonstrating initial pagination details and a sample event listing:
+After you call the API, the Events API returns a structured JSON response containing detailed information about the events that match the query parameters. The following is an illustrative example of what the first page of this response might look like, demonstrating initial pagination details and a sample event listing:
 
 <details>
 
@@ -458,7 +458,7 @@ For more details, visit:
 * [predicthq-data](../../predicthq-data/ "mention")
 {% endhint %}
 
-## Next Steps
+## Next steps
 
 With a clear view of upcoming events, Tom plans to leverage this information for various analytical and operational improvements at his Pizzeria:
 

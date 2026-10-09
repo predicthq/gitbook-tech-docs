@@ -24,7 +24,7 @@ Our APIs offer spatial search parameters to discover all events that impact your
 
 ## Basic location
 
-The `geo` field in the Events API response contains the longitude and latitude for point events. Below is an example of the location information for point events in the `geo` field. For a point type geometry object the coordinates are in the order longitude, latitude (as this follows the [geojson standard](https://geojson.org/)). Here is an example:
+The `geo` field in the Events API response contains the longitude and latitude for point events. The following is an example of the location information for point events in the `geo` field. For a point type geometry object the coordinates are in the order longitude, latitude (as this follows the [geojson standard](https://geojson.org/)). Here is an example:
 
 ```
     "geo": {
@@ -140,4 +140,4 @@ In the example images, the first polygon is part of a raw polygon before simplif
 
 <figure><img src="../../../.gitbook/assets/maine-county-raw.png" alt="Map of a Maine county showing the detailed raw polygon outline, including offshore land masses, before simplification"><figcaption><p>Raw polygon before simplification</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/maine-county-simplified.png" alt=""><figcaption><p>Polygon after simplification</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/maine-county-simplified.png" alt="Map of a Maine county showing the smoothed polygon outline after simplification, with the key boundaries retained"><figcaption><p>Polygon after simplification</p></figcaption></figure>

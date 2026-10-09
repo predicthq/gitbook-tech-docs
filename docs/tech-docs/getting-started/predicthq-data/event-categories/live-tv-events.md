@@ -17,11 +17,11 @@ Live TV Events provide viewership data that is attached to events in other categ
 Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
 
-Live TV events include live streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV).
+Live TV Events include live streaming and broadcast TV games (such as MLS Soccer games streamed on Apple TV).
 
 ## Coverage
 
-**Event Types**
+**Event types**
 
 We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Live TV Events shows viewership only for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, always show viewership in all counties in the US.
 
@@ -89,7 +89,7 @@ PHQ Viewership is the number of people who watch the live broadcast game in a co
 
 #### Timeframe for broadcasts
 
-The Live TV Events machine learning models predicted the viewership for sports games before they happen. We generate broadcast records 90 days before a sports game starts. However, we update viewership daily from 14 days before the event starts, providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. The viewership numbers generated between 90 days and 14 days can be used as a high-level less accurate indication of viewership.
+The Live TV Events machine learning models predicted the viewership for sports games before they happen. We generate broadcast records 90 days before a sports game starts. However, we update viewership daily from 14 days before the event starts, providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. You can use the viewership numbers that we generate between 90 days and 14 days before the event as a high-level, less accurate indication of viewership.
 
 #### Physical event details
 

@@ -10,7 +10,7 @@ Forecast models rely on repeated patterns in your data—seasonality, trends, an
 
 What to try:
 
-* Include at least 18 months of historical demand to capture seasonality and other patterns.
+* To capture seasonality and other patterns, include at least 18 months of historical demand.
 * Aggregate similar items, regions, or stores if individual series are sparse or noisy.
 * Focus on stable patterns: if your business underwent recent changes, exclude outdated data that no longer reflects reality.
 * Ensure consistent time intervals: avoid gaps or overlapping dates in your time series.
@@ -26,7 +26,7 @@ What to try:
 * Avoid artificial smoothing or flooring (e.g. replacing all zero values with 1), which can distort the signal.
 * Focus on series that show some recurring variation—the model performs best when it can detect trends and seasonality.
 
-### Early COVID-19 Disruption
+### Early COVID-19 disruption
 
 The early months of the COVID-19 pandemic (typically March–June 2020 or longer for many businesses) created extreme, non-recurring shifts in demand across nearly all industries. Lockdowns, panic buying, or closures drove these sudden drops or surges—none of which represent repeatable patterns the model can learn from.
 

@@ -40,6 +40,6 @@ Captcha or reCaptcha solutions that attempt to identify legitimate human users c
 
 Websites can declare if crawling is allowed or not in the robots.txt file and allow partial access, limit the crawl rate, specify the optimal time to crawl, and more. This can be used to prevent web crawlers from scraping data
 
-### Protecting or Disabling any Publicly Available APIs
+### Protect or disable any publicly available APIs
 
 Ensure you implement proper security and access controls for any publicly accessible APIs that your website uses, so that only legitimate usage has access.
