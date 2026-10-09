@@ -49,7 +49,7 @@ For the purposes of this guide, we have limited the example load to a single cit
 
 There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates require API code.
 
-**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by exporting data from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Subsequent updates should be managed through API calls to ensure the data remains current.
+**JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by exporting data from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Manage subsequent updates through API calls to keep the data current.
 
 **API Connection Method**: Connect to the PredictHQ Events API to download the latest data from the API into your data lake. This guide takes you through using the Python API connection method for GCP but similar steps would apply to other programming languages. Events data is dynamic with events changing all the time as events are canceled, postponed, shift location, or have other details change. Also, new events are being announced all the time. We recommend having a process that updates your data on a regular frequency, such as daily.
 
@@ -116,7 +116,7 @@ To export the events:
 2. Click **Export**.
 3. Choose the **JSONL** file format.
 
-You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [Create a table via JSONL upload](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a table via JSONL upload
 
@@ -138,7 +138,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 5. **Advanced Options**: Expand the **Advanced Options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: To finalize the creation, click **Create Table**.
 
-<figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick <strong>Unknown values</strong> and you're ready to create</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt="The BigQuery Advanced options section with the Unknown values checkbox ticked"><figcaption><p>tick <strong>Unknown values</strong> and you're ready to create</p></figcaption></figure>
 
 This method allows initializing your BigQuery table with a JSONL dataset suitable for bulk data uploads. However, it does not support ongoing data refreshes. See the [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section for advice on setting up a regularly updated table after initialization.
 
@@ -369,7 +369,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 With this step completed, the data from PredictHQ Events API is now populated into your BigQuery table and is ready for analytical querying. This setup initially caters to a single load of data; however, to maintain the relevance and timeliness of your data, consider adapting this script to periodically update the dataset based on changes reflected in the "updated" timestamp column of the source data. See the [section below](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) on updating your data.
 
-The full code that follows combines all three code parts into one executable.
+The full code that follows combines all three code parts into one executable:
 
 <details>
 
@@ -537,7 +537,7 @@ Visually, this type of query allows you to pull all the events in a radius, as s
 
 <figure><img src="../../.gitbook/assets/Radius Map.png" alt="A map showing a circular radius around a business location with the surrounding events plotted inside it"><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
-A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like that below:
+A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like the following:
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 

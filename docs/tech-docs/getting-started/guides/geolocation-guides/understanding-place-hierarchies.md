@@ -37,7 +37,7 @@ Point events happen at a point (its coordinate location) in the locality-level p
 
 Area events without polygons apply to the place it is scoped to, which is either a county-level, region-level, or country-level place. Example: This [Thanksgiving Day](https://events.predicthq.com/events/gEkxDPqErD5n) holiday is an area event with `scope` value "country" and `place_hierarchy` value `[["6295630","6255149","6252001"]]`. 6252001 is the place id of the United States.
 
-Area events with polygons apply to the area defined by the polygon's geometry. Places in the event's `place_hierarchies` are those which overlap with the polygon.
+Area events with polygons apply to the area the polygon's geometry defines. Places in the event's `place_hierarchies` are those which overlap with the polygon.
 
 Place hierarchies value can be an empty array in some cases.
 

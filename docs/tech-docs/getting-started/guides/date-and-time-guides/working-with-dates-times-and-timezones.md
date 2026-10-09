@@ -137,7 +137,7 @@ When the `timezone` field is `null` like this you don't need to convert the star
 
 ## Predicted End Times
 
-Many events don't have scheduled end times, for many of these events we provide a `predicted_end_time` field (in UTC) and a `predicted_end_local` (in the time zone of the location of the event). The following example shows what this might look like on an event. Note that the `start` and `end` values are exactly the same - this suggests we know the start time but not the scheduled end time, hence why we have provided a `predicted_end` value.
+Many events don't have scheduled end times, for many of these events we provide a `predicted_end_time` field (in UTC) and a `predicted_end_local` (in the time zone of the location of the event). When the `start` and `end` values are exactly the same, we know the start time but not the scheduled end time, so we provide a `predicted_end` value, as in this example:
 
 ```json
 {

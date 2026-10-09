@@ -106,13 +106,13 @@ Once the fundamentals are in place, there are simple ways to drive even more val
 * Use [Concert Residencies](https://docs.predicthq.com/getting-started/predicthq-data/entities#residencies-entities) to notify on a sequence of upcoming concerts rather than each individual event
 * Apply an “onion radius” approach to surface major events beyond the immediate area - e.g. include all relevant events within the Predicted Impact Area, then expand to 3× with a Local Rank ≥ 95, and optionally 5× with Local Rank = 100 to capture rare, high-impact events.
 
-## Real Examples
+## Real examples
 
 These customers have followed this path:
 
 * [Lighthouse](https://www.predicthq.com/customers/lighthouse): Replaced brittle manual event processes with trusted real-world context at scale, reducing support overhead.
 * [HQ revenue](https://www.predicthq.com/customers/hqrevenue): Automated demand monitoring and increased RevPAR by 10%.
-* [Wheelhouse](https://www.predicthq.com/customers/wheelhouse): Boosted nightly rates by up to 800% during major events with dynamic pricing powered by PredictHQ.
+* [Wheelhouse](https://www.predicthq.com/customers/wheelhouse): Boosted nightly rates by up to 800% during major events with dynamic pricing that PredictHQ powers.
 
 ## Common pitfalls
 

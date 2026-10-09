@@ -1,6 +1,6 @@
 # Understanding demand variability and event contribution in Beam
 
-Not all demand fluctuations are equal. Some are predictable - driven by day-of-week patterns, long-term growth trends, or seasonal cycles. Others are anomalous: unexpected spikes or drops that sit outside those regular patterns. These anomalies are where events have the most impact, and where accurate forecasting is hardest.
+Not all demand fluctuations are equal. Some are predictable, because day-of-week patterns, long-term growth trends, or seasonal cycles drive them. Others are anomalous: unexpected spikes or drops that sit outside those regular patterns. These anomalies are where events have the most impact, and where accurate forecasting is hardest.
 
 Beam helps you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand real-world context drives - things like concerts, sports games, conferences, or public holidays near your location.
 

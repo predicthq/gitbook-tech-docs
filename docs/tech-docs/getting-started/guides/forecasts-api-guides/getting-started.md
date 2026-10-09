@@ -24,7 +24,9 @@ Forecasts API Notebook Run-Through in AWS SageMaker
 
 ### Requirements
 
-1. Before you get started make sure you have an [API Token](../../api-quickstart.md#create-an-access-token).
+Before you start, you need the following:
+
+1. An [API Token](../../api-quickstart.md#create-an-access-token).
 2. To run an example yourself and adapt it to your needs, [use our Notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb).
 
 All code snippets in this guide assume the appropriate config has already been set:

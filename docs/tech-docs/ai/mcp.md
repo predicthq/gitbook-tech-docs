@@ -39,7 +39,7 @@ sequenceDiagram
 
 The MCP server supports two authentication methods.
 
-**OAuth** - when you connect using a supported client, the client redirects you to PredictHQ to authorize access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
+**OAuth** - when you connect using a supported client, the client redirects you to PredictHQ to authorize access. The client stores no credentials in its configuration. Best suited for interactive use and multi-user environments.
 
 **Bearer token** - pass your PredictHQ API key in the `Authorization: Bearer $API_TOKEN` header. Well-suited for agent and automation workflows where interactive login is not practical, or for clients that do not support OAuth. You [can create an API key in the PredictHQ WebApp](../getting-started/api-quickstart.md).
 

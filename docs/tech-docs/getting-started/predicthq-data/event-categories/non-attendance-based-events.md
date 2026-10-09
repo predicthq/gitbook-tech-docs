@@ -179,7 +179,7 @@ School holidays have no entities available
 
 **PHQ Rank**
 
-We rank school holidays for the United Kingdom (from September 2017) and the United States (from September 2018) based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ rank value.
+We rank school holidays for the United Kingdom (from September 2017) and the United States (from September 2018) based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ Rank value.
 
 All school holidays for other countries and from the US and UK before the time periods stated earlier, have a PHQ Rank of 90 to indicate the general impact on the region.
 
@@ -197,7 +197,7 @@ School holidays for the rest of the world, and from the US and UK before the tim
 
 ### Observances
 
-An Observance is a day that is recognized nationally or internationally, usually set by a major organization or government to commemorate a public health or ethical cause of importance on a national or international level. E.g. [Mother’s Day](https://events.predicthq.com/events/XLGbVwXCopCg2rnN89), [New Year’s Eve](https://events.predicthq.com/events/9sHnCzcaMEK3tRu9Wr), [World Cancer Day](https://events.predicthq.com/events/3jHMpFmP4Q5NEjGxMj), etc
+An Observance is a day that people recognize nationally or internationally, and that a major organization or government usually sets to commemorate a public health or ethical cause of importance on a national or international level. E.g. [Mother’s Day](https://events.predicthq.com/events/XLGbVwXCopCg2rnN89), [New Year’s Eve](https://events.predicthq.com/events/9sHnCzcaMEK3tRu9Wr), [World Cancer Day](https://events.predicthq.com/events/3jHMpFmP4Q5NEjGxMj), etc
 
 **Labels**
 

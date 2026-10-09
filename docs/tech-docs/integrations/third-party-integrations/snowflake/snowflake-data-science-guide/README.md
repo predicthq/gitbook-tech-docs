@@ -29,7 +29,8 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
 1. Get the Predicted Impact Area for Each Location
 2. Create the input table filled with locations
 3. Set the date range that you want to retrieve data for
-4. Choose which method to follow
+4. Choose which method to follow:
+
    1. [Snowpark Method](snowpark-method-guide.md)
    2. [SQL Method](sql-method-guide.md)
 5. Use the output in machine learning demand forecasting models or for other applications
