@@ -70,7 +70,7 @@ A formal meeting or forum relating to a certain topic between a group of people 
 
 **LABELS**
 
-Labels for a conference event provide more information about the event. The most common 5 labels are:
+Labels for a conference event provide more information about the event. The most common five labels are:
 
 1. `business`: The conferences for a commercial purpose, for example, [Dreamforce](https://events.predicthq.com/events/HAnRjF9RUX8yFnWuGv) by Salesforce.
 2. `education`: The conferences for an educational purpose, for example, [Young Social Innovators of the Year Awards](https://events.predicthq.com/events/XoEPm68yHWWNw9ysDp).
@@ -112,7 +112,7 @@ An industrial exhibition for communicating and trading purpose between business,
 
 **LABELS**
 
-Labels for an expo event provide more information about the event. The most common 5 labels are:
+Labels for an expo event provide more information about the event. The most common five labels are:
 
 1. `education`: The expos for an educational purpose or education-related topics, for example, [Riyadh International Book Fair](https://events.predicthq.com/events/cL7mv3QVd4PAwaRbvU).
 2. `technology`: The expos related to topics in technology, for example, [IIMS - Indonesia International Motor Show](https://events.predicthq.com/events/SDxxc8XymZGYWZ6nrX).
@@ -190,7 +190,7 @@ A commonly known day or a period of time when people gather together to celebrat
 
 **LABELS**
 
-Labels for a festival event provide more information about the festival. The most common 5 labels are:
+Labels for a festival event provide more information about the festival. The most common five labels are:
 
 1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://events.predicthq.com/events/duHrbmUbpFSgwypGAK).
 2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
@@ -232,7 +232,7 @@ A show or an exhibition of creative activities for an audience, for example, [a 
 
 **EVENT TYPES**
 
-The most common 5 types of performing-arts events are:
+The most common five types of performing-arts events are:
 
 1.  **General Theatre**
 
@@ -284,7 +284,7 @@ This category includes various types of events, for example, a [college event](h
 
 **LABELS**
 
-Labels for a community event provide more information about the event. The most common 5 labels are:
+Labels for a community event provide more information about the event. The most common five labels are:
 
 1. `music`, `concert`: Social events with musical activity, for example, a [karaoke at a bar](https://events.predicthq.com/events/TvzBomhs9m6JAdKRr3).
 2. `family`: Community events which are children and family-friendly, for example, a [book club breakfast in the library](https://events.predicthq.com/events/3pTSHhuXjQErhg9nwu).
@@ -354,7 +354,7 @@ The Academic Events category has six main event types affecting students’ acti
      * Spring break
      * Summer break
    * Holiday events don’t cover the public holidays such as Labor day, Easter holiday, Martin Luther King Jr. Day, etc as we already have the public holiday and observance categories.
-   * Holiday events cover the Thanksgiving break because institutions may have a different schedule, e.g. 9 days vs 4 days.
+   * Holiday events cover the Thanksgiving break because institutions may have a different schedule, e.g. nine days vs four days.
    * Holiday events start on the day after the instruction / exam finishes and ends before the following instruction starts.
    * Winter and summer breaks may overlap with intensive sessions as the break will affect the majority of students while the intensive session only affects a few.
    * Holiday events are labeled with `academic` and`holiday`.
