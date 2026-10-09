@@ -8,7 +8,7 @@ For example, a concert will take place in or at a venue entity, where people wil
 
 A venue is a physical location where an event happens. It could be an indoor area, e.g. xx hotel - conference room; or an entire building, e.g. xx stadium; or an outdoor area, e.g. xx park.
 
-Venues will be provided along with latitude, longitude, and address to locate the event.
+PredictHQ provides venues with latitude, longitude, and address to locate the event.
 
 A venue can be found on an event record as an array of entities with the type of `venue`.
 
@@ -25,7 +25,7 @@ Below is an example of the venue entity information returned in the Events API r
 },
 ```
 
-## **Event Group entities**
+## **Event group entities**
 
 Stored within the entities section on an event, an event group identifies [recurring events](../guides/date-and-time-guides/working-with-recurring-events.md) across the PredictHQ events dataset. For example, The (Summer) Olympics repeats every four years around summer time, therefore we would have an event group that is attached to all of our Summer Olympics events.
 
@@ -108,7 +108,7 @@ To get back all events linked to an entity you can call the Events API by entity
 
 For example the entity ID for the "Moscone Center - West" is hH4zrx9zYLiETvNZQrx2de. So if you query the events for that ID you will get back all events held at the Moscone Center - West. You can then use other filters to narrow down the time period, ranks, or anything else.
 
-&#x20;Here is an example of calling the events API using the Moscone Center - West entity ID:
+&#x20;Here is an example of calling the Events API using the Moscone Center - West entity ID:
 
 ```
 GET https://api.predicthq.com/v1/events?entity.id=hH4zrx9zYLiETvNZQrx2de HTTP/1.1

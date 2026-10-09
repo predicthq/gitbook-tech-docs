@@ -10,6 +10,8 @@ description: Update (replace) an existing Analysis Group.
 
 ## Examples
 
+The following examples replace an Analysis Group:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

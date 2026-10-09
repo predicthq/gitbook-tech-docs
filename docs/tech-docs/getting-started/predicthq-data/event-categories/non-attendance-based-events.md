@@ -8,7 +8,7 @@ description: >-
 
 ## Categories
 
-**Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. Polygon information is returned on the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
+**Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. The API returns polygon information in the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
 
 ### Public Holidays
 
@@ -26,7 +26,7 @@ Labels for a public holiday event provide more information about the holiday. Th
 
 #### Date & Time
 
-<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday will break into individual days if it’s celebrated over multiple days, e.g. there are 4 days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday breaks into individual days if it’s celebrated over multiple days, e.g. there are four days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
 Note: datetime is used with the local timezone. E.g. New York is celebrating New Year’s Day on January 1st EST, while San Francisco is also celebrating New Year’s Day on January 1st but in PST.
 
@@ -79,7 +79,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
+School holiday is an area event, it scopes to either locality, localadmin, county, region, or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
 
 The latitude and longitude is pointing to the center of the region or country.
 

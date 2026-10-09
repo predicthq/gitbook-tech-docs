@@ -51,7 +51,7 @@ The MCP server exposes tools across the full PredictHQ API surface:
 * **Broadcasts** - search and count live TV broadcasts
 * **Features** - retrieve aggregated ML-ready demand intelligence features
 * **Saved Locations** - create and manage locations, retrieve insight events, opening hours, and closures
-* **Beam** - create and manage analyses and analysis groups, upload demand data, and retrieve feature importance and correlation results
+* **Beam** - create and manage Analyses and Analysis Groups, upload demand data, and retrieve Feature Importance and correlation results
 * **Forecasts** - create and manage forecast models, upload demand data, train models, and retrieve forecasts with explainability
 * **Predicted Impact Area** - get predicted impact areas by location and industry
 * **Places & Geocoding** - search places, look up place hierarchies, and geocode addresses
@@ -103,7 +103,7 @@ ChatGPT supports remote MCP servers via Connectors. There are two ways to set th
 
 **Individual setup**
 
-Enable Developer Mode under **Settings > Advanced Settings**, then add a connector under **Settings > Connectors > Create**.
+Enable **Developer Mode** under **Settings > Advanced Settings**, then add a connector under **Settings > Connectors > Create**.
 
 **Workspace-wide setup**
 

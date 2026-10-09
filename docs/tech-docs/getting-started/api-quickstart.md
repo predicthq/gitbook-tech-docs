@@ -23,9 +23,9 @@ Use your API key in the `Authorization` header of every API request:
 Authorization: Bearer $API_TOKEN
 ```
 
-## Make Your First Call
+## Make your first call
 
-The Events API returns structured, deduplicated real-world events. Use it to verify your API key is working and to explore what events look like in the response.
+The Events API returns structured, deduplicated real-world events. To verify your API key is working and to explore what events look like in the response, run this request:
 
 ```python
 import requests
@@ -54,7 +54,7 @@ print(response.json())
 
 ## How PredictHQ APIs Work Together
 
-A single API call is not a production integration. PredictHQ APIs are designed to work as a pipeline:
+A single API call is not a production integration. PredictHQ designed its APIs to work as a pipeline:
 
 1. **Saved Locations** - define your business locations once using `origin_geojson`. PredictHQ calculates Predicted Impact Area automatically and stores it against each location.
 2. **Beam** - run a Beam Analysis per location using your historical demand data. Beam identifies which event categories actually drive demand at each location and returns an `analysis_id`.

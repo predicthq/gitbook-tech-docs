@@ -77,7 +77,7 @@ As you can see in the picture below, `point_1` is inside the polygon but `point_
 <figure><img src="../../../.gitbook/assets/shapely-polygon-intersects.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Coordinate Reference Systems
+Coordinate reference systems
 
 Both our API and Shapely use World Geodetic System 1984 (WGS84 also called [EPSG:4326](https://epsg.io/4326)) to represent coordinates in a Polygon or Point object by default. If you want to do more complicated GeoSpatial operations on these coordinates beyond what we have discussed here, you might need to project these objects from WGS84 to another Coordinate Reference Systems (CRS) that fits your purpose.
 {% endhint %}

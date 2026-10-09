@@ -6,7 +6,7 @@ You may spend months trying to work out which event types actually impact demand
 
 This guide shows the proven, fastest path to value - based on what’s worked across thousands of hotels and the platforms that serve them.
 
-## The Fast Path to Value
+## The fast path to value
 
 Two of the most effective ways accommodation businesses get value from PredictHQ are:
 

@@ -12,6 +12,8 @@ description: >-
 
 ## Examples
 
+Create an Analysis Group with curl or Python:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash
@@ -59,7 +61,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## Best Practices
+## Best practices
 
 See the [ML features by group notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb) for best practices on grouping analyses.
 

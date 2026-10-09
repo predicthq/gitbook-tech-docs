@@ -10,6 +10,8 @@ description: Update (replace) an existing Analysis.
 
 ## Examples
 
+Update an Analysis with these examples:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

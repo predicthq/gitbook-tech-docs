@@ -41,7 +41,7 @@ To view the code used to call the Features API, Events API, and other functions 
 For more information on the Features API, see [What is the Features API?](../../core-concepts/what-is-the-features-api.md)
 {% endhint %}
 
-### Specifying Parameters
+### Specifying parameters
 
 * **Date Range Start**: Set the start date for the period of interest.
 * **Location**: Select one of the predefined locations.&#x20;

@@ -11,7 +11,7 @@ description: >-
 The Events API provides event start and end times in UTC and in the event local time format. The date and time fields available are:
 
 * The fields that provide local time are `start_local`, `end_local`, and `predicted_end_local`. These fields have the local time end date of the event in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. This is the local time in the time zone at the event location. See the [Events API Response Fields](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for more details on these fields.
-* The fields `start`, `end` and `predicted_end` have date values in UTC format.
+* The fields `start`, `end`, and `predicted_end` have date values in UTC format.
 
 {% hint style="info" %}
 Note that the date fields in the Events API Query Parameters are in UTC. You can use the `tz` suffix to specify a time zone when querying using the date filters.
@@ -21,9 +21,9 @@ Note that the date fields in the Events API Query Parameters are in UTC. You can
 
 <summary>Previous guide on Converting to Local Time</summary>
 
-Dates and times of events provided by the Event API are in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone see the guide below.&#x20;
+Dates and times of events provided by the Events API are in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone see the guide below.&#x20;
 
-Below is an example of converting UTC time to local time using the `pytz` library in Python.
+Below is an example of converting UTC time to local time using the `pytz` library in Python:
 
 ```python
 from datetime import datetime
@@ -54,9 +54,9 @@ Dates are a little more complex and the rest of this guide will help you underst
 
 </details>
 
-## Date Concepts
+## Date concepts
 
-Internally, we have the concept of different date types for events. We don't expose these date types directly but are exposed indirectly and this guide will demonstrate how to understand dates, times and timezones on events. The different date types we refer to internally are:
+Internally, we have the concept of different date types for events. We don't expose these date types directly, but they surface indirectly and this guide will demonstrate how to understand dates, times and timezones on events. The different date types we refer to internally are:
 
 * Fixed Date
 * Fixed Time

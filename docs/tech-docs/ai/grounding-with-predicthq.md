@@ -33,7 +33,7 @@ Grounding with PredictHQ delivers verified real-world context two ways. Most dep
 
 ### Provisioned grounding - retrieval inside your environment
 
-Verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, access control, or retrieval scale matter.
+PredictHQ delivers verified event context into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, access control, or retrieval scale matter.
 
 ```mermaid
 sequenceDiagram

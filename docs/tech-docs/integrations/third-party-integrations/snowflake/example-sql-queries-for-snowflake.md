@@ -2,7 +2,7 @@
 
 Using SQL queries in Snowflake, you can manipulate the shared data to fit a variety of tasks. Feeding the data into analyses, dashboards, and machine learning models are only a few examples of what you can do with PredictHQ's data and SQL data manipulation in Snowflake.
 
-The following SQL examples are based on the Sample Data Shares we provide. Here our database name is marketplace but in your account, it would be the custom name that was chosen when the sample data shares were being added to your Snowflake account.
+The following SQL examples are based on the Sample Data Shares we provide. Here our database name is marketplace but in your account, it would be the custom name you chose when you added the sample data shares to your Snowflake account.
 
 ### Filter on Labels
 
@@ -28,7 +28,7 @@ Example Results:
 | EuGFPmDdpLcHkfZwHa | Northwest Remodeling Expo    | expos        |       64      |     \[ "construction", "expo", "product" ]    |
 | GxVVHErJWx83mizc9m | MCAA GreatFutures Forum      | conferences  |       28      | \[ "business", "conference", "construction" ] |
 
-### Filter on Latitude and Longitude
+### Filter on latitude and longitude
 
 Filtering the `GEOGRAPHY` column geo to find events around a 500-meter radius of [47.623257, -122.336498](https://goo.gl/maps/wxnLAufEpESLCcDj9) using [ST\_DISTANCE](https://docs.snowflake.com/en/sql-reference/functions/st_distance.html#st-distance) and [ST\_MAKEPOINT](https://docs.snowflake.com/en/sql-reference/functions/st_makepoint.html#st-makepoint-st-point).
 
@@ -56,7 +56,7 @@ Example Results:
 
 ### Filter with a Polygon
 
-Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st_makepolygon.html) and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to_geography.html).
+Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st_makepolygon.html), and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to_geography.html).
 
 First, we define the shape we are interested in restricting the search to, as shown in the image below.
 

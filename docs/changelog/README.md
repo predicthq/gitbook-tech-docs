@@ -14,7 +14,7 @@ You can create Projects in Bolt to group your notebooks together. Create a proje
 
 Share a project with anyone in your organization as a viewer or a collaborator, so your team can work together and see each other's notebooks instead of duplicating work or waiting to be unblocked.
 
-Projects are available now in Bolt. Open [Projects in Bolt](https://control.predicthq.com/bolt/projects).
+Projects are available in Bolt. Open [Projects in Bolt](https://control.predicthq.com/bolt/projects).
 {% endupdate %}
 
 {% update date="2026-10-06" tags="enhancement,developer-tools" %}
@@ -84,7 +84,7 @@ The PredictHQ MCP server now includes tools for searching and retrieving Predict
 
 The PredictHQ MCP server now exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
 
-Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam analyses, retrieve ML-ready features, build and train forecast models, and query impact areas - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
+Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam analyses, retrieve ML-ready features, build and train forecast models, and query Predicted Impact Area - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
 {% endupdate %}
 
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
@@ -150,7 +150,7 @@ We added descriptions at scale to attended events that previously had none - app
 {% endupdate %}
 
 {% update date="2026-04-29" tags="enhancement,webapp" %}
-## Stronger Password Policy
+## Stronger password policy
 
 Password requirements across the PredictHQ WebApp, signup, and account flows have been updated. New passwords use a 12-character minimum, with no complexity requirements beyond the minimum length.
 {% endupdate %}
@@ -192,13 +192,13 @@ You now see these holidays scoped to the places they apply to.
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}
 ## Beam Charts - Independent Axis Scaling
 
-The demand and predicted attendance axes on Beam Analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
+The demand and Predicted Attendance axes on Beam Analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
 {% endupdate %}
 
 {% update date="2026-02-19" tags="data-quality,enhancement" %}
 ## Northern Ireland Half-Term Holidays - Full-Week Coverage
 
-Northern Ireland half-term school holidays are now published as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. Customers with locations in Northern Ireland get school holiday events that cover the complete break.
+Northern Ireland half-term school holidays are now published as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
 {% endupdate %}
 
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}

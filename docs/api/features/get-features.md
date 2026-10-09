@@ -30,7 +30,7 @@ The Features API serves both halves of a forecasting integration with the same c
 }
 ```
 
-The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam Analysis is refreshed, retrain before pointing the serving path at it.
+The returned future values are real demand signals - Predicted Attendance for announced events, Predicted Impact Patterns for holidays - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam Analysis is refreshed, retrain before pointing the serving path at it.
 
 Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
 
@@ -38,7 +38,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 [OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
 {% endopenapi-operation %}
 
-## Available Features
+## Available features
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
@@ -93,7 +93,7 @@ You can configure PHQ Attendance features using the options below.
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event).
+PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
 
 **Holidays and Observances Impact Pattern Features**
 
@@ -146,7 +146,7 @@ PHQ Spend features provide daily-level aggregated stats based on total USD we pr
 You can request industry-specific features which are tuned to one of three potential industries:
 
 * Accommodation: Event spend relating to hotels and hosts for the purposes of staying at during events. Spend can extend before and after an event actually starts/ends.
-* Hospitality: Event spend on restaurants, food and drinks. Hotel restaurants are included in this industry.
+* Hospitality: Event spend on restaurants, food, and drinks. Hotel restaurants are included in this industry.
 * Transportation: Ground-based transportation for the purposes of getting to and from an event. Includes public and private transport, such as taxis, rails, busses, and rideshares.
 
 <table><thead><tr><th width="440">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_spend_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_spend_expos</code></td><td>Expos</td></tr><tr><td><code>phq_spend_sports</code></td><td>Sports</td></tr><tr><td><code>phq_spend_community</code></td><td>Community</td></tr><tr><td><code>phq_spend_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_spend_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_spend_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_spend_conferences_accommodation</code></td><td>Conferences - Accommodation</td></tr><tr><td><code>phq_spend_expos_accommodation</code></td><td>Expos - Accommodation</td></tr><tr><td><code>phq_spend_sports_accommodation</code></td><td>Sports - Accommodation</td></tr><tr><td><code>phq_spend_community_accommodation</code></td><td>Community - Accommodation</td></tr><tr><td><code>phq_spend_concerts_accommodation</code></td><td>Concerts - Accommodation</td></tr><tr><td><code>phq_spend_festivals_accommodation</code></td><td>Festivals - Accommodation</td></tr><tr><td><code>phq_spend_performing_arts_accommodation</code></td><td>Performing Arts - Accommodation</td></tr><tr><td><code>phq_spend_conferences_hospitality</code></td><td>Conferences - Hospitality</td></tr><tr><td><code>phq_spend_expos_hospitality</code></td><td>Expos - Hospitality</td></tr><tr><td><code>phq_spend_sports_hospitality</code></td><td>Sports - Hospitality</td></tr><tr><td><code>phq_spend_community_hospitality</code></td><td>Community - Hospitality</td></tr><tr><td><code>phq_spend_concerts_hospitality</code></td><td>Concerts - Hospitality</td></tr><tr><td><code>phq_spend_festivals_hospitality</code></td><td>Festivals - Hospitality</td></tr><tr><td><code>phq_spend_performing_arts_hospitality</code></td><td>Performing Arts - Hospitality</td></tr><tr><td><code>phq_spend_conferences_transportation</code></td><td>Conferences - Transportation</td></tr><tr><td><code>phq_spend_expos_transportation</code></td><td>Expos - Transportation</td></tr><tr><td><code>phq_spend_sports_transportation</code></td><td>Sports - Transportation</td></tr><tr><td><code>phq_spend_community_transportation</code></td><td>Community - Transportation</td></tr><tr><td><code>phq_spend_concerts_transportation</code></td><td>Concerts - Transportation</td></tr><tr><td><code>phq_spend_festivals_transportation</code></td><td>Festivals - Transportation</td></tr><tr><td><code>phq_spend_performing_arts_transportation</code></td><td>Performing Arts - Transportation</td></tr></tbody></table>

@@ -14,9 +14,9 @@ Event-driven demand is sparse and uneven. A small number of events create large 
 
 Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
-Beam analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
+Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
 
-For customers operating many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
+If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
 
 Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate analyses - doing so loses accumulated correlation history.
 
@@ -27,7 +27,7 @@ Beam should be refreshed monthly by appending new demand data to the existing an
 
 The Features API transforms real-world events into structured, model-ready time-series signals for demand forecasting and ML pipelines.
 
-Rather than returning individual event records, it produces daily or weekly numerical aggregates grouped by event type — concerts, sports, public holidays, school holidays, and more. Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics, encapsulating the domain expertise required to turn raw event data into reliable demand signals.
+Rather than returning individual event records, it produces daily or weekly numerical aggregates grouped by event type—concerts, sports, public holidays, school holidays, and more. Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics, encapsulating the domain expertise required to turn raw event data into reliable demand signals.
 
 The Features API is the recommended integration surface for any use case involving forecasting, ML, staffing, pricing, or inventory decisions. It should be used in place of querying the Events API and constructing features manually — naive event aggregation introduces noise and degrades model performance.
 
@@ -40,7 +40,7 @@ The recommended way to call the Features API is by passing a `beam.analysis_id`,
 
 The Forecasts API delivers event-driven demand forecasts directly, without requiring customers to build or maintain their own forecasting models.
 
-You supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PHQ feature attribution and explainability outputs. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
+You supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PredictHQ feature attribution and explainability outputs. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
 
 The Forecasts API is appropriate when rapid time-to-value is the priority, or when a team does not have the capacity to build and maintain a bespoke forecasting pipeline. For teams that require full control over the underlying model, the Features API with a `beam.analysis_id` is the recommended alternative.
 
@@ -81,7 +81,7 @@ Loop is PredictHQ’s event feedback and contribution tool that allows customers
 
 You can use the Loop UI to provide feedback, or use Loop Links - unique URLs generated via API - to enable distributed teams or frontline staff to contribute feedback without requiring full access to PredictHQ’s WebApp.
 
-All submitted feedback is reviewed by PredictHQ’s data team, and accepted changes are integrated into the platform, enhancing data accuracy and model performance.
+PredictHQ’s data team reviews all submitted feedback and integrates accepted changes into the platform, enhancing data accuracy and model performance.
 
 * API Reference: [Loop](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop "mention")
 * [Loop UI](https://loop.predicthq.com/)
@@ -114,7 +114,7 @@ The score is presented on a logarithmic scale, meaning that higher scores repres
 
 ## Predicted Attendance
 
-Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API and Forecasts API to quantify potential demand impact.
+Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API, and Forecasts API to quantify potential demand impact.
 
 * Getting Started Guide: [predicted-attendance.md](predicthq-data/predicted-attendance.md "mention")
 
@@ -160,13 +160,13 @@ Predicted Impact Area replaces the Suggested Radius API for all new integrations
 
 Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. These patterns are derived from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and are tailored by event type and industry vertical.
 
-Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak 1–2 days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
+Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak one to two days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 
 Predicted Impact Patterns are industry-specific and are designed to improve upon static or date-anchored features in demand forecasting models. They are designed to improve forecast accuracy by encoding time-aware event impact into supervised learning pipelines.
 
 * Getting Started Guide: [impact-patterns.md](predicthq-data/impact-patterns.md "mention")
 
-## Real-World Context
+## Real-world context
 
 Real-world context refers to structured, verified representations of real-world activity that materially influence demand - events, venues, performers, and associated quantitative signals such as predicted attendance, spend, rankings, and temporal impact patterns.
 

@@ -10,6 +10,8 @@ description: Get the count of Live TV broadcasts by category, label, and more.
 
 ## Examples
 
+The following requests get the count of Broadcasts for one event:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

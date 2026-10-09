@@ -2,7 +2,7 @@
 description: >-
   Install PredictHQ agent skills to give AI coding assistants best-practice
   integration knowledge - recommended workflow, API selection, and Beam
-  guidance, applied automatically while you build.
+  guidance, which your agent applies automatically while you build.
 ---
 
 # Agent skills
@@ -13,10 +13,12 @@ The skill encodes the same guidance these docs recommend, so code written with i
 
 * The recommended integration workflow - Saved Locations and Predicted Impact Area first, then Beam, then features
 * API selection - Features API for model inputs, Events API for explainability, and when the Forecasts API is the better fit
-* Beam best practices - one analysis per location, `beam.analysis_id` on every downstream call, monthly refresh
+* Beam best practices - one Analysis per location, `beam.analysis_id` on every downstream call, monthly refresh
 * Common mistakes to avoid - manual event aggregation, fixed radii, skipping Beam
 
 ## Install
+
+To install the skills, run:
 
 ```bash
 npx skills add predicthq/agent-skills

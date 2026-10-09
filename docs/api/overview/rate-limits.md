@@ -4,13 +4,13 @@ The API rate limits your requests based on the limit specified in your plan. Rat
 
 E.g. a rate limit of 50 rps means you can make 50 requests in a second.
 
-The rate limit applies to your entire Organization as a whole, regardless of IP address or API Token. If you exceed your rate limit, requests may be rejected with the `429 Too Many Requests` response code until the rate limit resets at the start of the next window.
+The rate limit applies to your entire Organization as a whole, regardless of IP address or API Token. If you exceed your rate limit, the API may reject requests with the `429 Too Many Requests` response code until the rate limit resets at the start of the next window.
 
 {% hint style="info" %}
 From time-to-time we may introduce additional temporary rate limits to ensure the reliability of our service is maintained.
 {% endhint %}
 
-### Concurrent Requests
+### Concurrent requests
 
 Your rate limit controls how many requests per second your organisation can make, but it does not limit how many of those requests can be in-flight simultaneously. Sending a large number of concurrent requests—even within your rps limit—can cause bursts that exceed your limit, result in `429` errors, and put unnecessary pressure on the API.
 
@@ -26,6 +26,6 @@ See Retrying Failed Requests for guidance on backoff and retry behaviour.
 
 ### Retrying Failed Requests
 
-Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. See the following page with advice on retrying failed requests.
+Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. See the following page with advice on retrying failed requests:
 
 * [#retrying-failed-requests](troubleshooting.md#retrying-failed-requests "mention")

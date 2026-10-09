@@ -61,9 +61,9 @@ The end result of the exercise will be a report like this:
 
 <figure><img src="../../.gitbook/assets/Final Result.png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
 
-## Select an Input Method
+## Select an input method
 
-There are several ways to connect PHQ data to Power BI or other reporting software. Below are three of the main methods you can use to connect and start creating reports.
+There are several ways to connect PredictHQ data to Power BI or other reporting software. Below are three of the main methods you can use to connect and start creating reports.
 
 [**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): This method connects data straight from the PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
@@ -73,13 +73,13 @@ There are several ways to connect PHQ data to Power BI or other reporting softwa
 
 ### CSV Upload Method
 
-We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and hit search.
+We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and click **Search**.
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt=""><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
 Once the search has completed click **Export** to get a CSV. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
-In Power BI, create a new report and press Get Data -> Text/CSV
+In Power BI, create a new report and press **Get Data** -> **Text/CSV**
 
 <figure><img src="../../.gitbook/assets/New CSV Connection.png" alt=""><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
 
@@ -239,7 +239,7 @@ The filled-out information should look like this:
 
 <figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”, the Data Transformation page will open where data shaping options can be made before building the report.
+After clicking “OK”, the Data Transformation page opens where data shaping options can be made before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.
 
@@ -249,7 +249,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, changing the 2 lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
+Replace the entire existing Power Query code with the one below, changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
@@ -347,7 +347,7 @@ Rename the chart title by clicking the chart and going to the Visualizations tab
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
-Click on the "phq\_attendance" column in the table twice to sort by highest to lowest attendance.
+Click the "phq\_attendance" column in the table twice to sort by highest to lowest attendance.
 
 The final result should look like the following:
 
@@ -372,7 +372,7 @@ Once the data connection has loaded for a bit you might be prompted for a connec
 
 <figure><img src="../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 
-If there are any issues with this template please refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
+If there are any issues with this template refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
 
 #### Example Report:
 

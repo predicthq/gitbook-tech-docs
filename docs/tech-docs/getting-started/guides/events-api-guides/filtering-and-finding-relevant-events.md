@@ -24,7 +24,7 @@ Let's take a fictional example: Tom, the owner of Tom’s Pizzeria in Downtown S
 
 The sections below will guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
 
-### Step 1. Define Query Parameters for the Events API
+### Step 1. Define query parameters for the Events API
 
 Given the volume of events happening all the time, choosing the right query parameters is crucial for identifying relevant events. The next section outlines the most commonly used parameters from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events), providing guidance on how to use them along with Tom’s choices:
 
@@ -32,7 +32,7 @@ Given the volume of events happening all the time, choosing the right query para
 
 <summary>Date Range</summary>
 
-Set the date range for the search.
+Set the date range for the search with one of these parameters:
 
 * **Active**: Use the `active` parameter to include all events that are ongoing in the date range.
 * **Start**: To focus on the start dates of events, the date range should be set using the `start` parameter.
@@ -58,13 +58,13 @@ params={
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
 
 * **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When created from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
-* **Center Point & Radius**: For a quick search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
-* **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
+* **Center Point & Radius**: For a search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
+* **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states, or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
 * **Country-wide**: If your interest spans an entire country, use the `country` parameter and set it to the relevant ISO country code.
 
 **Settings for Tom’s Pizzeria**
 
-Tom creates a Saved Location for his pizzeria at (47.60, -122.33) in the `restaurants` industry. Predicted Impact Area is calculated automatically when the location is created, defining the polygon boundary where event-driven demand impact actually occurs for his location. Tom then queries events using `saved_location.location_id` — no separate area lookup needed:
+Tom creates a Saved Location for his pizzeria at (47.60, -122.33) in the `restaurants` industry. PredictHQ calculates Predicted Impact Area automatically when Tom creates the location, defining the polygon boundary where event-driven demand impact actually occurs for his location. Tom then queries events using `saved_location.location_id`, with no separate area lookup needed:
 
 ```python
 params={
@@ -113,7 +113,7 @@ Define the event impact for the search.
 
 **Settings for Tom’s Pizzeria**
 
-To focus his resources efficiently and avoid spending time on smaller, less impactful events, Tom sets a minimum PHQ rank threshold of 30, which is recommended for his industry.
+To focus his resources efficiently and avoid spending time on smaller, less impactful events, Tom sets a minimum PHQ Rank threshold of 30, which is recommended for his industry.
 
 ```python
 params={

@@ -34,7 +34,7 @@ Labels for a sports event provide more information about the type, league, and e
    * These events are defined as any sports event where competitors are younger than adult age, whether children or adolescents. Youth sports include school sports at primary and secondary level, as well as sports played outside the education system, whether informally or organized. They do not include colleague sports which are separate and can be cound with the `NCAA` label.
    * Sports covered are youth basketball, baseball, softball, and soccer
    * These events are for the US (with a very small amount in Canada)
-   * Youth sports include a new dynamic ranking model that predicts attendance and rank based on the type of sport, age group, level, gender, population density, student numbers, and other features
+   * Youth sports include a dynamic ranking model that predicts attendance and rank based on the type of sport, age group, level, gender, population density, student numbers, and other features
 
 #### Date & Time
 
@@ -193,7 +193,7 @@ A commonly known day or a period of time when people gather together to celebrat
 Labels for a festival event provide more information about the festival. The most common five labels are:
 
 1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://events.predicthq.com/events/duHrbmUbpFSgwypGAK).
-2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
+2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry, and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
 3. `family`: The festivals which are family-friendly and children-friendly, for example, [Magnificent Mile Lights Festival](https://events.predicthq.com/events/vFQK4H3yaujGqwnR4z).
 4. `community`: Traditional festivals in the local area. Community festivals are less formal than world-wide festivals and may also include street markets and entertainment activities. The [Odunde Festival](https://events.predicthq.com/events/dkbGjQW943KSL5hT8b) is an example of a community festival.
 5. `food`: Food festivals where communities or businesses trade food products, for example, [Bite of Seattle](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9).
@@ -331,7 +331,7 @@ Note:
 
 **LABELS / EVENT TYPES**
 
-The Academic Events category has six main event types affecting students’ activities. The dates are retrieved from the official academic calendar and/or estimated based on the pattern. The estimated date will have an additional `estimated` label.
+The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates.
 
 1. **Academic-session**
    * The compulsory academic session for students to graduate upon completion.

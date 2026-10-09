@@ -2,7 +2,7 @@
 
 PredictHQ has four core APIs, plus an MCP server for AI assistants and agents. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
 
-## The Short Answer
+## The short answer
 
 | Goal                                                  | API                                                                                                          |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -60,7 +60,7 @@ Beam is not a data retrieval API - it is PredictHQ's relevancy engine, which tel
 
 Run Beam before building forecasts or configuring the Features API. The `analysis_id` Beam produces is the key input to both the Features API and Events API, automatically applying the correct location boundary, event category filters, and rank thresholds.
 
-Beam should be run once per location and refreshed monthly. It is required for any integration that uses the Features API.
+Run Beam once per location and refresh it monthly. It is required for any integration that uses the Features API. For more detail, see:
 
 * [Beam API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)
 * [What is Beam?](what-is-beam.md)

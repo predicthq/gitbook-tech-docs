@@ -6,7 +6,7 @@ description: >-
 
 # Labels
 
-All our events occur within a category. We also have labels that indicate the classification within a category. You can think of it as sub-category level information. Sports is a category in our system but if you want to know what type of sport an event is for that is indicated by labels (e.g. `nfl`, `mls`, `nhl`, `nba`, etc)&#x20;
+All our events occur within a category. We also have labels that indicate the classification within a category. You can think of it as sub-category level information. Sports is a category in our system but if you want to know what type of sport an event is for, labels indicate it (e.g. `nfl`, `mls`, `nhl`, `nba`, etc)&#x20;
 
 For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
 
@@ -42,7 +42,7 @@ PHQ Labels are available for the following categories:
 * Terror
 * Sports
 
-#### PHQ Label Values
+#### PHQ Label values
 
 PHQ Labels are continuously improved and updated, so the set of values grows over time. The [full list of PHQ Label values](#all-phq-label-values) is on this page, refreshed daily, along with a CSV download. To see which labels appear on the events **within your PredictHQ plan** - and the count of events carrying each - use [Get event counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts).
 
@@ -83,7 +83,7 @@ print(phq_labels)
 
 You can also see a list of PHQ Labels in the **Labels** field on the [Search events](https://control.predicthq.com/search/events) page of the WebApp:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The "Labels" field in the WebApp Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The <strong>Labels</strong> field in the WebApp Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
 
 #### All PHQ Label values
 

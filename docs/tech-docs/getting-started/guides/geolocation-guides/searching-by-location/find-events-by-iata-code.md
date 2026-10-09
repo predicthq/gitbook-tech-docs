@@ -6,7 +6,7 @@ The `/events` API endpoint supports the use of IATA (3 character), ICAO (4 chara
 
 {% file src="../../../../.gitbook/assets/airport-codes.csv" %}
 
-We can use the IATA code for _Los Angeles Airport (LAX)_, `place.scope=LAX`, to find all the _concerts_ events, `category=concerts`, which are active on _3rd of March, 2018_, `active.gte=2018-03-03` and `active.lte=2018-03-03`.
+We can use the IATA code for _Los Angeles Airport (LAX)_, `place.scope=LAX`, to find all the _concerts_ events, `category=concerts`, which are active on _3rd of March, 2018_, `active.gte=2018-03-03` and `active.lte=2018-03-03`:
 
 ```python
 import requests

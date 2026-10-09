@@ -12,6 +12,8 @@ Conversations are used to track feedback on existing events for example feedback
 
 ## Examples
 
+The following examples search for feedback conversations by Loop Link:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

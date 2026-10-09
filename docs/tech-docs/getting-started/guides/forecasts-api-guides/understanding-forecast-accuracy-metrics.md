@@ -2,7 +2,7 @@
 
 The Forecasts API provides three common metrics to help you evaluate how well the model is performing. Each metric highlights a different aspect of error—use them together to get a complete picture.
 
-## MAPE – Mean Absolute Percentage Error
+## MAPE – mean absolute percentage error
 
 MAPE quantifies the average magnitude of forecast error as a percentage of actual values. It’s easy to interpret and especially useful for comparing forecast performance across products, locations, or scales. However, it can become distorted when actual values are close to zero.
 

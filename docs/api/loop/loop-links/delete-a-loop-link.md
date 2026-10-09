@@ -10,6 +10,8 @@ description: Delete an existing Loop Link.
 
 ## Examples
 
+The following examples delete a Loop Link:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

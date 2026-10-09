@@ -10,6 +10,8 @@ description: Rerun the Beam correlation and analysis process.
 
 ## Examples
 
+The following examples refresh an Analysis:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

@@ -13,7 +13,7 @@ Note that you don't receive an error when requesting a date range or location th
 
 This is sometimes confused with missing data. If you're not seeing the results you expect to see then ensure your subscription covers the location or time period you're searching for.
 
-Your subscription settings can be viewed in our [WebApp](https://control.predicthq.com/settings/plans).
+You can view your subscription settings in our [WebApp](https://control.predicthq.com/settings/plans).
 {% endhint %}
 
 {% hint style="info" %}
@@ -88,7 +88,7 @@ See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryNa
 ## Guides
 
 {% hint style="info" %}
-**Airport Codes Mapping File**\
+**Airport codes mapping file**\
 Airport codes are mapped to Place IDs. The current mapping of airport code to Place ID is in the [airport codes mapping file](https://github.com/predicthq/api-specs/blob/main/data/airport-codes.csv).
 {% endhint %}
 

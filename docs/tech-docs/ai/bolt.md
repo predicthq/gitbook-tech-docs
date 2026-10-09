@@ -14,7 +14,7 @@ Bolt is also a working example of **grounding**: it answers from verified, live 
 Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help us improve it
 {% endhint %}
 
-## What You Can Do
+## What you can do
 
 **Explore PredictHQ data through conversation.** Ask about events, demand signals, locations, and forecast inputs in plain language. Bolt queries PredictHQ's APIs on your behalf and returns real results - not synthetic examples.
 
@@ -40,9 +40,9 @@ Bolt manages cards as the conversation evolves - it collapses cards that are no 
 
 ## PredictHQ Best Practices Built In
 
-Bolt is configured with PredictHQ's integration best practices. It follows the recommended workflow automatically:
+PredictHQ configures Bolt with its integration best practices. It follows the recommended workflow automatically:
 
-* Creates Saved Locations before running Beam analyses
+* Creates Saved Locations before running Beam Analyses
 * Uses Predicted Impact Area rather than fixed radii
 * Runs Beam to identify which events drive demand at each location before retrieving features
 * Uses the Features API for demand signals and the Events API for drill-down and explainability
@@ -63,6 +63,8 @@ Start by describing your use case or location - for example:
 Bolt guides you from there.
 
 ## Next Steps
+
+Continue with these pages:
 
 * [MCP server](mcp.md) - connect Bolt's capabilities to your own AI assistant or coding environment
 * [Agent skills](agent-skills.md) - install PredictHQ best practices into your AI coding agent

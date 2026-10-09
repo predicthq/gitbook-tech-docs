@@ -4,14 +4,14 @@ Not all demand fluctuations are equal. Some are predictable - driven by day-of-w
 
 Beam is designed to help you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand is driven by real-world context - things like concerts, sports games, conferences, or public holidays near your location.
 
-## How Beam Identifies Anomalous Demand
+## How Beam identifies anomalous demand
 
 Beam analyses your historical demand data and decomposes it into two components:
 
 * **Baseline demand**: The stable, predictable portion of demand. This captures long-term trends, regular seasonal patterns, and recurring cycles - the demand you'd expect even without any unusual external influences.
 * **Anomalous demand**: Everything left over after the baseline is removed. This is the variable, irregular portion of demand - the spikes and dips that can't be explained by your regular structured patterns alone. External factors like events, weather, or promotions tend to show up here.
 
-The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means more of your demand is being driven by anomalous, external factors - which in turn means there's more opportunity for real-world context to improve your forecasts.
+The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means anomalous, external factors drive more of your demand - which in turn means there's more opportunity for real-world context to improve your forecasts.
 
 > Beam's decomposition is optimised for identifying event-driven anomalies and may differ from decompositions produced by other tools such as STL or Prophet.
 
@@ -42,9 +42,11 @@ Like the demand variability ratio, this is calculated separately for positive an
 Understanding demand variability and event contribution gives you two practical advantages:
 
 1. **Knowing whether events are relevant to your business.** If events explain a large share of your anomalous demand, incorporating event features into your forecasting model is likely to meaningfully improve accuracy. If the contribution is low, other factors (promotions, weather, etc.) may be more important to focus on.
-2. **Knowing which events matter.** Beam's feature importance analysis goes a step further - it identifies which specific event categories (concerts, sports, conferences, public holidays, etc.) are the primary drivers of your demand variability. This lets you prioritise the right signals when building or refining your models.
+2. **Knowing which events matter.** Beam's Feature Importance analysis goes a step further - it identifies which specific event categories (concerts, sports, conferences, public holidays, etc.) are the primary drivers of your demand variability. This lets you prioritise the right signals when building or refining your models.
 
 ## Next Steps
+
+To continue:
 
 * Use the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview) to run an analysis on your demand data.
 * See [Feature Importance in Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) to understand which event categories are driving your demand.

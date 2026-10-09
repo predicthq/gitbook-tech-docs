@@ -10,6 +10,8 @@ description: Re-run the Beam Analysis Group aggregation process.
 
 ## Examples
 
+Refresh an Analysis Group with:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

@@ -2,7 +2,7 @@
 
 The Features API transforms real-world events into structured time-series signals for forecasting, analytics, and other time-dependent models.
 
-Instead of returning individual event records, it produces daily or weekly numerical aggregates grouped by event type (e.g. Concerts, Sports, Public Holidays). Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics.
+Instead of returning individual event records, it produces daily or weekly numerical aggregates grouped by event type (e.g. Concerts, Sports, Public Holidays). Aggregations incorporate Predicted Attendance, Predicted Impact Patterns, spend estimates, and ranking metrics.
 
 Outputs are deterministic, time-aligned feature series scoped to a specific location and date range.
 
@@ -11,7 +11,7 @@ Outputs are deterministic, time-aligned feature series scoped to a specific loca
 We've built up years of expertise in transforming real-world events into meaningful demand signals. Across industries, we’ve consistently seen that naïve aggregation produces noise rather than uplift. The Features API encapsulates that experience - delivering proven, engineered signals that improve forecast accuracy without the heavy lifting.
 {% endhint %}
 
-## Why the Features API Exists
+## Why the Features API exists
 
 Individual events are not directly usable in forecasting models.
 
@@ -37,11 +37,11 @@ The Features API:
 
 * Aggregates event metrics by category and date
 * Distributes attendance across multi-day spans
-* Applies temporal impact patterns
+* Applies Predicted Impact Patterns
 * Supports rank-based and attendance-based filtering
 * Returns daily or weekly feature values
 
-For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate predicted attendance of 150,000 across a hundred or more events - returned as one model-ready number per category, per day.
+For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate predicted attendance of 150,000 across 100 or more events - returned as one model-ready number per category, per day.
 
 It does not determine which features are relevant to your business. Beam handles relevance calibration. The Features API focuses on transforming scoped events into structured numerical signals.
 
@@ -89,7 +89,7 @@ If you’re not using Beam, you can also configure inputs manually:
 
 The Features API returns a time series of feature values for each date (or week) in your request, aligned to the timezone of the location.
 
-Each feature includes statistics or level counts depending on the field, in JSON (best for programmatic use) or CSV (best for spreadsheets and BI tools). Both formats are designed for downstream use with no extra post-processing. For the exact field structure, column-naming pattern, and available stats, see the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features).
+Each feature includes statistics or level counts depending on the field, in JSON (best for programmatic use) or CSV (best for spreadsheets and BI tools). We designed both formats for downstream use with no extra post-processing. For the exact field structure, column-naming pattern, and available stats, see the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features).
 
 ## Best Practices
 

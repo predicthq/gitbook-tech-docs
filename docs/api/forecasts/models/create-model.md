@@ -14,6 +14,8 @@ You can view the [Forecasts API OpenAPI spec](https://api.predicthq.com/docs/?ur
 
 ## Guides
 
+For more information, see these guides:
+
 * [Getting started with Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started)
 * [Understanding forecast accuracy metrics](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)
 * [Troubleshooting guide for Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/troubleshooting)

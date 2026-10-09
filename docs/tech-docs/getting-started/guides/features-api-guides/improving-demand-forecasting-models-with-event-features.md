@@ -8,9 +8,9 @@ description: >-
 
 Adding PredictHQ event features to a demand forecasting model reduces forecast error in a way you can measure and attribute - and what a point of accuracy is worth is relative to your business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
 
-This tutorial guides you through the process of identifying, retrieving and integrating relevant, demand-driving event features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
+This tutorial guides you through the process of identifying, retrieving, and integrating relevant, demand-driving event features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
 
-## Harnessing Event Signals
+## Harnessing event signals
 
 ### Events Driving Demand
 
@@ -74,7 +74,7 @@ Specify your industry as there are several industry-specific settings required i
 
 **Location**
 
-Define the catchment area around your store or location using [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry, and the impact area boundary is calculated and stored automatically.
+Define the catchment area around your store or location using [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry, and the Predicted Impact Area boundary is calculated and stored automatically.
 
 **Rank Thresholds**
 

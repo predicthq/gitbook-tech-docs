@@ -10,6 +10,8 @@ description: Update your Loop Settings.
 
 ## Examples
 
+Update the organization name:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

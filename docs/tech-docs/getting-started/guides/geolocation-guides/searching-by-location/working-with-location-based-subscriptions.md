@@ -6,7 +6,7 @@
 
 You can purchase access to PredictHQ's events in different ways. You can purchase access to geographic areas like cities, states, or countries. Or you can purchase access to a number of locations to get access to specific business locations. Business locations include stores, hotels, restaurants, parking garages, offices, or any other type of location you can think of.
 
-Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product finds the latitude and longitude for that location and sets a [predicted impact area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and save the location with those details.
+Under the hood, location-based access uses latitude, longitude, and radius to control what you can access. In the UI you can enter a street address for a business location and the product finds the latitude and longitude for that location and sets a [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and save the location with those details.
 
 You can purchase location-based access if you have a number of business locations across a region, country, or multiple countries that you want access to but you don't need access to larger geographic areas like cities, states, or countries. For example, you may have a hotel chain with 300 hotels across the US in 20 different states spread between smaller towns and bigger cities. You can purchase location-based access for 300 hotels rather than buying access to full cities or entire states. The same could apply to a chain of restaurants, parking locations, retail stores, or any other business locations.
 
@@ -20,11 +20,11 @@ The summary of how to use our APIs with location-based access is as follows:
 
 This guide is focused on using the APIs. You can also use our WebApp to manage and access locations. See the documentation on the [WebApp](https://www.predicthq.com/support) for more details.
 
-### How to see the Number of Locations I have Access to?
+### How to see the number of locations I have access to?
 
 Within the WebApp on the [plans page](https://control.predicthq.com/settings/plans/api) or in the **Location Insights** view you can see how many locations you have purchased and how many you have used.
 
-If you add more locations than you have purchased you will have access to the additional locations for a limited time and will need to upgrade your subscription to purchase more or remove the locations you added. The PredictHQ team will contact you to discuss options.
+If you add more locations than you have purchased you have access to the additional locations for a limited time and need to upgrade your subscription to purchase more or remove the locations you added. The PredictHQ team contacts you to discuss options.
 
 <figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
 

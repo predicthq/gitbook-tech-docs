@@ -15,4 +15,6 @@ The API covers the full workflow:
 
 ## Guides
 
+To set up your integration, see this guide:
+
 * [Integrate with Loop Links](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/integrate-with-loop-links)

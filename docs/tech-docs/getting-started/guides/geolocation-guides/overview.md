@@ -10,7 +10,7 @@ Events also have the `formatted_address` field for [venue entities](../../predic
 The `location` field is deprecated. Use the `geo` field for geographic information.
 {% endhint %}
 
-## **Points and Areas**
+## **Points and areas**
 
 Latitude and longitude coordinates represent a point event's location. An example is this [MLB game](https://events.predicthq.com/events/97iX53YAGnCwF9TGx3) located at `37.77859,-122.38926`.
 
@@ -63,7 +63,7 @@ The `geo` field also contains address information. The **address** subfield with
 * `locality` (optional) - indicates the city or town the event occurs in
 * `region` (optional) - the region or state at which the event takes place
 
-For attended events when they are linked to a [venue entity ](../../predicthq-data/entities.md#venue)then the address information will correspond to the address of the venue.
+For attended events when they are linked to a [venue entity ](../../predicthq-data/entities.md#venue)then the address information corresponds to the address of the venue.
 
 Events that cover a larger area (for example non-attended events like holidays) tend to have less address information. For example, a country-wide holiday may only have the country code field in the address field.
 
@@ -93,7 +93,7 @@ See below for an example of the address subfield within the `geo` field:
 
 The `geo` field contains geometry information about an event's location in [GeoJSON](https://geojson.org/) format. Point events have a Point-type geometry, with the coordinates of the event's location (same as the `location` field). Area events may have Polygon or MultiPolygon-type geometries representing the specific area impacted by the event.
 
-Where an area event has a Point-type geometry, it means the event applies to the Geonames Place of the event.
+Where an area event has a Point-type geometry, it means the event applies to the Geonames Place of the event. The following response shows an event with a Polygon geometry:
 
 ```json
 {

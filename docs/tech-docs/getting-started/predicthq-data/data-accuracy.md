@@ -8,7 +8,7 @@ Every event in our API goes through multiple steps to ensure quality and accurac
 
 **Aggregation:** We pull in events and entities from hundreds of different sources and compare them for quality and accuracy.
 
-**Enrichment:** We categorize, label and add entities to all events to help reduce noise. We also ensure all events have a date, time and location.
+**Enrichment:** We categorize, label and add entities to all events to help reduce noise. We also ensure all events have a date, time, and location.
 
 **Spam Filtering:** Bad data is worse than no data at all. We ensure you only have access to events that are actually happening.
 

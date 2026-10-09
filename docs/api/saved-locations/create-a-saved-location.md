@@ -10,7 +10,7 @@ description: Create a new Saved Location to begin seeing insights.
 
 ## Examples
 
-### Create Using Point and Radius
+### Create using point and radius
 
 {% tabs %}
 {% tab title="curl" %}

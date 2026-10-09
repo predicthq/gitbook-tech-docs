@@ -6,7 +6,7 @@ description: >-
 
 # Predicted Attendance
 
-Also known as PHQ Attendance. This value represents the number of people predicted to attend an event. The [events API response](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) returns the exact predicted attendance number as the `phq_attendance` value for attendance events.&#x20;
+Also known as PHQ Attendance. This value represents the number of people predicted to attend an event. The [Events API response](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) returns the exact Predicted Attendance number as the `phq_attendance` value for attendance events.&#x20;
 
 PHQ Rank also has a value between 0 and 100 that represents how many people will attend an event. For example, an event with a PHQ Rank 50 has around 1,000 attendance.&#x20;
 
@@ -18,7 +18,7 @@ These mappings are sometimes referred to as ranking bands.
 
 ## How Predicted Attendance is calculated
 
-PredictHQ calculates Predicted Attendance via machine learning models (ML models) and expert systems in our pipeline. Our ML models are trained on historical data and predict the number of people that are predicted to attend a future event before they happen. Our models use a large number of inputs (called machine learning features) to make an accurate prediction.
+PredictHQ calculates Predicted Attendance via machine learning models (ML models) and expert systems in our pipeline. We train our ML models on historical data, and they predict the number of people that are predicted to attend a future event before they happen. Our models use a large number of inputs (called machine learning features) to make an accurate prediction.
 
 PredictHQ monitors the accuracy of their models and periodically retrains them to ensure we retain high-accuracy predictions.
 

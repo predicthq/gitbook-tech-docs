@@ -5,7 +5,7 @@ description: Get forecast values for an existing model.
 # Get forecast
 
 {% hint style="info" %}
-Note that `phq_features` can only be retrieved if you have also purchased the Features product.
+You can retrieve `phq_features` only if you have also purchased the Features product.
 {% endhint %}
 
 {% openapi-operation spec="forecasts-api" path="/v1/forecasts/models/{model_id}/forecast" method="get" %}
@@ -17,6 +17,8 @@ Note that `phq_features` can only be retrieved if you have also purchased the Fe
 The OpenAPI spec for Forecasts API is in the [Forecasts API documentation](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
+
+These guides cover Forecasts API in more detail:
 
 * [Getting started with Forecasts API](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started)
 * [Understanding forecast accuracy metrics](https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/understanding-forecast-accuracy-metrics)

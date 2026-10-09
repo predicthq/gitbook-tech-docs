@@ -10,6 +10,8 @@ description: Search for an existing Analysis.
 
 ## Examples
 
+The following examples search for draft Analyses, sorted by last update:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

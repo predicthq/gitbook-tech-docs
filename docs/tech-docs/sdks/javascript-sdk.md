@@ -26,7 +26,7 @@ import Client from 'predicthq'
 const client = new Client({access_token: '$API_TOKEN'})
 ```
 
-### Search Events
+### Search events
 
 Perform a basic search of events using the `title` parameter.
 

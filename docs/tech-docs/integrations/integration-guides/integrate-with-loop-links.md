@@ -17,13 +17,13 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 * PredictHQ processes events in the normal way and adds valid events or feedback to its system
 * The Events API returns events that PredictHQ approves via Loop
 
-This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It will go straight to PredictHQ.
+This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It goes straight to PredictHQ.
 
 To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) below. See also, our [Loop Links API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop) for details on creating Loop Links.
 
 ## Overview
 
-Loop Links provide a URL that allows a user to provide event feedback. Customers create Loop Links URLs via the Loop Links API. You must configure your own URLs before you can integrate Loop Links into your application.
+Loop Links provide a URL that allows a user to provide event feedback. You create Loop Links URLs via the Loop Links API. You must configure your own URLs before you can integrate Loop Links into your application.
 
 The link does not require authentication. It has customer details embedded. For example:
 
@@ -77,13 +77,13 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 ### Providing Feedback on Events
 
 * User reviews the event details on the page and can provide feedback
-* This requires an event ID to be passed to the loop links' URL
-* Feedback is approved or rejected
+* This requires an event ID to be passed to the Loop Links' URL
+* PredictHQ approves or rejects the feedback
 * Users receive an email if there are any questions about their feedback
 
 <figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
 
-## Loop Links Automated Emails
+## Loop Links automated emails
 
 The Loop Links platform sends automated emails in the following cases:
 

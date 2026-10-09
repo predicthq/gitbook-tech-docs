@@ -10,6 +10,8 @@ description: Delete an existing Saved Location.
 
 ## Examples
 
+The following examples delete a Saved Location by its ID:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

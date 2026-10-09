@@ -14,6 +14,8 @@ See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryNa
 
 ## Examples
 
+The following examples get event counts for New Zealand:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

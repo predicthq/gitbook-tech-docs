@@ -6,7 +6,7 @@ description: Transforming Event Data into ML-Ready Features in Snowflake
 
 ## This guide and the Features API
 
-This guide is intended to provide guidance on generating machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](../../../../getting-started/core-concepts/what-is-the-features-api.md), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, go to the [Features API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) and for a more detailed guide on using the Features API for Machine Learning, please see the [Get features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) guide.
+This guide is intended to provide guidance on generating machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](../../../../getting-started/core-concepts/what-is-the-features-api.md), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, go to the [Features API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) and for a more detailed guide on using the Features API for Machine Learning, see the [Get features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) guide.
 
 If you don't know which is the best for you, [contact sales](https://www.predicthq.com/contact/sales).
 
@@ -14,7 +14,7 @@ If you don't know which is the best for you, [contact sales](https://www.predict
 
 This guide assumes you have access to PredictHQ’s events data in Snowflake via a [Snowflake data share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake). The guide shows you how to generate aggregations similar to those provided by the Features API documented in the Features API [list of available features](https://docs.predicthq.com/api/features/get-features#available-features). These features provide daily aggregated data which shows the sum of data for all events happening in a location - for example, the amount of people attending events around a location. The goal is to generate aggregated features that can be used in demand forecasting.
 
-Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, this guide generates machine learning ready daily level aggregated event data on a per-location basis, intended to be similar to the data provided by the PredictHQ Features API and ready to be added to a training set.<br>
+Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, this guide generates machine learning ready daily level aggregated event data on a per-location basis, intended to be similar to the data that the PredictHQ Features API provides and ready to be added to a training set.<br>
 
 **Requirements:**
 
@@ -40,7 +40,7 @@ When querying events at the location level, a common way to retrieve those event
 
 The [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns a polygon that defines the optimal area around a location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
 
-As a first step, get the predicted impact area for each location before moving forward with the guide. The example below uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
+As a first step, get the Predicted Impact Area for each location before moving forward with the guide. The example below uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
 
 {% hint style="info" %}
 In a separate environment outside of Snowflake, run this code.
@@ -116,7 +116,7 @@ VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'
 ```
 {% endcode %}
 
-By default, 3 months of historical data is returned. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next 2 weeks.
+By default, three months of historical data is returned. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next 2 weeks.
 
 Once the input table is in the format of the above, the below code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
 
@@ -147,7 +147,7 @@ Call the Features API with Python and save the output ML Features into Snowflake
 
 Use SQL in Snowflake to run over the events table and create the ML Features.
 
-## Integrating PredictHQ Features into Your Demand Forecasting Model
+## Integrating PredictHQ Features into your demand forecasting model
 
 The **ML\_FEATURES\_FOR\_LOCATIONS** table offers ready-to-use features for forecasting models. Merge these features with current demand data using the location and date as keys. Train models using historical data from this table and use future data for forecasting.&#x20;
 

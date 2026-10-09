@@ -8,7 +8,7 @@ description: >-
 
 The PredictHQ MCP server connects AI agents directly to real-world context at decision time. It's commonly used interactively, through Claude, ChatGPT, or another assistant. It's equally suited to autonomous agentic workflows, where an agent, or a system of agents, works toward a goal and calls PredictHQ for the real-world context it needs to make good decisions along the way.
 
-## The Agentic Pattern
+## The agentic pattern
 
 In an agentic workflow, a goal is defined, such as optimising inventory, setting pricing, or scheduling staff. The agent works toward that goal, determining what information it needs, calling the tools required to get it, and acting on the result.
 
@@ -42,7 +42,7 @@ When calling the Features API, always pass `beam.analysis_id`. This applies the 
 
 ## The Decision Loop
 
-Put together, an agent's use of PredictHQ within its flow looks like this. The calibration check is ordinary conditional logic, not a separate setup step.
+The calibration check is ordinary conditional logic, not a separate setup step. Put together, an agent's use of PredictHQ within its flow looks like this:
 
 ```mermaid
 flowchart TD
@@ -102,7 +102,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 * `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. Pass `phq_explainability` to get the top real-world drivers behind each forecasted date. The system applies Beam automatically.
 * `events_api_list_events` retrieves the specific real-world activity behind a demand signal, so an agent can explain or validate a decision. Use it with `beam.analysis_id`.
 * `saved_locations_api_list_saved_location_insight_events` surfaces the highest-impact upcoming drivers for a known location.
-* `saved_locations_api_get_saved_location` returns a location's summary insights, including predicted event spend and attendance for the next 90 days.
+* `saved_locations_api_get_saved_location` returns a location's summary insights, including Predicted Event Spend and Predicted Attendance for the next 90 days.
 
 ### Next Steps
 

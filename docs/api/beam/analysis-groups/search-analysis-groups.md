@@ -10,6 +10,8 @@ description: Search for an existing Analysis Group.
 
 ## Examples
 
+The following examples list active Analysis Groups, sorted by last update:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

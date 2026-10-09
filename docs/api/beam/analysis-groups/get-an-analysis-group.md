@@ -10,6 +10,8 @@ description: Get an existing Analysis Group.
 
 ## Examples
 
+Get an Analysis Group by its ID:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

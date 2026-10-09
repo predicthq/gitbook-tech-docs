@@ -27,7 +27,7 @@ Use the Industry Value when specifying an industry in an API request. If your bu
 
 ## Where industry matters
 
-Industry is used across our systems to tune how events are interpreted and modeled for your business. This includes areas like impact patterns, thresholds, and catchment radius recommendations.
+Our systems use industry to tune how they interpret and model events for your business. This includes areas like impact patterns, thresholds, and catchment radius recommendations:
 
 * **Predicted Impact Area API**\
   Area recommendations vary by industry, since the catchment area for demand differs across sectors.
@@ -38,7 +38,7 @@ Industry is used across our systems to tune how events are interpreted and model
 * **Forecasts API**\
   Uses industry in the same way as Beam (industry is passed through to Beam behind the scenes).
 
-## Beam Comes First
+## Beam comes first
 
 The most accurate way to identify which events impact your business is with [Beam](../core-concepts/what-is-beam.md), PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
 

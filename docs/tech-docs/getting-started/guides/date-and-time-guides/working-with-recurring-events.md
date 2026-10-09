@@ -51,7 +51,7 @@ Below is an example event with a recurring `event-group` Entity:
 }
 ```
 
-## Find all Instances of a Recurring Event
+## Find all instances of a recurring event
 
 The `entity.id` query parameter allows you to find all Events that are linked to the specified Entity ID. This example uses the "ASH Annual Meeting" recurring `event-group` Entity ID to find all instances of the Event.
 
@@ -148,7 +148,7 @@ A snippet of the results is shown below:
 
 ## Find a Specific Recurrence of an Event
 
-In this example we will find the 2019 instance of the "ASH Annual Meeting".
+In this example, we find the 2019 instance of the "ASH Annual Meeting":
 
 ```python
 import requests

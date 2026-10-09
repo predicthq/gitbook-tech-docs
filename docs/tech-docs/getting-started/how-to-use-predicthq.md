@@ -51,7 +51,7 @@ For ML platform and agent teams whose LLMs or agents make demand-related decisio
 
 Grounding gives a model the real-world facts it lacks at the moment it answers, so it responds from what is true instead of hallucinating. Retrieval-augmented generation (RAG) is one technique for achieving it. PredictHQ supports two grounding architectures; most deployments choose one, and which fits is mostly a governance and maintenance question:
 
-* **Provisioned grounding** - verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
+* **Provisioned grounding** - PredictHQ delivers verified event context into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, governance, or retrieval scale matter.
 * **On-demand grounding** - your agents query the [PredictHQ MCP server](../ai/mcp.md) on demand and hold no copy of anything. Choose this when zero pipeline maintenance matters, or when you want to be up and running today without waiting on your platform team's roadmap.
 
 * [Grounding with PredictHQ](../ai/grounding-with-predicthq.md) - concepts, architectures, and FAQ
@@ -70,7 +70,7 @@ Beam's [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/
 
 Training improves your model before it runs. Grounding supplies verified context while it runs. The two never mix - grounding doesn't touch the training model - and the two grounding architectures are alternatives to each other, not to training. Time series foundation models don't change this split; they shrink the training step and move more of the value to inference time.
 
-The paths share the same foundation, so they combine naturally: the Saved Locations and Beam analyses you set up for a forecasting integration are the same ones that scope a grounding corpus or an agent's MCP queries. Many production deployments run a training path and a grounding path side by side - a model trained on event features, and an AI layer that explains its outputs from verified event context.
+The paths share the same foundation, so they combine naturally: the Saved Locations and Beam Analyses you set up for a forecasting integration are the same ones that scope a grounding corpus or an agent's MCP queries. Many production deployments run a training path and a grounding path side by side - a model trained on event features, and an AI layer that explains its outputs from verified event context.
 
 ## Next steps
 

@@ -6,7 +6,7 @@ description: >-
 
 # Working with multi-day and umbrella events
 
-PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [7 attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
+PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [seven attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
 
 For example, the phq\_attendance for a big event like the [2019 Tour de France](https://events.predicthq.com/events/fXHXPzTVW5K9ZWxFnb) is 12,000,000 which represents the total attendance for the full duration of 22 days. It is not the daily attendance. The daily attendance for that event is closer to 545,000 people. Reading 12,000,000 as a single day's attendance would badly misrepresent the event's impact.
 
@@ -18,9 +18,9 @@ This page covers how to interpret these events correctly when working with indiv
 
 ## Multi-Day Events
 
-### Handling Attendance for Multi-Day Events
+### Handling attendance for multi-day events
 
-The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, there is additional logic for how phq\_attendance is distributed to each day.
+The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, the Features API applies additional logic to distribute phq\_attendance to each day.
 
 Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend. The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
@@ -82,11 +82,13 @@ Once you take into account Umbrella events and remove double counting, the real 
 
 See the documentation on the [parent filter](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) for umbrella events.
 
-You can use this filter with the events API to only get parent events or only retrieve child events from the Events API.
+You can use this filter with the Events API to only get parent events or only retrieve child events from the Events API.
 
 Note that in the API **parent** events includes events that have child events and also events without any child events. So, for the API filter parent events also include non-umbrella events. **Child** events are defined as only those events that have a link to a parent event.
 
 ### **Definitions**
+
+This page uses two terms:
 
 * **Parent event** - Spans the full duration of an event and may have child events as part of it. Many parent events will be multi-day events such as the Olympics, a Formula 1 weekend, or a multi-day festival. These events have a parent event for the whole event - like an event for the entire 2020 Olympic Games in Tokyo. Other examples include an event for the entire US Formula 1 or a rugby sevens tournament.
 * **Child events** - Individual events that are part of a parent event. For example, day 1 of the 2020 Olympic Games or the “Men’s 100m finals” in the Olympic Games. Or the Formula 1 qualification and practice events. All of these are examples of child events.
