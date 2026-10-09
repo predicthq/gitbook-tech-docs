@@ -2,7 +2,7 @@
 
 All PredictHQ API endpoints require authentication. You can authenticate your request by sending a token in the `Authorization` header of your request. If you try to use an API endpoint without a token or that token has insufficient permissions, you receive a `403 Forbidden` response.
 
-The PredictHQ API is a RESTful API, and you can access it at the `https://api.predicthq.com` URL. All data exchanges are performed using the JSON format by default.
+The PredictHQ API is a RESTful API, and you can access it at the `https://api.predicthq.com` URL. All data exchanges are performed using the JSON format by default. These examples send a token in the `Authorization` header:
 
 {% tabs %}
 {% tab title="curl" %}
@@ -31,6 +31,8 @@ print(response.json())
 {% endtabs %}
 
 ## Create an API token
+
+To create a token:
 
 1. Log into the WebApp and visit the [**API Tokens**](https://control.predicthq.com/tokens) page.
 2. Enter a name for the token and click **Create Token**.

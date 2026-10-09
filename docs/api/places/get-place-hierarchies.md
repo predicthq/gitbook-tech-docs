@@ -10,7 +10,7 @@ This endpoint is in Beta.
 
 The available filters and the response data are subject to change.
 
-This endpoint allows you to get the full place hierarchies for
+This endpoint allows you to get the full place hierarchies for:
 
 * a given coordinate
 * list of `place_id`.
@@ -26,6 +26,8 @@ For instance, if you specify `?location.origin=47.615337,-122.203981`, which is 
 {% endopenapi-operation %}
 
 ## Examples
+
+The following examples get place hierarchies:
 
 {% tabs %}
 {% tab title="curl" %}

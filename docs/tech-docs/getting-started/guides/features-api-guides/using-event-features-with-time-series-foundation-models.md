@@ -28,6 +28,8 @@ sequenceDiagram
 
 ## Prepare the covariates
 
+To prepare the covariates:
+
 1. Run [Beam](../../core-concepts/what-is-beam.md) for each location to get an `analysis_id`. Foundation model covariate mechanisms are lightweight, and published evaluations show accuracy degrading when they're fed noisy or irrelevant series - Beam limits the covariate set to the event signals that drive demand at that location.
 2. Retrieve historical features covering the same period as the demand history you pass to the model:
 
@@ -54,6 +56,8 @@ sequenceDiagram
 Retrieve future features ahead of each forecast run rather than caching them: new events are announced inside the forecast horizon continuously, attendance predictions are revised as events approach, and events are cancelled. Refresh the Beam Analysis monthly by appending new demand data - see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md) for the production architecture and refresh cadences.
 
 ## Related
+
+For more information, see:
 
 * [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) - available features and configuration
 * [What is the Features API?](../../core-concepts/what-is-the-features-api.md)
