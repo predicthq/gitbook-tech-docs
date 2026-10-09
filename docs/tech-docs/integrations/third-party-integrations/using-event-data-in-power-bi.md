@@ -263,7 +263,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 To update the code:
 
 1. Replace the entire existing Power Query code with the code that follows.
-2. In Lines 4 and 8, replace the text that refers to ‘\[api\_token]’ with the PHQ API Access Token used previously.
+2. In Lines 4 and 8, replace the text that refers to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
