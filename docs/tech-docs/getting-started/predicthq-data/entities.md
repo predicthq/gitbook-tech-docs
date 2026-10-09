@@ -14,7 +14,7 @@ A venue can be found on an event record as an array of entities with the type of
 
 All events happening at the same venue have the same latitude/longitude and street address.
 
-Below is an example of the venue entity information returned in the Events API response:
+The following is an example of the venue entity information returned in the Events API response:
 
 
 ```json

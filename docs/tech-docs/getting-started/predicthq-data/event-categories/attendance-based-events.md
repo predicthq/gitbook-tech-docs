@@ -19,7 +19,7 @@ Labels for a sports event provide more information about the type, league, and e
 1.  **Sports Type**
 
     The most common sports types in PredictHQ dataset are: `soccer`, `basketball`, `ice-hockey`, `rugby`, `baseball`.
-2.  **Sports League**
+2.  **Sports league**
 
     The most popular sports leagues in the PredictHQ dataset are: `NFL`, `MLB`, `NHL`, `NBA`.
 3.  **Sports games environment**
@@ -337,7 +337,7 @@ The Academic Events category has six main event types affecting students’ acti
    * The compulsory academic session for students to graduate upon completion.
    * Session starts on the first day of instruction and ends on the last day of instruction.
    * Orientation, reading days, and exams are not included.
-   * Session events are labeled with `academic` and `academic-session`.
+   * PredictHQ labels session events with `academic` and `academic-session`.
    * Intensive session, the optional academic session between the normal sessions for earlier graduation where the compulsory term is not applied, is also included in this event type.
 2. **Exam**
    * The exam period for the academic session.

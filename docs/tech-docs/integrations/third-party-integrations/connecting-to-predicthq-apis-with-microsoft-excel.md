@@ -33,7 +33,7 @@ Location could be substituted for a specific latitude and longitude relating to 
 
 ### How to get events data via PredictHQ's API
 
-This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. We provide examples for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
+This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. We provide examples for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. In Microsoft Excel, create a new empty Spreadsheet.
 
 PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
@@ -66,16 +66,16 @@ First, create a new Spreadsheet. Then, to open the data connection options:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, select the Advanced tab to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, select the **Advanced** tab to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
-   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields look like once you enter your API key.\
+   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` stands for your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields look like once you enter your API key.\
       \
-      ![](<../../.gitbook/assets/image (83).png>)\\
+      ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (83).png>)\\
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
@@ -156,7 +156,7 @@ Click **Close & Apply** and wait for the data transformation to finish processin
 
 <figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
-After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Microsoft Excel. You should see a Spreadsheet like that shown below:
+After this step the data is now ready to start building a report with, as Excel has successfully loaded and transformed it. You should see a Spreadsheet like the following screenshot:
 
 <figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 

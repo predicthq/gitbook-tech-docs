@@ -50,7 +50,7 @@ flowchart TB
     Manage_Locations -- origin_geojson --> Saved_Locations_API
     Saved_Locations_API -- location_id + Predicted Impact Area --> Manage_Locations
     Manage_Locations -- location_id --> Beam_API
-    Beam_API -- analysis_id + feature importance --> Manage_Locations
+    Beam_API -- analysis_id + Feature Importance --> Manage_Locations
     Manage_Locations --> Location_Store
     Location_Store --> Manage_ML_Features & Manage_Events
     Manage_ML_Features -- analysis_id --> Features_API
@@ -93,7 +93,7 @@ Saved Locations are also the only way to use polygon-based boundaries with Predi
 
 For each location:
 
-1. Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features.
+1. To retrieve pre-built ML features, call the Features API with the `analysis_id` from your Location Store.
 2. In your local store, save the results.
 
 The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed. Pull from your local store at training and inference time, not directly from the API.

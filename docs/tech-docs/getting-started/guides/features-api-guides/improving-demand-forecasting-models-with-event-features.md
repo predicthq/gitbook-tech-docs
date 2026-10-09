@@ -18,11 +18,11 @@ Events, such as concerts, expos, and public holidays, are known to affect consum
 
 ### Integrating Event Features
 
-Built upon extensive event coverage, PredictHQ’s event features aggregate similar events into predefined groups for specific locations at set intervals, such as daily aggregations. These prebuilt, forecast-ready features can be added directly to machine learning models without further preprocessing. Access to an extensive library of features is available through the [Features API](https://www.predicthq.com/apis/features-api). We recommend starting with the Important Features identified by the [Beam API](https://www.predicthq.com/beam).
+Built upon extensive event coverage, PredictHQ’s event features aggregate similar events into predefined groups for specific locations at set intervals, such as daily aggregations. These prebuilt, forecast-ready features can be added directly to machine learning models without further preprocessing. Access to an extensive library of features is available through the [Features API](https://www.predicthq.com/apis/features-api). We recommend starting with the Important Features that the [Beam API](https://www.predicthq.com/beam) identifies.
 
 ## How-to guide
 
-The sections below guide you through integrating event features into your demand forecasting models. Follow these instructions and run the accompanying Jupyter notebooks to understand how you can adapt this approach to fit your workflow and improve the accuracy of your models.
+The following sections guide you through integrating event features into your demand forecasting models. Follow these instructions and run the accompanying Jupyter notebooks to understand how you can adapt this approach to fit your workflow and improve the accuracy of your models.
 
 ### Overview
 
@@ -125,11 +125,11 @@ For practical implementation:
 * [Get features with the Features API](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb)
 {% endhint %}
 
-### Step 3. ML Model and Future Predictions
+### Step 3. ML model and future predictions
 
 Event features provided by the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) are prebuilt, forecast-ready and ready for immediate use. Merge them into your existing dataset by location ID and date. Incorporating these event features can enhance your model's performance by adding valuable demand-driving event data.
 
-For future predictions, you can access forward-facing data, such as the next two weeks or the upcoming month, by querying the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). Work closely with your engineering team to ensure these new features are effectively incorporated into your production pipeline.
+For future predictions, you can access forward-facing data, such as the next two weeks or the upcoming month, by querying the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). To incorporate these new features into your production pipeline, work closely with your engineering team.
 
 {% hint style="info" %}
 For practical implementation:

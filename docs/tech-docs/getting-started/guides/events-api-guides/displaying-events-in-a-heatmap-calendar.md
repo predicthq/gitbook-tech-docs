@@ -34,7 +34,7 @@ The heatmap calendar uses aggregated event data from the [Features API](https://
 
 To view the code used to call the Features API, Events API, and other functions (if not already pinned):
 
-* In the Observable notebook, click the left margin of the cells.
+* In the Observable notebook, click a cell's margin.
 * Alternatively, in the cell menu, click **Edit**.
 
 {% hint style="info" %}
@@ -62,7 +62,7 @@ The calendar updates automatically based on the specified parameters. In this ex
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe91XOWCl6CkoPUeqz46MlUxCvuzyakT2cKIeKaRUhM8LNXaZf-dkjDmKZ66xSHw8OrJmvlLQcZrP4ZlwU4LC9A7O83H1bGpJ4vEdpJwHwXcceBx-adNwQV7GcBHdMU5NssX8zGHEkraTe28PGHZqLdFpGI?key=yHYQOK_XUxkGtvg9Am0g5g" alt="A heatmap calendar in which darker shading marks days with higher total event attendance" width="563"><figcaption><p>Interacting with the heatmap calendar</p></figcaption></figure>
 
-### Exporting Code
+### Exporting code
 
 You can also [compile](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) the notebook and download it as a JavaScript module. To do this:
 
@@ -134,7 +134,7 @@ Choose the aggregation as follows:
 
 Set the minimum rank as follows:
 
-* Set a threshold to filter out small events that are unlikely to have a significant impact based on [PHQ Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/phq-rank).
+* To filter out small events that are unlikely to have a significant impact, set a threshold based on [PHQ Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/phq-rank).
 * Configuration: Use the `phq_rank` field under `<feature_name>`.
 * Guidance: For details on how to set the minimum event rank, refer to [#minimum-phq-rank](../industry-specific-event-filters.md#minimum-phq-rank "mention").
 

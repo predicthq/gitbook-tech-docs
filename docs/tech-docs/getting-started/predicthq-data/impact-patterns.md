@@ -10,7 +10,7 @@ The following diagram shows Predicted Impact Patterns:
 
 <figure><img src="../../.gitbook/assets/image (93).png" alt="Diagram of a Predicted Impact Pattern showing impact on leading days before an event, on event days, and on lagging days after it"><figcaption></figcaption></figure>
 
-You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models account for the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.
+You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models account for the impact on leading and lagging days. In our testing we have found using Predicted Impact Patterns increases forecasting accuracy.
 
 #### Vertical, type, and category mapping
 
@@ -65,7 +65,7 @@ Impact pattern features for this industry use the name `hospitality` but this ca
 
 ## Predicted Impact Patterns in the Events API
 
-The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) returns Predicted Impact Patterns in the `impact_patterns` field of its response. This shows the Predicted Impact Patterns for each event. Below are the details of the data structure of that field.
+The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) returns Predicted Impact Patterns in the `impact_patterns` field of its response. This shows the Predicted Impact Patterns for each event. The following are the details of the data structure of that field.
 
 `impact_patterns` is an array of impact pattern objects. The same event can have different impact patterns for different industry verticals. It contains the following fields:
 
@@ -135,4 +135,4 @@ For `retail` severe weather events:
 
 ## Predicted Impact Patterns in the Features API
 
-You can also use Predicted Impact Patterns with the Features API. The Features API provides pre-built machine learning features for demand forecasting. See the[ features API ](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features)documentation. For more accurate forecasting results, use the features for your industry. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. To use Predicted Impact Patterns with the Features API, use the features for your industry. For example, if you are in the accommodation segment and are using the features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`. If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.
+You can also use Predicted Impact Patterns with the Features API. The Features API provides pre-built machine learning features for demand forecasting. See the[ features API ](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features)documentation. For more accurate forecasting results, use the features for your industry. We have a generic feature without impact patterns for sports called `phq_attendance_sports` but that does not include impact patterns so only shows the impact on the days of the event. To use Predicted Impact Patterns with the Features API, use the features for your industry. For example, if you are in the accommodation segment and are using the Features API to find the impact of sports events on your location you would use `phq_attendance_sports_accommodation`. If you were in the Hospitality Segment you would use `phq_attendance_sports_hospitality`.

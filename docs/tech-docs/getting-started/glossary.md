@@ -18,7 +18,7 @@ Beam Analyses are location-specific and should never be shared across multiple l
 
 If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
 
-Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate analyses - doing so loses accumulated correlation history.
+Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate Analyses - doing so loses accumulated correlation history.
 
 Related resources:
 
@@ -236,7 +236,7 @@ Related resources:
 
 Time series foundation models such as Chronos-2, TimesFM, and TimeGPT are pre-trained forecasting models applied zero-shot or with light fine-tuning, with no per-location model training required. They learn temporal patterns across millions of series, which lowers the cost of deploying forecasts at scale.
 
-What they don't learn is real-world drivers. Pre-training corpora are dominated by generic numeric sequences, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. Where the model accepts covariates (Chronos-2, TimeGPT, and TimesFM do; the earlier Chronos and Chronos-Bolt models are univariate), PredictHQ features fill that gap: pass Features API output (keyed by a `beam.analysis_id`) covering both the demand history and the forecast horizon.
+What they don't learn is real-world drivers. Generic numeric sequences dominate pre-training corpora, so events, holidays, and severe weather are invisible to these models unless supplied as covariates at inference time. Where the model accepts covariates (Chronos-2, TimeGPT, and TimesFM do; the earlier Chronos and Chronos-Bolt models are univariate), PredictHQ features fill that gap: pass Features API output (keyed by a `beam.analysis_id`) covering both the demand history and the forecast horizon.
 
 As forecasting shifts from bespoke trained models toward pre-trained ones, the training step shrinks and inference-time context matters more, not less.
 

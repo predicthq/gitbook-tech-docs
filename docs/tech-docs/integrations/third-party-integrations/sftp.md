@@ -56,7 +56,7 @@ Implement an automated process that:
 5. Applies records in order, using `change_action` for incrementals
 6. Records the delivery as processed in your own system
 
-## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
+## Backwards compatible changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
 
 From time to time, PredictHQ may make backwards-compatible changes to SFTP exports, including:
 

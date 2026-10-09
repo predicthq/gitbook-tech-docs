@@ -6,7 +6,7 @@ description: >-
 
 # Working with multi-day and umbrella events
 
-PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [seven attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or predicted attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
+PredictHQ’s events data includes events of different duration, from events that may be less than an hour-long to events that can last more than a week. For our [seven attended event categories](https://www.predicthq.com/intelligence/data-enrichment/event-categories), we expose the actual or Predicted Attendance for events in our phq\_attendance field. The phq\_attendance field works slightly differently for different categories. For many categories, it is the total attendance for an event over its full duration. For other categories (like conferences), it reflects the daily attendance.
 
 For example, the phq\_attendance for a big event like the [2019 Tour de France](https://events.predicthq.com/events/fXHXPzTVW5K9ZWxFnb) is 12,000,000 which represents the total attendance for the full duration of 22 days. It is not the daily attendance. The daily attendance for that event is closer to 545,000 people. Reading 12,000,000 as a single day's attendance would badly misrepresent the event's impact.
 
@@ -22,7 +22,7 @@ This page covers how to interpret these events correctly when working with indiv
 
 The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) has advanced logic for handling multi-day events. For some categories, phq\_attendance is the daily attendance. For categories that have multi-day events, such as festivals, community events, expos, and sports, the Features API applies additional logic to distribute phq\_attendance to each day.
 
-Below is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend. The Features API deals with distributing attendance across each day and takes into account uneven distributions.
+The following is an example of how phq\_attendance might be distributed for a golf tournament. This is a multi-day sports event so the phq\_attendance of 63,000 is the total attendance across the full duration. The daily attendance is not evenly distributed across the week as higher attendance is expected on the weekend. The Features API deals with distributing attendance across each day and takes into account uneven distributions.
 
 <figure><img src="../../../.gitbook/assets/chart-sports.png" alt="Bar chart of daily attendance for a golf tournament, with higher attendance on the weekend days than on the weekdays" width="375"><figcaption></figcaption></figure>
 
@@ -64,7 +64,7 @@ Any view built from individual event records has to account for Umbrella events,
 
 Looking at the earlier [US F1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) example, the parent event spanning 3 days has a phq\_attendance of 258,000. The actual race event running for around 3 hours on the 3rd of November has a phq\_attendance of 120,000. If you count both the parent event and the race child event on the 3rd, you overcount the attendance - the same people are represented in both records.
 
-<figure><img src="../../../.gitbook/assets/example-of-umbrella.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/example-of-umbrella.svg" alt="Diagram of the US Formula 1 Grand Prix umbrella event, showing the 3-day parent event and the race child event on the 3rd of November, whose attendance is counted in both records"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Child event attendance may sometimes reflect more detailed attendance on the individual days of an event, rather than an even share of the parent event's total.

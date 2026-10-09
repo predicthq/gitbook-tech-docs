@@ -131,7 +131,7 @@ For more information, see:
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) (Forecasts uses Beam under the hood)
 * [Beam guides](../guides/beam-guides/)
 
-## What to Do Next
+## What to do next
 
 After running Beam, use the Beam Analysis ID with the Features API or Events API to retrieve demand-calibrated signals. For automated forecasting, use the Forecasts API, which applies Beam internally.
 

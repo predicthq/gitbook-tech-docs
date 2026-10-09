@@ -20,7 +20,7 @@ A valid access token is required for calling PredictHQ’s APIs. Refer to the [A
 
 Let's take a fictional example: Tom, the owner of Tom’s Pizzeria in Downtown Seattle, Washington, has experienced overwhelming demand on several occasions, resulting in long lines and significant service delays. Suspecting nearby events were the cause of these surges, he sought to better prepare by identifying upcoming major events. To achieve this, Tom is looking into PredictHQ’s Events API to see how he can obtain this information for the next month.
 
-## How-To Guide
+## How-to guide
 
 The following sections guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
 
@@ -103,7 +103,7 @@ Next, Tom plans to use Beam in the [WebApp](https://control.predicthq.com/beam) 
 
 <summary>Event Impact</summary>
 
-Define the event impact for the search.
+Define the event impact for the search:
 
 * **PHQ Rank**: Use the `rank` parameter to target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
@@ -129,7 +129,7 @@ params={
 
 Track events based on their likelihood of occurring.
 
-* **Event State**: Events classified as `active` by the `state` parameter have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../../predicthq-data/predicted-events.md) as more information becomes available. Events are marked as `deleted` if they are canceled, postponed, or otherwise removed.
+* **Event State**: Events classified as `active` by the `state` parameter have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../../predicthq-data/predicted-events.md) as more information becomes available. PredictHQ marks events as `deleted` if they are canceled, postponed, or otherwise removed.
 
 Focusing primarily on `active` and `predicted` event states ensures that only events which are relevant and likely to occur are tracked
 
@@ -151,7 +151,7 @@ params={
 
 Optimize search results with useful parameters.
 
-* **Limit**: Specify the maximum number of events per page to return, managing the volume of results and focusing on the most relevant events. Use the `next` field in the API response to navigate to additional results (refer to [#handling-paginated-api-responses](filtering-and-finding-relevant-events.md#handling-paginated-api-responses "mention") for more details).
+* **Limit**: Specify the maximum number of events per page to return, managing the volume of results and focusing on the most relevant events. To navigate to additional results, use the `next` field in the API response (refer to [#handling-paginated-api-responses](filtering-and-finding-relevant-events.md#handling-paginated-api-responses "mention") for more details).
 * **Sort**: Order the search results according to specific attributes, most commonly event impact such as `rank` or `phq_attendance`, to prioritize high impact events.
 
 **Settings for Tom’s Pizzeria**
@@ -173,7 +173,7 @@ For detailed information on all query parameters (including those not shown here
 
 ### Step 2. Call Events API
 
-With the query parameters now configured, the next step is to call the Events API. This can be done using our [API Explorer](https://control.predicthq.com/explorer/events) or via your preferred tool. Below is an example Tom's request using python:
+With the query parameters configured, call the Events API. This can be done using our [API Explorer](https://control.predicthq.com/explorer/events) or via your preferred tool. The following is an example of Tom's request using Python:
 
 ```python
 import requests
@@ -464,7 +464,7 @@ With a clear view of upcoming events, Tom plans to leverage this information for
 
 * **Data Analysis and Reporting**: Tom will load event data into Power BI to generate detailed reports and dashboards, following [using-event-data-in-power-bi.md](../../../integrations/third-party-integrations/using-event-data-in-power-bi.md "mention") for step-by-step instructions.
 * **Relevant Events**: Tom aims to pinpoint event categories that impact his business the most by using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in the [WebApp](https://control.predicthq.com/beam). This helps him allocate his resources more effectively.
-* **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../features-api-guides/integrate-with-a-demand-forecast-in-powerbi.md). This will help him better predict customer flows and optimize resource planning.
+* **Forecast Future Orders**: Recognizing the benefits of predictive analytics, Tom is considering developing a demand forecasting model using [Power BI’s AutoML feature with PredictHQ’s event data](../features-api-guides/integrate-with-a-demand-forecast-in-powerbi.md). This helps predict customer flows and optimize resource planning.
 
 ## Conclusion
 

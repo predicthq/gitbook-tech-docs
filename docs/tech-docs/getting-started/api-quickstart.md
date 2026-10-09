@@ -25,7 +25,7 @@ To create a key:
 6. Click **Copy Token**.
 7. Store the token somewhere safe. The WebApp doesn't show it again.
 
-Use your API key in the `Authorization` header of every API request:
+In the `Authorization` header of every API request, use your API key:
 
 ```
 Authorization: Bearer $API_TOKEN
@@ -77,6 +77,6 @@ The [Standard integration pattern](../integrations/integration-guides/standard-i
 
 **I want event-driven forecasts without building a model** → Go straight to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)
 
-**I want to connect an AI assistant to PredictHQ** → Set up the [MCP server](../ai/mcp.md)
+**I want to connect an AI assistant to PredictHQ** → Set up the [PredictHQ MCP server](../ai/mcp.md)
 
 **I want to understand the full integration architecture** → Read the [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md)

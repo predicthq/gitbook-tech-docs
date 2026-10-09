@@ -46,7 +46,7 @@ Observances, public holidays, and school holidays - see [Non-attendance-based ev
 For the category reference, see [Severe Weather](predicthq-data/event-categories/unscheduled-events.md#severe-weather). The severe weather notebooks are:
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_1_data_engineering.ipynb)
-* [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb)
+* [Severe weather events, part 2: data exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb)
 * [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_3_feature_engineering.ipynb)
 
 ### Academic events

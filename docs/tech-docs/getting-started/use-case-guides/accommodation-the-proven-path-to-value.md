@@ -39,7 +39,7 @@ Beam analyzes historical booking patterns to reveal which types of events consis
 
 Once you know the high-impact event types, filter the events for each hotel or group/cluster accordingly - including only those categories, within a relevant radius or polygon. This dramatically reduces volume and increases signal.
 
-### Sort Events Per Day by Local Rank
+### Sort events per day by Local Rank
 
 To help hotel teams quickly understand what’s driving demand on a given day, sort events by [Local Rank](https://docs.predicthq.com/getting-started/predicthq-data/ranks/local-rank). This makes high-impact events easy to spot and supports confident, explainable decisions.
 

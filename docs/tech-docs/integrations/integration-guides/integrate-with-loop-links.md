@@ -10,7 +10,7 @@ description: >-
 
 Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebApp, however, some customers want their users to be able to submit event feedback without needing a PredictHQ login. These customers want a way to integrate the ability to report missing events or event feedback into their product.
 
-**Loop Links** provide a way for customers to integrate with Loop without their users needing a WebApp login, and enable the following:
+**Loop Links** let you integrate with Loop without your users needing a WebApp login, and enable the following:
 
 * You can integrate Loop into your products, such as a web app, mobile app, or other tool
 * You can generate a unique URL to allow your users to submit event feedback and missing event information
@@ -63,7 +63,7 @@ We recommend you open this in a new window.
 
 Opens a PredictHQ web page where users can provide feedback on an existing event. Requires the public event ID of the event.
 
-Integrate this link where you are displaying a PredictHQ event in your app. We recommend you open this in a new window.
+In your app, where you display a PredictHQ event, integrate this link. We recommend you open this in a new window.
 
 ### Submitting missing events
 
@@ -103,7 +103,7 @@ The following tabs show some example emails:
 
 {% tabs %}
 {% tab title="Approved Submission Email" %}
-See an example below of the email template for approved events:
+The following image is an example of the email template for approved events:
 
 <figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
@@ -124,7 +124,7 @@ Users with admin access can track Loop feedback at [loop.predicthq.com](https://
 * Shows details of the discussion about the Loop events with responses from PredictHQ
 * Allows administrators to track the status of events submitted by their end users
 
-This is typically used by support teams if issues are raised about event feedback and they want to review the feedback.
+Support teams typically use this if issues are raised about event feedback and they want to review the feedback.
 
 ## Loop Links Technical Details
 

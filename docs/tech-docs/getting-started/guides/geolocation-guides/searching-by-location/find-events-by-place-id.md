@@ -68,7 +68,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results are shown below:
+A snippet of the results looks like this:
 
 ```json
 {

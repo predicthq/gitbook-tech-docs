@@ -16,7 +16,7 @@ Latitude and longitude coordinates represent a point event's location. An exampl
 
 Area events impact a geographic area such as a region, or an entire country. For example, [Christmas Day in the United Kingdom](https://events.predicthq.com/events/KmzdXpxZEq9M), is a country-wide public holiday.
 
-Area events can be represented by a polygon. The example image shows this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) for several rivers in Mississippi, USA.
+A polygon can represent area events. The example image shows this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) for several rivers in Mississippi, USA.
 
 <figure><img src="../../../.gitbook/assets/flood-warning-example.png" alt="Map showing a polygon that outlines the area covered by a flood warning for several rivers in Mississippi, USA"><figcaption></figcaption></figure>
 
@@ -67,7 +67,7 @@ For attended events when they are linked to a [venue entity](../../predicthq-dat
 
 Events that cover a larger area (for example non-attended events like holidays) tend to have less address information. For example, a country-wide holiday may only have the country code field in the address field.
 
-See below for an example of the address subfield within the `geo` field:
+This later example shows the address subfield within the `geo` field:
 
 ```json
 "geo": {
@@ -126,7 +126,7 @@ The example event snippet is a [flood warning in Missouri](https://events.predic
 
 Below is an example of an [event with a MultiPolygon geometry](https://events.predicthq.com/events/8qbpLh7PDjK3Crpj6b); you can see it has two polygons for one event.
 
-<figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt="Map showing an event with a MultiPolygon geometry made up of two separate polygons"><figcaption></figcaption></figure>
 
 We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) notebook.
 

@@ -34,7 +34,7 @@ For more information on the Events API, see the [Events API documentation](https
 
 For this example, the [fetchEvents code in the example notebook](https://observablehq.com/@predicthq/events-map-example#fetchEvents) retrieves events from the Events API based on the following criteria:
 
-1. **Date Range**: Events taking place within the next seven days from today are considered to ensure the data remains current and actionable.
+1. **Date Range**: The code considers events taking place within the next seven days from today to keep the data current and actionable.
 2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
 3. **Categories**: The focus is on sports events and their potential to draw large crowds.
 4. **Event Rank**: The example prioritizes events with the largest Predicted Attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
@@ -62,7 +62,7 @@ The main focus of this example is on `point` type events, occurring at [specific
 For more information on how PredictHQ events are geographically represented, see this [overview](../geolocation-guides/overview.md).
 {% endhint %}
 
-### Exporting Code
+### Exporting code
 
 The notebook can also be[ compiled and downloaded](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) as a JavaScript module. To do this:
 

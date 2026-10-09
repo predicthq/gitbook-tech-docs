@@ -12,7 +12,7 @@ For example, during the basketball game [Villanova Wildcats vs Baylor Bears](htt
 **Note**: Live TV Events covers live games. Replays of sporting events are not included.
 
 {% hint style="info" %}
-Live TV events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
+Live TV Events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
 
 Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
@@ -33,7 +33,7 @@ All televised sports games from the following seven sports leagues are covered i
 
 **TOP VIEWERSHIP SPORTS**
 
-Live TV Events extends coverage to some popular sports games beyond the above seven leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
+Live TV Events extends coverage to some popular sports games beyond the seven major sports leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
 
 Top viewership sports are typically one-off events or are finals of their respective competitions, such as the 2019 NCAA Women's Basketball Final:
 
