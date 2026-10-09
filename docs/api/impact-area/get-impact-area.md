@@ -20,13 +20,15 @@ Predicted Impact Area is the successor to the Suggested Radius API. It provides 
 
 The recommended approach is to use Saved Locations. When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the `location_id` across all PredictHQ APIs - Events, Features, and Beam - without needing to manage the boundary yourself.
 
-Polygon-based filtering across PredictHQ APIs requires a saved location. To use a Predicted Impact Area boundary in API queries, create a saved location first and reference it by `location_id`.
+Polygon-based filtering across PredictHQ APIs requires a Saved Location. To use a Predicted Impact Area boundary in API queries, create a Saved Location first and reference it by `location_id`.
 
 {% openapi-operation spec="impact-area-api" path="/v1/impact-area/" method="get" %}
 [OpenAPI impact-area-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/impact-area-api.yaml)
 {% endopenapi-operation %}
 
 ## Examples
+
+The following examples request the Predicted Impact Area for a location and industry:
 
 {% tabs %}
 {% tab title="curl" %}

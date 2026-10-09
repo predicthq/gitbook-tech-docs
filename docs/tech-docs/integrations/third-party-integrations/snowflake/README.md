@@ -1,6 +1,6 @@
 # Receive data via Snowflake
 
-Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, governed by your own access controls. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
+Snowflake Secure Data Share deploys PredictHQ's verified real-world context directly into your Snowflake environment, where your own access controls govern it. Your models, pipelines, and AI systems query an always-current local share over a familiar SQL interface - the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
 PredictHQ manages delivery, so there is no ELT/ETL pipeline to build or maintain. You can check out the [Introduction to Secure Data Sharing](https://docs.snowflake.com/en/user-guide/data-sharing-intro.html) page if you're interested to read more on Snowflake's Secure Data Sharing.
 
@@ -20,7 +20,7 @@ Customized Data Shares can be set up to match your preferences in terms of data 
 
 [Get in touch](https://www.predicthq.com/contact) with us to discuss your needs and we will come back to you as soon as possible.
 
-## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
+## Backwards compatible changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
 
 Be aware that we may make backwards compatible changes to the Snowflake tables from time-to-time. Examples of some changes we might make that don't break backwards compatibility and may be introduced at any time without warning:
 

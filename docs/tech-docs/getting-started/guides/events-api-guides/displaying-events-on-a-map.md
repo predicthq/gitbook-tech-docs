@@ -24,7 +24,7 @@ An Access Token is required to access PredictHQ's APIs and run the notebook. Fol
 
 ### Event Data
 
-The event data used in this map is sourced from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
+The map uses event data from PredictHQ's Events API, which provides detailed, event-level information, including the title, dates, and location. This granularity makes the data ideal for mapping.
 
 {% hint style="info" %}
 For more information on the Events API, see the [Events API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events).
@@ -34,7 +34,7 @@ For more information on the Events API, see the [Events API documentation](https
 
 For this example, [events are retrieved](https://observablehq.com/@predicthq/events-map-example#fetchEvents) from the Events API based on the following criteria:
 
-1. **Date Range**: Events taking place within the next 7 days from today are considered to ensure the data remains current and actionable.
+1. **Date Range**: Events taking place within the next seven days from today are considered to ensure the data remains current and actionable.
 2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
 3. **Categories**: The focus is on sports events and their potential to draw large crowds.
 4. **Event Rank**: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
@@ -52,7 +52,7 @@ This example displays the most impactful sports event in San Francisco for the u
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdFMd0QGP6NB67jU-826iGqRO-u5vNx4o4TEAKbgk9HI0uEJFLm-l84383lOPmK78hGVIEi_m5Jz8_Ed2H-qNVwBI0qFvBwjcaLGkDAvgX6jWsyGpiTU1CMUqV95V8AYfC21U8hlCqNr1QGcXLofXG8zjBf?key=Zcee3-lj9wWgy6r9JpJLQw" alt="" width="563"><figcaption><p>Interacting with the map</p></figcaption></figure>
 
-### Geographic Features
+### Geographic features
 
 The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 

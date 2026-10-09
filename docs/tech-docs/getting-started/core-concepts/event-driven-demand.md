@@ -30,7 +30,7 @@ In dense urban areas, demand effects may be highly localised. In regional or rur
 
 Incorrect scope decisions are easy to make and difficult to unwind. If scope is poorly defined, downstream modeling and feature engineering are compromised.
 
-**How PredictHQ address scope**
+**How PredictHQ addresses scope:**
 
 * [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns an industry and location-specific boundary calibrated against real demand and event data. Unlike a fixed radius, it accounts for travel behaviour, population density, venue clustering, and industry type - returning a polygon or radius that reflects where event-driven demand impact actually occurs.
 * The recommended workflow is to use [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). When you create a location using `origin_geojson` without specifying a `geojson` area, PredictHQ calculates Predicted Impact Area automatically and stores it against that location. You can then reference it by `location_id` across Events, Features, Forecasts, and Beam - without managing the boundary yourself.
@@ -87,7 +87,7 @@ Trust determines time to value. If users hesitate to act on model outputs, opera
 
 This linkage between model outputs and real-world context strengthens operational confidence.
 
-## From Events to Production Systems
+## From events to production systems
 
 Successfully using real-world events in production systems requires solving all four challenges:
 
@@ -105,4 +105,4 @@ PredictHQ’s APIs map directly to these challenges:
 
 These are structural problems. They do not disappear with more data or more sophisticated models. They require deliberate design across data, calibration, and delivery layers.
 
-For the recommended production architecture—showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).
+For the recommended production architecture—showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns—see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).

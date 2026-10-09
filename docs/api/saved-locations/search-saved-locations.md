@@ -10,6 +10,8 @@ description: Search for existing Saved Locations.
 
 ## Examples
 
+The following examples search for Saved Locations by name:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

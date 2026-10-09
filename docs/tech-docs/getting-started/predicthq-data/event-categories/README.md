@@ -1,6 +1,6 @@
 # Event categories
 
-## Attendance-Based Events
+## Attendance-based events
 
 Events with a start and end date and time. PredictHQ models predict attendances for each of these events.
 
@@ -17,7 +17,7 @@ Events with a start and end date and time. PredictHQ models predict attendances 
 [attendance-based-events.md](attendance-based-events.md)
 {% endcontent-ref %}
 
-## Non-Attendance-Based Events
+## Non-attendance-based events
 
 These are events with a start and end date, but are more fluid in impact, such as observances or school holidays.
 
@@ -32,7 +32,7 @@ These are events with a start and end date, but are more fluid in impact, such a
 [non-attendance-based-events.md](non-attendance-based-events.md)
 {% endcontent-ref %}
 
-## Unscheduled Events
+## Unscheduled events
 
 Live coverage of breaking events such as severe weather and terrorism. The API updates minute to minute to ensure accuracy.
 

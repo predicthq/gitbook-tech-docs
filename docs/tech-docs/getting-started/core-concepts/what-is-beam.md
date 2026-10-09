@@ -10,7 +10,7 @@ The primary output of Beam is a set of Feature Importance results that define de
 
 Beam is available [via API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview) and the PredictHQ WebApp, enabling both automated pipelines and exploratory analysis.
 
-## Why Use Beam
+## Why use Beam
 
 Integrating event data into forecasting or operational systems introduces a structural statistical challenge.
 
@@ -70,7 +70,9 @@ Beam returns:
   * Can be supplied to the Features API or Events API
   * Applies demand-calibrated filtering automatically
 
-## Best Practices
+## Best practices
+
+When you use Beam, follow these practices:
 
 * **Run Beam before building forecasts** - Identify high-impact event types first, then incorporate those signals into your models.
 * **Calibrate per meaningful segment** - Impact varies by location, brand, and concept. Avoid over-fragmentation (e.g. SKU-level) unless supported by sufficient data. We’ve found the best results come from grouping by:

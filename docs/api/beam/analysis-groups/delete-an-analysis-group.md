@@ -10,6 +10,8 @@ description: Delete an existing Analysis Group.
 
 ## Examples
 
+To delete an Analysis Group, send a DELETE request:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

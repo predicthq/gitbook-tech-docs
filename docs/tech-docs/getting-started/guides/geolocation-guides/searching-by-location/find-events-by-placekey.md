@@ -5,7 +5,7 @@ You can do the following with the Placekey filter:
 * Match on an entire Placekey to see all events at that specific location. This can be useful when you want to search for events at a venue. E.g. `placekey=222-22t@5yv-j89-g6k`
 * Match address without POI name – This is a query for only an address (the first three digits in the What part along with the Where part); not the POI name. E.g. `https://api.predicthq.com/v1/events?placekey=222@5yv-j89-g6k`
 * Match on the full @Where part of Placekey to find events nearby. This returns events where the “@Where” part of Placekey matches but the What part may be different. This returns events within the H3 level 10 hex used by Placekey, which covers approximately a 63-meter radius around the location (see the [Placekey whitepaper](https://docs.placekey.io/Placekey_Technical_White_Paper.pdf) for more on H3 hexes). E.g. `https://api.predicthq.com/v1/events?placekey=@5yv-j89-g6k`
-* Or perform a partial match on the @Where part of Placekey to find nearby events within a larger area. By a partial match we mean instead of including the entire 9 characters of the @Where part of Placekey you can match on 5 or more characters to include a large area. See [joining POI and non-POI datasets](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey). E.g. match the first 7 characters: `https://api.predicthq.com/v1/events?placekey=@5yv-j89-g`
+* Or perform a partial match on the @Where part of Placekey to find nearby events within a larger area. By a partial match we mean instead of including the entire nine characters of the @Where part of Placekey you can match on five or more characters to include a large area. See [joining POI and non-POI datasets](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey). E.g. match the first 7 characters: `https://api.predicthq.com/v1/events?placekey=@5yv-j89-g`
 
 ## Exact Match
 
@@ -72,7 +72,7 @@ A snippet of the results is shown below:
 
 Often, events nearby a location can have an impact on your demand. The distance from your location will depend on the type of business—for example, people may travel further to an event when staying in a hotel versus how far people may travel from an event to a restaurant—and the nature of the location also matters (e.g. urban or more rural). To find events nearby a location match on the `@Where` part of Placekey.
 
-To find events very close to a location, match the full nine characters of the `@Where` part of the Placekey that will find events very close to that location. Matching on the full `@Where` part of Placekey is like finding events within a 63-meter radius. In fact, it’s a hexagon with an edge length of 66 meters on average but it’s similar to drawing a circle with a 63-meter radius.
+To find events very close to a location, match the full nine characters of the `@Where` part of the Placekey, which finds events very close to that location. Matching on the full `@Where` part of Placekey is like finding events within a 63-meter radius. In fact, it’s a hexagon with an edge length of 66 meters on average but it’s similar to drawing a circle with a 63-meter radius.
 
 To find events that are further away match the first x characters of `@Where` from left to right. So, matching on the full 9 characters is similar to a 63-meter radius, matching on the first 8 characters of the `@Where` part gives a maximal distance of 443 meters, matching on the first 7 characters encompasses a larger distance, and so on.&#x20;
 
@@ -145,9 +145,9 @@ A snippet of the results is shown below:
 
 One thing to be aware of is that nearby hexagons may have codes that are not very similar. This occurs when Placekey grid cells are near the edges of larger (i.e., lower resolution) hexagons in H3’s spatial hierarchy. This can mean that sometimes using the first x characters of a Placekey will not result in getting all nearby events.
 
-To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](find-events-by-latitude-longitude-and-radius.md) on the events API. Use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py) to convert a Placekey to latitude and longitude.
+To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](find-events-by-latitude-longitude-and-radius.md) on the Events API. Use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py) to convert a Placekey to latitude and longitude.
 
-## Find Events Near a Location in Snowflake
+## Find events near a location in Snowflake
 
 PredictHQ’s Events data shared through [Snowflake Secure Data Sharing](../../../../integrations/third-party-integrations/snowflake/) includes Placekey, as a separate column, reflecting the physical location where the event is held. There are a few approaches you could take to use this column when it comes to joining your dataset in Snowflake.
 
@@ -155,7 +155,7 @@ You can join PredictHQ’s event tables with your data on the entire Placekey co
 
 The example below joins a sample PredictHQ Event table on Snowflake that includes Placekey information as a column with SafeGraph “Global Places Sample” POI data (see [SafeGraph data examples](https://www.safegraph.com/data-examples)). In this example, we are trying to perform an Inner Join between the restaurant in the SafeGraph table AND the PredictHQ Events happening nearby. We would only be using the first 7 characters (excluding the hyphens) of the @Where part of the Placekey column for this Inner Join. This results in all possible matches between the restaurants and PredictHQ Events nearby them.&#x20;
 
-You can repurpose this query with minimal change to use it in relational data warehouses other than Snowflake.
+You can repurpose the following query with minimal change to use it in relational data warehouses other than Snowflake:
 
 ```sql
 -- Selecting from PredictHQ’s New York Sample Attended Events data 

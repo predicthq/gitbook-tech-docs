@@ -16,7 +16,7 @@ Everything you need to integrate PredictHQ into your models, pipelines, and AI s
 * [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview) - Identify the real-world events that materially move your demand
 * [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) - Define and manage reusable business locations for consistent querying across Events, Features, Beam, and Forecasts APIs
 
-## How It Fits Together
+## How it fits together
 
 Start with [How to use PredictHQ](getting-started/how-to-use-predicthq.md) - the recommended integration paths by job, from model training to grounding AI systems. PredictHQ APIs work as a pipeline, not in isolation: the [Standard integration pattern](integrations/integration-guides/standard-integration-pattern.md) shows the recommended production architecture, from location setup through to forecasting and explainability.
 

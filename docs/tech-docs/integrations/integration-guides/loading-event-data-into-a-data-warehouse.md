@@ -39,13 +39,13 @@ Tom's Data Parameters:
 
 * **Attended Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports.
 * **Date Range**: Events active within the range June 1, 2024, to June 30, 2024.
-* **Event Rank**: Events with a rank greater than 30 indicate a significant likelihood of impacting local traffic and attendance.
+* **PHQ Rank**: Events with a rank greater than 30 indicate a significant likelihood of impacting local traffic and attendance.
 * **Event Status**: Both ‘active’ and ‘predicted’ events to ensure a comprehensive overview.
 * **Location**: Bring through all of Seattle first, and Tom can filter for his locations once it’s in BigQuery using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area).
 
 For the purposes of this guide, we have limited the example load to a single city for Tom to filter on. You can bring through as much data as you have access to or require when doing an actual load. We find with data warehouse customers they may pull down all data they have access to into their data warehouse and then query it for relevant locations and data from their applications.
 
-## Data Load Methods
+## Data load methods
 
 There are several methods available for integrating PredictHQ data with GCP BigQuery or other data warehouse solutions. This guide outlines two primary approaches, both compatible with each other’s data structure. Regardless of the method chosen for the initial data load, ongoing updates will require API code.
 
@@ -110,7 +110,7 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, select the Export option and choose the JSONL file format. The JSONL file can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+After configuring your filters and executing the search, select **Export** and choose the JSONL file format. The JSONL file can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 
@@ -213,7 +213,7 @@ This script sets up the initial table structure within BigQuery, providing a fou
 
 ### Extract from Events API
 
-This section outlines the process of querying the PredictHQ Events API using Python, using the example for Tom's Pizzeria. This approach is designed to ensure the data extracted is directly relevant to Tom’s operational needs. The methodology and rationale behind the data extraction parameters used below are explained in the [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) section of this guide.
+This section outlines the process of querying the PredictHQ Events API using Python, using the example for Tom's Pizzeria. This approach ensures the extracted data is directly relevant to Tom’s operational needs. The [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) section of this guide explains the methodology and rationale behind the data extraction parameters used below.
 
 Before initiating the script, ensure you have configured the following prerequisites:
 
@@ -363,7 +363,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 With this step completed, the data from PredictHQ Events API is now populated into your BigQuery table and is ready for analytical querying. This setup initially caters to a single load of data; however, to maintain the relevance and timeliness of your data, consider adapting this script to periodically update the dataset based on changes reflected in the "updated" timestamp column of the source data. See the [section below](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) on updating your data.
 
-Below is the full code where we have combined all these 3 code parts into one executable.
+Below is the full code where we have combined all these three code parts into one executable.
 
 <details>
 
@@ -485,7 +485,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 Event data is dynamic and events can change frequently. This happens when events are canceled, posted, or have details updated. Also, PredictHQ’s pipeline is constantly fetching new events so new future events are always being added and can be downloaded via the API.
 
-To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to [that above](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This will extract all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
+To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to [that above](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This extracts all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 

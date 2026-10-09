@@ -10,6 +10,8 @@ description: Update (replace) an existing Loop Link.
 
 ## Examples
 
+The following examples update a Loop Link:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

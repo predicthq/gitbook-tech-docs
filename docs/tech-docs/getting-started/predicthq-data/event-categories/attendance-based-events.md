@@ -34,11 +34,11 @@ Labels for a sports event provide more information about the type, league, and e
    * These events are defined as any sports event where competitors are younger than adult age, whether children or adolescents. Youth sports include school sports at primary and secondary level, as well as sports played outside the education system, whether informally or organized. They do not include colleague sports which are separate and can be cound with the `NCAA` label.
    * Sports covered are youth basketball, baseball, softball, and soccer
    * These events are for the US (with a very small amount in Canada)
-   * Youth sports include a new dynamic ranking model that predicts attendance and rank based on the type of sport, age group, level, gender, population density, student numbers, and other features
+   * Youth sports include a dynamic ranking model that predicts attendance and rank based on the type of sport, age group, level, gender, population density, student numbers, and other features
 
-#### Date & Time
+#### Date & time
 
-<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -60,9 +60,9 @@ Sports events have PHQ Rank available.
 
 Sports events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Sports events have PHQ Attendance available.
+Sports events have Predicted Attendance available.
 
 ### Conferences
 
@@ -78,7 +78,7 @@ Labels for a conference event provide more information about the event. The most
 4. `technology`: The conferences related to the technology topic, for example, [FPD China](https://events.predicthq.com/events/YEKd1jV29rjV).
 5. `science`: The conferences related to the scientific topic, for example, [IAPM ASM](https://events.predicthq.com/events/RSJcHToM4Jy5MQcHZJ).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="232">Date &#x26; Time Fields</th><th width="144.33333333333331" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Conferences are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -102,9 +102,9 @@ Conference events have PHQ Rank available.
 
 Conference events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Conference events have PHQ Attendance available.
+Conference events have Predicted Attendance available.
 
 ### Expos
 
@@ -120,7 +120,7 @@ Labels for an expo event provide more information about the event. The most comm
 4. `entertainment`: The shows or fairs for entertainment purposes, for example, [The Big E (The Eastern States Exposition)](https://events.predicthq.com/events/gPmLe5eSMCbjLnYWCg).
 5. `career`: A career or job fair that includes a number of businesses as well large numbers of candidates , for example, [HKTDC Education & Careers Expo](https://events.predicthq.com/events/ZkwcdaWxiMtbKZMrPK).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="235">Date &#x26; Time Fields</th><th width="172" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -144,9 +144,9 @@ Expos events have PHQ Rank available.
 
 Expos events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Expos events have PHQ Attendance available.
+Expos events have Predicted Attendance available.
 
 ### Concerts
 
@@ -156,9 +156,9 @@ A musical performance where the primary intention of attendance is to see the mu
 
 All concert events have a `music` label as concert events are expected to be music-related.
 
-#### Date & Time
+#### Date & time
 
-<table><thead><tr><th width="242">Date &#x26; Time Fields</th><th width="120.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Concerts are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For concert events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="242">Date &#x26; Time Fields</th><th width="120.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Concerts are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For concert events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -180,9 +180,9 @@ Concerts events have PHQ Rank available.
 
 Concerts events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Concerts events have PHQ Attendance available.
+Concerts events have Predicted Attendance available.
 
 ### Festivals
 
@@ -193,12 +193,12 @@ A commonly known day or a period of time when people gather together to celebrat
 Labels for a festival event provide more information about the festival. The most common five labels are:
 
 1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://events.predicthq.com/events/duHrbmUbpFSgwypGAK).
-2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
+2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry, and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
 3. `family`: The festivals which are family-friendly and children-friendly, for example, [Magnificent Mile Lights Festival](https://events.predicthq.com/events/vFQK4H3yaujGqwnR4z).
 4. `community`: Traditional festivals in the local area. Community festivals are less formal than world-wide festivals and may also include street markets and entertainment activities. The [Odunde Festival](https://events.predicthq.com/events/dkbGjQW943KSL5hT8b) is an example of a community festival.
 5. `food`: Food festivals where communities or businesses trade food products, for example, [Bite of Seattle](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="253">Date &#x26; Time Fields</th><th width="152.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -222,9 +222,9 @@ Festival events have PHQ Rank available.
 
 Festival events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Festival events have PHQ Attendance available.
+Festival events have Predicted Attendance available.
 
 ### Performing Arts
 
@@ -250,9 +250,9 @@ The most common five types of performing-arts events are:
 
     Traditional or cultural activities, for example, [Sewing & Quilt Expo](https://events.predicthq.com/events/NCErdrvw9R69ocqES9), a [poetry slam](https://events.predicthq.com/events/CEE7SzC2CmrWSbbDe4), etc.
 
-#### Date & Time
+#### Date & time
 
-<table><thead><tr><th width="238">Date &#x26; Time Fields</th><th width="150.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Performing-arts events are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For performing arts events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="238">Date &#x26; Time Fields</th><th width="150.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Performing-arts events are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For performing arts events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -274,9 +274,9 @@ Performing-arts events have PHQ Rank available.
 
 Performing-arts events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Performing-arts events have PHQ Attendance available.
+Performing-arts events have Predicted Attendance available.
 
 ### Community
 
@@ -292,7 +292,7 @@ Labels for a community event provide more information about the event. The most 
 4. `education`: Informal training workshops or clubs that consist of a group of people that share the same interest, for example, an [installation art workshop](https://events.predicthq.com/events/9sGedbBiSzq74ERvkS).
 5. `fundraiser`: Community [fundraising](https://events.predicthq.com/events/U7nFaVDxKEh6RAD5UD) events.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="243">Date &#x26; Time Fields</th><th width="141.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -316,9 +316,9 @@ Community events have PHQ Rank available.
 
 Community events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Community events have PHQ Attendance available.
+Community events have Predicted Attendance available.
 
 ### Academic
 
@@ -331,7 +331,7 @@ Note:
 
 **LABELS / EVENT TYPES**
 
-The Academic Events category has six main event types affecting students’ activities. The dates are retrieved from the official academic calendar and/or estimated based on the pattern. The estimated date will have an additional `estimated` label.
+The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates.
 
 1. **Academic-session**
    * The compulsory academic session for students to graduate upon completion.
@@ -370,7 +370,7 @@ The Academic Events category has six main event types affecting students’ acti
    * Parent/family day/weekend may be included in the future.
    * Social events is labeled with `academic` and `social`.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="230.33333333333331">Date &#x26; Time Fields</th><th width="138" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>End date is the same as the start date when it’s not available, e.g. an one day graduation event has end date same as start date</td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Available for graduation and social events only. This is an optional data point and may not always be provided.</td></tr><tr><td>End time</td><td align="center">Yes</td><td>Available for graduation and social events only. This is an optional data point and may not always be provided.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -398,6 +398,6 @@ Academic events have PHQ Rank available.
 
 Academic events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Academic events have PHQ Attendance available for all event types. PHQ Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.
+Academic events have Predicted Attendance available for all event types. Predicted Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.

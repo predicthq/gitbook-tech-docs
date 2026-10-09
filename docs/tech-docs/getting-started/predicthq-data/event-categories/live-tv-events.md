@@ -23,7 +23,7 @@ Live TV events include live streaming and broadcast TV games (such as MLS Soccer
 
 **Event Types**
 
-We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Viewership is only shown for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, will always show viewership in all counties in the US.
+We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Live TV Events shows viewership only for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, will always show viewership in all counties in the US.
 
 **SEVEN MAJOR SPORTS LEAGUES**
 
@@ -43,7 +43,7 @@ Note: The sports type column is shown in the `event_label` field in the broadcas
 
 **Date Range Coverage**
 
-Live TV Events via the Broadcast API covers sports games that started from November 1, 2021, to 90 days in the future (90 days from the current date).
+Live TV Events via the Broadcasts API covers sports games that started from November 1, 2021, to 90 days in the future (90 days from the current date).
 
 **Location**
 
@@ -62,7 +62,7 @@ Broadcasts have three possible status values:
 * **`cancelled`**\
   The broadcast is no longer scheduled to be televised.
 
-#### Date & Time
+#### Date & time
 
 <table data-header-hidden><thead><tr><th width="188">Date &#x26; Time Field</th><th align="center">Availability - Broadcast</th><th align="center">Availability - Event</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td align="center">Yes</td><td><ul><li>Broadcast records have a start date and time in both UTC and local time where the broadcast is scheduled.</li></ul><ul><li>Physical events have a start date and time in both UTC and local time in the event timezone.</li></ul></td></tr><tr><td>End date</td><td align="center">No</td><td align="center">Yes</td><td><ul><li>The Broadcast record doesn’t have an end date or time available.</li></ul><ul><li>Physical events have an end date and time in both UTC and local time in the event timezone.</li></ul></td></tr><tr><td>Start time</td><td align="center">Yes</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td align="center">Yes</td><td></td></tr><tr><td>Predicted end time</td><td align="center">No</td><td align="center">Yes</td><td>For sports events where there is no official end time available, we predict end times using our machine learning models and intelligent algorithms. PredictHQ’s Predicted End Times feature provides end times for the physical event in it’s local timezone.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -72,7 +72,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, users can search for the broadcast in Bell City, Los Angeles, and all broadcasts in Los Angeles County that match other criteria will be returned in the result.
+Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, if you search for the broadcast in Bell City, Los Angeles, the API returns all broadcasts in Los Angeles County that match your other criteria.
 
 ## Ranking
 
@@ -91,7 +91,7 @@ PHQ Viewership is the number of people who watch the live broadcast game in a co
 
 The Live TV Events machine learning models predicted the viewership for sports games before they happen. We generate broadcast records 90 days before a sports game starts. However, viewership is updated daily from 14 days before the event starts providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. The viewership numbers generated between 90 days and 14 days can be used as a high-level less accurate indication of viewership.
 
-#### Physical Event Details
+#### Physical event details
 
 The broadcast API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
 
@@ -100,7 +100,7 @@ The broadcast API also returns the physical event details accordingly with all a
 * **Entity**: The physical sports events have venue entities available.
 * **PHQ Rank**: The physical sports events have PHQ Rank available.
 * **Local Rank**: The physical sports events have Local Rank available.
-* **PHQ Attendance**: The physical sports events have PHQ Attendance available.
+* **Predicted Attendance**: The physical sports events have Predicted Attendance available.
 
 ```json
 {

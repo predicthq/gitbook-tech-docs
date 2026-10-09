@@ -10,6 +10,8 @@ description: Get an existing Analysis.
 
 ## Examples
 
+Get an Analysis by its ID:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

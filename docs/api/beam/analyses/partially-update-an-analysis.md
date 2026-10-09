@@ -10,6 +10,8 @@ description: Partially update an existing Analysis.
 
 ## Examples
 
+The following examples update the name of an Analysis:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

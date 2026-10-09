@@ -30,7 +30,7 @@ The Features API serves both halves of a forecasting integration with the same c
 }
 ```
 
-The returned future values are real demand signals - predicted attendance for announced events, holiday impact patterns - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam Analysis is refreshed, retrain before pointing the serving path at it.
+The returned future values are real demand signals - Predicted Attendance for announced events, Predicted Impact Patterns for holidays - so there is no need to zero-fill or lag the forecast horizon. Keep both sides identical: same `beam.analysis_id`, same features and `stats` fields, same granularity - and when a Beam Analysis is refreshed, retrain before pointing the serving path at it.
 
 Pre-trained time series foundation models consume the same future-dated output as covariates, with no training step at all - see [Using event features with time series foundation models](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/features-api-guides/using-event-features-with-time-series-foundation-models). For the production architecture and refresh cadence, see the [Standard integration pattern](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/standard-integration-pattern).
 
@@ -38,7 +38,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 [OpenAPI features-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/features-api.yaml)
 {% endopenapi-operation %}
 
-## Available Features
+## Available features
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
@@ -70,20 +70,20 @@ We recommend using impact pattern features instead of generic features if you ar
 
 You can configure PHQ Attendance features using the options below.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
     "median"
   ]
 }
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
     "gt": 50,
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -93,14 +93,14 @@ You can configure PHQ Attendance features using the options below.
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Impact Patterns (leading and lagging effects of an event).
+PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
 
 **Holidays and Observances Impact Pattern Features**
 
 These features include the Predicted Impact Patterns for public holidays and observances. For example, these features show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 
 {% hint style="success" %}
-We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
 <table><thead><tr><th width="375">Feature</th><th width="149">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays</code></td><td>Public Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public Holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public Holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances</code></td><td>Observances</td><td>N/A</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr><tr><td><code>phq_impact_school_holidays</code></td><td>School Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_school_holidays_retail</code></td><td>School Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_academic_exam</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_holiday</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_session</code></td><td>Academic</td><td>N/A</td></tr></tbody></table>
@@ -119,20 +119,20 @@ See [#attended-events-impact-pattern-features](get-features.md#attended-events-i
 
 You can configure PHQ Impact features using the options below.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
     "median"
   ]
 }
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
     "gt": 50,
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -146,7 +146,7 @@ PHQ Spend features provide daily-level aggregated stats based on total USD we pr
 You can request industry-specific features which are tuned to one of three potential industries:
 
 * Accommodation: Event spend relating to hotels and hosts for the purposes of staying at during events. Spend can extend before and after an event actually starts/ends.
-* Hospitality: Event spend on restaurants, food and drinks. Hotel restaurants are included in this industry.
+* Hospitality: Event spend on restaurants, food, and drinks. Hotel restaurants are included in this industry.
 * Transportation: Ground-based transportation for the purposes of getting to and from an event. Includes public and private transport, such as taxis, rails, busses, and rideshares.
 
 <table><thead><tr><th width="440">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_spend_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_spend_expos</code></td><td>Expos</td></tr><tr><td><code>phq_spend_sports</code></td><td>Sports</td></tr><tr><td><code>phq_spend_community</code></td><td>Community</td></tr><tr><td><code>phq_spend_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_spend_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_spend_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_spend_conferences_accommodation</code></td><td>Conferences - Accommodation</td></tr><tr><td><code>phq_spend_expos_accommodation</code></td><td>Expos - Accommodation</td></tr><tr><td><code>phq_spend_sports_accommodation</code></td><td>Sports - Accommodation</td></tr><tr><td><code>phq_spend_community_accommodation</code></td><td>Community - Accommodation</td></tr><tr><td><code>phq_spend_concerts_accommodation</code></td><td>Concerts - Accommodation</td></tr><tr><td><code>phq_spend_festivals_accommodation</code></td><td>Festivals - Accommodation</td></tr><tr><td><code>phq_spend_performing_arts_accommodation</code></td><td>Performing Arts - Accommodation</td></tr><tr><td><code>phq_spend_conferences_hospitality</code></td><td>Conferences - Hospitality</td></tr><tr><td><code>phq_spend_expos_hospitality</code></td><td>Expos - Hospitality</td></tr><tr><td><code>phq_spend_sports_hospitality</code></td><td>Sports - Hospitality</td></tr><tr><td><code>phq_spend_community_hospitality</code></td><td>Community - Hospitality</td></tr><tr><td><code>phq_spend_concerts_hospitality</code></td><td>Concerts - Hospitality</td></tr><tr><td><code>phq_spend_festivals_hospitality</code></td><td>Festivals - Hospitality</td></tr><tr><td><code>phq_spend_performing_arts_hospitality</code></td><td>Performing Arts - Hospitality</td></tr><tr><td><code>phq_spend_conferences_transportation</code></td><td>Conferences - Transportation</td></tr><tr><td><code>phq_spend_expos_transportation</code></td><td>Expos - Transportation</td></tr><tr><td><code>phq_spend_sports_transportation</code></td><td>Sports - Transportation</td></tr><tr><td><code>phq_spend_community_transportation</code></td><td>Community - Transportation</td></tr><tr><td><code>phq_spend_concerts_transportation</code></td><td>Concerts - Transportation</td></tr><tr><td><code>phq_spend_festivals_transportation</code></td><td>Festivals - Transportation</td></tr><tr><td><code>phq_spend_performing_arts_transportation</code></td><td>Performing Arts - Transportation</td></tr></tbody></table>
@@ -155,20 +155,20 @@ You can request industry-specific features which are tuned to one of three poten
 
 You can configure PHQ Spend features using the options below.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
     "median"
   ]
 }
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
     "gt": 50,
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optional</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -186,20 +186,20 @@ PHQ Viewership features provide daily-level aggregated stats based on the number
 
 You can configure PHQ Attendance features using the options below.
 
-<table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
     "median"
   ]
 }
-</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>phq_rank</code><br>object<br>optional</td><td><p>Filter for events with a PHQ Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "phq_rank": {
     "gt": 50,
     "lt": 80
   }
 }
-</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optiona</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>local_rank</code><br>object<br>optiona</td><td><p>Filter for events with a Local Rank within a certain range.<br></p><p>Supports the following fields:</p><ul><li><code>gt</code> - greater than</li><li><code>gte</code> - greater than or equal</li><li><code>lt</code> - less than</li><li><code>lte</code> - less than or equal</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "local_rank": {
     "gt": 50,
     "lt": 80
@@ -216,7 +216,7 @@ PHQ Rank features provide the daily-level aggregated sum of events bucketed by P
 See the "Holidays and Observances Impact Pattern Features" in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
-We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these will result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
 **PHQ Rank Generic Features**
@@ -237,7 +237,7 @@ Other than the date, the structure of each result here depends on how you config
 
 {% tabs %}
 {% tab title="PHQ Attendance Features" %}
-<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Attendance features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Attendance features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -252,7 +252,7 @@ Other than the date, the structure of each result here depends on how you config
 {% endtab %}
 
 {% tab title="PHQ Impact Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -267,7 +267,7 @@ Other than the date, the structure of each result here depends on how you config
 {% endtab %}
 
 {% tab title="PHQ Rank Features" %}
-<table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result is always the same because you cannot configure PHQ Rank features.</p><p>Will contain a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result is always the same because you cannot configure PHQ Rank features.</p><p>Contains a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "rank_levels": {
     "1": 0,
     "2": 0,
@@ -280,7 +280,7 @@ Other than the date, the structure of each result here depends on how you config
 {% endtab %}
 
 {% tab title="PHQ Spend Features" %}
-<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Spend features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Spend features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,
@@ -295,7 +295,7 @@ Other than the date, the structure of each result here depends on how you config
 {% endtab %}
 
 {% tab title="PHQ Viewership Features" %}
-<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>E.g.</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
     "sum": 17307,

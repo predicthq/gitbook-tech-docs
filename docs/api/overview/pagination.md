@@ -26,13 +26,13 @@ Below is an example response:
 }
 ```
 
-Individual API Endpoint documentation will describe specific response formats.
+Individual API Endpoint documentation describes specific response formats.
 
 You can control the result records that are returned using the standard `offset` and `limit` query string parameters. If no limit is specified, then a default of `10` applies.
 
-The maximum number of results and pagination limits are specified in [your plan](https://control.predicthq.com/settings/plans). If you require higher limits [contact us](https://www.predicthq.com/contact) to discuss your needs.
+[Your plan](https://control.predicthq.com/settings/plans) specifies the maximum number of results and pagination limits. If you require higher limits [contact us](https://www.predicthq.com/contact) to discuss your needs.
 
-## Maximum Number of Results
+## Maximum number of results
 
 When the number of results exceeds the maximum number of records allowed by your subscription the API sets the `overflow` field to `true`. This indicates there are more results available but you are unable to paginate to them.
 

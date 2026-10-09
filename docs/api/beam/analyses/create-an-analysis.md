@@ -12,6 +12,8 @@ description: >-
 
 ## Examples
 
+The following examples create an Analysis:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash
@@ -81,6 +83,6 @@ See the [OpenAPI spec for the Beam API](https://api.predicthq.com/docs/?urls.pri
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Beam guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)

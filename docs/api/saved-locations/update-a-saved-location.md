@@ -10,6 +10,8 @@ description: Update (replace) an existing Saved Location.
 
 ## Examples
 
+The following requests update a Saved Location:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

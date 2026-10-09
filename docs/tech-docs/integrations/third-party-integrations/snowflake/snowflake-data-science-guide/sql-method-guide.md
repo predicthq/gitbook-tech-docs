@@ -4,7 +4,7 @@ description: Transforming Event Data into ML-Ready Features using SQL
 
 # SQL method guide
 
-## Using Snowflake SQL to recreate Features-API
+## Using Snowflake SQL to recreate the Features API
 
 This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
@@ -45,13 +45,13 @@ select
 ```
 {% endcode %}
 
-## Step 2: Calculating Daily Aggregated ML Features with SQL in Snowflake
+## Step 2: Calculating daily aggregated ML features with SQL in Snowflake
 
 Each Feature set will be calculated in blocks, see the column headers in each code block below for which Features are available to be generated.
 
 ### PHQ Attendance Features
 
-Values are calculated as the sum of predicted attendance for the day at a given location within the defined radius.
+The code calculates each value as the sum of Predicted Attendance for the day at a given location within the defined radius.
 
 <pre class="language-sql" data-title="PHQ Attended Features" data-full-width="true"><code class="lang-sql"><strong>----PHQ Attendance Features
 </strong><strong>CREATE OR REPLACE TEMP TABLE phq_attendance_features AS
@@ -190,7 +190,7 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 
 ### PHQ Rank Features
 
-Values are calculated as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it will have a result in each day until the event is over. Each rank level is returned as its own column.
+Values are calculated as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column.
 
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql

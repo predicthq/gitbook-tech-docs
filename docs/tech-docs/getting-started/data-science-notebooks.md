@@ -13,7 +13,7 @@ If you're new, work through the forecasting workflow notebooks in order - they f
 
 ## The forecasting workflow
 
-Work through these in order.
+Work through these notebooks in order:
 
 1. [**ML features by location with Beam**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb) - run Beam per location and use Feature Importance to identify the relevant, forecast-ready features.
 2. [**ML features by group with Beam Analysis Groups**](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb) - an aggregated feature set across several locations, for a single shared model.
@@ -55,9 +55,9 @@ See [Severe Weather](predicthq-data/event-categories/unscheduled-events.md#sever
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_2_data_exploration.ipynb)
 * [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_3_feature_engineering.ipynb)
 
-### Live TV events
+### Live TV Events
 
-Broadcast sports viewership by county in the United States - see [Live TV events](predicthq-data/event-categories/live-tv-events.md).
+Broadcast sports viewership by county in the United States - see [Live TV Events](predicthq-data/event-categories/live-tv-events.md).
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_2_data_exploration.ipynb)

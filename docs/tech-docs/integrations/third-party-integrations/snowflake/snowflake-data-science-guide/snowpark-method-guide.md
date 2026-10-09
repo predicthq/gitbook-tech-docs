@@ -11,7 +11,7 @@ There are two options for calculating features in Snowflake:&#x20;
 1. Call the Features API using [Snowpark](https://docs.snowflake.com/en/developer-guide/snowpark/python/index)&#x20;
 2. Use the [Python Connector ](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector)or other libraries.&#x20;
 
-If either of the above approaches are taken, the Features API can be called for each location and have the results saved into a table instead of using SQL. These options skip the maintenance of SQL and is the recommended approach if possible.
+If you take either of the earlier approaches, you can call the Features API for each location and save the results into a table instead of using SQL. These options skip the maintenance of SQL and is the recommended approach if possible.
 
 Below is an example of calling the Features API with Python in Snowpark. This uses the PredictHQ Python SDK. It loops over the **SAVED\_LOCATIONS** table, calls the Features API using the SDK, and outputs the results into a table. So, it achieves a similar result to the SQL method but using the API. Modify this code to include the features you want to fetch.
 
@@ -96,7 +96,7 @@ session.close()
 ```
 {% endcode %}
 
-### Table Output
+### Table output
 
 The output of the script above should look similar to the data below:
 

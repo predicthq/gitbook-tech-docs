@@ -10,6 +10,8 @@ description: Create a new Loop Link to begin submitting events and feedback.
 
 ## Examples
 
+Create a Loop Link with curl or Python:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

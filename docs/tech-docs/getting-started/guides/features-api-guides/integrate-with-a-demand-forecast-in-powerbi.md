@@ -8,6 +8,8 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 
 ### PredictHQ
 
+PredictHQ tools and resources:
+
 * [Features API](./)
 * [Beam](../beam-guides/)
 * [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area)
@@ -15,6 +17,8 @@ description: Use PowerBI's AutoML models to forecast demand using PredictHQ tech
 * Tutorial: [improving-demand-forecasting-models-with-event-features.md](improving-demand-forecasting-models-with-event-features.md "mention")
 
 ### Microsoft
+
+Microsoft tools and resources:
 
 * [PowerBI AutoML](https://learn.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-machine-learning-integration)
 
@@ -40,7 +44,9 @@ Most teams start with a fixed radius when scoping events around a location. The 
 
 The Predicted Impact Area API returns a location and industry-specific polygon boundary that reflects where event-driven demand impact actually occurs. PredictHQ calibrates boundaries against real demand and event data across industries and geographies.
 
-The recommended approach is to use Saved Locations. When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the `location_id` across all PredictHQ APIs—Events, Features, and Beam—without needing to manage the boundary yourself.
+The recommended approach is to use Saved Locations. When you create a location using `origin_geojson` without specifying a `geojson` area, PredictHQ calculates Predicted Impact Area automatically and stores it against that location. You can then use the `location_id` across all PredictHQ APIs—Events, Features, and Beam—without needing to manage the boundary yourself.
+
+The following example requests the Predicted Impact Area for a location:
 
 ```python
 import httpx
@@ -60,7 +66,7 @@ response = httpx.get(
 print(response.json())
 ```
 
-### Demand Decomposition and Anomaly Detection using Beam
+### Demand decomposition and anomaly detection using Beam
 
 Next, the Beam API decomposes our demand data into baseline and remainders. This separation allows us to distinguish regular demand from anomalies and understand the factors driving these demand anomalies, providing a foundation for a more targeted forecasting approach.
 
@@ -74,7 +80,7 @@ We then utilized Beam's [Feature Importance API](https://app.gitbook.com/s/kEFs8
 
 ### Forecast-Ready Features using Features API
 
-Finally, using the insights from the Feature Importance API, we employed the Feature API to integrate detailed, relevant event data into our model. This precise merging of event data directly correlated with a notable improvement in our model's performance.
+Finally, using the insights from the Feature Importance API, we employed the Features API to integrate detailed, relevant event data into our model. This precise merging of event data directly correlated with a notable improvement in our model's performance.
 
 <figure><img src="../../../.gitbook/assets/features-table-screenshot.png" alt=""><figcaption><p>Beam and Features API results</p></figcaption></figure>
 

@@ -26,7 +26,7 @@ from predicthq import Client
 phq = Client(access_token="$API_TOKEN")
 ```
 
-### Search Events
+### Search events
 
 Perform a basic search of events using the `q`, `rank_level`, and `country` parameters.
 
@@ -35,7 +35,7 @@ for event in phq.events.search(q="Foo Fighters", rank_level=[4, 5], country='US'
     print(event.rank, event.category, event.title, event.start.strftime('%Y-%m-%d'))
 ```
 
-By default, the event search returns only the first ten results. If you want to paginate or access more results at once, look at either using limit/offset parameters or at using the `iter_all()` helper.
+By default, the event search returns only the first 10 results. If you want to paginate or access more results at once, look at either using limit/offset parameters or at using the `iter_all()` helper.
 
 ## Further Examples
 

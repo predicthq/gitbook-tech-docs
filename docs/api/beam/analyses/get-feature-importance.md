@@ -14,6 +14,8 @@ To get these ML features from the Features API for your models, use the Beam `an
 
 ## Examples
 
+The following examples get the Feature Importance for an Analysis:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

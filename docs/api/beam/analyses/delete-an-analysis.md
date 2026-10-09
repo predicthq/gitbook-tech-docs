@@ -10,6 +10,8 @@ description: Delete an existing Analysis.
 
 ## Examples
 
+Delete an Analysis with the following requests:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

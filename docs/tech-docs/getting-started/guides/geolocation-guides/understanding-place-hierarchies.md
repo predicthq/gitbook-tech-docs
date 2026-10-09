@@ -47,7 +47,7 @@ Some events can have multiple hierarchies.
 
 Point events can have up to two hierarchies. The second hierarchy, if it exists, is a nearby major city's hierarchy within a radius of 50km. This [Bite of Seattle community festival](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9), for example, is scoped to two places. Its `scope` and `place_hierarchies` values are shown below. 7153941 is the place id of Denny Regrade, the neighbourhood where the festival takes place; 5809844 is the place id of Seattle, a nearby major city. `{ "scope": "locality", "place_hierarchies": [ ["6295630", "6255149", "6252001", "5815135", "5799783", "7153941"], ["6295630", "6255149", "6252001", "5815135", "5799783", "5809844"] ] }`
 
-Area events have multiple hierarchies if the event applies to multiple counties or regions, or if its polygon overlaps with multiple counties or regions. For example: this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) event's polygon overlaps with 3 counties in the state of Mississippi. Its `scope` and `place_hierarchies` values are shown below. 4421859, 4429877, 4450285 are the respective place ids for Claiborne County, Hinds County, and Warren County.
+Area events have multiple hierarchies if the event applies to multiple counties or regions, or if its polygon overlaps with multiple counties or regions. For example: this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) event's polygon overlaps with three counties in the state of Mississippi. Its `scope` and `place_hierarchies` values are shown below. 4421859, 4429877, 4450285 are the respective place ids for Claiborne County, Hinds County, and Warren County, as the following values show:
 
 ```json
 {
@@ -78,9 +78,9 @@ Area events have multiple hierarchies if the event applies to multiple counties 
 
 ## Examples
 
-### Fetch Place Information for Place IDs
+### Fetch place information for place IDs
 
-With a given list of Place IDs, fetch the Place info using the [Places endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places).
+With a given list of Place IDs, fetch the Place info using the [Places endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places), as in this code:
 
 ```python
 import requests

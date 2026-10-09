@@ -6,6 +6,8 @@ See how others are using it on our [use cases page](https://www.predicthq.com/us
 
 ## Core APIs
 
+PredictHQ offers these core APIs:
+
 * [Events API](events/search-events.md) - Structured, deduplicated real-world events for grounding AI systems, explaining forecasts, and building trust in AI-driven decisions
 * [Features API](features/get-features.md) - Pre-built, model-ready demand features aggregated from real-world events
 * [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Event-driven demand forecasts without building or maintaining your own model

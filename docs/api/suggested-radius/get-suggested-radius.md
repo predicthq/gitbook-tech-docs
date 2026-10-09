@@ -8,7 +8,7 @@ description: >-
 
 The Suggested Radius API returns a radius for finding events around a business location. Rather than guessing an appropriate distance, the API calculates a radius based on factors including population density, local event patterns, and industry.
 
-Use the returned radius as the spatial input for Events API queries, Features API calls, Beam, and demand forecasting workflows.
+Suggested Radius is deprecated. Use [Predicted Impact Area](../impact-area/get-impact-area.md) for new integrations instead.
 
 We recommend caching the response and refreshing monthly - the radius for a given location changes infrequently.
 
@@ -21,6 +21,8 @@ We recommend caching the response and refreshing monthly - the radius for a give
 {% endopenapi-operation %}
 
 ## Examples
+
+The following examples request a suggested radius for a parking business:
 
 {% tabs %}
 {% tab title="curl" %}

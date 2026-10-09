@@ -33,7 +33,9 @@ Grounding with PredictHQ delivers verified real-world context two ways. Most dep
 
 ### Provisioned grounding - retrieval inside your environment
 
-Verified event context is delivered into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, access control, or retrieval scale matter.
+PredictHQ delivers verified event context into your environment (Snowflake, AWS Data Exchange, SFTP, or API sync) and your AI systems retrieve from a store you govern. Choose this when data residency, access control, or retrieval scale matter.
+
+The flow works like this:
 
 ```mermaid
 sequenceDiagram
@@ -53,11 +55,15 @@ sequenceDiagram
     Note over Agent,Store: The answer path stays inside your environment
 ```
 
+Learn more:
+
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 
 ### On-demand grounding - query at answer time
 
 Your agents query the [PredictHQ MCP server](mcp.md) live at decision time and hold no copy of anything. Choose this when speed matters - there is no integration to scope and nothing to wait on from your platform team or roadmap, so an agent can be querying the same day - or when zero pipeline maintenance suits a stack that already speaks tool calling.
+
+The flow works like this:
 
 ```mermaid
 sequenceDiagram
@@ -72,6 +78,8 @@ sequenceDiagram
     Agent-->>User: Grounded answer, events cited
     Note over Agent,MCP: Nothing stored - every answer uses context current at that moment
 ```
+
+Learn more:
 
 * [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - reference workflows
 
@@ -137,6 +145,8 @@ It's mostly a governance and maintenance question. If context must live inside y
 Yes, and the two don't interact: training uses event features to improve your model before it runs, grounding supplies verified context while it runs. See [How to use PredictHQ](../getting-started/how-to-use-predicthq.md).
 
 ## Next steps
+
+Continue with these pages:
 
 * [Provisioned grounding: retrieval inside your environment](../integrations/integration-guides/provisioned-grounding.md) - the reference architecture
 * [MCP server](mcp.md) - set up the MCP server

@@ -36,7 +36,7 @@ This category is classified into three buckets with the following labels used to
 
     `flood`
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="221.33333333333331">Date &#x26; Time Field</th><th width="144" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>The weather warnings’ start time indicate when the warning starts to be effective.</td></tr><tr><td>End time</td><td align="center">Yes</td><td>The weather warnings’ end time indicate when the warning expires.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -58,7 +58,7 @@ Severe weather events have PHQ Rank available.
 
 The PHQ Rank indicates the severity of the bad weather, with using the [Common Alerting Protocol (CAP)](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) data. CAP is an international non-proprietary digital message format for all-hazard emergency events. The benefit of using CAP is there is consistency in how it is implemented in different countries, making it easier to use. CAP alerts can be geographically targeted to a defined warning area.
 
-CAP features evaluate the event from three aspects: urgency, severity and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) will have a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
+CAP features evaluate the event from three aspects: urgency, severity, and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) will have a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
 
 For example, An event with an urgency of immediate (15), a severity of severe (36), and a certainty of observed (35) would have a PHQ Rank of 86.
 
@@ -68,9 +68,9 @@ For example, An event with an urgency of immediate (15), a severity of severe (3
 
 Severe weather events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Severe weather events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Severe weather events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Disasters
 
@@ -94,7 +94,7 @@ This category is classified into three buckets with the following labels used to
 
     The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://events.predicthq.com/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://events.predicthq.com/events/Vat8acyAFAXQaNNTaK).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="225.33333333333331">Date &#x26; Time Field</th><th width="146" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Disaster events may or may not have an end date &#x26; time.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -121,11 +121,11 @@ Disaster events have PHQ Rank available, which indicates the severity of the dis
 
 Disaster events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Disasters events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Disasters events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
-### Airport Delays
+### Airport delays
 
 Airport delays are events that indicate a scheduled flight getting delayed at a specified airport at a specified time.
 
@@ -133,7 +133,7 @@ Airport delays are events that indicate a scheduled flight getting delayed at a 
 
 All airport delays events have both `airport` and `delay` labels.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="215.33333333333331">Date &#x26; Time Field</th><th width="141" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td>All airport delays events are expected to have an end time as it indicates when the delay is expired.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -162,9 +162,9 @@ Airport delays events have PHQ Rank available, indicating the severity of the de
 
 Airport delays events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Airport delays events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Airport delays events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Health Warnings
 
@@ -194,7 +194,7 @@ This category is classified into three buckets with the following labels used to
     * `personal-care-open` / `personal-care-closed` : Both physical assistance and/or prompting and supervising the performance of direct personal care tasks as determined by the consumer's needs (salons, barbers, nail salons) are open or closed.
     * `worship-open` / `worship-closed` : Any building where congregations gather for prayer are open or closed.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="224.33333333333331">Date &#x26; Time Field</th><th width="138" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Government mandated restrictions may have an end date if it’s available, it should cover the whole period in which restrictions are in place or have been lifted.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td>The pandemic or epidemic hazard events use the official announcement time as the start time.</td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -221,9 +221,9 @@ Health warnings events have PHQ Rank available.
 
 Health warnings events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Health warnings events have no PHQ Attendance available as the rank/impact only reflects its influence, rather than a specific amount of attendees at a specific location.
+Health warnings events have no Predicted Attendance available as the rank/impact only reflects its influence, rather than a specific amount of attendees at a specific location.
 
 ### Terror
 
@@ -239,9 +239,9 @@ Labels for a terror event provide more information about the event. The most com
 2. `bombing` : The terrorism acts where the main injury or damage is caused by dropping or detonating a bomb somewhere, for example, [Bombing in Lahan, Nepal](https://events.predicthq.com/events/hnCL2axLWVJZyBN2AV).
 3. `arson`: The terrorism acts also result in a fire damage, it may it may be combined with a `shooting`, `bombing`, etc.
 4. `hostage-crisis`: The terrorism acts when the hostage occurs, for example, [`assassination`](https://events.predicthq.com/events/ywfjG46u6KDmkqqsAa), a terror threat, etc.
-5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, the `mass-shooting` label will be added, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
+5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, PredictHQ adds the `mass-shooting` label, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="212.33333333333331">Date &#x26; Time Field</th><th width="151" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Terror events may have an end date and time available.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -249,7 +249,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Terror events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://events.predicthq.com/events/VGG78MrBvgZ4dartjv).
+PredictHQ tracks terror events with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, terror events can apply to a wider area, for example, [attempted bombing in Cipinang, Indonesia](https://events.predicthq.com/events/VGG78MrBvgZ4dartjv).
 
 #### Entities
 
@@ -265,6 +265,6 @@ Terror events have PHQ Rank available. It indicates the severity of the terroris
 
 Terror events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Terror events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Terror events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.

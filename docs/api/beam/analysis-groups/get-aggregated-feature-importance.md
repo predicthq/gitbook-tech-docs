@@ -12,6 +12,8 @@ This endpoint provides Feature Importance results aggregated across the Analyses
 
 ## Examples
 
+Request the Feature Importance for an Analysis Group:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

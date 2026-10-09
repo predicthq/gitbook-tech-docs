@@ -6,6 +6,8 @@
 
 ## Examples
 
+Request the correlation results for an Analysis:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

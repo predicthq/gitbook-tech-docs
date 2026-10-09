@@ -13,6 +13,8 @@ Particularly for the Loop Links UI we take the `org_name` from Settings and disp
 
 ## Examples
 
+The following examples get the Loop settings:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

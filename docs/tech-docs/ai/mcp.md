@@ -51,7 +51,7 @@ The MCP server exposes tools across the full PredictHQ API surface:
 * **Broadcasts** - search and count live TV broadcasts
 * **Features** - retrieve aggregated ML-ready demand intelligence features
 * **Saved Locations** - create and manage locations, retrieve insight events, opening hours, and closures
-* **Beam** - create and manage analyses and analysis groups, upload demand data, and retrieve feature importance and correlation results
+* **Beam** - create and manage Analyses and Analysis Groups, upload demand data, and retrieve Feature Importance and correlation results
 * **Forecasts** - create and manage forecast models, upload demand data, train models, and retrieve forecasts with explainability
 * **Predicted Impact Area** - get predicted impact areas by location and industry
 * **Places & Geocoding** - search places, look up place hierarchies, and geocode addresses
@@ -67,7 +67,7 @@ If you don't yet have access to the MCP server, contact your PredictHQ account m
 
 ### Claude (claude.ai)
 
-PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up, click **Connect**.
+PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up:
 
 1. Open the [PredictHQ connector listing link](https://claude.ai/directory/connectors/predicthq) and select **Connect** (or, in Claude, go to **Settings > Connectors > Browse connectors** and search for **PredictHQ**).
 2. Follow the OAuth flow to authenticate with your PredictHQ account.
@@ -103,7 +103,7 @@ ChatGPT supports remote MCP servers via Connectors. There are two ways to set th
 
 **Individual setup**
 
-Enable Developer Mode under **Settings > Advanced Settings**, then add a connector under **Settings > Connectors > Create**.
+Enable **Developer Mode** under **Settings > Advanced Settings**, then add a connector under **Settings > Connectors > Create**.
 
 **Workspace-wide setup**
 
@@ -137,6 +137,8 @@ Use the following details when configuring your client:
 Refer to your client's documentation for specific configuration steps.
 
 ## Next steps
+
+Continue with these pages:
 
 * [Grounding with PredictHQ](grounding-with-predicthq.md) - what grounding is and how PredictHQ fits into AI and agent workflows
 * [PredictHQ MCP in agentic workflows](predicthq-mcp-in-agentic-workflows.md) - use the MCP in autonomous and multi-agent workflows, where agents call PredictHQ for real-world context and explainability at decision time

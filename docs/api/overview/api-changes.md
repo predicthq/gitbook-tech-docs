@@ -4,7 +4,7 @@ The PredictHQ API may change from time to time. Major changes that break backwar
 
 For a full history of product updates, new features, and data quality improvements, see the [Changelog](https://app.gitbook.com/s/kWAay641pSmEKQBQMPWx/).
 
-## Backwards Compatible Changes
+## Backwards compatible changes
 
 The following types of changes may be introduced at any time without notice:
 
@@ -15,4 +15,4 @@ The following types of changes may be introduced at any time without notice:
 
 ## Breaking Changes
 
-Breaking changes that affect backwards compatibility will be introduced with a new API version. We will communicate these changes in advance through the [Changelog](https://app.gitbook.com/s/kWAay641pSmEKQBQMPWx/) and direct customer notifications where applicable.
+We introduce breaking changes that affect backwards compatibility with a new API version. We will communicate these changes in advance through the [Changelog](https://app.gitbook.com/s/kWAay641pSmEKQBQMPWx/) and direct customer notifications where applicable.

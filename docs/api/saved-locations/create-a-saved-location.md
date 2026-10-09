@@ -10,7 +10,7 @@ description: Create a new Saved Location to begin seeing insights.
 
 ## Examples
 
-### Create Using Point and Radius
+### Create using point and radius
 
 {% tabs %}
 {% tab title="curl" %}
@@ -75,6 +75,8 @@ print(response.text)
 {% endtabs %}
 
 ### Create Using Place ID
+
+Use this request to create a Saved Location from a Place ID:
 
 {% tabs %}
 {% tab title="curl" %}

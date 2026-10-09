@@ -6,10 +6,10 @@ The Forecasts API delivers fast, accurate, and scalable demand forecasts—power
 
 This API provides ready-to-use, event-optimized forecasts for your business, embedding the impact of sports, concerts, school holidays, and more directly into the forecast output. There’s no need to source or model event effects separately—we handle it for you.
 
-Why Use It?
+Why use it:
 
 * Event-aware by default: real-world events are built into every forecast
-* Industry-specific performance — designed for demand planners, revenue managers, and ops teams
+* Industry-specific performance—designed for demand planners, revenue managers, and ops teams
 * Faster and more affordable than building your own system
 
 PredictHQ’s Forecasts API is the only event-driven, fully automated forecasting solution available—built to get you to accurate forecasts without the complexity.
@@ -44,7 +44,7 @@ industry = "restaurants"
 name = "Sample Restaurant Location"
 ```
 
-## Forecasting Workflow
+## Forecasting workflow
 
 ```mermaid
 ---
@@ -89,7 +89,7 @@ All forecast models are tied to a Saved Location so you can define the location 
 
 #### Create Saved Location (Using Predicted Impact Area)
 
-Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson` — the impact area is calculated automatically and stored against the location.
+Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson` — the API calculates the Predicted Impact Area automatically and stores it against the location.
 
 ```python
 # Create Saved Location with Predicted Impact Area
@@ -163,7 +163,7 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 
 #### Train the Model
 
-During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and feature importance testing. The API uses the important features (from Features API) when training your model and when forecasting.
+During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting.
 
 ```python
 # Train model
@@ -330,7 +330,7 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 
 ## Next Steps
 
-* [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints and parameters
+* [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints, and parameters
 * [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE, and RMSE
 * [Troubleshooting guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
 

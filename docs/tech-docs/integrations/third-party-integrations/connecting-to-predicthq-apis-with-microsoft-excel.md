@@ -21,7 +21,7 @@ Below are the main steps involved in this guide:
 1. API: [API Access Token](../../getting-started/api-quickstart.md)
 2. Microsoft Excel
 
-### Example Parameters for this Guide:
+### Example parameters for this guide:
 
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
@@ -31,13 +31,13 @@ Below are the main steps involved in this guide:
 
 Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
 
-### How to get Events data via PredictHQ's API
+### How to get events data via PredictHQ's API
 
 This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. The examples have been provided for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
 
 PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Microsoft Excel will connect using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
+Microsoft Excel connects using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -51,7 +51,7 @@ https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&
 Note: Scope uses the Place ID (geonames ID) for San Francisco (see our [tech docs for info on Place ID](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)). If you were looking for events happening around a business location you would use the [within parameter](https://docs.predicthq.com/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-latitude-longitude-and-radius) with the latitude and longitude of your business location and the area from the Predicted Impact Area API.
 {% endhint %}
 
-Time zone parameter (active.tz) filters results based on that given time zone, even though date results are returned in UTC.
+Time zone parameter (active.tz) filters results based on that given time zone, even though the API returns date results in UTC.
 
 Limit parameter allows for more results returned per “page” which allows for faster loading, rather than the default 10 per page.
 
@@ -63,14 +63,14 @@ First, create a new Spreadsheet. Click the **Data** tab and choose **Get Data**:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
-Choose the Advanced tab, not the Basic default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
-   2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
+   2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
       ![](<../../.gitbook/assets/image (83).png>)\\
 
@@ -88,7 +88,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
+Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.**
 
 {% hint style="info" %}
 This example will not work unless you replace the \[api\_token] with your token.\

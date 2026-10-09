@@ -1,6 +1,6 @@
 # Troubleshooting guide for Forecasts API
 
-## Forecast Accuracy Issues
+## Forecast accuracy issues
 
 If you’re experiencing lower-than-expected forecast accuracy, there are a few common issues worth checking. Forecasting models rely on consistent, pattern-rich historical data to make reliable predictions. The more signal and structure in your input data, the better the output.
 

@@ -19,7 +19,7 @@ If those updates were bleeding *future* information into a *past* forecast point
 
 There's an important distinction between two kinds of change:
 
-* **Changes that happen before your forecast horizon starts.** If you're forecasting five weeks out, and an event's predicted attendance is refined 4 months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage—it's just PredictHQ's data getting more accurate over time, the same way it would in production.
+* **Changes that happen before your forecast horizon starts.** If you're forecasting five weeks out, and PredictHQ refines an event's attendance estimate 4 months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage—it's just PredictHQ's data getting more accurate over time, the same way it would in production.
 * **Changes that would only be known *after* your forecast point.** This is the scenario that would matter: if a feature used to build a training example for a 5-week-out forecast only became available 2 weeks before the event, that's information your production model would never have had at decision time.
 
 Because most events enter PredictHQ's system well ahead of when they happen — commonly 3-6 months out, and often longer — the updates that follow (postponements, cancellations, attendance refinements, venue changes) are, in practice, absorbed well before most customers' forecast horizons begin. The dynamic nature of real-world events is expected and continuous; the question that actually matters is whether that continuous refinement changes the forecast accuracy you experience, at the horizon you actually operate on.
@@ -28,7 +28,7 @@ That's an empirical question, and we set out to answer it directly rather than a
 
 ## What we measured
 
-We ran an internal study — Backtesting Resiliency — that tracked feature values for the same locations and dates across many weekly snapshots over time, and used those snapshots to compare forecast accuracy computed from "if we'd forecast at this horizon" feature values against the accuracy computed from today's fully up-to-date values. The analysis covered several hundred locations across the US, UK, and Canada, using daily Absolute Percentage Error (APE) as the accuracy measure.
+We ran an internal study—Backtesting Resiliency—that tracked feature values for the same locations and dates across many weekly snapshots over time, and used those snapshots to compare forecast accuracy computed from "if we'd forecast at this horizon" feature values against the accuracy computed from today's fully up-to-date values. The analysis covered several hundred locations across the US, UK, and Canada, using daily Absolute Percentage Error (APE) as the accuracy measure.
 
 The result: forecast accuracy is stable across horizons.
 
@@ -51,6 +51,8 @@ Forecasting models don't consume individual event records directly — they cons
 Individual event-level details are genuinely dynamic — that's what real-world context looks like. What our results show is that this dynamism, once rolled up into the aggregated features models actually use, doesn't translate into meaningful forecast accuracy drift within the horizons that matter for real forecasting decisions.
 
 ## What this means in practice
+
+How you apply these results depends on your forecast horizon:
 
 * **For forecast horizons up to ~6 weeks** (the majority of demand forecasting use cases): treat backtesting results as a direct, reliable proxy for the accuracy you'll see in production. No special handling of point-in-time snapshots is required.
 * **For longer horizons (7+ weeks out):** the effect is still small, but if you're building a model with a longer lead time and want to validate this for your specific use case, talk to your PredictHQ contact — we can help design a backtest that reflects your exact horizon.

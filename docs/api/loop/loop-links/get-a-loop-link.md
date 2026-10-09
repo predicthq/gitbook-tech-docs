@@ -10,6 +10,8 @@ description: Get an existing Loop Link.
 
 ## Examples
 
+The following examples get a Loop Link:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

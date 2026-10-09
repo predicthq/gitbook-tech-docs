@@ -8,9 +8,9 @@ description: Upload your demand data as CSV, line-delimited JSON, or JSON.
 [OpenAPI beam-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/beam-api.yaml)
 {% endopenapi-operation %}
 
-## Error Codes
+## Error codes
 
-An unsuccessful HTTP response code could be returned for several reasons. In addition to an error message, there may also be a `code` field when applicable. The table below outlines the meaning of several error codes that may be returned.
+The API can return an unsuccessful HTTP response code for several reasons. In addition to an error message, there may also be a `code` field when applicable. The table below outlines the meaning of several error codes that may be returned.
 
 | Code                                        | Description                                                                                                                                    |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,7 +19,7 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `json_no_data`                              | An empty JSON body was uploaded.                                                                                                               |
 | `json_invalid_format`                       | The uploaded JSON is formatted incorrectly. Ensure JSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
 | `ndjson_no_data`                            | An empty NDJSON body was uploaded.                                                                                                             |
-| `ndjson_invalid_format`                     | The NDJSON body is formatted incorrectly. Please ensure NDJSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
+| `ndjson_invalid_format`                     | The NDJSON body is formatted incorrectly. Ensure NDJSON data is correctly UTF-8 encoded and that there are no invalid escape sequences. |
 | `csv_invalid_row`                           | The uploaded CSV has an invalid row.                                                                                                           |
 | `csv_invalid_header`                        | The uploaded CSV headers are incorrect. Use `date,demand`.                                                                              |
 | `csv_no_data`                               | The uploaded CSV is empty or only has headers set.                                                                                             |
@@ -37,6 +37,8 @@ An unsuccessful HTTP response code could be returned for several reasons. In add
 | `unexpected_error`                          | An unexpected error occurred.                                                                                                                  |
 
 ## Examples
+
+Upload a CSV file with either example:
 
 {% tabs %}
 {% tab title="curl" %}

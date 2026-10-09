@@ -10,6 +10,8 @@ description: Search for events happening in an existing Saved Location.
 
 ## Examples
 
+The following examples search for public holidays and sports events in the next 90 days:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

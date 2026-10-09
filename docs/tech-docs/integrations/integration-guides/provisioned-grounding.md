@@ -39,7 +39,7 @@ flowchart TB
 The components:
 
 1. **Delivery** - PredictHQ deploys verified event context into your environment via [Snowflake](../third-party-integrations/snowflake/), [AWS Data Exchange](../third-party-integrations/aws-data-exchange/), [SFTP](../third-party-integrations/sftp.md), or [API sync](keep-data-updated-via-api.md). Managed delivery is preferred: no pipeline to build, and the store stays current without sync code.
-2. **Event store** - the same store the Standard Integration Pattern maintains. Events are structured records (category, location, dates, predicted attendance, rank), so it lives naturally in the warehouse or lakehouse your AI stack already reads.
+2. **Event store** - the same store the Standard Integration Pattern maintains. Events are structured records (category, location, dates, Predicted Attendance, rank), so it lives naturally in the warehouse or lakehouse your AI stack already reads.
 3. **Retrieval interface** - the query layer your AI systems call at answer time. Because events are structured, retrieval is structured too: filter by location, date window, and the event categories that matter, rather than embedding everything and hoping vector similarity finds the right concert.
 4. **The model** - any LLM, assistant, or agent in your environment. It receives verified, scoped context in its input and answers from retrieved facts, not invented ones.
 

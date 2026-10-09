@@ -4,7 +4,7 @@ description: We provide OpenAPI specs for all our APIs
 
 # API specs
 
-We provide OpenAPI specs for all our APIs. These live in a Github repo. Our API Reference pages are auto-generated based on these specs.
+We provide OpenAPI specs for all our APIs. These live in a Github repo. Our API Reference pages are auto-generated based on these specs. You can use these resources:
 
 * [OpenAPI Specs Github Repo](https://github.com/predicthq/api-specs)
 * [Swagger UI](https://api.predicthq.com/docs/) - Test out our APIs in the familiar Swagger UI.

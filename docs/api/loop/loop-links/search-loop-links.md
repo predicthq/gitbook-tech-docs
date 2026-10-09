@@ -10,6 +10,8 @@ description: Search existing Loop Links.
 
 ## Examples
 
+The following examples search Loop Links sorted by name:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

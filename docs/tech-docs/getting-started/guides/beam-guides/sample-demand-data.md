@@ -2,7 +2,7 @@
 
 If you don't have your own demand data ready, you can use one of our sample datasets to explore Beam and the Forecasts API. Each dataset contains synthetic daily demand data modelled on realistic industry patterns. Use any dataset with your own location: the industry type matters more than the specific location when getting started.
 
-## Available Datasets
+## Available datasets
 
 <table><thead><tr><th width="309.421875">Industry</th><th>File</th></tr></thead><tbody><tr><td>Retail</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv"><code>sample_demand_retail.csv</code></a></td></tr><tr><td>Restaurants</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_restaurants.csv"><code>sample_demand_restaurants.csv</code></a></td></tr><tr><td>Accommodation</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_accommodation.csv"><code>sample_demand_accommodation.csv</code></a></td></tr><tr><td>Parking</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_parking.csv"><code>sample_demand_parking.csv</code></a></td></tr><tr><td>Other</td><td><a href="https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_other.csv"><code>sample_demand_other.csv</code></a></td></tr></tbody></table>
 
@@ -64,5 +64,5 @@ print("Upload successful" if response.status_code == 201 else response.json())
 See the [Getting started with Forecasts API](../forecasts-api-guides/getting-started.md) guide for a full walkthrough including how to create a model and generate a forecast.
 
 {% hint style="info" %}
-These datasets are provided for testing and exploration purposes only. For production use, replace them with your own demand data.
+We provide these datasets for testing and exploration only. For production use, replace them with your own demand data.
 {% endhint %}

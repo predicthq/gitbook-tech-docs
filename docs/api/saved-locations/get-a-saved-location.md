@@ -10,6 +10,8 @@ description: Get an existing Saved Location.
 
 ## Examples
 
+The following requests get a Saved Location by its ID:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash

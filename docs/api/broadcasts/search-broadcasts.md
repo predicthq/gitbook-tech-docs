@@ -11,7 +11,7 @@ Note that you don't receive an error when requesting a date range or location th
 
 This is sometimes confused with missing data. If you're not seeing the results you expect to see then ensure your subscription covers the location or time period you're searching for.
 
-Your subscription settings can be viewed in the [WebApp](https://control.predicthq.com/settings/plans).
+In the [WebApp](https://control.predicthq.com/settings/plans), view your subscription settings.
 {% endhint %}
 
 {% openapi-operation spec="broadcasts-api" path="/v1/broadcasts/" method="get" %}
@@ -19,6 +19,8 @@ Your subscription settings can be viewed in the [WebApp](https://control.predict
 {% endopenapi-operation %}
 
 ## Examples
+
+The following examples request a broadcast by its ID:
 
 {% tabs %}
 {% tab title="curl" %}
@@ -56,7 +58,7 @@ Read the [OpenAPI spec for Broadcasts API](https://api.predicthq.com/docs/?urls.
 ## Guides
 
 {% hint style="info" %}
-**USA Counties Mapping File**\
+**USA counties mapping file**\
 Counties are mapped to Place IDs. Download the [county-to-Place ID mapping file](https://github.com/predicthq/api-specs/blob/main/data/broadcast-county-place-mapping.csv).
 {% endhint %}
 

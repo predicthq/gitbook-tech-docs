@@ -8,7 +8,7 @@ description: >-
 
 ## Categories
 
-**Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. Polygon information is returned on the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
+**Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. The API returns polygon information in the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
 
 ### Public Holidays
 
@@ -24,9 +24,9 @@ Labels for a public holiday event provide more information about the holiday. Th
 4. `holiday-religious`: When the holiday is celebrated for a religious reason, e.g. there are about 44 countries that celebrate [Eid al-Adha](https://events.predicthq.com/events/pYQSFxFcYgJJdzo3uc) Day
 5. `holiday-christian`: When the holiday is Christian related, e.g. [Corpus Christi](https://events.predicthq.com/events/3768MLSMzkSPo6HPjQ).
 
-#### Date & Time
+#### Date & time
 
-<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday will break into individual days if it’s celebrated over multiple days, e.g. there are 4 days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday breaks into individual days if it’s celebrated over multiple days, e.g. there are four days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
 Note: datetime is used with the local timezone. E.g. New York is celebrating New Year’s Day on January 1st EST, while San Francisco is also celebrating New Year’s Day on January 1st but in PST.
 
@@ -49,9 +49,9 @@ Public holidays have event group entities available.
 
 Public holidays events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Public holidays have no PHQ Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
+Public holidays have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
 
 ### School Holidays
 
@@ -71,7 +71,7 @@ Predicted School Holiday events contain the same data attributes as confirmed ev
 
 All school holidays events have both `school` and `holiday` labels. Some events may have an `estimated` label when there is no date available from the official source but a pattern from the previous years can be used to estimate the holiday dates.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="216.33333333333331">Date &#x26; Time Fields</th><th width="137" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>The weekend before a school holiday is included if the school holiday starts on a Sunday or Monday</td></tr><tr><td>End date</td><td align="center">Yes</td><td>The weekend after a school holiday is included if the holiday ends on a Friday or Sunday</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
@@ -79,7 +79,7 @@ Note: Datetime is used with the local timezone.
 
 #### Location
 
-School holiday is an area event, it scopes to either locality, localadmin, county, region or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
+School holiday is an area event, it scopes to either locality, localadmin, county, region, or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
 
 The latitude and longitude is pointing to the center of the region or country.
 
@@ -114,7 +114,7 @@ Here are some examples of the school holidays for the United Kingdom:
 To find school holidays that impact your location you can use the standard features of our events API - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
 See also the [FAQs for district-level school holidays](non-attendance-based-events.md#faqs-for-district-level-school-holidays)
@@ -149,7 +149,7 @@ Here are some examples of the school holidays for the United States:
 To find school holidays that impact your location you can use the standard features of our events API and our WebApp to find events that impact your location - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the places parameter in the events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * You can search in the WebApp for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
@@ -187,11 +187,11 @@ School holidays events have Local Rank available.
 
 For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-PHQ Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
+Predicted Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
 
-School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no PHQ Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
+School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
 
 ### Observances
 
@@ -211,7 +211,7 @@ Labels for an observance event provide more information about the event. The mos
    * The United Nations also observes anniversaries of key events in its history. E.g. May 8th is [Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War](https://events.predicthq.com/events/nLoWsBHWpVrHuW5FcC).
 5. `holiday-hebrew`: When observing a Hebrew-related holiday, e.g. many countries observe [Tu Bishvat](https://events.predicthq.com/events/FRgcTikSuwrJixHDdL).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="231.33333333333331">Date &#x26; Time Fields</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. An observance event is a single-day event. There are no multi-day events under the observance category. It will break into individual days if it’s celebrated over multiple days, e.g. the Saturday in the Easter weekend is recognized as Holy Saturday, with the following Sunday is Easter Sunday in Canada</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
@@ -238,9 +238,9 @@ Observances have event group entities available.
 
 Observance events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Observances have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Observances have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Politics
 
@@ -255,7 +255,7 @@ This category is classified into two buckets with the following labels used to i
 1. **Election**: The date when the `parliament` or `president` election occurs.
 2. **Referendum**: The `referendum` date in the country.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="207.33333333333331">Date &#x26; Time Field</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>Politics events have only a start date available.</td></tr><tr><td>End date</td><td align="center">No</td><td></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
@@ -279,9 +279,9 @@ Politics events have PHQ Rank available. It considers the number of registered v
 
 Politics events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Politics events have no PHQ Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
+Politics events have no Predicted Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
 
 ### Daylight Savings
 
@@ -291,7 +291,7 @@ Daylight savings is the schedule date when daylight savings start or ends in an 
 
 All daylight savings events are labelled `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="221.33333333333331">Date &#x26; Time Field</th><th width="143" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>Daylight events have only a start date available.</td></tr><tr><td>End date</td><td align="center">No</td><td></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
@@ -315,6 +315,6 @@ All daylight savings events have a PHQ Rank of 30.
 
 Daylight savings events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Daylight savings events have no PHQ Attendance available.
+Daylight savings events have no Predicted Attendance available.
