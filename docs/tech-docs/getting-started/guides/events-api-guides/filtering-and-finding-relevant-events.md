@@ -78,7 +78,7 @@ params={
 
 <details>
 
-<summary>Event Type</summary>
+<summary>Event type</summary>
 
 Select the types of events for the search:
 
@@ -135,7 +135,7 @@ Focusing primarily on `active` and `predicted` event states ensures that only ev
 
 **Settings for Tom’s Pizzeria**
 
-Tom is interested in all upcoming events in June 2024 and has decided to include `predicted` events as well.
+Tom is interested in all upcoming events in June 2024 and has decided to include `predicted` events as well:
 
 ```python
 params={
@@ -409,7 +409,7 @@ The Events API returns results in a paginated format, where your subscription li
 
 * `count`: The total number of events that match the search criteria.
 * `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.
-* `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. Consider making your search query more specific to reduce the number of results returned.
+* `overflow`: If `true`, this indicates more results are available but cannot be reached through normal pagination due to subscription limits. To reduce the number of results returned, make your search query more specific.
 
 For more comprehensive guidelines on navigating paginated results, refer to [Pagination](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/pagination "mention").
 

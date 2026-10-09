@@ -64,4 +64,4 @@ Counties are mapped to Place IDs. Download the [county-to-Place ID mapping file]
 
 These guides are relevant to this API:
 
-* [Live TV event guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)
+* [Live TV Events guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

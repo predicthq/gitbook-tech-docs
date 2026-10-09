@@ -136,7 +136,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt="The BigQuery Create table form with the schema fields defined manually"><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
 5. **Advanced Options**: Expand the **Advanced Options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
-6. **Create the Table**: To finalize the creation, click **Create Table**.
+6. **Create the Table**: To finalize the creation, click **Create table**.
 
 <figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt="The BigQuery Advanced options section with the Unknown values checkbox ticked"><figcaption><p>tick <strong>Unknown values</strong> and you're ready to create</p></figcaption></figure>
 
@@ -506,7 +506,7 @@ Some common fields to query are:
 * **rank:** is commonly used to filter out smaller events. Filter where rank is equal to or greater than a specific field to filter out smaller events.
 * **geo:** This field contains geojson data (see the [GeoJSON overview](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#geojson) for more details) on the location event. For attended events, this field typically holds the latitude and longitude of the point at which the event is occurring. It can also hold [polygon](https://docs.predicthq.com/getting-started/guides/geolocation-guides/working-with-polygons) information for events that cover a wide area like marathons or severe weather events. For marathons, the polygon shows the route of the marathon. Query on this field to find all events in an area like a radius.
 
-See the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for more examples. The SQL example below shows how to query these fields in the database.
+See the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for more examples. The SQL example later in this section shows how to query these fields in the database.
 
 Below is a sample BigQuery SQL query that aligns with the parameters specified for our example. This query filters events based on the categories, date range, event rank, and geographical proximity to Tom’s location.
 
@@ -561,7 +561,7 @@ PredictHQ data can significantly enhance your demand forecasting models, especia
 
 You can use Event data from your data warehouse in your demand forecast to improve forecast accuracy. See our [Snowflake data science guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of how you can implement ML features for demand forecasting in a data warehouse. Although that example shows how to do this in Snowflake, a similar approach applies to other data warehouses. See also [Improving demand forecasting models with event features](../../getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md).
 
-#### 3. Building Tailored Reports
+#### 3. Building tailored reports
 
 Use the data within BigQuery to create detailed reports and dashboards that monitor the effects of events on your business operations. These reports can provide actionable insights to business users across your organization, from marketing teams planning campaigns around major events to supply chain management preparing for increased activity.
 

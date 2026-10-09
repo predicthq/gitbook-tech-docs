@@ -104,7 +104,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 * `saved_locations_api_list_saved_location_insight_events` surfaces the highest-impact upcoming drivers for a known location.
 * `saved_locations_api_get_saved_location` returns a location's summary insights, including Predicted Event Spend and Predicted Attendance for the next 90 days.
 
-### Next Steps
+### Next steps
 
 These pages cover related setup and concepts:
 

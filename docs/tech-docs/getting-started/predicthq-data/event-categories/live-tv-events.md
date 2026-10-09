@@ -72,7 +72,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, if you search for the broadcast in Bell City, Los Angeles, the API returns all broadcasts in Los Angeles County that match your other criteria.
+You can search the API or our WebApp by places at any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies). The API returns the results at county level for the county where the place is located. For example, if you search for the broadcast in Bell City, Los Angeles, the API returns all broadcasts in Los Angeles County that match your other criteria.
 
 ## Ranking
 

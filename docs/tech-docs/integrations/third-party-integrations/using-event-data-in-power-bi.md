@@ -35,7 +35,7 @@ The main steps involved in this guide are:
 
 ## Building report parameters around a location
 
-For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined in the next section, Example parameters for this guide, focusing on San Francisco city for attended events in a three-month period.
+For the purposes of this tutorial, parameters will be fixed for a standard example. The next section, Example parameters for this guide, defines the parameters, focusing on San Francisco city for attended events in a three-month period.
 
 {% hint style="info" %}
 You can modify all of our parameters based on your needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
@@ -77,7 +77,7 @@ We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/event
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
-Once the search has completed click **Export** to get a CSV. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
+Once the search has completed to get a CSV, click **Export**. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
 In Power BI, create a new report and press **Get Data** -> **Text/CSV**
 
@@ -152,7 +152,7 @@ To start, navigate to the Snowflake data connection via:
 
 <figure><img src="../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt=""><figcaption><p>Database -> Snowflake</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt="The Power BI Get Data window with Database selected and Snowflake highlighted in the list of connectors"><figcaption><p>Database -> Snowflake</p></figcaption></figure>
 
 Enter the Server and Warehouse info you gathered earlier.\
 It should look something like the following screenshot, replacing square bracket placeholder variables for your Server and Warehouse info.
@@ -244,7 +244,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
-   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` is a placeholder for your PredictHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
+   2. In the second field, enter `Bearer [api_token]`, with your PredictHQ API Access Token in place of `[api_token]`. The value keeps the word `Bearer` followed by a space before the token.
 
 The filled-out information should look like this:
 
@@ -340,7 +340,7 @@ drag the 'date\_local' field from the Data tab on the right to the “Filters on
 
 Change the drop-down to **Advanced filtering**. Then, add the following:
 
-“_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click “apply filter” in the bottom right of the filter menu.\
+“_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click **Apply filter** in the filter menu.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
 
 <figure><img src="../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
@@ -361,7 +361,11 @@ For phq\_attendance in the table use the drop down to remove the summary, this s
 
 <figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
-To rename the chart title, click the chart, and then go to the Visualizations tab -> **General** -> **Title**. Rename it to “Event Attendance per day in San Francisco”.
+To rename the chart title:
+
+1. Click the chart.
+2. In the **Visualizations** tab, click **General**, and then click **Title**.
+3. Enter “Event Attendance per day in San Francisco”.
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
@@ -386,7 +390,7 @@ Wait 10-20 seconds between each step as data populates and data runs in the back
 
 <figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
-Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Select Anonymous and click Connect.
+Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Select **Anonymous** and click **Connect**.
 
 <figure><img src="../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 

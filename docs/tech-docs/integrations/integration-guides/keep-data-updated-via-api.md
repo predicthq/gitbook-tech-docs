@@ -11,7 +11,7 @@ description: >-
 We highly recommend using Snowflake or ADX to keep your local event store up to date. Managed delivery removes all the complexity of implementing a sync system against the API and results in far higher accuracy with fewer issues. Keeping up to date via the API is much more complicated than via Snowflake or ADX.
 {% endhint %}
 
-Events change constantly: dates move, events are canceled or postponed, attendance predictions are revised, and records are merged as duplicates or removed as spam. A stale local store degrades everything built on it - models score against outdated signals, and grounded AI systems answer from events that no longer exist. Keeping your store in sync is what keeps those outputs true.
+Events change constantly: dates move, events are canceled or postponed, Predicted Attendance values are revised, and records are merged as duplicates or removed as spam. A stale local store degrades everything built on it - models score against outdated signals, and grounded AI systems answer from events that no longer exist. Keeping your store in sync is what keeps those outputs true.
 
 Our records have an `updated` field which indicates the date/time the record was last updated.
 

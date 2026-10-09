@@ -14,7 +14,7 @@ Event-driven demand is sparse and uneven. A small number of events create large 
 
 Beam analyzes your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
-Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
+Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one Analysis per location is required.
 
 If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location Analyses are preferable in most cases.
 

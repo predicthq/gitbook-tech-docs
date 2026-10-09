@@ -36,7 +36,7 @@ When reading individual event records, interpret phq\_attendance as follows:
 
 <table><thead><tr><th width="184">Category</th><th>What phq_attendance represents</th></tr></thead><tbody><tr><td>Concerts</td><td>Daily attendance. These events tend to be 1 day or less.</td></tr><tr><td>Performing Arts</td><td>Daily attendance. These events tend to be 1 day or less.</td></tr><tr><td>Conferences</td><td>Daily attendance, not total attendance.</td></tr><tr><td>Expos</td><td>Total attendance across the full event duration.</td></tr><tr><td>Sports</td><td>Total attendance across the full event duration.</td></tr><tr><td>Festivals</td><td>Total attendance across the full event duration.</td></tr><tr><td>Community</td><td>Total attendance across the full event duration.</td></tr></tbody></table>
 
-## Umbrella Events
+## Umbrella events
 
 Umbrella events refer to the case where we have a parent event that contains one or more child events. For example, the [United States Formula 1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) has child events for [the qualification](https://events.predicthq.com/events/hZ5fGHaxHKgJTBpqyQ), three practice events, [a concert](https://events.predicthq.com/events/N4LWVHvicH5YiCHQKe) that occurs at the Grand Prix, and the [actual race event](https://events.predicthq.com/events/5uRg7CqGu7DTtu4Rfk) (there are 12 child events in total). The parent event is for the entire Grand Prix that runs from the 1st of November to the 3rd of November 2019. Both the parent and child events are part of the wider Umbrella event.
 
