@@ -48,6 +48,8 @@ name = "Sample Restaurant Location"
 
 ## Forecasting workflow
 
+The workflow has these stages:
+
 ```mermaid
 ---
 title: Initial Setup for Forecasting
@@ -123,6 +125,8 @@ After creating the Saved Location, we can re-use it across as many forecast mode
 
 #### Create a model
 
+To create the model, run this code:
+
 ```python
 # Define model
 response = requests.post(
@@ -146,6 +150,8 @@ print(f"Model ID: {model_id}")
 ```
 
 #### Upload demand data
+
+To upload your demand data, run this code:
 
 ```python
 # Upload demand
@@ -333,6 +339,8 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 {% endhint %}
 
 ## Next steps
+
+To continue:
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints, and parameters
 * [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE, and RMSE

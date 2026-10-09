@@ -103,6 +103,8 @@ This section guides you through creating a simple dashboard in Tableau, featurin
 
 **Chart**
 
+To create the chart:
+
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and name it 'Time Series'.
 2. Set Filters: Use filters to refine the data for events of interest only. [Drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf) to the Filters shelf:
 
@@ -123,6 +125,8 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 **Table**
 
+To create the table:
+
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and call it 'Event Info'.
 2. Create Table:
    1. On the Row shelf, add all relevant fields as **Discrete** pills, which are blue. For this tutorial, the following fields are considered:
@@ -139,8 +143,10 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 ### Dashboard
 
+To build the dashboard:
+
 1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories).
-   1. Set the size of the dashboard to 'Automatic' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) to ensure the dashboard adjusts to fit the screen it's being viewed on.
+   * Set the size of the dashboard to **Automatic** by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) to ensure the dashboard adjusts to fit the screen it's being viewed on.
 2. Add Worksheets:
    1. From the Sheets list, drag the 'Time Series' sheet into the dashboard.
    2. From the Sheets list, drag the 'Event Info' sheet into the dashboard.
@@ -264,6 +270,8 @@ Tableau workbook
 <details>
 
 <summary>Deprecated Tableau Connector</summary>
+
+To connect with the deprecated connector:
 
 1. [Log in](https://control.predicthq.com/) to your PredictHQ account or [sign up](https://signup.predicthq.com/) for a trial if you haven't got an account yet.
 2. In the [API Clients](https://control.predicthq.com/clients) part of the WebApp, create a new API Client.

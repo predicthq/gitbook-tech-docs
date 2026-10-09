@@ -41,7 +41,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 ## Available features
 
 {% tabs %}
-{% tab title="PHQ Attendance Features" %}
+{% tab title="Predicted Attendance features" %}
 Predicted Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
 {% hint style="success" %}
@@ -68,7 +68,7 @@ We recommend using Predicted Impact Patterns features instead of generic feature
 
 **Configuration**
 
-You can configure PHQ Attendance features using the options in the following table.
+You can configure Predicted Attendance features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -92,8 +92,8 @@ You can configure PHQ Attendance features using the options in the following tab
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Impact Features" %}
-PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
+{% tab title="Predicted Impact features" %}
+Predicted Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
 
 **Predicted Impact Patterns for holidays and observances**
 
@@ -117,7 +117,7 @@ See [#attended-events-impact-pattern-features](get-features.md#attended-events-i
 
 **Configuration**
 
-You can configure PHQ Impact features using the options in the following table.
+You can configure Predicted Impact features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -140,8 +140,8 @@ You can configure PHQ Impact features using the options in the following table.
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Spend Features" %}
-PHQ Spend features provide daily-level aggregated stats based on total USD we predict will be spent during events on a given day. This takes into account complications like distributing attendance across multi-day events.
+{% tab title="Predicted Event Spend features" %}
+Predicted Event Spend features provide daily-level aggregated stats based on total USD we predict will be spent during events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
 You can request industry-specific features which are tuned to one of three potential industries:
 
@@ -153,7 +153,7 @@ You can request industry-specific features which are tuned to one of three poten
 
 **Configuration**
 
-You can configure PHQ Spend features using the options in the following table.
+You can configure Predicted Event Spend features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -177,14 +177,14 @@ You can configure PHQ Spend features using the options in the following table.
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Viewership Features" %}
-PHQ Viewership features provide daily-level aggregated stats based on the number of people who we predict will view broadcasts on a given day.
+{% tab title="Predicted Viewership features" %}
+Predicted Viewership features provide daily-level aggregated stats based on the number of people who we predict will view broadcasts on a given day.
 
 <table><thead><tr><th width="596">Feature</th><th width="385">Description</th></tr></thead><tbody><tr><td><code>phq_viewership_sports</code></td><td>Sports - (All)</td></tr><tr><td><code>phq_viewership_sports_american_football</code></td><td>American Football - (All)</td></tr><tr><td><code>phq_viewership_sports_american_football_ncaa_men</code></td><td>American Footbal - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_american_football_nfl</code></td><td>American Football - NFL</td></tr><tr><td><code>phq_viewership_sports_auto_racing</code></td><td>Automotive Racing - All</td></tr><tr><td><code>phq_viewership_sports_auto_racing_indy_car</code></td><td>Automotive Racing - Indy Car</td></tr><tr><td><code>phq_viewership_sports_auto_racing_nascar</code></td><td>Automotive Racing - NASCAR</td></tr><tr><td><code>phq_viewership_sports_baseball</code></td><td>Baseball - (All)</td></tr><tr><td><code>phq_viewership_sports_baseball_mlb</code></td><td>Baseball - MLB</td></tr><tr><td><code>phq_viewership_sports_baseball_ncaa_men</code></td><td>Baseball - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_basketball</code></td><td>Basketball - (All)</td></tr><tr><td><code>phq_viewership_sports_basketball_nba</code></td><td>Basketball - NBA</td></tr><tr><td><code>phq_viewership_sports_basketball_ncaa_men</code></td><td>Basketball - NCAA Men's</td></tr><tr><td><code>phq_viewership_sports_basketball_ncaa_women</code></td><td>Basketball - NCAA Women's</td></tr><tr><td><code>phq_viewership_sports_boxing</code></td><td>Boxing - (All)</td></tr><tr><td><code>phq_viewership_sports_golf</code></td><td>Golf - (All)</td></tr><tr><td><code>phq_viewership_sports_golf_masters</code></td><td>Golf - Masters</td></tr><tr><td><code>phq_viewership_sports_golf_pga_championship</code></td><td>Golf - PGA Championships</td></tr><tr><td><code>phq_viewership_sports_golf_pga_tour</code></td><td>Golf - PGA Tours</td></tr><tr><td><code>phq_viewership_sports_golf_us_open</code></td><td>Golf - US Open</td></tr><tr><td><code>phq_viewership_sports_horse_racing</code></td><td>Horse Racing - (All)</td></tr><tr><td><code>phq_viewership_sports_horse_racing_belmont_stakes</code></td><td>Horse Racing - Belmont Stakes</td></tr><tr><td><code>phq_viewership_sports_horse_racing_kentucky_derby</code></td><td>Horse Racing - Kentucky Derby</td></tr><tr><td><code>phq_viewership_sports_horse_racing_preakness_stakes</code></td><td>Horse Racing - Preakness Stakes</td></tr><tr><td><code>phq_viewership_sports_ice_hockey</code></td><td>Ice Hockey - (All)</td></tr><tr><td><code>phq_viewership_sports_ice_hockey_nhl</code></td><td>Ice Hockey - NHL</td></tr><tr><td><code>phq_viewership_sports_mma</code></td><td>Mixed Martial Arts - (All)</td></tr><tr><td><code>phq_viewership_sports_mma_ufc</code></td><td>Mixed Martial Arts - UFC</td></tr><tr><td><code>phq_viewership_sports_soccer</code></td><td>Soccer - (All)</td></tr><tr><td><code>phq_viewership_sports_soccer_concacaf_champions_league</code></td><td>Soccer - CONCACAF Champions League</td></tr><tr><td><code>phq_viewership_sports_soccer_concacaf_gold_cup</code></td><td>Soccer - CONCACAF Gold Cup</td></tr><tr><td><code>phq_viewership_sports_soccer_copa_america_men</code></td><td>Soccer - COPA America Men's</td></tr><tr><td><code>phq_viewership_sports_soccer_fifa_world_cup_women</code></td><td>Soccer - FIFA World Cup Women's</td></tr><tr><td><code>phq_viewership_sports_soccer_fifa_world_cup_men</code></td><td>Soccer - FIFA World Cup Men's</td></tr><tr><td><code>phq_viewership_sports_soccer_mls</code></td><td>Soccer - MLS</td></tr><tr><td><code>phq_viewership_sports_soccer_uefa_champions_league_men</code></td><td>Soccer - UEFA Champions League Men's</td></tr><tr><td><code>phq_viewership_sports_softball</code></td><td>Softball - (All)</td></tr><tr><td><code>phq_viewership_sports_softball_ncaa_women</code></td><td>Softball - NCAA Women's</td></tr><tr><td><code>phq_viewership_sports_tennis</code></td><td>Tennis - (All)</td></tr><tr><td><code>phq_viewership_sports_tennis_us_open</code></td><td>Tennis - US Open</td></tr><tr><td><code>phq_viewership_sports_tennis_wimbledon</code></td><td>Tennis - Wimbledon</td></tr></tbody></table>
 
 **Configuration**
 
-You can configure PHQ Attendance features using the options in the following table.
+You can configure Predicted Attendance features using the options in the following table.
 
 <table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -208,12 +208,12 @@ You can configure PHQ Attendance features using the options in the following tab
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Rank Features" %}
+{% tab title="PHQ Rank features" %}
 PHQ Rank features provide the daily-level aggregated sum of events bucketed by PHQ Rank level (1-5).
 
 **PHQ Rank Predicted Impact Patterns features**
 
-See the "Predicted Impact Patterns for holidays and observances" features in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+See the "Predicted Impact Patterns for holidays and observances" features in the **Predicted Impact features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
@@ -236,7 +236,7 @@ PHQ Rank features cannot be configured further. When requesting `phq_rank_*` fea
 Other than the date, the structure of each result here depends on how you configured the feature in your request and the type of feature.
 
 {% tabs %}
-{% tab title="PHQ Attendance Features" %}
+{% tab title="Predicted Attendance features" %}
 <table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_attendance_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Attendance features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
@@ -251,7 +251,7 @@ Other than the date, the structure of each result here depends on how you config
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Impact Features" %}
+{% tab title="Predicted Impact features" %}
 <table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_impact_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Impact features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
@@ -266,7 +266,7 @@ Other than the date, the structure of each result here depends on how you config
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Rank Features" %}
+{% tab title="PHQ Rank features" %}
 <table><thead><tr><th width="196">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_rank_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result is always the same because you cannot configure PHQ Rank features.</p><p>Contains a <code>rank_levels</code> field which indicates the sum of matching events active on the date at each PHQ Rank level.</p><p>PHQ Rank is on a scale of 0 to 100 and the levels are bucketed as:</p><ul><li><code>1</code> - Minor (rank between 0 and 20).</li><li><code>2</code> - Moderate (rank between 21 and 40).</li><li><code>3</code> - Important (rank between 41 and 60).</li><li><code>4</code> - Significant (rank between 61 and 80).</li><li><code>5</code> - Major (rank between 81 and 100).</li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "rank_levels": {
     "1": 0,
@@ -279,7 +279,7 @@ Other than the date, the structure of each result here depends on how you config
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Spend Features" %}
+{% tab title="Predicted Event Spend features" %}
 <table><thead><tr><th width="221">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_spend_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Spend features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
@@ -294,7 +294,7 @@ Other than the date, the structure of each result here depends on how you config
 </code></pre></td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="PHQ Viewership Features" %}
+{% tab title="Predicted Viewership features" %}
 <table><thead><tr><th width="235">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>date</code><br>string</td><td>Date in local time.<br><br>E.g. <code>2023-10-01</code></td></tr><tr><td><code>&#x3C;phq_viewership_*></code><br>object</td><td><p>Daily-level feature result. The structure of the result here depends on how you configured the feature in your request.</p><p>PHQ Viewership features are stats-based.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": {
     "count": 5,
