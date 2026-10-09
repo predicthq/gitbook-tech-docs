@@ -75,7 +75,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [OpenAPI spec for the Beam API](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
 

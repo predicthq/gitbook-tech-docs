@@ -45,7 +45,7 @@ print(response.status_code)
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [OpenAPI spec for the Loop API](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 

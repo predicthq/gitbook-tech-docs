@@ -8,7 +8,7 @@ description: Train an existing forecast model.
 [OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 Read the [Forecasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 

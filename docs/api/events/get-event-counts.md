@@ -8,7 +8,7 @@ description: Get the count of events by category, PHQ Label, and more.
 [OpenAPI events-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/events-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
 

@@ -17,7 +17,7 @@ Once you have identified the dates with the surge in demand, you can use:
 [OpenAPI demand-surge-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/demand-surge-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 Read the [Demand Surge API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Demand+Surge+API).
 

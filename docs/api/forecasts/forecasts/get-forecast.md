@@ -12,7 +12,7 @@ Note that `phq_features` can only be retrieved if you have also purchased the Fe
 [OpenAPI forecasts-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/forecasts-api.yaml)
 {% endopenapi-operation %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 The OpenAPI spec for Forecasts API is in the [Forecasts API documentation](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 

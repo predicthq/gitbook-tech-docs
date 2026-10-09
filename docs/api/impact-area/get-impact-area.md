@@ -58,7 +58,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [Predicted Impact Area API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Predicted+Impact+Area+API).
 

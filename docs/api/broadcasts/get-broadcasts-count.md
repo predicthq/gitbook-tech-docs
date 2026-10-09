@@ -39,7 +39,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [Broadcasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Broadcasts+API).
 

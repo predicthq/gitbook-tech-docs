@@ -56,7 +56,7 @@ print(response.json())
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 Read the [OpenAPI spec for the Places API](https://api.predicthq.com/docs/?urls.primaryName=Places+API).
 

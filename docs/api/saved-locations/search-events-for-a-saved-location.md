@@ -36,7 +36,7 @@ print(response.text)
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 Read the [OpenAPI spec for the Saved Locations API](https://api.predicthq.com/docs/?urls.primaryName=Saved+Locations+API).
 

@@ -81,7 +81,7 @@ curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,con
 {% endtab %}
 {% endtabs %}
 
-## OpenAPI Spec
+## OpenAPI spec
 
 See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
 

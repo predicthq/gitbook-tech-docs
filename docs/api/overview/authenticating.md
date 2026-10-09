@@ -33,7 +33,7 @@ print(response.json())
 ## Create an API Token
 
 1. Log into the WebApp and visit the [API Tokens](https://control.predicthq.com/tokens) page.
-2. Enter a name for the token and click "Create Token".
-3. Click "Copy Token" to copy your token to the clipboard. The WebApp doesn't show the token again, so a password or secrets manager is the safest place to keep a copy.
+2. Enter a name for the token and click **Create Token**.
+3. Click **Copy Token** to copy your token to the clipboard. The WebApp doesn't show the token again, so a password or secrets manager is the safest place to keep a copy.
 
 Now you can use the new API Token in the `Authorization` header of your API requests.
