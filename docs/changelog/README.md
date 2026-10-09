@@ -84,7 +84,7 @@ The PredictHQ MCP server now includes tools for searching and retrieving Predict
 {% endupdate %}
 
 {% update date="2026-06-04" tags="new-feature,developer-tools" %}
-## MCP Server - Full API coverage
+## MCP server - Full API coverage
 
 The PredictHQ MCP server now exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
 
@@ -130,7 +130,7 @@ We updated Predicted Impact Patterns for the Restaurant industry for US public h
 {% endupdate %}
 
 {% update date="2026-05-04" tags="enhancement,developer-tools" %}
-## MCP Server - OAuth & Connector Improvements
+## MCP server - OAuth & connector improvements
 
 The PredictHQ MCP server now supports OAuth session management and token refresh, and is compatible with Claude connectors (previously only ChatGPT was supported). Event search parameter validation has also been improved. The MCP server allows AI agents and LLMs to query PredictHQ event data directly without building custom API integrations.
 {% endupdate %}

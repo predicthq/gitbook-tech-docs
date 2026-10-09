@@ -33,7 +33,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 In this guide, we'll explore a hypothetical use case for “Tom’s Pizzeria”, a chain of restaurants with locations throughout the US headquartered in Seattle, Washington. Tom is interested in understanding how local events might influence his business operations and customer flow. Tom’s inventory system, website, and tools run off GCP. Tom wants to use event data in his staffing and inventory management systems to help anticipate the demand caused by events. He wants to show upcoming events near stores to his staff. To do this he needs to download events into his data lake.
 
-For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the Loaded Data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
+For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the loaded data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
 
 Tom's Data Parameters:
 
@@ -495,7 +495,7 @@ To keep your data updated see [Keep data updated via API](https://docs.predicthq
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 
-## Querying the Loaded Data
+## Querying the loaded data
 
 Once the data is successfully loaded into BigQuery, you can begin querying it to derive insights relevant to your use case. This section provides an example of a BigQuery SQL query tailored to Tom’s scenario as outlined earlier. While the initial data load might have utilized specific filters via the WebApp or API parameters, it's often useful to perform additional queries directly within BigQuery. This capability is particularly valuable if you have loaded a broader dataset and need to perform dynamic or complex filtering post-load.
 
