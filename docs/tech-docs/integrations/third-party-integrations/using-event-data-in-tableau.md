@@ -26,7 +26,7 @@ A JSON file export contains a structured list of events, much like a CSV export,
 **Search Events**
 
 1. Access our WebApp: Log in and navigate to [Search events](https://control.predicthq.com/search/events).
-2. Configure Filters: Set relevant filters, such as those for category, date, and location. Once set, click 'Search'.
+2. Configure Filters: Set relevant filters, such as those for category, date, and location. Once set, click **Search**.
 
 > **Example Search**
 >
@@ -44,7 +44,7 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
 
-4. Download Link: Once the export is ready, the dialog box will update with a download link. The link will also be sent via email.
+4. Download Link: Once the export is ready, the dialog box updates with a download link. PredictHQ also sends the link by email.
 5. Save Export: Download the file and save it to a directory for later use.
 
 ### Connect in Tableau
@@ -136,7 +136,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories).
    1. Set the size of the dashboard to 'Automatic' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) to ensure the dashboard adjusts to fit the screen it's being viewed on.
 2. Add Worksheets: From the Sheets list, drag the Time Series sheet anywhere in the dashboard and then 'Event Info' to the right. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
-3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click on specific dates in the chart to dynamically filter the events displayed in the table.
+3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
 <figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Dashboard</p></figcaption></figure>
@@ -169,13 +169,13 @@ This connection method involves accessing PredictHQ data through Snowflake’s S
 1. Setup: Coordinate with your Snowflake administrator to set up a Data Share with PredictHQ.
 2. Database: Create a database from the Data Share and ensure that the necessary permissions are granted to users.
 
-For more information on receiving PredictHQ data via Snowflake, see this [guide](snowflake/).
+For more information on receiving PredictHQ data via Snowflake, see the [Snowflake data share guide](snowflake/).
 
 **Connect to Snowflake in Tableau**
 
 3. Connection Details: Before connecting, gather all necessary information including:
    1. [Login credentials](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#before-you-begin) for Snowflake authentication
-   2. [Server, Warehouse, Database and Schema information](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#set-up-the-data-source) to set up the data source.
+   2. [Server, Warehouse, Database, and Schema information](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#set-up-the-data-source) to set up the data source.
 4. Start Tableau: Open Tableau and connect to Snowflake by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#make-the-connection-and-set-up-the-data-source).
 
 For more information on connecting to Snowflake in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).

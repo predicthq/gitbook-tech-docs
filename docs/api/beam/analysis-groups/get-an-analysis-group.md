@@ -38,4 +38,4 @@ print(response.json())
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Beam API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+Read the [OpenAPI spec for Beam API](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).

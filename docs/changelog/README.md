@@ -10,11 +10,11 @@ description: >-
 {% update date="2026-10-06" tags="webapp,developer-tools,new-feature" %}
 ## Bolt - Projects
 
-You can now create Projects in Bolt to group your notebooks together. Create a project for a use case, add your notebooks to it, and set the instructions once so every notebook in the project follows them.
+You can create Projects in Bolt to group your notebooks together. Create a project for a use case, add your notebooks to it, and set the instructions once so every notebook in the project follows them.
 
 Share a project with anyone in your organization as a viewer or a collaborator, so your team can work together and see each other's notebooks instead of duplicating work or waiting to be unblocked.
 
-Projects are available now in Bolt. [Try it out for yourself.](https://control.predicthq.com/bolt/projects)
+Projects are available now in Bolt. Open [Projects in Bolt](https://control.predicthq.com/bolt/projects).
 {% endupdate %}
 
 {% update date="2026-10-06" tags="enhancement,developer-tools" %}
@@ -98,7 +98,7 @@ NHL fixtures played in the postseason now carry the postseason label. Customers 
 
 Bolt is available to all users in the PredictHQ WebApp.
 
-Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest — Saved Locations, Beam Analysis, calibrated features, forecasts — following PredictHQ best practices throughout.
+Bolt is an AI-native developer environment that guides you through the right PredictHQ workflows for your use case and produces production-ready integration code. Describe what you're building and Bolt handles the rest—Saved Locations, Beam Analysis, calibrated features, forecasts—following PredictHQ best practices throughout.
 {% endupdate %}
 
 {% update date="2026-05-27" tags="data-quality,enhancement,events-api" %}
@@ -116,7 +116,7 @@ Aviation Rank has been retired, and the `aviation_rank` field is no longer popul
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
 ## Denmark School Holidays - Municipality-Level Granularity
 
-School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. Customers using Danish school holiday data will see increased granularity in event results; historical data has been backfilled to 2016.
+School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. Customers using Danish school holiday data see increased granularity in event results; historical data has been backfilled to 2016.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
@@ -146,7 +146,7 @@ Loop Links now accept feedback on predicted, cancelled, and postponed events, in
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
 ## Event Descriptions
 
-Descriptions have been added at scale to attended events that previously had none - approximately 79% of the catalogue. Higher-ranked events were prioritised. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
+We added descriptions at scale to attended events that previously had none - approximately 79% of the catalogue. Higher-ranked events were prioritised. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
 {% endupdate %}
 
 {% update date="2026-04-29" tags="enhancement,webapp" %}
@@ -172,7 +172,7 @@ Customers matching UK school holidays and public holidays to a place ID now get 
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}
 ## Include Predicted Events Toggle in Event Trends
 
-Event Trends now includes an "Include Predicted Events" toggle, bringing it in line with the Features API, which has included predicted events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Synthetic events are excluded from the Events API results shown on the page, matching how they are treated in the Features API.
+Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included predicted events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Synthetic events are excluded from the Events API results shown on the page, matching how they are treated in the Features API.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
@@ -186,7 +186,7 @@ Predicted Impact Area is now generally available across Events API, Features API
 
 Public holidays that are observed locally rather than nationally are now published at region scope rather than country scope. Italian patron saint holidays are a good example - the Feast of Saint Januarius in Naples, the Feast of St Mark in Venice, and the Feast of St John in Florence, Genoa, and Turin are each celebrated in their own city and region rather than nationwide.
 
-Customers now see these holidays scoped to the places they apply to.
+You now see these holidays scoped to the places they apply to.
 {% endupdate %}
 
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}

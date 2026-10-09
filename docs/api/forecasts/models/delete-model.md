@@ -6,7 +6,7 @@
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+See the [Forecasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
 

@@ -2,13 +2,13 @@
 
 AWS Data Exchange (ADX) deploys PredictHQ's verified real-world context into your own AWS environment - delivered to S3, where your data warehouse, data science platform, and AI systems already operate. An always-current local dataset, governed by you, is the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
-The data is provided as CSV, JSON or Parquet, arrives as full and incremental exports, and requires no ELT/ETL pipeline to build or maintain. You can check out the AWS Data Exchange Overview page if you're interested to read more on how AWS Data Exchange works.
+PredictHQ provides the data as CSV, JSON, or Parquet in full and incremental exports, and it requires no ELT/ETL pipeline to build or maintain. You can check out the AWS Data Exchange Overview page if you're interested to read more on how AWS Data Exchange works.
 
 ## Overview
 
 When integrating with AWS Data Exchange, PredictHQ delivers data as full and incremental file exports. Here’s what you can expect:
 
-* **Initial Full Dump** - Upon setup, you will receive a full dataset covering all events you have access to.
+* **Initial Full Dump** - Upon setup, you receive a full dataset covering all events you have access to.
 * **Incremental Updates** - After the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.
 * **Occasional Full Dumps** - While incremental updates are the standard, at times (either by request or operational need), we may deliver a full dump without prior notice. You can distinguish these by the presence of `full` (not `incremental`) in the filename.
 

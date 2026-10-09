@@ -7,7 +7,7 @@ description: >-
 # Search events
 
 {% hint style="info" %}
-**Results are limited by your subscription**
+**Your subscription limits results**
 
 Note that you don't receive an error when requesting a date range or location that is outside of your subscription settings.
 
@@ -83,13 +83,13 @@ curl -X GET "https://api.predicthq.com/v1/events/?category=conferences,expos,con
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Events API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
+See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
 
 ## Guides
 
 {% hint style="info" %}
 **Airport Codes Mapping File**\
-Airport codes are mapped to Place IDs. The current mapping of airport code to Place ID can be [found here](https://github.com/predicthq/api-specs/blob/main/data/airport-codes.csv).
+Airport codes are mapped to Place IDs. The current mapping of airport code to Place ID is in the [airport codes mapping file](https://github.com/predicthq/api-specs/blob/main/data/airport-codes.csv).
 {% endhint %}
 
 Below are some guides relevant to this API:

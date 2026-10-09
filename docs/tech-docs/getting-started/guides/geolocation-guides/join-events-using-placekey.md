@@ -10,13 +10,13 @@ Placekey is attached to PredictHQ events records that happen at a particular loc
 
 The format of the Placekey is `What@Where`. Take the above example: `222-22t@5yv-j89-g6k`. For the What component, the first three characters refer to the Address Encoding and the second set of three characters refers to the POI Encoding. The Where part, on the other hand, is made up of three unique character sequences, built upon Uber’s open source H3 grid system. See the [Placekey site ](https://www.placekey.io/how-it-works)for an excellent description of what Placekey is and how it works.
 
-The reason Placekey is useful for joining datasets is because of the general lack of standardization in POI and address data. Addresses are often formatted in different ways. Connecting data by address is difficult, and often inaccurate, and different companies may have different definitions of the latitude, longitude, and area of a location. Using Placekey provides a standard way of representing POI data and makes it easy to join event data with other data sets that also use Placekey.
+The reason Placekey is useful for joining datasets is because of the general lack of standardization in POI and address data. Addresses are often formatted in different ways. Connecting data by address is difficult, and often inaccurate, and different companies may have different definitions of the latitude, longitude, and area of a location. Using Placekey provides a standard way of representing POI data and lets you join event data with other data sets that also use Placekey.
 
 PredictHQ also [partners with SafeGraph](https://www.predicthq.com/partners/safegraph). Placekey allows you to join events data and SafeGraph data including [SafeGraph Places (POI)](https://www.safegraph.com/products/places), [SafeGraph Geometry](https://www.safegraph.com/products/geometry), and [SafeGraph Spend](https://www.safegraph.com/products/spend).
 
 ## Placekey on Events
 
-Placekey is attached to PredictHQ event records. It is returned in the response from the events API. Placekey is also returned via other integrations like Snowflake and ADX.
+PredictHQ attaches Placekey to event records. The Events API returns it in its response. Other integrations like Snowflake and ADX also return Placekey.
 
 Below is an example of the response from the Public API showing the Placekey for an event happening in Las Vegas:
 
@@ -53,7 +53,7 @@ Below is an example of the response from the Public API showing the Placekey for
 
 ## Placekey Support
 
-Placekey has address support for the United States, United Kingdom, and Canada (see [supported countries](https://docs.placekey.io/#b0aa86a5-ec33-45a8-aebf-67c25c5ca0a5)). For these countries, PredictHQ events will have both the What@Where part where the events have sufficient address information. Some events that don’t have address information may just have the @Where part of Placekey.
+Placekey has address support for the United States, United Kingdom, and Canada (see [supported countries](https://docs.placekey.io/#b0aa86a5-ec33-45a8-aebf-67c25c5ca0a5)). For these countries, PredictHQ events have both the What@Where part where the events have sufficient address information. Some events that don’t have address information may just have the @Where part of Placekey.
 
 Placekey is supported on attended events from 2020 onwards.
 
@@ -64,5 +64,5 @@ See below for the hexagon area covered by `@7f7-mcy-ndv`:
 <figure><img src="../../../.gitbook/assets/placekey-hex-france-example.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Note that attended events that have a polygon representing an area do not use Placekey. For example marathons, parades and festivals have a geojson polygon representing the area impacted by the event. Placekeys are best suited for events that occur at a specific location rather than events that cover a broad area. See our guide to [using polygons events data](working-with-polygons.md) to find polygons events around a location.
+Note that attended events that have a polygon representing an area do not use Placekey. For example marathons, parades, and festivals have a geojson polygon representing the area impacted by the event. Placekeys are best suited for events that occur at a specific location rather than events that cover a broad area. See our guide to [using polygons events data](working-with-polygons.md) to find polygons events around a location.
 {% endhint %}

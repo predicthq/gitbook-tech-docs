@@ -55,7 +55,7 @@ print(response.json())
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Suggested Radius API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Suggested+Radius+API).
+See the [OpenAPI spec for the Suggested Radius API](https://api.predicthq.com/docs/?urls.primaryName=Suggested+Radius+API).
 
 ## Guides
 

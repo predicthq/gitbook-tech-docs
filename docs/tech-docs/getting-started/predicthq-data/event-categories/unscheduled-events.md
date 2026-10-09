@@ -18,8 +18,8 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 
 * The bad weather condition lasts longer than expected. For example, a [flood advisory was issued at 11.48 AM](https://events.predicthq.com/events/jZEkmbAYqntSRo4Xgs) in east Tennessee that the potential threat may last until 3 PM. Another [flood advisory issued at 3.02 PM](https://events.predicthq.com/events/fxZjGT5Ehoe7brsCjd) that indicates additional rainfall may occur on the day and the following day, and the road closures will remain in place.
 * Multiple areas can be affected. For example, On March 14th, several regions in South Dakota have issued blizzard warnings, such as [Oglala Lakota](https://events.predicthq.com/events/tTjDpN7ZR2WVhzw47o), [Pennington](https://events.predicthq.com/events/ubp47jnAvuwos5fanc), [Fall River](https://events.predicthq.com/events/74ucjeYRYWG89Sw5rS), and [Custer](https://events.predicthq.com/events/6y3py8CPSLfeN29DYq).
-* Warnings may be issued hours or days in advance. The event (warning) state will change to `cancelled` if the potential threat no longer exist. For example the storm didn't hit as expected. Past events with an `active` state mean the event has happened.
-* Severe weather data is updated in near real time with event details being refreshed on average every 15 mins.
+* Warnings may be issued hours or days in advance. The event (warning) state changes to `cancelled` if the potential threat no longer exist. For example the storm didn't hit as expected. Past events with an `active` state mean the event has happened.
+* PredictHQ updates severe weather data in near real time and refreshes event details every 15 minutes on average.
 * PredictHQ provides historical severe weather data that can be used for purposes like training a demand forecasting model.
 
 **LABELS**
@@ -202,7 +202,7 @@ Note: Datetime is in UTC
 
 #### Location
 
-Health warnings events are area events. It may scope to a city, a region or a country depending on the impact. The latitude and longitude relates to the center of the impacted area.
+Health warnings events are area events. It may scope to a city, a region, or a country depending on the impact. The latitude and longitude relates to the center of the impacted area.
 
 #### Entities
 
@@ -233,7 +233,7 @@ An act of terrorism committed using violence against civilians, with the intenti
 
 **Labels**
 
-Labels for a terror event provide more information about the event. The most common 5 labels are:
+Labels for a terror event provide more information about the event. The most common five labels are:
 
 1. `attack`: An aggressive and violent act against a person or place with weapons or armed force.
 2. `bombing` : The terrorism acts where the main injury or damage is caused by dropping or detonating a bomb somewhere, for example, [Bombing in Lahan, Nepal](https://events.predicthq.com/events/hnCL2axLWVJZyBN2AV).

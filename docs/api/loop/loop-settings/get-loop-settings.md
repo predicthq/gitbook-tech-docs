@@ -1,7 +1,6 @@
 ---
 description: >-
-  Loop settings are used to control how certain elements might be displayed
-  inside the Loop UI.
+  Loop settings control how the Loop UI displays certain elements.
 ---
 
 # Get Loop settings
@@ -42,7 +41,7 @@ print(response.json())
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Loop API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
+See the [Loop API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Loop+API).
 
 ## Guides
 

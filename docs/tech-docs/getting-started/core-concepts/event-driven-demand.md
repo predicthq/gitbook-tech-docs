@@ -33,7 +33,7 @@ Incorrect scope decisions are easy to make and difficult to unwind. If scope is 
 **How PredictHQ address scope**
 
 * [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns an industry and location-specific boundary calibrated against real demand and event data. Unlike a fixed radius, it accounts for travel behaviour, population density, venue clustering, and industry type - returning a polygon or radius that reflects where event-driven demand impact actually occurs.
-* The recommended workflow is to use [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then reference it by `location_id` across Events, Features, Forecasts, and Beam - without managing the boundary yourself.
+* The recommended workflow is to use [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview). When you create a location using `origin_geojson` without specifying a `geojson` area, PredictHQ calculates Predicted Impact Area automatically and stores it against that location. You can then reference it by `location_id` across Events, Features, Forecasts, and Beam - without managing the boundary yourself.
 
 ## Relevance
 
@@ -105,4 +105,4 @@ PredictHQ’s APIs map directly to these challenges:
 
 These are structural problems. They do not disappear with more data or more sophisticated models. They require deliberate design across data, calibration, and delivery layers.
 
-For the recommended production architecture — showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).
+For the recommended production architecture—showing how Saved Locations, Beam, Features API, and Events API fit together with the right refresh cadence and data storage patterns — see the [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md).

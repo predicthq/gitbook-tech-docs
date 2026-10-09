@@ -7,7 +7,7 @@ description: >-
 
 # Agent skills
 
-Agent skills are packaged integration knowledge for AI coding assistants. Installed once, the PredictHQ skill is applied automatically whenever your agent works on a PredictHQ integration - no prompting, no pasting docs into context.
+Agent skills are packaged integration knowledge for AI coding assistants. Once you install it, your agent applies the PredictHQ skill automatically whenever it works on a PredictHQ integration - no prompting, no pasting docs into context.
 
 The skill encodes the same guidance these docs recommend, so code written with it follows the proven path instead of a plausible-looking wrong one:
 

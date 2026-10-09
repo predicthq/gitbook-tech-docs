@@ -65,4 +65,4 @@ See the [ML features by group notebook](https://github.com/predicthq/phq-data-sc
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Beam API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+See the [Beam API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).

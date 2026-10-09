@@ -7,7 +7,7 @@ description: >-
 
 # How to use PredictHQ
 
-PredictHQ is the real-world context platform powering enterprise AI decisions. Its verified events, predicted impacts, and demand-calibrated features are consumed along a recommended path for each job: train your forecasting models on event features, ground LLMs and agents in verified context at answer time, get event-driven forecasts without building a model, or analyze what drives demand at your locations. This page routes you to the right path and shows how the paths fit together.
+PredictHQ is the real-world context platform powering enterprise AI decisions. You use its verified events, predicted impacts, and demand-calibrated features along a recommended path for each job: train your forecasting models on event features, ground LLMs and agents in verified context at answer time, get event-driven forecasts without building a model, or analyze what drives demand at your locations. This page routes you to the right path and shows how the paths fit together.
 
 ## Start with the job you're doing
 

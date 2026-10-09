@@ -56,7 +56,7 @@ print(response.json())
 
 A single API call is not a production integration. PredictHQ APIs are designed to work as a pipeline:
 
-1. **Saved Locations** - define your business locations once using `origin_geojson`. Predicted Impact Area is calculated automatically and stored against each location.
+1. **Saved Locations** - define your business locations once using `origin_geojson`. PredictHQ calculates Predicted Impact Area automatically and stores it against each location.
 2. **Beam** - run a Beam Analysis per location using your historical demand data. Beam identifies which event categories actually drive demand at each location and returns an `analysis_id`.
 3. **Features API** - call the Features API with your `analysis_id` to retrieve model-ready ML features, automatically scoped and filtered to your location.
 4. **Events API** - use the Events API with your `analysis_id` to retrieve the specific events driving demand - for explainability and operational context.

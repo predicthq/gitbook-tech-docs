@@ -29,7 +29,7 @@ Per-category notebook series for exploring the data itself. Each series has thre
 
 Conferences, expos, concerts, festivals, performing arts, sports, and community events - see [Attendance-based events](predicthq-data/event-categories/attendance-based-events.md) for the category reference.
 
-* [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_1_data_engineering.ipynb)
+* [Attendance-based events, part 1: data engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_2_data_exploration.ipynb)
 * [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_3_feature_engineering.ipynb)
 

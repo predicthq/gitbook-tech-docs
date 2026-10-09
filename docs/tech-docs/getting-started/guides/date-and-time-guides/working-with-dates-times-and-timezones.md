@@ -1,6 +1,6 @@
 ---
 description: >-
-  Working with dates, times and timezones can be hard.This guide aims to clarify
+  Working with dates, times, and timezones can be hard.This guide aims to clarify
   how to work with these with PredictHQ data.
 ---
 
@@ -64,7 +64,7 @@ Internally, we have the concept of different date types for events. We don't exp
 
 ### Fixed Date
 
-This concept refers to events that are known to happen on a certain date (including multi-day events) but the start and end times are not known. These events are represented in UTC and have a local start time of 00:00:00 and local end time of 23:59:59 as well as a known timezone.
+This concept refers to events that are known to happen on a certain date (including multi-day events) but the start and end times are not known. We represent these events in UTC, and they have a local start time of 00:00:00 and local end time of 23:59:59 as well as a known timezone.
 
 ```json
 {

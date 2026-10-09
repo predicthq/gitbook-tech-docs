@@ -1,6 +1,6 @@
 # Rate limits
 
-The API rate limits your requests based on the limit specified in your plan. Rate limits are specified in `rps` (requests per second) and your request rate is measured across a one second window.
+The API rate limits your requests based on the limit specified in your plan. Rate limits are specified in `rps` (requests per second) and the API measures your request rate across a 1-second window.
 
 E.g. a rate limit of 50 rps means you can make 50 requests in a second.
 
@@ -12,7 +12,7 @@ From time-to-time we may introduce additional temporary rate limits to ensure th
 
 ### Concurrent Requests
 
-Your rate limit controls how many requests per second your organisation can make, but it does not limit how many of those requests can be in-flight simultaneously. Sending a large number of concurrent requests — even within your rps limit — can cause bursts that exceed your limit, result in `429` errors, and put unnecessary pressure on the API.
+Your rate limit controls how many requests per second your organisation can make, but it does not limit how many of those requests can be in-flight simultaneously. Sending a large number of concurrent requests—even within your rps limit—can cause bursts that exceed your limit, result in `429` errors, and put unnecessary pressure on the API.
 
 We recommend limiting the number of concurrent requests your application makes at any one time. A good rule of thumb is to keep concurrent requests well below your rps limit, and to prefer sequential or lightly-concurrent patterns when fetching data in bulk.
 

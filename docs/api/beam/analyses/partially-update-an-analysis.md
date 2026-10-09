@@ -47,7 +47,7 @@ print(response.status_code)
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Beam API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+See the [Beam API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
 
 ## Guides
 

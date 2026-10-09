@@ -48,7 +48,7 @@ Live coverage of breaking events such as severe weather and terrorism. The API u
 
 ## Live TV Events
 
-Televised events that include 7 of the top US leagues and the high viewership sports. PredictHQ is the only source of predicted TV viewership.
+Televised events that include seven of the top US leagues and the high viewership sports. PredictHQ is the only source of predicted TV viewership.
 
 * Live TV Events
 

@@ -10,7 +10,7 @@ The Predicted End Times feature uses machine learning and our intelligent algori
 
 Predicted End Times covers a subset of categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports)**,** [**concerts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#concerts)**,** and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
 
-For sports events Predicted End Times covers 8 sports (American football, Basketball, Baseball, Ice-hockey, NASCAR, Soccer, Rugby, and Australian rules football).&#x20;
+For sports events Predicted End Times covers eight sports (American football, Basketball, Baseball, Ice-hockey, NASCAR, Soccer, Rugby, and Australian rules football).&#x20;
 
 For performing arts and concerts events all performing arts events that don't have an actual end time have a predicted end time.
 
@@ -21,7 +21,7 @@ Example Use Cases
 
 ## How predicted end times are calculated
 
-We use a combination of methods which are largely determined by the availability of historical data. For event types with historical data, we use machine learning methods including linear regression and quantile regression.&#x20;
+We use a combination of methods, and the availability of historical data largely determines which ones we use. For event types with historical data, we use machine learning methods including linear regression and quantile regression.&#x20;
 
 For sports, these models use features such as gender, season, and leagues. For event types without historical data, we use research-based methods e.g. using the mean, using track and series estimates for NASCAR. As a result, our predictions for these events may be less robust. Across all sports types, we cover Professional, College, and International types, where applicable.
 
@@ -33,7 +33,7 @@ The Events API supports the Predicted End Times feature through the following:
 
 * You can sort events on the predicted end-time value by using the `sort` parameter with a value of `predicted_end` or `-predicted_end`.
 * You can filter on predicted end times by specifying a date range with the `predicted_end.*` parameter.
-* Predicted end time is returned as the `predicted_end` field in the events response data. This field will only be present if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
+* Predicted end time is returned as the `predicted_end` field in the events response data. This field is present only if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
 
 **Note**: Predicted end time and all other start and end times are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the timezone and will have a null time zone.
 

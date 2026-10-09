@@ -10,7 +10,7 @@ description: Get available algorithms.
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+See the [OpenAPI spec for Forecasts API](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
 

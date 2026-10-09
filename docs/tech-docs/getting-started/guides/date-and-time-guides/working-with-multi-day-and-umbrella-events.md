@@ -38,9 +38,9 @@ When reading individual event records, interpret phq\_attendance as follows:
 
 ## Umbrella Events
 
-Umbrella events refer to the case where we have a parent event that contains one or more child events. For example, the [United States Formula 1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) has child events for [the qualification](https://events.predicthq.com/events/hZ5fGHaxHKgJTBpqyQ), 3 practice events, [a concert](https://events.predicthq.com/events/N4LWVHvicH5YiCHQKe) that occurs at the Grand Prix, and the [actual race event](https://events.predicthq.com/events/5uRg7CqGu7DTtu4Rfk) (there are 12 child events in total). The parent event is for the entire Grand Prix that runs from the 1st of November to the 3rd of November 2019. Both the parent and child events are part of the wider Umbrella event.
+Umbrella events refer to the case where we have a parent event that contains one or more child events. For example, the [United States Formula 1 Grand Prix in 2019](https://events.predicthq.com/events/w7dYyrFwTUQGYE6euv) has child events for [the qualification](https://events.predicthq.com/events/hZ5fGHaxHKgJTBpqyQ), three practice events, [a concert](https://events.predicthq.com/events/N4LWVHvicH5YiCHQKe) that occurs at the Grand Prix, and the [actual race event](https://events.predicthq.com/events/5uRg7CqGu7DTtu4Rfk) (there are 12 child events in total). The parent event is for the entire Grand Prix that runs from the 1st of November to the 3rd of November 2019. Both the parent and child events are part of the wider Umbrella event.
 
-Child events are indicated by the presence of the `parent_event` field. Child events have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is `5uRg7CqGu7DTtu4Rfk` and the Formula 1 parent event is `w7dYyrFwTUQGYE6euv`. The Formula 1 race child event has the following parent event info:
+The `parent_event` field indicates child events. Child events have a parent\_event\_id in this field indicating the id of the parent event. For example, the Formula 1 race child event is `5uRg7CqGu7DTtu4Rfk` and the Formula 1 parent event is `w7dYyrFwTUQGYE6euv`. The Formula 1 race child event has the following parent event info:
 
 ```json
 {
@@ -88,5 +88,5 @@ Note that in the API **parent** events includes events that have child events an
 
 ### **Definitions**
 
-* **Parent event** - Spans the full duration of an event and may have child events as part of it. Many parent events will be multi-day events such as the Olympics, a Formula 1 weekend, or a multi-day festival. These events will have a parent event for the whole event - like an event for the entire 2020 Olympic Games in Tokyo. Other examples include an event for the entire US Formula 1 or a rugby sevens tournament.
+* **Parent event** - Spans the full duration of an event and may have child events as part of it. Many parent events will be multi-day events such as the Olympics, a Formula 1 weekend, or a multi-day festival. These events have a parent event for the whole event - like an event for the entire 2020 Olympic Games in Tokyo. Other examples include an event for the entire US Formula 1 or a rugby sevens tournament.
 * **Child events** - Individual events that are part of a parent event. For example, day 1 of the 2020 Olympic Games or the “Men’s 100m finals” in the Olympic Games. Or the Formula 1 qualification and practice events. All of these are examples of child events.

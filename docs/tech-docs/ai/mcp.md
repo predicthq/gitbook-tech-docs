@@ -39,7 +39,7 @@ sequenceDiagram
 
 The MCP server supports two authentication methods.
 
-**OAuth** - when you connect using a supported client, you will be redirected to PredictHQ to authorise access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
+**OAuth** - when you connect using a supported client, the client redirects you to PredictHQ to authorise access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
 
 **Bearer token** - pass your PredictHQ API key in the `Authorization: Bearer $API_TOKEN` header. Well-suited for agent and automation workflows where interactive login is not practical, or for clients that do not support OAuth. You [can create an API key in the PredictHQ WebApp](../getting-started/api-quickstart.md).
 
@@ -107,7 +107,7 @@ Enable Developer Mode under **Settings > Advanced Settings**, then add a connect
 
 **Workspace-wide setup**
 
-Workspace admins enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**, then create and publish connectors for the whole organisation from **Workspace Settings > Connectors**. Once published, the connector is available to all users in the workspace without any individual setup.
+If you're a workspace admin, enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**, then create and publish connectors for the whole organisation from **Workspace Settings > Connectors**. Once published, the connector is available to all users in the workspace without any individual setup.
 
 **Adding the PredictHQ connector:**
 
@@ -116,7 +116,7 @@ Workspace admins enable Developer Mode via **Workspace Settings > Permissions & 
 3. Enter the MCP Server URL: `https://mcp.predicthq.com/v1/mcp`
 4. Select your authentication method and click **Create**:
    * **OAuth** - follow the login flow to authenticate with your PredictHQ account.
-   * **Access token / API key** - select Bearer as the scheme and enter your PredictHQ API key.
+   * **Access token / API key** - select **Bearer** as the scheme and enter your PredictHQ API key.
 
 **To use it in a conversation:**
 

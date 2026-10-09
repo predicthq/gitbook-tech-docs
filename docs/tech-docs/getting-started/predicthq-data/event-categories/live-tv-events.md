@@ -12,7 +12,7 @@ For example, during the basketball game [Villanova Wildcats vs Baylor Bears](htt
 **Note**: Live TV Events covers live games. Replays of sporting events are not included.
 
 {% hint style="info" %}
-Live TV events provide viewership data that is attached to events in other categories. Initially, it was launched for the sports category. In future it will be extended to other categories. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
+Live TV events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
 
 Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
@@ -25,9 +25,9 @@ Live TV events include live streaming and broadcast TV games (such as MLS Soccer
 
 We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Viewership is only shown for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, will always show viewership in all counties in the US.
 
-**7 MAJOR SPORTS LEAGUES**
+**SEVEN MAJOR SPORTS LEAGUES**
 
-All televised sports games from the following 7 sports leagues are covered in our live TV events, the broadcasts may have status of either `scheduled` or `cancelled`:
+All televised sports games from the following seven sports leagues are covered in our live TV events, the broadcasts may have status of either `scheduled` or `cancelled`:
 
 `NFL`, `NBA`, `NHL`, `MLB`, `MLS`, `D1 NCAA Basketball`, `D1 NCAA Football`
 
@@ -54,11 +54,11 @@ Live TV Events are available in the US.
 Broadcasts have three possible status values:
 
 * **`scheduled`**\
-  For those broadcasts where we know the date, time and location of a TV broadcast based on TV schedule information. We enrich our data with television listings to determine their televised time and location (county).
+  For those broadcasts where we know the date, time, and location of a TV broadcast based on TV schedule information. We enrich our data with television listings to determine their televised time and location (county).
 * **`predicted`**\
   For these broadcasts where we predict their televised time and location (county). It means we don’t have detailed TV schedule information for the sports event. These events have high viewership and are assumed to be televised nationally (in all counties), they are typically one-off events or are finals of their respective competitions.\
   \
-  We calculate viewership per county based on many factors including the amount of sports fans in different counties. This information is not as precise as those with the `scheduled` broadcast status but should give a reasonably accurate prediction of who will be watching these large events. Customers may want to use the `broadcast_status` parameter to indicate the confidence of a broadcast airing; they may build this as a feature or to treat scheduled broadcasts differently from predicted.
+  We calculate viewership per county based on many factors including the amount of sports fans in different counties. This information is not as precise as those with the `scheduled` broadcast status but should give a reasonably accurate prediction of who will be watching these large events. You may want to use the `broadcast_status` parameter to indicate the confidence of a broadcast airing; you can build this as a feature or treat scheduled broadcasts differently from predicted.
 * **`cancelled`**\
   The broadcast is no longer scheduled to be televised.
 
@@ -72,7 +72,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The results will be returned on the county level where the place is located. For example, users can search for the broadcast in Bell City, Los Angeles, and all broadcasts in Los Angeles County that match other criteria will be returned in the result.
+Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, users can search for the broadcast in Bell City, Los Angeles, and all broadcasts in Los Angeles County that match other criteria will be returned in the result.
 
 ## Ranking
 
@@ -89,7 +89,7 @@ PHQ Viewership is the number of people who watch the live broadcast game in a co
 
 #### Timeframe for broadcasts
 
-The Live TV Events machine learning models predicted the viewership for sports games before they happen. Broadcast records are generated 90 days before a sports game starts. However, viewership is updated daily from 14 days before the event starts providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. The viewership numbers generated between 90 days and 14 days can be used as a high-level less accurate indication of viewership.
+The Live TV Events machine learning models predicted the viewership for sports games before they happen. We generate broadcast records 90 days before a sports game starts. However, viewership is updated daily from 14 days before the event starts providing more accurate data. To get the most accurate data we recommend using the broadcast viewership from 14 days before the event or sooner. The viewership numbers generated between 90 days and 14 days can be used as a high-level less accurate indication of viewership.
 
 #### Physical Event Details
 

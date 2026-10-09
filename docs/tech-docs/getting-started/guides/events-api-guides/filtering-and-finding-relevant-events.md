@@ -6,7 +6,7 @@ description: >-
 
 # Filtering and finding relevant events
 
-Events such as concerts, expos and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
+Events such as concerts, expos, and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
 
@@ -57,10 +57,10 @@ params={
 
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
 
-* **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When created from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries — no manual boundary management needed.
+* **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When created from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
 * **Center Point & Radius**: For a quick search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
 * **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
-* **Country-wide**: If your interest spans an entire country, the easiest way is to use the `country` parameter and set it to the relevant ISO country code.
+* **Country-wide**: If your interest spans an entire country, use the `country` parameter and set it to the relevant ISO country code.
 
 **Settings for Tom’s Pizzeria**
 
@@ -405,7 +405,7 @@ Once the API call is made, the Events API returns a structured JSON response con
 
 <summary>Pagination</summary>
 
-Results are returned in a paginated format, where the number of events per page is determined by your subscription limits. The key fields related to pagination include:
+The Events API returns results in a paginated format, where your subscription limits determine the number of events per page. The key fields related to pagination include:
 
 * `count`: The total number of events that match the search criteria.
 * `next` and `previous`: URLs that can be used to navigate to the next or previous pages of results, respectively.

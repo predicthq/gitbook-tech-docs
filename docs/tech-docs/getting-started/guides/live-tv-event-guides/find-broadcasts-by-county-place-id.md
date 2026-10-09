@@ -4,11 +4,11 @@ For this example we want to find all broadcasts televised in two counties in Cal
 
 The `location.place_id` parameter allows us to filter live sports events by their broadcast locations. For the counties in our example, we will use `location.place_id=5368381,5391832`, which are the respective Place IDs for Los Angeles County and San Diego County in California.
 
-These Place IDs were found using the [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places). We provide a CSV file of broadcast counties to download, to make it easier to discover the `place_id` for all counties and states in the US.
+We found these Place IDs using the [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/search-places). We provide a CSV file of broadcast counties to download, to make it easier to discover the `place_id` for all counties and states in the US.
 
 {% file src="../../../.gitbook/assets/broadcast-events-place-mapping.csv" %}
 
-We can also use the `start.*` parameters to filter broadcasts by time. For the time range in our example, we will use `start.gte=2020-11-01` and `start.lte=2020-11-30`. Using `start.tz=America/Los_Angeles` will treat the parameter’s start dates and times in the America/Los\_Angeles time zone, otherwise the API treats the parameter dates and times as UTC.
+We can also use the `start.*` parameters to filter broadcasts by time. For the time range in our example, we will use `start.gte=2020-11-01` and `start.lte=2020-11-30`. Using `start.tz=America/Los_Angeles` treats the parameter’s start dates and times in the America/Los\_Angeles time zone, otherwise the API treats the parameter dates and times as UTC.
 
 ```python
 import requests

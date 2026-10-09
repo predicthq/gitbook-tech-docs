@@ -4,7 +4,7 @@ We have a rigorous set of models and algorithms to ensure we’re providing a cl
 
 Every event in our API goes through multiple steps to ensure quality and accuracy. Some example steps are:
 
-**Standardization:** All events follow the same schema for ease of ingestion, comparability and compatibility.
+**Standardization:** All events follow the same schema for ease of ingestion, comparability, and compatibility.
 
 **Aggregation:** We pull in events and entities from hundreds of different sources and compare them for quality and accuracy.
 

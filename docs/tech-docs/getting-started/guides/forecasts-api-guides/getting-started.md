@@ -8,7 +8,7 @@ This API provides ready-to-use, event-optimized forecasts for your business, emb
 
 Why Use It?
 
-* Event-aware by default — real-world events are built into every forecast
+* Event-aware by default: real-world events are built into every forecast
 * Industry-specific performance — designed for demand planners, revenue managers, and ops teams
 * Faster and more affordable than building your own system
 
@@ -163,7 +163,7 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 
 #### Train the Model
 
-During the training process the demand will be analyzed by Beam to determine what types of events impact your demand. This includes correlation and feature importance testing. The important features (from Features API) will be used when training your model and when forecasting.
+During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and feature importance testing. The API uses the important features (from Features API) when training your model and when forecasting.
 
 ```python
 # Train model
@@ -258,7 +258,7 @@ flowchart LR
 
 ## Explainability
 
-Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. There are 2 key pieces of explainability that can be provided:
+Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. There are two key pieces of explainability that can be provided:
 
 * `phq_explainability` - Top events the model has determined are impacting your demand on this date.
 * `phq_features` - List of features (from Features API) that were identified through Beam's Feature Importance process as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.
@@ -331,7 +331,7 @@ Before tweaking your inputs or retrying, we strongly recommend reviewing the tro
 ## Next Steps
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints and parameters
-* [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE and RMSE
+* [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE, and RMSE
 * [Troubleshooting guide for Forecasts API](troubleshooting.md) - Common causes of low accuracy and how to fix them
 
 

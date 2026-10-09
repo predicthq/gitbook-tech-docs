@@ -81,7 +81,7 @@ print(phq_labels)
 
 ```
 
-You can also see a list of PHQ Labels in the "Labels" field on the [Search events](https://control.predicthq.com/search/events) page of the WebApp:
+You can also see a list of PHQ Labels in the **Labels** field on the [Search events](https://control.predicthq.com/search/events) page of the WebApp:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-05-09 at 10.36.38 AM.png" alt=""><figcaption><p>The "Labels" field in the WebApp Search Events Page contains a list of PHQ Labels </p></figcaption></figure>
 
@@ -156,7 +156,7 @@ The full list of 248 PHQ Label values, refreshed daily from the live API. Prefer
 
 ### Labels (Legacy)
 
-Legacy labels are still returned in order to preserve backward compatibility with existing user implementations.
+The API still returns legacy labels to preserve backward compatibility with existing implementations.
 
 This field is named `labels`.&#x20;
 

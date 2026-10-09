@@ -10,7 +10,7 @@ description: Upload historical demand data for an existing forecast model.
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+The OpenAPI spec for Forecasts API is available in the [Forecasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
 

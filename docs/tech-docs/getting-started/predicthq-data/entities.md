@@ -2,7 +2,7 @@
 
 Entities are things with defined attributes, such as performers, music bands, venues, sports teams, and more. Our entities system is integral to our verification, enrichment, deduplication, and ranking processes. Entities allow us to accurately estimate attendance and impact given that they are stable as opposed to a moving object such as ticket sales.
 
-For example, a concert will take place in or at a venue entity, where people will watch a performer entity. Our system will factor in the popularity of a performer like Beyoncé when we rank her concert. A Beyoncé concert would likely rank much higher than a lesser-known artist.
+For example, a concert will take place in or at a venue entity, where people will watch a performer entity. Our system factors in the popularity of a performer like Beyoncé when we rank her concert. A Beyoncé concert would likely rank much higher than a lesser-known artist.
 
 ## **Venue entities**
 
@@ -120,7 +120,7 @@ Similar to finding all events for an event-group entity for recurring events you
 
 ## How can I use entities in Snowflake
 
-Entities information is returned in Snowflake in the ENTITIES column. That contains all the entities' information mentioned above. You can query that column to find all events for an entity or to retrieve the relevant entities for an event
+Snowflake returns entity information in the ENTITIES column. That contains all the entities' information mentioned above. You can query that column to find all events for an entity or to retrieve the relevant entities for an event
 
 ## What is the difference between labels and entities?
 

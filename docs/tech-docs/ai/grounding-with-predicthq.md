@@ -100,7 +100,7 @@ This separation lets an assistant retrieve either raw event context or calibrate
 
 A hallucination is a confident, plausible answer invented where the model lacks facts. Grounding attacks the cause: the model no longer has to invent, because the facts are in front of it. Three properties of the retrieved context determine how much hallucination it removes:
 
-* **Verified** - the context must be true. PredictHQ events are continuously verified, deduplicated, and enriched. Grounding in unverified content replaces invented errors with retrieved ones.
+* **Verified** - the context must be true. PredictHQ continuously verifies, deduplicates, and enriches its events. Grounding in unverified content replaces invented errors with retrieved ones.
 * **Specific** - the context must match the question's location and time window. PredictHQ context is location and date scoped, and [Beam](../getting-started/core-concepts/what-is-beam.md) calibrates it to the events that actually drive demand at each location, so retrieval returns relevant signal rather than a wall of nearby noise.
 * **Current** - real-world context changes daily. Events are announced, cancelled, and revised inside any decision window, which is why grounding retrieves at answer time rather than relying on what a model absorbed in training.
 

@@ -23,7 +23,7 @@ Beam calculates this separately for **positive anomalies** (demand surges) and *
 
 Once Beam has identified your anomalous demand, the next step is to determine how much of it can be attributed to events.
 
-Beam measures how much of your anomalous demand can be accounted for by events. This gives you an **event contribution percentage**: the share of your anomalous demand that is explained by events happening near your location.
+Beam measures how much of your anomalous demand can be accounted for by events. This gives you an **event contribution percentage**: the share of your anomalous demand that events happening near your location explain.
 
 For example:
 

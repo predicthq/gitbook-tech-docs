@@ -6,7 +6,7 @@ description: Search for a Place.
 
 The Places API gives you a read-only interface to PredictHQ's places data. A place represents a [Geonames](http://www.geonames.org/) Feature, which can be either an Area, an Administrative Feature, or a Populated Place.
 
-Places can be used to search and filter events using named geographic features rather than a radius, latitude and longitude (see events' `place.scope` and `place.exact` parameters). This is helpful when searching for all events that apply to a continent, country, state, region, province, county or city.
+Places can be used to search and filter events using named geographic features rather than a radius, latitude and longitude (see events' `place.scope` and `place.exact` parameters). This is helpful when searching for all events that apply to a continent, country, state, region, province, county, or city.
 
 {% openapi-operation spec="places-api" path="/v1/places" method="get" %}
 [OpenAPI places-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/places-api.yaml)
@@ -46,7 +46,7 @@ print(response.json())
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Places API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Places+API).
+See the [OpenAPI spec for the Places API](https://api.predicthq.com/docs/?urls.primaryName=Places+API).
 
 ## Guides
 

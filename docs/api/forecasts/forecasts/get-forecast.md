@@ -14,7 +14,7 @@ Note that `phq_features` can only be retrieved if you have also purchased the Fe
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+The OpenAPI spec for Forecasts API is in the [Forecasts API documentation](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
 
 ## Guides
 

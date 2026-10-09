@@ -1,5 +1,5 @@
 ---
-description: Get the count of events by category, PHQ Label and more.
+description: Get the count of events by category, PHQ Label, and more.
 ---
 
 # Get event counts
@@ -10,7 +10,7 @@ description: Get the count of events by category, PHQ Label and more.
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Events API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
+See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Events+API).
 
 ## Examples
 

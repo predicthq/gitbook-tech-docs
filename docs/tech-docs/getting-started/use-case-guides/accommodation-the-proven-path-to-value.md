@@ -112,7 +112,7 @@ Once the fundamentals are in place, there are simple ways to drive even more val
 
 Even well-resourced teams hit the same traps when working with event data:
 
-* Trying to engineer model-ready features from event data - it’s harder than it looks. Features API handles timing, overlap, weighting and more so you get clean, usable signals without the complexity.
+* Trying to engineer model-ready features from event data - it’s harder than it looks. Features API handles timing, overlap, weighting, and more so you get clean, usable signals without the complexity.
 * Hardcoding event categories or filters based on assumptions - what drives demand varies by location. Use Beam to validate which event types actually impact bookings in each market.
 * Assuming one-size-fits-all radius logic - different locations respond to events differently. Use Predicted Impact Area and filter by Local Rank to ensure you’re capturing meaningful impact, not noise.
 

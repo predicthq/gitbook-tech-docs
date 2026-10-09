@@ -38,7 +38,7 @@ From here you should follow the [improving-demand-forecasting-models-with-event-
 
 Most teams start with a fixed radius when scoping events around a location. The problem is that the distance over which events influence demand varies—by industry, by location type, and by how people actually move in that area. A radius that works in one market will miss impact or introduce noise in another.
 
-The Predicted Impact Area API returns a location and industry-specific polygon boundary that reflects where event-driven demand impact actually occurs. Boundaries are calibrated against real demand and event data across industries and geographies.
+The Predicted Impact Area API returns a location and industry-specific polygon boundary that reflects where event-driven demand impact actually occurs. PredictHQ calibrates boundaries against real demand and event data across industries and geographies.
 
 The recommended approach is to use Saved Locations. When you create a location using `origin_geojson` without specifying a `geojson` area, Predicted Impact Area is calculated automatically and stored against that location. You can then use the `location_id` across all PredictHQ APIs—Events, Features, and Beam—without needing to manage the boundary yourself.
 

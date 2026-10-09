@@ -70,13 +70,13 @@ Impact patterns are returned in the [Events API](https://app.gitbook.com/s/kEFs8
 `impact_patterns` is an array of impact pattern objects. The same event can have different impact patterns for different industry verticals. It contains the following fields:
 
 * `vertical` - The industry vertical the impact pattern applies to.
-* `impact_type` - Indicates the type of impact shown in the impact pattern. This will apply to either `phq_rank` or `phq_attendance`, depending on the vertical.
+* `impact_type` - Indicates the type of impact shown in the impact pattern. This applies to either `phq_rank` or `phq_attendance`, depending on the vertical.
 
 `impacts` is an array of objects with one entry for each day that contains the following values:
 
 * `date_local` - the date in the local timezone of the event.
-* `value` - the value of the `impact_type` for that given day. For example, if the `impact_type` was `phq_rank` the value would be the PHQ Rank value on the given day. In the case for `accommodation` or `hospitality` where the `impact_type` is `phq_attendance`, this is what will be presented in this field.
-* `position` - can be `leading`, `event_day` or `lagging`. `leading` are the days before the event occurs, `event_day` are the days the event occurs, and `lagging` are the days after the event has occurred.
+* `value` - the value of the `impact_type` for that given day. For example, if the `impact_type` was `phq_rank` the value would be the PHQ Rank value on the given day. In the case for `accommodation` or `hospitality` where the `impact_type` is `phq_attendance`, the API returns the `phq_attendance` value in this field.
+* `position` - is `leading`, `event_day`, or `lagging`. `leading` are the days before the event occurs, `event_day` are the days the event occurs, and `lagging` are the days after the event has occurred.
 
 ```json
 "impact_patterns": [

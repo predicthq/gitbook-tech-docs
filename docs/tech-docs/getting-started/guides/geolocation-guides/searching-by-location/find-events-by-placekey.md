@@ -9,7 +9,7 @@ You can do the following with the Placekey filter:
 
 ## Exact Match
 
-For this example, we will find events happening at Las Vegas Convention Center in July 2023. This query gives you all events happening at this specific venue but not nearby events.
+For this example, we find events happening at Las Vegas Convention Center in July 2023. This query gives you all events happening at this specific venue but not nearby events.
 
 <figure><img src="../../../../.gitbook/assets/placekey-hex-las-vegas-convention-center.png" alt=""><figcaption><p>Placekey example for the Las Vegas Convention Center</p></figcaption></figure>
 
@@ -70,9 +70,9 @@ A snippet of the results is shown below:
 
 ## Partial Match
 
-Often, events nearby a location can have an impact on your demand. The distance from your location will depend on the type of business—for example, people may travel further to an event when staying in a hotel versus how far people may travel from an event to a restaurant— and the nature of the location also matters (e.g. urban or more rural). To find events nearby a location match on the `@Where` part of Placekey.
+Often, events nearby a location can have an impact on your demand. The distance from your location will depend on the type of business—for example, people may travel further to an event when staying in a hotel versus how far people may travel from an event to a restaurant—and the nature of the location also matters (e.g. urban or more rural). To find events nearby a location match on the `@Where` part of Placekey.
 
-To find events very close to a location, match the full 9 characters of the `@Where` part of the Placekey that will find events very close to that location. Matching on the full `@Where` part of Placekey is like finding events within a 63-meter radius. In fact, it’s a hexagon with an edge length of 66 meters on average but it’s similar to drawing a circle with a 63-meter radius.
+To find events very close to a location, match the full nine characters of the `@Where` part of the Placekey that will find events very close to that location. Matching on the full `@Where` part of Placekey is like finding events within a 63-meter radius. In fact, it’s a hexagon with an edge length of 66 meters on average but it’s similar to drawing a circle with a 63-meter radius.
 
 To find events that are further away match the first x characters of `@Where` from left to right. So, matching on the full 9 characters is similar to a 63-meter radius, matching on the first 8 characters of the `@Where` part gives a maximal distance of 443 meters, matching on the first 7 characters encompasses a larger distance, and so on.&#x20;
 
@@ -155,7 +155,7 @@ You can join PredictHQ’s event tables with your data on the entire Placekey co
 
 The example below joins a sample PredictHQ Event table on Snowflake that includes Placekey information as a column with SafeGraph “Global Places Sample” POI data (see [SafeGraph data examples](https://www.safegraph.com/data-examples)). In this example, we are trying to perform an Inner Join between the restaurant in the SafeGraph table AND the PredictHQ Events happening nearby. We would only be using the first 7 characters (excluding the hyphens) of the @Where part of the Placekey column for this Inner Join. This results in all possible matches between the restaurants and PredictHQ Events nearby them.&#x20;
 
-This query should be repurposed with minimal change to be used in other relational data warehouses other than Snowflake.
+You can repurpose this query with minimal change to use it in relational data warehouses other than Snowflake.
 
 ```sql
 -- Selecting from PredictHQ’s New York Sample Attended Events data 
@@ -194,5 +194,5 @@ order by
 {% hint style="info" %}
 **Use Snowflake to get Placekeys for your address data**
 
-See [this article ](https://www.snowflake.com/blog/how-infutor-uses-the-placekey-external-function-to-extend-the-power-of-snowflake/)for details on how to use an External Function in Snowflake to get a Placekey for an address. If you have a data set in Snowflake where you have a lot of address data and you want a structured way to join it with events data and/or POI data you can use this functionality to set a Placekey for all your records. You can then use the information outlined in this article to match events and Placekey data.
+See [How Infutor uses the Placekey external function in Snowflake](https://www.snowflake.com/blog/how-infutor-uses-the-placekey-external-function-to-extend-the-power-of-snowflake/) for details on how to use an External Function in Snowflake to get a Placekey for an address. If you have a data set in Snowflake where you have a lot of address data and you want a structured way to join it with events data and/or POI data you can use this functionality to set a Placekey for all your records. You can then use the information outlined in this article to match events and Placekey data.
 {% endhint %}

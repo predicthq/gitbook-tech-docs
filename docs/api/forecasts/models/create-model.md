@@ -10,7 +10,7 @@ description: Create a forecast model.
 
 ## OpenAPI Spec
 
-The OpenAPI spec for Forecasts API can be [found here](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API).
+You can view the [Forecasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Forecasts+API) in the API docs.
 
 ## Guides
 
