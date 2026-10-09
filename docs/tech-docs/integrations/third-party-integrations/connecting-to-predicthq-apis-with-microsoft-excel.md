@@ -70,7 +70,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
-   2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
+   2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
       ![](<../../.gitbook/assets/image (83).png>)\\
 
@@ -88,7 +88,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.**
+Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.**
 
 {% hint style="info" %}
 This example will not work unless you replace the \[api\_token] with your token.\

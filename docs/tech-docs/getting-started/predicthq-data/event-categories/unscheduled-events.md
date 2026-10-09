@@ -36,7 +36,7 @@ This category is classified into three buckets with the following labels used to
 
     `flood`
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="221.33333333333331">Date &#x26; Time Field</th><th width="144" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>The weather warnings’ start time indicate when the warning starts to be effective.</td></tr><tr><td>End time</td><td align="center">Yes</td><td>The weather warnings’ end time indicate when the warning expires.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -94,7 +94,7 @@ This category is classified into three buckets with the following labels used to
 
     The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://events.predicthq.com/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://events.predicthq.com/events/Vat8acyAFAXQaNNTaK).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="225.33333333333331">Date &#x26; Time Field</th><th width="146" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Disaster events may or may not have an end date &#x26; time.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -133,7 +133,7 @@ Airport delays are events that indicate a scheduled flight getting delayed at a 
 
 All airport delays events have both `airport` and `delay` labels.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="215.33333333333331">Date &#x26; Time Field</th><th width="141" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td>All airport delays events are expected to have an end time as it indicates when the delay is expired.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -194,7 +194,7 @@ This category is classified into three buckets with the following labels used to
     * `personal-care-open` / `personal-care-closed` : Both physical assistance and/or prompting and supervising the performance of direct personal care tasks as determined by the consumer's needs (salons, barbers, nail salons) are open or closed.
     * `worship-open` / `worship-closed` : Any building where congregations gather for prayer are open or closed.
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="224.33333333333331">Date &#x26; Time Field</th><th width="138" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Government mandated restrictions may have an end date if it’s available, it should cover the whole period in which restrictions are in place or have been lifted.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td>The pandemic or epidemic hazard events use the official announcement time as the start time.</td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -241,7 +241,7 @@ Labels for a terror event provide more information about the event. The most com
 4. `hostage-crisis`: The terrorism acts when the hostage occurs, for example, [`assassination`](https://events.predicthq.com/events/ywfjG46u6KDmkqqsAa), a terror threat, etc.
 5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, PredictHQ adds the `mass-shooting` label, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
 
-#### Date & Time
+#### Date & time
 
 <table><thead><tr><th width="212.33333333333331">Date &#x26; Time Field</th><th width="151" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td>Terror events may have an end date and time available.</td></tr><tr><td>Start time</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 

@@ -62,7 +62,7 @@ Broadcasts have three possible status values:
 * **`cancelled`**\
   The broadcast is no longer scheduled to be televised.
 
-#### Date & Time
+#### Date & time
 
 <table data-header-hidden><thead><tr><th width="188">Date &#x26; Time Field</th><th align="center">Availability - Broadcast</th><th align="center">Availability - Event</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td align="center">Yes</td><td><ul><li>Broadcast records have a start date and time in both UTC and local time where the broadcast is scheduled.</li></ul><ul><li>Physical events have a start date and time in both UTC and local time in the event timezone.</li></ul></td></tr><tr><td>End date</td><td align="center">No</td><td align="center">Yes</td><td><ul><li>The Broadcast record doesn’t have an end date or time available.</li></ul><ul><li>Physical events have an end date and time in both UTC and local time in the event timezone.</li></ul></td></tr><tr><td>Start time</td><td align="center">Yes</td><td align="center">Yes</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td align="center">Yes</td><td></td></tr><tr><td>Predicted end time</td><td align="center">No</td><td align="center">Yes</td><td>For sports events where there is no official end time available, we predict end times using our machine learning models and intelligent algorithms. PredictHQ’s Predicted End Times feature provides end times for the physical event in it’s local timezone.</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
@@ -72,7 +72,7 @@ The broadcast record presents the number of people who are watching the live spo
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
-Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, you can search for the broadcast in Bell City, Los Angeles, and the API returns all broadcasts in Los Angeles County that match other criteria.
+Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) can be used to search in the API or in our WebApp. The API returns the results at county level for the county where the place is located. For example, if you search for the broadcast in Bell City, Los Angeles, the API returns all broadcasts in Los Angeles County that match your other criteria.
 
 ## Ranking
 

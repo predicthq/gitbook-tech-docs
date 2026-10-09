@@ -63,7 +63,7 @@ The `geo` field also contains address information. The **address** subfield with
 * `locality` (optional) - indicates the city or town the event occurs in
 * `region` (optional) - the region or state at which the event takes place
 
-For attended events when they are linked to a [venue entity ](../../predicthq-data/entities.md#venue)then the address information corresponds to the address of the venue.
+For attended events when they are linked to a [venue entity](../../predicthq-data/entities.md#venue) then the address information corresponds to the address of the venue.
 
 Events that cover a larger area (for example non-attended events like holidays) tend to have less address information. For example, a country-wide holiday may only have the country code field in the address field.
 

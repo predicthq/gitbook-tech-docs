@@ -24,7 +24,7 @@ This guide is focused on using the APIs. You can also use our WebApp to manage a
 
 Within the WebApp on the [plans page](https://control.predicthq.com/settings/plans/api) or in the **Location Insights** view you can see how many locations you have purchased and how many you have used.
 
-If you add more locations than you have purchased you have access to the additional locations for a limited time and need to upgrade your subscription to purchase more or remove the locations you added. The PredictHQ team contacts you to discuss options.
+If you add more locations than you have purchased, you keep access to the extra locations for a limited time. To keep them, upgrade your subscription to purchase more, or remove the locations you added. The PredictHQ team reaches out to discuss your options.
 
 <figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
 
