@@ -90,7 +90,7 @@ Whichever architecture you choose, the request flow an AI assistant follows is t
 1. A user asks a question or requests a forecast.
 2. The assistant determines that external context is required.
 3. The assistant retrieves PredictHQ context for a specified location and time range - from your store (provisioned) or via MCP (on-demand).
-4. Structured context is returned.
+4. Your store or the MCP server returns structured context.
 5. The assistant incorporates that context into its reasoning or response.
 
 PredictHQ APIs are stateless and deterministic - the same request always returns the same result - which suits inference-time use inside AI systems.

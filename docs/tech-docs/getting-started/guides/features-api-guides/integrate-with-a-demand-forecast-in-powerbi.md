@@ -84,7 +84,7 @@ Finally, using the insights from the Feature Importance API, we employed the Fea
 
 <figure><img src="../../../.gitbook/assets/features-table-screenshot.png" alt=""><figcaption><p>Beam and Features API results</p></figcaption></figure>
 
-### Improve Model Performance with PredictHQ Data
+### Improve model performance with PredictHQ data
 
 Upon integrating this data into PowerBI, we developed an advanced model that combined both historical data and PredictHQ's event data. The outcome was a significant leap in performance, reaching 75%.
 

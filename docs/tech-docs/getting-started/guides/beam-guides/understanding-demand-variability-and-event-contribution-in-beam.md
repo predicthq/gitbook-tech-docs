@@ -19,7 +19,7 @@ The **demand variability ratio** measures the proportion of your total demand th
 
 Beam calculates this separately for **positive anomalies** (demand surges) and **negative anomalies** (demand drops), so you can understand both the upside and downside impact.
 
-## How Events Explain That Variability
+## How events explain that variability
 
 Once Beam has identified your anomalous demand, the next step is to determine how much of it can be attributed to events.
 
@@ -35,7 +35,7 @@ This means that roughly 12.9% of your total demand sits above your predictable b
 Based on analysis of over 300,000 Beam analyses across 59,000+ locations in 171 countries over the last 12 months, PredictHQ's event data explains an average of 61% of positive demand variability - though this varies depending on location, industry, and the types of events near your business.
 {% endhint %}
 
-Like the demand variability ratio, this is calculated separately for positive and negative anomalies, so you can see how events drive both demand surges and demand drops.
+Like the demand variability ratio, Beam calculates this separately for positive and negative anomalies, so you can see how events drive both demand surges and demand drops.
 
 ## Why This Matters for Forecasting
 

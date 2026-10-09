@@ -16,13 +16,13 @@ The data used in this guide is based on a popular location, in our case San Fran
 
 Below are the main steps involved in this guide:
 
-1. Building Report Parameters around a Location
-   * Example Parameters for this Guide
-2. Select an Input method
+1. Building report parameters around a location
+   * Example parameters for this guide
+2. Select an input method
    * CSV upload
-   * Snowflake Connection
+   * Snowflake connection
    * API connection
-3. Guide to Building the Report
+3. Guide to building the report
    * Example report download
 
 **Requirements:**
@@ -33,15 +33,15 @@ Below are the main steps involved in this guide:
    * API: [API Access Token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating)
 2. [Microsoft Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi) reporting software
 
-## Building Report Parameters around a Location
+## Building report parameters around a location
 
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
 
 {% hint style="info" %}
-All of our parameters are able to be modified based on user needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
+You can modify all of our parameters based on your needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
 {% endhint %}
 
-### Example Parameters for this Guide:
+### Example parameters for this guide:
 
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
@@ -71,7 +71,7 @@ There are several ways to connect PredictHQ data to Power BI or other reporting 
 
 [**API Connection**](using-event-data-in-power-bi.md#api-connection-method): Another preferred method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever-updating data source and is always up to date.
 
-### CSV Upload Method
+### CSV upload method
 
 We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and click **Search**.
 
@@ -91,11 +91,11 @@ Right-click the Query under Queries and go to the Advanced Editor option. The Qu
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
-This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that will transform the columns automatically for use in the report.
+This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that transforms the columns automatically for use in the report.
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-Paste the Power Query below after the first existing 4 lines, after the "Changed Type" step, replacing everything from the existing “in” down.
+Paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down.
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -135,7 +135,7 @@ Hit Close & Apply and wait for the data transformation to finish processing.
 
 After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
-### Snowflake Connection Method
+### Snowflake connection method
 
 To connect using Snowflake you will need the following knowledge about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the variables below:
 
@@ -196,11 +196,11 @@ Connection settings: DirectQuery is recommended for constant database connection
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
-#### Connecting to other Data Warehouses
+#### Connecting to other data warehouses
 
 See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-event-data-into-a-data-warehouse.md "mention") for an example of how to load event data into Google BigQuery or other data warehouses. See this guide on [how to connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
-### API Connection Method
+### API connection method
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
@@ -305,7 +305,7 @@ Click Close & Apply and wait for the data transformation to finish processing th
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
-## Guide to Building the Report
+## Guide to building the report
 
 Using either of the two methods above will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. Not all the columns were transformed, just the ones used in this guide.
 
@@ -313,7 +313,7 @@ This guide creates a connected chart and table that covers the defined time peri
 
 To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
 
-Group as one (shift-click both boxes, right-click on one of them, and click the Group -> Group option).
+Group as one (shift-click both boxes, right-click one of them, and click the Group -> Group option).
 
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
@@ -359,7 +359,7 @@ A useful addition to this basic view could be a drill down on the table by addin
 
 You can add your own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
 
-### Example API Connection Report Template
+### Example API connection report template
 
 Below is a downloadable Power BI template that automatically creates the example report used throughout this guide, using the API Connection method.
 
@@ -374,6 +374,6 @@ Once the data connection has loaded for a bit you might be prompted for a connec
 
 If there are any issues with this template refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
 
-#### Example Report:
+#### Example report:
 
 {% file src="../../.gitbook/assets/PredictHQ API Connection Example Report (1).pbit" %}

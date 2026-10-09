@@ -4,7 +4,7 @@ Using SQL queries in Snowflake, you can manipulate the shared data to fit a vari
 
 The following SQL examples are based on the Sample Data Shares we provide. Here our database name is marketplace but in your account, it would be the custom name you chose when you added the sample data shares to your Snowflake account.
 
-### Filter on Labels
+### Filter on labels
 
 Filtering on the `ARRAY` column `labels`, to find events with a `construction` label, using [ARRAY\_CONTAINS](https://docs.snowflake.com/en/sql-reference/functions/array_contains.html#array-contains).
 

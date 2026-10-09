@@ -37,7 +37,7 @@ for event in phq.events.search(q="Foo Fighters", rank_level=[4, 5], country='US'
 
 By default, the event search returns only the first 10 results. If you want to paginate or access more results at once, look at either using limit/offset parameters or at using the `iter_all()` helper.
 
-## Further Examples
+## Further examples
 
 Browse our [use case examples](https://github.com/predicthq/sdk-py/tree/master/usecases) on our GitHub repository.
 

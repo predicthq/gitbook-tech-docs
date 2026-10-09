@@ -81,7 +81,7 @@ for location in list_of_locations:
 
 
 
-## Create Input table used in both methods
+## Create input table used in both methods
 
 To be able to reference the locations further in the guide, a table of locations is required as input (called **SAVED\_LOCATIONS**). Fill this table with \
 The **SAVED\_LOCATIONS** input table requires this format:
@@ -116,7 +116,7 @@ VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'
 ```
 {% endcode %}
 
-By default, three months of historical data is returned. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next 2 weeks.
+By default, three months of historical data is returned. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
 
 Once the input table is in the format of the above, the below code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
 

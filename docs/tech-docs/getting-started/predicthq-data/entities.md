@@ -106,7 +106,7 @@ Below is an example of people entities showing performers for a concert:
 
 To get back all events linked to an entity you can call the Events API by entity ID. You can use this to find all events at a venue, all instances of a recurring event, or all events linked to a people or organization entity.
 
-For example the entity ID for the "Moscone Center - West" is hH4zrx9zYLiETvNZQrx2de. So if you query the events for that ID you will get back all events held at the Moscone Center - West. You can then use other filters to narrow down the time period, ranks, or anything else.
+For example the entity ID for the "Moscone Center - West" is hH4zrx9zYLiETvNZQrx2de. So if you query the events for that ID you get back all events held at the Moscone Center - West. You can then use other filters to narrow down the time period, ranks, or anything else.
 
 &#x20;Here is an example of calling the Events API using the Moscone Center - West entity ID:
 

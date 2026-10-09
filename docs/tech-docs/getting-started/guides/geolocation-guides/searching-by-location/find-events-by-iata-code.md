@@ -2,7 +2,7 @@
 
 For this example, we will use an IATA airport code to search for events around Los Angeles Airport on March the 3rd, 2018.
 
-The `/events` API endpoint supports the use of IATA (3 character), ICAO (4 character), and UN/LOCODE (5 character) airport codes. A CSV file with all supported airport codes and their respective place ids is available to download.
+The `/events` API endpoint supports the use of IATA (three character), ICAO (four character), and UN/LOCODE (five character) airport codes. A CSV file with all supported airport codes and their respective place ids is available to download.
 
 {% file src="../../../../.gitbook/assets/airport-codes.csv" %}
 

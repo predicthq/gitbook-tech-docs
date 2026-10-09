@@ -8,7 +8,7 @@ This guide provides ideas on how to protect PredictHQ’s data from unauthorized
 
 Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites, which automated tools or bots typically perform. Our terms require customers to protect against unauthorized use of our data including by these techniques so carefully consider how you're exposing PredictHQ data and what protections you have in-place to protect it.
 
-## Technical Deterrents and Protection
+## Technical deterrents and protection
 
 You must use any reasonable endeavors to prevent unauthorized access to, or use of PredictHQ Data and, in the event of any such unauthorized access or use, promptly notify PredictHQ. Reasonable endeavors to prevent web scraping may include any of the following (**but are not limited to**):
 
@@ -42,4 +42,4 @@ Websites can declare if crawling is allowed or not in the robots.txt file and al
 
 ### Protecting or Disabling any Publicly Available APIs
 
-Ensuring proper security or access controls are implemented for any publicly accessible APIs that your website uses to ensure access is restricted for legitimate usages.
+Ensure you implement proper security and access controls for any publicly accessible APIs that your website uses, so that only legitimate usage has access.

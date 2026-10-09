@@ -46,7 +46,7 @@ Without Beam, you’re guessing which events matter. With Beam, your own demand 
 
 **If you have demand data, always run Beam first.**
 
-## When You Can’t Use Beam
+## When you can’t use Beam
 
 If demand data isn’t available, we’ve done research to provide industry-level defaults. These include:
 

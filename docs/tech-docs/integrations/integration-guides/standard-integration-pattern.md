@@ -8,7 +8,7 @@ A PredictHQ integration has four logical components on your side:
 
 1. **Location & Beam Management** creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
 2. **ML Features Management** - fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
-3. **Events Management** — fetches relevant events per location for explainability and operational context, refreshed daily or weekly
+3. **Events Management** - fetches relevant events per location for explainability and operational context, refreshed daily or weekly
 4. **Forecasting & Decision System** — consumes features for model training and inference and surfaces events alongside results for explainability
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
@@ -118,7 +118,7 @@ The decision or end-user system consumes:
 
 This architecture also supports [grounding](../../getting-started/glossary.md#grounding) - supplying verified real-world context to LLMs and AI agents at the moment they answer, so they respond from facts instead of hallucinating. Grounding sits alongside the forecasting pipeline, not inside it: training improves your model before it runs, grounding supplies verified context while it runs, and the two never mix.
 
-**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, governed by your own access controls, with freshness set by your refresh cadence. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
+**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, your own access controls govern it, and your refresh cadence sets its freshness. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
 
 **On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
 

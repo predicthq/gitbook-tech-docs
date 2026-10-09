@@ -78,7 +78,7 @@ Once you take into account Umbrella events and remove double counting, the real 
 
 <figure><img src="../../../.gitbook/assets/graph-umbrella-events-removed.png" alt=""><figcaption><p>Example showing correct attendance due to correct handling of Umbrella Events</p></figcaption></figure>
 
-### **Using the Parent Filter in the Events API for Umbrella Events**
+### **Using the parent filter in the Events API for umbrella events**
 
 See the documentation on the [parent filter](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) for umbrella events.
 

@@ -46,7 +46,7 @@ You can also use the `sort` parameter to sort by the end time and the predicted\
 Note
 
 * Predicted end times is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
-* For events that don’t have an end time the end time is set to the same as the start time in our Events API response.
+* For events that don’t have an end time the Events API sets the end time to the start time in its response.
 
 ## Examples
 

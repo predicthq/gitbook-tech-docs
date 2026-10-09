@@ -12,7 +12,7 @@ This tutorial guides you through the process of identifying, retrieving, and int
 
 ## Harnessing event signals
 
-### Events Driving Demand
+### Events driving demand
 
 Events, such as concerts, expos, and public holidays, are known to affect consumer behavior and [drive demand](https://www.predicthq.com/use-cases/demand-forecasting). PredictHQ offers event data across [more than a dozen categories](../../predicthq-data/event-categories/), featuring a [wide range of labels](../../predicthq-data/labels.md). The [powerful data processing pipeline](https://www.predicthq.com/intelligence) ensures the delivery of high-quality, enriched event data that can be seamlessly incorporated as features into any demand forecasting model.
 
@@ -46,7 +46,7 @@ There are two main strategies for determining a list of Important Features for a
 
 <summary>Important Features by Location</summary>
 
-If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as Category Importance in our WebApp, these event features (or categories) are identified as having the greatest impact on your demand.
+If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as Category Importance in our WebApp, Beam identifies these event features (or categories) as having the greatest impact on your demand.
 
 </details>
 

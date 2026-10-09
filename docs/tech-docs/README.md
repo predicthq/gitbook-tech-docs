@@ -47,7 +47,7 @@ response = requests.post(
 print(response.json())
 ```
 
-## AI & Agents
+## AI & agents
 
 * [Build with AI](ai/build-with-ai.md) - Connect any MCP-compatible AI assistant to PredictHQ APIs through natural language
 * [MCP server](ai/mcp.md) - Query events, demand intelligence, and all PredictHQ APIs without writing code

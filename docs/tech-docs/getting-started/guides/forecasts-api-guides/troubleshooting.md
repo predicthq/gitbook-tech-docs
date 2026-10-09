@@ -4,7 +4,7 @@
 
 If you’re experiencing lower-than-expected forecast accuracy, there are a few common issues worth checking. Forecasting models rely on consistent, pattern-rich historical data to make reliable predictions. The more signal and structure in your input data, the better the output.
 
-### Not Enough History
+### Not enough history
 
 Forecast models rely on repeated patterns in your data—seasonality, trends, and demand shifts over time. Without enough historical coverage, the model may struggle to detect these patterns or overfit to short-term fluctuations. We recommend providing at least 18 months of demand history.
 

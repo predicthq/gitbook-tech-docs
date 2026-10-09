@@ -30,7 +30,7 @@ Building an internal pipeline requires taking ownership of this entire problem s
 
 Beam provides a calibrated framework designed specifically for the statistical reality of event-driven demand.
 
-## How It Works
+## How it works
 
 Beam identifies which event signals correlate with demand variability - location by location.
 
@@ -80,7 +80,7 @@ When you use Beam, follow these practices:
   * Brand or concept (e.g. premium vs budget)
   * Product group level (e.g. room types, product categories) - rather than individual SKUs
 * **Use Beam Analysis IDs across APIs** - Apply the same calibration consistently when retrieving features or events.
-* **Re-run Beam regularly** - Event dynamics evolve. Monthly recalibration is recommended for most use cases.
+* **Re-run Beam regularly** - Event dynamics evolve. We recommend monthly recalibration for most use cases.
 
 ## How Beam Integrates With Other APIs
 

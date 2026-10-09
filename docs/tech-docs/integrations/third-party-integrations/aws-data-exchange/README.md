@@ -1,6 +1,6 @@
 # Receive data via AWS Data Exchange
 
-AWS Data Exchange (ADX) deploys PredictHQ's verified real-world context into your own AWS environment - delivered to S3, where your data warehouse, data science platform, and AI systems already operate. An always-current local dataset, governed by you, is the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
+AWS Data Exchange (ADX) deploys PredictHQ's verified real-world context into your own AWS environment - delivered to S3, where your data warehouse, data science platform, and AI systems already operate. An always-current local dataset that you govern is the foundation for training forecasting models on event features and for [grounding AI systems inside your environment](../../integration-guides/provisioned-grounding.md).
 
 PredictHQ provides the data as CSV, JSON, or Parquet in full and incremental exports, and it requires no ELT/ETL pipeline to build or maintain. You can check out the AWS Data Exchange Overview page if you're interested to read more on how AWS Data Exchange works.
 
@@ -18,7 +18,7 @@ It is essential to process all ADX revisions in the order they are delivered to 
 
 For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update` or `delete`).
 
-### File Naming
+### File naming
 
 ```
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
@@ -38,7 +38,7 @@ PredictHQ Samples on AWS Data Exchange
 
 Private Listings can be set up to match your PredictHQ license in terms of data type, locations and time window. We can provide the data in CSV, JSON, or Parquet and configure dumps of data at regular intervals. The files contained in the data set revisions can be automatically copied to S3 where your Data Warehouse (or other data platform) will be able to pick them up.
 
-PredictHQ will create the Private Listing and extend an “offer” to your AWS Account ID which you can then accept to start accessing the data.
+PredictHQ creates the Private Listing and extends an “offer” to your AWS Account ID which you can then accept to start accessing the data.
 
 Receiving data via an ADX Private Listing is a great alternative to writing code to integrate with our APIs allowing you to get the data you need much faster. Many Data Warehouses, Data Science Platforms and other data platforms integrate natively with S3 to load data.
 

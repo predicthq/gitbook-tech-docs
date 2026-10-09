@@ -226,7 +226,7 @@ Festival events have Local Rank available.
 
 Festival events have Predicted Attendance available.
 
-### Performing Arts
+### Performing arts
 
 A show or an exhibition of creative activities for an audience, for example, [a circus show](https://events.predicthq.com/events/EHKbvvKhLnVonwUUbD).
 
@@ -378,7 +378,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Academic events are tracked as an event with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, Academic events can apply to an entire campus or a specific location, e.g. an academic session applies to the whole campus, and a point event, e.g. graduation happens at a specific location. Use labels to distinguish these different types of events. `graduation` and `social` event are point events, `academic-session`, `holiday`, `exam` impact the whole area of the campus.
+PredictHQ tracks academic events as events with a scope of locality. In terms of geographic information we return a latitude/longitude for the event and the address of the event. However, Academic events can apply to an entire campus or a specific location, e.g. an academic session applies to the whole campus, and a point event, e.g. graduation happens at a specific location. Use labels to distinguish these different types of events. `graduation` and `social` event are point events, `academic-session`, `holiday`, `exam` impact the whole area of the campus.
 
 #### Entities
 

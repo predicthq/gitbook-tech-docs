@@ -12,7 +12,7 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 
 **Loop Links** provide a way for customers to integrate with Loop without their users needing a WebApp login, and enable the following:
 
-* Customers can integrate Loop into their products such as a web app, mobile app, or other tool
+* You can integrate Loop into your products, such as a web app, mobile app, or other tool
 * Each customer can generate a unique URL to allow their users to submit event feedback and missing event information
 * PredictHQ processes events in the normal way and adds valid events or feedback to its system
 * The Events API returns events that PredictHQ approves via Loop
@@ -47,7 +47,7 @@ Below is a fictitious example app with examples of adding buttons for the two ty
 
 <figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt=""><figcaption></figcaption></figure>
 
-The diagram below shows how your app will integrate with the Loop Links event pages:
+The following diagram shows how your app integrates with the Loop Links event pages:
 
 <figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt=""><figcaption></figcaption></figure>
 
@@ -65,7 +65,7 @@ Opens a PredictHQ web page where users can provide feedback on an existing event
 
 Integrate this link where you are displaying a PredictHQ event in your app. We recommend you open this in a new window.
 
-### Submitting Missing Events
+### Submitting missing events
 
 * Users enter event details
 * PredictHQ teams review and approves or reject events

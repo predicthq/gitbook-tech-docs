@@ -28,9 +28,9 @@ If you add more locations than you have purchased, you keep access to the extra 
 
 <figure><img src="../../../../.gitbook/assets/location-insights-number-purchased.png" alt=""><figcaption></figcaption></figure>
 
-## How to use the APIs with Location-based Access
+## How to use the APIs with location-based access
 
-### Setting Up Your Locations
+### Setting up your locations
 
 You will have a list of locations for your business. Such as a list of addresses for your stores. The first stage is to find the latitude and longitude (lat/long) of each store. Once you have done that you can create Saved Locations for each using the API.
 
