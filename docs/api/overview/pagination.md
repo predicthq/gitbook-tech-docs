@@ -4,7 +4,7 @@ When requesting a list of records, the response usually contains the following f
 
 <table><thead><tr><th width="190">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>count</strong></td><td>The total number of results.</td></tr><tr><td><strong>previous</strong></td><td>A URL to the previous page, or <code>null</code> if this is the first page.</td></tr><tr><td><strong>next</strong></td><td>A URL to the next page, or <code>null</code> if this is the last page.</td></tr><tr><td><strong>overflow</strong></td><td>Boolean flag that indicates if the search has more results than your subscription allows you to view.</td></tr></tbody></table>
 
-Below is an example response:
+The following is an example response:
 
 ```json
 {

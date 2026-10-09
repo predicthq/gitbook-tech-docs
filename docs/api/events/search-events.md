@@ -92,7 +92,7 @@ See the [Events API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryNa
 Airport codes are mapped to Place IDs. The current mapping of airport code to Place ID is in the [airport codes mapping file](https://github.com/predicthq/api-specs/blob/main/data/airport-codes.csv).
 {% endhint %}
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Geolocation guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides)
 * [Date and time guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/date-and-time-guides)

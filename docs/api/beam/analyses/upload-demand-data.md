@@ -10,7 +10,7 @@ description: Upload your demand data as CSV, line-delimited JSON, or JSON.
 
 ## Error codes
 
-The API can return an unsuccessful HTTP response code for several reasons. In addition to an error message, there may also be a `code` field when applicable. The table below outlines the meaning of several error codes that may be returned.
+The API can return an unsuccessful HTTP response code for several reasons. In addition to an error message, there may also be a `code` field when applicable. The following table outlines the meaning of several error codes that may be returned.
 
 | Code                                        | Description                                                                                                                                    |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,7 +23,7 @@ The API can return an unsuccessful HTTP response code for several reasons. In ad
 | `csv_invalid_row`                           | The uploaded CSV has an invalid row.                                                                                                           |
 | `csv_invalid_header`                        | The uploaded CSV headers are incorrect. Use `date,demand`.                                                                              |
 | `csv_no_data`                               | The uploaded CSV is empty or only has headers set.                                                                                             |
-| `csv_invalid_format`                        | The uploaded CSV is formatted incorrectly. Please ensure CSV data is correctly UTF-8 encoded and that there are no invalid escape sequences.   |
+| `csv_invalid_format`                        | The uploaded CSV is formatted incorrectly. Ensure CSV data is correctly UTF-8 encoded and that there are no invalid escape sequences.   |
 | `start_date_invalid`                        | The earliest date in the uploaded demand data is before `2017-01-01`.                                                                          |
 | `end_date_invalid`                          | The latest date in the uploaded demand data is more than 1 year into the future.                                                               |
 | `duplicate_rows`                            | The uploaded demand data contains duplicate dates. Remove all duplicates before uploading.                                              |

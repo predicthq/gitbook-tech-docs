@@ -8,7 +8,9 @@ The workflow maps to the API's resources:
 
 1. Create a [model](models/README.md) for a Saved Location and choose an [algorithm](algorithms/README.md) (most integrations use the default).
 2. Upload historical [demand data](demand-data/README.md).
-3. Train the model, then retrieve [forecasts](forecasts/README.md) on your forecast cadence. Retrain as new demand data accumulates.
+3. Train the model.
+4. Retrieve [forecasts](forecasts/README.md) on your forecast cadence.
+5. Retrain the model as new demand data accumulates.
 
 Use the Forecasts API when time-to-value matters more than owning the model. For full control over model architecture and feature engineering, use the [Features API](../features/get-features.md) with a `beam.analysis_id` instead.
 

@@ -12,6 +12,8 @@ description: Create a new Saved Location to begin seeing insights.
 
 ### Create using point and radius
 
+Use this request to create a Saved Location from a point and radius:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash
@@ -74,9 +76,9 @@ print(response.text)
 {% endtab %}
 {% endtabs %}
 
-### Create Using Place ID
+### Create using place ID
 
-Use this request to create a Saved Location from a Place ID:
+To create a Saved Location from a Place ID, use this request:
 
 {% tabs %}
 {% tab title="curl" %}
@@ -122,6 +124,6 @@ See the [Saved Locations API OpenAPI spec](https://api.predicthq.com/docs/?urls.
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Working with location-based subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)

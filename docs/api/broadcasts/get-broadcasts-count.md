@@ -1,5 +1,5 @@
 ---
-description: Get the count of Live TV broadcasts by category, label, and more.
+description: Get the count of Broadcasts for Live TV Events by category, label, and more.
 ---
 
 # Get Broadcasts count
@@ -47,6 +47,6 @@ See the [Broadcasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.prima
 
 ## Guides
 
-Below are some guides relevant to this API:
+The following guides are relevant to this API:
 
 * [Live TV event guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

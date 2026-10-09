@@ -56,7 +56,7 @@ Dates are a little more complex and the rest of this guide will help you underst
 
 ## Date concepts
 
-Internally, we have the concept of different date types for events. We don't expose these date types directly, but they surface indirectly and this guide will demonstrate how to understand dates, times and timezones on events. The different date types we refer to internally are:
+Internally, we have the concept of different date types for events. We don't expose these date types directly, but they surface indirectly and this guide will demonstrate how to understand dates, times, and timezones on events. The different date types we refer to internally are:
 
 * Fixed Date
 * Fixed Time

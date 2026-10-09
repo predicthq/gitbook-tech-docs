@@ -44,6 +44,6 @@ Read the [Beam API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryNam
 
 ## Guides
 
-Below are some guides relevant to this API:
+The following guides are relevant to this API:
 
 * [Beam guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)

@@ -14,4 +14,4 @@ PredictHQ offers these core APIs:
 * [Beam API](beam/overview.md) - Identify the real-world events that materially move your demand
 * [Saved Locations API](saved-locations/overview.md) - Define and manage reusable business locations for consistent querying across Events, Features, Beam, and Forecasts APIs
 
-Building with AI? Start with [Build with AI](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/build-with-ai): the MCP server for grounded access to all of these APIs at inference time, and agent skills that teach AI coding assistants the recommended integration patterns.
+Building with AI? Start with [Build with AI](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/ai/build-with-ai): the PredictHQ MCP server for grounded access to all of these APIs at inference time, and agent skills that teach AI coding assistants the recommended integration patterns.

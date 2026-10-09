@@ -26,7 +26,7 @@ Ability to monitor, alert and report on website activity by IP address allows fo
 
 ### Use of Commercial Software to Protect Public-Facing Content from Bots
 
-Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection and bot prevention.
+Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure, and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection and bot prevention.
 
 ### Traffic Monitoring
 

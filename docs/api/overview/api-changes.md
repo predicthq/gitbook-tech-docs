@@ -6,13 +6,13 @@ For a full history of product updates, new features, and data quality improvemen
 
 ## Backwards compatible changes
 
-The following types of changes may be introduced at any time without notice:
+We may introduce the following types of changes at any time without notice:
 
 * New fields added to API responses
 * New event categories and labels
 * New API query parameters
 * New API endpoints
 
-## Breaking Changes
+## Breaking changes
 
 We introduce breaking changes that affect backwards compatibility with a new API version. We will communicate these changes in advance through the [Changelog](https://app.gitbook.com/s/kWAay641pSmEKQBQMPWx/) and direct customer notifications where applicable.
