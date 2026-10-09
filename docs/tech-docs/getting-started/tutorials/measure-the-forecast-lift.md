@@ -80,7 +80,7 @@ print(analysis_id)
 
 ## Step 3: Upload the sample demand data
 
-Upload the CSV to the Analysis. This is the data Beam correlates against real-world events:
+To give Beam the data it correlates against real-world events, upload the CSV to the Analysis:
 
 ```python
 with open("sample_demand_retail.csv", "rb") as f:
@@ -170,7 +170,7 @@ Each row is a date with one value per Beam-selected feature: Predicted Attendanc
 
 ## Step 7: Measure what the features are worth
 
-You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can train two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. Create a model with `generate_baseline` enabled, upload the same CSV, and train:
+You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can train two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. To train both models, run the following code. It creates a model with `generate_baseline` enabled, uploads the same CSV, and starts training:
 
 ```python
 import csv
@@ -225,7 +225,7 @@ From our run:
 }
 ```
 
-The enhanced model's error (MAPE 9.37) beat the baseline (12.75) - a 26.5% improvement, and the difference is the event features, measured by a like-for-like comparison on the same demand data.
+The enhanced model's error (MAPE 9.37) beat the baseline (12.75) - a 26.5% improvement, and a like-for-like comparison on the same demand data attributes the difference to the event features.
 
 Don't read that number as a benchmark. This store sits in a deliberately event-exposed district, and the demand data is synthetic - the result demonstrates the measurement workflow, not a claim about your business. When we ran this exact workflow on the same demand data at other locations, the measured lift ranged from about 1% to 26%: event exposure is a property of the location. That's the point of measuring instead of assuming - this workflow tells you what events are worth at your locations, on your own demand data.
 

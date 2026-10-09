@@ -104,4 +104,4 @@ The output of the script above should look similar to the data below:
 
 
 
-### Refer back to [Main Guide](./)
+### Refer back to [main guide](./)

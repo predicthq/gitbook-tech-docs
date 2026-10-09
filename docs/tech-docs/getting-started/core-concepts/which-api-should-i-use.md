@@ -89,10 +89,10 @@ Related resources:
 Avoid these common mistakes:
 
 * **Using the Events API for ML features** - The Events API returns individual event records. Aggregating these manually introduces errors in multi-day event handling, lead/lag effects, and rank filtering. Use the Features API instead.
-* **Skipping Beam** - Without Beam, feature selection in the Features API must be configured manually. This is error-prone and produces feature sets that are not calibrated to your actual demand patterns.
+* **Skipping Beam** - Without Beam, you must configure feature selection in the Features API manually. This is error-prone and produces feature sets that are not calibrated to your actual demand patterns.
 * **Calling Features API without `beam.analysis_id`** - Without a Beam Analysis, you must manually specify location, features, and rank thresholds. This is valid for early exploration but should not be used in production.
 
-## See Also
+## See also
 
 Related pages:
 

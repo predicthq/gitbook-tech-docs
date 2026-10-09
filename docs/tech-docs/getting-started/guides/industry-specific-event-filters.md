@@ -36,7 +36,7 @@ Our systems use industry to tune how they interpret and model events for your bu
 * **Beam**\
   Beam builds on these industry-tuned patterns and thresholds, and further personalizes results with your own demand data.
 * **Forecasts API**\
-  Uses industry in the same way as Beam (industry is passed through to Beam behind the scenes).
+  Uses industry in the same way as Beam (the Forecasts API passes industry to Beam behind the scenes).
 
 ## Beam comes first
 
@@ -64,7 +64,7 @@ These are starting points only. Switch to Beam as soon as you can provide demand
 When requesting features from Features API with a Beam ID we automatically configure all the correct settings based on the Beam results. When not using Beam, we recommend using the `sum` stat for all relevant features (based on the industry to category mappings above) except for severe weather where we recommend using the `max` stat to avoid over representing the impact of severe weather events when multiple are overlapping.
 {% endhint %}
 
-## Minimum Local Rank Thresholds
+## Minimum Local Rank thresholds
 
 Local Rank is a location-sensitive scale (0-100, logarithmic) that predicts how much impact an event will have in its immediate vicinity - factoring in population density and local characteristics such as how built-up or accessible an area is. For example, a 1,000-person conference may register a Local Rank of 43 in densely populated Hong Kong and 65 in less crowded Dublin - despite having the same PHQ Rank.
 

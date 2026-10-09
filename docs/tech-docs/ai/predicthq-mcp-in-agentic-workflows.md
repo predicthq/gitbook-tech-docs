@@ -28,7 +28,7 @@ PredictHQ is the real-world context platform that powers enterprise AI decisions
 
 **Full workflow coverage.** A single MCP connection gives an agent the complete PredictHQ workflow, from location setup and demand calibration through to model-ready features and demand forecasts, with no separate integration per API.
 
-## Calibration Comes First
+## Calibration comes first
 
 PredictHQ's value in an agent loop comes from calibrated demand intelligence, which depends on two things being in place for each location.
 
@@ -59,7 +59,7 @@ flowchart TD
 
 ## Example Workflows
 
-These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam Analysis first, as described above.
+These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam Analysis first, as described earlier.
 
 ### Revenue Management
 
@@ -99,7 +99,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 **Querying demand intelligence and explainability:**
 
 * `features_api_get_features` is the primary tool for demand intelligence. Call it with `beam.analysis_id` to get calibrated, model-ready time-series features ready to feed into a decision or model.
-* `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. Pass `phq_explainability` to get the top real-world drivers behind each forecasted date. The system applies Beam automatically.
+* `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. To get the top real-world drivers behind each forecasted date, pass `phq_explainability`. The system applies Beam automatically.
 * `events_api_list_events` retrieves the specific real-world activity behind a demand signal, so an agent can explain or validate a decision. Use it with `beam.analysis_id`.
 * `saved_locations_api_list_saved_location_insight_events` surfaces the highest-impact upcoming drivers for a known location.
 * `saved_locations_api_get_saved_location` returns a location's summary insights, including Predicted Event Spend and Predicted Attendance for the next 90 days.

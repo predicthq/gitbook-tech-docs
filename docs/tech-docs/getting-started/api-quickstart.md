@@ -9,7 +9,7 @@ description: >-
 ## What you need
 
 1. A PredictHQ account - [log in](https://control.predicthq.com/) or [sign up for free](https://signup.predicthq.com/).
-2. An API Key - create one in the steps below.
+2. An API Key - create one in the next section.
 
 ## Create an API Key
 
@@ -63,7 +63,7 @@ A single API call is not a production integration. PredictHQ designed its APIs t
 
 The [Standard integration pattern](../integrations/integration-guides/standard-integration-pattern.md) shows the full recommended architecture, including refresh cadence and data storage patterns.
 
-## What to Do Next
+## What to do next
 
 **I want to build a demand forecasting model** → Start with [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview), then run [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview), then call the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) with your `analysis_id`
 

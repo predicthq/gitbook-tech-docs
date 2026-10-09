@@ -38,7 +38,7 @@ The **notebook panel** is where results appear as cards. Each card has three tab
 
 Bolt manages cards as the conversation evolves - it collapses cards that are no longer relevant, while cards you pin stay in view. The notebook is the persistent artefact; the chat is how you drive it.
 
-## PredictHQ Best Practices Built In
+## PredictHQ best practices built in
 
 PredictHQ configures Bolt with its integration best practices. It follows the recommended workflow automatically:
 

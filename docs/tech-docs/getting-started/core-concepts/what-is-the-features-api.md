@@ -45,7 +45,7 @@ For example, on a single future day in Sydney, a major sports game, a street fai
 
 It does not determine which features are relevant to your business. Beam handles relevance calibration. The Features API focuses on transforming scoped events into structured numerical signals.
 
-## How It Works With Beam
+## How it works with Beam
 
 Using a `beam.analysis_id` is the most reliable way to configure the Features API.
 

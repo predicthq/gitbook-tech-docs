@@ -14,7 +14,7 @@ This tutorial demonstrates how to use PredictHQ event data to build a heatmap ca
 
 Heatmap calendars display data density over time, making it easier to identify patterns and trends, such as busy days. This visual tool allows users to quickly view upcoming peak periods at a glance. For example, a hotel booking platform might use a heatmap calendar to visualize peak booking periods associated with local events, aiding in pricing strategy, inventory management, and customer satisfaction by preempting high-demand times.
 
-## Example Calendar
+## Example calendar
 
 This section goes through a simple example to demonstrate the basic functionality of a heatmap calendar and the integration of PredictHQ data. Explore the example through the following Observable notebook:
 
@@ -26,7 +26,7 @@ To experiment with this example, consider [forking the notebook](https://observa
 
 ### Getting Started
 
-An Access Token is required to access PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
+You need an Access Token to call PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
 
 ### Event Data
 
@@ -34,7 +34,7 @@ Powered by aggregated event data from the [Features API](https://www.predicthq.c
 
 To view the code used to call the Features API, Events API, and other functions (if not already pinned):
 
-* Click the left margin of the cells in the Observable notebook.
+* In the Observable notebook, click the left margin of the cells.
 * Alternatively, in the cell menu, click **Edit**.
 
 {% hint style="info" %}

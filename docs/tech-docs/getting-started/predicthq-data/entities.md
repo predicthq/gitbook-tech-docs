@@ -37,7 +37,7 @@ See [working with recurring events ](../guides/date-and-time-guides/working-with
 
 Residencies are a subset of event groups. Residencies describe a type of concert where an artist performs at the same venue for two or more shows. This means that residencies can last for several weeks or months, as long as each instance of a performance by the same artist is within one week (7 days) of one another.
 
-Residencies can be identified by the `residency` label attached to the event group.
+The `residency` label attached to the event group identifies residencies.
 
 ```json
         {
@@ -116,7 +116,7 @@ Accept: application/json
 Authorization: Bearer $API_TOKEN
 ```
 
-Similar to finding all events for an event-group entity for recurring events you need to first find the ID for the entity. So, for example, to do that for Dreamforce first, find a Dreamforce event, then look at the event-group entity ID on that event and use that entity ID to call the API.
+Similar to finding all events for an event-group entity for recurring events, first find the ID for the entity. So, for example, to do that for Dreamforce first, find a Dreamforce event, then look at the event-group entity ID on that event and use that entity ID to call the API.
 
 ## How can I use entities in Snowflake
 
@@ -124,4 +124,4 @@ Snowflake returns entity information in the ENTITIES column. That contains all t
 
 ## What is the difference between labels and entities?
 
-The difference between labels and entities is that labels describe the type of event whereas entities provide a 'link' from an event to a venue, performer, sports team, or other type of entity. Labels will tell you what type of sport an event is for (e.g. `nfl`) but they will not tell you what venue the event is held at or if the event is recurring. For concerts or festivals, labels will tell you whether the event is a rock music concert but not what band is playing. Entities provide information on the sports team for sports events, bands for music events, and so on.
+The difference between labels and entities is that labels describe the type of event whereas entities provide a 'link' from an event to a venue, performer, sports team, or other type of entity. Labels tell you what type of sport an event is for (e.g. `nfl`) but they don't tell you what venue the event is held at or if the event is recurring. For concerts or festivals, labels will tell you whether the event is a rock music concert but not what band is playing. Entities provide information on the sports team for sports events, bands for music events, and so on.

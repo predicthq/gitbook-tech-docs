@@ -116,7 +116,7 @@ VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'
 ```
 {% endcode %}
 
-By default, three months of historical data is returned. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
+By default, the query returns three months of historical data. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
 
 Once the input table is in the format of the above, the below code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
 
@@ -137,15 +137,15 @@ select
 ```
 {% endcode %}
 
-## Choose which Method to use
+## Choose which method to use
 
 ### 1. [Snowpark method guide](snowpark-method-guide.md)
 
-Call the Features API with Python and save the output ML Features into Snowflake.
+Call the Features API with Python. Then save the output ML features into Snowflake.
 
 ### 2. [SQL method guide](sql-method-guide.md)
 
-Use SQL in Snowflake to run over the events table and create the ML Features.
+In Snowflake, use SQL to run over the events table and create the ML Features.
 
 ## Integrating PredictHQ Features into your demand forecasting model
 

@@ -22,7 +22,7 @@ Start with [How to use PredictHQ](getting-started/how-to-use-predicthq.md) - the
 
 ## Example
 
-Use your Beam Analysis ID to pull model-ready ML features for any date range - location, filters, and feature selection are applied automatically.
+Use your Beam Analysis ID to pull model-ready ML features for any date range - the API applies location, filters, and feature selection automatically.
 
 ```python
 import requests

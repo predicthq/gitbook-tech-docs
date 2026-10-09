@@ -13,7 +13,7 @@ Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebA
 **Loop Links** provide a way for customers to integrate with Loop without their users needing a WebApp login, and enable the following:
 
 * You can integrate Loop into your products, such as a web app, mobile app, or other tool
-* Each customer can generate a unique URL to allow their users to submit event feedback and missing event information
+* You can generate a unique URL to allow your users to submit event feedback and missing event information
 * PredictHQ processes events in the normal way and adds valid events or feedback to its system
 * The Events API returns events that PredictHQ approves via Loop
 
@@ -34,7 +34,7 @@ You can link to the URL from within your application, and feedback goes straight
 
 The advantage is customers don’t need to build a UI. The UI is responsive and works on desktop, tablet, and mobile.
 
-## Loop Links Integration
+## Loop Links integration
 
 You integrate two functions in your application:
 
@@ -91,7 +91,7 @@ The Loop Links platform sends automated emails in the following cases:
 * When a submitted event is rejected
 * When there is a reply or comment on event feedback
 
-The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. It can be updated by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) for more information.
+The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. You can update it by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) for more information.
 
 **Note that users cannot reply to these emails. In order to reply to them you need to use the event feedback page for the event in question and send a response in the feedback.**
 
@@ -130,7 +130,7 @@ This is typically used by support teams if issues are raised about event feedbac
    1. Store links in your system, or
    2. Use the link immediately.
 2. If required update the **`org_name`** name field via the settings API to set the name displayed at the top of the Loop pages
-3. Implement the links in your application.
+3. In your application, implement the links.
 4. End-user clicks the link which opens the Public Loop UI in a browser.
    1. No login is needed.
    2. The end-user is presented with the form to submit an event (or feedback - depending on which type of link was clicked).
@@ -141,7 +141,7 @@ This is typically used by support teams if issues are raised about event feedbac
 
 #### Submit missing event
 
-To **submit a missing event** create a Loop Link and open the Loop Link from your application:
+To **submit a missing event**, open the Loop Link from your application:
 
 E.g., open the link with /event/ in the URL:
 

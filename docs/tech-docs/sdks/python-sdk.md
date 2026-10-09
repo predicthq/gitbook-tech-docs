@@ -41,6 +41,6 @@ By default, the event search returns only the first 10 results. If you want to p
 
 Browse our [use case examples](https://github.com/predicthq/sdk-py/tree/master/usecases) on our GitHub repository.
 
-## Found an Issue?
+## Found an issue?
 
 [Log an issue](https://github.com/predicthq/sdk-py/issues/new) on our GitHub repository.

@@ -23,11 +23,11 @@ For example an event for a conference that starts on 1 April 2026 may originally
 
 The best way to update your data store is to search for records that have changed since you last synced.
 
-1. Use the `updated.*` parameters to find records that have been updated since your last fetch.
+1. To find records that have been updated since your last fetch, use the `updated.*` parameters.
 2. Make sure you’re fetching both `active` and `deleted` events e.g. `state=active,deleted`
    1. For the Broadcasts API you would use `record_status=active,duplicate,deleted`
 3. Ensure you won’t miss changes if records are updated while you’re fetching with `sort=-updated`
-4. We recommend syncing every 24 hours or more frequently for unscheduled events if needed.
+4. Sync every 24 hours, or more frequently for unscheduled events if needed.
 
 An example request in Python is below:
 

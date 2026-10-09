@@ -51,7 +51,7 @@ Area events cover either a Geonames Place, for example [Thanksgiving Day](https:
 
 #### Location field (deprecated)
 
-The `location` field was previously used for latitude and longitude information. The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`. Note the `geo` field is preferred over the `location` field as the location field will be deprecated in future.
+The `location` field was previously used for latitude and longitude information. The `location` field's value contains coordinates in [GeoJSON](https://geojson.org/) order: `[longitude, latitude]`. Note the `geo` field is preferred over the `location` field because the `location` field is deprecated.
 
 ## Address data in the geo field
 
@@ -130,7 +130,7 @@ Below is an example of an [event with a MultiPolygon geometry](https://events.pr
 
 We provide examples and code snippets to plot polygons in a Jupyter notebook in our [Severe-Weather Events Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) notebook.
 
-### Simplified Polygons
+### Simplified polygons
 
 Our raw polygon sources can have extremely detailed geometries which result in large GeoJSON filesizes. Polygons of this nature aren't practical to use for individual events either in the PredictHQ API or a customer's data lake. The complexity of such polygons often result from capturing geographic features that aren't relevant for practical use cases in determining the impact of an event (for example small bodies of water, or small unpopulated islands off a coast).
 

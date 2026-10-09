@@ -69,7 +69,7 @@ Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
-   1. Put `Authorization` in the first field
+   1. In the first field, enter `Authorization`
    2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
       \
       ![](<../../.gitbook/assets/image (83).png>)\\
@@ -78,20 +78,20 @@ The filled-out information should look like this (except that api\_key should be
 
 <figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”, the Data Transformation page opens where data shaping options can be made before building the report.
+After clicking “OK”, the Data Transformation page opens where you can choose data shaping options before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. We recommend renaming it to “PredictHQ Connection”, but if you name it something else you will need to change the Power Query below too.
+Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. Rename it to “PredictHQ Connection”. If you use a different name, change the Power Query to match.
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
-In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
+To format and expand some columns, open Power Query. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
 Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.**
 
 {% hint style="info" %}
-This example will not work unless you replace the \[api\_token] with your token.\
+This example doesn't work unless you replace the \[api\_token] with your token.\
 Lines 2 and 11 refer to the Query name, if you've named it something other than "PredictHQ Connection" you will need to replace it here aswell.
 {% endhint %}
 
@@ -143,7 +143,7 @@ The code in the advanced editor should look like the screen shot below:
 
 <figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
 
-Click Close & Apply and wait for the data transformation to finish processing through multiple API pages.
+Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
 <figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 

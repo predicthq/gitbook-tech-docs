@@ -16,7 +16,7 @@ You must use any reasonable endeavors to prevent unauthorized access to, or use 
 
 Users must log in, or be approved before using the application. This may help detect legitimate users from automated scripts. It also allows more effective monitoring for (and the ability to take action against) any unwanted activity.
 
-### Application Design
+### Application design
 
 Effective application design can make it difficult to scrape information or easier to detect scraping. This includes techniques such as limiting the amount of data returned per search, restricting the area of the search, or requiring pagination of results.
 
@@ -26,7 +26,7 @@ Ability to monitor, alert and report on website activity by IP address allows fo
 
 ### Use of Commercial Software to Protect Public-Facing Content from Bots
 
-Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure, and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection and bot prevention.
+Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure, and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection, and bot prevention.
 
 ### Traffic Monitoring
 

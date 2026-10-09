@@ -40,7 +40,7 @@ The first result in the response (shown below) is the correct location we want:
 }
 ```
 
-Now we take the Place ID for Nottingham returned above and use it to search for Events happening in that location:
+To search for Events happening in that location, use the Nottingham Place ID from the earlier response:
 
 ```python
 import requests

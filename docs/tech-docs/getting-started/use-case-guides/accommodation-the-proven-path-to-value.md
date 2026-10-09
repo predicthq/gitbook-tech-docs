@@ -35,7 +35,7 @@ The challenge is: how do you know which events actually drive demand?
 
 Beam analyzes historical booking patterns to reveal which types of events consistently influence demand for each hotel or group of hotels. It gives you a data-backed filter that ensures each calendar surfaces the most relevant events - and hides the ones that don’t matter (via Beam’s Feature Importance).
 
-### Filter Event Data Accordingly
+### Filter event data accordingly
 
 Once you know the high-impact event types, filter the events for each hotel or group/cluster accordingly - including only those categories, within a relevant radius or polygon. This dramatically reduces volume and increases signal.
 

@@ -13,7 +13,7 @@ This tutorial requires access to both Tableau and PredictHQ.
 1. Tableau: The instructions provided are based on [Tableau Public](https://public.tableau.com/app/discover), but other Tableau products, such as Tableau Desktop, should operate similarly.
 2. PredictHQ: To download a static export of PredictHQ data, a [PredictHQ account](https://signup.predicthq.com/) is required.
 
-## Connection with JSON File
+## Connection with JSON file
 
 Tableau supports [various methods](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm) for connecting to data sources, including local files and data warehouses. This tutorial focuses on connecting to PredictHQ data via a [JSON file](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
 
@@ -44,14 +44,14 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
 
-4. Download Link: Once the export is ready, the dialog box updates with a download link. PredictHQ also sends the link by email.
+4. Download Link: When the export is ready, click the download link in the dialog box. PredictHQ also sends the link by email.
 5. Save Export: Download the file and save it to a directory for later use.
 
 ### Connect in Tableau
 
 **Connect to File**
 
-1. Start Tableau: Open Tableau and under 'Connect' select 'JSON file'.
+1. Start Tableau: Open Tableau and under **Connect** select **JSON file**.
 2. Locate File: Navigate to the directory where the export was previously saved. It may be necessary to change the file extension filter from 'JSON Files (\*.json)' to 'All Files (\*.\*)' in order to see and select the JSON lines file. Click 'Open' to load the file.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="" width="375"><figcaption><p>File extension options</p></figcaption></figure>
@@ -91,7 +91,7 @@ For more information on data types, see this [Tableau article](https://help.tabl
 
 ## Dashboard with event data
 
-This section guides you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. PredictHQ data is connected via a JSON file.
+This section guides you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. You connect PredictHQ data via a JSON file.
 
 ### Worksheets
 
@@ -135,7 +135,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories).
    1. Set the size of the dashboard to 'Automatic' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) to ensure the dashboard adjusts to fit the screen it's being viewed on.
-2. Add Worksheets: From the Sheets list, drag the Time Series sheet anywhere in the dashboard and then 'Event Info' to the right. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
+2. Add Worksheets: From the Sheets list, drag the 'Time Series' sheet and then the 'Event Info' sheet into the dashboard. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
@@ -199,7 +199,7 @@ This connection method involves accessing PredictHQ data through AWS Data Exchan
 1. Setup: Subscribe to PredictHQ data on AWS Data Exchange
 2. Amazon S3: Copy the data to your specified S3 bucket. Ensure that your AWS IAM user or role has read permissions for this bucket.
 
-For more information on receiving PredictHQ data via AWS Data Exchange, see this [guide](aws-data-exchange/).
+For more information on receiving PredictHQ data via AWS Data Exchange, see the [AWS Data Exchange guide](aws-data-exchange/).
 
 **Connect to Amazon S3 in Tableau**
 

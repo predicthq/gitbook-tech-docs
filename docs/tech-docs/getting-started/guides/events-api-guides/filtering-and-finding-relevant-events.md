@@ -34,7 +34,7 @@ Given the volume of events happening all the time, choosing the right query para
 
 Set the date range for the search with one of these parameters:
 
-* **Active**: Use the `active` parameter to include all events that are ongoing in the date range.
+* **Active**: To include all events that are ongoing in the date range, use the `active` parameter.
 * **Start**: To focus on the start dates of events, the date range should be set using the `start` parameter.
 
 **Settings for Tom’s Pizzeria**
@@ -399,7 +399,7 @@ Once the API call is made, the Events API returns a structured JSON response con
 
 </details>
 
-#### Key Response Fields
+#### Key response fields
 
 <details>
 
@@ -419,12 +419,12 @@ For more comprehensive guidelines on navigating paginated results, refer to [Pag
 
 <summary>Events</summary>
 
-Events are detailed in the results section of the response, each represented as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
+The response lists events in the results section, each as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
 
 **Dates**
 
 * `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
-* `start`, `end`, `predicted_end`: Indicates the start, end and predicted end dates in UTC.
+* `start`, `end`, `predicted_end`: Indicates the start, end, and predicted end dates in UTC.
 
 **Location**
 

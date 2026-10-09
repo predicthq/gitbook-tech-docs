@@ -28,7 +28,7 @@ Microsoft tools and resources:
 Xuxu Wang (CDO) demoing this approach with PowerBI
 {% endembed %}
 
-### Base Model in PowerBI
+### Base model in PowerBI
 
 The starting point is developing a base model in PowerBI (without PredictHQ data). Using a combination of historical data and time trend features, we developed a base model in PowerBI. This initial version yielded a performance of 48%, a good starting point for further enhancement.
 
@@ -36,7 +36,7 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 ### Improving Base Model Results with PredictHQ
 
-From here you should follow the [improving-demand-forecasting-models-with-event-features.md](improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). When we have the relevant PredictHQ features we can enhance the model's accuracy.
+From here, follow the [improving-demand-forecasting-models-with-event-features.md](improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 
 ### Predicted Impact Area
 

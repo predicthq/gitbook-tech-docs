@@ -36,7 +36,7 @@ Beam identifies which event signals correlate with demand variability - location
 
 High-level flow:
 
-1. You provide historical demand data (e.g. bookings, foot traffic, revenue) for one or more locations.
+1. Provide historical demand data (e.g. bookings, foot traffic, revenue) for one or more locations.
 2. Beam decomposes the time series to isolate residual variability beyond trend and seasonality.
 3. It evaluates the relationship between that variability and PredictHQ event features, grouped by attributes such as category (e.g. Concerts, Sports, Conferences).
 4. It outputs a ranked list of event feature groups that historically impacted demand.
@@ -67,7 +67,7 @@ Beam returns:
   * Ranked list of the most relevant features grouped into types (e.g. Concerts, Sports, Conferences).
   * Includes statistical significance metrics
 * Beam Analysis ID
-  * Can be supplied to the Features API or Events API
+  * You can supply it to the Features API or Events API
   * Applies demand-calibrated filtering automatically
 
 ## Best practices
@@ -82,13 +82,13 @@ When you use Beam, follow these practices:
 * **Use Beam Analysis IDs across APIs** - Apply the same calibration consistently when retrieving features or events.
 * **Re-run Beam regularly** - Event dynamics evolve. We recommend monthly recalibration for most use cases.
 
-## How Beam Integrates With Other APIs
+## How Beam integrates with other APIs
 
 Beam enhances other APIs by applying demand calibration to event selection.
 
 ### Features API
 
-Use the `beam.analysis_id` in your Features API request to:
+In your Features API request, use the `beam.analysis_id` to:
 
 * Automatically apply Feature Importance filtering
 * Filter down to the most relevant features (e.g. specific categories, rank thresholds, attendance ranges)

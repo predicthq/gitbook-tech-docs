@@ -68,13 +68,13 @@ A snippet of the results is shown below:
 }
 ```
 
-## Partial Match
+## Partial match
 
 Often, events nearby a location can have an impact on your demand. The distance from your location will depend on the type of business—for example, people may travel further to an event when staying in a hotel versus how far people may travel from an event to a restaurant—and the nature of the location also matters (e.g. urban or more rural). To find events nearby a location match on the `@Where` part of Placekey.
 
 To find events very close to a location, match the full nine characters of the `@Where` part of the Placekey, which finds events very close to that location. Matching on the full `@Where` part of Placekey is like finding events within a 63-meter radius. In fact, it’s a hexagon with an edge length of 66 meters on average but it’s similar to drawing a circle with a 63-meter radius.
 
-To find events that are further away match the first x characters of `@Where` from left to right. So, matching on the full 9 characters is similar to a 63-meter radius, matching on the first 8 characters of the `@Where` part gives a maximal distance of 443 meters, matching on the first 7 characters encompasses a larger distance, and so on.&#x20;
+To find events that are further away match the first x characters of `@Where` from left to right. So, matching on the full nine characters is similar to a 63-meter radius, matching on the first eight characters of the `@Where` part gives a maximal distance of 443 meters, matching on the first seven characters encompasses a larger distance, and so on.&#x20;
 
 See the [Placekey documentation ](https://docs.placekey.io/Placekey_Technical_White_Paper.pdf)on “The structure of a Placekey”. The table with the “Length of shared prefix” and the “Maximal distance (meters)” gives you the approximate size of the H3 hex you get when you match the first X characters of the `@Where` part of Placekey. The minimum number of characters you can use when matching on the `@Where` part is five. See also [Joining POI and non-POI datasets with Placekey](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey). See the image below where you can see smaller hexes encompassed in larger hexes.
 
@@ -145,7 +145,7 @@ A snippet of the results is shown below:
 
 One thing to be aware of is that nearby hexagons may have codes that are not very similar. This occurs when Placekey grid cells are near the edges of larger (i.e., lower resolution) hexagons in H3’s spatial hierarchy. This can mean that sometimes using the first x characters of a Placekey does not return all nearby events.
 
-To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](find-events-by-latitude-longitude-and-radius.md) on the Events API. Use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py) to convert a Placekey to latitude and longitude.
+To account for all events around a radius, see “All neighboring hexes'' in the [Joining POI ](https://www.placekey.io/tutorials/joining-poi-and-non-poi-datasets-with-placekey)tutorial. Or you could convert Placekeys to a latitude and longitude and use a radius query to find nearby events with the [within parameter](find-events-by-latitude-longitude-and-radius.md) on the Events API. To convert a Placekey to latitude and longitude, use `Placekey_to_geo` in the [Placekey Python library](https://github.com/Placekey/placekey-py).
 
 ## Find events near a location in Snowflake
 

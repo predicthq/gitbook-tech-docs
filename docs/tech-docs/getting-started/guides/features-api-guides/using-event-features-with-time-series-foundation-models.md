@@ -30,7 +30,7 @@ sequenceDiagram
 
 To prepare the covariates:
 
-1. Run [Beam](../../core-concepts/what-is-beam.md) for each location to get an `analysis_id`. Foundation model covariate mechanisms are lightweight, and published evaluations show accuracy degrading when they're fed noisy or irrelevant series - Beam limits the covariate set to the event signals that drive demand at that location.
+1. To get an `analysis_id`, run [Beam](../../core-concepts/what-is-beam.md) for each location. Foundation model covariate mechanisms are lightweight, and published evaluations show accuracy degrading when they're fed noisy or irrelevant series - Beam limits the covariate set to the event signals that drive demand at that location.
 2. Retrieve historical features covering the same period as the demand history you pass to the model:
 
 ```json

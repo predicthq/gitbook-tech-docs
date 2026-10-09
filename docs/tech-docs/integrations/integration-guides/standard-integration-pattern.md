@@ -9,7 +9,7 @@ A PredictHQ integration has four logical components on your side:
 1. **Location & Beam Management** creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
 2. **ML Features Management** - fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
 3. **Events Management** - fetches relevant events per location for explainability and operational context, refreshed daily or weekly
-4. **Forecasting & Decision System** — consumes features for model training and inference and surfaces events alongside results for explainability
+4. **Forecasting & Decision System**  - consumes  features for model training and inference and surfaces events alongside results for explainability
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
 

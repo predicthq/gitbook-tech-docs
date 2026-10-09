@@ -8,7 +8,7 @@ This API provides ready-to-use, event-optimized forecasts for your business, emb
 
 Why use it:
 
-* Event-aware by default: real-world events are built into every forecast
+* Event-aware by default: we build real-world events into every forecast
 * Industry-specific performance—designed for demand planners, revenue managers, and ops teams
 * Faster and more affordable than building your own system
 
@@ -25,7 +25,7 @@ Forecasts API Notebook Run-Through in AWS SageMaker
 ### Requirements
 
 1. Before you get started make sure you have an [API Token](../../api-quickstart.md#create-an-access-token).
-2. [Use our Notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb) to run an example yourself and adapt it to your needs.
+2. To run an example yourself and adapt it to your needs, [use our Notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/forecasts-api/demand_forecasting_with_phq_forecasts_api.ipynb).
 
 All code snippets in this guide assume the appropriate config has already been set:
 
@@ -143,7 +143,7 @@ print(f"Model ID: {model_id}")
 # Model ID: Oa1D2XvT-IXfFQ_osoTZjQ
 ```
 
-#### Upload Demand Data
+#### Upload demand data
 
 ```python
 # Upload demand

@@ -12,7 +12,7 @@ description: Create a new Saved Location to begin seeing insights.
 
 ### Create using point and radius
 
-Use this request to create a Saved Location from a point and radius:
+To create a Saved Location from a point and radius, use this request:
 
 {% tabs %}
 {% tab title="curl" %}

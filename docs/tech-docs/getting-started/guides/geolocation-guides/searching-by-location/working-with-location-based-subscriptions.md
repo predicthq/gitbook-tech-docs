@@ -44,7 +44,7 @@ See the [Saved Locations API documentation](https://app.gitbook.com/s/kEFs8urDbS
 
 This process only needs to be performed when you initially load in your locations or if locations change (such as a store closes or a new store opens).
 
-### Fetching Events for Your Locations
+### Fetching events for your locations
 
 Once you have uploaded your locations you will have a list of `location_id`'s for each location. To get the latest events for each location you can call the Events API with the `saved_location.location_id` filter to get back events for the location.
 

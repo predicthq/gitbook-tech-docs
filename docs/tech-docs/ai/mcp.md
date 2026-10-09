@@ -107,7 +107,7 @@ Enable **Developer Mode** under **Settings > Advanced Settings**, then add a con
 
 **Workspace-wide setup**
 
-If you're a workspace admin, enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**, then create and publish connectors for the whole organisation from **Workspace Settings > Connectors**. Once published, the connector is available to all users in the workspace without any individual setup.
+If you're a workspace admin, enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**. Then, in **Workspace Settings > Connectors**, create a connector. Publish the connector for the whole organization. Once published, the connector is available to all users in the workspace without any individual setup.
 
 **Adding the PredictHQ connector:**
 
@@ -120,7 +120,7 @@ If you're a workspace admin, enable Developer Mode via **Workspace Settings > Pe
 
 **To use it in a conversation:**
 
-Click `+` in the chat field, then **More**, and select **PredictHQ**.
+In the chat field, click **+**, then **More**, and select **PredictHQ**.
 
 **Note:** The exact steps may vary depending on your plan and workspace configuration. If the steps above don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
 
