@@ -49,7 +49,7 @@ select
 
 The code calculates each Feature set in blocks. See the column headers in each code block for which Features are available to generate.
 
-### PHQ Attendance Features
+### Predicted Attendance Features
 
 The code calculates each value as the sum of Predicted Attendance for the day at a given location within the defined radius:
 
