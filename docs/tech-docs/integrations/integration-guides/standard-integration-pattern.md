@@ -106,7 +106,10 @@ The `analysis_id` automatically applies the correct location boundary, event cat
 
 **Refresh: daily or weekly**
 
-Using the `analysis_id`, call the Events API to retrieve the specific events driving demand at each location. Store results locally.
+For each location:
+
+1. To retrieve the specific events driving demand, call the Events API with the `analysis_id`.
+2. In your local store, save the results.
 
 You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
 

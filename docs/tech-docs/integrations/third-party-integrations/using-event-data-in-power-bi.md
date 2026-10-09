@@ -193,7 +193,10 @@ This is what it should look like when filled in - with all square bracket placeh
 
 <figure><img src="../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
 
-Click "OK". On the next screen, click "Load Data".
+To finish the connection:
+
+1. Click **OK**.
+2. On the next screen, click **Load Data**.
 
 Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
 
@@ -331,8 +334,8 @@ In the example, those dates are anything on or after the 1st of January 2024 and
 <figure><img src="../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
 
 Now fill the chart axis.\
-The X-axis gets filled with the date\_local field\
-The Y-axis gets filled with the attendance\_per\_day field (this should default to a SUM which is correct)
+Fill the X-axis with the date\_local field\
+Fill the Y-axis with the attendance\_per\_day field (this should default to a SUM which is correct)
 
 For the table, drag these fields over and resize the columns as needed to fit everything:
 
