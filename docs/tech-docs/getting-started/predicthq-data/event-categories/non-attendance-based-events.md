@@ -95,7 +95,7 @@ Our school holidays data goes to a more granular detailed level for the United K
 Our school holidays granularity changed in September 2021 to move from the country level for England, Wales, Scotland, and Northern Ireland to the local council level.
 {% endhint %}
 
-For the granular school holiday data for the United Kingdom we have historic data from September 2017 to the present day. School holidays are updated every week.
+For the granular school holiday data for the United Kingdom we have historic data from September 2017 to the present day. We update school holidays every week.
 
 We have events for 212 school districts in the UK including 157 districts for England. For the UK per year we have the following number of events:
 
@@ -125,7 +125,7 @@ Our school holidays data goes to a more granular detailed level for the United S
 
 There are around 98,469 public schools in the US in around 13,000 school districts. We provide school holidays at a school district level for the US. We have approximately 55,000 - 58,000 school holiday events per year.
 
-For the district school holiday data for the US we have historic data from September 2018 to the present day. School holidays are updated every week. For school holidays before September 2018 they are shown at the state level.
+For the district school holiday data for the US we have historic data from September 2018 to the present day. We update school holidays every week. For school holidays before September 2018 they are shown at the state level.
 
 {% hint style="info" %}
 **Note**

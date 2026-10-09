@@ -24,7 +24,7 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 
 **LABELS**
 
-This category is classified into three buckets with the following labels used to identify the type of severe weather.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather.
 
 1.  **Storm**
 
@@ -80,7 +80,7 @@ These events tend to be high-impact disasters noticed at a regional or country l
 
 **Labels**
 
-This category is classified into three buckets with the following labels used to identify the type of disasters.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of disasters.
 
 1.  **Hydrological\_geophysical**
 
@@ -172,7 +172,7 @@ This category covers events related to infectious diseases. Some events will ref
 
 Labels
 
-This category is classified into three buckets with the following labels used to identify the type of health warnings.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of health warnings.
 
 1.  **Epidemic**
 

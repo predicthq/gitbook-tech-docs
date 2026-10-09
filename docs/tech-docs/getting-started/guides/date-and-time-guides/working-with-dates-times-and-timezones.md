@@ -50,7 +50,7 @@ event["end_tz_converted"] = convert_to_local(event["end"], event["timezone"])
 print(event)
 ```
 
-Dates are a little more complex and the rest of this guide will help you understand how dates are represented in our data.
+Dates are a little more complex and the rest of this guide helps you understand how we represent dates in our data.
 
 </details>
 
