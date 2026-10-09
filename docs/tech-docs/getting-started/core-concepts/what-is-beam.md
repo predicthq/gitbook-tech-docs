@@ -49,11 +49,11 @@ The result is a location-specific calibration of event impact.
 
 To run Beam, you’ll need:
 
-* Historical demand data
+* Historical demand data:
   * Aggregated daily or weekly values per location
   * Recommended: 6–12 months minimum
   * Required fields: date, demand
-* Saved Location
+* Saved Location:
   * Provides geographic context for event retrieval
   * When you create it from a lat/lon origin, Saved Locations calculates Predicted Impact Area automatically, and that area defines the geographic scope Beam uses
 
@@ -63,10 +63,10 @@ If historical demand data is unavailable, Beam can provide industry-based approx
 
 Beam returns:
 
-* Feature Importance rankings
+* Feature Importance rankings:
   * Ranked list of the most relevant features grouped into types (e.g. Concerts, Sports, Conferences).
   * Includes statistical significance metrics
-* Beam Analysis ID
+* Beam Analysis ID:
   * You can supply it to the Features API or Events API
   * Applies demand-calibrated filtering automatically
 

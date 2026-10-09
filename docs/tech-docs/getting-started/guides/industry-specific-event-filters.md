@@ -56,12 +56,12 @@ If demand data isn’t available, we’ve done research to provide industry-leve
 
 These are starting points only. Switch to Beam as soon as you can provide demand data.
 
-## Recommended Feature Groups / Categories
+## Recommended feature groups / categories
 
 <table><thead><tr><th width="236.2265625">Industry</th><th>Recommended Feature Groups / Categories</th></tr></thead><tbody><tr><td>Accommodation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Parking</td><td>concerts, expos, festivals, observances, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Restaurants</td><td>community, concerts, conferences, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Retail, CPG</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Transportation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Tourism, Marketing, and Others</td><td>concerts, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr></tbody></table>
 
 {% hint style="info" %}
-When requesting features from Features API with a Beam ID we automatically configure all the correct settings based on the Beam results. When not using Beam, we recommend using the `sum` stat for all relevant features (based on the industry to category mappings in the Recommended Feature Groups / Categories table) except for severe weather where we recommend using the `max` stat to avoid over representing the impact of severe weather events when multiple are overlapping.
+When requesting features from Features API with a Beam ID we automatically configure all the correct settings based on the Beam results. When not using Beam, we recommend using the `sum` stat for all relevant features (based on the industry to category mappings in the Recommended feature groups / categories table) except for severe weather where we recommend using the `max` stat to avoid over representing the impact of severe weather events when multiple are overlapping.
 {% endhint %}
 
 ## Minimum Local Rank thresholds

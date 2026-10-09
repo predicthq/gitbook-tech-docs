@@ -14,7 +14,7 @@ Why use it:
 
 PredictHQ’s Forecasts API is the only event-driven, fully automated forecasting solution available—built to get you to accurate forecasts without the complexity.
 
-### SageMaker Demo
+### SageMaker demo
 
 Forecasts API can be used anywhere you can run code (SageMaker, Snowflake, Databricks etc). The demo here is running in AWS SageMaker.
 
@@ -83,7 +83,7 @@ date,demand
 2023-02-10,16589
 ```
 
-### Create a Model
+### Create a model
 
 All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
 
@@ -119,7 +119,7 @@ print(f"Saved location ID: {location_id}")
 
 After creating the Saved Location, we can re-use it across as many forecast models as we need.
 
-#### Create a Model
+#### Create a model
 
 ```python
 # Define model
@@ -161,7 +161,7 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 # Demand upload: Successful
 ```
 
-#### Train the Model
+#### Train the model
 
 During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting. To train the model, run this code:
 
@@ -220,7 +220,7 @@ Evaluation metrics:
 
 Lower values indicate better accuracy. See the [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) guide for help interpreting MAPE, MAE, and RMSE.
 
-### Retrieve Forecast
+### Retrieve the forecast
 
 ```python
 # Get forecast
@@ -241,7 +241,7 @@ Visualize the actual demand we uploaded as well as the forecasted demand we just
 
 <figure><img src="../../../.gitbook/assets/forecasts-api-time-series-chart.png" alt="Time series chart of the uploaded actual demand and the forecasted demand over time"><figcaption><p>Time series chart showing the actual and forecasted demand</p></figcaption></figure>
 
-### Ongoing Forecasting
+### Ongoing forecasting
 
 After you have trained a model you can keep using that model in your ongoing workflow.
 
@@ -299,7 +299,7 @@ Here's an example truncated response for a single date showing `phq_explainabili
 }
 ```
 
-## Tips for Better Forecasts
+## Tips for better forecasts
 
 To get the most accurate results from the Forecasts API, your input data needs to reflect meaningful demand patterns over time. Here are key tips to improve forecast performance and reliability:
 
@@ -328,7 +328,7 @@ We also have a guide on [understanding forecast accuracy metrics](understanding-
 Before tweaking your inputs or retrying, we strongly recommend reviewing the troubleshooting guide—it can save a lot of time and guesswork.
 {% endhint %}
 
-## Next Steps
+## Next steps
 
 * [Forecasts API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Full schema, endpoints, and parameters
 * [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - Guide to interpreting MAPE, MAE, and RMSE

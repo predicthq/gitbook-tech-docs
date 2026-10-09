@@ -10,7 +10,7 @@ description: >-
 
 **Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. The API returns polygon information in the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
 
-### Public Holidays
+### Public holidays
 
 A holiday generally established and recognized by law when most businesses and schools are closed. E.g. most countries celebrate New Year’s Day on January 1st.
 
@@ -55,7 +55,7 @@ Public holidays events have Local Rank available.
 
 Public holidays have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
 
-### School Holidays
+### School holidays
 
 School holiday events represent the general date range in an area where the schools are closed for the term/semester break. E.g. [Easter School Holidays](https://events.predicthq.com/events/tbZtoYD9mnArGQs5RW) in Bavaria, Germany is from March 27th, 2021 to April 11th, 2021.
 
