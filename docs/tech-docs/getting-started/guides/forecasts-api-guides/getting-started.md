@@ -224,6 +224,8 @@ Lower values indicate better accuracy. See the [Understanding forecast accuracy 
 
 ### Retrieve the forecast
 
+To get the forecast, run this code:
+
 ```python
 # Get forecast
 response = requests.get(
