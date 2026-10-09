@@ -12,7 +12,7 @@ Change this table name in all later instances with the name of the events data t
 
 The rest of the guide also uses temporary tables but you can turn these tables into permanent tables as needed.
 
-Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide, the following steps are required and blocked out:
+Once you have created **SAVED\_LOCATIONS** as described on the parent page of this guide, complete the following steps:
 
 1. To use the input table with the code in this guide, modify its format
 2. Generate daily aggregated statistics for each location by…
@@ -405,7 +405,7 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 
 The following code pulls all the features generated earlier into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \
-Machine Learning models can use this output directly. If unsure what features to use, create a Beam Analysis for the locations. Then use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
+Machine Learning models can use this output directly. If unsure what features to use, create a Beam Analysis for the locations. To select features, use the Feature Importance results - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb). To view all features in one table, use the following code:
 
 {% code title="Combined Table" fullWidth="true" %}
 ```sql

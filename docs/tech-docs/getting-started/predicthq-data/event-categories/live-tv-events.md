@@ -5,7 +5,7 @@ description: >-
   United States.
 ---
 
-# Live TV events
+# Live TV Events
 
 For example, during the basketball game [Villanova Wildcats vs Baylor Bears](https://events.predicthq.com/events/3pgcB4kTQdLv6FAhCb) on March 27, 2021, there were over 150,000 people in Cook County, Illinois watching the live broadcast of the basketball game, as well as over 130,000 people were watching the game in Los Angeles County, California, etc.
 
@@ -27,7 +27,7 @@ We have two different types of broadcast information. Major sports league viewer
 
 **Seven major sports leagues**
 
-All televised sports games from the following seven sports leagues are covered in our Live TV Events, the broadcasts may have status of either `scheduled` or `cancelled`:
+Live TV Events covers all televised sports games from the following seven sports leagues. The broadcasts may have status of either `scheduled` or `cancelled`:
 
 `NFL`, `NBA`, `NHL`, `MLB`, `MLS`, `D1 NCAA Basketball`, `D1 NCAA Football`
 

@@ -64,9 +64,11 @@ To load the export file in Tableau:
 For more information on connecting a local JSON file to Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
 {% endhint %}
 
-**Flatten Nested JSON**
+**Flatten nested JSON**
 
-3.  Select Schema Levels: When the file is loaded, the 'Select Schema Levels' dialog box should automatically appear. The schema levels can also be modified by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels) to change the schema levels:
+To flatten the nested JSON:
+
+3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. The schema levels can also be modified by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels) to change the schema levels:
 
     1. Root Level: Typically named after the JSON file e.g. `Events-Export-…`
     2. Predicted Impact Patterns: Includes data related to Predicted Impact Patterns.
@@ -123,7 +125,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and call it 'Event Info'.
 2. Create Table:
-   1. Add all relevant fields to the Row shelf and ensure they are all formatted as **Discrete** to produce the correct table. This formatting change should turn all the pills blue. For this tutorial, the following fields are considered:
+   1. On the Row shelf, add all relevant fields as **Discrete** pills, which are blue. For this tutorial, the following fields are considered:
 
 <table data-full-width="false"><thead><tr><th width="177">Folder</th><th width="182">Field</th><th>Notes</th></tr></thead><tbody><tr><td>Impacts</td><td><code>Date Local</code></td><td><ul><li>Right-click the pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Id</code></td><td><ul><li>This is the ID of the event.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><ul><li>This is the <a href="../../predicthq-data/event-categories/">event category</a>.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Start Local</code></td><td><ul><li>This is the start date of the event in the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>End Local</code></td><td><ul><li>This is the end date of the event iin the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Timezone</code></td><td><ul><li>The local time zone.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Phq Attendance</code></td><td><ul><li>This is the <a href="../../predicthq-data/predicted-attendance.md">Predicted Attendance</a> for an event.</li><li>Right-click the pill and select the <strong>Discrete</strong> format.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Value</code></td><td><ul><li>This is the <a href="../../predicthq-data/impact-patterns.md">daily impact for an event</a>. For this tutorial, only impact on event days is considered.</li><li>Sort by descending `Value` by following these <a href="https://help.tableau.com/current/reader/desktop/en-us/reader_sort.htm">instructions</a>.</li></ul></td></tr></tbody></table>
 

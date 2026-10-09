@@ -7,7 +7,7 @@ description: >-
 
 # Industry recommendations
 
-PredictHQ applies to any business whose demand is shaped by the real world. For a set of named industries, we have gone further and optimized the product directly: industry-specific impact patterns, thresholds, and catchment radii, tuned to how events affect that sector. Specifying a named industry gives you those optimizations out of the box - and either way, Beam personalizes results using your own demand data, which is more specific than any industry preset.
+PredictHQ applies to any business whose demand is shaped by the real world. For a set of named industries, we have gone further and optimized the product directly: industry-specific Predicted Impact Patterns, thresholds, and catchment radii, tuned to how events affect that sector. Specifying a named industry gives you those optimizations out of the box - and either way, Beam personalizes results using your own demand data, which is more specific than any industry preset.
 
 ## Named industries
 
@@ -27,7 +27,7 @@ Use the Industry Value when specifying an industry in an API request. If your bu
 
 ## Where industry matters
 
-Our systems use industry to tune how they interpret and model events for your business. This includes areas like impact patterns, thresholds, and catchment radius recommendations:
+Our systems use industry to tune how they interpret and model events for your business. This includes areas like Predicted Impact Patterns, thresholds, and catchment radius recommendations:
 
 * **Predicted Impact Area API**\
   Area recommendations vary by industry, since the catchment area for demand differs across sectors.

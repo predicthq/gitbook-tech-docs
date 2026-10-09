@@ -77,7 +77,7 @@ Another approach to using calendars is to showcase the most impactful events, in
 For more information on using the Events API, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention").
 {% endhint %}
 
-## Customizing Event data
+## Customizing event data
 
 This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features):
 

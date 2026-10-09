@@ -61,7 +61,7 @@ flowchart TD
 
 These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam Analysis first, as described earlier.
 
-### Revenue Management
+### Revenue management
 
 A revenue management agent works across a portfolio of hotel properties. A property's forecast shows elevated demand next weekend. Rather than acting on the number alone, the agent pulls the real-world context behind it and finds a major conference and a high-attendance concert over the same dates. Because the drivers are large, scheduled, and high-confidence, it raises rate and records the reason. Where an elevated forecast has no clear real-world driver, it can treat the signal as less certain and hold.
 

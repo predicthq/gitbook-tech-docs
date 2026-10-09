@@ -1,6 +1,6 @@
 # Which API should I use?
 
-PredictHQ has four core APIs, plus an MCP server for AI assistants and agents. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
+PredictHQ has four core APIs, plus the PredictHQ MCP server for AI assistants and agents. Choosing the right one for each task is the most important decision in any integration - using the wrong API is the most common source of unnecessary complexity and poor results.
 
 ## The short answer
 

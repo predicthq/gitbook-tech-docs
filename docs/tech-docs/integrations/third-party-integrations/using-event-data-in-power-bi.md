@@ -14,7 +14,7 @@ This tutorial covers how to connect PredictHQ data to Power BI via two sources, 
 
 The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Change the location from San Francisco to the location you want to look at.
 
-Below are the main steps involved in this guide:
+The main steps involved in this guide are:
 
 1. Building report parameters around a location
    * Example parameters for this guide
@@ -43,7 +43,7 @@ You can modify all of our parameters based on your needs, see our [filtering gui
 
 ### Example parameters for this guide:
 
-1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
+1. **Date**: user-defined, this tutorial uses a three-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
 3. **Event State**: Active and Predicted
 4. **Predicted Attendance**: attended events only - filtered to events with an attendance of at least 1
@@ -92,7 +92,7 @@ To transform the CSV export:
 
 Under **Queries**, right-click the Query and select **Advanced Editor**. The Query is named the same as the uploaded CSV name.
 
-<figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt="The Power BI Queries pane with the context menu of the CSV query open and Advanced Editor highlighted"><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
 This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that transforms the columns automatically for use in the report.
 
@@ -159,10 +159,12 @@ It should look something like the following screenshot, replacing square bracket
 
 <figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
 
-Expand Advanced options and scroll down.
+To enter the query:
 
-Fill the Database where the PredictHQ Events table lies in your Snowflake structure (case sensitive).\
-Substitute your Schema and Table Name for the placeholders in the following SQL. Then, in the SQL box, paste the SQL. This code assumes no columns have been renamed:
+1. Expand **Advanced options** and scroll down.
+2. In **Database**, enter the database where the PredictHQ Events table lies in your Snowflake structure (case sensitive).
+3. In the following SQL, replace the Schema and Table Name placeholders with your own.
+4. In the **SQL** box, paste the SQL. This code assumes no columns have been renamed:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```sql
@@ -228,7 +230,7 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Power BI.
 
-First, start a new report. Then select Get Data -> Web
+First, start a new report. Then select **Get Data** -> **Web**
 
 <figure><img src="../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
@@ -239,7 +241,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
-   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PredictHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
+   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` is a placeholder for your PredictHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
 The filled-out information should look like this:
 
@@ -251,7 +253,7 @@ Rename the Query to something relevant, as it defaults to the connection URL str
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
-In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
+In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query. Under **Queries**, right-click the Query name and click **Advanced Editor**:
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 

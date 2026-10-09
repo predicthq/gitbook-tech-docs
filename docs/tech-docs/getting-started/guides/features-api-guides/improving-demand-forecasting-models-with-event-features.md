@@ -96,7 +96,7 @@ For practical implementation:
 * [ML features by group with Beam Analysis Groups](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb)
 {% endhint %}
 
-### Step 2. Get Features
+### Step 2. Get features
 
 The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) provides access to a library of prebuilt, forecast-ready features ready for direct integration into your machine-learning models. Specify the date range, location, and list of features, all of which can be sourced from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
 

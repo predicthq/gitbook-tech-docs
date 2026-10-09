@@ -116,7 +116,7 @@ Here are some examples of the school holidays for the United Kingdom:
 To find school holidays that impact your location you can use the standard features of our Events API - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. The location can be a store, hotel, or any other location with a lat/lon. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* To find events impacting a geographic location, use the places parameter in the Events API - for example all events impacting Bristol or all events impacting Kent.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
 See also the [FAQs for district-level school holidays](non-attendance-based-events.md#faqs-for-district-level-school-holidays)
@@ -151,7 +151,7 @@ Here are some examples of the school holidays for the United States:
 To find school holidays that impact your location you can use the standard features of our Events API and our WebApp to find events that impact your location - as follows:
 
 * You can perform a lat/lon and radius search using the within parameter on the API. The location can be a store, hotel, or any other location with a lat/lon. Search for events around that location - such as 5 kilometers around a location in Leeds.
-* You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
+* To find events impacting a geographic location, use the places parameter in the Events API - for example all events impacting Bristol or all events impacting Kent.
 * You can search in the WebApp for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
@@ -187,7 +187,7 @@ All school holidays for other countries and from the US and UK before the time p
 
 School holidays events have Local Rank available.
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, We calculate Local Rank by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, We calculate Local Rank by applying a linear transformation to the student percentage of the local authority. We calculate the student percentage by dividing the student numbers of a local authority by its total population.
 
 **Predicted Attendance**
 
@@ -203,7 +203,8 @@ An Observance is a day that people recognize nationally or internationally, and 
 
 Labels for an observance event provide more information about the event. The most common five labels are:
 
-1. `observance-season`
+1. `observance-season`:
+
    * When the observance marks the seasonal change: [June Solstice](https://events.predicthq.com/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://events.predicthq.com/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://events.predicthq.com/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://events.predicthq.com/events/5eVGwA82bfPEMdHXrM).
    * 227 countries observed these four types of events.
 2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://events.predicthq.com/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://events.predicthq.com/events/aY7JYozjyDx35umEwG) in other countries.

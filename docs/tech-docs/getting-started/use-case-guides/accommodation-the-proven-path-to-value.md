@@ -2,7 +2,7 @@
 
 Most hotels and platforms know that local events drive demand - but turning that knowledge into actionable insight at scale is hard.
 
-You may spend months trying to work out which event types actually impact demand, define the right radius for each hotel, and transform underlying events into data that can power forecasting and pricing models. These are hard, foundational problems - and they’ve already been solved.
+You may spend months trying to work out which event types actually impact demand, define the right radius for each hotel, and transform underlying events into data that can power forecasting and pricing models. These are hard, foundational problems - and PredictHQ has already solved them.
 
 This guide shows the proven, fastest path to value - based on what’s worked across thousands of hotels and the platforms that serve them.
 
@@ -55,7 +55,7 @@ By showing only the events that actually affect demand, you give hoteliers clear
 
 A well-filtered real-world context layer isn’t just raw events - it’s an explainability layer that builds trust, supports human decision-making, and drives faster value without needing complex modeling or deep data integration.
 
-### PredictHQ Tools for Calendar Display
+### PredictHQ tools for calendar display
 
 These tools support event calendar displays:
 
@@ -77,7 +77,7 @@ While rich and detailed, PredictHQ’s underlying event data isn’t structured 
 * Aggregating attendance for multi-day or overlapping events
 * Accounting for leading and lagging demand effects (e.g. shoulder nights around a concert)
 
-Even if you're an experienced data science team, you can spend weeks or months designing, testing, and iterating on how to best represent events in their forecasting pipelines.
+Even if you're an experienced data science team, you can spend weeks or months designing, testing, and iterating on how to best represent events in your forecasting pipelines.
 
 PredictHQ’s Features API generates demand-relevant, time-series signals at request time designed for forecasting - so your teams can skip the foundational complexity of event aggregation and focus on building reliable, explainable, high-performing models faster.
 

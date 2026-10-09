@@ -9,7 +9,7 @@ description: >-
 
 Provisioned grounding gives your LLMs and agents verified real-world context from a store inside your own environment - your access controls govern it, it resides in your infrastructure, and your models retrieve from it at the moment they answer. It is the grounding architecture for teams where data residency, governance, or retrieval scale rule out live external calls.
 
-This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [on-demand grounding via the MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md).
+This page is the reference architecture. If your agents can query externally and you want zero pipeline maintenance, use [on-demand grounding via the PredictHQ MCP server](../../ai/mcp.md) instead. For what grounding is and when to use it at all, see [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md).
 
 ## Architecture
 

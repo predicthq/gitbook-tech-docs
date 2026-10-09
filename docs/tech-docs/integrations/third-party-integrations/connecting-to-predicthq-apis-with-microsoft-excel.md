@@ -29,7 +29,7 @@ The main steps in this guide are:
 4. **Predicted Attendance** (`phq_attendance`): attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
 
-Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
+You can substitute a specific latitude and longitude for an individual store, or scope the location even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
 
 ### How to get events data via PredictHQ's API
 
@@ -70,7 +70,7 @@ Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ AP
 
 Add the HTTP request header with the following information:
 
-1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
+1. **URL parts**: our created Events API URL from earlier: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
    2. In the second field, enter `Bearer <api_token>`. where <`api_token>` stands for your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. The following screenshot shows the fields once you enter your API key.\
@@ -161,6 +161,6 @@ Click **Close & Apply** and wait for the data transformation to finish processin
 
 After this step the data is now ready to start building a report with, as Excel has successfully loaded and transformed it. You should see a Spreadsheet like the following screenshot:
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt="An Excel spreadsheet populated with PredictHQ event data after the query finishes loading"><figcaption></figcaption></figure>
 
 You now have a connection to the API that you can refresh to get updated data.

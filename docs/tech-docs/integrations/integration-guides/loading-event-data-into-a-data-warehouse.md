@@ -6,7 +6,7 @@ description: >-
 
 # Loading event data into a data warehouse
 
-This guide outlines the process for integrating PredictHQ's Events data into your data lake. It is common for customers to want to get data from our APIs and store it in their data lake. To support this, we have created this guide to help you with the integration process
+This guide outlines the process for integrating PredictHQ's Events data into your data lake. You may want to get data from our APIs and store it in your data lake. To support this, we have created this guide to help you with the integration process
 
 We use Google Cloud Platform (GCP) as our primary example, but the methods for structuring the data table and making PredictHQ Events API calls can be applied to various data management systems. This guide assumes you have a basic understanding of GCP or similar data warehousing solutions and the necessary permissions to use them.
 
@@ -33,7 +33,7 @@ Throughout this guide, we will use the fictional example from our [Filtering Gui
 
 In this guide, we'll explore a hypothetical use case for “Tom’s Pizzeria”, a chain of restaurants with locations throughout the US headquartered in Seattle, Washington. Tom is interested in understanding how local events might influence his business operations and customer flow. Tom’s inventory system, website, and tools run off GCP. Tom wants to use event data in his staffing and inventory management systems to help anticipate the demand caused by events. He wants to show upcoming events near stores to his staff. To do this he needs to download events into his data lake.
 
-For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the Loaded Data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
+For comprehensive details on selecting appropriate filters for this scenario, refer to our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md). This guide will help us understand which events could impact Tom's business and how to configure our data queries accordingly. For our load into GCP, we want to bring through a larger number of events and then filter down to a specific pizzeria location using BigQuery once loaded. See [Querying the loaded data](loading-event-data-into-a-data-warehouse.md#querying-the-loaded-data) section for more.
 
 Tom's Data Parameters:
 
@@ -230,7 +230,7 @@ Before initiating the script, ensure you have configured the following prerequis
 * **params**: Modify these parameters as needed to align with the data you intend to extract from PredictHQ.
 
 This Python script fetches the necessary data from the Events API. This method loops through the paginated response from the API and pulls all results and columns. The [next section](loading-event-data-into-a-data-warehouse.md#transform-api-responses) covers transforming this data before we push for upload.\
-For more details on any of the parameters we’ve used in the code below, see our [Events API](https://docs.predicthq.com/api/events/search-events) documentation, keeping in mind our [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) to pull attended results in Seattle for Tom.
+For more details on any of the parameters we’ve used in the code below, see our [Events API](https://docs.predicthq.com/api/events/search-events) documentation, keeping in mind our [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) to pull attended results in Seattle for Tom. Use the following script:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -342,7 +342,7 @@ transformed_events_data = prepare_data_for_bigquery(events_data)
 
 ### Load data into the table
 
-Once the data has been successfully extracted from the API and transformed to meet our [schema requirements](loading-event-data-into-a-data-warehouse.md#table-data-structure), the next step involves loading this data into the previously established BigQuery table. This process utilizes Python code integrated with the BigQuery API to load the data.
+Once your script has extracted the data from the API and transformed it to meet our [schema requirements](loading-event-data-into-a-data-warehouse.md#table-data-structure), the next step involves loading this data into the previously established BigQuery table. This process utilizes Python code integrated with the BigQuery API to load the data.
 
 Below is the code block that you need to append to the end of the extraction and transformation script. It includes a basic retry mechanism to handle occasional upload failures, which is common in network-related operations. However, depending on your requirements for reliability and data integrity, you might consider implementing a more advanced retry logic. Append the following code:
 
@@ -495,7 +495,7 @@ To keep your data updated see [Keep data updated via API](https://docs.predicthq
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 
-## Querying the Loaded Data
+## Querying the loaded data
 
 Once the data is successfully loaded into BigQuery, you can begin querying it to derive insights relevant to your use case. This section provides an example of a BigQuery SQL query tailored to Tom’s scenario as outlined earlier. While the initial data load might have utilized specific filters via the WebApp or API parameters, it's often useful to perform additional queries directly within BigQuery. This capability is particularly valuable if you have loaded a broader dataset and need to perform dynamic or complex filtering post-load.
 
@@ -541,7 +541,7 @@ A common example is customers often look at events occurring in the next one to 
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
-You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the example above. See our [Snowflake data science guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
+You can look up location details from this table (to find the lat/long for a store for example) and then use it to find events with SQL like that shown in the earlier example. See our [Snowflake data science guide](https://docs.predicthq.com/integrations/third-party-integrations/snowflake/snowflake-data-science-guide) for an example of doing this in Snowflake.
 
 Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\\
 
