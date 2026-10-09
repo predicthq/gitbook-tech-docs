@@ -10,10 +10,10 @@ This guide shows the proven, fastest path to value - based on what’s worked ac
 
 Two of the most effective ways accommodation businesses get value from PredictHQ are:
 
-* **Calendar Display**: Help hotel teams understand why demand is changing by showing the real-world events driving it. This brings explainability to pricing recommendations, booking patterns, and operational decisions - building trust and improving actionability.
-* **Forecasting Accuracy**: Strengthen your demand forecasts with high-quality, time-series features built from real-world event impact. Helps revenue and data teams get ahead of demand - not just react to it.
+* **Calendar display**: Help hotel teams understand why demand is changing by showing the real-world events driving it. This brings explainability to pricing recommendations, booking patterns, and operational decisions - building trust and improving actionability.
+* **Forecasting accuracy**: Strengthen your demand forecasts with high-quality, time-series features built from real-world event impact. Helps revenue and data teams get ahead of demand - not just react to it.
 
-## Calendar Display
+## Calendar display
 
 <figure><img src="../../.gitbook/assets/accommodation-calendar-mockup.png" alt="A hotel calendar showing local events on each day, with the highest Local Rank events listed first"><figcaption></figcaption></figure>
 
@@ -66,7 +66,7 @@ These tools support event calendar displays:
 * [Predicted Impact Patterns](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns): Identify leading and lagging demand days around events
 * [Entities](https://docs.predicthq.com/getting-started/predicthq-data/entities): Group related events (e.g. concert residencies)
 
-## Forecasting Accuracy
+## Forecasting accuracy
 
 <figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt="A demand forecast chart for a hotel with event-driven demand peaks marked on the timeline"><figcaption></figcaption></figure>
 

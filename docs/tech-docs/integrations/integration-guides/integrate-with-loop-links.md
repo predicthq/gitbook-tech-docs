@@ -8,7 +8,7 @@ description: >-
 
 [PredictHQ's Loop tool](https://www.predicthq.com/tools/loop) allows customers to submit feedback on existing events and to submit missing events. PredictHQ has global events data from hundreds of providers, but sometimes our data may not include events such as hyperlocal events. Loop allows customers to report events that appear to be missing. It also allows customers to provide feedback on events if they have updates to details like attendance, times, or location.
 
-Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebApp, however, some customers want their users to be able to submit event feedback without needing a PredictHQ login. If this applies to you, you can integrate the ability to report missing events or event feedback into your product.
+Using [Loop](https://loop.predicthq.com/) requires a PredictHQ login to the WebApp. If you want your users to report missing events or give event feedback without a PredictHQ login, you can integrate Loop Links into your product.
 
 **Loop Links** let you integrate with Loop without your users needing a WebApp login, and enable the following:
 

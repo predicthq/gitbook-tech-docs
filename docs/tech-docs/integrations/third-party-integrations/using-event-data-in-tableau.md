@@ -185,6 +185,8 @@ This connection method involves accessing PredictHQ data through Snowflake’s S
 
 **Snowflake Data Share**
 
+To connect through a Snowflake Data Share:
+
 1. Setup: Coordinate with your Snowflake administrator to set up a Data Share with PredictHQ.
 2. Database:
    1. Create a database from the Data Share.
@@ -201,7 +203,7 @@ For more information on receiving PredictHQ data via Snowflake, see the [Snowfla
 
 For more information on connecting to Snowflake in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
 
-**Filter for Relevant Events in Tableau**
+**Filter for relevant events in Tableau**
 
 5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
@@ -217,6 +219,8 @@ This connection method involves accessing PredictHQ data through AWS Data Exchan
 
 **AWS Data Exchange**
 
+To connect through AWS Data Exchange:
+
 1. Setup: Subscribe to PredictHQ data on AWS Data Exchange
 2. Amazon S3: To access the data from Tableau, copy the data to your specified S3 bucket. Ensure that your AWS IAM user or role has read permissions for this bucket.
 
@@ -231,7 +235,7 @@ For more information on receiving PredictHQ data via AWS Data Exchange, see the 
 
 For more information on connecting to Amazon S3 in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
 
-**Filter for Relevant Events in Tableau**
+**Filter for relevant events in Tableau**
 
 5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
