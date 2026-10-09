@@ -8,7 +8,7 @@ description: >-
 
 All our events occur within a category. We also have labels that indicate the classification within a category. You can think of it as sub-category level information. Sports is a category in our system but if you want to know what type of sport an event is for, labels indicate it (e.g. `nfl`, `mls`, `nhl`, `nba`, etc)&#x20;
 
-For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business.&#x20;
+For example, within the Conferences category, knowing the subject(s) covered within the conference (`science-and-technology`, `educational`, `automotive`, etc.) may help you narrow down on events that are relevant to your business. Keep these points in mind:
 
 * Each event record has two separate label fields (`phq_labels` and the legacy `labels` field).
 * All categories have `phq_labels`, which you should use by default.&#x20;
@@ -163,5 +163,7 @@ This field is named `labels`.&#x20;
 Legacy labels are available for all event categories but are only available to customers who already had access. Download the full list of legacy label values: [legacy-labels.csv](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/legacy-labels.csv).
 
 ### Usage
+
+Use labels in:
 
 * [Labels in the Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)

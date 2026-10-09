@@ -57,6 +57,8 @@ A well-filtered real-world context layer isn’t just raw events - it’s an exp
 
 ### PredictHQ Tools for Calendar Display
 
+These tools support event calendar displays:
+
 * [Events API](https://docs.predicthq.com/api/events/search-events): Core event data, filtered by category, location, date, and more
 * [Snowflake / AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations): Simplified alternative to Events API - access real-world context data directly in your cloud data environment
 * [Beam API](https://docs.predicthq.com/api/beam/overview): Identify which event types impact demand using Feature Importance
@@ -89,6 +91,8 @@ It’s also a low-risk way to prove the value of event-aware forecasting before 
 
 ### PredictHQ Tools for Forecasting
 
+These tools support event-aware forecasting:
+
 * [Features API](https://docs.predicthq.com/api/features/get-features): Model-ready, time-series event features for forecasting
 * [Forecasts API](https://docs.predicthq.com/api/forecasts/overview): Demand forecasts with event, seasonality, and local dynamics included
 * [Beam API](https://docs.predicthq.com/api/beam/overview): Use Feature Importance to select the most predictive event features
@@ -103,6 +107,8 @@ Once the fundamentals are in place, there are simple ways to drive even more val
 * Apply an “onion radius” approach to surface major events beyond the immediate area - e.g. include all relevant events within the Predicted Impact Area, then expand to 3× with a Local Rank ≥ 95, and optionally 5× with Local Rank = 100 to capture rare, high-impact events.
 
 ## Real Examples
+
+These customers have followed this path:
 
 * [Lighthouse](https://www.predicthq.com/customers/lighthouse): Replaced brittle manual event processes with trusted real-world context at scale, reducing support overhead.
 * [HQ revenue](https://www.predicthq.com/customers/hqrevenue): Automated demand monitoring and increased RevPAR by 10%.

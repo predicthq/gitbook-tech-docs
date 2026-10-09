@@ -67,6 +67,8 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 
 ### Submitting missing events
 
+When a user submits a missing event:
+
 * Users enter event details
 * PredictHQ teams review and approves or reject events
 * Approved events show as visible to the customer as active events
@@ -75,6 +77,8 @@ Integrate this link where you are displaying a PredictHQ event in your app. We r
 <figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt=""><figcaption></figcaption></figure>
 
 ### Providing Feedback on Events
+
+When a user gives feedback on an event:
 
 * User reviews the event details on the page and can provide feedback
 * This requires an event ID to be passed to the Loop Links' URL
@@ -158,6 +162,8 @@ The Loop forms require a user email address. You can pre-populate the email addr
 `https://loop.phq.link/event/kt9fJZXpWFGSA5ky1Cunb2?email=example@example.com` (note: this is not a valid link just an example)
 
 ### Loop Link expiration and reuse
+
+Loop Links work as follows:
 
 * Loop Links can be reused unless an expiry date time is set
 * If an expiry date time is set they can no longer be used after they expire

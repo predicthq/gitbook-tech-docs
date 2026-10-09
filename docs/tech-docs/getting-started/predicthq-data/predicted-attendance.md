@@ -32,7 +32,7 @@ The following sections give examples of ML models and the factors they use to pr
 
 #### Sports model - features used
 
-The ML features used by the sports model to predict how many people will attend a sporting event are listed below:
+The sports model uses these ML features to predict how many people will attend a sporting event:
 
 * Teams
 * Venue
@@ -47,7 +47,7 @@ The ML features used by the sports model to predict how many people will attend 
 
 #### Concerts model - features used
 
-The ML features used by the concerts model to predict how many people will attend a concert event are listed below:
+The concerts model uses these ML features to predict how many people will attend a concert event:
 
 * Music genre
 * Record label
@@ -59,7 +59,7 @@ The ML features used by the concerts model to predict how many people will atten
 
 #### Performing arts model - features used
 
-The ML features used by the performing arts model to predict how many people will attend a performing-arts event are listed below:
+The performing arts model uses these ML features to predict how many people will attend a performing-arts event:
 
 * Type of event
 * Venue capacity
@@ -72,7 +72,7 @@ The ML features used by the performing arts model to predict how many people wil
 
 **Conferences model - features used**&#x20;
 
-The ML features used by the conferences model to predict how many people will attend a conference event are listed below:
+The conferences model uses these ML features to predict how many people will attend a conference event:
 
 * Event density
 * Venue capacity

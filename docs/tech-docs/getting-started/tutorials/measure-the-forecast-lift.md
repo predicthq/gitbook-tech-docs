@@ -39,7 +39,7 @@ HEADERS = {"Authorization": f"Bearer {TOKEN}", "Accept": "application/json"}
 
 ## Step 1: Create a Saved Location
 
-The tutorial's fictional store is on Lower Broadway in Nashville - a district dense with concerts and live events, chosen so the event effect is easy to see. Create a Saved Location for it, supplying only the origin point and the industry - PredictHQ calculates a Predicted Impact Area automatically, the boundary where events actually affect a retail location there. Don't supply a radius: fixed circles include irrelevant events and miss relevant ones.
+The tutorial's fictional store is on Lower Broadway in Nashville - a district dense with concerts and live events, chosen so the event effect is easy to see. Create a Saved Location for it, supplying only the origin point and the industry - PredictHQ calculates a Predicted Impact Area automatically, the boundary where events actually affect a retail location there. Don't supply a radius: fixed circles include irrelevant events and miss relevant ones. Create the Saved Location:
 
 ```python
 response = requests.post(

@@ -17,7 +17,7 @@ The key principle across all of these: **store a local copy and query that, rath
 
 ## Architecture diagram
 
-The diagram below is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
+The following diagram is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
 
 Use this as the starting point when designing your integration - your Solutions Engineer can help tailor it to your specific locations, industry, and forecasting setup. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable in the following diagram:
 

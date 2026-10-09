@@ -108,7 +108,7 @@ In the context of our example [Scenario](loading-event-data-into-a-data-warehous
 
 To do that, we searched for Seattle in the WebApp for the relevant period, status, and attended categories.
 
-<figure><img src="../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CC Filters.png" alt="The WebApp Search page filtered to Seattle events, ready to export"><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
 After configuring your filters and executing the search, select **Export** and choose the JSONL file format. You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 

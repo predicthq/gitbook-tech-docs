@@ -13,7 +13,7 @@ This page is the reference architecture. If your agents can query externally and
 
 ## Architecture
 
-Provisioned grounding extends the [Standard integration pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, provisioned grounding adds a retrieval interface and a consumer - nothing else changes.
+Provisioned grounding extends the [Standard integration pattern](standard-integration-pattern.md): the local event store that pattern maintains for explainability is the grounding corpus. If you already run that architecture, provisioned grounding adds a retrieval interface and a consumer - nothing else changes, as the following diagram shows:
 
 ```mermaid
 flowchart TB
@@ -101,6 +101,8 @@ Real-world context changes daily: events are announced, revised, canceled, and p
 Some deployments run both: provisioned grounding for the high-volume serving path, MCP for ad-hoc agent and analyst queries.
 
 ## Next steps
+
+To continue:
 
 * [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md) - concepts and the two architectures
 * [Standard integration pattern](standard-integration-pattern.md) - the architecture this extends

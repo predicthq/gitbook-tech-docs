@@ -6,7 +6,7 @@ The following SQL examples are based on the Sample Data Shares we provide. Here 
 
 ### Filter on labels
 
-Filtering on the `ARRAY` column `labels`, to find events with a `construction` label, using [ARRAY\_CONTAINS](https://docs.snowflake.com/en/sql-reference/functions/array_contains.html#array-contains).
+To find events with a `construction` label, filter on the `ARRAY` column `labels` using [ARRAY\_CONTAINS](https://docs.snowflake.com/en/sql-reference/functions/array_contains.html#array-contains):
 
 ```sql
 SELECT event_id,
@@ -30,7 +30,7 @@ Example Results:
 
 ### Filter on latitude and longitude
 
-Filtering the `GEOGRAPHY` column geo to find events around a 500-meter radius of [47.623257, -122.336498](https://goo.gl/maps/wxnLAufEpESLCcDj9) using [ST\_DISTANCE](https://docs.snowflake.com/en/sql-reference/functions/st_distance.html#st-distance) and [ST\_MAKEPOINT](https://docs.snowflake.com/en/sql-reference/functions/st_makepoint.html#st-makepoint-st-point).
+Filtering the `GEOGRAPHY` column geo to find events around a 500-meter radius of [47.623257, -122.336498](https://goo.gl/maps/wxnLAufEpESLCcDj9) using [ST\_DISTANCE](https://docs.snowflake.com/en/sql-reference/functions/st_distance.html#st-distance) and [ST\_MAKEPOINT](https://docs.snowflake.com/en/sql-reference/functions/st_makepoint.html#st-makepoint-st-point):
 
 ```sql
 SELECT event_id,
@@ -61,6 +61,8 @@ Using the GEOGRAPHY column geo to find all events within a user defined area (eg
 First, we define the shape we are interested in restricting the search to, as shown in the Seattle polygon map.
 
 <figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt="Map of Seattle with a polygon drawn around the area used to restrict the event search"><figcaption></figcaption></figure>
+
+The following query finds events inside the polygon:
 
 ```sql
 SELECT seattle_events.event_id,
