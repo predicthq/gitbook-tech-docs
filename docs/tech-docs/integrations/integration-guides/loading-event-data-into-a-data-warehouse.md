@@ -213,7 +213,7 @@ This script sets up the initial table structure within BigQuery, providing a fou
 
 ### Extract from Events API
 
-This section outlines the process of querying the PredictHQ Events API using Python, using the example for Tom's Pizzeria. This approach is designed to ensure the data extracted is directly relevant to Tom’s operational needs. The methodology and rationale behind the data extraction parameters used below are explained in the [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) section of this guide.
+This section outlines the process of querying the PredictHQ Events API using Python, using the example for Tom's Pizzeria. This approach ensures the extracted data is directly relevant to Tom’s operational needs. The [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) section of this guide explains the methodology and rationale behind the data extraction parameters used below.
 
 Before initiating the script, ensure you have configured the following prerequisites:
 

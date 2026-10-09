@@ -122,7 +122,7 @@ School holidays for Denmark have been expanded from national-level to municipali
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
 ## Restaurant Predicted Impact Patterns - Holiday & Observance Improvements
 
-Predicted Impact Patterns for the Restaurant industry have been rebuilt for US public holidays, observances, and school holidays using data-driven analysis of real restaurant demand data. This improves forecast accuracy for customers in the restaurant and quick-service retail sectors, particularly around key holiday periods.
+We updated Predicted Impact Patterns for the Restaurant industry for US public holidays, observances, and school holidays, using data-driven analysis of real restaurant demand data. This improves forecast accuracy if you work in the restaurant and quick-service restaurant sectors, particularly around key holiday periods.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="enhancement,developer-tools" %}
