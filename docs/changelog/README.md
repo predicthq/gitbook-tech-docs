@@ -84,7 +84,7 @@ The PredictHQ MCP server now includes tools for searching and retrieving Predict
 {% endupdate %}
 
 {% update date="2026-06-04" tags="new-feature,developer-tools" %}
-## MCP Server - Full API Coverage
+## MCP Server - Full API coverage
 
 The PredictHQ MCP server now exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
 
@@ -94,7 +94,7 @@ Previously limited to event search, the MCP server now supports the complete Pre
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
 ## NHL Postseason Labeling
 
-NHL fixtures played in the postseason now carry the postseason label. If you filter or weight NHL games by season stage, you get an accurate stage label on these games.
+NHL fixtures played in the postseason carry the postseason label. If you filter or weight NHL games by season stage, you get an accurate stage label on these games.
 {% endupdate %}
 
 {% update date="2026-06-01" tags="new-feature,developer-tools,webapp" %}
@@ -150,7 +150,7 @@ Loop Links now accept feedback on predicted, cancelled, and postponed events, in
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
 ## Event Descriptions
 
-We added descriptions at scale to attended events that previously had none - approximately 79% of the catalogue. Higher-ranked events were prioritised. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
+We added descriptions at scale to attended events that previously had none - approximately 79% of the catalogue. Higher-ranked events were prioritized. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
 {% endupdate %}
 
 {% update date="2026-04-29" tags="enhancement,webapp" %}
@@ -202,7 +202,7 @@ The demand and Predicted Attendance axes on Beam Analysis charts now scale indep
 {% update date="2026-02-19" tags="data-quality,enhancement" %}
 ## Northern Ireland Half-Term Holidays - Full-Week Coverage
 
-Northern Ireland half-term school holidays are now published as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
+We publish Northern Ireland half-term school holidays as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
 {% endupdate %}
 
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}

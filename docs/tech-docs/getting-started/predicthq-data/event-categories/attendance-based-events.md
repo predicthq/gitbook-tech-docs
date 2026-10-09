@@ -243,7 +243,7 @@ The most common five types of performing-arts events are:
 3.  **Concert**
 
     Musical plays, for example, A [symphony](https://events.predicthq.com/events/MeswVtp3dMccSx5jEs), or an [opera](https://events.predicthq.com/events/ah6hg4UorgsaJ2PSFY), etc.
-4.  **Family Theatre**
+4.  **Family Theater**
 
     Shows or plays where the main audience are children, for example, [Magic On Ice](https://events.predicthq.com/events/8QJfuDQeqrKQftBnB3), a [dubbing show](https://events.predicthq.com/events/sjg2xuf27oeLQLrbpt), etc.
 5.  **Cultural Performances**
@@ -357,7 +357,7 @@ The Academic Events category has six main event types affecting students’ acti
    * Holiday events cover the Thanksgiving break because institutions may have a different schedule, e.g. nine days vs four days.
    * Holiday events start on the day after the instruction / exam finishes and ends before the following instruction starts.
    * Winter and summer breaks may overlap with intensive sessions as the break will affect the majority of students while the intensive session only affects a few.
-   * Holiday events are labeled with `academic` and`holiday`.
+   * PredictHQ labels holiday events with `academic` and `holiday`.
 4. **Graduation**:
    * Graduation (also called commencement) date for undergraduate students.
    * Graduation events may have a specific start time where applicable.

@@ -151,7 +151,7 @@ Airport delays have venue entities available.
 
 **PHQ Rank**
 
-Airport delays events have PHQ Rank available, indicating the severity of the delay that affects passengers’ travel plans.
+Airport delays events have PHQ Rank available, indicating the severity of the delay that affects passengers’ travel plans:
 
 * Minimal airport delays events have a PHQ Rank of 20.
 * Moderate airport delays events have a PHQ Rank of 40.
@@ -229,7 +229,7 @@ Health warnings events have no Predicted Attendance available as the rank/impact
 
 An act of terrorism committed using violence against civilians, with the intention/effect of causing mass / widespread fear and intimidation, in order to attain political, religious or ideological goals.
 
-**Note** attempted (but failed) terror attacks are also included. This category focuses more in areas outside of designated warzones, as war zones are in a constant state of conflict.
+**Note** PredictHQ also includes attempted (but failed) terror attacks. This category focuses more in areas outside of designated warzones, as war zones are in a constant state of conflict.
 
 **Labels**
 

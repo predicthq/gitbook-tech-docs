@@ -91,8 +91,8 @@ When a user gives feedback on an event:
 
 The Loop Links platform sends automated emails in the following cases:
 
-* When a submitted event is approved
-* When a submitted event is rejected
+* When PredictHQ approves a submitted event
+* When PredictHQ rejects a submitted event
 * When there is a reply or comment on event feedback
 
 The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. You can update it by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) for more information.
@@ -105,11 +105,11 @@ The following tabs show some example emails:
 {% tab title="Approved Submission Email" %}
 The following image is an example of the email template for approved events:
 
-<figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt="Example Loop Links email telling a user that the event they submitted was approved"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Reply to Submission/Feedback Email" %}
-See an example below of the email template for rejected events and replies to event feedback:
+See an example of the email template for rejected events and replies to event feedback:
 
 <figure><img src="../../.gitbook/assets/reply-event-loop-links-email.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
@@ -143,7 +143,7 @@ When an end-user clicks a link, the Public Loop UI opens in their browser. No lo
 
 #### Submit missing event
 
-To **submit a missing event**, open the Loop Link from your application:
+To **submit a missing event**, from your application, open the Loop Link:
 
 E.g., open the link with /event/ in the URL:
 

@@ -187,7 +187,7 @@ All school holidays for other countries and from the US and UK before the time p
 
 School holidays events have Local Rank available.
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, We calculate Local Rank by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, We calculate Local Rank by applying a linear transformation to the student percentage of the local authority. We calculate the student percentage by dividing the student numbers of a local authority by its total population.
 
 **Predicted Attendance**
 
@@ -203,7 +203,8 @@ An Observance is a day that people recognize nationally or internationally, and 
 
 Labels for an observance event provide more information about the event. The most common five labels are:
 
-1. `observance-season`
+1. `observance-season`:
+
    * When the observance marks the seasonal change: [June Solstice](https://events.predicthq.com/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://events.predicthq.com/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://events.predicthq.com/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://events.predicthq.com/events/5eVGwA82bfPEMdHXrM).
    * 227 countries observed these four types of events.
 2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://events.predicthq.com/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://events.predicthq.com/events/aY7JYozjyDx35umEwG) in other countries.

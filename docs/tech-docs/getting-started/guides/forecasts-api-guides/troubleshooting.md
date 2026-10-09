@@ -56,9 +56,9 @@ What to try:
 
 * Provide multiple full seasonal cycles (e.g. two Christmas periods, two summer holidays).
 * Avoid including only recent post-launch data unless the product is truly new.
-* Use longer history to help the model identify what demand shifts are predictable vs. one-offs.
+* To help the model identify which demand shifts are predictable vs. one-offs, use longer history.
 
-### Shifting Business Patterns
+### Shifting business patterns
 
 If your business has changed significantly—new pricing models, operational changes, store closures—the model may underperform if older demand no longer reflects current behavior.
 

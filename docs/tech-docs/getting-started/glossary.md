@@ -114,7 +114,7 @@ PHQ Labels are AI-generated sub-category classification tags applied to events, 
 
 Where legacy labels are manually assigned and inconsistent in coverage, machine learning models trained across the full event catalog generate PHQ Labels, which cover all event categories. They enable more precise filtering - for example, distinguishing a charity run from a marathon within the broader sports category, or a product launch from an industry summit within conferences.
 
-PHQ Labels are available via the `phq_labels` field in the Events API response. They are particularly useful for customers who need fine-grained event segmentation in demand models or operational dashboards.
+PHQ Labels are available via the `phq_labels` field in the Events API response. They are particularly useful if you need fine-grained event segmentation in demand models or operational dashboards.
 
 Related resources:
 
@@ -160,7 +160,7 @@ Related resources:
 
 ## Predicted Events
 
-Predicted Events are machine-generated event records that have not yet been scheduled or publicly announced, but are predicted to occur based on historical event patterns, demand signals, and venue activity over multiple years. These events are assigned a probability-driven occurrence window (time and location) and are surfaced to support long-range planning and forecasting.
+Predicted Events are machine-generated event records that have not yet been scheduled or publicly announced, but are predicted to occur based on historical event patterns, demand signals, and venue activity over multiple years. PredictHQ assigns these events a probability-driven occurrence window (time and location) and surfaces them to support long-range planning and forecasting.
 
 Predicted Events have a distinct `state: predicted` and can be queried via the Events API or surfaced in the WebApp using state filters. If a real event is later scheduled that matches the prediction, its state is updated automatically (e.g., to `active`), and additional confirmed details - such as start time - are added. If the predicted event does not materialize, the status may transition to `canceled` or `postponed`.
 

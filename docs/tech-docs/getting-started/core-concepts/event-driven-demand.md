@@ -51,7 +51,7 @@ Relevance is not a one-time decision. Demand patterns evolve, event behavior cha
 * Beam isolates true event-driven variability and identifies which event types consistently explain it.
 * You can rerun calibration as demand evolves, which keeps relevance current.
 
-This reduces noise and ensures that models learn from materially impactful events rather than statistical artefacts.
+This reduces noise and ensures that models learn from materially impactful events rather than statistical artifacts.
 
 ## Usability
 

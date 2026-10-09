@@ -19,7 +19,7 @@ If those updates were bleeding *future* information into a *past* forecast point
 
 There's an important distinction between two kinds of change:
 
-* **Changes that happen before your forecast horizon starts.** If you're forecasting five weeks out, and PredictHQ refines an event's attendance estimate four months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage—it's just PredictHQ's data getting more accurate over time, the same way it would in production.
+* **Changes that happen before your forecast horizon starts.** If you're forecasting five weeks out, and PredictHQ refines an event's attendance estimate four months before the event, both your backtest and your production run would have seen a similarly mature version of that data at the point you actually generate the forecast. This isn't leakage—it's PredictHQ's data getting more accurate over time, the same way it would in production.
 * **Changes that would only be known *after* your forecast point.** This is the scenario that would matter: if a feature used to build a training example for a five-week-out forecast only became available two weeks before the event, that's information your production model would never have had at decision time.
 
 Because most events enter PredictHQ's system well ahead of when they happen—commonly three to six months out, and often longer—the updates that follow (postponements, cancellations, attendance refinements, venue changes) are, in practice, absorbed well before most customers' forecast horizons begin. The dynamic nature of real-world events is expected and continuous; the question that actually matters is whether that continuous refinement changes the forecast accuracy you experience, at the horizon you actually operate on.
@@ -64,7 +64,7 @@ How you apply these results depends on your forecast horizon:
 Yes, for forecast horizons up to around six weeks—which covers most demand forecasting use cases—our internal analysis found no measurable difference between backtested and production-time accuracy.
 
 **If PredictHQ updates event data after an event happens (e.g. actual attendance), doesn't that leak into my historical training data?**
-Post-event updates refine PredictHQ's records for future accuracy, but they don't change the features that were available at your forecast point for that event. The relevant question is whether a feature value changed *within* your forecast horizon, not whether PredictHQ later updated it after the event occurred — and our results show that within typical horizons, the two produce effectively the same forecast accuracy.
+Post-event updates refine PredictHQ's records for future accuracy, but they don't change the features that were available at your forecast point for that event. The relevant question is whether a feature value changed *within* your forecast horizon, not whether PredictHQ later updated it after the event occurred—and our results show that within typical horizons, the two produce effectively the same forecast accuracy.
 
 **Should I snapshot PredictHQ data myself to be safe?**
 It isn't necessary for the vast majority of use cases. If you have a use case with a long forecast horizon or unusually strict point-in-time requirements, reach out to your PredictHQ contact to discuss options.

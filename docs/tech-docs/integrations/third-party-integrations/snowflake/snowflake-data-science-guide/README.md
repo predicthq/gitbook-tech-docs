@@ -41,7 +41,7 @@ When querying events at the location level, a common way to retrieve those event
 
 The [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns a polygon that defines the optimal area around a location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
 
-As a first step, get the Predicted Impact Area for each location before moving forward with the guide. The example below uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
+As a first step, get the Predicted Impact Area for each location before moving forward with the guide. The following example uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
 
 {% hint style="info" %}
 In a separate environment outside of Snowflake, run this code:

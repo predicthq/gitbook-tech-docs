@@ -2,7 +2,7 @@
 
 Many events don’t have end times, which is critical information for our transport and on-demand customers. For example, for sports events, around 80% or more of source event data doesn’t have a known end time.
 
-This is usually because end times for a sports game or a concert are recorded after the event finishes. Yet many of our transport customers need a predicted end time for future scheduled events (which means providing the end time before the event finishes).
+This is usually because end times for a sports game or a concert are recorded after the event finishes. Yet many of our transport customers need a Predicted End Time for future scheduled events (which means providing the end time before the event finishes).
 
 The end time and duration of an event is a key piece of information for event data. The goal of this feature is to increase our end-time coverage.
 

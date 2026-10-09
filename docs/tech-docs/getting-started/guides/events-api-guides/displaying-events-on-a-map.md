@@ -56,7 +56,7 @@ This example displays the most impactful sports event in San Francisco for the u
 
 The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means the Events API returns longitude first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 
-The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. The `geo` field also contains all the relevant geometry information you need to render these types of events on a map.
+The main focus of this example is on `point` type events, occurring at [basic location guidance in the geolocation overview](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. The `geo` field also contains all the relevant geometry information you need to render these types of events on a map.
 
 {% hint style="info" %}
 For more information on how PredictHQ events are geographically represented, see this [overview](../geolocation-guides/overview.md).
