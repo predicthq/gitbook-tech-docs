@@ -79,9 +79,11 @@ flowchart TB
 
 For each business location:
 
-1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope. Store the returned `location_id`.
-2. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
-3. **Monthly refresh:**
+1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope.
+2. Store the returned `location_id`.
+3. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location.
+4. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
+5. **Monthly refresh:**
    1. Append new demand data to the existing Beam Analysis - do not delete and recreate it.
    2. Update your stored Feature Importance results with the latest output.
 
@@ -125,7 +127,7 @@ This architecture also supports [grounding](../../getting-started/glossary.md#gr
 
 **Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, your own access controls govern it, and your refresh cadence sets its freshness. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
 
-**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
+**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point. For more detail, see:
 
 * [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
 * [PredictHQ MCP in agentic workflows](../../ai/predicthq-mcp-in-agentic-workflows.md)

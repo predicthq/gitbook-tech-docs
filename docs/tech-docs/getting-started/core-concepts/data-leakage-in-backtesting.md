@@ -34,9 +34,9 @@ The result: forecast accuracy is stable across horizons.
 
 | Horizon before event | Typical (median) accuracy shift | Tail (80th percentile) accuracy shift |
 | --- | --- | --- |
-| 6 weeks or less | 0 percentage points | 0 percentage points |
-| 7-8 weeks | 0 percentage points | ~0.1-0.3 percentage points |
-| 9-10 weeks | 0 percentage points | ~0.5-0.6 percentage points |
+| Six weeks or less | 0 percentage points | 0 percentage points |
+| Seven to eight weeks | 0 percentage points | ~0.1-0.3 percentage points |
+| Nine to 10 weeks | 0 percentage points | ~0.5-0.6 percentage points |
 
 In other words: at six weeks out or closer, the accuracy you'd measure in a backtest is effectively identical to what today's fully-refined data would show—for the majority of locations, there's no measurable difference at all. A small tail difference only starts to appear beyond seven weeks out, and even then it's modest.
 

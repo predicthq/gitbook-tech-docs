@@ -80,13 +80,15 @@ For more information, see [Claude's connector directory documentation](https://c
 
 Claude Code supports MCP via the CLI.
 
-To add the PredictHQ MCP server, run the following command:
+To connect Claude Code to the PredictHQ MCP server:
 
-```bash
-claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp
-```
+1. Run the following command:
 
-Then authenticate by running `/mcp` inside a Claude Code session and following the OAuth flow.
+   ```bash
+   claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp
+   ```
+
+2. Inside a Claude Code session, run `/mcp` and follow the OAuth flow.
 
 To use a Bearer token instead:
 

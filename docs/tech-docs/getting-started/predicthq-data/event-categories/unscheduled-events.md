@@ -22,14 +22,14 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 * PredictHQ updates severe weather data in near real time and refreshes event details every 15 minutes on average.
 * PredictHQ provides historical severe weather data that can be used for purposes like training a demand forecasting model.
 
-**LABELS**
+**Labels**
 
 PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather:
 
 1.  **Storm**
 
     `storm`, `tornado`, `blizzard`, `dust`, `hurricane`, `cyclone`, `rain`, `wind`, `typhoon`, `sand`
-2.  **Extreme Temperature**
+2.  **Extreme temperature**
 
     `cold-wave`, `heat-wave`, `air-quality`, `snow`
 3.  **Flood**

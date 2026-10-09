@@ -179,9 +179,9 @@ print(f"Model training: {'Successful' if response.status_code == 204 else 'Faile
 
 Training usually takes a few minutes.
 
-### Evaluate Forecast Model
+### Evaluate the forecast model
 
-Use evaluation metrics such as MAPE to compare the model performance to other models, benchmarks, etc. In this example, the benchmark model had a MAPE of 8.96%.
+To compare the model performance to other models, benchmarks, etc., use evaluation metrics such as MAPE. In this example, the benchmark model had a MAPE of 8.96%.
 
 ```python
 # Get evaluation results

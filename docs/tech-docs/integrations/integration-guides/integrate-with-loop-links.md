@@ -69,10 +69,10 @@ In your app, where you display a PredictHQ event, integrate this link. We recomm
 
 When a user submits a missing event:
 
-* Users enter event details
-* PredictHQ teams review and approves or reject events
-* Approved events show as visible to the customer as active events
-* Users receive an email when an event is approved or rejected
+1. Users enter event details
+2. PredictHQ teams review events and approve or reject them
+3. Approved events show as visible to the customer as active events
+4. Users receive an email when an event is approved or rejected
 
 <figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt=""><figcaption></figcaption></figure>
 
@@ -80,10 +80,10 @@ When a user submits a missing event:
 
 When a user gives feedback on an event:
 
-* User reviews the event details on the page and can provide feedback
-* This requires an event ID to be passed to the Loop Links' URL
-* PredictHQ approves or rejects the feedback
-* Users receive an email if there are any questions about their feedback
+1. User reviews the event details on the page and can provide feedback
+2. This requires an event ID to be passed to the Loop Links' URL
+3. PredictHQ approves or rejects the feedback
+4. Users receive an email if there are any questions about their feedback
 
 <figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
 
@@ -129,6 +129,8 @@ Support teams typically use this if issues are raised about event feedback and t
 ## Loop Links Technical Details
 
 ### Integration overview
+
+To integrate Loop Links with your application:
 
 1. Create Loop Links using the API:
    1. Store links in your system, or

@@ -43,7 +43,7 @@ If an event does not have a valid end time then the predicted\_end field is pres
 
 You can also use the `sort` parameter to sort by the end time and the predicted\_end where needed.
 
-Note
+Note:
 
 * A Predicted End Time is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
 * For events that don’t have an end time the Events API sets the end time to the start time in its response.
@@ -51,6 +51,8 @@ Note
 ## Examples
 
 ### Event with a Predicted End Time
+
+This event has a `predicted_end` field in its response:
 
 ```json
 {
@@ -69,6 +71,8 @@ Note
 ```
 
 ### Event with a scheduled end time
+
+This event has an actual end time and no `predicted_end` field:
 
 ```json
 {

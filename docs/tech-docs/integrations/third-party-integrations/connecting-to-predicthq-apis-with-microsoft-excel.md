@@ -83,7 +83,10 @@ The filled-out information should look like this (except that api\_key should be
 
 After clicking **OK**, the Data Transformation page opens where you can choose data shaping options before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. Rename it to “PredictHQ Connection”. If you use a different name, change the Power Query to match.
+The Query name defaults to the connection URL string parameters, which don't look neat. To rename the Query:
+
+1. Enter a relevant name. This guide uses “PredictHQ Connection”.
+2. If you use a different name, change the Power Query to match.
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 

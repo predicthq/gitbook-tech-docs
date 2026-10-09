@@ -93,7 +93,7 @@ The Live TV Events machine learning models predicted the viewership for sports g
 
 #### Physical event details
 
-The Broadcasts API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
+The Broadcasts API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information. The physical event details include:
 
 * **Event ID**: `event_id` of the physical event can be used to find all broadcasts nationwide for that specific sport game.
 * **Label**: `event.label` for the physical sports event provides more information about the sports type and league. It can be used to find broadcasts for the specific sports type.
@@ -101,6 +101,8 @@ The Broadcasts API also returns the physical event details accordingly with all 
 * **PHQ Rank**: The physical sports events have PHQ Rank available.
 * **Local Rank**: The physical sports events have Local Rank available.
 * **Predicted Attendance**: The physical sports events have Predicted Attendance available.
+
+The following example shows a broadcast response with these details:
 
 ```json
 {

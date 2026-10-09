@@ -110,7 +110,13 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../.gitbook/assets/CC Filters.png" alt="The WebApp Search page filtered to Seattle events, ready to export"><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, select **Export** and choose the JSONL file format. You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+To export the events:
+
+1. In the WebApp Search, set your filters and run the search.
+2. Click **Export**.
+3. Choose the JSONL file format.
+
+You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 

@@ -78,6 +78,8 @@ The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) returns 
 * `value` - the value of the `impact_type` for that given day. For example, if the `impact_type` was `phq_rank` the value would be the PHQ Rank value on the given day. In the case for `accommodation` or `hospitality` where the `impact_type` is `phq_attendance`, the API returns the `phq_attendance` value in this field.
 * `position` - is `leading`, `event_day`, or `lagging`. `leading` are the days before the event occurs, `event_day` are the days the event occurs, and `lagging` are the days after the event has occurred.
 
+For `accommodation` and `hospitality` events:
+
 ```json
 "impact_patterns": [
     {
