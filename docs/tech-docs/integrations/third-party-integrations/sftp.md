@@ -14,7 +14,7 @@ When integrating via SFTP, PredictHQ delivers data as full and incremental file 
 
 ## Processing order and change action
 
-To maintain a complete and accurate dataset, process deliveries in the order they are delivered (typically by the datetime folder, oldest to newest). Within a single delivery, you can process the individual files in any order or in parallel.
+To maintain a complete and accurate dataset, process deliveries in the order PredictHQ delivers them (typically by the datetime folder, oldest to newest). Within a single delivery, you can process the individual files in any order or in parallel.
 
 For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update`, or `delete`).
 

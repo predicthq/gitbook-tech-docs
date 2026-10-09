@@ -12,7 +12,7 @@ Beam is PredictHQ's relevancy engine: it identifies which types of real-world ev
 
 Event-driven demand is sparse and uneven. A small number of events create large spikes, while others generate moderate but consistent lift. Generic feature importance methods are not designed for this structure and can produce unstable or misleading results.
 
-Beam analyses your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
+Beam analyzes your historical demand time series to isolate event-driven variability and quantify which event types consistently explain it. The primary output is a set of Feature Importance results - expressed as an `analysis_id` - that automatically configures Features API and Events API calls to use only the event categories, rank thresholds, and location scope that are relevant for that location. Without Beam, feature selection is a manual guess.
 
 Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one analysis per location is required.
 
@@ -122,7 +122,7 @@ Related resources:
 
 ## PHQ Rank
 
-PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100 and is calculated using a blend of signals such as predicted attendance, event type, and contextual features that influence demand.
+PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100 and is calculated using a blend of signals such as Predicted Attendance, event type, and contextual features that influence demand.
 
 The score is presented on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
 
@@ -198,7 +198,7 @@ Related resources:
 
 ## Real-world context
 
-Real-world context refers to structured, verified representations of real-world activity that materially influence demand - events, venues, performers, and associated quantitative signals such as predicted attendance, spend, rankings, and temporal impact patterns.
+Real-world context refers to structured, verified representations of real-world activity that materially influence demand - events, venues, performers, and associated quantitative signals such as Predicted Attendance, spend, rankings, and temporal impact patterns.
 
 Within PredictHQ's platform, real-world context flows through a layered architecture:
 

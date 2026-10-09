@@ -97,7 +97,7 @@ These tools support event-aware forecasting:
 * [Forecasts API](https://docs.predicthq.com/api/forecasts/overview): Demand forecasts with event, seasonality, and local dynamics included
 * [Beam API](https://docs.predicthq.com/api/beam/overview): Use Feature Importance to select the most predictive event features
 
-## Iterate & Expand
+## Iterate and expand
 
 Once the fundamentals are in place, there are simple ways to drive even more value:
 

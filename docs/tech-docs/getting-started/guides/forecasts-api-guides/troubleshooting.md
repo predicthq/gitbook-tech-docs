@@ -74,7 +74,7 @@ Metrics like MAPE, MAE, and RMSE can tell different stories depending on your de
 
 What to try:
 
-* Use MAE for a straightforward measure of average error in units.
+* For a straightforward measure of average error in units, use MAE.
 * Use MAPE when your demand values aren’t near zero—it shows relative error in percentage terms.
 * Use RMSE if large deviations are especially costly in your business.
 * Compare forecasts visually as well—some patterns look worse in numbers than they are in practice.

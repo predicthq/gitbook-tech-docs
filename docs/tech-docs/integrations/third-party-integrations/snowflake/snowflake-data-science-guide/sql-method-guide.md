@@ -8,14 +8,14 @@ description: Transforming Event Data into ML-Ready Features using SQL
 
 This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
-Change this table name in all later instances with the name of the events data table that PredictHQ has provisioned as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
+In all later instances, replace this table name with the name of the events data table that PredictHQ has provisioned as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
 
 The rest of the guide also uses temporary tables but you can turn these tables into permanent tables as needed.
 
 Once you have created **SAVED\_LOCATIONS** as described on the parent page of this guide, complete the following steps:
 
 1. To use the input table with the code in this guide, modify its format
-2. Generate daily aggregated statistics for each location by…
+2. Generate daily aggregated statistics for each location by:
    * attendance based features
    * rank based features
    * impact based features
@@ -49,11 +49,11 @@ select
 
 The code calculates each Feature set in blocks. See the column headers in each code block for which Features are available to generate.
 
-### PHQ Attendance Features
+### Predicted Attendance features
 
 The code calculates each value as the sum of Predicted Attendance for the day at a given location within the defined radius:
 
-<pre class="language-sql" data-title="PHQ Attended Features" data-full-width="true"><code class="lang-sql"><strong>----PHQ Attendance Features
+<pre class="language-sql" data-title="Predicted Attendance features" data-full-width="true"><code class="lang-sql"><strong>----Predicted Attendance features
 </strong><strong>CREATE OR REPLACE TEMP TABLE phq_attendance_features AS
 </strong>WITH events_attended AS (           --Attendance Features for main 7 categories
   SELECT
@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the following code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
+If you want metrics other than SUM, use the following code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which Predicted Attendance feature you want to call. Refer to the column code in the earlier Predicted Attendance features code block for available Feature categories:
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -188,13 +188,13 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 ```
 {% endcode %}
 
-### PHQ Rank Features
+### PHQ Rank features
 
 The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. The following code returns each rank level as its own column:
 
-{% code title="PHQ Rank Features" fullWidth="true" %}
+{% code title="PHQ Rank features" fullWidth="true" %}
 ```sql
-----PHQ Rank Features
+----PHQ Rank features
 CREATE OR REPLACE TEMP TABLE phq_rank_features as
 WITH events_ranked AS (             --Pull ranked events within range
   SELECT
@@ -288,13 +288,13 @@ SELECT * FROM phq_rank_features order by location, date;
 ```
 {% endcode %}
 
-### PHQ Impact Features
+### Predicted Impact features
 
 The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day:
 
-{% code title="PHQ Impact Features" fullWidth="true" %}
+{% code title="Predicted Impact features" fullWidth="true" %}
 ```sql
-----PHQ Impact Features
+----Predicted Impact features
 CREATE OR REPLACE TEMP TABLE phq_impact_features as
 WITH events_impact AS (             --Pull impact events within range
   SELECT DISTINCT

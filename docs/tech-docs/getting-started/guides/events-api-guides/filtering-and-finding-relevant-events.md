@@ -32,7 +32,7 @@ Given the volume of events happening all the time, choosing the right query para
 
 <summary>Date range</summary>
 
-Set the date range for the search with one of these parameters:
+To set the date range for the search, use one of these parameters:
 
 * **Active**: To include all events that are ongoing in the date range, use the `active` parameter.
 * **Start**: To focus on the start dates of events, set the date range with the `start` parameter.
@@ -113,7 +113,7 @@ Define the event impact for the search:
 
 **Settings for Tom’s Pizzeria**
 
-To focus his resources efficiently and avoid spending time on smaller, less impactful events, Tom sets a minimum PHQ Rank threshold of 30, which is recommended for his industry.
+To focus his resources efficiently and avoid spending time on smaller, less impactful events, Tom sets a minimum PHQ Rank threshold of 30, which is recommended for his industry:
 
 ```python
 params={
@@ -147,7 +147,7 @@ params={
 
 <details>
 
-<summary>Query Modifiers</summary>
+<summary>Query modifiers</summary>
 
 Optimize search results with these parameters:
 

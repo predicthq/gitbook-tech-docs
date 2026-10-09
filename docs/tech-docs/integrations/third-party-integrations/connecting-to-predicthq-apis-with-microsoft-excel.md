@@ -72,8 +72,8 @@ Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from earlier: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
-   1. In the first field, enter `Authorization`
-   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` stands for your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. The following screenshot shows the fields once you enter your API key.\
+   1. For the header name, enter `Authorization`
+   2. For the header value, enter `Bearer <api_token>`. where `<api_token>` stands for your PredictHQ API Access Token. Replace `<api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. The following screenshot shows the fields once you enter your API key.\
       \
       ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (83).png>)\\
 
@@ -157,7 +157,7 @@ The code in the Advanced Editor should look like the following screenshot:
 
 Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt="The Advanced Editor in Excel with the Close &#x26; Apply button highlighted"><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
 After this step the data is now ready to start building a report with, as Excel has successfully loaded and transformed it. You should see a Spreadsheet like the following screenshot:
 

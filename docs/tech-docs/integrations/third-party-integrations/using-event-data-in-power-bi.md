@@ -35,7 +35,7 @@ The main steps involved in this guide are:
 
 ## Building report parameters around a location
 
-For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a three-month period.
+For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined in the next section, Example parameters for this guide, focusing on San Francisco city for attended events in a three-month period.
 
 {% hint style="info" %}
 You can modify all of our parameters based on your needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
@@ -129,7 +129,7 @@ in
 
 As you can see we start with a comma to add on to the existing line, its positioning can be changed to the end of the existing line if you prefer, but its function is the same. The final pasted code should look something like this:
 
-<figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt=""><figcaption><p>CSV Power Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt="The Power BI Advanced Editor with the transformation Power Query pasted after the existing lines of the CSV query"><figcaption><p>CSV Power Query</p></figcaption></figure>
 
 Click **Done**.\
 Click **Close & Apply** and wait for the data transformation to finish processing.
@@ -148,7 +148,7 @@ To connect using Snowflake, gather the following information about your organiza
 
 To start, navigate to the Snowflake data connection via:
 
-Get Data -> More -> Database -> Snowflake\\
+**Get Data** -> **More** -> **Database** -> **Snowflake**\\
 
 <figure><img src="../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
 
@@ -230,7 +230,10 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Power BI.
 
-First, start a new report. Then select **Get Data** -> **Web**
+To start the connection:
+
+1. Start a new report.
+2. Select **Get Data** -> **Web**.
 
 <figure><img src="../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
@@ -240,7 +243,7 @@ Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
-   1. Put `Authorization` in the first field
+   1. In the first field, enter `Authorization`
    2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` is a placeholder for your PredictHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
 The filled-out information should look like this:
@@ -257,7 +260,10 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below. Then change the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
+To update the code:
+
+1. Replace the entire existing Power Query code with the code that follows.
+2. In Lines 4 and 8, replace the text that refers to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 

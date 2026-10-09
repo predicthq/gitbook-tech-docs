@@ -184,7 +184,7 @@ PredictHQ classifies this category into three buckets with the following labels 
 
     There are seven government mandated events in the US on a state level. These events indicate if a government body has mandated that the activity stays open or closed during a specified period of time.
 
-    If no end time is specified on government mandated restriction events, the event has yet to end.
+    If no end time is specified on government mandated restriction events, the event has yet to end. The labels are:
 
     * `bars-open` / `bars-closed` : Bars and other drinking establishment that serves alcoholic beverages are open or closed.
     * `restaurant-open` / `restaurant-closed` : On-site dining facilities are open or closed.
