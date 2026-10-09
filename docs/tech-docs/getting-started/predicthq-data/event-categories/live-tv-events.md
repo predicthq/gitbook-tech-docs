@@ -9,10 +9,10 @@ description: >-
 
 For example, during the basketball game [Villanova Wildcats vs Baylor Bears](https://events.predicthq.com/events/3pgcB4kTQdLv6FAhCb) on March 27, 2021, there were over 150,000 people in Cook County, Illinois watching the live broadcast of the basketball game, as well as over 130,000 people were watching the game in Los Angeles County, California, etc.
 
-**Note**: Live TV Events covers live games. Replays of sporting events are not included.
+**Note**: Live TV Events covers live games. Live TV Events doesn't include replays of sporting events.
 
 {% hint style="info" %}
-Live TV Events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
+Live TV Events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV Events is not actually a category itself but consists of rich information on who is watching events in different locations.
 
 Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
@@ -25,7 +25,7 @@ Live TV Events include live streaming and broadcast TV games (such as MLS Soccer
 
 We have two different types of broadcast information. Major sports league viewership uses one model and top viewership sports uses a different approach. This affects how the viewership is calculated and which counties viewership is shown in. For the major sports leagues, viewership per county uses TV schedule information to predict where people will watch a game. Live TV Events shows viewership only for the counties where we predict people will watch a game. Top viewership sports, unlike the major sports leagues games, always show viewership in all counties in the US.
 
-**SEVEN MAJOR SPORTS LEAGUES**
+**Seven major sports leagues**
 
 All televised sports games from the following seven sports leagues are covered in our Live TV Events, the broadcasts may have status of either `scheduled` or `cancelled`:
 

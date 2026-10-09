@@ -64,7 +64,7 @@ For more information on how PredictHQ events are geographically represented, see
 
 ### Exporting code
 
-The notebook can also be[ compiled and downloaded](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) as a JavaScript module. To do this:
+You can also [compile and download](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) the notebook as a JavaScript module. To do this:
 
 1. Use the notebook menu to select **Export**.
 2. For a local copy, choose **Download code**.

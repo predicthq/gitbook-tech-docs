@@ -55,7 +55,7 @@ Individual event-level details are genuinely dynamic—that's what real-world co
 How you apply these results depends on your forecast horizon:
 
 * **For forecast horizons up to about six weeks** (the majority of demand forecasting use cases): treat backtesting results as a direct, reliable proxy for the accuracy you'll see in production. No special handling of point-in-time snapshots is required.
-* **For longer horizons (seven or more weeks out):** the effect is still small, but if you're building a model with a longer lead time and want to validate this for your specific use case, talk to your PredictHQ contact — we can help design a backtest that reflects your exact horizon.
+* **For longer horizons (seven or more weeks out):** the effect is still small, but if you're building a model with a longer lead time and want to validate this for your specific use case, talk to your PredictHQ contact—we can help design a backtest that reflects your exact horizon.
 * **You don't need to maintain your own historical snapshot of PredictHQ data** purely to guard against this concern. The dynamic updates you'd be trying to protect against are the same updates that make the data more accurate, and they happen well ahead of the point where they'd affect a typical forecast.
 
 ## Frequently asked questions

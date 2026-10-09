@@ -94,7 +94,7 @@ Set the date range as follows:
 
 <details>
 
-<summary>Location of Interest</summary>
+<summary>Location of interest</summary>
 
 Set the location as follows:
 
@@ -124,7 +124,7 @@ Choose the aggregation as follows:
 
 * Choose how to aggregate event data at the daily level.
 * Configuration: Use the `stat` field under `<feature_name>`.
-* Guidance: Set as `sum` for visualizing the total daily attendance, which offers insights into people movement. Set as `count` to monitor the daily count of events, though it should be noted that this does not reflect event attendance or size.
+* Guidance: To visualize the total daily attendance, set it to `sum`, which offers insights into people movement. To monitor the daily count of events, set it to `count`, though it should be noted that this does not reflect event attendance or size.
 
 </details>
 

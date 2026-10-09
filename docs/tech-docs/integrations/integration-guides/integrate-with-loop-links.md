@@ -85,7 +85,7 @@ When a user gives feedback on an event:
 3. PredictHQ approves or rejects the feedback
 4. Users receive an email if there are any questions about their feedback
 
-<figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt="The Loop Links page where users review an event's details and provide feedback on it"><figcaption></figcaption></figure>
 
 ## Loop Links automated emails
 
@@ -115,7 +115,7 @@ See an example below of the email template for rejected events and replies to ev
 {% endtab %}
 {% endtabs %}
 
-## Tracking Loop Feedback
+## Tracking Loop feedback
 
 If you have admin access, you can track Loop feedback at [loop.predicthq.com](https://loop.predicthq.com/) :
 
@@ -126,7 +126,7 @@ If you have admin access, you can track Loop feedback at [loop.predicthq.com](ht
 
 Support teams typically use this if issues are raised about event feedback and they want to review the feedback.
 
-## Loop Links Technical Details
+## Loop Links technical details
 
 ### Integration overview
 
@@ -135,7 +135,7 @@ To integrate Loop Links with your application:
 1. Using the API, create Loop Links:
    1. Store links in your system, or
    2. Use the link immediately.
-2. To set the name displayed at the top of the Loop pages, update the **`org_name`** field via the settings API if required
+2. To set the name displayed at the top of the Loop pages, in the settings API, update the **`org_name`** field if required
 3. In your application, implement the links.
 When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when the event they submitted is approved or rejected.
 
@@ -167,6 +167,6 @@ The Loop forms require a user email address. You can pre-populate the email addr
 
 Loop Links work as follows:
 
-* Loop Links can be reused unless an expiry date time is set
+* You can reuse Loop Links unless you set an expiry date time
 * If an expiry date time is set they can no longer be used after they expire
 * If no expiry date time is set they can be reused indefinitely

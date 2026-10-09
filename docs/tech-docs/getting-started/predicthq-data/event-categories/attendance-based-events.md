@@ -234,7 +234,7 @@ A show or an exhibition of creative activities for an audience, for example, [a 
 
 The most common five types of performing-arts events are:
 
-1.  **General Theatre**
+1.  **General Theater**
 
     Stage plays, for example, [The Nutcracker ballet show](https://events.predicthq.com/events/wunsQfMcMgbB2wXedq).
 2.  **Comedy club**
@@ -367,8 +367,7 @@ The Academic Events category has six main event types affecting students’ acti
 5. **Social**:
    * Social events cover homecoming where alumni come back to the campus to visit.
    * Homecoming events may last up to a week.
-   * Parent/family day/weekend may be included in the future.
-   * Social events is labeled with `academic` and `social`.
+   * PredictHQ labels social events with `academic` and `social`.
 
 #### Date & time
 

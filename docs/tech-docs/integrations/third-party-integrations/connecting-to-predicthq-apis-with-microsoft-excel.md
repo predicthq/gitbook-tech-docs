@@ -39,7 +39,7 @@ PredictHQ has a number of different APIs that can be used to build reports, in t
 
 Microsoft Excel connects using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
-Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation the result is a URL string like the one below:
+Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation the result is a URL string like the following:
 
 {% code overflow="wrap" fullWidth="true" %}
 ```url
@@ -107,7 +107,7 @@ This example doesn't work unless you replace the \[api\_token] with your token.\
 Lines 2 and 11 refer to the Query name. If you've named it something other than "PredictHQ Connection", replace it here as well.
 {% endhint %}
 
-This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. The final output of this multi-stage transformation is the following Power Query:
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure the query returns all results. The final output of this multi-stage transformation is the following Power Query:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -153,7 +153,7 @@ in
 
 The code in the Advanced Editor should look like the following screenshot:
 
-<figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt="The Advanced Editor in Excel showing the complete Power Query code"><figcaption></figcaption></figure>
 
 Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 

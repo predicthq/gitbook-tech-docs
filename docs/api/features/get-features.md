@@ -219,7 +219,7 @@ See the "Predicted Impact Patterns for holidays and observances" features in the
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
-**PHQ Rank Generic Features**
+**PHQ Rank generic features**
 
 These are generic features that do not include Predicted Impact Patterns and should be used if you are _not_ in one of the industries that we have impact patterns for.
 
@@ -446,4 +446,4 @@ The following guides are relevant to this API:
 
 * [What is the Features API?](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/core-concepts/what-is-the-features-api)
 * [Data science notebooks](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/data-science-notebooks)
-* [Aggregating live TV events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)
+* [Aggregating Live TV Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides/aggregating-live-tv-events)

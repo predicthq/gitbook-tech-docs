@@ -18,7 +18,7 @@ Recurring Events supports use cases such as:
 
 The API represents Recurring Events as an Entity of type `event-group` with recurring info in iCalendar recurring RRULE format.
 
-Below is an example event with a recurring `event-group` Entity:
+The following is an example event with a recurring `event-group` Entity:
 
 ```json
 {

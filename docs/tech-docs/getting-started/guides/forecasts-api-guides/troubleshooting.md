@@ -79,7 +79,7 @@ What to try:
 * Use RMSE if large deviations are especially costly in your business.
 * Compare forecasts visually as well—some patterns look worse in numbers than they are in practice.
 
-### Very Small but Non-Zero Demand Values
+### Very small but non-zero demand values
 
 MAPE is sensitive not just to zeros, but also to very small non-zero demand values. When actuals are consistently low (e.g. 0.1, 0.5), even minor absolute errors can result in disproportionately large percentage errors. This can make the forecast seem worse than it actually is.
 

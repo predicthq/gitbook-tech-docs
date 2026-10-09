@@ -186,7 +186,7 @@ Related resources:
 
 ## Predicted Impact Patterns
 
-Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. These patterns are derived from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and PredictHQ tailors them by event type and industry vertical.
+Predicted Impact Patterns (previously referred to as Demand Impact Patterns) are event-level time series that quantify the expected distribution of impact across days leading up to, during, and following an event. PredictHQ derives these patterns from machine learning models trained on historical demand data (e.g. accommodation bookings, transport usage) and tailors them by event type and industry vertical.
 
 Rather than assuming all impact occurs on the event date, these patterns reflect real-world lead and lag behavior. For example, accommodation demand for a concert may peak one to two days prior to the event and persist after, reflecting typical visitor behavior. Each pattern provides an array of weighted values across a window of time, allowing temporal alignment of event-driven demand signals.
 

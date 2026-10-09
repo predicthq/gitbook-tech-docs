@@ -363,7 +363,7 @@ SELECT * FROM phq_impact_features order by location, date;
 ```
 {% endcode %}
 
-If metrics other than MAX are desired, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the column code above for the available weather\_category features.
+If metrics other than MAX are desired, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the earlier column code for the available weather\_category features:
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -405,7 +405,7 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 
 The following code pulls all the features generated earlier into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \
-This output is intended to be used directly by Machine Learning models. If unsure what features to use, create a Beam Analysis for the locations and use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
+Machine Learning models can use this output directly. If unsure what features to use, create a Beam Analysis for the locations. Then use the Feature Importance results to select them - see [ML features by location notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb).
 
 {% code title="Combined Table" fullWidth="true" %}
 ```sql

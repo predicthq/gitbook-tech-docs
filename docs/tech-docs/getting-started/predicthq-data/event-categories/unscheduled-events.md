@@ -212,7 +212,7 @@ Health warnings events have no entities available.
 
 **PHQ Rank**
 
-Health warnings events have PHQ Rank available.
+Health warnings events have PHQ Rank available:
 
 * It considers the severity of the disease, for example, the number of infected, death, area range, etc.
 * All government mandated restrictions have a PHQ Rank of 90 as it affects all residents in the impacted area.

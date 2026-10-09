@@ -10,7 +10,7 @@ Events such as concerts, expos, and public holidays can shift consumer behavior 
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls, and interpret responses.
 
-Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Set up a location in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
+Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Set up a location in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. You can also do this securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
 ## Getting started
 
@@ -30,7 +30,7 @@ Given the volume of events happening all the time, choosing the right query para
 
 <details>
 
-<summary>Date Range</summary>
+<summary>Date range</summary>
 
 Set the date range for the search with one of these parameters:
 
@@ -149,7 +149,7 @@ params={
 
 <summary>Query Modifiers</summary>
 
-Optimize search results with useful parameters.
+Optimize search results with these parameters:
 
 * **Limit**: Specify the maximum number of events per page to return, managing the volume of results and focusing on the most relevant events. To navigate to additional results, use the `next` field in the API response (refer to [#handling-paginated-api-responses](filtering-and-finding-relevant-events.md#handling-paginated-api-responses "mention") for more details).
 * **Sort**: Order the search results according to specific attributes, most commonly event impact such as `rank` or `phq_attendance`, to prioritize high impact events.
@@ -423,7 +423,7 @@ The response lists events in the results section, each as a JSON block. The amou
 
 **Dates**
 
-* `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [predicted end date](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
+* `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [Predicted End Time](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
 * `start`, `end`, `predicted_end`: Indicates the start, end, and predicted end dates in UTC.
 
 **Location**

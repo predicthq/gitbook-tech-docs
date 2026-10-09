@@ -124,7 +124,7 @@ The example event snippet is a [flood warning in Missouri](https://events.predic
 
 <figure><img src="../../../.gitbook/assets/event-polygon-example.png" alt="Plot of the flood warning event's polygon geometry on a map"><figcaption></figcaption></figure>
 
-Below is an example of an [event with a MultiPolygon geometry](https://events.predicthq.com/events/8qbpLh7PDjK3Crpj6b); you can see it has two polygons for one event.
+The following image shows an example of an [event with a MultiPolygon geometry](https://events.predicthq.com/events/8qbpLh7PDjK3Crpj6b); you can see it has two polygons for one event.
 
 <figure><img src="../../../.gitbook/assets/event-multipolygon-example.png" alt="Map showing an event with a MultiPolygon geometry made up of two separate polygons"><figcaption></figcaption></figure>
 

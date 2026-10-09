@@ -67,7 +67,7 @@ There are several ways to connect PredictHQ data to Power BI or other reporting 
 
 [**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): This method connects data straight from the PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
-[**Snowflake Connection**](using-event-data-in-power-bi.md#snowflake-connection-method): Choosing Snowflake as the data source for Power BI is highly recommended due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
+[**Snowflake Connection**](using-event-data-in-power-bi.md#snowflake-connection-method): We highly recommend choosing Snowflake as the data source for Power BI due to its robust data warehousing capabilities and seamless integration. Snowflake provides dynamic scalability and real-time data access, enhancing the accuracy and efficiency of reports. Snowflake offers straightforward connectivity and powerful query performance.
 
 [**API Connection**](using-event-data-in-power-bi.md#api-connection-method): Another preferred method for connecting our dynamic events data to Business Intelligence software is to use our robust APIs. This way the report is connected to an ever-updating data source and is always up to date.
 
@@ -88,7 +88,7 @@ To transform the CSV export:
 1. Upload the CSV export.
 2. Click **Transform Data**.
 
-<figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt="The Power BI data preview window for the uploaded CSV with the Transform Data button highlighted"><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
 Under **Queries**, right-click the Query and select **Advanced Editor**. The Query is named the same as the uploaded CSV name.
 
@@ -98,7 +98,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-In the Advanced Editor, paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
+In the Advanced Editor, paste the following Power Query after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -140,7 +140,7 @@ After completing these steps, we have successfully loaded a CSV extract of Predi
 
 ### Snowflake connection method
 
-To connect using Snowflake you will need the following knowledge about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the variables below:
+To connect using Snowflake, gather the following information about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the variables below:
 
 1. Server Name: Usually in format <[account\_name](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name)>.snowflakecomputing.com
 2. Warehouse: A [warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview) is what you use to run queries. See which are available to you using the [SHOW WAREHOUSES](https://docs.snowflake.com/en/sql-reference/sql/show-warehouses) function.
@@ -239,7 +239,7 @@ Add the HTTP request header with the following information:
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. Put `Authorization` in the first field
-   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
+   2. Put `Bearer api_token` in the field on the right of the first field with `Authorization`. where `[api_token]` will be replaced with your PredictHQ API Access Token. Replace ‘`[api_token]`’ with your actual API Access Token. Leave the ‘Bearer ’ part in
 
 The filled-out information should look like this:
 
@@ -305,7 +305,7 @@ in
 ```
 {% endcode %}
 
-Click Close & Apply and wait for the data transformation to finish processing through multiple API pages.
+Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
 <figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
@@ -319,14 +319,18 @@ This guide creates a connected chart and table that covers the defined time peri
 
 To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
 
-Shift-click both boxes to select them. Then right-click one of them, and click the **Group** -> **Group** option.
+To group the chart and table:
+
+1. Shift-click both boxes to select them.
+2. Right-click one of them.
+3. Click **Group** -> **Group**.
 
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
 drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.
 
-Change the drop-down to Advanced filtering and add the following:
+Change the drop-down to **Advanced filtering**. Then, add the following:
 
 “_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click “apply filter” in the bottom right of the filter menu.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
@@ -349,7 +353,7 @@ For phq\_attendance in the table use the drop down to remove the summary, this s
 
 <figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
-Rename the chart title by clicking the chart and going to the Visualizations tab -> General -> Title. Rename it to “Event Attendance per day in San Francisco”.
+To rename the chart title, click the chart, and then go to the Visualizations tab -> **General** -> **Title**. Rename it to “Event Attendance per day in San Francisco”.
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 

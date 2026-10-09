@@ -43,7 +43,7 @@ Event-driven demand is sparse and heavy-tailed. A small number of events drive l
 
 Generic feature selection methods are not designed for this structure. Rare spikes can dominate statistical gain metrics. Overlapping signals can distort attribution. Moderate but real effects can be masked. Feature importance can shift depending on which major events fall inside a training window.
 
-Relevance is not a one-time decision. Demand patterns evolve, event behaviour changes, and calibration must be revisited regularly.
+Relevance is not a one-time decision. Demand patterns evolve, event behavior changes, and calibration must be revisited regularly.
 
 **How PredictHQ addresses relevance:**
 

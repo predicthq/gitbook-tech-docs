@@ -67,7 +67,7 @@ Predicted Impact Patterns features for this industry use the name `hospitality` 
 
 The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events) returns Predicted Impact Patterns in the `impact_patterns` field of its response. This shows the Predicted Impact Patterns for each event. The following are the details of the data structure of that field.
 
-`impact_patterns` is an array of impact pattern objects. The same event can have different impact patterns for different industry verticals. It contains the following fields:
+`impact_patterns` is an array of impact pattern objects. The same event can have different Predicted Impact Patterns for different industry verticals. It contains the following fields:
 
 * `vertical` - The industry vertical the impact pattern applies to.
 * `impact_type` - Indicates the type of impact shown in the impact pattern. This applies to either `phq_rank` or `phq_attendance`, depending on the vertical.

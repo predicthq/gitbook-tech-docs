@@ -40,7 +40,7 @@ An autonomous agent can own this end to end as part of its normal flow. Before q
 
 When calling the Features API, always pass `beam.analysis_id`. This applies the correct location boundary, event relevance, and rank thresholds automatically, and returns model-ready features. Do not specify individual feature names alongside it, and never use raw event counts as model inputs.
 
-## The Decision Loop
+## The decision loop
 
 The calibration check is ordinary conditional logic, not a separate setup step. Put together, an agent's use of PredictHQ within its flow looks like this:
 

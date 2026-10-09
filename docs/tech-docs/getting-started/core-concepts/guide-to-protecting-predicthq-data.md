@@ -28,7 +28,7 @@ Ability to monitor, alert, and report on website activity by IP address allows f
 
 Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure, and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection, and bot prevention.
 
-### Traffic Monitoring
+### Traffic monitoring
 
 Monitoring of website traffic through capture and analysis of access logs or similar allows for trend monitoring, the configuration of alerts, and early detection of suspicious activity such as increased traffic volumes.
 

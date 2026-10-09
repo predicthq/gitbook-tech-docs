@@ -34,7 +34,7 @@ See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for mor
 
 PredictHQ's MCP server has moved out of beta. MCP access is available as a trial period. Contact your account manager for details.
 
-It's also listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq), so connecting the PredictHQ MCP in Claude is now done straight through the connectors page, no custom connector setup required.
+It's also listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq), so connecting the PredictHQ MCP in Claude happens straight through the connectors page, no custom connector setup required.
 
 See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
 {% endupdate %}
@@ -56,7 +56,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 {% endupdate %}
 
 {% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
-## Bolt - Notebook Sharing and UI Enhancements
+## Bolt - Notebook sharing and UI enhancements
 
 Bolt notebooks can be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
@@ -92,7 +92,7 @@ Previously limited to event search, the MCP server now supports the complete Pre
 {% endupdate %}
 
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
-## NHL Postseason Labelling
+## NHL Postseason Labeling
 
 NHL fixtures played in the postseason now carry the postseason label. If you filter or weight NHL games by season stage, you get an accurate stage label on these games.
 {% endupdate %}
@@ -168,7 +168,7 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
 ## UK Local Authority Boundaries - Updated Polygons
 
-UK council polygons have been updated to reflect the Cumbria and Northamptonshire local government reorganisations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
+We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganisations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
 
 If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}
