@@ -55,7 +55,7 @@ params={
 
 <summary>Location type</summary>
 
-Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
+Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with:
 
 * **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When you create one from a lat/lon origin, PredictHQ automatically calculates the [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and stores it as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
 * **Center Point & Radius**: For a search without a Saved Location, use the `within` parameter with lat/lon and a radius. To get an appropriate radius for your location and industry rather than guessing, use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius`.
@@ -105,7 +105,7 @@ Next, Tom plans to use Beam in the [WebApp](https://control.predicthq.com/beam) 
 
 Define the event impact for the search:
 
-* **PHQ Rank**: To target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), use the `rank` parameter, with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
+* **PHQ Rank**: To target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), use the `rank` parameter, with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. To set the minimum rank threshold, set `rank.gte` based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
 * **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
@@ -428,7 +428,7 @@ The response lists events in the results section, each as a JSON block. The amou
 
 **Location**
 
-* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover [an area](../geolocation-guides/working-with-polygons.md) rather than a point, such as parades.
+* `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover an area rather than a point (see [working with polygons](../geolocation-guides/working-with-polygons.md)), such as parades.
 * `place_hierarchies`: Lists the [place IDs](../geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
 * `country`: Identifies the country where the event takes place.
 

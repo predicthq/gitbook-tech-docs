@@ -255,7 +255,7 @@ Politics events include the main dates of elections and referendums around the w
 
 **Labels**
 
-This category is classified into two buckets with the following labels used to identify the type of events:
+We classify this category into two buckets, using the following labels to identify the type of events:
 
 1. **Election**: The date when the `parliament` or `president` election occurs.
 2. **Referendum**: The `referendum` date in the country.

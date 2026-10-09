@@ -135,7 +135,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt="The BigQuery Create table form with the schema fields defined manually"><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
-5. **Advanced Options**: Expand the **Advanced Options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
+5. **Advanced options**: Expand the **Advanced options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: To finalize the creation, click **Create table**.
 
 <figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt="The BigQuery Advanced options section with the Unknown values checkbox ticked"><figcaption><p>tick <strong>Unknown values</strong> and you're ready to create</p></figcaption></figure>
@@ -230,7 +230,7 @@ Before initiating the script, ensure you have configured the following prerequis
 * **params**: Modify these parameters as needed to align with the data you intend to extract from PredictHQ.
 
 This Python script fetches the necessary data from the Events API. This method loops through the paginated response from the API and pulls all results and columns. The [next section](loading-event-data-into-a-data-warehouse.md#transform-api-responses) covers transforming this data before we push for upload.\
-For more details on any of the parameters we’ve used in the code below, see our [Events API](https://docs.predicthq.com/api/events/search-events) documentation, keeping in mind our [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) to pull attended results in Seattle for Tom. Use the following script:
+For more details on any of the parameters we’ve used in the script that follows, see our [Events API](https://docs.predicthq.com/api/events/search-events) documentation, keeping in mind our [Scenario](loading-event-data-into-a-data-warehouse.md#scenario-toms-pizzeria) to pull attended results in Seattle for Tom. Use the following script:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -537,7 +537,7 @@ Visually, this type of query allows you to pull all the events in a radius, as s
 
 <figure><img src="../../.gitbook/assets/Radius Map.png" alt="A map showing a circular radius around a business location with the surrounding events plotted inside it"><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 
-A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the impact area and then look up your store locations in the table. For example you may have a table of locations like the following:
+A common example is customers often look at events occurring in the next one to three months and may display this information in their application, in a BI tool, or in other types of products and tools. A common approach to doing this can be to have a table with a list of your business locations with latitude and longitude for each. For each, call the [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the Predicted Impact Area and then look up your store locations in the table. For example you may have a table of locations like the following:
 
 <table data-full-width="true"><thead><tr><th>location</th><th>lattitude</th><th>longitude</th><th>radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.8131</td><td>-87.6586</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-yor</td><td>40.73061</td><td>-73.93524</td><td>...</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
@@ -567,7 +567,7 @@ Use the data within BigQuery to create detailed reports and dashboards that moni
 
 See [Use Events Data in Power BI](../third-party-integrations/using-event-data-in-power-bi.md) for an example of building reports in Power BI. You can connect Power BI or other BI tools to your database to build dashboards and reports. See also [How to Connect PowerBI to Google BigQuery](https://learn.microsoft.com/en-us/power-query/connectors/google-bigquery).
 
-#### 4. Enhancing Customer Experience
+#### 4. Enhancing customer experience
 
 Inform your customers about local events that might impact their experience with your service or product. For example, a transportation company could provide passengers with real-time updates about events that might affect travel times or service availability.
 

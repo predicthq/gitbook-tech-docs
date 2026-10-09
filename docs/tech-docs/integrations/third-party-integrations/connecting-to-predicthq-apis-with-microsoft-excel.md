@@ -80,7 +80,7 @@ Add the HTTP request header with the following information:
       \
       ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (83).png>)\\
 
-The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
+The filled-out information should look like this (except that you replace api\_key with your actual api\_key)
 
 <figure><img src="../../.gitbook/assets/API Connection.png" alt="The Excel web connection dialog with the Events API URL and the Authorization header filled in"><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 

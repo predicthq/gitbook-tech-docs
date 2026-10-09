@@ -16,7 +16,7 @@ Beam analyzes your historical demand time series to isolate event-driven variabi
 
 Beam Analyses are location-specific and should never be shared across multiple locations. Event impact varies by geography and demand profile, so one Analysis per location is required.
 
-If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location Analyses are preferable in most cases.
+If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of Analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location Analyses are preferable in most cases.
 
 Refresh Beam monthly by appending new demand data to the existing Analysis. Do not delete and recreate Analyses - doing so loses accumulated correlation history.
 
@@ -122,7 +122,7 @@ Related resources:
 
 ## PHQ Rank
 
-PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100 and is calculated using a blend of signals such as Predicted Attendance, event type, and contextual features that influence demand.
+PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100. PredictHQ calculates it from a blend of signals such as Predicted Attendance, event type, and contextual features that influence demand.
 
 The score is presented on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
 
