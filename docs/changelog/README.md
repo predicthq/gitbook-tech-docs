@@ -20,7 +20,7 @@ Projects are available in Bolt. Open [Projects in Bolt](https://control.predicth
 {% update date="2026-10-06" tags="enhancement,developer-tools" %}
 ## MCP Server - Listed in ChatGPT's Plugin Directory
 
-The PredictHQ MCP server is now listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
+The PredictHQ MCP server is listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
 
 See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
 {% endupdate %}

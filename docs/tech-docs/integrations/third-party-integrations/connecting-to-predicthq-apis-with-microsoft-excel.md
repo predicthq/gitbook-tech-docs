@@ -33,7 +33,7 @@ Location could be substituted for a specific latitude and longitude relating to 
 
 ### How to get events data via PredictHQ's API
 
-This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. The examples have been provided for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
+This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. We provide examples for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. Start by creating a new empty Spreadsheet in Microsoft Excel.
 
 PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
