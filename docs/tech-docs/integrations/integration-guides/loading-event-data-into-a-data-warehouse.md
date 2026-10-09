@@ -129,7 +129,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 2. **Select the File Location**: Select the JSONL export that you have downloaded somewhere on your computer.
 3. **Name the Table**: Give the table about to be created a name that suits
 
-<figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/table upload details.png" alt="The BigQuery Create table form with the file source, destination dataset, and table name filled in"><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
 4. **Manually Define Schema**: Specify the schema details manually. Define each column accurately, and make sure the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 

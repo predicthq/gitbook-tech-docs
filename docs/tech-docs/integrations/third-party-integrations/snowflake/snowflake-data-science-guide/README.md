@@ -94,7 +94,7 @@ The **SAVED\_LOCATIONS** input table requires this format:
 * **radius\_unit**: coded for either “km” (kilometers) or “mi” (miles).
 * **date\_start**/**date\_end**: the date range for the data to be returned. Can be changed.
 
-Here is the input table used when running this code. Note the datatypes of each column for the inputs.
+Here is the input table used when running this code: Note the datatypes of each column for the inputs.
 
 {% code fullWidth="true" %}
 ```sql

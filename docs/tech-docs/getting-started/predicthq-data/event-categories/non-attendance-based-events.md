@@ -4,7 +4,7 @@ description: >-
   fluid and distributed in impact, such as observances or school holidays.
 ---
 
-# Non-Attendance-based events
+# Non-attendance-based events
 
 ## Categories
 
@@ -41,6 +41,8 @@ Public holidays have event group entities available.
 #### Ranking
 
 **PHQ Rank**
+
+Public holidays have one of two PHQ Rank values:
 
 * National holidays or common local holidays have a PHQ Rank of 90 to indicate the popularity/impact on the country
 * Local holidays have a PHQ Rank of 70 as there is less impact on the area compared to a national holiday.

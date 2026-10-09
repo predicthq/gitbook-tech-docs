@@ -9,7 +9,7 @@ description: >-
 
 In this tutorial you build the recommended PredictHQ integration end to end, on sample demand data, and finish with a measured accuracy improvement you produced yourself. Along the way you see each piece of the platform do its job: a Saved Location scopes the geography, Beam identifies which events drive the demand, the Features API returns the model-ready features your forecasting model would consume, and a baseline comparison measures what the event features are worth.
 
-It takes about 15 minutes, most of which is waiting for two short processing runs. We ran every step in this tutorial against the live API before publishing - the responses you see come from those runs.
+It takes about 15 minutes, most of which is waiting for two short processing runs. We ran every step in this tutorial against the live API before publishing - the responses you see come from those runs. The tutorial follows this flow:
 
 ```mermaid
 flowchart LR

@@ -331,7 +331,7 @@ Note:
 
 **Labels / event types**
 
-The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates.
+The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates. The event types are:
 
 1. **Academic-session**
    * The compulsory academic session for students to graduate upon completion.

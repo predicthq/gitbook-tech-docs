@@ -163,7 +163,7 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 
 #### Train the Model
 
-During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting.
+During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting. To train the model, run this code:
 
 ```python
 # Train model
