@@ -43,7 +43,7 @@ High-level flow:
 
 The result is a location-specific calibration of event impact.
 
-## Inputs and Outputs
+## Inputs and outputs
 
 ### Inputs
 

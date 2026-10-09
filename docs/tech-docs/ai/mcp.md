@@ -120,7 +120,7 @@ If you're a workspace admin:
 
 **Adding the PredictHQ connector:**
 
-1. Go to **Connectors > Create** (from Settings or Workspace Settings depending on your plan).
+1. In **Settings** or **Workspace Settings**, depending on your plan, go to **Connectors > Create**.
 2. Enter a name (e.g. `PredictHQ`) and optionally a description.
 3. Enter the **MCP Server URL**: `https://mcp.predicthq.com/v1/mcp`
 4. Select your authentication method:

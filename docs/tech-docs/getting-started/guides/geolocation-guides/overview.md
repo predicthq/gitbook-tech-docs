@@ -120,7 +120,7 @@ Where an area event has a Point-type geometry, it means the event applies to the
 // other fields omitted...
 ```
 
-The example event snippet is a [flood warning in Missouri](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). The GeoJSON data in the `geo.geometry` field can be plotted using tools that accept GeoJSON such as [geojson.io](https://geojson.io/). All our events with a Polygon or MultiPolygon display the geometry's shape when viewed in our [WebApp](https://control.predicthq.com/search/events/268aCtdaPgDJNurMeP) or our [Public Event page](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). A plot of the flood warning event's geometry is shown below.
+The example event snippet is a [flood warning in Missouri](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). The GeoJSON data in the `geo.geometry` field can be plotted using tools that accept GeoJSON such as [geojson.io](https://geojson.io/). All our events with a Polygon or MultiPolygon display the geometry's shape when viewed in our [WebApp](https://control.predicthq.com/search/events/268aCtdaPgDJNurMeP) or our [Public Event page](https://events.predicthq.com/events/268aCtdaPgDJNurMeP). The following image plots the flood warning event's geometry.
 
 <figure><img src="../../../.gitbook/assets/event-polygon-example.png" alt="Plot of the flood warning event's polygon geometry on a map"><figcaption></figcaption></figure>
 
@@ -138,6 +138,6 @@ For this reason, we may pre-process polygons to simplify them to reduce the numb
 
 In the example images, the first polygon is part of a raw polygon before simplification; the second is after simplification. The original GeoJSON data contained about 18000 coordinate points (the JSON data for this alone is around 700kb) to accurately outline individual offshore land masses.
 
-<figure><img src="../../../.gitbook/assets/maine-county-raw.png" alt=""><figcaption><p>Raw polygon before simplification</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/maine-county-raw.png" alt="Map of a Maine county showing the detailed raw polygon outline, including offshore land masses, before simplification"><figcaption><p>Raw polygon before simplification</p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/maine-county-simplified.png" alt=""><figcaption><p>Polygon after simplification</p></figcaption></figure>

@@ -56,7 +56,7 @@ This example displays the most impactful sports event in San Francisco for the u
 
 The Events API returns event coordinates in the `geo` field. It uses GeoJSON format, which means longitude is returned first, then latitude e.g. Downtown San Francisco is `[-122.39, 37.79]`, not `[37.79, -122.39]`.
 
-The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. All relevant geometry information needed for rendering these types of events on a map is also contained within the `geo` field.
+The main focus of this example is on `point` type events, occurring at [specific locations](https://docs.predicthq.com/getting-started/guides/geolocation-guides/overview#basic-location). The Events API classifies events covering larger areas, such as parades, as `polygon` or `multipolygon`. The `geo` field also contains all the relevant geometry information you need to render these types of events on a map.
 
 {% hint style="info" %}
 For more information on how PredictHQ events are geographically represented, see this [overview](../geolocation-guides/overview.md).
@@ -73,7 +73,7 @@ The notebook can also be[ compiled and downloaded](https://observablehq.com/docu
 
 For examples of maps created in Python, explore these [demo apps](../streamlit-demo-apps.md). The source code for rendering events in these apps is available on GitHub. Check out [utils/map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/utils/map.py) and [map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/map.py) for the parking demo which provides a practical example of visualizing events with Python and [Streamlit](https://streamlit.io/).&#x20;
 
-## Customizing Event Data
+## Customizing event data
 
 You can customize the event data the Events API returns by adjusting parameters such as date range, location, and categories, among others.&#x20;
 

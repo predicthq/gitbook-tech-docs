@@ -18,7 +18,7 @@ PredictHQ also [partners with SafeGraph](https://www.predicthq.com/partners/safe
 
 PredictHQ attaches Placekey to event records. The Events API returns it in its response. Other integrations like Snowflake and ADX also return Placekey.
 
-Below is an example of the response from the Public API showing the Placekey for an event happening in Las Vegas:
+The following is an example of the response from the Public API showing the Placekey for an event happening in Las Vegas:
 
 ```json
 {

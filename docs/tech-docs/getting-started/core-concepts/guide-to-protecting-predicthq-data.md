@@ -32,13 +32,13 @@ Many companies offer fully featured solutions to prevent scraping by bots or aut
 
 Monitoring of website traffic through capture and analysis of access logs or similar allows for trend monitoring, the configuration of alerts, and early detection of suspicious activity such as increased traffic volumes.
 
-### Use of Captcha Challenge-Response Tests, in Particular reCaptcha
+### Use of captcha challenge-response tests, in particular reCaptcha
 
 Captcha or reCaptcha solutions that attempt to identify legitimate human users can help prevent bot usage. Together with IP tracking, the use of a captcha can be triggered only after certain thresholds are met, or for repeated infringements.&#x20;
 
 ### Correct use of the Robots Exclusion Standards (robots.txt file)&#x20;
 
-Websites can declare if crawling is allowed or not in the robots.txt file and allow partial access, limit the crawl rate, specify the optimal time to crawl and more. This can be used to prevent web crawlers from scraping data
+Websites can declare if crawling is allowed or not in the robots.txt file and allow partial access, limit the crawl rate, specify the optimal time to crawl, and more. This can be used to prevent web crawlers from scraping data
 
 ### Protecting or Disabling any Publicly Available APIs
 

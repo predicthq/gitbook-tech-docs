@@ -79,7 +79,7 @@ flowchart TB
 
 For each business location:
 
-1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope.
+1. To create a Saved Location, call the Saved Locations API with `origin_geojson` (a lat/lon Point). This also automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope.
 2. Store the returned `location_id`.
 3. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location.
 4. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).

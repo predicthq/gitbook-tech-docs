@@ -36,7 +36,7 @@ The SFTP server retains files for a limited period and automatically deletes the
 
 Your ingestion process should fetch and persist data promptly. Do not rely on long-term availability of files on the SFTP server.
 
-## Access and Authentication
+## Access and authentication
 
 PredictHQ provides:
 

@@ -35,11 +35,11 @@ Given the volume of events happening all the time, choosing the right query para
 Set the date range for the search with one of these parameters:
 
 * **Active**: To include all events that are ongoing in the date range, use the `active` parameter.
-* **Start**: To focus on the start dates of events, the date range should be set using the `start` parameter.
+* **Start**: To focus on the start dates of events, set the date range with the `start` parameter.
 
 **Settings for Tom’s Pizzeria**
 
-Tom is interested in events taking place in the month of June 2024. He will configure the search to include active events from June 1st to June 30th, considering the local time zone.
+Tom is interested in events taking place in the month of June 2024. He will configure the search to include active events from June 1st to June 30th, considering the local time zone:
 
 ```python
 params={
@@ -105,7 +105,7 @@ Next, Tom plans to use Beam in the [WebApp](https://control.predicthq.com/beam) 
 
 Define the event impact for the search:
 
-* **PHQ Rank**: Use the `rank` parameter to target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
+* **PHQ Rank**: To target events based on their [predicted impact](../../predicthq-data/ranks/phq-rank.md), use the `rank` parameter, with values ranging from 0 to 100. This is useful for filtering out smaller events, ensuring focus on those likely to impact demand. Set the minimum rank threshold by setting rank.gte based on our [recommended industry minimums](../industry-specific-event-filters.md#minimum-phq-rank).
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
 * **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
@@ -239,9 +239,9 @@ For more details, visit:
 * [python-sdk.md](../../../sdks/python-sdk.md "mention")
 {% endhint %}
 
-### Step 3. Interpret Response
+### Step 3. Interpret the response
 
-Once the API call is made, the Events API returns a structured JSON response containing detailed information about the events that match the query parameters. Below is an illustrative example of what the first page of this response might look like, demonstrating initial pagination details and a sample event listing:
+Once the API call is made, the Events API returns a structured JSON response containing detailed information about the events that match the query parameters. The following is an illustrative example of what the first page of this response might look like, demonstrating initial pagination details and a sample event listing:
 
 <details>
 

@@ -18,7 +18,7 @@ Beam Analyses are location-specific and should never be shared across multiple l
 
 If you operate many locations with a single shared model, Beam Analysis Groups aggregate Feature Importance results across a set of analyses to produce a consistent feature set. Use this only when a single model requires identical inputs across locations; individual per-location analyses are preferable in most cases.
 
-Beam should be refreshed monthly by appending new demand data to the existing analysis. Do not delete and recreate Analyses - doing so loses accumulated correlation history.
+Refresh Beam monthly by appending new demand data to the existing Analysis. Do not delete and recreate Analyses - doing so loses accumulated correlation history.
 
 Related resources:
 
@@ -152,7 +152,7 @@ Related resources:
 
 Predicted Event Spend is a model-generated estimate of the total consumer spend—across accommodation, hospitality, and transportation—expected to occur as a result of a specific event. Values are expressed in United States Dollars (USD).
 
-This feature leverages predicted attendance, local accommodation demand, third-party economic indicators, and contextual event metadata to produce an event-attributable dollar value. It represents an approximation of spending activity in the area surrounding the event.
+This feature leverages Predicted Attendance, local accommodation demand, third-party economic indicators, and contextual event metadata to produce an event-attributable dollar value. It represents an approximation of spending activity in the area surrounding the event.
 
 Related resources:
 

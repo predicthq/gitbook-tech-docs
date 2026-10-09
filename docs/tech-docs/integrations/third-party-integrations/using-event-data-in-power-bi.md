@@ -46,7 +46,7 @@ You can modify all of our parameters based on your needs, see our [filtering gui
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
 3. **Event State**: Active and Predicted
-4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
+4. **Predicted Attendance**: attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
 
 Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
@@ -81,13 +81,13 @@ Once the search has completed click **Export** to get a CSV. Once the export has
 
 In Power BI, create a new report and press **Get Data** -> **Text/CSV**
 
-<figure><img src="../../.gitbook/assets/New CSV Connection.png" alt=""><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New CSV Connection.png" alt="Power BI Get Data menu with the Text/CSV option selected to create a new CSV connection"><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
 
 Upload the CSV export and hit the transform data option.
 
 <figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt=""><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
-Right-click the Query under Queries and go to the Advanced Editor option. The Query is named the same as the uploaded CSV name.
+Right-click the Query under **Queries** and go to the **Advanced Editor** option. The Query is named the same as the uploaded CSV name.
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
@@ -95,7 +95,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-Paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down.
+In the Advanced Editor, paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -133,7 +133,7 @@ Hit **Close & Apply** and wait for the data transformation to finish processing.
 
 <figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
-After completing these steps, we have successfully loaded a CSV extract of PHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+After completing these steps, we have successfully loaded a CSV extract of PredictHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
 ### Snowflake connection method
 
@@ -151,8 +151,8 @@ Get Data -> More -> Database -> Snowflake\\
 
 <figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt=""><figcaption><p>Database -> Snowflake</p></figcaption></figure>
 
-The Server and Warehouse info we gathered above will need to be entered at this step.\
-It should look something like the below, replacing square bracket placeholder variables for your Server and Warehouse info.
+Enter the Server and Warehouse info you gathered earlier.\
+It should look something like the following screenshot, replacing square bracket placeholder variables for your Server and Warehouse info.
 
 <figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
 
@@ -204,7 +204,7 @@ See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): [https://api.predicthq.com/v1/events/](https://api.predicthq.com/v1/events/) but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
+Power BI will connect using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
 
@@ -313,7 +313,7 @@ This guide creates a connected chart and table that covers the defined time peri
 
 To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
 
-Group as one (shift-click both boxes, right-click one of them, and click the Group -> Group option).
+Shift-click both boxes to select them. Then right-click one of them, and click the **Group** -> **Group** option.
 
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
@@ -363,7 +363,7 @@ You can add your own data to this chart to compare peaks and troughs of attendan
 
 Below is a downloadable Power BI template that automatically creates the example report used throughout this guide, using the API Connection method.
 
-Upon opening the template, you will be prompted to enter an API Access Token. Inputting this token will enable the report to automatically populate and build according to the parameters set forth in this guide.\
+Upon opening the template, it prompts you to enter an API Access Token. Entering this token enables the report to automatically populate and build according to the parameters set forth in this guide.\
 Wait 10-20 seconds between each step as data populates and data runs in the background.
 
 <figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>

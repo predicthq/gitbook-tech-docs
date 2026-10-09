@@ -181,7 +181,7 @@ Training usually takes a few minutes.
 
 ### Evaluate the forecast model
 
-To compare the model performance to other models, benchmarks, etc., use evaluation metrics such as MAPE. In this example, the benchmark model had a MAPE of 8.96%.
+To compare the model performance to other models, benchmarks, etc., use evaluation metrics such as MAPE. In this example, the benchmark model had a MAPE of 8.96%, as this code shows:
 
 ```python
 # Get evaluation results
@@ -258,7 +258,7 @@ flowchart LR
 
 ## Explainability
 
-Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. There are two key pieces of explainability that can be provided:
+Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. The API can provide two key pieces of explainability:
 
 * `phq_explainability` - Top events the model has determined are impacting your demand on this date.
 * `phq_features` - List of features (from Features API) that Beam's Feature Importance process identified as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.

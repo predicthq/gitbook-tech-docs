@@ -44,7 +44,7 @@ Forecasting works best when the signal in your data is stronger than the noise. 
 
 What to try:
 
-* Aggregate similar products or channels to build a stronger, more consistent demand signal.
+* To build a stronger, more consistent demand signal, aggregate similar products or channels.
 * Filter out extremely low-volume series where demand is often zero or close to zero.
 * Avoid over-segmenting—forecasting too narrowly (e.g. SKU) may not be practical without enough volume.
 
@@ -68,7 +68,7 @@ What to try:
 * Model each distinct version of the business separately, if feasible (e.g., pre/post relaunch).
 * Note recent changes when reviewing forecasts; short-term fluctuations may smooth out over time.
 
-### Misunderstanding Accuracy Metrics
+### Misunderstanding accuracy metrics
 
 Metrics like MAPE, MAE, and RMSE can tell different stories depending on your demand volume, volatility, and business goals. Don’t rely on a single metric in isolation.
 

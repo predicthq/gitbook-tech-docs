@@ -40,11 +40,11 @@ See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for mor
 {% endupdate %}
 
 {% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
-## Bolt - Loop Feedback and Individual Card Sharing
+## Bolt - Loop feedback and individual card sharing
 
 Bolt can send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt generates the details needed, confirms them with you, and submits the feedback on your behalf, returning a link so you can follow the progress.
 
-Bolt sharing now supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
+Bolt sharing supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
 {% endupdate %}
 
 {% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
@@ -64,7 +64,7 @@ Bolt's interface has also been improved to include an activity pane showing exac
 {% endupdate %}
 
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
-## Juneteenth - Standardised Holiday Naming
+## Juneteenth - Standardized holiday naming
 
 PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardized to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
 
@@ -120,7 +120,7 @@ Aviation Rank has been retired, and the `aviation_rank` field is no longer popul
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
 ## Denmark School Holidays - Municipality-Level Granularity
 
-School holidays for Denmark have been expanded from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; historical data has been backfilled to 2016.
+We expanded school holidays for Denmark from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; historical data has been backfilled to 2016.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}

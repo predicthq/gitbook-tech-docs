@@ -89,7 +89,7 @@ For teams with mature pipelines, or those exploring model comparisons, PredictHQ
 
 It’s also a low-risk way to prove the value of event-aware forecasting before making larger architectural changes.
 
-### PredictHQ Tools for Forecasting
+### PredictHQ tools for forecasting
 
 These tools support event-aware forecasting:
 

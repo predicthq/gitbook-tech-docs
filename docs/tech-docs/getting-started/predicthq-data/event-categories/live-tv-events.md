@@ -27,7 +27,7 @@ We have two different types of broadcast information. Major sports league viewer
 
 **SEVEN MAJOR SPORTS LEAGUES**
 
-All televised sports games from the following seven sports leagues are covered in our live TV events, the broadcasts may have status of either `scheduled` or `cancelled`:
+All televised sports games from the following seven sports leagues are covered in our Live TV Events, the broadcasts may have status of either `scheduled` or `cancelled`:
 
 `NFL`, `NBA`, `NHL`, `MLB`, `MLS`, `D1 NCAA Basketball`, `D1 NCAA Football`
 
@@ -41,7 +41,7 @@ Top viewership sports are typically one-off events or are finals of their respec
 
 Note: The sports type column is shown in the `event_label` field in the broadcast record.
 
-**Date Range Coverage**
+**Date range coverage**
 
 Live TV Events via the Broadcasts API covers sports games that started from November 1, 2021, to 90 days in the future (90 days from the current date).
 

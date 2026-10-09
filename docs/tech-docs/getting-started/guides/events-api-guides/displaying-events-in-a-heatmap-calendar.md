@@ -26,7 +26,7 @@ To experiment with this example, consider [forking the notebook](https://observa
 
 ### Getting started
 
-You need an Access Token to call PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
+You need an Access Token to call PredictHQ's APIs and run the notebook. Follow the [API quickstart instructions](../../api-quickstart.md) to obtain one if needed.
 
 ### Event Data
 
@@ -50,7 +50,7 @@ Set the following parameters:
 * **Categories**: Choose the event categories to consider.&#x20;
 
 {% hint style="info" %}
-For guidance on effectively querying the Features API, see [#customizing-event-data](displaying-events-in-a-heatmap-calendar.md#customizing-event-data "mention") below.
+For guidance on effectively querying the Features API, see [#customizing-event-data](displaying-events-in-a-heatmap-calendar.md#customizing-event-data "mention").
 {% endhint %}
 
 ### Calendar
@@ -67,7 +67,7 @@ The calendar updates automatically based on the specified parameters. In this ex
 You can also [compile](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) the notebook and download it as a JavaScript module. To do this:
 
 1. Use the notebook menu to select **Export**.
-2. Then choose **Download code** for a local copy.
+2. To save a local copy, choose **Download code**.
 
 ### Extension
 
@@ -77,7 +77,7 @@ Another approach to using calendars is to showcase the most impactful events, in
 For more information on using the Events API, see [filtering-and-finding-relevant-events.md](filtering-and-finding-relevant-events.md "mention").
 {% endhint %}
 
-## Customizing Event Data
+## Customizing Event data
 
 This section provides guidance on how to customize the underlying event data using the Features API. Tailor your event data by specifying the following [fields](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features):
 

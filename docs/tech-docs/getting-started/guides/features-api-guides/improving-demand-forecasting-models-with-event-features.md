@@ -16,7 +16,7 @@ This tutorial guides you through the process of identifying, retrieving, and int
 
 Events, such as concerts, expos, and public holidays, are known to affect consumer behavior and [drive demand](https://www.predicthq.com/use-cases/demand-forecasting). PredictHQ offers event data across [more than a dozen categories](../../predicthq-data/event-categories/), featuring a [wide range of labels](../../predicthq-data/labels.md). The [powerful data processing pipeline](https://www.predicthq.com/intelligence) ensures the delivery of high-quality, enriched event data that can be seamlessly incorporated as features into any demand forecasting model.
 
-### Integrating Event Features
+### Integrating event features
 
 Built upon extensive event coverage, PredictHQ’s event features aggregate similar events into predefined groups for specific locations at set intervals, such as daily aggregations. These prebuilt, forecast-ready features can be added directly to machine learning models without further preprocessing. Access to an extensive library of features is available through the [Features API](https://www.predicthq.com/apis/features-api). We recommend starting with the Important Features that the [Beam API](https://www.predicthq.com/beam) identifies.
 
@@ -62,7 +62,7 @@ If you manage multiple stores or locations and require a unified set of features
 
 <summary>User Inputs</summary>
 
-The sections below highlight what you need to provide for determining a list of Important Features. Explore the accompanying Jupyter notebooks to see how this fits together practically.
+The following sections highlight what you need to provide for determining a list of Important Features. Explore the accompanying Jupyter notebooks to see how this fits together practically.
 
 **Historical Demand Data**
 

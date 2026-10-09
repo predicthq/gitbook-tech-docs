@@ -8,9 +8,9 @@ description: Transforming Event Data into ML-Ready Features using SQL
 
 This guide uses a publicly available PredictHQ event sample table called\
 **PREDICTHQ\_EVENTS\_RETAIL\_LONDON**\
-Change this table name in all instances below with the name of the events data table that PredictHQ has provisioned as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
+Change this table name in all later instances with the name of the events data table that PredictHQ has provisioned as per the [Snowflake Secure Data Share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake).
 
-The rest of the guide also uses temporary tables but these tables can be turned into permanent tables as needed.
+The rest of the guide also uses temporary tables but you can turn these tables into permanent tables as needed.
 
 Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide, the following steps are required and blocked out:
 
@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories.
+If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
 
 {% code title="Count" fullWidth="true" %}
 ```sql

@@ -2,11 +2,11 @@
 
 Not all demand fluctuations are equal. Some are predictable - driven by day-of-week patterns, long-term growth trends, or seasonal cycles. Others are anomalous: unexpected spikes or drops that sit outside those regular patterns. These anomalies are where events have the most impact, and where accurate forecasting is hardest.
 
-Beam is designed to help you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand real-world context drives - things like concerts, sports games, conferences, or public holidays near your location.
+Beam helps you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand real-world context drives - things like concerts, sports games, conferences, or public holidays near your location.
 
 ## How Beam identifies anomalous demand
 
-Beam analyses your historical demand data and decomposes it into two components:
+Beam analyzes your historical demand data and decomposes it into two components:
 
 * **Baseline demand**: The stable, predictable portion of demand. This captures long-term trends, regular seasonal patterns, and recurring cycles - the demand you'd expect even without any unusual external influences.
 * **Anomalous demand**: Everything left over after the baseline is removed. This is the variable, irregular portion of demand - the spikes and dips that can't be explained by your regular structured patterns alone. External factors like events, weather, or promotions tend to show up here.

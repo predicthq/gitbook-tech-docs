@@ -26,7 +26,7 @@ The first problem is defining where events actually matter.
 
 Event impact is not uniform across geography or industry. A fixed radius may be too wide, introducing noise, or too narrow, missing material demand drivers. Scope is practical, not theoretical. It determines which events are even considered candidates for impact.
 
-In dense urban areas, demand effects may be highly localized. In regional or rural contexts, effects may extend much further. Travel behaviour, population density, venue clustering, and industry type all influence how far demand impact travels.
+In dense urban areas, demand effects may be highly localized. In regional or rural contexts, effects may extend much further. Travel behavior, population density, venue clustering, and industry type all influence how far demand impact travels.
 
 Incorrect scope decisions are easy to make and difficult to unwind. If scope is poorly defined, downstream modeling and feature engineering are compromised.
 
@@ -83,7 +83,7 @@ Trust determines time to value. If users hesitate to act on model outputs, opera
 
 * The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) provides structured, verifiable event records that can be surfaced alongside forecasts or model outputs.
 * When filtered using a Beam Analysis ID, returned events reflect demand-calibrated impact rather than generic event presence.
-* Forecast outputs can therefore be tied back to specific real-world drivers.
+* You can therefore tie forecast outputs back to specific real-world drivers.
 
 This linkage between model outputs and real-world context strengthens operational confidence.
 

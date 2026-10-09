@@ -16,7 +16,7 @@ A sports competition consists of multiple players or teams. It has a certain the
 
 Labels for a sports event provide more information about the type, league, and environment:
 
-1.  **Sports Type**
+1.  **Sports type**
 
     The most common sports types in PredictHQ dataset are: `soccer`, `basketball`, `ice-hockey`, `rugby`, `baseball`.
 2.  **Sports league**
@@ -193,7 +193,7 @@ A commonly known day or a period of time when people gather together to celebrat
 Labels for a festival event provide more information about the festival. The most common five labels are:
 
 1. `music`: Music festivals when a large group of musical artists continuously perform over several days. Music festivals are usually held at a dedicated venue that can fit a large number of attendees, for example, the [Ultra Music Festival](https://events.predicthq.com/events/duHrbmUbpFSgwypGAK).
-2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theatre, poetry, and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
+2. `performing-arts`: The festivals that consist of performing shows such as a costume parade or a fireworks show. Such festivals could feature traditional music, theater, poetry, and art. For example, the [National Festival of Popular Arts in Marrakech](https://events.predicthq.com/events/cxSrjK82oWZGUWUvUJ).
 3. `family`: The festivals which are family-friendly and children-friendly, for example, [Magnificent Mile Lights Festival](https://events.predicthq.com/events/vFQK4H3yaujGqwnR4z).
 4. `community`: Traditional festivals in the local area. Community festivals are less formal than world-wide festivals and may also include street markets and entertainment activities. The [Odunde Festival](https://events.predicthq.com/events/dkbGjQW943KSL5hT8b) is an example of a community festival.
 5. `food`: Food festivals where communities or businesses trade food products, for example, [Bite of Seattle](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9).
@@ -344,7 +344,7 @@ The Academic Events category has six main event types affecting students’ acti
    * Exam starts on the first day of the exam period and ends on the last day of the exam period
    * No separate exam period for the intensive session.
    * Reading days are not included.
-   * Exam event is labeled with `academic` and `exam`.
+   * PredictHQ labels exam events with `academic` and `exam`.
 3. **Holiday**
    * The break/holiday period between the sessions or within the sessions.
    * Holiday events consist of:
@@ -388,7 +388,7 @@ The Academic events have venue entities available.
 
 **PHQ Rank**
 
-Academic events have PHQ Rank available.
+Academic events have PHQ Rank available, and how it indicates impact depends on the event type:
 
 * Session, exam, and holiday types use student numbers (FTE) to indicate the event’s impact as the events apply on the whole campus.
 * Intensive sessions use 30% of the total student numbers (FTE) to indicate the event’s impact as the events apply to only a small population.

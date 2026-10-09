@@ -60,7 +60,7 @@ Not all plans and subscriptions have access to this type of entity. [Talk to us]
 
 Organization entities are groups of people and include sports teams (e.g. Kansas City Chiefs), and bands (e.g. Coldplay).
 
-Below is an example of organization entities showing two sports teams playing in an NFL game event:
+The following is an example of organization entities showing two sports teams playing in an NFL game event:
 
 ```json
 {
