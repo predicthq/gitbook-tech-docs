@@ -41,7 +41,7 @@ The Features API:
 * Supports rank-based and attendance-based filtering
 * Returns daily or weekly feature values
 
-For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate predicted attendance of 150,000 across 100 or more events - returned as one model-ready number per category, per day.
+For example, on a single future day in Sydney, a major sports game, a street fair, a film festival, and an orchestra performance might combine to an aggregate Predicted Attendance of 150,000 across 100 or more events - returned as one model-ready number per category, per day.
 
 It does not determine which features are relevant to your business. Beam handles relevance calibration. The Features API focuses on transforming scoped events into structured numerical signals.
 
@@ -97,7 +97,7 @@ To get the most value from the Features API and avoid noisy or misleading result
 
 * Use a `beam.analysis_id` whenever possible - This ensures you’re using only features that have proven impact on your business, and saves time configuring filters manually.
 * Use `saved_location_id` to define locations - Saved Locations are the most robust way to reference geographies in PredictHQ. They allow consistent use across Beam, Features API, Events API, and Forecasts API.
-* Use Predicted Impact Area to define location scope - Predicted Impact Area provides an industry and location-specific boundary calibrated against real demand and event data. The recommended approach is to create a Saved Location using `origin_geojson`, which automatically calculates and stores the impact area - you can then reference it by `location_id` without managing the boundary yourself.
+* Use Predicted Impact Area to define location scope - Predicted Impact Area provides an industry and location-specific boundary calibrated against real demand and event data. The recommended approach is to create a Saved Location using `origin_geojson`, which automatically calculates and stores the Predicted Impact Area - you can then reference it by `location_id` without managing the boundary yourself.
 * Segment by meaningful business unit or location - You’ll get the best results when your Beam Analysis and/or Features API requests are scoped to consistent demand signals e.g. a single store, hotel, area, or a product grouping. Avoid going too small (e.g. individual SKUs) or too large (e.g. entire countries or multi-state regions), as the Features API is not designed for large or fragmented geographies.
 * Choose the right granularity for your model - Daily granularity works well for high-frequency decisions like staffing or delivery. Weekly works better when individual day fluctuations are less meaningful.
 * Filter by event impact - Use thresholds on `phq_rank` or `local_rank` to avoid cluttering your signals with low-impact events.
@@ -119,13 +119,13 @@ Related resources:
 * [What Is Beam?](what-is-beam.md)
 * [Features API guides](../guides/features-api-guides/)
 
-## What to Do Next
+## What to do next
 
 Continue with these steps:
 
 1. [Run Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) (if you haven’t already) - Identify which event features actually drive demand for your business. This gives you a focused feature set to use with the Features API.
 2. Set up [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) - Define the optimal impact boundary for your location and industry. The easiest way is via [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/create-a-saved-location), which calculates and stores it automatically.
 3. Set up [Saved Locations](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) - Define your key business locations once and reuse them across PredictHQ APIs for consistency and easier re-analysis.
-4. Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - Use your beam.analysis\_id or saved\_location\_id to pull a clean time series of impactful event features for your model.
+4. Make your first [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) request - To pull a clean time series of impactful event features for your model, use your beam.analysis\_id or saved\_location\_id.
 5. See how it fits together in production - The [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) shows how Saved Locations, Beam, the Features API, and the Events API connect as a pipeline, with the right refresh cadence and data storage patterns.
 6. Need help? - Check out [Features API guides](../guides/features-api-guides/) or contact support for help tuning your request.

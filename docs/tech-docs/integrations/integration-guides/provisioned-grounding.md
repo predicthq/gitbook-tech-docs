@@ -72,7 +72,7 @@ Three decisions determine whether grounded answers are relevant or noisy:
 
 ## Freshness
 
-Real-world context changes daily: events are announced, revised, cancelled, and postponed inside any decision window. A grounding corpus that lags reality produces answers that are confidently out of date, which reads exactly like a hallucination to the person acting on it.
+Real-world context changes daily: events are announced, revised, canceled, and postponed inside any decision window. A grounding corpus that lags reality produces answers that are confidently out of date, which reads exactly like a hallucination to the person acting on it.
 
 | Component | Cadence |
 | --- | --- |
@@ -82,7 +82,7 @@ Real-world context changes daily: events are announced, revised, cancelled, and 
 
 ## Example workflows
 
-**Forecast explanation.** An operator asks an assistant why demand is forecast to spike next Friday. The assistant retrieves that location's demand-driving events for the date window and answers with the specific festival and its predicted attendance - a claim anyone can verify against the record.
+**Forecast explanation.** An operator asks an assistant why demand is forecast to spike next Friday. The assistant retrieves that location's demand-driving events for the date window and answers with the specific festival and its Predicted Attendance - a claim anyone can verify against the record.
 
 **Operational copilot.** A staffing copilot preparing next week's roster retrieves upcoming high-rank events for each store's location before recommending shift levels, and cites the events behind each recommendation.
 

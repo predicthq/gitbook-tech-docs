@@ -23,7 +23,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results is shown below:
+The following snippet shows the results:
 
 ```json
 {

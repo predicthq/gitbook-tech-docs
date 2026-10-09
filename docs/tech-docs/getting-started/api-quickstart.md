@@ -11,7 +11,7 @@ description: >-
 1. A PredictHQ account - [log in](https://control.predicthq.com/) or [sign up for free](https://signup.predicthq.com/).
 2. An API Key - create one in the next section.
 
-## Create an API Key
+## Create an API key
 
 1. Log in to the [WebApp](https://control.predicthq.com/tokens).
 2. Go to **API Tools → API Tokens**.

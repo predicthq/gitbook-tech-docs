@@ -7,7 +7,7 @@ description: >-
 
 # Event-driven demand
 
-Using real-world events to improve forecasting and operational decisions introduces structural challenges. These challenges are not unique to PredictHQ. Any organisation attempting to integrate event data into live systems will encounter them.
+Using real-world events to improve forecasting and operational decisions introduces structural challenges. These challenges are not unique to PredictHQ. Any organization attempting to integrate event data into live systems will encounter them.
 
 They typically surface only after implementation has begun, and they are often underestimated at the start.
 

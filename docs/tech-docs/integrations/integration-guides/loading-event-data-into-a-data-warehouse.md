@@ -110,7 +110,7 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../.gitbook/assets/CC Filters.png" alt=""><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, select **Export** and choose the JSONL file format. The JSONL file can then be directly uploaded to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+After configuring your filters and executing the search, select **Export** and choose the JSONL file format. You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 
@@ -129,8 +129,8 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
-5. **Advanced Options**: Expand the Advanced Options and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
-6. **Create the Table**: Click the **Create Table** button to finalize the creation.
+5. **Advanced Options**: Expand the **Advanced Options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
+6. **Create the Table**: To finalize the creation, click **Create Table**.
 
 <figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
 
@@ -140,7 +140,7 @@ This method allows initializing your BigQuery table with a JSONL dataset suitabl
 
 This method works well for smaller datasets as initial upload and must be used for continuous updates to the table as recommended in our [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section.
 
-### Table Creation Code
+### Table creation code
 
 To establish the required data structure in BigQuery, you can utilize the following Python script. This script explicitly defines the columns and data types as laid out in our [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure), configuring them precisely as needed for your BigQuery table. Before executing this script, ensure you have the following prerequisites:
 
@@ -148,7 +148,7 @@ To establish the required data structure in BigQuery, you can utilize the follow
 * **dataset\_id**: Specify whether this is a new dataset or an existing one in which you want to place this table.
 * **table\_id**: Determine a name for your new PredictHQ data table in BigQuery.
 
-It is advisable to manage this table creation code separately from other data processing scripts to maintain clarity and ease of updates.
+Manage this table creation code separately from other data processing scripts to maintain clarity and ease of updates. Use the following script:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -485,7 +485,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 Event data is dynamic and events can change frequently. This happens when events are canceled, posted, or have details updated. Also, PredictHQ’s pipeline is constantly fetching new events so new future events are always being added and can be downloaded via the API.
 
-To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to [that above](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This extracts all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
+To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to the [API connection method code](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This extracts all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 
@@ -527,7 +527,7 @@ WHERE category IN ('concerts','conferences','festivals','performing-arts')
 
 This query retrieves records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
 
-Visually this type of query allows you to pull all the events in a radius as shown in the image below:
+Visually, this type of query allows you to pull all the events in a radius, as shown in the Radius Map image that follows:
 
 <figure><img src="../../.gitbook/assets/Radius Map.png" alt=""><figcaption><p>Radius Map example from our website</p></figcaption></figure>
 

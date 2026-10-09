@@ -21,7 +21,7 @@ response = requests.get(
 print(response.json())
 ```
 
-The first result in the response (shown below) is the correct location we want:
+The first result in the response is the correct location we want:
 
 ```json
 {

@@ -68,7 +68,7 @@ Broadcasts have three possible status values:
 
 #### Location / geopoint
 
-The broadcast record presents the number of people who are watching the live sports game in a county. The latitude and longitude provided with the broadcast record under the geopoint element references the center of the county. For example, the center of Erie County in New York state shown on the right.
+The broadcast record presents the number of people who are watching the live sports game in a county. The latitude and longitude provided with the broadcast record under the geopoint element references the center of the county. For example, the center of Erie County in New York state shown in the later geopoint example.
 
 The associated sports event is taking place in a physical location with the latitude and longitude pointing to the specific location. The venue name and address is also attached on the event record.
 
@@ -78,7 +78,7 @@ Places in any [hierarchy level](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/p
 
 **PHQ Viewership**
 
-PHQ Viewership is the number of people who watch the live broadcast game in a county. Broadcast records have PHQ Viewership available.
+PHQ Viewership is the number of people who watch the live broadcast game in a county. Broadcast records have PHQ Viewership available:
 
 ```json
   "geopoint": {
@@ -93,7 +93,7 @@ The Live TV Events machine learning models predicted the viewership for sports g
 
 #### Physical event details
 
-The broadcast API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
+The Broadcasts API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
 
 * **Event ID**: `event_id` of the physical event can be used to find all broadcasts nationwide for that specific sport game.
 * **Label**: `event.label` for the physical sports event provides more information about the sports type and league. It can be used to find broadcasts for the specific sports type.

@@ -59,7 +59,7 @@ PredictHQ provides Placekey on attended events from 2020 onwards.
 
 For all other countries where Placekey does not support addresses, these events will have the `@Where` part of Placekey. For example, the [Stade Toulousain vs Perpignan](https://events.predicthq.com/events/FYwLVpWzz7k6SRmiZy) event in Toulouse, France has a Placekey of `@7f7-mcy-ndv`. This is very useful and can also be used to find nearby events and to join with POI data.
 
-See below for the hexagon area covered by `@7f7-mcy-ndv`:
+The following image shows the hexagon area covered by `@7f7-mcy-ndv`:
 
 <figure><img src="../../../.gitbook/assets/placekey-hex-france-example.png" alt=""><figcaption></figcaption></figure>
 

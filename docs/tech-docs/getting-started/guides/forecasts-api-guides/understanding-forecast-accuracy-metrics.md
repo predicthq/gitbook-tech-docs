@@ -46,7 +46,7 @@ Key points about MAE:
 * Treats all errors the same—no extra weight on large deviations.
 * Best used when actual values are on a consistent scale across time or series.
 
-## RMSE – Root Mean Squared Error
+## RMSE – root mean squared error
 
 RMSE measures the square root of the average squared differences between predicted and actual values, placing greater weight on larger errors.
 

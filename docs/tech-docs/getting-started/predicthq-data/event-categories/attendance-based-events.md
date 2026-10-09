@@ -14,7 +14,7 @@ A sports competition consists of multiple players or teams. It has a certain the
 
 #### **Labels**
 
-Labels for a sports event provide more information about the type, league, and environment.
+Labels for a sports event provide more information about the type, league, and environment:
 
 1.  **Sports Type**
 
@@ -22,7 +22,7 @@ Labels for a sports event provide more information about the type, league, and e
 2.  **Sports League**
 
     The most popular sports leagues in the PredictHQ dataset are: `NFL`, `MLB`, `NHL`, `NBA`.
-3.  **Sports Games Environment**
+3.  **Sports games environment**
 
     The general environment where the sports game is held, or the purpose of the sports game, for example:
 
@@ -258,7 +258,7 @@ Note: datetime is in UTC.
 
 #### Location
 
-Performing-arts events are point events meaning the latitude and longitude of the event is for the location of the event’s venue. Venues for these events are usually theatres, playgrounds, or clubs, etc.
+Performing-arts events are point events meaning the latitude and longitude of the event is for the location of the event’s venue. Venues for these events are usually theaters, playgrounds, or clubs, etc.
 
 #### Entities
 
@@ -400,4 +400,4 @@ Academic events have Local Rank available.
 
 **Predicted Attendance**
 
-Academic events have Predicted Attendance available for all event types. Predicted Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.
+Academic events have Predicted Attendance available for all event types. Predicted Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. Predicted Attendance on `graduation` and `social` events are based on the number of people in attendance at the event.

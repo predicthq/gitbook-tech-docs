@@ -8,7 +8,7 @@ description: >-
 
 Bolt combines a conversational AI interface with a persistent notebook of interactive cards. Ask questions in natural language, and Bolt retrieves real data from PredictHQ's APIs, guides you toward the right products for your situation, and surfaces results as cards you can explore, share, and take directly into your integration.
 
-Bolt is also a working example of **grounding**: it answers from verified, live PredictHQ data retrieved at the moment you ask—not from what a model guesses. The same capability is available to your own AI stack through the [MCP server](mcp.md).
+Bolt is also a working example of **grounding**: it answers from verified, live PredictHQ data retrieved at the moment you ask—not from what a model guesses. The same capability is available to your own AI stack through the [PredictHQ MCP server](mcp.md).
 
 {% hint style="success" %}
 Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help us improve it
@@ -22,7 +22,7 @@ Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help 
 
 **Build with the results.** Every card in the notebook includes a production-ready API code snippet alongside the visualization and raw data. When you find something useful, the code to reproduce it is already there.
 
-**Work iteratively.** Cards persist across the session and accumulate in the notebook as the conversation progresses. Follow up, refine, and drill down - the notebook becomes an artefact you can revisit and share with your team.
+**Work iteratively.** Cards persist across the session and accumulate in the notebook as the conversation progresses. Follow up, refine, and drill down - the notebook becomes an artifact you can revisit and share with your team.
 
 ## How it works
 
@@ -50,7 +50,7 @@ PredictHQ configures Bolt with its integration best practices. It follows the re
 
 This means Bolt produces better results out of the box than querying the APIs directly without guidance - and helps you understand why each step matters as you work through it.
 
-## Getting Started
+## Getting started
 
 Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bolt). In the navigation, select **Bolt** to open the interface.
 

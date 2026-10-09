@@ -58,7 +58,7 @@ The `parent_event` field indicates child events. Child events have a parent\_eve
 You cannot find the child event IDs of a parent event via the API.
 {% endhint %}
 
-### **Why Umbrella Events Matter**
+### **Why umbrella events matter**
 
 Any view built from individual event records has to account for Umbrella events, or the attendance of parent events and their child events is double-counted, producing inflated figures. For daily or weekly aggregations of any kind, use the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) rather than aggregating records - see [Which API should I use?](../../core-concepts/which-api-should-i-use.md)
 
@@ -70,7 +70,7 @@ Looking at the earlier [US F1 Grand Prix in 2019](https://events.predicthq.com/e
 Child event attendance may sometimes reflect more detailed attendance on the individual days of an event, rather than an even share of the parent event's total.
 {% endhint %}
 
-Another example can be seen when looking at the daily attendance for events in Las Vegas in 2019. In the example below there is the [World Rugby Sevens tournament](https://events.predicthq.com/events/iKKgf8suq5D5w89boJ) from the 1st of March 2019 to the 3rd of March 2019. The parent event is for the entire tournament and there are many child events for individual games and rounds in the tournament. By not accounting for Umbrella events you get a massive spike in attendance at that time. A peak of 1.4 million is seen around the 2nd of March because both the parent event and child events are being counted.
+Another example can be seen when looking at the daily attendance for events in Las Vegas in 2019. In the following example, there is the [World Rugby Sevens tournament](https://events.predicthq.com/events/iKKgf8suq5D5w89boJ) from the 1st of March 2019 to the 3rd of March 2019. The parent event is for the entire tournament and there are many child events for individual games and rounds in the tournament. By not accounting for Umbrella events you get a massive spike in attendance at that time. A peak of 1.4 million is seen around the 2nd of March because both the parent event and child events are being counted.
 
 <figure><img src="../../../.gitbook/assets/graph-umbrella-events-double-counted.png" alt=""><figcaption><p>Example showing attendance being counted multiple times due to not handling Umbrella Events</p></figcaption></figure>
 

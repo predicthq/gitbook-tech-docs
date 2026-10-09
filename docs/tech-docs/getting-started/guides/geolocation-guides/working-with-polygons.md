@@ -16,7 +16,7 @@ So far on this page, we have provided details on how to use our API to query for
 
 There are many tools and libraries available to help you process and visualize our polygon events. We have some examples in our [Data Exploration notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) which use [GeoPandas](https://geopandas.org/) and [Folium](https://python-visualization.github.io/folium/) libraries in Python to analyze and visualize polygons from our Severe-Weather Events.
 
-You can use [Shapely](https://github.com/Toblerity/Shapely) to parse the event's geometry field and load it as a sheply object. In the following example, we would take a sample event with polygon and load it's geometry field into a shapely Polygon. We also go through this example in our severe-weather datascience docs, so check out [Appendix 2: Parsing geojson with Shapely](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) if you prefer a more interactive example.
+You can use [Shapely](https://github.com/Toblerity/Shapely) to parse the event's geometry field and load it as a sheply object. In the following example, we would take a sample event with polygon and load it's geometry field into a shapely Polygon. We also go through this example in our severe-weather datascience docs, so check out [Appendix 2: Parsing geojson with Shapely](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb) if you prefer a more interactive example. Here is the sample event and the code that parses it:
 
 ```python
 from shapely.geometry import shape
@@ -72,7 +72,7 @@ parsed_polygon.intersects(point_2)
 >> False
 ```
 
-As you can see in the picture below, `point_1` is inside the polygon but `point_2` is not:
+As the map of the event polygon shows, `point_1` is inside the polygon but `point_2` is not:
 
 <figure><img src="../../../.gitbook/assets/shapely-polygon-intersects.png" alt="A map of the event polygon with point_1 inside it and point_2 outside it"><figcaption></figcaption></figure>
 

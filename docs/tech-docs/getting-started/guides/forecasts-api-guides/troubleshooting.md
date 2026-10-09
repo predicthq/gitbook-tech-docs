@@ -21,7 +21,7 @@ Even if your demand data passes basic data quality checks, forecast quality stil
 
 What to try:
 
-* Aggregate similar products to boost volume and pattern strength.
+* To boost volume and pattern strength, aggregate similar products.
 * Exclude outliers that don’t represent normal demand behavior (e.g. one-off promotional spikes).
 * Avoid artificial smoothing or flooring (e.g. replacing all zero values with 1), which can distort the signal.
 * Focus on series that show some recurring variation—the model performs best when it can detect trends and seasonality.
@@ -38,7 +38,7 @@ What to try:
 * Review data around major lockdowns or policy changes, even after 2020, and assess whether it’s relevant to keep.
 * If your business fundamentally changed (e.g. moved online, altered operating hours), consider using only post-change data for training.
 
-### Forecasting Too Fine-Grained
+### Forecasting too fine-grained
 
 Forecasting works best when the signal in your data is stronger than the noise. Extremely granular forecasts—like low-volume SKUs or store-level daily data—can result in high error rates because there’s not enough volume or structure to model accurately.
 

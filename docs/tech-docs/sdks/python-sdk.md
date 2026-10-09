@@ -28,7 +28,7 @@ phq = Client(access_token="$API_TOKEN")
 
 ### Search events
 
-Perform a basic search of events using the `q`, `rank_level`, and `country` parameters.
+Perform a basic search of events using the `q`, `rank_level`, and `country` parameters:
 
 ```python
 for event in phq.events.search(q="Foo Fighters", rank_level=[4, 5], country='US'):

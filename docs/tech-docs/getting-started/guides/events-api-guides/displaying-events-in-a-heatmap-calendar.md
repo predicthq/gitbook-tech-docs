@@ -24,13 +24,13 @@ This section goes through a simple example to demonstrate the basic functionalit
 To experiment with this example, consider [forking the notebook](https://observablehq.com/documentation/notebooks/forking). This allows you to edit and modify the code as needed. For more information on Observable notebooks, see this [demo](https://observablehq.com/@observablehq/demo).
 {% endhint %}
 
-### Getting Started
+### Getting started
 
 You need an Access Token to call PredictHQ's APIs and run the notebook. Follow these [instructions](../../api-quickstart.md) to obtain one if needed.
 
 ### Event Data
 
-Powered by aggregated event data from the [Features API](https://www.predicthq.com/apis/features-api), the heatmap calendar displays the total attendance per day. Selecting a specific day reveals additional event details via the [Events API](https://www.predicthq.com/apis/event-api), adding an interactive layer to the experience.
+The heatmap calendar uses aggregated event data from the [Features API](https://www.predicthq.com/apis/features-api) to display the total attendance per day. Selecting a specific day reveals additional event details via the [Events API](https://www.predicthq.com/apis/event-api), adding an interactive layer to the experience.
 
 To view the code used to call the Features API, Events API, and other functions (if not already pinned):
 
@@ -99,7 +99,7 @@ Set the date range as follows:
 Set the location as follows:
 
 * Determine the geographical area for which event data is required.&#x20;
-* Configuration: Use the `location` field to specify a latitude, longitude, and radius or place ID for a specific city or region (as in the above example).
+* Configuration: To specify a latitude, longitude, and radius or place ID for a specific city or region, use the `location` field (as in the earlier example calendar).
 * Guidance: For details on how to set locations, refer to [#location-type](../industry-specific-event-filters.md#location-type "mention").&#x20;
 
 </details>

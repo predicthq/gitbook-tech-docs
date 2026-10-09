@@ -50,11 +50,11 @@ We recommend using Predicted Impact Pattern features instead of generic features
 
 **Attended events generic features**
 
-Use the generic features in this table if you are not in one of the industries covered by the impact pattern features listed below.
+Use the generic features in this table if you are not in one of the industries covered by the Predicted Impact Patterns features listed later in this tab.
 
 <table><thead><tr><th width="431">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_academic_graduation</code></td><td>Academic - Graduation</td></tr><tr><td><code>phq_attendance_academic_social</code></td><td>Academic - Social</td></tr><tr><td><code>phq_attendance_community</code></td><td>Community</td></tr><tr><td><code>phq_attendance_concerts</code></td><td>Concerts</td></tr><tr><td><code>phq_attendance_conferences</code></td><td>Conferences</td></tr><tr><td><code>phq_attendance_expos</code></td><td>Expos</td></tr><tr><td><code>phq_attendance_festivals</code></td><td>Festivals</td></tr><tr><td><code>phq_attendance_performing_arts</code></td><td>Performing Arts</td></tr><tr><td><code>phq_attendance_sports</code></td><td>Sports</td></tr><tr><td><code>phq_attendance_school_holidays</code></td><td>School Holidays</td></tr></tbody></table>
 
-**Attended Events Impact Pattern Features**
+**Attended events Predicted Impact Patterns features**
 
 Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 

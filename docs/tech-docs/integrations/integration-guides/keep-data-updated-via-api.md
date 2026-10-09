@@ -11,7 +11,7 @@ description: >-
 We highly recommend using Snowflake or ADX to keep your local event store up to date. Managed delivery removes all the complexity of implementing a sync system against the API and results in far higher accuracy with fewer issues. Keeping up to date via the API is much more complicated than via Snowflake or ADX.
 {% endhint %}
 
-Events change constantly: dates move, events are cancelled or postponed, attendance predictions are revised, and records are merged as duplicates or removed as spam. A stale local store degrades everything built on it - models score against outdated signals, and grounded AI systems answer from events that no longer exist. Keeping your store in sync is what keeps those outputs true.
+Events change constantly: dates move, events are canceled or postponed, attendance predictions are revised, and records are merged as duplicates or removed as spam. A stale local store degrades everything built on it - models score against outdated signals, and grounded AI systems answer from events that no longer exist. Keeping your store in sync is what keeps those outputs true.
 
 Our records have an `updated` field which indicates the date/time the record was last updated.
 
@@ -21,15 +21,15 @@ For example an event for a conference that starts on 1 April 2026 may originally
 
 ## High-level guide to keeping data updated
 
-The best way to update your data store is to search for records that have changed since you last synced.
+The best way to update your data store is to search for records that have changed since you last synced:
 
 1. To find records that have been updated since your last fetch, use the `updated.*` parameters.
 2. Make sure you’re fetching both `active` and `deleted` events e.g. `state=active,deleted`
-   1. For the Broadcasts API you would use `record_status=active,duplicate,deleted`
+   1. For the Broadcasts API, use `record_status=active,duplicate,deleted`
 3. Ensure you won’t miss changes if records are updated while you’re fetching with `sort=-updated`
 4. Sync every 24 hours, or more frequently for unscheduled events if needed.
 
-An example request in Python is below:
+The following example request in Python fetches updated events:
 
 ```python
 import requests

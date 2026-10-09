@@ -10,7 +10,7 @@ The PredictHQ MCP server connects AI agents directly to real-world context at de
 
 ## The agentic pattern
 
-In an agentic workflow, a goal is defined, such as optimising inventory, setting pricing, or scheduling staff. The agent works toward that goal, determining what information it needs, calling the tools required to get it, and acting on the result.
+In an agentic workflow, a goal is defined, such as optimizing inventory, setting pricing, or scheduling staff. The agent works toward that goal, determining what information it needs, calling the tools required to get it, and acting on the result.
 
 PredictHQ is one of those tools. The agent calls it via MCP whenever a decision depends on what's happening in the real world: understanding the drivers behind a forecast, gauging upcoming demand pressure across a network of locations, or checking whether real-world conditions support a pricing move. The agent gets verified, structured context at the moment the decision is made, not a retrospective report it has to interpret.
 
@@ -57,7 +57,7 @@ flowchart TD
     G --> A
 ```
 
-## Example Workflows
+## Example workflows
 
 These examples assume a demand forecast is already in place, ideally one already enriched with PredictHQ context. The agent's job is to act on that forecast, and it uses PredictHQ's real-world context and explainability to make more confident, defensible decisions. Where a location is not yet calibrated, the agent creates or refreshes its Saved Location and Beam Analysis first, as described earlier.
 

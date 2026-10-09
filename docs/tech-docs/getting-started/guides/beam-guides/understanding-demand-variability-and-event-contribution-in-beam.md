@@ -13,7 +13,7 @@ Beam analyses your historical demand data and decomposes it into two components:
 
 The **demand variability ratio** measures the proportion of your total demand that is anomalous. A higher ratio means anomalous, external factors drive more of your demand - which in turn means there's more opportunity for real-world context to improve your forecasts.
 
-> Beam's decomposition is optimised for identifying event-driven anomalies and may differ from decompositions that other tools such as STL or Prophet produce.
+> Beam's decomposition is optimized for identifying event-driven anomalies and may differ from decompositions that other tools such as STL or Prophet produce.
 
 <table><thead><tr><th width="228.62890625">Demand Variability Ratio</th><th>What it means</th></tr></thead><tbody><tr><td>0–5%</td><td>Most demand follows predictable baseline patterns</td></tr><tr><td>5–10%</td><td>Some variability exists, likely influenced by external factors</td></tr><tr><td>>10%</td><td>Anomalies are a significant driver of demand fluctuations</td></tr></tbody></table>
 
@@ -23,7 +23,7 @@ Beam calculates this separately for **positive anomalies** (demand surges) and *
 
 Once Beam has identified your anomalous demand, the next step is to determine how much of it can be attributed to events.
 
-Beam measures how much of your anomalous demand can be accounted for by events. This gives you an **event contribution percentage**: the share of your anomalous demand that events happening near your location explain.
+Beam measures how much of your anomalous demand events explain. This gives you an **event contribution percentage**: the share of your anomalous demand that events happening near your location explain.
 
 For example:
 
@@ -32,7 +32,7 @@ For example:
 This means that roughly 12.9% of your total demand sits above your predictable baseline, and of that elevated demand, events account for nearly 80%.
 
 {% hint style="success" %}
-Based on analysis of over 300,000 Beam analyses across 59,000+ locations in 171 countries over the last 12 months, PredictHQ's event data explains an average of 61% of positive demand variability - though this varies depending on location, industry, and the types of events near your business.
+Based on analysis of over 300,000 Beam Analyses across 59,000+ locations in 171 countries over the last 12 months, PredictHQ's event data explains an average of 61% of positive demand variability - though this varies depending on location, industry, and the types of events near your business.
 {% endhint %}
 
 Like the demand variability ratio, Beam calculates this separately for positive and negative anomalies, so you can see how events drive both demand surges and demand drops.
@@ -44,7 +44,7 @@ Understanding demand variability and event contribution gives you two practical 
 1. **Knowing whether events are relevant to your business.** If events explain a large share of your anomalous demand, incorporating event features into your forecasting model is likely to meaningfully improve accuracy. If the contribution is low, other factors (promotions, weather, etc.) may be more important to focus on.
 2. **Knowing which events matter.** Beam's Feature Importance analysis goes a step further - it identifies which specific event categories (concerts, sports, conferences, public holidays, etc.) are the primary drivers of your demand variability. This lets you prioritise the right signals when building or refining your models.
 
-## Next Steps
+## Next steps
 
 To continue:
 

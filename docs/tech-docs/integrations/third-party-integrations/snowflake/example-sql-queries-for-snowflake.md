@@ -58,7 +58,7 @@ Example Results:
 
 Using the GEOGRAPHY column geo to find all events within a user defined area (eg: within a polygon) using [ST\_WITHIN](https://docs.snowflake.com/en/sql-reference/functions/st_within.html), [ST\_MAKEPOLYGON](https://docs.snowflake.com/en/sql-reference/functions/st_makepolygon.html), and [TO\_GEOGPRAPHY](https://docs.snowflake.com/en/sql-reference/functions/to_geography.html).
 
-First, we define the shape we are interested in restricting the search to, as shown in the image below.
+First, we define the shape we are interested in restricting the search to, as shown in the Seattle polygon map.
 
 <figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-ex.png" alt="Map of Seattle with a polygon drawn around the area used to restrict the event search"><figcaption></figcaption></figure>
 

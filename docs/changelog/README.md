@@ -18,7 +18,7 @@ Projects are available in Bolt. Open [Projects in Bolt](https://control.predicth
 {% endupdate %}
 
 {% update date="2026-10-06" tags="enhancement,developer-tools" %}
-## MCP Server - Listed in ChatGPT's Plugin Directory
+## MCP server - listed in ChatGPT's plugin directory
 
 The PredictHQ MCP server is listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
 
@@ -46,7 +46,7 @@ Bolt sharing now supports sharing individual cards, so you can share specific re
 {% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
 ## Cricket Predicted Attendance - accuracy improvements in the UK & Australia
 
-Predicted Attendance for cricket events in the UK and Australia is now more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions now capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
+Predicted Attendance for cricket events in the UK and Australia is more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions now capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
 
 If you have locations near cricket grounds, this improves match-day demand forecasts and makes each fixture's expected impact easier to explain.
 {% endupdate %}
@@ -62,7 +62,7 @@ Bolt's interface has also been improved to include an activity pane showing exac
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
 ## Juneteenth - Standardised Holiday Naming
 
-Juneteenth is now published under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardised the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardised to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
+PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardised to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
 
 The change covers US states and the US territories of Puerto Rico, the United States Virgin Islands, the Northern Mariana Islands, and American Samoa.
 {% endupdate %}
@@ -84,7 +84,7 @@ The PredictHQ MCP server now includes tools for searching and retrieving Predict
 
 The PredictHQ MCP server now exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
 
-Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam analyses, retrieve ML-ready features, build and train forecast models, and query Predicted Impact Area - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
+Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam Analyses, retrieve ML-ready features, build and train forecast models, and query Predicted Impact Area - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
 {% endupdate %}
 
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
@@ -166,7 +166,7 @@ Academic events for the 2026–2027 calendar year have been added to PredictHQ's
 
 UK council polygons have been updated to reflect the Cumbria and Northamptonshire local government reorganisations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
 
-Customers matching UK school holidays and public holidays to a place ID now get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
+If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}
 
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}

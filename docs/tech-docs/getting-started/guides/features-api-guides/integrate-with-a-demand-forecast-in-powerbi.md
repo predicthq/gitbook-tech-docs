@@ -34,7 +34,7 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 <figure><img src="../../../.gitbook/assets/powerbi-screenshot.png" alt="PowerBI screen showing the base model's performance of 48%, built without PredictHQ data"><figcaption><p>Base model performance in PowerBI (without PredictHQ data)</p></figcaption></figure>
 
-### Improving Base Model Results with PredictHQ
+### Improving base model results with PredictHQ
 
 From here, follow the [improving-demand-forecasting-models-with-event-features.md](improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 

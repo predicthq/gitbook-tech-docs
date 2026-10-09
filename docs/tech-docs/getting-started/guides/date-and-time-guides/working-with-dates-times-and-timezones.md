@@ -21,7 +21,7 @@ Note that the date fields in the Events API Query Parameters are in UTC. You can
 
 <summary>Previous guide on Converting to Local Time</summary>
 
-Dates and times of events provided by the Events API are in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone see the guide below.&#x20;
+The Events API provides dates and times of events in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone use the Python example in this section.&#x20;
 
 Below is an example of converting UTC time to local time using the `pytz` library in Python:
 

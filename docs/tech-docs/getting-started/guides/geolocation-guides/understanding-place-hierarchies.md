@@ -12,7 +12,7 @@ The `place_hierarchies` field contains Place ids for an event. The structure is 
 ]
 ```
 
-The array of ids is ordered, representing a parent-to-child hierarchy of places. In the above example, the id 6295630 is the parent place of 6255149; and 6255149 is the parent place of 6252001, and so on. The last id in the list is the place in which the event occurs: 5786882 in the example.
+The array of ids is ordered, representing a parent-to-child hierarchy of places. In the earlier example, the id 6295630 is the parent place of 6255149; and 6255149 is the parent place of 6252001, and so on. The last id in the list is the place in which the event occurs: 5786882 in the example.
 
 Details for each Place, such as its name can be retrieved from the [Places API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places). For the above hierarchy, calling the Places API with `?id=6295630,6255149,6252001,5815135,5799783,5786882` returns:
 
@@ -45,7 +45,7 @@ Place hierarchies value can be an empty array in some cases.
 
 Some events can have multiple hierarchies.
 
-Point events can have up to two hierarchies. The second hierarchy, if it exists, is a nearby major city's hierarchy within a radius of 50km. This [Bite of Seattle community festival](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9), for example, is scoped to two places. Its `scope` and `place_hierarchies` values are shown below. 7153941 is the place id of Denny Regrade, the neighbourhood where the festival takes place; 5809844 is the place id of Seattle, a nearby major city. `{ "scope": "locality", "place_hierarchies": [ ["6295630", "6255149", "6252001", "5815135", "5799783", "7153941"], ["6295630", "6255149", "6252001", "5815135", "5799783", "5809844"] ] }`
+Point events can have up to two hierarchies. The second hierarchy, if it exists, is a nearby major city's hierarchy within a radius of 50km. This [Bite of Seattle community festival](https://events.predicthq.com/events/QDgCysY3kMnpoGYFi9), for example, is scoped to two places. Its `scope` and `place_hierarchies` values are shown below. 7153941 is the place id of Denny Regrade, the neighborhood where the festival takes place; 5809844 is the place id of Seattle, a nearby major city. `{ "scope": "locality", "place_hierarchies": [ ["6295630", "6255149", "6252001", "5815135", "5799783", "7153941"], ["6295630", "6255149", "6252001", "5815135", "5799783", "5809844"] ] }`
 
 Area events have multiple hierarchies if the event applies to multiple counties or regions, or if its polygon overlaps with multiple counties or regions. For example: this [flood warning](https://events.predicthq.com/events/24gdWYbR9M7DzJBVdY) event's polygon overlaps with three counties in the state of Mississippi. Its `scope` and `place_hierarchies` values are shown below. 4421859, 4429877, 4450285 are the respective place ids for Claiborne County, Hinds County, and Warren County, as the following values show:
 

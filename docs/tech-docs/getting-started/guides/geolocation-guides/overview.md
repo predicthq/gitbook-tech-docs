@@ -24,7 +24,7 @@ Our APIs offer spatial search parameters to discover all events that impact your
 
 ## Basic location
 
-The `geo` field in the Events API response contains the longitude and latitude for point events. Below is an example of the location information for point events in the `geo` field. For a point type geometry object the coordinates are in the order longitude, latitude (as this follows the [geojson standard](https://geojson.org/)). See the example below:
+The `geo` field in the Events API response contains the longitude and latitude for point events. Below is an example of the location information for point events in the `geo` field. For a point type geometry object the coordinates are in the order longitude, latitude (as this follows the [geojson standard](https://geojson.org/)). Here is an example:
 
 ```
     "geo": {

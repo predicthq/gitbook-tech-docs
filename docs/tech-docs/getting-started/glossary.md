@@ -29,7 +29,7 @@ Related resources:
 
 The Features API transforms real-world events into structured, model-ready time-series signals for demand forecasting and ML pipelines.
 
-Rather than returning individual event records, it produces daily or weekly numerical aggregates grouped by event type—concerts, sports, public holidays, school holidays, and more. Aggregations incorporate predicted attendance, impact patterns, spend estimates, and ranking metrics, encapsulating the domain expertise required to turn raw event data into reliable demand signals.
+Rather than returning individual event records, it produces daily or weekly numerical aggregates grouped by event type—concerts, sports, public holidays, school holidays, and more. Aggregations incorporate Predicted Attendance, Predicted Impact Patterns, spend estimates, and ranking metrics, encapsulating the domain expertise required to turn raw event data into reliable demand signals.
 
 The Features API is the recommended integration surface for any use case involving forecasting, ML, staffing, pricing, or inventory decisions. It should be used in place of querying the Events API and constructing features manually—naive event aggregation introduces noise and degrades model performance.
 
@@ -112,7 +112,7 @@ Related resources:
 
 PHQ Labels are AI-generated sub-category classification tags applied to events, providing more granular and semantically consistent classification than legacy event labels.
 
-Where legacy labels are manually assigned and inconsistent in coverage, machine learning models trained across the full event catalogue generate PHQ Labels, which cover all event categories. They enable more precise filtering - for example, distinguishing a charity run from a marathon within the broader sports category, or a product launch from an industry summit within conferences.
+Where legacy labels are manually assigned and inconsistent in coverage, machine learning models trained across the full event catalog generate PHQ Labels, which cover all event categories. They enable more precise filtering - for example, distinguishing a charity run from a marathon within the broader sports category, or a product launch from an industry summit within conferences.
 
 PHQ Labels are available via the `phq_labels` field in the Events API response. They are particularly useful for customers who need fine-grained event segmentation in demand models or operational dashboards.
 
@@ -176,7 +176,7 @@ Most integrations start with a fixed radius when scoping events around a locatio
 
 Predicted Impact Area returns a location and industry-specific boundary that reflects where event-driven demand impact actually occurs. PredictHQ calibrates boundaries against real demand and event data across industries and geographies, and accounts for real-world constraints such as bodies of water, terrain, and road networks.
 
-The recommended approach is to create a Saved Location using `origin_geojson` without specifying a `geojson` area—Predicted Impact Area is then calculated automatically and stored against the location. The resulting `location_id` can be passed directly to Events API, Features API, Beam, and Forecasts API without needing to manage the boundary separately.
+The recommended approach is to create a Saved Location using `origin_geojson` without specifying a `geojson` area—PredictHQ then calculates the Predicted Impact Area automatically and stores it against the location. The resulting `location_id` can be passed directly to Events API, Features API, Beam, and Forecasts API without needing to manage the boundary separately.
 
 Predicted Impact Area replaces the Suggested Radius API for all new integrations.
 

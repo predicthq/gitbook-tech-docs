@@ -75,7 +75,7 @@ While rich and detailed, PredictHQ’s underlying event data isn’t structured 
 * Aggregating attendance for multi-day or overlapping events
 * Accounting for leading and lagging demand effects (e.g. shoulder nights around a concert)
 
-Even experienced data science teams can spend weeks or months designing, testing, and iterating on how to best represent events in their forecasting pipelines.
+Even if you're an experienced data science team, you can spend weeks or months designing, testing, and iterating on how to best represent events in their forecasting pipelines.
 
 PredictHQ’s Features API generates demand-relevant, time-series signals at request time designed for forecasting - so your teams can skip the foundational complexity of event aggregation and focus on building reliable, explainable, high-performing models faster.
 
@@ -116,7 +116,7 @@ Even well-resourced teams hit the same traps when working with event data:
 * Hardcoding event categories or filters based on assumptions - what drives demand varies by location. Use Beam to validate which event types actually impact bookings in each market.
 * Assuming one-size-fits-all radius logic - different locations respond to events differently. Use Predicted Impact Area and filter by Local Rank to ensure you’re capturing meaningful impact, not noise.
 
-## Final Advice: Start Simple, Scale Smart
+## Final advice: start simple, scale smart
 
 Don’t overcomplicate your starting point. High-impact events and demand-aware forecasting unlock fast, measurable wins.
 

@@ -34,7 +34,7 @@ Snowflake's ease of use and integration have made it a popular choice as a cloud
    2. [SQL Method](sql-method-guide.md)
 5. Use the output in machine learning demand forecasting models or for other applications
 
-## Get the Predicted Impact Area for each Location
+## Get the Predicted Impact Area for each location
 
 When querying events at the location level, a common way to retrieve those events is with a latitude, longitude, and radius to get the events within a given area. But, a common gap is knowing what radius to use when searching for events. The Predicted Impact Area API is the recommended approach.&#x20;
 
@@ -43,7 +43,7 @@ The [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/i
 As a first step, get the Predicted Impact Area for each location before moving forward with the guide. The example below uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [our documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
 
 {% hint style="info" %}
-In a separate environment outside of Snowflake, run this code.
+In a separate environment outside of Snowflake, run this code:
 {% endhint %}
 
 ```python
@@ -89,7 +89,7 @@ The **SAVED\_LOCATIONS** input table requires this format:
 <table data-full-width="true"><thead><tr><th width="190">location</th><th>latitude</th><th>longitude</th><th data-type="number">radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.81310</td><td>-87.65860</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-york</td><td>40.73061</td><td>-73.93524</td><td>null</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
 
 * **location**: a unique identifier for the location.
-* **latitude**/**longitude**: it is recommended to include five decimal places.
+* **latitude**/**longitude**: we recommend including five decimal places.
 * **radius**: the value returned from the using the Predicted Impact Area API.
 * **radius\_unit**: coded for either “km” (kilometers) or “mi” (miles).
 * **date\_start**/**date\_end**: the date range for the data to be returned. Can be changed.
@@ -118,7 +118,7 @@ VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'
 
 By default, the query returns three months of historical data. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
 
-Once the input table is in the format of the above, the below code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
+Once the input table is in the format of the above, the following code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
 
 {% code fullWidth="true" %}
 ```sql

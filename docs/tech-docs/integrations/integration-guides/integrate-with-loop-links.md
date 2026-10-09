@@ -32,7 +32,7 @@ The link does not require authentication. It has customer details embedded. For 
 
 You can link to the URL from within your application, and feedback goes straight into the Loop system.
 
-The advantage is customers don’t need to build a UI. The UI is responsive and works on desktop, tablet, and mobile.
+The advantage is you don't need to build a UI. The UI is responsive and works on desktop, tablet, and mobile.
 
 ## Loop Links integration
 
@@ -95,7 +95,7 @@ The email templates contain the organization at the top of the template. This is
 
 **Note that users cannot reply to these emails. In order to reply to them you need to use the event feedback page for the event in question and send a response in the feedback.**
 
-See below for some example emails:
+The following tabs show some example emails:
 
 {% tabs %}
 {% tab title="Approved Submission Email" %}
@@ -117,19 +117,19 @@ Users with admin access can track Loop feedback at [loop.predicthq.com](https://
 
 * Needs a PredictHQ login
 * Shows if Loop submissions are approved or rejected
-* Shows details of the discussion about the loop events with responses from PredictHQ
+* Shows details of the discussion about the Loop events with responses from PredictHQ
 * Allows administrators to track the status of events submitted by their end users
 
 This is typically used by support teams if issues are raised about event feedback and they want to review the feedback.
 
 ## Loop Links Technical Details
 
-### Integration Overview
+### Integration overview
 
 1. Create Loop Links using the API:
    1. Store links in your system, or
    2. Use the link immediately.
-2. If required update the **`org_name`** name field via the settings API to set the name displayed at the top of the Loop pages
+2. To set the name displayed at the top of the Loop pages, update the **`org_name`** field via the settings API if required
 3. In your application, implement the links.
 When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when the event they submitted is approved or rejected.
 
@@ -149,7 +149,7 @@ To **provide feedback on an existing event** - open the /event-feedback/ Loop Li
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
-Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. A feedback link or icon is added next to the event to allow users to provide feedback.
+Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. Add a feedback link or icon next to the event so users can provide feedback.
 
 #### To pre-fill the user's email address
 

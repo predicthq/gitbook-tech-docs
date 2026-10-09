@@ -1,6 +1,6 @@
 # Use case guides
 
-Industry guides that walk the proven path from first API call to measured value, using the integration patterns that have worked across our customers in that industry - so you don't have to rediscover them.
+Industry guides that walk the proven path from first API call to measured value, using the integration patterns that have worked across our customers in that industry - so you don't have to rediscover them. Available guides:
 
 * [Accommodation: the proven path to value](accommodation-the-proven-path-to-value.md)
 

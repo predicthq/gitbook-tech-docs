@@ -26,7 +26,7 @@ PredictHQ monitors the accuracy of their models and periodically retrains them t
 
 We have ML models to predict attendance for all our attended categories. Some types of events within some categories may use expert systems instead of machine learning models. For example, although most of our main sports within the sports category use ML models, Formula 1 race events do not use an ML model.
 
-ML models use machine learning features as inputs to predict attendance. These features are different pieces of data that allow the model to make an accurate prediction based on different factors. For example, the sports teams playing, the type of sport, and the venue a sports game is played all affect the predicted attendance. If two very popular sports teams play at a large stadium then they are more likely to have more people attending the game.
+ML models use machine learning features as inputs to predict attendance. These features are different pieces of data that allow the model to make an accurate prediction based on different factors. For example, the sports teams playing, the type of sport, and the venue a sports game is played all affect the Predicted Attendance. If two very popular sports teams play at a large stadium then they are more likely to have more people attending the game.
 
 The following sections give examples of ML models and the factors they use to predict attendance.
 

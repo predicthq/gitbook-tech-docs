@@ -26,9 +26,9 @@ You need:
 
 * A PredictHQ account and API token - a free trial account has access to everything this tutorial uses. See the [API quickstart](../api-quickstart.md) to create a token.
 * Python with the `requests` library (any recent version), or the HTTP client of your choice - every step is a plain HTTP call.
-* The retail sample dataset: download [`sample_demand_retail.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv) into your working directory. It contains 18 months of synthetic daily demand for a fictional retail store, modelled on realistic patterns - including holiday closures and demand spikes. [Sample datasets](../guides/beam-guides/sample-demand-data.md) exist for other industries too; this tutorial uses retail throughout so the responses you see match the ones shown.
+* The retail sample dataset: download [`sample_demand_retail.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv) into your working directory. It contains 18 months of synthetic daily demand for a fictional retail store, modeled on realistic patterns - including holiday closures and demand spikes. [Sample datasets](../guides/beam-guides/sample-demand-data.md) exist for other industries too; this tutorial uses retail throughout so the responses you see match the ones shown.
 
-Set your token once for all the steps:
+To use your token in every step, set it once:
 
 ```python
 import requests

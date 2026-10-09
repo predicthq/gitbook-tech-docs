@@ -12,7 +12,7 @@ PredictHQ provides venues with latitude, longitude, and address to locate the ev
 
 A venue can be found on an event record as an array of entities with the type of `venue`.
 
-All events happening at the same venue will have the same latitude/longitude and street address.
+All events happening at the same venue have the same latitude/longitude and street address.
 
 Below is an example of the venue entity information returned in the Events API response
 
@@ -124,7 +124,7 @@ Similar to finding all events for an event-group entity for recurring events, fi
 
 ## How can I use entities in Snowflake
 
-Snowflake returns entity information in the ENTITIES column. That contains all the entities' information mentioned above. You can query that column to find all events for an entity or to retrieve the relevant entities for an event
+Snowflake returns entity information in the ENTITIES column. That contains all the entities' information mentioned earlier. You can query that column to find all events for an entity or to retrieve the relevant entities for an event
 
 ## What is the difference between labels and entities?
 
