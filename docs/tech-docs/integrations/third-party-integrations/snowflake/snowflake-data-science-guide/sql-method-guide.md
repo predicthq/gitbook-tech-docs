@@ -401,7 +401,7 @@ SUM(CASE WHEN i.weather_category = 'air-quality' THEN i.phq_rank ELSE 0 END)
 ```
 {% endcode %}
 
-## Step 3: Final Select for all Features
+## Step 3: Final select for all features
 
 The following code pulls all the features generated earlier into a single table called **ML\_FEATURES\_FOR\_LOCATIONS**.\
 \

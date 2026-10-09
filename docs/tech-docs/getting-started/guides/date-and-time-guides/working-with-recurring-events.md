@@ -146,7 +146,7 @@ A snippet of the results is shown below:
 }
 ```
 
-## Find a Specific Recurrence of an Event
+## Find a specific recurrence of an Event
 
 In this example, we find the 2019 instance of the "ASH Annual Meeting":
 

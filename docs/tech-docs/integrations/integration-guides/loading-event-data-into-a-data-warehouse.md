@@ -96,7 +96,7 @@ Regardless of the method chosen for initial data creation and loading, the table
 
 ## JSONL file Upload Method
 
-This method is recommended for large data uploads, as it efficiently manages the transfer of large volumes of data better than direct API calls.
+We recommend this method for large data uploads, as it efficiently manages the transfer of large volumes of data better than direct API calls.
 
 ### Search Events in the WebApp and Export JSONL
 
@@ -125,7 +125,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 <figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
-4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype will lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
+4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
 <figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table Data Structure</a> and check for spelling</p></figcaption></figure>
 

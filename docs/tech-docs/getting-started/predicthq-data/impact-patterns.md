@@ -10,7 +10,7 @@ Below is a visual representation of impact patterns:
 
 <figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
-You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models will take account of the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.
+You can use Predicted Impact Patterns in your demand forecasting so that your machine learning models account for the impact on leading and lagging days. In our testing we have found using impact patterns increases forecasting accuracy.
 
 #### Vertical, type, and category mapping
 

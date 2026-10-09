@@ -46,7 +46,7 @@ Since the large majority of demand forecasting use cases we see run on horizons 
 
 It can still feel counterintuitive that individual events change constantly, yet aggregate forecast accuracy barely moves. The reason comes down to aggregation.
 
-Forecasting models don't consume individual event records directly — they consume features that aggregate many events together for a given location, day, and category (for example, total predicted attendance across all concerts, sports, and festivals happening near a store on a given day). A single event being postponed, cancelled, or having its attendance estimate revised is a small perturbation to one input among many contributing to that aggregate. It rarely shifts the aggregate feature enough to change the resulting forecast in any meaningful way.
+Forecasting models don't consume individual event records directly—they consume features that aggregate many events together for a given location, day, and category (for example, total predicted attendance across all concerts, sports, and festivals happening near a store on a given day). A single event being postponed, cancelled, or having its attendance estimate revised is a small perturbation to one input among many contributing to that aggregate. It rarely shifts the aggregate feature enough to change the resulting forecast in any meaningful way.
 
 Individual event-level details are genuinely dynamic — that's what real-world context looks like. What our results show is that this dynamism, once rolled up into the aggregated features models actually use, doesn't translate into meaningful forecast accuracy drift within the horizons that matter for real forecasting decisions.
 

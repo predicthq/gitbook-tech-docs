@@ -31,7 +31,7 @@ The Features API standardizes how event data is transformed into numerical deman
 
 This replaces bespoke event feature engineering pipelines with consistent API outputs.
 
-## What the Features API Does
+## What the Features API does
 
 The Features API:
 

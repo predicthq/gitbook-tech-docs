@@ -49,7 +49,7 @@ Relevance is not a one-time decision. Demand patterns evolve, event behaviour ch
 
 * The [Beam API](what-is-beam.md) calibrates event impact against your historical demand data.
 * Beam isolates true event-driven variability and identifies which event types consistently explain it.
-* Calibration can be rerun as demand evolves, ensuring relevance remains current.
+* You can rerun calibration as demand evolves, which keeps relevance current.
 
 This reduces noise and ensures that models learn from materially impactful events rather than statistical artefacts.
 

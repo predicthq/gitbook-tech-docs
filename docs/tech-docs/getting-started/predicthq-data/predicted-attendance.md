@@ -16,7 +16,7 @@ PHQ Rank, Local Rank, and Predicted Attendance use the following table to transl
 
 These mappings are sometimes referred to as ranking bands.
 
-## How Predicted Attendance is calculated
+## How PredictHQ calculates Predicted Attendance
 
 PredictHQ calculates Predicted Attendance via machine learning models (ML models) and expert systems in our pipeline. We train our ML models on historical data, and they predict the number of people that are predicted to attend a future event before they happen. Our models use a large number of inputs (called machine learning features) to make an accurate prediction.
 

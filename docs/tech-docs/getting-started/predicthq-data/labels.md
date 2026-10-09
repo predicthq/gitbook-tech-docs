@@ -44,7 +44,7 @@ PHQ Labels are available for the following categories:
 
 #### PHQ Label values
 
-PHQ Labels are continuously improved and updated, so the set of values grows over time. The [full list of PHQ Label values](#all-phq-label-values) is on this page, refreshed daily, along with a CSV download. To see which labels appear on the events **within your PredictHQ plan** - and the count of events carrying each - use [Get event counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts).
+We continuously improve and update PHQ Labels, so the set of values grows over time. The [full list of PHQ Label values](#all-phq-label-values) is on this page, refreshed daily, along with a CSV download. To see which labels appear on the events **within your PredictHQ plan** - and the count of events carrying each - use [Get event counts](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/get-event-counts).
 
 Here is an example, for [Taylor Swift and Sabrina Carpenter](https://events.predicthq.com/events/ssZCJhGGKUswicJswa) at the Melbourne Cricket Ground in 2024 it has the following PHQ labels (pop, country, and rock) in the API response:
 
@@ -154,7 +154,7 @@ The full list of 248 PHQ Label values, refreshed daily from the live API. Prefer
 | `wind` | `winter-holiday` | `wnba` | `worship-closed` |
 | `worship-open` | `wrestling` | `wwe` | `youth-sport` |
 
-### Labels (Legacy)
+### Labels (legacy)
 
 The API still returns legacy labels to preserve backward compatibility with existing implementations.
 

@@ -51,11 +51,11 @@ Below is an example of the response from the Public API showing the Placekey for
 }
 ```
 
-## Placekey Support
+## Placekey support
 
 Placekey has address support for the United States, United Kingdom, and Canada (see [supported countries](https://docs.placekey.io/#b0aa86a5-ec33-45a8-aebf-67c25c5ca0a5)). For these countries, PredictHQ events have both the What@Where part where the events have sufficient address information. Some events that don’t have address information may just have the @Where part of Placekey.
 
-Placekey is supported on attended events from 2020 onwards.
+PredictHQ provides Placekey on attended events from 2020 onwards.
 
 For all other countries where Placekey does not support addresses, these events will have the `@Where` part of Placekey. For example, the [Stade Toulousain vs Perpignan](https://events.predicthq.com/events/FYwLVpWzz7k6SRmiZy) event in Toulouse, France has a Placekey of `@7f7-mcy-ndv`. This is very useful and can also be used to find nearby events and to join with POI data.
 

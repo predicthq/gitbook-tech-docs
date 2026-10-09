@@ -1,6 +1,6 @@
 # Receive data via SFTP
 
-PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files - deploying verified real-world context into your environment when Snowflake or AWS Data Exchange aren't options. The result is the same: an always-current local store for model training, explainability, and [provisioned grounding](../integration-guides/provisioned-grounding.md), governed by you.
+PredictHQ can deliver Event and Broadcast data via SFTP as regularly updated files - deploying verified real-world context into your environment when Snowflake or AWS Data Exchange aren't options. The result is the same: an always-current local store for model training, explainability, and [provisioned grounding](../integration-guides/provisioned-grounding.md), which you govern.
 
 SFTP delivery follows the same full + incremental data model used by our other bulk data integrations.
 
@@ -18,13 +18,13 @@ To maintain a complete and accurate dataset, process deliveries in the order the
 
 For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update`, or `delete`).
 
-### File Naming
+### File naming
 
 ```
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
 ```
 
-<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>PredictHQ splits each delivery into multiple files to keep file sizes manageable. Individual files will vary in size but will not exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data is compressed using Snappy and the file extension is prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
+<table><thead><tr><th width="282.97265625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>delivery_config_id</code></td><td>PredictHQ identifier for your delivery configuration.</td></tr><tr><td><code>datetime</code></td><td>UTC export timestamp in <code>YYYYMMDD-HHMM</code> format.</td></tr><tr><td><code>data_type</code></td><td><p>The data being delivered. Can be one of the following:</p><p></p><ul><li><code>event</code></li><li><code>broadcast</code></li></ul></td></tr><tr><td><code>delivery_type</code></td><td><p>The delivery is either a full export of all available data or incremental based on the previous export. Possible values:</p><p></p><ul><li><code>full</code></li><li><code>incremental</code></li></ul></td></tr><tr><td><code>number</code></td><td><p>PredictHQ splits each delivery into multiple files to keep file sizes manageable. Individual files vary in size but don't exceed approximately 1 GB.</p><p></p><p>Files within a single delivery are not ordered and do not need to be processed sequentially. They can be processed in parallel. However, deliveries themselves must be processed in chronological order to ensure data consistency.</p></td></tr><tr><td><code>ext</code></td><td><p>The file extension indicates the data structure and compression used.</p><p></p><p>If compression is used (configurable) the data is compressed using Snappy and the file extension is prefixed with <code>snappy</code>.</p><p></p><p>Possible values:</p><p></p><ul><li><code>parquet</code></li><li><code>ndjson</code> - Newline-delimited JSON</li><li><code>csv</code> - Comma separated values</li><li><code>psv</code> - Pipe separated values</li></ul><p><br>E.g., <code>snappy.parquet</code></p></td></tr></tbody></table>
 
 Within a single delivery, files can be processed in any order. Deliveries themselves should be processed oldest to newest.
 
@@ -45,7 +45,7 @@ You will use these credentials to connect to the PredictHQ-managed SFTP server a
 
 ## Typical Ingestion Flow
 
-Most customers implement an automated process that:
+Implement an automated process that:
 
 1. Connects to the SFTP server
 2. Lists available / delivery folders

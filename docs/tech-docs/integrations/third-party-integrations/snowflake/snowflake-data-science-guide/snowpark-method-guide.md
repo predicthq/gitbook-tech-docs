@@ -17,7 +17,7 @@ Below is an example of calling the Features API with Python in Snowpark. This us
 
 This code is an example, not production-ready. Test and optimize it before you use it.
 
-### Python Code
+### Python code
 
 {% code fullWidth="true" %}
 ```python

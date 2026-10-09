@@ -57,7 +57,7 @@ flowchart LR
     D --> E[📈 Forecast]
 ```
 
-### Prepare Your Data
+### Prepare your data
 
 To generate a forecast, you need to provide a daily time series with two columns:
 
@@ -89,7 +89,7 @@ All forecast models are tied to a Saved Location so you can define the location 
 
 #### Create Saved Location (Using Predicted Impact Area)
 
-Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson` — the API calculates the Predicted Impact Area automatically and stores it against the location.
+Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson`—the API calculates the Predicted Impact Area automatically and stores it against the location.
 
 ```python
 # Create Saved Location with Predicted Impact Area
@@ -261,7 +261,7 @@ flowchart LR
 Every date in the forecast response includes a `forecast` value—that’s the core output you’ll use. Optionally, you can request explainability to get additional context on why the model predicted that value for a given day. This includes a list of impactful real-world events (e.g. school holidays, concerts) that the model considered significant for that date. There are two key pieces of explainability that can be provided:
 
 * `phq_explainability` - Top events the model has determined are impacting your demand on this date.
-* `phq_features` - List of features (from Features API) that were identified through Beam's Feature Importance process as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.
+* `phq_features` - List of features (from Features API) that Beam's Feature Importance process identified as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.
 
 {% hint style="info" %}
 Explainability is optional—use `phq_explainability` in your `include` query param to enable it.

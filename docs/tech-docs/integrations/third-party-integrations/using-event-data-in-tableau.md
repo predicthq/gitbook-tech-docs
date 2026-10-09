@@ -6,7 +6,7 @@ description: Learn how to connect PredictHQ data to Tableau and build an example
 
 PredictHQ provides verified real-world events that impact key business operations, including demand forecasting and strategic planning. This tutorial shows how to connect PredictHQ to Tableau to visualize how events influence business trends - loading a static event export, and connecting directly to data warehouses where PredictHQ data is stored.
 
-## Getting Started
+## Getting started
 
 This tutorial requires access to both Tableau and PredictHQ.
 
@@ -91,7 +91,7 @@ For more information on data types, see this [Tableau article](https://help.tabl
 
 ## Dashboard with event data
 
-This section will guide you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. PredictHQ data is connected via a JSON file.
+This section guides you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. PredictHQ data is connected via a JSON file.
 
 ### Worksheets
 
@@ -109,7 +109,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 2. Apply Filters Globally: Apply the above filters to 'all worksheets using this data source' by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. Drag `Value` from 'Source Measures' to the Row shelf.
-   2. Drag `Date Local` from 'Impacts' to the Column shelf. Then right-click on the `Date Local` pill and select the 'Exact Date' format.
+   2. Drag `Date Local` from 'Impacts' to the Column shelf. Then right-click the `Date Local` pill and select the 'Exact Date' format.
    3. Update the y-axis title to 'Daily Event Day Impact' by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis).
 4. Chart Preview:
 

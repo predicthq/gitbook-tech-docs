@@ -93,7 +93,7 @@ The `start_local` and `end_local` fields show the event spans the entire day of 
 
 ### Fixed Time
 
-Refers to events covering an exact time range. The start and end times are known (or predicted). These events are represented in UTC and have a timezone.&#x20;
+Refers to events covering an exact time range. The start and end times are known (or predicted). We represent these events in UTC, and they have a timezone.&#x20;
 
 ```json
 {

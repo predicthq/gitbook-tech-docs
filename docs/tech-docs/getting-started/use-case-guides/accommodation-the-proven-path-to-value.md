@@ -31,7 +31,7 @@ To make a calendar useful - across one hotel or thousands - it needs to:
 
 The challenge is: how do you know which events actually drive demand?
 
-### Use Beam to Identify Impactful Event Types
+### Use Beam to identify impactful event types
 
 Beam analyzes historical booking patterns to reveal which types of events consistently influence demand for each hotel or group of hotels. It gives you a data-backed filter that ensures each calendar surfaces the most relevant events - and hides the ones that don’t matter (via Beam’s Feature Importance).
 

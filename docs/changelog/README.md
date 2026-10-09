@@ -20,7 +20,7 @@ Projects are available in Bolt. Open [Projects in Bolt](https://control.predicth
 {% update date="2026-10-06" tags="enhancement,developer-tools" %}
 ## MCP Server - Listed in ChatGPT's Plugin Directory
 
-The PredictHQ MCP Server is now listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
+The PredictHQ MCP server is now listed in ChatGPT's Plugin Directory, so you can [connect to it straight from the PredictHQ listing](https://chatgpt.com/plugins/plugin_asdk_app_6a9607623e008191ad63b9e4879aa58f) without the custom connector setup.
 
 See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for more details on connecting.
 {% endupdate %}
@@ -44,7 +44,7 @@ Bolt sharing now supports sharing individual cards, so you can share specific re
 {% endupdate %}
 
 {% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
-## Cricket Predicted Attendance - Accuracy Improvements in the UK & Australia
+## Cricket Predicted Attendance - accuracy improvements in the UK & Australia
 
 Predicted Attendance for cricket events in the UK and Australia is now more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions now capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
 
@@ -90,7 +90,7 @@ Previously limited to event search, the MCP server now supports the complete Pre
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
 ## NHL Postseason Labelling
 
-NHL fixtures played in the postseason now carry the postseason label. Customers who filter or weight NHL games by season stage get an accurate stage label on these games.
+NHL fixtures played in the postseason now carry the postseason label. If you filter or weight NHL games by season stage, you get an accurate stage label on these games.
 {% endupdate %}
 
 {% update date="2026-06-01" tags="new-feature,developer-tools,webapp" %}
@@ -104,7 +104,7 @@ Bolt is an AI-native developer environment that guides you through the right Pre
 {% update date="2026-05-27" tags="data-quality,enhancement,events-api" %}
 ## Concert Venue and Attendance Accuracy
 
-Two refinements to concert data quality. Events from organisers who announce their venue only shortly before the show - where a large default venue stands in until then - are now identified and filtered out, so intimate gigs are not published with the attendance profile of a large venue. Separately, concert records that arrive attached to a sports team entity are also filtered out.
+Two refinements to concert data quality. We now identify and filter out events from organisers who announce their venue only shortly before the show - where a large default venue stands in until then - so we don't publish intimate gigs with the attendance profile of a large venue. Separately, we also filter out concert records that arrive attached to a sports team entity.
 {% endupdate %}
 
 {% update date="2026-05-25" tags="events-api,features-api,deprecation" %}

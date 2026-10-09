@@ -18,7 +18,7 @@ Key points about MAPE:
 
 In our expanding window evaluation framework, the Forecasts API calculates the MAPE not just from a single forecast, but across multiple rolling forecast iterations—this simulates how the model would perform in a real-world setting where forecasts are generated repeatedly over time, and ensures the reported accuracy reflects consistent performance, not just a one-off result.
 
-## WAPE – Weighted Absolute Percentage Error
+## WAPE – weighted absolute percentage error
 
 WAPE quantifies the total forecast error as a percentage of the total actual demand. Unlike MAPE, which gives equal weight to each data point, WAPE weights each error by the size of the actual value. This makes it less sensitive to very small actual values, so it's a more reliable measure of accuracy in some situations.
 

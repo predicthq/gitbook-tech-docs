@@ -22,7 +22,7 @@ Let's take a fictional example: Tom, the owner of Tom’s Pizzeria in Downtown S
 
 ## How-To Guide
 
-The sections below will guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
+The sections below guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
 
 ### Step 1. Define query parameters for the Events API
 
@@ -57,7 +57,7 @@ params={
 
 Define the catchment area for the search. Refer to our [industry recommendations](../industry-specific-event-filters.md#location-type) for which location type to start with.
 
-* **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When created from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
+* **Saved Location (Recommended)**: Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations. When you create one from a lat/lon origin, PredictHQ automatically calculates the [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) and stores it as the location boundary. You can then use `saved_location.location_id` in Events API, Features API, and Beam queries, with no manual boundary management needed.
 * **Center Point & Radius**: For a search without a Saved Location, use the `within` parameter with lat/lon and a radius. Use the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry rather than guessing.
 * **City, State, Country**: For targeted searches across a predefined area e.g. specific cities, states, or countries, use the `place` parameter and provide a place ID. The [Places API](https://docs.predicthq.com/api/places/search-places) can assist in finding correct place IDs.
 * **Country-wide**: If your interest spans an entire country, use the `country` parameter and set it to the relevant ISO country code.
@@ -203,7 +203,7 @@ else:
     print(f"Error fetching response: {response.status_code}")
 ```
 
-#### Handling Paginated API Responses
+#### Handling paginated API responses
 
 The Events API responses come in a paginated format to limit the amount of data sent in a single response. Here's how you can automatically loop through the paginated API responses to collect all available results:
 

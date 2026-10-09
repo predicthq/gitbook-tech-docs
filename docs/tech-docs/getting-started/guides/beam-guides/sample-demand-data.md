@@ -8,7 +8,7 @@ If you don't have your own demand data ready, you can use one of our sample data
 
 PredictHQ is optimized for the following named industries: `accommodation`, `cpg`, `tourism`, `marketing`, `parking`, `restaurants`, `retail`, and `transportation`. If your business doesn't fit one of these, use `other` - the platform applies to any industry, and Beam calibrates to your own demand data either way. See [Industry recommendations](../industry-specific-event-filters.md) for guidance on choosing.
 
-## Using the Sample Data
+## Using the sample data
 
 ### **With Beam**
 

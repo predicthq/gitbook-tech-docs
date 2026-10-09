@@ -38,7 +38,7 @@ Below are the main steps involved in this guide:
 For the purposes of this tutorial, parameters will be fixed for a standard example. Parameters are defined below, focusing on San Francisco city for attended events in a 3 month period.
 
 {% hint style="info" %}
-All of our parameters are able to be modified based on user needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
+You can modify all of our parameters based on your needs, see our [filtering guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md) for details on what these parameters mean and how they can be modified to suit different use cases.
 {% endhint %}
 
 ### Example Parameters for this Guide:
@@ -91,11 +91,11 @@ Right-click the Query under Queries and go to the Advanced Editor option. The Qu
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt=""><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
-This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that will transform the columns automatically for use in the report.
+This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that transforms the columns automatically for use in the report.
 
 This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-Paste the Power Query below after the first existing 4 lines, after the "Changed Type" step, replacing everything from the existing “in” down.
+Paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down.
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -313,7 +313,7 @@ This guide creates a connected chart and table that covers the defined time peri
 
 To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
 
-Group as one (shift-click both boxes, right-click on one of them, and click the Group -> Group option).
+Group as one (shift-click both boxes, right-click one of them, and click the Group -> Group option).
 
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 

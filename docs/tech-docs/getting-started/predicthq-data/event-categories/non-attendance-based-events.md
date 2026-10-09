@@ -85,7 +85,7 @@ The latitude and longitude is pointing to the center of the region or country.
 
 <table><thead><tr><th width="287">Geo-scope Level</th><th>Countries</th></tr></thead><tbody><tr><td>Country</td><td>Azerbaijan, Monaco, Bulgaria, Liechtenstein, Brazil, Latvia, Moldova, Bosnia and Herzegovina, Hungary, Mexico, Ukraine, Vietnam, South Korea, Japan, Croatia, New Zealand, Turkey, Slovakia, Russia, Greece, Lithuania, United Arab Emirates, Hong Kong, Serbia, Armenia, Taiwan, Malta, Republic of Ireland, Iceland, Albania, Finland, Montenegro, Kosovo, Fiji, Belarus, Estonia, Kazakhstan, Slovenia, Thailand, Israel, Poland, Singapore, Cyprus, India, Romania, Switzerland, Andorra, Portugal, Czech, Malaysia, Belgium, Indonesia, Denmark, North Macedonia, Georgia</td></tr><tr><td>Region</td><td>Netherlands, Spain, Luxembourg, Sweden, South Africa, Austria, Australia, Italy, France, Norway, Germany, Canada, China, United Arab Emirates, Chile</td></tr><tr><td>County</td><td>United States</td></tr><tr><td>Region/County/Local-admin</td><td>United Kingdom</td></tr></tbody></table>
 
-#### School Holidays in the United Kingdom
+#### School holidays in the United Kingdom
 
 Our school holidays data goes to a more granular detailed level for the United Kingdom than for other countries. Our school holidays data includes local council level school holidays for England, Wales, North Ireland and Scotland.
 
@@ -167,7 +167,7 @@ These Frequently asked questions apply to district level school holidays (for th
 
 The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey will have a scope for Surrey and a scope for Greater London as they are near Greater London.
 
-If you use the `place.scope` parameter and query for Greater London in this example you will get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
+If you use the `place.scope` parameter and query for Greater London in this example you get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
 
 #### Entities
 

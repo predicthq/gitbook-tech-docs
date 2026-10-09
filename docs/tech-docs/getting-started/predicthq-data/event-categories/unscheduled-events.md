@@ -8,7 +8,7 @@ description: >-
 
 ## Categories
 
-### Severe Weather
+### Severe weather
 
 Severe weather is any dangerous meteorological phenomenon with the potential to cause damage, serious social disruption, or loss of human life. Types of severe weather phenomena vary, depending on the latitude, altitude, topography, and atmospheric conditions.
 
@@ -168,7 +168,7 @@ Airport delays events have no Predicted Attendance available as the rank/impact 
 
 ### Health Warnings
 
-This category will cover events related to infectious diseases. Some events will refer to localised outbreaks, some to nationwide epidemics, some to government mandated restrictions due to COVID-19.
+This category covers events related to infectious diseases. Some events will refer to localised outbreaks, some to nationwide epidemics, some to government mandated restrictions due to COVID-19.
 
 Labels
 

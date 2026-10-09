@@ -39,7 +39,7 @@ PredictHQ has a number of different APIs that can be used to build reports, in t
 
 Microsoft Excel connects using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
-Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
+Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation the result is a URL string like the one below:
 
 {% code overflow="wrap" fullWidth="true" %}
 ```url

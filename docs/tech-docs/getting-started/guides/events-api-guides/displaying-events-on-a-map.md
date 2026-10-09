@@ -8,7 +8,7 @@ Events can significantly impact businesses. Understanding when and where events 
 
 This tutorial demonstrates how to create a dynamic map using PredictHQ event data to visualize events geographically. It begins with a simple JavaScript example using [Leaflet](https://leafletjs.com/) and then looks at how to retrieve relevant events using PredictHQ's Events API. The goal is to provide a straightforward example to help you incorporate events into any map view.
 
-## Example Map
+## Example map
 
 This section presents a simple example demonstrating the basic functionality of a map integrated with PredictHQ data. Explore this through the following Observable notebook:
 
@@ -37,7 +37,7 @@ For this example, [events are retrieved](https://observablehq.com/@predicthq/eve
 1. **Date Range**: Events taking place within the next seven days from today are considered to ensure the data remains current and actionable.
 2. **Location**: The geographical focus is on San Francisco, offering a targeted view of local events.
 3. **Categories**: The focus is on sports events and their potential to draw large crowds.
-4. **Event Rank**: Priority is given to events with the largest predicted attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
+4. **Event Rank**: The example prioritizes events with the largest Predicted Attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
 
 {% hint style="info" %}
 For guidance on effectively querying the Events API, see [#customizing-event-data](displaying-events-on-a-map.md#customizing-event-data "mention") below.

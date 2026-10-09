@@ -16,7 +16,7 @@ PredictHQ is one of those tools. The agent calls it via MCP whenever a decision 
 
 The same pattern holds in multi-agent systems. An orchestrator coordinating specialised agents, or a team of agents collaborating toward a shared goal, can treat PredictHQ as a shared source of real-world context. Whichever agent owns the decision that depends on real-world conditions is the one that reaches for it, and it returns the same verified, deterministic context regardless of which agent makes the call.
 
-## Why PredictHQ Fits Agentic Workflows
+## Why PredictHQ fits agentic workflows
 
 PredictHQ is the real-world context platform that powers enterprise AI decisions. Several properties make it well-suited to autonomous agent loops.
 
@@ -32,7 +32,7 @@ PredictHQ is the real-world context platform that powers enterprise AI decisions
 
 PredictHQ's value in an agent loop comes from calibrated demand intelligence, which depends on two things being in place for each location.
 
-**Saved Locations** define geographic scope. Each location is created with an `origin_geojson` point and an `industry`, and PredictHQ automatically calculates a Predicted Impact Area calibrated to that location. Do not use a hardcoded radius.
+**Saved Locations** define geographic scope. Create each location with an `origin_geojson` point and an `industry`, and PredictHQ automatically calculates a Predicted Impact Area calibrated to that location. Do not use a hardcoded radius.
 
 **Beam** identifies which real-world activity actually drives demand at each location, using historical demand data. Beam is not optional. Without it, category selection is guesswork and the demand signals an agent acts on are weaker for it. Run one Beam Analysis per location, and refresh both Saved Locations and Beam at least monthly so calibration tracks PredictHQ's latest models.
 

@@ -12,7 +12,7 @@ A radial search returns events based on their location and geometry type. The im
 
 <figure><img src="../../../../.gitbook/assets/radial-search-control-center.png" alt=""><figcaption></figcaption></figure>
 
-When searching for events around a specific business location—a store, hotel, or other fixed site—the recommended approach is to use a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations). When you create a Saved Location from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then reference that location by `location_id` across the Events API, Features API, and Beam — without managing coordinates or boundaries manually.
+When searching for events around a specific business location—a store, hotel, or other fixed site—the recommended approach is to use a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations). When you create a Saved Location from a lat/lon origin, [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) is calculated automatically and stored as the location boundary. You can then reference that location by `location_id` across the Events API, Features API, and Beam—without managing coordinates or boundaries manually.
 
 If you need a simpler point-and-radius search without a Saved Location, you can use the `within` parameter directly as described above. In that case, see the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) with `area_type=radius` to get an appropriate radius for your location and industry.
 
