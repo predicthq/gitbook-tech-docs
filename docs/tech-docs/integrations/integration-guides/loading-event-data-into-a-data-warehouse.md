@@ -55,7 +55,7 @@ There are several methods available for integrating PredictHQ data with GCP BigQ
 
 This guide will walk you through the initial data load, providing you with the tools and understanding necessary to create a robust connection to GCP. You'll learn how to structure your data effectively within your warehouse, setting the stage for potential automation and regular updates that you can implement as needed.
 
-## Table Data Structure
+## Table data structure
 
 Regardless of the method chosen for initial data creation and loading, the table structure remains consistent. This ensures that both methods are interchangeable, delivering data in a uniform format. The data structure for the table is detailed below:
 
@@ -125,9 +125,9 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 <figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
-4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
+4. **Manually Define Schema**: This step involves specifying the schema details manually. You must accurately define each column, ensuring that the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
-<figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table Data Structure</a> and check for spelling</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
 5. **Advanced Options**: Expand the Advanced Options and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: Click the "Create Table" button to finalize the creation.
@@ -142,7 +142,7 @@ This method works well for smaller datasets as initial upload and must be used f
 
 ### Table Creation Code
 
-To establish the required data structure in BigQuery, you can utilize the following Python script. This script explicitly defines the columns and data types as laid out in our [Table Data Structure](loading-event-data-into-a-data-warehouse.md#table-data-structure), configuring them precisely as needed for your BigQuery table. Before executing this script, ensure you have the following prerequisites:
+To establish the required data structure in BigQuery, you can utilize the following Python script. This script explicitly defines the columns and data types as laid out in our [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure), configuring them precisely as needed for your BigQuery table. Before executing this script, ensure you have the following prerequisites:
 
 * **SERVICE\_ACCOUNT\_JSON**: This is your service account JSON key, which is typically stored in a secure file. If your organization uses a different method to handle service account keys, modify the code accordingly.
 * **dataset\_id**: Specify whether this is a new dataset or an existing one in which you want to place this table.

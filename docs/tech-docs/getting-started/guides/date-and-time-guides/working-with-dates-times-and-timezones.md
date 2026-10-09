@@ -60,7 +60,7 @@ Internally, we have the concept of different date types for events. We don't exp
 
 * Fixed Date
 * Fixed Time
-* Floating Date
+* Floating date
 
 ### Fixed Date
 
@@ -120,7 +120,7 @@ Using the same `convert_to_local` function from earlier we get:
 
 Showing the event is scheduled from 7:00 PM to 8:30 PM on November 9th, 2023 in the Australia/Melbourne timezone.
 
-### Floating Date
+### Floating date
 
 Refers to events that happen on a particular date regardless of timezone. E.g., USA Independence Day is 4th of July regardless of timezone. The way we represent this concept is by setting the `timezone` to `null` as in the following example:
 
