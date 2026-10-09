@@ -95,7 +95,7 @@ You can configure PHQ Attendance features using the options below.
 {% tab title="PHQ Impact Features" %}
 PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
 
-**Holidays and Observances Impact Pattern Features**
+**Predicted Impact Patterns for holidays and observances**
 
 These features include the Predicted Impact Patterns for public holidays and observances. For example, these features show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 
@@ -213,7 +213,7 @@ PHQ Rank features provide the daily-level aggregated sum of events bucketed by P
 
 **PHQ Rank Impact Pattern Features**
 
-See the "Holidays and Observances Impact Pattern Features" in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+See the "Predicted Impact Patterns for holidays and observances" features in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.

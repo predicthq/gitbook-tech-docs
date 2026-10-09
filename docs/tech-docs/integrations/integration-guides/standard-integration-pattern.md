@@ -13,7 +13,7 @@ A PredictHQ integration has four logical components on your side:
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
 
-The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
+The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
 
 ## Architecture diagram
 
@@ -108,7 +108,7 @@ The `analysis_id` automatically applies the correct location boundary, event cat
 
 Using the `analysis_id`, call the Events API to retrieve the specific events driving demand at each location. Store results locally.
 
-You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
+You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
 
 **Alternative delivery:** PredictHQ can deliver events filtered by Beam Analysis or Saved Location via Snowflake Private Share, AWS Data Exchange, or SFTP. For most production use cases, this is the preferred approach over live Events API calls.
 

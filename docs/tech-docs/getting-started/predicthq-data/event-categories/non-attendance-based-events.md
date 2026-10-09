@@ -181,7 +181,7 @@ School holidays have no entities available
 
 We rank school holidays for the United Kingdom (from September 2017) and the United States (from September 2018) based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ rank value.
 
-All school holidays for other countries and from the US and UK before the time periods stated above have a PHQ Rank of 90 to indicate the general impact on the region.
+All school holidays for other countries and from the US and UK before the time periods stated earlier, have a PHQ Rank of 90 to indicate the general impact on the region.
 
 **Local Rank**
 
@@ -193,7 +193,7 @@ For the United Kingdom (from September 2017) and US (from September 2018) school
 
 Predicted Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
 
-School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
+School holidays for the rest of the world, and from the US and UK before the time periods stated earlier, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
 
 ### Observances
 
