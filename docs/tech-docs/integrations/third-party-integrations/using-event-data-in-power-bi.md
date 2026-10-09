@@ -150,7 +150,7 @@ To start, navigate to the Snowflake data connection via:
 
 **Get Data** -> **More** -> **Database** -> **Snowflake**\\
 
-<figure><img src="../../.gitbook/assets/New Snowflake Connection.png" alt=""><figcaption><p>Get Data -> More</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New Snowflake Connection.png" alt="The Power BI Get Data menu with the More option highlighted to start a new Snowflake connection"><figcaption><p>Get Data -> More</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt="The Power BI Get Data window with Database selected and Snowflake highlighted in the list of connectors"><figcaption><p>Database -> Snowflake</p></figcaption></figure>
 
@@ -241,7 +241,7 @@ Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ AP
 
 Add the HTTP request header with the following information:
 
-1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
+1. **URL parts**: our created Events API URL from earlier: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
    2. In the second field, enter `Bearer [api_token]`, with your PredictHQ API Access Token in place of `[api_token]`. The value keeps the word `Bearer` followed by a space before the token.
@@ -250,7 +250,7 @@ The filled-out information should look like this:
 
 <figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”, the Data Transformation page opens where data shaping options can be made before building the report.
+After clicking **OK**, the Data Transformation page opens where you can shape the data before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.
 
@@ -338,7 +338,10 @@ To group the chart and table:
 Before the next step of filling in the chart and table, add Filters for the page:\
 drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.
 
-Change the drop-down to **Advanced filtering**. Then, add the following:
+To set the date filter:
+
+1. Change the drop-down to **Advanced filtering**.
+2. Add the following:
 
 “_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click **Apply filter** in the filter menu.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
@@ -369,7 +372,7 @@ To rename the chart title:
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
-Click the "phq\_attendance" column in the table twice to sort by highest to lowest attendance.
+To sort by highest to lowest attendance, click the "phq\_attendance" column in the table twice.
 
 The final result should look like the following:
 

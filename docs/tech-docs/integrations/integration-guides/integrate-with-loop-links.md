@@ -71,7 +71,7 @@ When a user submits a missing event:
 
 1. Users enter event details
 2. PredictHQ teams review events and approve or reject them
-3. Approved events show as visible to the customer as active events
+3. Approved events show as active events in your account
 4. PredictHQ emails users when it approves or rejects an event
 
 <figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt="The Loop Links page where users enter details of a missing event"><figcaption></figcaption></figure>
@@ -155,7 +155,7 @@ To **provide feedback on an existing event** - open the /event-feedback/ Loop Li
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
-Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Typically feedback is provided when you are displaying an event from the PredictHQ API in your application. To let users provide feedback, add a feedback link or icon next to each event.
+Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Users typically provide feedback while you display an event from the PredictHQ API in your application. To let users provide feedback, add a feedback link or icon next to each event.
 
 #### To pre-fill the user's email address
 
