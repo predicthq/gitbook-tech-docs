@@ -84,7 +84,10 @@ Rename the Query to something relevant, as it defaults to the connection URL str
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
-To format and expand some columns, open Power Query. To do this, go to the Advanced Editor for this Query, right-click the Query name under Queries and click Advanced Editor:
+To format and expand some columns, paste the following code into the Advanced Editor for this Query. To open the Advanced Editor:
+
+1. Under **Queries**, right-click the Query name.
+2. Click **Advanced Editor**.
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 

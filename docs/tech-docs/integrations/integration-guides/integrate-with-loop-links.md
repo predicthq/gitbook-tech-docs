@@ -131,10 +131,7 @@ This is typically used by support teams if issues are raised about event feedbac
    2. Use the link immediately.
 2. If required update the **`org_name`** name field via the settings API to set the name displayed at the top of the Loop pages
 3. In your application, implement the links.
-4. Open the link in a browser. The Public Loop UI needs no login and shows the form to submit an event (or feedback, depending on which type of link you open).
-5. Complete the form.
-
-The end-user receives an email when the event they submitted is approved or rejected.
+When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when the event they submitted is approved or rejected.
 
 ### Types of links
 
