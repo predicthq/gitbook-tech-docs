@@ -51,7 +51,7 @@ There are several methods available for integrating PredictHQ data with GCP BigQ
 
 **JSONL File Upload Method**: This method provides a straightforward, code-free approach to data upload, by exporting data from PredictHQ’s [WebApp](https://control.predicthq.com/search/events). We recommend using JSONL uploads for the initial population of your data lake, especially in cases where there is a substantial volume of data, such as multiple years of historical data. Manage subsequent updates through API calls to keep the data current.
 
-**API Connection Method**: Connect to the PredictHQ Events API to download the latest data from the API into your data lake. This guide takes you through using the Python API connection method for GCP but similar steps would apply to other programming languages. Events data is dynamic with events changing all the time as events are canceled, postponed, shift location, or have other details change. Also, new events are being announced all the time. We recommend having a process that updates your data on a regular frequency, such as daily.
+**API connection method**: Connect to the PredictHQ Events API to download the latest data from the API into your data lake. This guide takes you through using the Python API connection method for GCP but similar steps would apply to other programming languages. Events data is dynamic with events changing all the time as events are canceled, postponed, shift location, or have other details change. Also, new events are being announced all the time. We recommend having a process that updates your data on a regular frequency, such as daily.
 
 This guide will walk you through the initial data load, providing you with the tools and understanding necessary to create a robust connection to GCP. You'll learn how to structure your data effectively within your warehouse, setting the stage for potential automation and regular updates that you can implement as needed.
 
@@ -142,7 +142,7 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 This method allows initializing your BigQuery table with a JSONL dataset suitable for bulk data uploads. However, it does not support ongoing data refreshes. See the [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section for advice on setting up a regularly updated table after initialization.
 
-## API Connection Method
+## API connection method
 
 This method works well for smaller datasets as initial upload and must be used for continuous updates to the table as recommended in our [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section.
 
@@ -288,7 +288,7 @@ events_data = fetch_all_pages(base_url, headers, params)
 ```
 {% endcode %}
 
-### Transform API Responses
+### Transform API responses
 
 To ensure seamless compatibility with the BigQuery table structure, we run a transformation function applied to the data retrieved from the Events API in the previous step. The function performs essential adjustments, including:
 
@@ -487,7 +487,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 </details>
 
-## Keep Event Data Updated
+## Keep event data updated
 
 Event data is dynamic and events can change frequently. This happens when events are canceled, posted, or have details updated. Also, PredictHQ’s pipeline is constantly fetching new events so new future events are always being added and can be downloaded via the API.
 

@@ -40,11 +40,11 @@ PredictHQ APIs handle most steps; you provide the following for each store or lo
 
 With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.
 
-There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. Review the Important Features by Location and Important Features by Group of Locations sections, and choose the approach that best suits your operational needs.
+There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. Review the Important Features by location and Important Features by group of locations sections, and choose the approach that best suits your operational needs.
 
 <details>
 
-<summary>Important Features by Location</summary>
+<summary>Important Features by location</summary>
 
 If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as Category Importance in our WebApp, Beam identifies these event features (or categories) as having the greatest impact on your demand.
 
@@ -52,7 +52,7 @@ If you are able to implement individual models for each store or location, the B
 
 <details>
 
-<summary>Important Features by Group of Locations</summary>
+<summary>Important Features by group of locations</summary>
 
 If you manage multiple stores or locations and require a unified set of features, the Beam API’s [Aggregated Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups/get-aggregated-feature-importance) endpoint is recommended. It provides a consolidated list of Important Features across all stores or locations within an [Analysis Group](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups) based on aggregating Feature Importance results from contributing stores or locations.
 
@@ -64,7 +64,7 @@ If you manage multiple stores or locations and require a unified set of features
 
 The following sections highlight what you need to provide for determining a list of Important Features. Explore the accompanying Jupyter notebooks to see how this fits together practically.
 
-**Historical Demand Data**
+**Historical demand data**
 
 Ensure you have enough time-series data that meets [Beam’s requirements](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants, and revPAR for hotels.
 
@@ -76,7 +76,7 @@ Specify your industry as there are several industry-specific settings required i
 
 To define the catchment area around your store or location, use [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry. PredictHQ then calculates and stores the Predicted Impact Area boundary automatically.
 
-**Rank Thresholds**
+**Rank thresholds**
 
 To automatically calibrate rank thresholds for your industry and location, use Beam. Beam identifies which event types and rank levels materially influence your demand - removing the need to set these manually.
 
