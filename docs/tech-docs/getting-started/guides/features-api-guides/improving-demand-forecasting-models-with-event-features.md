@@ -74,7 +74,7 @@ Specify your industry as there are several industry-specific settings required i
 
 **Location**
 
-Define the catchment area around your store or location using [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry, and the Predicted Impact Area boundary is calculated and stored automatically.
+Define the catchment area around your store or location using [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry. PredictHQ then calculates and stores the Predicted Impact Area boundary automatically.
 
 **Rank Thresholds**
 

@@ -49,9 +49,9 @@ Public holidays have event group entities available.
 
 Public holidays events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Public holidays have no PHQ Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
+Public holidays have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
 
 ### School Holidays
 
@@ -187,11 +187,11 @@ School holidays events have Local Rank available.
 
 For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-PHQ Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
+Predicted Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
 
-School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no PHQ Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
+School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
 
 ### Observances
 
@@ -238,9 +238,9 @@ Observances have event group entities available.
 
 Observance events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Observances have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Observances have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Politics
 
@@ -279,9 +279,9 @@ Politics events have PHQ Rank available. It considers the number of registered v
 
 Politics events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Politics events have no PHQ Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
+Politics events have no Predicted Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
 
 ### Daylight Savings
 
@@ -315,6 +315,6 @@ All daylight savings events have a PHQ Rank of 30.
 
 Daylight savings events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Daylight savings events have no PHQ Attendance available.
+Daylight savings events have no Predicted Attendance available.

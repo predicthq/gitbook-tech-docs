@@ -132,7 +132,7 @@ Related resources:
 
 ## Predicted Attendance
 
-Predicted Attendance (aka PHQ Attendance) is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API, and Forecasts API to quantify potential demand impact.
+Predicted Attendance is a machine learning-generated estimate of how many people are expected to attend a given event. This prediction is based on a range of signals, including event attributes, location, timing, historical attendance patterns, and similar events. It is a core event-level metric used across the Events API, Features API, and Forecasts API to quantify potential demand impact.
 
 Related resources:
 

@@ -68,9 +68,9 @@ For example, An event with an urgency of immediate (15), a severity of severe (3
 
 Severe weather events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Severe weather events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Severe weather events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Disasters
 
@@ -121,9 +121,9 @@ Disaster events have PHQ Rank available, which indicates the severity of the dis
 
 Disaster events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Disasters events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Disasters events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Airport delays
 
@@ -162,9 +162,9 @@ Airport delays events have PHQ Rank available, indicating the severity of the de
 
 Airport delays events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Airport delays events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Airport delays events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
 
 ### Health Warnings
 
@@ -221,9 +221,9 @@ Health warnings events have PHQ Rank available.
 
 Health warnings events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Health warnings events have no PHQ Attendance available as the rank/impact only reflects its influence, rather than a specific amount of attendees at a specific location.
+Health warnings events have no Predicted Attendance available as the rank/impact only reflects its influence, rather than a specific amount of attendees at a specific location.
 
 ### Terror
 
@@ -265,6 +265,6 @@ Terror events have PHQ Rank available. It indicates the severity of the terroris
 
 Terror events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Terror events have no PHQ Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.
+Terror events have no Predicted Attendance available as the rank/impact only reflects its influence on an area, rather than a specific amount of attendees at a specific location.

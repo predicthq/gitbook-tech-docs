@@ -38,7 +38,7 @@ Labels for a sports event provide more information about the type, league, and e
 
 #### Date & time
 
-<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="220.33333333333331">Date &#x26; Time Field</th><th width="158" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Sports games are expected to have a specific start time.</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For sports events where there is no official end time available, PredictHQ predicts end times using our machine learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -60,9 +60,9 @@ Sports events have PHQ Rank available.
 
 Sports events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Sports events have PHQ Attendance available.
+Sports events have Predicted Attendance available.
 
 ### Conferences
 
@@ -102,9 +102,9 @@ Conference events have PHQ Rank available.
 
 Conference events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Conference events have PHQ Attendance available.
+Conference events have Predicted Attendance available.
 
 ### Expos
 
@@ -144,9 +144,9 @@ Expos events have PHQ Rank available.
 
 Expos events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Expos events have PHQ Attendance available.
+Expos events have Predicted Attendance available.
 
 ### Concerts
 
@@ -158,7 +158,7 @@ All concert events have a `music` label as concert events are expected to be mus
 
 #### Date & time
 
-<table><thead><tr><th width="242">Date &#x26; Time Fields</th><th width="120.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Concerts are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For concert events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="242">Date &#x26; Time Fields</th><th width="120.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Concerts are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For concert events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -180,9 +180,9 @@ Concerts events have PHQ Rank available.
 
 Concerts events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Concerts events have PHQ Attendance available.
+Concerts events have Predicted Attendance available.
 
 ### Festivals
 
@@ -222,9 +222,9 @@ Festival events have PHQ Rank available.
 
 Festival events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Festival events have PHQ Attendance available.
+Festival events have Predicted Attendance available.
 
 ### Performing Arts
 
@@ -252,7 +252,7 @@ The most common five types of performing-arts events are:
 
 #### Date & time
 
-<table><thead><tr><th width="238">Date &#x26; Time Fields</th><th width="150.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Performing-arts events are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted end time</a></td><td align="center">Yes</td><td>For performing arts events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="238">Date &#x26; Time Fields</th><th width="150.33333333333331" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">Yes</td><td></td></tr><tr><td>Start time</td><td align="center">Yes</td><td>Performing-arts events are expected to have a specific start time</td></tr><tr><td>End time</td><td align="center">Yes</td><td></td></tr><tr><td><a href="../predicted-end-times.md">Predicted End Times</a></td><td align="center">Yes</td><td>For performing arts events where there is no official end time available, PredictHQ predicts end times using our machine-learning models and intelligent algorithms.<br><br>PredictHQ’s Predicted End Times feature provides end times in the <code>predicted_end</code> field. When a predicted end time is provided, the event’s end time (in the <code>end</code> field) is set to be the same as the start time (in the <code>start</code> field).</td></tr><tr><td>Timezone</td><td align="center">Yes</td><td></td></tr></tbody></table>
 
 Note: datetime is in UTC.
 
@@ -274,9 +274,9 @@ Performing-arts events have PHQ Rank available.
 
 Performing-arts events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Performing-arts events have PHQ Attendance available.
+Performing-arts events have Predicted Attendance available.
 
 ### Community
 
@@ -316,9 +316,9 @@ Community events have PHQ Rank available.
 
 Community events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Community events have PHQ Attendance available.
+Community events have Predicted Attendance available.
 
 ### Academic
 
@@ -398,6 +398,6 @@ Academic events have PHQ Rank available.
 
 Academic events have Local Rank available.
 
-**PHQ Attendance**
+**Predicted Attendance**
 
-Academic events have PHQ Attendance available for all event types. PHQ Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.
+Academic events have Predicted Attendance available for all event types. Predicted Attendance for `academic-session`, `exam`, and `holiday` event types is based on student population, e.g. the amount of students enrolled in the term. PHQ attendance on `graduation` and `social` events are based on the number of people in attendance at the event.
