@@ -87,7 +87,7 @@ The latitude and longitude is pointing to the center of the region or country.
 
 #### School holidays in the United Kingdom
 
-Our school holidays data goes to a more granular detailed level for the United Kingdom than for other countries. Our school holidays data includes local council level school holidays for England, Wales, North Ireland and Scotland.
+Our school holidays data goes to a more granular detailed level for the United Kingdom than for other countries. Our school holidays data includes local council level school holidays for England, Wales, North Ireland, and Scotland.
 
 {% hint style="warning" %}
 **Note**
@@ -165,7 +165,7 @@ These Frequently asked questions apply to district level school holidays (for th
 
 #### Geoscoping
 
-The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey will have a scope for Surrey and a scope for Greater London as they are near Greater London.
+The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey have a scope for Surrey and a scope for Greater London as they are near Greater London.
 
 If you use the `place.scope` parameter and query for Greater London in this example you get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
 
@@ -177,7 +177,7 @@ School holidays have no entities available
 
 **PHQ Rank**
 
-School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) are ranked based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ rank value.
+We rank school holidays for the United Kingdom (from September 2017) and the United States (from September 2018) based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ rank value.
 
 All school holidays for other countries and from the US and UK before the time periods stated above have a PHQ Rank of 90 to indicate the general impact on the region.
 
@@ -203,7 +203,7 @@ Labels for an observance event provide more information about the event. The mos
 
 1. `observance-season`
    * When the observance marks the seasonal change: [June Solstice](https://events.predicthq.com/events/dV6eJatmAjBpT9dwAf), [March Equinox](https://events.predicthq.com/events/kKqJaTbuZhRvZVkQLv), [September Equinox](https://events.predicthq.com/events/bPsTpsswkpRfGq73Fu), [December Solstice](https://events.predicthq.com/events/5eVGwA82bfPEMdHXrM).
-   * 227 countries observed the above four types of events.
+   * 227 countries observed these four types of events.
 2. `holiday-religious`: When observing a religious holiday mostly celebrated in other cultures but not a major trend among the local population. E.g. Eid al-Fitr is celebrated as a [religious public holiday](https://events.predicthq.com/events/rasnhTdtREXDVNb5aF) in Muslim countries and is [observed](https://events.predicthq.com/events/aY7JYozjyDx35umEwG) in other countries.
 3. `holiday-christian`: When observing a Christian-related holiday, e.g. [Epiphany](https://events.predicthq.com/events/cMjzGaEAKnCWLTG4Lc).
 4. `observance-united-nations`:
@@ -250,7 +250,7 @@ Politics events include the main dates of elections and referendums around the w
 
 **LABELS**
 
-This category is classified into two buckets with the following labels used to identify the type of events.
+This category is classified into two buckets with the following labels used to identify the type of events:
 
 1. **Election**: The date when the `parliament` or `president` election occurs.
 2. **Referendum**: The `referendum` date in the country.
@@ -283,13 +283,13 @@ Politics events have Local Rank available.
 
 Politics events have no Predicted Attendance available as the rank/impact only reflects the influence in the country, rather than a specific amount of attendees at a specific location.
 
-### Daylight Savings
+### Daylight savings
 
 Daylight savings is the schedule date when daylight savings start or ends in an area.
 
 **LABELS**
 
-All daylight savings events are labelled `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
+All daylight savings events are labeled `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
 
 #### Date & time
 

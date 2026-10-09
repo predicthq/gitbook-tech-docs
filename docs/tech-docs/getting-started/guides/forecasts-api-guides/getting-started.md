@@ -87,9 +87,9 @@ date,demand
 
 All forecast models are tied to a Saved Location so you can define the location once and create multiple models for it. For this example we're going to look at a theoretical restaurant located by the O2 Arena in London.
 
-#### Create Saved Location (Using Predicted Impact Area)
+#### Create a Saved Location using Predicted Impact Area
 
-Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson`—the API calculates the Predicted Impact Area automatically and stores it against the location.
+Predicted Impact Area calculates the optimal boundary around your business to capture the events that drive demand. To use it, create a Saved Location with `origin_geojson`—the API calculates the Predicted Impact Area automatically and stores it against the location, as this code shows:
 
 ```python
 # Create Saved Location with Predicted Impact Area
@@ -264,7 +264,7 @@ Every date in the forecast response includes a `forecast` value—that’s the c
 * `phq_features` - List of features (from Features API) that Beam's Feature Importance process identified as relevant to your demand, as well as their values. This field is only available if you also purchase our Features product.
 
 {% hint style="info" %}
-Explainability is optional—use `phq_explainability` in your `include` query param to enable it.
+Explainability is optional. To enable it, use `phq_explainability` in your `include` query param.
 {% endhint %}
 
 Here's an example truncated response for a single date showing `phq_explainability`:

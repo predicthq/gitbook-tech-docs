@@ -110,7 +110,7 @@ A hallucination is a confident, plausible answer invented where the model lacks 
 
 * **Verified** - the context must be true. PredictHQ continuously verifies, deduplicates, and enriches its events. Grounding in unverified content replaces invented errors with retrieved ones.
 * **Specific** - the context must match the question's location and time window. PredictHQ context is location and date scoped, and [Beam](../getting-started/core-concepts/what-is-beam.md) calibrates it to the events that actually drive demand at each location, so retrieval returns relevant signal rather than a wall of nearby noise.
-* **Current** - real-world context changes daily. Events are announced, cancelled, and revised inside any decision window, which is why grounding retrieves at answer time rather than relying on what a model absorbed in training.
+* **Current** - real-world context changes daily. Events are announced, canceled, and revised inside any decision window, which is why grounding retrieves at answer time rather than relying on what a model absorbed in training.
 
 Grounded answers are also explainable: every claim traces back to a specific verified event, which is what makes the answer auditable and defensible - and trust is the bottleneck in AI adoption.
 

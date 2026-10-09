@@ -49,4 +49,4 @@ See the [Broadcasts API OpenAPI spec](https://api.predicthq.com/docs/?urls.prima
 
 The following guides are relevant to this API:
 
-* [Live TV event guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)
+* [Guides for Live TV Events](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/live-tv-event-guides)

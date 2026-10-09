@@ -9,7 +9,7 @@ SFTP delivery follows the same full + incremental data model used by our other b
 When integrating via SFTP, PredictHQ delivers data as full and incremental file exports (same delivery model as our AWS Data Exchange exports). Here’s what you can expect:
 
 * **Initial Full Dump**: upon setup, you receive a full dataset covering all records you have access to.
-* **Incremental Updates**: after the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.
+* **Incremental Updates**: after the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, PredictHQ delivers these updates daily.
 * **Occasional Full Dumps**: at times (either by request or operational need), we may deliver a full dump without prior notice. You can distinguish these by the presence of full (not incremental) in the filename.
 
 ## Processing order and change action
@@ -19,6 +19,8 @@ To maintain a complete and accurate dataset, process deliveries in the order the
 For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update`, or `delete`).
 
 ### File naming
+
+PredictHQ names files using this pattern:
 
 ```
 <delivery_config_id>/<datetime>/<data_type>/<delivery_type>-part-<number>.<ext>
@@ -43,7 +45,7 @@ PredictHQ provides:
 
 You will use these credentials to connect to the PredictHQ-managed SFTP server and fetch data on your own schedule.
 
-## Typical Ingestion Flow
+## Typical ingestion flow
 
 Implement an automated process that:
 

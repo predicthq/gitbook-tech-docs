@@ -21,7 +21,7 @@ Note that the date fields in the Events API Query Parameters are in UTC. You can
 
 <summary>Previous guide on Converting to Local Time</summary>
 
-Dates and times of events provided by the Events API are in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone see the guide below.&#x20;
+The Events API provides dates and times of events in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone use the Python example in this section.&#x20;
 
 Below is an example of converting UTC time to local time using the `pytz` library in Python:
 
@@ -60,7 +60,7 @@ Internally, we have the concept of different date types for events. We don't exp
 
 * Fixed Date
 * Fixed Time
-* Floating date
+* Floating Date
 
 ### Fixed Date
 
@@ -120,7 +120,7 @@ Using the same `convert_to_local` function from earlier we get:
 
 Showing the event is scheduled from 7:00 PM to 8:30 PM on November 9th, 2023 in the Australia/Melbourne timezone.
 
-### Floating date
+### Floating Date
 
 Refers to events that happen on a particular date regardless of timezone. E.g., USA Independence Day is 4th of July regardless of timezone. The way we represent this concept is by setting the `timezone` to `null` as in the following example:
 

@@ -1,6 +1,6 @@
 # Sample demand data
 
-If you don't have your own demand data ready, you can use one of our sample datasets to explore Beam and the Forecasts API. Each dataset contains synthetic daily demand data modelled on realistic industry patterns. Use any dataset with your own location: the industry type matters more than the specific location when getting started.
+If you don't have your own demand data ready, you can use one of our sample datasets to explore Beam and the Forecasts API. Each dataset contains synthetic daily demand data modeled on realistic industry patterns. Use any dataset with your own location: the industry type matters more than the specific location when getting started.
 
 ## Available datasets
 

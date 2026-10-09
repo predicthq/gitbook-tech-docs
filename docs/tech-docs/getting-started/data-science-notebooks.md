@@ -35,7 +35,7 @@ Conferences, expos, concerts, festivals, performing arts, sports, and community 
 
 ### Non-attendance-based events
 
-Observances, public holidays, and school holidays - see [Non-Attendance-based events](predicthq-data/event-categories/non-attendance-based-events.md).
+Observances, public holidays, and school holidays - see [Non-attendance-based events](predicthq-data/event-categories/non-attendance-based-events.md).
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_2_data_exploration.ipynb)
@@ -43,7 +43,7 @@ Observances, public holidays, and school holidays - see [Non-Attendance-based ev
 
 ### Severe weather events
 
-See [Severe Weather](predicthq-data/event-categories/unscheduled-events.md#severe-weather) for the category reference.
+For the category reference, see [Severe Weather](predicthq-data/event-categories/unscheduled-events.md#severe-weather). The severe weather notebooks are:
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/severe-weather-events/part_2_data_exploration.ipynb)

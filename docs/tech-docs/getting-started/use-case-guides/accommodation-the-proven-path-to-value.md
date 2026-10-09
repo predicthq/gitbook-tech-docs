@@ -57,6 +57,8 @@ A well-filtered real-world context layer isn’t just raw events - it’s an exp
 
 ### PredictHQ Tools for Calendar Display
 
+These tools support event calendar displays:
+
 * [Events API](https://docs.predicthq.com/api/events/search-events): Core event data, filtered by category, location, date, and more
 * [Snowflake / AWS Data Exchange](https://docs.predicthq.com/integrations/third-party-integrations): Simplified alternative to Events API - access real-world context data directly in your cloud data environment
 * [Beam API](https://docs.predicthq.com/api/beam/overview): Identify which event types impact demand using Feature Importance
@@ -66,7 +68,7 @@ A well-filtered real-world context layer isn’t just raw events - it’s an exp
 
 ## Forecasting Accuracy
 
-<figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/accommodation-forecast-mockup.png" alt="A demand forecast chart for a hotel with event-driven demand peaks marked on the timeline"><figcaption></figcaption></figure>
 
 Most forecasting teams know that events drive demand - the challenge is turning the underlying event data into features that actually work in a time-series model.
 
@@ -75,7 +77,7 @@ While rich and detailed, PredictHQ’s underlying event data isn’t structured 
 * Aggregating attendance for multi-day or overlapping events
 * Accounting for leading and lagging demand effects (e.g. shoulder nights around a concert)
 
-Even experienced data science teams can spend weeks or months designing, testing, and iterating on how to best represent events in their forecasting pipelines.
+Even if you're an experienced data science team, you can spend weeks or months designing, testing, and iterating on how to best represent events in their forecasting pipelines.
 
 PredictHQ’s Features API generates demand-relevant, time-series signals at request time designed for forecasting - so your teams can skip the foundational complexity of event aggregation and focus on building reliable, explainable, high-performing models faster.
 
@@ -88,6 +90,8 @@ For teams with mature pipelines, or those exploring model comparisons, PredictHQ
 It’s also a low-risk way to prove the value of event-aware forecasting before making larger architectural changes.
 
 ### PredictHQ Tools for Forecasting
+
+These tools support event-aware forecasting:
 
 * [Features API](https://docs.predicthq.com/api/features/get-features): Model-ready, time-series event features for forecasting
 * [Forecasts API](https://docs.predicthq.com/api/forecasts/overview): Demand forecasts with event, seasonality, and local dynamics included
@@ -104,6 +108,8 @@ Once the fundamentals are in place, there are simple ways to drive even more val
 
 ## Real Examples
 
+These customers have followed this path:
+
 * [Lighthouse](https://www.predicthq.com/customers/lighthouse): Replaced brittle manual event processes with trusted real-world context at scale, reducing support overhead.
 * [HQ revenue](https://www.predicthq.com/customers/hqrevenue): Automated demand monitoring and increased RevPAR by 10%.
 * [Wheelhouse](https://www.predicthq.com/customers/wheelhouse): Boosted nightly rates by up to 800% during major events with dynamic pricing powered by PredictHQ.
@@ -116,7 +122,7 @@ Even well-resourced teams hit the same traps when working with event data:
 * Hardcoding event categories or filters based on assumptions - what drives demand varies by location. Use Beam to validate which event types actually impact bookings in each market.
 * Assuming one-size-fits-all radius logic - different locations respond to events differently. Use Predicted Impact Area and filter by Local Rank to ensure you’re capturing meaningful impact, not noise.
 
-## Final Advice: Start Simple, Scale Smart
+## Final advice: start simple, scale smart
 
 Don’t overcomplicate your starting point. High-impact events and demand-aware forecasting unlock fast, measurable wins.
 

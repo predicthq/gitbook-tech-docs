@@ -20,9 +20,9 @@ Users must log in, or be approved before using the application. This may help de
 
 Effective application design can make it difficult to scrape information or easier to detect scraping. This includes techniques such as limiting the amount of data returned per search, restricting the area of the search, or requiring pagination of results.
 
-### IP Address Monitoring, Limiting or Blocking
+### IP address monitoring, limiting, or blocking
 
-Ability to monitor, alert and report on website activity by IP address allows for the detection of sudden increases in traffic, outliers or bad actors. Tracking of an IP address allows for the ability to use a blocklist if needed.
+Ability to monitor, alert, and report on website activity by IP address allows for the detection of sudden increases in traffic, outliers, or bad actors. Tracking of an IP address allows for the ability to use a blocklist if needed.
 
 ### Use of Commercial Software to Protect Public-Facing Content from Bots
 

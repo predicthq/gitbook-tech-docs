@@ -17,9 +17,9 @@ The key principle across all of these: **store a local copy and query that, rath
 
 ## Architecture diagram
 
-The diagram below is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
+The following diagram is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
 
-Use this as the starting point when designing your integration - your Solutions Engineer can help tailor it to your specific locations, industry, and forecasting setup. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable.
+Use this as the starting point when designing your integration - your Solutions Engineer can help tailor it to your specific locations, industry, and forecasting setup. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable in the following diagram:
 
 ```mermaid
 ---
@@ -48,7 +48,7 @@ flowchart TB
   end
     Business_Location --> Manage_Locations
     Manage_Locations -- origin_geojson --> Saved_Locations_API
-    Saved_Locations_API -- location_id + impact area --> Manage_Locations
+    Saved_Locations_API -- location_id + Predicted Impact Area --> Manage_Locations
     Manage_Locations -- location_id --> Beam_API
     Beam_API -- analysis_id + feature importance --> Manage_Locations
     Manage_Locations --> Location_Store
@@ -91,9 +91,12 @@ Saved Locations are also the only way to use polygon-based boundaries with Predi
 
 **Refresh: daily or weekly or other, depending on model cadence**
 
-Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features for each location. The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed.
+For each location:
 
-Store the results locally. Pull from your local store at training and inference time, not directly from the API.
+1. Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features.
+2. In your local store, save the results.
+
+The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed. Pull from your local store at training and inference time, not directly from the API.
 
 **Alternative delivery:** PredictHQ can deliver Features API output per Beam Analysis via Snowflake Private Share, AWS Data Exchange, or SFTP. Contact PredictHQ to discuss this option.
 

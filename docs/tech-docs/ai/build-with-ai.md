@@ -10,7 +10,7 @@ AI assistants can query PredictHQ's APIs in natural language, search the documen
 
 These tools serve two distinct jobs: AI that helps you _build_ your integration (coding assistants, agent skills), and AI that PredictHQ _grounds_—assistants and agents retrieving verified real-world context at inference time.
 
-## MCP server
+## PredictHQ MCP server
 
 Connect any MCP-compatible AI assistant to PredictHQ's live APIs. Once connected, you can search events, retrieve demand intelligence, work with Saved Locations, Beam, Features, Forecasts, and Predicted Impact Area, and search PredictHQ's technical documentation - all through natural language, without leaving your AI client or writing API calls manually.
 

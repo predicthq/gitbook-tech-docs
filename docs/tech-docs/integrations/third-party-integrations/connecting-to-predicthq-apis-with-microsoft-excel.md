@@ -26,7 +26,7 @@ Below are the main steps involved in this guide:
 1. **Date**: user-defined, this tutorial uses a 3-month period from January 1st to March 31st 2024
 2. **Categories**: community, conferences, concerts, expos, festivals, performing-arts, sports - these are our [attended categories](https://docs.predicthq.com/getting-started/predicthq-data/event-categories)
 3. **Event State**: Active and Predicted
-4. **PHQ Attendance**: attended events only - filtered to events with an attendance of at least 1
+4. **Predicted Attendance** (`phq_attendance`): attended events only - filtered to events with an attendance of at least 1
 5. **Location**: San Francisco city (place ID [5391959](https://www.geonames.org/5391959/san-francisco.html))
 
 Location could be substituted for a specific latitude and longitude relating to an individual store, or could be scoped even wider depending on need. We suggest utilizing our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to hone in on a specific shop location and pull only events within a more accurate area based on those results. For now, we will look at the citywide events in San Francisco as our example.
@@ -59,26 +59,29 @@ See also our [filtering guide](../../getting-started/guides/events-api-guides/fi
 
 With this API query string, event data can start to be loaded into Microsoft Excel.
 
-First, create a new Spreadsheet. Click the **Data** tab and choose **Get Data**:
+First, create a new Spreadsheet. Then, to open the data connection options:
+
+1. Click the **Data** tab.
+2. On the **Data** tab, click **Get Data**.
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, select the Advanced tab to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
 1. **URL parts**: our created Events API URL from the above: `https://api.predicthq.com/v1/events/?active.gte=2024-01-01&active.lt=2024-04-01&active.tz=America/Los_Angeles&category=community,conferences,concerts,expos,festivals,performing-arts,sports&state=active,predicted&phq_attendance.gte=1&place.scope=5391959&limit=500`
 2. **HTTP request header parameters**:
    1. In the first field, enter `Authorization`
-   2. Put `Bearer <api_token>` in the field on the right of the first field with `Authorization`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields will look like once you have put in your API key.\
+   2. In the second field, enter `Bearer <api_token>`. where <`api_token>` will be replaced with your PredictHQ API Access Token. Replace <`api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. Below is what the fields look like once you enter your API key.\
       \
       ![](<../../.gitbook/assets/image (83).png>)\\
 
 The filled-out information should look like this (except that api\_key should be replaced with your actual api\_key)
 
-<figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Connection.png" alt="The Excel web connection dialog with the Events API URL and the Authorization header filled in"><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
-After clicking “OK”, the Data Transformation page opens where you can choose data shaping options before building the report.
+After clicking **OK**, the Data Transformation page opens where you can choose data shaping options before building the report.
 
 Rename the Query to something relevant, as it defaults to the connection URL string parameters which does not look neat. Rename it to “PredictHQ Connection”. If you use a different name, change the Power Query to match.
 
@@ -91,14 +94,17 @@ To format and expand some columns, paste the following code into the Advanced Ed
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
-Replace the entire existing Power Query code with the one below, **changing the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.**
+To update the Power Query code:
+
+1. Replace the entire existing Power Query code with the following code.
+2. In Lines 4 and 8, replace ‘\[api\_token]’ with the PredictHQ API Access Token you used previously.
 
 {% hint style="info" %}
 This example doesn't work unless you replace the \[api\_token] with your token.\
 Lines 2 and 11 refer to the Query name, if you've named it something other than "PredictHQ Connection" you will need to replace it here aswell.
 {% endhint %}
 
-This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. The final output of this multi-stage transformation is the following Power Query:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -142,7 +148,7 @@ in
 ```
 {% endcode %}
 
-The code in the advanced editor should look like the screen shot below:
+The code in the Advanced Editor should look like the following screenshot:
 
 <figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt=""><figcaption></figcaption></figure>
 

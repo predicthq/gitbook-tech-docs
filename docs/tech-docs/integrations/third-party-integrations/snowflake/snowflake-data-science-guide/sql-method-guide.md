@@ -14,7 +14,7 @@ The rest of the guide also uses temporary tables but these tables can be turned 
 
 Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide, the following steps are required and blocked out:
 
-1. Modify the input input table format to use with the code in this guide
+1. To use the input table with the code in this guide, modify its format
 2. Generate daily aggregated statistics for each location by…
    * attendance based features
    * rank based features
@@ -26,7 +26,7 @@ Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide,
 
 ## Step 1: Modify the input table format
 
-Once the **SAVED\_LOCATIONS** input table is created, the below code shapes that table to be in a day by day format of the input called **SAVED\_LOCATIONS\_DAILY**:
+Once the **SAVED\_LOCATIONS** input table is created, the following code shapes that table to be in a day by day format of the input called **SAVED\_LOCATIONS\_DAILY**:
 
 {% code fullWidth="true" %}
 ```sql
@@ -51,7 +51,7 @@ The code calculates each Feature set in blocks. See the column headers in each c
 
 ### PHQ Attendance Features
 
-The code calculates each value as the sum of Predicted Attendance for the day at a given location within the defined radius.
+The code calculates each value as the sum of Predicted Attendance for the day at a given location within the defined radius:
 
 <pre class="language-sql" data-title="PHQ Attended Features" data-full-width="true"><code class="lang-sql"><strong>----PHQ Attendance Features
 </strong><strong>CREATE OR REPLACE TEMP TABLE phq_attendance_features AS
@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) will need to be replaced depending on which PHQ Attendance Feature is intended to be called. Refer to the column code above for available Feature categories.
+If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code above for available Feature categories.
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -290,7 +290,7 @@ SELECT * FROM phq_rank_features order by location, date;
 
 ### PHQ Impact Features
 
-Values are calculated as MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day.
+The code calculates each value as the MAX of the Ranks of events occurring over each day, showing the highest rank Severe Weather event of each type occurring per day.
 
 {% code title="PHQ Impact Features" fullWidth="true" %}
 ```sql

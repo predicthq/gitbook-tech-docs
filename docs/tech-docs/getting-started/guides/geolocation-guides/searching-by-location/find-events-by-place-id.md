@@ -2,7 +2,12 @@
 
 For this example, we want to find all the sports events that happened in Nottingham, England in March of 2018.
 
-First let’s find the Nottingham Place ID by making a request to the Places endpoint:
+To find the events, follow these steps:
+
+1. To get the Nottingham Place ID, make a request to the Places endpoint.
+2. To get the events, make a request to the Events endpoint with that Place ID.
+
+The first request finds the Nottingham Place ID by calling the Places endpoint:
 
 ```python
 import requests
@@ -21,7 +26,7 @@ response = requests.get(
 print(response.json())
 ```
 
-The first result in the response (shown below) is the correct location we want:
+The first result in the response is the correct location we want:
 
 ```json
 {

@@ -7,7 +7,7 @@ description: >-
 
 # Event-driven demand
 
-Using real-world events to improve forecasting and operational decisions introduces structural challenges. These challenges are not unique to PredictHQ. Any organisation attempting to integrate event data into live systems will encounter them.
+Using real-world events to improve forecasting and operational decisions introduces structural challenges. These challenges are not unique to PredictHQ. Any organization attempting to integrate event data into live systems will encounter them.
 
 They typically surface only after implementation has begun, and they are often underestimated at the start.
 
@@ -45,7 +45,7 @@ Generic feature selection methods are not designed for this structure. Rare spik
 
 Relevance is not a one-time decision. Demand patterns evolve, event behaviour changes, and calibration must be revisited regularly.
 
-**How PredictHQ addresses relevance**
+**How PredictHQ addresses relevance:**
 
 * The [Beam API](what-is-beam.md) calibrates event impact against your historical demand data.
 * Beam isolates true event-driven variability and identifies which event types consistently explain it.
@@ -61,7 +61,7 @@ Events must be transformed into structured, numerical signals that reflect timin
 
 Operational systems require deterministic, time-series signals that can be integrated directly into models, dashboards, or AI systems without extensive post-processing.
 
-**How PredictHQ addresses usability**
+**How PredictHQ addresses usability:**
 
 * The [Features API](what-is-the-features-api.md) converts events into aggregated, model-ready time-series signals.
 * It accounts for multi-day events, lead and lag effects, attendance and spend metrics, and category-level aggregation.
@@ -79,7 +79,7 @@ Trust increases when predicted demand shifts can be linked to observable real-wo
 
 Trust determines time to value. If users hesitate to act on model outputs, operational impact is delayed regardless of model quality.
 
-**How PredictHQ addresses trust**
+**How PredictHQ addresses trust:**
 
 * The [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) provides structured, verifiable event records that can be surfaced alongside forecasts or model outputs.
 * When filtered using a Beam Analysis ID, returned events reflect demand-calibrated impact rather than generic event presence.

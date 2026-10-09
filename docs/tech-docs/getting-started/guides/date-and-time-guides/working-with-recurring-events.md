@@ -11,7 +11,7 @@ As well as being able to see that an event is recurring, it’s also possible to
 **Example Use Cases**
 
 * **Demand Forecasting**: When analysing previous years transactions or bookings, you can align demand spikes with a recurring event and predict expected demand increases for future years.
-* **Labour Optimization**: Knowing why you were busy last year and planning your resource requirements for the same period next year. What if the event changes location? Recurring Events allows you to get this visibility and plan accordingly.
+* **Labor Optimization**: Knowing why you were busy last year and planning your resource requirements for the same period next year. What if the event changes location? Recurring Events allows you to get this visibility and plan accordingly.
 {% endhint %}
 
 Recurring Events are represented as an Entity of type `event-group` with recurring info in iCalendar recurring RRULE format.
@@ -53,7 +53,7 @@ Below is an example event with a recurring `event-group` Entity:
 
 ## Find all instances of a recurring event
 
-The `entity.id` query parameter allows you to find all Events that are linked to the specified Entity ID. This example uses the "ASH Annual Meeting" recurring `event-group` Entity ID to find all instances of the Event.
+The `entity.id` query parameter allows you to find all Events that are linked to the specified Entity ID. This example uses the "ASH Annual Meeting" recurring `event-group` Entity ID to find all instances of the Event:
 
 ```python
 import requests

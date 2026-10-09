@@ -8,11 +8,11 @@ description: >-
 
 Events such as concerts, expos, and public holidays can shift consumer behavior and [impact demand](https://www.predicthq.com/use-cases/demand-forecasting). Understanding which events are most relevant to a store or location is therefore critical for effective planning and management. By staying ahead of these events, businesses can better prepare for changes in consumer traffic and purchasing patterns, ensuring optimal staffing and inventory levels.
 
-This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls and interpret responses.
+This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls, and interpret responses.
 
 Alternatively, use [Location Insights](https://www.predicthq.com/location-insights) to monitor upcoming events around your stores or locations. Set up a location in [WebApp](https://control.predicthq.com/location-insights) where you can get immediate insights for all created locations. This can also be done securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
-## Getting Started
+## Getting started
 
 A valid access token is required for calling PredictHQ’s APIs. Refer to the [API quickstart](../../api-quickstart.md) for guidance on creating an access token and test our APIs with our [API Explorer](https://control.predicthq.com/explorer/events).
 
@@ -22,7 +22,7 @@ Let's take a fictional example: Tom, the owner of Tom’s Pizzeria in Downtown S
 
 ## How-To Guide
 
-The sections below guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
+The following sections guide you through identifying the top 50 upcoming events near Tom’s Pizzeria over the next month. Follow the steps and code snippets to understand how this can be adapted to fit other business scenarios.
 
 ### Step 1. Define query parameters for the Events API
 
@@ -80,10 +80,10 @@ params={
 
 <summary>Event Type</summary>
 
-Select the types of events for the search.
+Select the types of events for the search:
 
 * **Relevant Event Categories**: To identify [event categories](../../predicthq-data/event-categories/) that are most relevant to your location, use [Beam](../../core-concepts/what-is-beam.md) in the [WebApp](https://control.predicthq.com/beam) or the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam). Alternatively, start with our [industry recommendations](../industry-specific-event-filters.md#relevant-event-categories) for which categories to start with.
-* **Specific Themes**: Use the `phq_label` parameter to focus on particular themes within a category. For example, to find baseball-related events, set `phq_label` to `baseball`.
+* **Specific Themes**: To focus on particular themes within a category, use the `phq_label` parameter. For example, to find baseball-related events, set `phq_label` to `baseball`.
 
 **Settings for Tom’s Pizzeria**
 
@@ -109,7 +109,7 @@ Define the event impact for the search.
   * The `rank_level` parameter divides the PHQ Rank into five equal bands, for simplified categorization. Levels range from 1 to 5, where 1 represents minor impact, such as a community workshop, and 5 represents major impact, like the Olympics.
 * **Local Rank**: To consider the event's impact on the local area, use `local_rank`, which also ranges from 0 to 100. By considering factors like population density, [Local Rank](../../predicthq-data/ranks/local-rank.md) helps differentiate the impact of similar-sized events in different locations, such as Aspen, Colorado versus New York City.
   * The `local_rank_level` parameter divides Local Rank into five equal bands, for simplified categorization. Levels also range from 1 to 5, with 1 representing minor impact and 5 representing major impact, similar to the PHQ Rank.
-* **PHQ Attendance**: For [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../../predicthq-data/predicted-attendance.md).
+* **Predicted Attendance**: For [attendance-based events](../../predicthq-data/event-categories/attendance-based-events.md), impact can be directly measured with `phq_attendance` which is the [number of people predicted to attend an event](../../predicthq-data/predicted-attendance.md).
 
 **Settings for Tom’s Pizzeria**
 

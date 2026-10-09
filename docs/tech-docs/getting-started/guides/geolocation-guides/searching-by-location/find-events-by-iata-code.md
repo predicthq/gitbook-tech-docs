@@ -29,7 +29,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results are shown below:
+The following snippet shows the results:
 
 ```json
 {

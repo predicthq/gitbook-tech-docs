@@ -2,7 +2,7 @@
 
 ## Attendance-based events
 
-Events with a start and end date and time. PredictHQ models predict attendances for each of these events.
+Events with a start and end date and time. PredictHQ models predict attendances for events in these categories:
 
 * Sports
 * Conferences

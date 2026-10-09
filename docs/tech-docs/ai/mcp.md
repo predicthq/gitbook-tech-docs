@@ -39,7 +39,7 @@ sequenceDiagram
 
 The MCP server supports two authentication methods.
 
-**OAuth** - when you connect using a supported client, the client redirects you to PredictHQ to authorise access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
+**OAuth** - when you connect using a supported client, the client redirects you to PredictHQ to authorize access. No credentials are stored in the client configuration. Best suited for interactive use and multi-user environments.
 
 **Bearer token** - pass your PredictHQ API key in the `Authorization: Bearer $API_TOKEN` header. Well-suited for agent and automation workflows where interactive login is not practical, or for clients that do not support OAuth. You [can create an API key in the PredictHQ WebApp](../getting-started/api-quickstart.md).
 
@@ -80,7 +80,7 @@ For more information, see [Claude's connector directory documentation](https://c
 
 Claude Code supports MCP via the CLI.
 
-Run the following command to add the PredictHQ MCP server:
+To add the PredictHQ MCP server, run the following command:
 
 ```bash
 claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp
@@ -110,13 +110,17 @@ To set up the connector:
 
 **Workspace-wide setup**
 
-If you're a workspace admin, enable Developer Mode via **Workspace Settings > Permissions & Roles > Connected Data**. Then, in **Workspace Settings > Connectors**, create a connector. Publish the connector for the whole organization. Once published, the connector is available to all users in the workspace without any individual setup.
+If you're a workspace admin:
+
+1. In **Workspace Settings > Permissions & Roles > Connected Data**, enable **Developer Mode**.
+2. In **Workspace Settings > Connectors**, create a connector.
+3. Publish the connector for the whole organization. Once published, the connector is available to all users in the workspace without any individual setup.
 
 **Adding the PredictHQ connector:**
 
 1. Go to **Connectors > Create** (from Settings or Workspace Settings depending on your plan).
 2. Enter a name (e.g. `PredictHQ`) and optionally a description.
-3. Enter the MCP Server URL: `https://mcp.predicthq.com/v1/mcp`
+3. Enter the **MCP Server URL**: `https://mcp.predicthq.com/v1/mcp`
 4. Select your authentication method and click **Create**:
    * **OAuth** - follow the login flow to authenticate with your PredictHQ account.
    * **Access token / API key** - select **Bearer** as the scheme and enter your PredictHQ API key.
@@ -125,7 +129,7 @@ If you're a workspace admin, enable Developer Mode via **Workspace Settings > Pe
 
 In the chat field, click **+**, then **More**, and select **PredictHQ**.
 
-**Note:** The exact steps may vary depending on your plan and workspace configuration. If the steps above don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
+**Note:** The exact steps may vary depending on your plan and workspace configuration. If the earlier steps don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
 
 ### Other clients
 

@@ -10,7 +10,7 @@ description: Upload your demand data as CSV, line-delimited JSON, or JSON.
 
 ## Error codes
 
-The API can return an unsuccessful HTTP response code for several reasons. In addition to an error message, there may also be a `code` field when applicable. The following table outlines the meaning of several error codes that may be returned.
+The API can return an unsuccessful HTTP response code for several reasons. In addition to an error message, there may also be a `code` field when applicable. The following table describes the error codes the API may return.
 
 | Code                                        | Description                                                                                                                                    |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

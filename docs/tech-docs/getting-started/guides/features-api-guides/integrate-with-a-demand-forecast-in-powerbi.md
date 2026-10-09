@@ -34,7 +34,7 @@ The starting point is developing a base model in PowerBI (without PredictHQ data
 
 <figure><img src="../../../.gitbook/assets/powerbi-screenshot.png" alt="PowerBI screen showing the base model's performance of 48%, built without PredictHQ data"><figcaption><p>Base model performance in PowerBI (without PredictHQ data)</p></figcaption></figure>
 
-### Improving Base Model Results with PredictHQ
+### Improving base model results with PredictHQ
 
 From here, follow the [improving-demand-forecasting-models-with-event-features.md](improving-demand-forecasting-models-with-event-features.md "mention") tutorial book which helps you work out a set of PredictHQ features that are most impactful to your demand using [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). When we have the relevant PredictHQ features we can enhance the model's accuracy.
 
@@ -70,25 +70,25 @@ print(response.json())
 
 Next, the Beam API decomposes our demand data into baseline and remainders. This separation allows us to distinguish regular demand from anomalies and understand the factors driving these demand anomalies, providing a foundation for a more targeted forecasting approach.
 
-<figure><img src="../../../.gitbook/assets/beam-result-screenshot.png" alt=""><figcaption><p>Beam correlation results shown in the WebApp</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/beam-result-screenshot.png" alt="WebApp screen showing the Beam correlation results for the demand data"><figcaption><p>Beam correlation results shown in the WebApp</p></figcaption></figure>
 
 ### Feature Importance using Beam
 
 We then utilized Beam's [Feature Importance API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) to evaluate the impact of various events on demand fluctuations. This API helped us identify which events significantly influenced demand, informing our model about the types of events to prioritize in our forecasting.
 
-<figure><img src="../../../.gitbook/assets/feature-importance-result-screenshot.png" alt=""><figcaption><p>Feature Importance results shown in the WebApp</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/feature-importance-result-screenshot.png" alt="WebApp screen showing the Feature Importance results that rank events by their influence on demand"><figcaption><p>Feature Importance results shown in the WebApp</p></figcaption></figure>
 
 ### Forecast-Ready Features using Features API
 
 Finally, using the insights from the Feature Importance API, we employed the Features API to integrate detailed, relevant event data into our model. This precise merging of event data directly correlated with a notable improvement in our model's performance.
 
-<figure><img src="../../../.gitbook/assets/features-table-screenshot.png" alt=""><figcaption><p>Beam and Features API results</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/features-table-screenshot.png" alt="Table combining Beam results and Features API event features for each date"><figcaption><p>Beam and Features API results</p></figcaption></figure>
 
 ### Improve model performance with PredictHQ data
 
 Upon integrating this data into PowerBI, we developed an advanced model that combined both historical data and PredictHQ's event data. The outcome was a significant leap in performance, reaching 75%.
 
-<figure><img src="../../../.gitbook/assets/powerbi-improved-perf-screenshot.png" alt=""><figcaption><p>75% performance in PowerBI using PredictHQ data</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/powerbi-improved-perf-screenshot.png" alt="PowerBI screen showing the improved model performance of 75% with PredictHQ data"><figcaption><p>75% performance in PowerBI using PredictHQ data</p></figcaption></figure>
 
 ### Conclusion
 

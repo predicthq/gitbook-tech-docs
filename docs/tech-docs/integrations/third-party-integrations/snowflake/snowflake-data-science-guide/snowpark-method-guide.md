@@ -19,6 +19,8 @@ This code is an example, not production-ready. Test and optimize it before you u
 
 ### Python code
 
+The following code calls the Features API for each location in the **SAVED\_LOCATIONS** table:
+
 {% code fullWidth="true" %}
 ```python
 from snowflake.snowpark import Session
@@ -98,7 +100,7 @@ session.close()
 
 ### Table output
 
-The output of the script above should look similar to the data below:
+The output of the Python script should look similar to the following table:
 
 <table data-full-width="true"><thead><tr><th width="226">location</th><th width="178">date</th><th width="321" data-type="number">phq_attendance_conferences</th><th data-type="number">phq_attendance_sports</th></tr></thead><tbody><tr><td>store1-chicago</td><td>2024-01-16</td><td>231</td><td>19329</td></tr><tr><td>store1-chicago</td><td>2024-01-17</td><td>666</td><td>12312</td></tr><tr><td>store1-chicago</td><td>2024-01-18</td><td>215</td><td>0</td></tr><tr><td>store1-chicago</td><td>2024-01-19</td><td>87</td><td>23246</td></tr><tr><td>store1-chicago</td><td>2024-01-20</td><td>395</td><td>19448</td></tr></tbody></table>
 

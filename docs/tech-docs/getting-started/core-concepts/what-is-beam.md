@@ -18,7 +18,7 @@ Event-driven demand is not evenly distributed. It is sparse and heavy-tailed. A 
 
 This structure breaks many otherwise sound feature selection approaches.
 
-Generic importance methods optimise for statistical gain. In event-driven data, rare spikes can dominate those metrics and inflate weights. When related event features activate together, importance can be split or misattributed. Moderate but real effects can be masked. Feature rankings can shift materially depending on which major events fall within a training window.
+Generic importance methods optimize for statistical gain. In event-driven data, rare spikes can dominate those metrics and inflate weights. When related event features activate together, importance can be split or misattributed. Moderate but real effects can be masked. Feature rankings can shift materially depending on which major events fall within a training window.
 
 The output may appear statistically valid while becoming unstable and difficult to govern at scale.
 
@@ -98,7 +98,7 @@ This ensures model inputs reflect calibrated event impact.
 
 ### Events API
 
-Use the `beam.analysis_id` parameter to:
+To apply calibrated filters, use the `beam.analysis_id` parameter:
 
 * Apply category and rank filters derived from calibration
 * Restrict results to demand-relevant events
@@ -114,13 +114,17 @@ When using the Forecasts API:
 
 This keeps forecast inputs aligned with historical demand drivers.
 
-## Common Pitfalls
+## Common pitfalls
+
+Avoid these mistakes:
 
 * **Skipping Beam entirely** - Leads to unstable feature sets and noise.
 * **Including all event categories** - More features does not imply better performance.
 * **Reusing one Beam Analysis across dissimilar locations** - Impact varies by geography and demand profile.
 
 ## Related
+
+For more information, see:
 
 * [Beam API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam)
 * [Features API Reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) (Beam uses this under the hood)

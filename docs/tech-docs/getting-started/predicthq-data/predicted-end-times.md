@@ -14,7 +14,7 @@ For sports events Predicted End Times covers eight sports (American football, Ba
 
 For performing arts and concerts events all performing arts events that don't have an actual end time have a predicted end time.
 
-Example Use Cases
+You can use Predicted End Times in these example use cases:
 
 * **Workforce Optimization**: For transportation companies if you want to arrange transportation for people leaving an event you can use Predicted End Times.
 * **Demand Forecasting**: When forecasting the impact of events in certain time periods the end time of the event is required.
@@ -45,7 +45,7 @@ You can also use the `sort` parameter to sort by the end time and the predicted\
 
 Note
 
-* Predicted end times is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
+* A Predicted End Time is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
 * For events that don’t have an end time the Events API sets the end time to the start time in its response.
 
 ## Examples

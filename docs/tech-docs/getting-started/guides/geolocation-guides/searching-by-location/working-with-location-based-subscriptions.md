@@ -14,7 +14,7 @@ This guide provides details on how to use PredictHQ APIs when you have purchased
 
 The summary of how to use our APIs with location-based access is as follows:
 
-* Use the Saved Locations feature in our WebApp or our [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) to create saved locations for each of your business locations
+* To create a Saved Location for each of your business locations, use the Saved Locations feature in our WebApp or our [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview)
 * To access events you then use our [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) and call it using the `saved_location.location_id` filter to access events for your locations. Alternatively, you can also access events using the `/events` call in the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations/overview) (see Get a list of events for a location).
 * If you add or delete locations ensure you update the location\_id values used to query the API.
 
@@ -71,7 +71,7 @@ You can use other filters in the Events API to further filter down the response.
 
 Alternatively, you can also access events using the `/events` call in the Saved Locations API (see Get a list of events for a location). To get a list of events for a location make the following call with the location\_id `GET /saved-locations/<location_id>/insights/events`. E.g. `GET /saved-locations/0b6ZrOnTdB2Y7k4zC_9qBg/insights/events`.
 
-See the example below:
+See the following example:
 
 ```python
 import requests
@@ -92,7 +92,7 @@ response = requests.get(
 print(response.json())
 ```
 
-You can then use the events or store them in your data store. Ensure you keep events refresh as events are dynamic and can change such as be cancelled, postponed, move locations, change dates, and so on. See [Keeping Data Updated](../../../../integrations/integration-guides/keep-data-updated-via-api.md).
+You can then use the events or store them in your data store. Ensure you keep events refresh as events are dynamic and can change such as be canceled, postponed, move locations, change dates, and so on. See [Keeping Data Updated](../../../../integrations/integration-guides/keep-data-updated-via-api.md).
 
 For example, you may write code to loop over your list of locations and retrieve updated events for each and update your data store.
 

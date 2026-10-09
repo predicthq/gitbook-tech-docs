@@ -18,7 +18,7 @@ We recommend limiting the number of concurrent requests your application makes a
 
 If you are building a system that needs to make many requests (for example, fetching data across a large number of locations or date ranges), consider:
 
-* Using a queue or worker pool with a fixed concurrency limit rather than parallelising all requests at once
+* Using a queue or worker pool with a fixed concurrency limit rather than parallelizing all requests at once
 * Adding a small delay between requests if you are iterating sequentially
 * Implementing retry logic with exponential backoff to handle any `429` responses gracefully
 

@@ -14,7 +14,7 @@ Severe weather is any dangerous meteorological phenomenon with the potential to 
 
 Severe weather warnings or alerts which may lead to disruption. Severe weather alerts include storms, extreme temperature, flood, etc. For example, a [tornado warning](https://events.predicthq.com/events/v3xwuouU62ZEzXhxWC) for southeastern Webster Parish in northwestern Louisiana alerts people that a severe thunderstorm along with damage in the nearby area is likely to occur in the upcoming hour.
 
-Severe weather storm events can change over time. Events like hurricanes, tornados and other storms move across different locations and change in strength as time goes on. This can be reflected by different warning events in our system. It’s possible to have multiple warnings about the same weather condition:
+Severe weather storm events can change over time. Events like hurricanes, tornados and other storms move across different locations and change in strength as time goes on. Different warning events in our system can reflect this. It’s possible to have multiple warnings about the same weather condition:
 
 * The bad weather condition lasts longer than expected. For example, a [flood advisory was issued at 11.48 AM](https://events.predicthq.com/events/jZEkmbAYqntSRo4Xgs) in east Tennessee that the potential threat may last until 3 PM. Another [flood advisory issued at 3.02 PM](https://events.predicthq.com/events/fxZjGT5Ehoe7brsCjd) that indicates additional rainfall may occur on the day and the following day, and the road closures will remain in place.
 * Multiple areas can be affected. For example, On March 14th, several regions in South Dakota have issued blizzard warnings, such as [Oglala Lakota](https://events.predicthq.com/events/tTjDpN7ZR2WVhzw47o), [Pennington](https://events.predicthq.com/events/ubp47jnAvuwos5fanc), [Fall River](https://events.predicthq.com/events/74ucjeYRYWG89Sw5rS), and [Custer](https://events.predicthq.com/events/6y3py8CPSLfeN29DYq).
@@ -24,7 +24,7 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 
 **LABELS**
 
-PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather:
 
 1.  **Storm**
 
@@ -58,7 +58,7 @@ Severe weather events have PHQ Rank available.
 
 The PHQ Rank indicates the severity of the bad weather, with using the [Common Alerting Protocol (CAP)](https://en.wikipedia.org/wiki/Common_Alerting_Protocol) data. CAP is an international non-proprietary digital message format for all-hazard emergency events. The benefit of using CAP is there is consistency in how it is implemented in different countries, making it easier to use. CAP alerts can be geographically targeted to a defined warning area.
 
-CAP features evaluate the event from three aspects: urgency, severity, and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) has a higher rank. The table below shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
+CAP features evaluate the event from three aspects: urgency, severity, and certainty. For example, a warning about an extreme (severity) weather condition that is likely (certainty) to happen immediately (urgency) has a higher rank. The following table shows the weight of each value of severity, urgency, and certainty when calculating the PHQ Rank.
 
 For example, An event with an urgency of immediate (15), a severity of severe (36), and a certainty of observed (35) would have a PHQ Rank of 86.
 
@@ -92,7 +92,7 @@ PredictHQ classifies this category into three buckets with the following labels 
     `fire`, `wildfire`, `drought`
 3.  **Lockdown**
 
-    The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown` and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://events.predicthq.com/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://events.predicthq.com/events/Vat8acyAFAXQaNNTaK).
+    The government mandated stay-at-home orders during the COVID-19 pandemic that restrict or reduce social activities on different levels. Lockdown events have `health`, `lockdown`, and `disaster` labels. For example, [COVID-19 - Lockdown easing - Portugal](https://events.predicthq.com/events/ydXTVviY5KQty98UfD), [COVID-19 - Stay at home order easing - Michigan - Phase 4](https://events.predicthq.com/events/Vat8acyAFAXQaNNTaK).
 
 #### Date & time
 
@@ -168,7 +168,7 @@ Airport delays events have no Predicted Attendance available as the rank/impact 
 
 ### Health warnings
 
-This category covers events related to infectious diseases. Some events will refer to localised outbreaks, some to nationwide epidemics, some to government mandated restrictions due to COVID-19.
+This category covers events related to infectious diseases. Some events refer to localized outbreaks, some to nationwide epidemics, some to government mandated restrictions due to COVID-19.
 
 Labels
 

@@ -40,7 +40,7 @@ For this example, the [fetchEvents code in the example notebook](https://observa
 4. **Event Rank**: The example prioritizes events with the largest Predicted Attendance, as indicated by their [PHQ Rank](../../predicthq-data/ranks/phq-rank.md). This ensures the map highlights the most significant events, providing a clear view of potential major draws in the area.
 
 {% hint style="info" %}
-For guidance on effectively querying the Events API, see [#customizing-event-data](displaying-events-on-a-map.md#customizing-event-data "mention") below.
+For guidance on effectively querying the Events API, see [#customizing-event-data](displaying-events-on-a-map.md#customizing-event-data "mention") later in this guide.
 {% endhint %}
 
 ### Map
@@ -69,13 +69,13 @@ The notebook can also be[ compiled and downloaded](https://observablehq.com/docu
 1. Use the notebook menu to select **Export**.
 2. For a local copy, choose **Download code**.
 
-## Additional Examples
+## Additional examples
 
 For examples of maps created in Python, explore these [demo apps](../streamlit-demo-apps.md). The source code for rendering events in these apps is available on GitHub. Check out [utils/map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/utils/map.py) and [map.py](https://github.com/predicthq/streamlit-parking-demo/blob/main/map.py) for the parking demo which provides a practical example of visualizing events with Python and [Streamlit](https://streamlit.io/).&#x20;
 
 ## Customizing Event Data
 
-The event data retrieved from the Events API can be customized by adjusting parameters such as date range, location, and categories, among others.&#x20;
+You can customize the event data the Events API returns by adjusting parameters such as date range, location, and categories, among others.&#x20;
 
 For detailed guidance on configuring these parameters to meet your specific requirements, refer to the [Define Query Parameters](filtering-and-finding-relevant-events.md#step-1.-define-query-parameters-for-the-events-api) section in [Filtering and finding relevant events](filtering-and-finding-relevant-events.md). This tutorial provides step-by-step instructions on how to retrieve the most relevant event data for your needs.
 
