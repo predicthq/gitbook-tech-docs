@@ -45,7 +45,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 PHQ Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
 {% hint style="success" %}
-We recommend using Predicted Impact Pattern features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
+We recommend using Predicted Impact Patterns features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
 {% endhint %}
 
 **Attended events generic features**
@@ -56,7 +56,7 @@ Use the generic features in this table if you are not in one of the industries c
 
 **Attended events Predicted Impact Patterns features**
 
-Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
+Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have Predicted Impact Patterns features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
 The features in the Attended Events Generic Features table are generic features, and the features in this table are the Predicted Impact Patterns features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
@@ -68,7 +68,7 @@ We recommend using Predicted Impact Patterns features instead of generic feature
 
 **Configuration**
 
-You can configure PHQ Attendance features using the options below.
+You can configure PHQ Attendance features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -105,7 +105,7 @@ We recommend that if you operate in the industries listed in the table that foll
 
 <table><thead><tr><th width="375">Feature</th><th width="149">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays</code></td><td>Public Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public Holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public Holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances</code></td><td>Observances</td><td>N/A</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr><tr><td><code>phq_impact_school_holidays</code></td><td>School Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_school_holidays_retail</code></td><td>School Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_academic_exam</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_holiday</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_session</code></td><td>Academic</td><td>N/A</td></tr></tbody></table>
 
-**Severe Weather Impact Features**
+**Severe weather impact features**
 
 Supported industries are: Retail.
 
@@ -117,7 +117,7 @@ See [#attended-events-impact-pattern-features](get-features.md#attended-events-i
 
 **Configuration**
 
-You can configure PHQ Impact features using the options below.
+You can configure PHQ Impact features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -153,7 +153,7 @@ You can request industry-specific features which are tuned to one of three poten
 
 **Configuration**
 
-You can configure PHQ Spend features using the options below.
+You can configure PHQ Spend features using the options in the following table.
 
 <table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
@@ -184,7 +184,7 @@ PHQ Viewership features provide daily-level aggregated stats based on the number
 
 **Configuration**
 
-You can configure PHQ Attendance features using the options below.
+You can configure PHQ Attendance features using the options in the following table.
 
 <table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [

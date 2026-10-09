@@ -104,7 +104,7 @@ To get the most value from the Features API and avoid noisy or misleading result
 * Filter by event impact - Use thresholds on `phq_rank` or `local_rank` to avoid cluttering your signals with low-impact events.
 * Re-run Beam regularly - Event-driven demand patterns shift. We recommend re-running Beam monthly to keep your Feature Importance results fresh and relevant.
 
-## Common Pitfalls
+## Common pitfalls
 
 Avoid these common pitfalls:
 

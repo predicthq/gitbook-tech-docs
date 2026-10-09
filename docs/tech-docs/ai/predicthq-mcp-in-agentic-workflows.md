@@ -79,7 +79,7 @@ A demand planning agent manages replenishment across a retail network. A forecas
 
 Tools: `features_api_get_features` (with `beam.analysis_id`), `events_api_list_events` (with `beam.analysis_id`), `forecasts_api_get_forecast` (with `phq_explainability`)
 
-## Setting Up for Agentic Use
+## Setting up for agentic use
 
 ### Connecting
 
@@ -98,7 +98,7 @@ The MCP server exposes \~55 tools across the full PredictHQ API surface. Map the
 
 **Querying demand intelligence and explainability:**
 
-* `features_api_get_features` is the primary tool for demand intelligence. Call it with `beam.analysis_id` to get calibrated, model-ready time-series features ready to feed into a decision or model.
+* `features_api_get_features` is the primary tool for demand intelligence. To get calibrated, model-ready time-series features ready to feed into a decision or model, call it with `beam.analysis_id`.
 * `forecasts_api_get_forecast` returns ready-made, event-driven demand forecasts for agents that want accurate forecasts without building their own model. To get the top real-world drivers behind each forecasted date, pass `phq_explainability`. The system applies Beam automatically.
 * `events_api_list_events` retrieves the specific real-world activity behind a demand signal, so an agent can explain or validate a decision. Use it with `beam.analysis_id`.
 * `saved_locations_api_list_saved_location_insight_events` surfaces the highest-impact upcoming drivers for a known location.

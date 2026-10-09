@@ -118,7 +118,7 @@ To export the events:
 
 You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
-### Create a Table via JSONL Upload
+### Create a table via JSONL upload
 
 To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
@@ -133,12 +133,12 @@ To set up a BigQuery table with a JSONL file, you need the necessary permissions
 
 4. **Manually Define Schema**: Specify the schema details manually. Define each column accurately, and make sure the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
-<figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt=""><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSONL BigQuery structure.png" alt="The BigQuery Create table form with the schema fields defined manually"><figcaption><p>Follow our <a href="loading-event-data-into-a-data-warehouse.md#table-data-structure">Table data structure</a> and check for spelling</p></figcaption></figure>
 
 5. **Advanced Options**: Expand the **Advanced Options** and tick the **Unknown values** checkbox. This setting allows the system to gracefully handle missing information in specific columns of some records, ensuring that rows with incomplete data are not rejected or throw errors during the upload process.
 6. **Create the Table**: To finalize the creation, click **Create Table**.
 
-<figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick "Unknown values" and you're ready to create</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSON Unkown Values select.png" alt=""><figcaption><p>tick <strong>Unknown values</strong> and you're ready to create</p></figcaption></figure>
 
 This method allows initializing your BigQuery table with a JSONL dataset suitable for bulk data uploads. However, it does not support ongoing data refreshes. See the [Keep Event Data Updated](loading-event-data-into-a-data-warehouse.md#keep-event-data-updated) section for advice on setting up a regularly updated table after initialization.
 
@@ -296,7 +296,7 @@ To ensure seamless compatibility with the BigQuery table structure, we run a tra
 * Restricting output to only the columns defined in our table structure ensures consistency and relevance.
 * Formatting complex fields to JSON, suitable for BigQuery ingestion.
 
-Append this transformation code to the extraction code from above. After extraction, this code transforms the data so it's ready for loading into BigQuery:
+To transform the data after extraction, append this transformation code to the extraction code from the previous step. This code readies the data for loading into BigQuery:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -344,7 +344,7 @@ transformed_events_data = prepare_data_for_bigquery(events_data)
 
 Once the data has been successfully extracted from the API and transformed to meet our [schema requirements](loading-event-data-into-a-data-warehouse.md#table-data-structure), the next step involves loading this data into the previously established BigQuery table. This process utilizes Python code integrated with the BigQuery API to load the data.
 
-Below is the code block that you need to append to the end of the extraction and transformation script. It includes a basic retry mechanism to handle occasional upload failures, which is common in network-related operations. However, depending on your requirements for reliability and data integrity, you might consider implementing a more advanced retry logic.
+Below is the code block that you need to append to the end of the extraction and transformation script. It includes a basic retry mechanism to handle occasional upload failures, which is common in network-related operations. However, depending on your requirements for reliability and data integrity, you might consider implementing a more advanced retry logic. Append the following code:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -510,7 +510,7 @@ See the [Filtering Guide](../../getting-started/guides/events-api-guides/filteri
 
 Below is a sample BigQuery SQL query that aligns with the parameters specified for our example. This query filters events based on the categories, date range, event rank, and geographical proximity to Tom’s location.
 
-This type of query is used to find all events around a location with a specified radius for a business location. For example a restaurant, hotel, store, parking garage, or any other business location. Once you have the data loaded into GCP you will want to find how events are impacting your locations. Use the type of query below for each location to get all the events around that location.
+This type of query is used to find all events around a location with a specified radius for a business location. For example a restaurant, hotel, store, parking garage, or any other business location. Once you have the data loaded into GCP you will want to find how events are impacting your locations. Use the type of query in the earlier example for each location to get all the events around that location.
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```sql

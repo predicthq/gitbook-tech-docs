@@ -120,7 +120,7 @@ If you're a workspace admin:
 
 **Adding the PredictHQ connector:**
 
-1. Go to **Connectors > Create** (from Settings or Workspace Settings depending on your plan).
+1. In **Settings** or **Workspace Settings**, depending on your plan, go to **Connectors > Create**.
 2. Enter a name (e.g. `PredictHQ`) and optionally a description.
 3. Enter the **MCP Server URL**: `https://mcp.predicthq.com/v1/mcp`
 4. Select your authentication method:
@@ -129,7 +129,11 @@ If you're a workspace admin:
 
 **To use it in a conversation:**
 
-In the chat field, click **+**, then **More**, and select **PredictHQ**.
+In the chat field:
+
+1. Click **+**.
+2. Click **More**.
+3. Select **PredictHQ**.
 
 **Note:** The exact steps may vary depending on your plan and workspace configuration. If the earlier steps don't match what you see, refer to [OpenAI's connector documentation](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt) for the latest instructions.
 

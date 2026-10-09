@@ -39,11 +39,11 @@ The advantage is you don't need to build a UI. The UI is responsive and works on
 You integrate two functions in your application:
 
 * One for submitting missing events
-* Another for feedback on events - event feedback should be linked to a part of your application that displays an event
+* Another for feedback on events - link event feedback to a part of your application that displays an event
 
 These buttons link to the screens shown in the following section.
 
-Below is a fictitious example app with examples of adding buttons for the two types of Loop Feedback
+The following image shows a fictitious example app with examples of adding buttons for the two types of Loop Feedback
 
 <figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt="A fictitious example app with buttons for submitting a missing event and providing event feedback through Loop Links"><figcaption></figcaption></figure>
 
@@ -132,7 +132,7 @@ Support teams typically use this if issues are raised about event feedback and t
 
 To integrate Loop Links with your application:
 
-1. Create Loop Links using the API:
+1. Using the API, create Loop Links:
    1. Store links in your system, or
    2. Use the link immediately.
 2. To set the name displayed at the top of the Loop pages, update the **`org_name`** field via the settings API if required

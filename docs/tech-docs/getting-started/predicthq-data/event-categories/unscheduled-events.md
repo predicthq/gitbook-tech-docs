@@ -74,7 +74,7 @@ Severe weather events have no Predicted Attendance available as the rank/impact 
 
 ### Disasters
 
-Disaster events are major adverse events resulting from natural processes of the Earth, for example, earthquakes, volcanoes, tsunamis, etc. The reduction and/or limitation of social activities that are forced by COVID-19 pandemic is also classified under the disaster category.
+Disaster events are major adverse events resulting from natural processes of the Earth, for example, earthquakes, volcanoes, tsunamis, etc. PredictHQ also classifies the reduction and/or limitation of social activities forced by the COVID-19 pandemic under the disaster category.
 
 These events tend to be high-impact disasters noticed at a regional or country level.
 
@@ -172,7 +172,7 @@ This category covers events related to infectious diseases. Some events refer to
 
 Labels
 
-PredictHQ classifies this category into three buckets with the following labels used to identify the type of health warnings.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of health warnings:
 
 1.  **Epidemic**
 
@@ -190,7 +190,7 @@ PredictHQ classifies this category into three buckets with the following labels 
     * `restaurant-open` / `restaurant-closed` : On-site dining facilities are open or closed.
     * `retail-open` / `retail-closed` : On-premise / physical activity of selling goods and services to consumers are open or closed.
     * `recreation-open` / `recreation-closed` : Activity or recreation engaged in out of doors, most commonly in natural settings (gyms, pools, beaches, camping grounds) are open or closed.
-    * `entertainment-open` / `entertainment-closed` : an event, performance, location or activity designed to entertain others (casinos, movie theaters, museums, galleries, and aquariums) are open or closed.
+    * `entertainment-open` / `entertainment-closed` : an event, performance, location, or activity designed to entertain others (casinos, movie theaters, museums, galleries, and aquariums) are open or closed.
     * `personal-care-open` / `personal-care-closed` : Both physical assistance and/or prompting and supervising the performance of direct personal care tasks as determined by the consumer's needs (salons, barbers, nail salons) are open or closed.
     * `worship-open` / `worship-closed` : Any building where congregations gather for prayer are open or closed.
 

@@ -1,6 +1,6 @@
 ---
 description: >-
-  Non-Attendance-Based Events are events with a start and end date, but are more
+  Non-attendance-based events are events with a start and end date, but are more
   fluid and distributed in impact, such as observances or school holidays.
 ---
 
@@ -10,7 +10,7 @@ description: >-
 
 **Note**: All Public Holidays, Observances, and School Holidays events contain polygon information. The API returns polygon information in the `geo` field. See our [guide to polygons](../../guides/geolocation-guides/overview.md) for more details.
 
-### Public Holidays
+### Public holidays
 
 A holiday generally established and recognized by law when most businesses and schools are closed. E.g. most countries celebrate New Year’s Day on January 1st.
 
@@ -55,7 +55,7 @@ Public holidays events have Local Rank available.
 
 Public holidays have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of the number of people are celebrating this holiday.
 
-### School Holidays
+### School holidays
 
 School holiday events represent the general date range in an area where the schools are closed for the term/semester break. E.g. [Easter School Holidays](https://events.predicthq.com/events/tbZtoYD9mnArGQs5RW) in Bavaria, Germany is from March 27th, 2021 to April 11th, 2021.
 
@@ -187,7 +187,7 @@ All school holidays for other countries and from the US and UK before the time p
 
 School holidays events have Local Rank available.
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, Local Rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, We calculate Local Rank by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
 **Predicted Attendance**
 
@@ -230,6 +230,8 @@ Observances have event group entities available.
 #### Ranking
 
 **PHQ Rank**
+
+Observances have PHQ Rank values in four bands:
 
 * **Rank 80-90** observances are widely observed and typically associated with consumer spending on gifts, travel, and festivities. Examples include [Valentine's Day](https://events.predicthq.com/events/x957f7DyXpeCubLpWH) and [Christmas Eve](https://events.predicthq.com/events/AtVVBpX4bkXhLDNjBa).
 * **Rank 60-79** observances are mostly religious observances, national days, independence days, or cultural and historical dates which have a wide impact. Examples include [Constitution Day](https://events.predicthq.com/events/PmW2kvCVoxQ3AHgAZS) and [Ganesh Chaturthi](https://events.predicthq.com/events/N22YXJKJlGwL).

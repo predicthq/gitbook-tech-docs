@@ -19,7 +19,7 @@ You can use Predicted End Times in these example use cases:
 * **Workforce Optimization**: For transportation companies if you want to arrange transportation for people leaving an event you can use Predicted End Times.
 * **Demand Forecasting**: When forecasting the impact of events in certain time periods the end time of the event is required.
 
-## How predicted end times are calculated
+## How Predicted End Times are calculated
 
 We use a combination of methods, and the availability of historical data largely determines which ones we use. For event types with historical data, we use machine learning methods including linear regression and quantile regression.&#x20;
 

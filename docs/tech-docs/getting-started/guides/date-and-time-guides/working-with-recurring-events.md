@@ -3,7 +3,7 @@
 The Recurring Events feature provides a linkage between recurrences of the same event:
 
 * Events that recur each year on the same day, such as Christmas Day.
-* Events that recur each year (or month, or  other frequency) but change date and potentially location, such as the American Society of Haematology Annual Meeting.
+* Events that recur each year (or month, or  other frequency) but change date and potentially location, such as the American Society of Hematology Annual Meeting.
 
 As well as being able to see that an event is recurring, it’s also possible to find all recurrences of the same event.
 

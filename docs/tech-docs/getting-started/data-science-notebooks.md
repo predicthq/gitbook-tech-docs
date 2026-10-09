@@ -27,7 +27,7 @@ Per-category notebook series for exploring the data itself. Each series has thre
 
 ### Attendance-based events
 
-Conferences, expos, concerts, festivals, performing arts, sports, and community events - see [Attendance-based events](predicthq-data/event-categories/attendance-based-events.md) for the category reference.
+Conferences, expos, concerts, festivals, performing arts, sports, and community events - see [Attendance-based events](predicthq-data/event-categories/attendance-based-events.md) for the category reference. The attendance-based events notebooks are:
 
 * [Attendance-based events, part 1: data engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/attended-events/part_2_data_exploration.ipynb)
@@ -35,7 +35,7 @@ Conferences, expos, concerts, festivals, performing arts, sports, and community 
 
 ### Non-attendance-based events
 
-Observances, public holidays, and school holidays - see [Non-attendance-based events](predicthq-data/event-categories/non-attendance-based-events.md).
+Observances, public holidays, and school holidays - see [Non-attendance-based events](predicthq-data/event-categories/non-attendance-based-events.md). The non-attendance-based events notebooks are:
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/unattended-events/part_2_data_exploration.ipynb)
@@ -51,13 +51,15 @@ For the category reference, see [Severe Weather](predicthq-data/event-categories
 
 ### Academic events
 
+The academic events notebooks are:
+
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_2_data_exploration.ipynb)
 * [Part 3: Feature Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/academic-events/part_3_feature_engineering.ipynb)
 
 ### Live TV Events
 
-Broadcast sports viewership by county in the United States - see [Live TV Events](predicthq-data/event-categories/live-tv-events.md).
+Broadcast sports viewership by county in the United States - see [Live TV Events](predicthq-data/event-categories/live-tv-events.md). The Live TV Events notebooks are:
 
 * [Part 1: Data Engineering](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_1_data_engineering.ipynb)
 * [Part 2: Data Exploration](https://github.com/predicthq/phq-data-science-docs/blob/master/live-tv-events/part_2_data_exploration.ipynb)

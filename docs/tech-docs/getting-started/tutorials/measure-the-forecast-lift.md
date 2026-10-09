@@ -281,6 +281,8 @@ With your own demand data, the path is identical - one Saved Location and one Be
 
 ## Where to go next
 
+Continue with these pages:
+
 * [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended path for your job, from model training to grounding AI systems
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - the production architecture: local feature storage, refresh cadences, explainability
 * [Which API should I use?](../core-concepts/which-api-should-i-use.md) - per-task API selection

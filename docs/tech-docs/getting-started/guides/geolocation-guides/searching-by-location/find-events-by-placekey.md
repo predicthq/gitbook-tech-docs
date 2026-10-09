@@ -84,7 +84,7 @@ See the [Placekey documentation ](https://docs.placekey.io/Placekey_Technical_Wh
 
 Typically for looking at events around a location, we'd recommend looking at the first six to nine characters of Placekey, depending on how large of an area you want to look at.
 
-For example, the query below looks at events around 40 W 23rd St, New York, NY 10010 using the first 7 characters of the `@Where` part of Placekey:
+For example, the following query looks at events around 40 W 23rd St, New York, NY 10010 using the first seven characters of the `@Where` part of Placekey:
 
 ```python
 import requests

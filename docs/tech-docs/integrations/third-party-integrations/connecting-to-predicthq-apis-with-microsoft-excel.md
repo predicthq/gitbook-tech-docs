@@ -8,7 +8,7 @@ description: Learn how to connect PredictHQ data to Microsoft Excel using APIs.
 
 The data used in this guide is based on a popular location, in our case San Francisco City as a whole. Change the location from San Francisco to the location you want to look at.
 
-Below are the main steps involved in this guide:
+The main steps in this guide are:
 
 1. Building Report Parameters around a Location
    * Example Parameters for this Guide
@@ -35,7 +35,7 @@ Location could be substituted for a specific latitude and longitude relating to 
 
 This guide provides details on how to load PredictHQ's event data into Microsoft Excel using the Events API. We provide examples for Excel running in Microsoft Windows. In this tutorial we'll show you how to connect to the API and load data into a Spreadsheet. In Microsoft Excel, create a new empty Spreadsheet.
 
-PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes a PredictHQ API access token has been created by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
+PredictHQ has a number of different APIs that can be used to build reports, in this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
 Microsoft Excel connects using the URL for the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Excel connection, in line with the parameters outlined in the [Example Parameters for this Guide](connecting-to-predicthq-apis-with-microsoft-excel.md#example-parameters-for-this-guide).
 
@@ -88,9 +88,9 @@ The Query name defaults to the connection URL string parameters, which don't loo
 1. Enter a relevant name. This guide uses “PredictHQ Connection”.
 2. If you use a different name, change the Power Query to match.
 
-<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt="The Data Transformation page with the Query name changed to PredictHQ Connection"><figcaption><p>Rename the Query</p></figcaption></figure>
 
-To format and expand some columns, paste the following code into the Advanced Editor for this Query. To open the Advanced Editor:
+To format and expand some columns, paste the following code into the **Advanced Editor** for this Query. To open the Advanced Editor:
 
 1. Under **Queries**, right-click the Query name.
 2. Click **Advanced Editor**.

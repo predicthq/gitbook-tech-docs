@@ -9,7 +9,7 @@ PredictHQ provides the data as CSV, JSON, or Parquet in full and incremental exp
 When integrating with AWS Data Exchange, PredictHQ delivers data as full and incremental file exports. Here’s what you can expect:
 
 * **Initial Full Dump** - Upon setup, you receive a full dataset covering all events you have access to.
-* **Incremental Updates** - After the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, these updates are delivered daily.
+* **Incremental Updates** - After the initial dump, we provide incremental updates containing only the new or changed records since the last update. By default, we deliver these updates daily.
 * **Occasional Full Dumps** - While incremental updates are the standard, at times (either by request or operational need), we may deliver a full dump without prior notice. You can distinguish these by the presence of `full` (not `incremental`) in the filename.
 
 ### Processing order & change action
