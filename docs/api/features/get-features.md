@@ -58,7 +58,7 @@ Use the generic features in this table if you are not in one of the industries c
 
 Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
-The features in the Attended Events Generic Features table are generic features, and the features in this table are the Predicted Impact Pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
+The features in the Attended Events Generic Features table are generic features, and the features in this table are the Predicted Impact Patterns features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
 {% hint style="success" %}
 We recommend using Predicted Impact Patterns features instead of generic features if you are in one of the supported industries. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
@@ -95,12 +95,12 @@ You can configure PHQ Attendance features using the options below.
 {% tab title="PHQ Impact Features" %}
 PHQ Impact features provide daily-level aggregated stats based on the predicted impact of an event. This takes into account complications like Predicted Impact Patterns (leading and lagging effects of an event).
 
-**Holidays and Observances Impact Pattern Features**
+**Predicted Impact Patterns for holidays and observances**
 
 These features include the Predicted Impact Patterns for public holidays and observances. For example, these features show when people typically arrive and book accommodation before a holiday and if they tend to leave after the holiday. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 
 {% hint style="success" %}
-We recommend that if you operate in the industries listed below you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
+We recommend that if you operate in the industries listed in the table that follows you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.
 {% endhint %}
 
 <table><thead><tr><th width="375">Feature</th><th width="149">Category</th><th>Industry</th></tr></thead><tbody><tr><td><code>phq_impact_public_holidays</code></td><td>Public Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_public_holidays_accommodation</code></td><td>Public Holidays</td><td>Accomodation</td></tr><tr><td><code>phq_impact_public_holidays_hospitality</code></td><td>Public Holidays</td><td>Hospitality/Food &#x26; Beverage*</td></tr><tr><td><code>phq_impact_public_holidays_retail</code></td><td>Public Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_observances</code></td><td>Observances</td><td>N/A</td></tr><tr><td><code>phq_impact_observances_accommodation</code></td><td>Observances</td><td>Accomodation</td></tr><tr><td><code>phq_impact_observances_retail</code></td><td>Observances</td><td>Retail</td></tr><tr><td><code>phq_impact_observances_hospitality</code></td><td>Observances</td><td>Hospitality/Food &#x26; Beverage</td></tr><tr><td><code>phq_impact_school_holidays</code></td><td>School Holidays</td><td>N/A</td></tr><tr><td><code>phq_impact_school_holidays_retail</code></td><td>School Holidays</td><td>Retail</td></tr><tr><td><code>phq_impact_academic_exam</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_holiday</code></td><td>Academic</td><td>N/A</td></tr><tr><td><code>phq_impact_academic_session</code></td><td>Academic</td><td>N/A</td></tr></tbody></table>
@@ -213,7 +213,7 @@ PHQ Rank features provide the daily-level aggregated sum of events bucketed by P
 
 **PHQ Rank Impact Pattern Features**
 
-See the "Holidays and Observances Impact Pattern Features" in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
+See the "Predicted Impact Patterns for holidays and observances" features in the **PHQ Impact Features** tab. These features cover the Accommodation, Retail, and Hospitality (Food & Beverage) industries.
 
 {% hint style="success" %}
 We recommend that if you operate in the supported industries you use the demand impact features for holidays and observances instead of the generic features as these result in greater forecast accuracy as they include the impact before an event starts and after it finishes.

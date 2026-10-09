@@ -4,7 +4,7 @@ description: >-
   fluid and distributed in impact, such as observances or school holidays.
 ---
 
-# Non-Attendance-based events
+# Non-attendance-based events
 
 ## Categories
 
@@ -41,6 +41,8 @@ Public holidays have event group entities available.
 #### Ranking
 
 **PHQ Rank**
+
+Public holidays have one of two PHQ Rank values:
 
 * National holidays or common local holidays have a PHQ Rank of 90 to indicate the popularity/impact on the country
 * Local holidays have a PHQ Rank of 70 as there is less impact on the area compared to a national holiday.
@@ -121,7 +123,7 @@ See also the [FAQs for district-level school holidays](non-attendance-based-even
 
 #### School holidays in the United States
 
-Our school holidays data goes to a more granular detailed level for the United States (US) than for other countries. School holidays are defined at a district level for the US. See our [school holidays category page](https://www.predicthq.com/intelligence/data-enrichment/event-categories/school-holidays) for an overview of our school holidays data.
+Our school holidays data goes to a more granular detailed level for the United States (US) than for other countries. We define school holidays at a district level for the US. See our [school holidays category page](https://www.predicthq.com/intelligence/data-enrichment/event-categories/school-holidays) for an overview of our school holidays data.
 
 There are around 98,469 public schools in the US in around 13,000 school districts. We provide school holidays at a school district level for the US. We have approximately 55,000 - 58,000 school holiday events per year.
 
@@ -179,19 +181,19 @@ School holidays have no entities available
 
 We rank school holidays for the United Kingdom (from September 2017) and the United States (from September 2018) based on student numbers. The rank is based on a logarithmic scale to convert student numbers at the local authority level to a PHQ rank value.
 
-All school holidays for other countries and from the US and UK before the time periods stated above have a PHQ Rank of 90 to indicate the general impact on the region.
+All school holidays for other countries and from the US and UK before the time periods stated earlier, have a PHQ Rank of 90 to indicate the general impact on the region.
 
 **Local Rank**
 
 School holidays events have Local Rank available.
 
-For the United Kingdom (from September 2017) and US (from September 2018) school holidays, local rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
+For the United Kingdom (from September 2017) and US (from September 2018) school holidays, Local Rank is calculated by applying a linear transformation to the student percentage of the local authority. The student percentage is calculated by dividing the student numbers of a local authority by its total population.
 
 **Predicted Attendance**
 
 Predicted Attendance for School holidays for the United Kingdom (from September 2017) and the United States (from September 2018) is based on student numbers for the school district. E.g. If the Bristol school district has 66,000 students in 2019 then we would show phq\_attendance as 66,000.
 
-School holidays for the rest of the world, and from the US and UK before the time periods stated above, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
+School holidays for the rest of the world, and from the US and UK before the time periods stated earlier, have no Predicted Attendance available as the rank/impact only reflect its influence on the area, instead of a number of people are on school holiday during that period.
 
 ### Observances
 
@@ -213,7 +215,7 @@ Labels for an observance event provide more information about the event. The mos
 
 #### Date & time
 
-<table><thead><tr><th width="231.33333333333331">Date &#x26; Time Fields</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. An observance event is a single-day event. There are no multi-day events under the observance category. It will break into individual days if it’s celebrated over multiple days, e.g. the Saturday in the Easter weekend is recognized as Holy Saturday, with the following Sunday is Easter Sunday in Canada</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="231.33333333333331">Date &#x26; Time Fields</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. An observance event is a single-day event. There are no multi-day events under the observance category. It breaks into individual days if it’s celebrated over multiple days, e.g. the Saturday in the Easter weekend is recognized as Holy Saturday, with the following Sunday is Easter Sunday in Canada</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
 Note: Datetime is used with the local timezone E.g. Boston is celebrating Valentine’s Day on February 14th EST, while Los Angeles is also celebrating Valentine’s Day on February 14th but in PST.
 

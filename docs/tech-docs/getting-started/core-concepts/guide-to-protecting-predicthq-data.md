@@ -24,13 +24,13 @@ Effective application design can make it difficult to scrape information or easi
 
 Ability to monitor, alert, and report on website activity by IP address allows for the detection of sudden increases in traffic, outliers, or bad actors. Tracking of an IP address allows for the ability to use a blocklist if needed.
 
-### Use of Commercial Software to Protect Public-Facing Content from Bots
+### Use of commercial software to protect public-facing content from bots
 
 Many companies offer fully featured solutions to prevent scraping by bots or automated scripts. The major cloud providers (AWS, Azure, and GCP) offer Web Application Firewall (WAF) solutions. In addition to this there are several stand alone solutions, for example Cloudflare or Fastly. These solutions all provide services that include regularly updated blocklists, automatic bot detection, and bot prevention.
 
 ### Traffic Monitoring
 
-Monitoring of website traffic through capture and analysis of access logs or similar allows for trend monitoring, the configuration of alerts and early detection of suspicious activity such as increased traffic volumes.
+Monitoring of website traffic through capture and analysis of access logs or similar allows for trend monitoring, the configuration of alerts, and early detection of suspicious activity such as increased traffic volumes.
 
 ### Use of Captcha Challenge-Response Tests, in Particular reCaptcha
 

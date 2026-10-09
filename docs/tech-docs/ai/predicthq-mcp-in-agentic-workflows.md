@@ -14,7 +14,7 @@ In an agentic workflow, a goal is defined, such as optimizing inventory, setting
 
 PredictHQ is one of those tools. The agent calls it via MCP whenever a decision depends on what's happening in the real world: understanding the drivers behind a forecast, gauging upcoming demand pressure across a network of locations, or checking whether real-world conditions support a pricing move. The agent gets verified, structured context at the moment the decision is made, not a retrospective report it has to interpret.
 
-The same pattern holds in multi-agent systems. An orchestrator coordinating specialised agents, or a team of agents collaborating toward a shared goal, can treat PredictHQ as a shared source of real-world context. Whichever agent owns the decision that depends on real-world conditions is the one that reaches for it, and it returns the same verified, deterministic context regardless of which agent makes the call.
+The same pattern holds in multi-agent systems. An orchestrator coordinating specialized agents, or a team of agents collaborating toward a shared goal, can treat PredictHQ as a shared source of real-world context. Whichever agent owns the decision that depends on real-world conditions is the one that reaches for it, and it returns the same verified, deterministic context regardless of which agent makes the call.
 
 ## Why PredictHQ fits agentic workflows
 
@@ -83,11 +83,11 @@ Tools: `features_api_get_features` (with `beam.analysis_id`), `events_api_list_e
 
 ### Connecting
 
-For agents running autonomously, use Bearer token authentication: tokens are configured at agent setup time and need no interactive login flow, which suits headless and scheduled workflows. OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
+For agents running autonomously, use Bearer token authentication: you configure tokens at agent setup time, so they need no interactive login flow, which suits headless and scheduled workflows. OAuth remains available and is a good fit for interactive, multi-user contexts where a person authenticates at connection time.
 
 The server URL, transport, and per-client setup are documented in the [MCP server](mcp.md) reference, and you can [create an API token](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/overview/authenticating) for Bearer authentication.
 
-## Tool Selection for Agents
+## Tool selection for agents
 
 The MCP server exposes \~55 tools across the full PredictHQ API surface. Map them to the workflow rather than reaching for any single tool in isolation.
 

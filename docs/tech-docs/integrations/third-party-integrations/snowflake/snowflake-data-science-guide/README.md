@@ -90,11 +90,11 @@ The **SAVED\_LOCATIONS** input table requires this format:
 
 * **location**: a unique identifier for the location.
 * **latitude**/**longitude**: we recommend including five decimal places.
-* **radius**: the value returned from the using the Predicted Impact Area API.
+* **radius**: the value the Predicted Impact Area API returns.
 * **radius\_unit**: coded for either “km” (kilometers) or “mi” (miles).
 * **date\_start**/**date\_end**: the date range for the data to be returned. Can be changed.
 
-Here is the input table used when running this code. Note the datatypes of each column for the inputs.
+Here is the input table used when running this code: Note the datatypes of each column for the inputs.
 
 {% code fullWidth="true" %}
 ```sql
@@ -118,7 +118,7 @@ VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'
 
 By default, the query returns three months of historical data. If the model is being trained, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
 
-Once the input table is in the format of the above, the following code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
+Once the input table matches the earlier format, the following code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
 
 {% code fullWidth="true" %}
 ```sql
@@ -141,7 +141,7 @@ select
 
 ### 1. [Snowpark method guide](snowpark-method-guide.md)
 
-Call the Features API with Python. Then save the output ML features into Snowflake.
+Call the Features API with Python. Then, in Snowflake, save the output ML features.
 
 ### 2. [SQL method guide](sql-method-guide.md)
 

@@ -47,16 +47,16 @@ You will use these credentials to connect to the PredictHQ-managed SFTP server a
 
 ## Typical ingestion flow
 
-Implement an automated process that:
+Implement an automated process with these steps:
 
-1. Connects to the SFTP server
-2. Lists available / delivery folders
-3. Selects the next unprocessed delivery
-4. Downloads all files for that delivery
-5. Applies records in order, using `change_action` for incrementals
-6. Records the delivery as processed in your own system
+1. Connect to the SFTP server.
+2. List the available delivery folders.
+3. Select the next unprocessed delivery.
+4. Download all files for that delivery.
+5. For incremental deliveries, apply records in order using `change_action`.
+6. In your own system, record the delivery as processed.
 
-## Backwards Compatible Changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
+## Backwards compatible changes <a href="#backwards-compatible-changes" id="backwards-compatible-changes"></a>
 
 From time to time, PredictHQ may make backwards-compatible changes to SFTP exports, including:
 

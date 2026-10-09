@@ -53,7 +53,7 @@ The MCP server exposes tools across the full PredictHQ API surface:
 * **Saved Locations** - create and manage locations, retrieve insight events, opening hours, and closures
 * **Beam** - create and manage Analyses and Analysis Groups, upload demand data, and retrieve Feature Importance and correlation results
 * **Forecasts** - create and manage forecast models, upload demand data, train models, and retrieve forecasts with explainability
-* **Predicted Impact Area** - get predicted impact areas by location and industry
+* **Predicted Impact Area** - get Predicted Impact Area by location and industry
 * **Places & Geocoding** - search places, look up place hierarchies, and geocode addresses
 * **Tech Docs** - search PredictHQ's technical documentation and retrieve individual pages, covering API references, integration guides, tutorials, and conceptual content
 
@@ -70,7 +70,7 @@ If you don't yet have access to the MCP server, contact your PredictHQ account m
 PredictHQ's MCP is listed in the [Claude Connectors Directory](https://claude.ai/directory/connectors/predicthq). To set it up:
 
 1. Open the [PredictHQ connector listing link](https://claude.ai/directory/connectors/predicthq) and select **Connect** (or, in Claude, go to **Settings > Connectors > Browse connectors** and search for **PredictHQ**).
-2. Follow the OAuth flow to authenticate with your PredictHQ account.
+2. To authenticate with your PredictHQ account, follow the OAuth flow.
 
 Once connected, PredictHQ tools are available in any Claude conversation.
 
@@ -80,13 +80,15 @@ For more information, see [Claude's connector directory documentation](https://c
 
 Claude Code supports MCP via the CLI.
 
-To add the PredictHQ MCP server, run the following command:
+To connect Claude Code to the PredictHQ MCP server:
 
-```bash
-claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp
-```
+1. Run the following command:
 
-Then authenticate by running `/mcp` inside a Claude Code session and following the OAuth flow.
+   ```bash
+   claude mcp add --transport http predicthq https://mcp.predicthq.com/v1/mcp
+   ```
+
+2. Inside a Claude Code session, run `/mcp` and follow the OAuth flow.
 
 To use a Bearer token instead:
 
@@ -121,7 +123,7 @@ If you're a workspace admin:
 1. Go to **Connectors > Create** (from Settings or Workspace Settings depending on your plan).
 2. Enter a name (e.g. `PredictHQ`) and optionally a description.
 3. Enter the **MCP Server URL**: `https://mcp.predicthq.com/v1/mcp`
-4. Select your authentication method and click **Create**:
+4. Select your authentication method:
    * **OAuth** - follow the login flow to authenticate with your PredictHQ account.
    * **Access token / API key** - select **Bearer** as the scheme and enter your PredictHQ API key.
 

@@ -19,7 +19,7 @@ Note that the date fields in the Events API Query Parameters are in UTC. You can
 
 <details>
 
-<summary>Previous guide on Converting to Local Time</summary>
+<summary>Previous guide on converting to local time</summary>
 
 The Events API provides dates and times of events in UTC and in the local time where the event is occurring. If you want to convert the dates into another time zone use the Python example in this section.&#x20;
 
@@ -64,7 +64,7 @@ Internally, we have the concept of different date types for events. We don't exp
 
 ### Fixed Date
 
-This concept refers to events that are known to happen on a certain date (including multi-day events) but the start and end times are not known. We represent these events in UTC, and they have a local start time of 00:00:00 and local end time of 23:59:59 as well as a known timezone.
+This concept refers to events that are known to happen on a certain date (including multi-day events) but the start and end times are not known. We represent these events in UTC, and they have a local start time of 00:00:00 and local end time of 23:59:59 as well as a known timezone, as in the following example:
 
 ```json
 {
@@ -75,7 +75,7 @@ This concept refers to events that are known to happen on a certain date (includ
 }
 ```
 
-The above event is happening on Tue, 24 Oct 2023 (a single day) and using the `convert_to_local` function from the earlier Python code produces:
+The event in the earlier example is happening on Tue, 24 Oct 2023 (a single day) and using the `convert_to_local` function from the earlier Python code produces:
 
 ```json
 {

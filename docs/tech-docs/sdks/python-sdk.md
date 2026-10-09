@@ -12,11 +12,15 @@ description: >-
 
 ### Installation
 
+Install the SDK with pip:
+
 ```bash
 pip install predicthq
 ```
 
 ### Setup the SDK
+
+Initialize the client with your access token:
 
 ```python
 from predicthq import Client

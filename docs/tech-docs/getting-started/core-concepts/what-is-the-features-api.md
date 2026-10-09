@@ -55,7 +55,7 @@ When provided, the API:
 * Applies demand-calibrated feature selection
 * Enforces category and rank filters derived from Beam
 
-Without Beam, feature configuration must be defined manually.
+Without Beam, you must define the feature configuration manually.
 
 ## Inputs and Outputs
 
@@ -92,7 +92,7 @@ The Features API returns a time series of feature values for each date (or week)
 
 Each feature includes statistics or level counts depending on the field, in JSON (best for programmatic use) or CSV (best for spreadsheets and BI tools). We designed both formats for downstream use with no extra post-processing. For the exact field structure, column-naming pattern, and available stats, see the [Features API reference](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features).
 
-## Best Practices
+## Best practices
 
 To get the most value from the Features API and avoid noisy or misleading results, follow these practices:
 

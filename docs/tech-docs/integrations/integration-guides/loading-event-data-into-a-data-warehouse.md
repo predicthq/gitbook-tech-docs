@@ -110,20 +110,26 @@ To do that, we searched for Seattle in the WebApp for the relevant period, statu
 
 <figure><img src="../../.gitbook/assets/CC Filters.png" alt="The WebApp Search page filtered to Seattle events, ready to export"><figcaption><p>WebApp Search for Seattle ready for Export</p></figcaption></figure>
 
-After configuring your filters and executing the search, select **Export** and choose the JSONL file format. You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
+To export the events:
+
+1. In the WebApp Search, set your filters and run the search.
+2. Click **Export**.
+3. Choose the JSONL file format.
+
+You can then upload the JSONL file directly to your BigQuery setup, as detailed in the [next section](loading-event-data-into-a-data-warehouse.md#create-a-table-via-jsonl-upload).
 
 ### Create a Table via JSONL Upload
 
 To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
-1. **Click Create Table**: In the dataset you wish to create the table in, click the hamburger menu, and then select **Create Table**.
+1. **Click Create Table**: In the dataset you wish to create the table in, click the **hamburger menu**, and then select **Create Table**.
 
 <figure><img src="../../.gitbook/assets/Create Table.png" alt="The BigQuery dataset menu open with the Create table option highlighted"><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 
 2. **Select the File Location**: Select the JSONL export that you have downloaded somewhere on your computer.
 3. **Name the Table**: Give the table about to be created a name that suits
 
-<figure><img src="../../.gitbook/assets/table upload details.png" alt=""><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/table upload details.png" alt="The BigQuery Create table form with the file source, destination dataset, and table name filled in"><figcaption><p>table upload example details. Replace with your own dataset and table name</p></figcaption></figure>
 
 4. **Manually Define Schema**: Specify the schema details manually. Define each column accurately, and make sure the datatype and column names precisely match those in the [Table data structure](loading-event-data-into-a-data-warehouse.md#table-data-structure). Any discrepancies in spelling or datatype lead to errors during the upload process. While you have flexibility to modify the schema by adding or removing columns based on your specific data requirements, this guide focuses on the recommended fields we suggest including.
 
@@ -290,7 +296,7 @@ To ensure seamless compatibility with the BigQuery table structure, we run a tra
 * Restricting output to only the columns defined in our table structure ensures consistency and relevance.
 * Formatting complex fields to JSON, suitable for BigQuery ingestion.
 
-Append this transformation code to the extraction code from above. After successful data extraction and transformation, the processed data is ready for loading into BigQuery.
+Append this transformation code to the extraction code from above. After extraction, this code transforms the data so it's ready for loading into BigQuery:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```python
@@ -525,7 +531,7 @@ WHERE category IN ('concerts','conferences','festivals','performing-arts')
 ```
 {% endcode %}
 
-This query retrieves records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the above query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
+This query retrieves records that meet all the specified criteria, allowing Tom to identify events that could potentially influence the operations and traffic at this pizzeria in Seattle. Modify the earlier query to fit the specific fields and data types of your table if they differ from this example, and fill your latitude and longitude for your locations using our [Predicted Impact Area API](https://docs.predicthq.com/api/impact-area/get-impact-area) to determine the optimal area for each location.
 
 Visually, this type of query allows you to pull all the events in a radius, as shown in the Radius Map image that follows:
 
@@ -539,7 +545,7 @@ You can look up location details from this table (to find the lat/long for a sto
 
 Using BigQuery for these queries ensures that you leverage powerful, scalable SQL analytics over large datasets, enabling responsive decision-making based on the latest event data available in your system.\\
 
-## Utilizing PredictHQ Data in Your Data Warehouse
+## Utilizing PredictHQ data in your data warehouse
 
 Having integrated PredictHQ's rich events data into your data warehouse, the opportunities to leverage this data are extensive. By now, you've successfully set up your data structure within Google Cloud Platform's BigQuery and have a solid understanding of the JSONL file Upload or the API Connection methods. Here’s how you can maximize the value of PredictHQ data within your organization:
 

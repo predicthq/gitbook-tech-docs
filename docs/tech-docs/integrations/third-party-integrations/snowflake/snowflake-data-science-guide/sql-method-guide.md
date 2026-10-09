@@ -19,7 +19,7 @@ Once **SAVED\_LOCATIONS** has been created as per the parent page of this guide,
    * attendance based features
    * rank based features
    * impact based features
-   * The date range in the following code examples should be updated based on the desired granularity:
+   * To match the desired granularity, update the date range in the following code examples:
      * For training a machine learning model, update the dates to get historical data for the locations
      * If running a model in production and forecasting future demand, update the dates for the visibility window of the forecast - e.g. the new week, month, or months
 3. Join all features together in a single output table
@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code above for available Feature categories.
+If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories.
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -190,7 +190,7 @@ IFNULL(MAX(CASE WHEN a.category = 'community' THEN a.phq_attendance ELSE NULL EN
 
 ### PHQ Rank Features
 
-The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column.
+The code calculates values as a count of events occurring at each rank level, per day, per location. If an event occurs over multiple days, it has a result in each day until the event is over. Each rank level is returned as its own column in the following code:
 
 {% code title="PHQ Rank Features" fullWidth="true" %}
 ```sql

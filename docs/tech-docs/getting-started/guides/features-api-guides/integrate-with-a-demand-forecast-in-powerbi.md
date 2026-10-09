@@ -78,7 +78,7 @@ We then utilized Beam's [Feature Importance API](https://app.gitbook.com/s/kEFs8
 
 <figure><img src="../../../.gitbook/assets/feature-importance-result-screenshot.png" alt="WebApp screen showing the Feature Importance results that rank events by their influence on demand"><figcaption><p>Feature Importance results shown in the WebApp</p></figcaption></figure>
 
-### Forecast-Ready Features using Features API
+### Forecast-ready features using Features API
 
 Finally, using the insights from the Feature Importance API, we employed the Features API to integrate detailed, relevant event data into our model. This precise merging of event data directly correlated with a notable improvement in our model's performance.
 

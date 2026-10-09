@@ -19,7 +19,7 @@ Events with a start and end date and time. PredictHQ models predict attendances 
 
 ## Non-attendance-based events
 
-These are events with a start and end date, but are more fluid in impact, such as observances or school holidays.
+These are events with a start and end date, but are more fluid in impact, such as observances or school holidays:
 
 * Public Holidays
 * School Holidays

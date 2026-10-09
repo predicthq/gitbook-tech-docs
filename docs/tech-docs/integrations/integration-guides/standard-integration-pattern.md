@@ -13,7 +13,7 @@ A PredictHQ integration has four logical components on your side:
 
 We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
 
-The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
+The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
 
 ## Architecture diagram
 
@@ -50,7 +50,7 @@ flowchart TB
     Manage_Locations -- origin_geojson --> Saved_Locations_API
     Saved_Locations_API -- location_id + Predicted Impact Area --> Manage_Locations
     Manage_Locations -- location_id --> Beam_API
-    Beam_API -- analysis_id + feature importance --> Manage_Locations
+    Beam_API -- analysis_id + Feature Importance --> Manage_Locations
     Manage_Locations --> Location_Store
     Location_Store --> Manage_ML_Features & Manage_Events
     Manage_ML_Features -- analysis_id --> Features_API
@@ -79,9 +79,11 @@ flowchart TB
 
 For each business location:
 
-1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope. Store the returned `location_id`.
-2. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
-3. **Monthly refresh:**
+1. Call the Saved Locations API with `origin_geojson` (a lat/lon Point). This creates a Saved Location and automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope.
+2. Store the returned `location_id`.
+3. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location.
+4. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
+5. **Monthly refresh:**
    1. Append new demand data to the existing Beam Analysis - do not delete and recreate it.
    2. Update your stored Feature Importance results with the latest output.
 
@@ -93,7 +95,7 @@ Saved Locations are also the only way to use polygon-based boundaries with Predi
 
 For each location:
 
-1. Using the `analysis_id` from your Location Store, call the Features API to retrieve pre-built ML features.
+1. To retrieve pre-built ML features, call the Features API with the `analysis_id` from your Location Store.
 2. In your local store, save the results.
 
 The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed. Pull from your local store at training and inference time, not directly from the API.
@@ -106,7 +108,7 @@ The `analysis_id` automatically applies the correct location boundary, event cat
 
 Using the `analysis_id`, call the Events API to retrieve the specific events driving demand at each location. Store results locally.
 
-You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems) below.
+You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
 
 **Alternative delivery:** PredictHQ can deliver events filtered by Beam Analysis or Saved Location via Snowflake Private Share, AWS Data Exchange, or SFTP. For most production use cases, this is the preferred approach over live Events API calls.
 
@@ -125,7 +127,7 @@ This architecture also supports [grounding](../../getting-started/glossary.md#gr
 
 **Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, your own access controls govern it, and your refresh cadence sets its freshness. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
 
-**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point.
+**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point. For more detail, see:
 
 * [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
 * [PredictHQ MCP in agentic workflows](../../ai/predicthq-mcp-in-agentic-workflows.md)

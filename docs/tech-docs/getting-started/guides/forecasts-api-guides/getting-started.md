@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Forecasts API delivers fast, accurate, and scalable demand forecasts—powered by the real-world events that impact your business. Whether you’re starting from scratch or augmenting an existing model, our event-driven forecasting approach improves accuracy, unlocking significant ROI and cutting development time by months.
+The Forecasts API delivers fast, accurate, and scalable demand forecasts, and the real-world events that impact your business power them. Whether you’re starting from scratch or augmenting an existing model, our event-driven forecasting approach improves accuracy, unlocking significant ROI and cutting development time by months.
 
 This API provides ready-to-use, event-optimized forecasts for your business, embedding the impact of sports, concerts, school holidays, and more directly into the forecast output. There’s no need to source or model event effects separately—we handle it for you.
 
@@ -163,7 +163,7 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 
 #### Train the Model
 
-During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting.
+During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting. To train the model, run this code:
 
 ```python
 # Train model
@@ -179,9 +179,9 @@ print(f"Model training: {'Successful' if response.status_code == 204 else 'Faile
 
 Training usually takes a few minutes.
 
-### Evaluate Forecast Model
+### Evaluate the forecast model
 
-Use evaluation metrics such as MAPE to compare the model performance to other models, benchmarks, etc. In this example, the benchmark model had a MAPE of 8.96%.
+To compare the model performance to other models, benchmarks, etc., use evaluation metrics such as MAPE. In this example, the benchmark model had a MAPE of 8.96%.
 
 ```python
 # Get evaluation results

@@ -12,7 +12,7 @@ For example, during the basketball game [Villanova Wildcats vs Baylor Bears](htt
 **Note**: Live TV Events covers live games. Replays of sporting events are not included.
 
 {% hint style="info" %}
-Live TV events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
+Live TV Events provide viewership data that is attached to events in other categories. It covers events in the sports category. Live TV events is not actually a category itself but consists of rich information on who is watching events in different locations.
 
 Live TV Events shows the number of people watching sports events per county in the US.
 {% endhint %}
@@ -33,7 +33,7 @@ All televised sports games from the following seven sports leagues are covered i
 
 **TOP VIEWERSHIP SPORTS**
 
-Live TV Events extends coverage to some popular sports games beyond the above seven leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
+Live TV Events extends coverage to some popular sports games beyond the seven major sports leagues. These are events that have high viewership and are assumed to be televised nationally (in all counties). The broadcasts may have status of either `predicted` or `cancelled`
 
 Top viewership sports are typically one-off events or are finals of their respective competitions, such as the 2019 NCAA Women's Basketball Final:
 
@@ -93,7 +93,7 @@ The Live TV Events machine learning models predicted the viewership for sports g
 
 #### Physical event details
 
-The Broadcasts API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information.
+The Broadcasts API also returns the physical event details accordingly with all available information. You don’t need an event subscription to access relevant information. The physical event details include:
 
 * **Event ID**: `event_id` of the physical event can be used to find all broadcasts nationwide for that specific sport game.
 * **Label**: `event.label` for the physical sports event provides more information about the sports type and league. It can be used to find broadcasts for the specific sports type.
@@ -101,6 +101,8 @@ The Broadcasts API also returns the physical event details accordingly with all 
 * **PHQ Rank**: The physical sports events have PHQ Rank available.
 * **Local Rank**: The physical sports events have Local Rank available.
 * **Predicted Attendance**: The physical sports events have Predicted Attendance available.
+
+The following example shows a broadcast response with these details:
 
 ```json
 {

@@ -16,7 +16,7 @@ When integrating with AWS Data Exchange, PredictHQ delivers data as full and inc
 
 It is essential to process all ADX revisions in the order they are delivered to maintain a complete and accurate dataset. However, within a revision, the individual files can be processed in any order or in parallel.
 
-For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update` or `delete`).
+For incremental updates, make sure to check the `change_action` column to work out what action you should take the with record (`insert`, `update`, or `delete`).
 
 ### File naming
 
@@ -38,7 +38,7 @@ PredictHQ Samples on AWS Data Exchange
 
 ## Private Listings
 
-Private Listings can be set up to match your PredictHQ license in terms of data type, locations, and time window. We can provide the data in CSV, JSON, or Parquet and configure dumps of data at regular intervals. The files contained in the data set revisions can be automatically copied to S3 where your Data Warehouse (or other data platform) will be able to pick them up.
+We can set up Private Listings to match your PredictHQ license in terms of data type, locations, and time window. We can provide the data in CSV, JSON, or Parquet and configure dumps of data at regular intervals. The files contained in the data set revisions can be automatically copied to S3 where your Data Warehouse (or other data platform) can pick them up.
 
 PredictHQ creates the Private Listing and extends an “offer” to your AWS Account ID which you can then accept to start accessing the data.
 

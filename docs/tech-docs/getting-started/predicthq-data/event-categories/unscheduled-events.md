@@ -14,7 +14,7 @@ Severe weather is any dangerous meteorological phenomenon with the potential to 
 
 Severe weather warnings or alerts which may lead to disruption. Severe weather alerts include storms, extreme temperature, flood, etc. For example, a [tornado warning](https://events.predicthq.com/events/v3xwuouU62ZEzXhxWC) for southeastern Webster Parish in northwestern Louisiana alerts people that a severe thunderstorm along with damage in the nearby area is likely to occur in the upcoming hour.
 
-Severe weather storm events can change over time. Events like hurricanes, tornados and other storms move across different locations and change in strength as time goes on. Different warning events in our system can reflect this. It’s possible to have multiple warnings about the same weather condition:
+Severe weather storm events can change over time. Events like hurricanes, tornados, and other storms move across different locations and change in strength as time goes on. Different warning events in our system can reflect this. It’s possible to have multiple warnings about the same weather condition:
 
 * The bad weather condition lasts longer than expected. For example, a [flood advisory was issued at 11.48 AM](https://events.predicthq.com/events/jZEkmbAYqntSRo4Xgs) in east Tennessee that the potential threat may last until 3 PM. Another [flood advisory issued at 3.02 PM](https://events.predicthq.com/events/fxZjGT5Ehoe7brsCjd) that indicates additional rainfall may occur on the day and the following day, and the road closures will remain in place.
 * Multiple areas can be affected. For example, On March 14th, several regions in South Dakota have issued blizzard warnings, such as [Oglala Lakota](https://events.predicthq.com/events/tTjDpN7ZR2WVhzw47o), [Pennington](https://events.predicthq.com/events/ubp47jnAvuwos5fanc), [Fall River](https://events.predicthq.com/events/74ucjeYRYWG89Sw5rS), and [Custer](https://events.predicthq.com/events/6y3py8CPSLfeN29DYq).
@@ -22,14 +22,14 @@ Severe weather storm events can change over time. Events like hurricanes, tornad
 * PredictHQ updates severe weather data in near real time and refreshes event details every 15 minutes on average.
 * PredictHQ provides historical severe weather data that can be used for purposes like training a demand forecasting model.
 
-**LABELS**
+**Labels**
 
 PredictHQ classifies this category into three buckets with the following labels used to identify the type of severe weather:
 
 1.  **Storm**
 
     `storm`, `tornado`, `blizzard`, `dust`, `hurricane`, `cyclone`, `rain`, `wind`, `typhoon`, `sand`
-2.  **Extreme Temperature**
+2.  **Extreme temperature**
 
     `cold-wave`, `heat-wave`, `air-quality`, `snow`
 3.  **Flood**
@@ -80,7 +80,7 @@ These events tend to be high-impact disasters noticed at a regional or country l
 
 **Labels**
 
-PredictHQ classifies this category into three buckets with the following labels used to identify the type of disasters.
+PredictHQ classifies this category into three buckets with the following labels used to identify the type of disasters:
 
 1.  **Hydrological\_geophysical**
 
@@ -239,7 +239,7 @@ Labels for a terror event provide more information about the event. The most com
 2. `bombing` : The terrorism acts where the main injury or damage is caused by dropping or detonating a bomb somewhere, for example, [Bombing in Lahan, Nepal](https://events.predicthq.com/events/hnCL2axLWVJZyBN2AV).
 3. `arson`: The terrorism acts also result in a fire damage, it may it may be combined with a `shooting`, `bombing`, etc.
 4. `hostage-crisis`: The terrorism acts when the hostage occurs, for example, [`assassination`](https://events.predicthq.com/events/ywfjG46u6KDmkqqsAa), a terror threat, etc.
-5. `shooting`: The terrorism acts where the main injury or damage is caused by shooting, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, PredictHQ adds the `mass-shooting` label, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
+5. `shooting`: The terrorism acts where shooting causes the main injury or damage, for example, [Shooting in Sonwar, India](https://events.predicthq.com/events/X6D8sz2i7qWZ3VMpFh). If the shooting is on a larger scale, PredictHQ adds the `mass-shooting` label, for example, [Shooting in Chicago, United States](https://events.predicthq.com/events/FtzZisWG6r8KZRp9Gp).
 
 #### Date & time
 

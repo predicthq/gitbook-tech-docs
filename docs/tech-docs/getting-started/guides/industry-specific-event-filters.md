@@ -11,7 +11,7 @@ PredictHQ applies to any business whose demand is shaped by the real world. For 
 
 ## Named industries
 
-Use the Industry Value when specifying an industry in an API request. If your business doesn’t map exactly, use the Examples / Adjacent column to find the closest fit, or use `other` - an unlisted industry doesn't limit which events, features, or APIs you can use.
+Use the Industry Value when specifying an industry in an API request. If your business doesn’t map exactly, to find the closest fit, use the Examples / Adjacent column, or use `other` - an unlisted industry doesn't limit which events, features, or APIs you can use.
 
 | Named Industry                         | Industry Value   | Examples / Adjacent Industries                                                       |
 | -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |

@@ -2,7 +2,7 @@
 
 Not all demand fluctuations are equal. Some are predictable - driven by day-of-week patterns, long-term growth trends, or seasonal cycles. Others are anomalous: unexpected spikes or drops that sit outside those regular patterns. These anomalies are where events have the most impact, and where accurate forecasting is hardest.
 
-Beam is designed to help you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand is driven by real-world context - things like concerts, sports games, conferences, or public holidays near your location.
+Beam is designed to help you understand and act on this anomalous demand. It identifies how much of your demand is anomalous, and then quantifies how much of that anomalous demand real-world context drives - things like concerts, sports games, conferences, or public holidays near your location.
 
 ## How Beam identifies anomalous demand
 
@@ -42,7 +42,7 @@ Like the demand variability ratio, Beam calculates this separately for positive 
 Understanding demand variability and event contribution gives you two practical advantages:
 
 1. **Knowing whether events are relevant to your business.** If events explain a large share of your anomalous demand, incorporating event features into your forecasting model is likely to meaningfully improve accuracy. If the contribution is low, other factors (promotions, weather, etc.) may be more important to focus on.
-2. **Knowing which events matter.** Beam's Feature Importance analysis goes a step further - it identifies which specific event categories (concerts, sports, conferences, public holidays, etc.) are the primary drivers of your demand variability. This lets you prioritise the right signals when building or refining your models.
+2. **Knowing which events matter.** Beam's Feature Importance analysis goes a step further - it identifies which specific event categories (concerts, sports, conferences, public holidays, etc.) are the primary drivers of your demand variability. This lets you prioritize the right signals when building or refining your models.
 
 ## Next steps
 

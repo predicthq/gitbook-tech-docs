@@ -32,7 +32,7 @@ For sports, these models use features such as gender, season, and leagues. For e
 The Events API supports the Predicted End Times feature through the following:
 
 * You can sort events on the predicted end-time value by using the `sort` parameter with a value of `predicted_end` or `-predicted_end`.
-* You can filter on predicted end times by specifying a date range with the `predicted_end.*` parameter.
+* You can filter on Predicted End Times by specifying a date range with the `predicted_end.*` parameter.
 * The Events API returns the Predicted End Time as the `predicted_end` field in the events response data. This field is present only if an actual end time is not available for the event and we have a predicted end time. The predicted end date of the event in ISO 8601 format.
 
 **Note**: Predicted end time and all other start and end times are in UTC if the event time zone is provided, and in local time otherwise. For example, Independence Day falls on the 4th of July regardless of the timezone and has a null time zone.
@@ -43,7 +43,7 @@ If an event does not have a valid end time then the predicted\_end field is pres
 
 You can also use the `sort` parameter to sort by the end time and the predicted\_end where needed.
 
-Note
+Note:
 
 * A Predicted End Time is a predicted value, not an actual end time value. It is based on various machine learning models and statistical methods. We aim to have good accuracy on average but there is a margin of error in the value. Take this into account when you use the value.
 * For events that don’t have an end time the Events API sets the end time to the start time in its response.
@@ -51,6 +51,8 @@ Note
 ## Examples
 
 ### Event with a Predicted End Time
+
+This event has a `predicted_end` field in its response:
 
 ```json
 {
@@ -69,6 +71,8 @@ Note
 ```
 
 ### Event with a scheduled end time
+
+This event has an actual end time and no `predicted_end` field:
 
 ```json
 {

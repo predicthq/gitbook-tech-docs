@@ -22,7 +22,7 @@ If you are building a system that needs to make many requests (for example, fetc
 * Adding a small delay between requests if you are iterating sequentially
 * Implementing retry logic with exponential backoff to handle any `429` responses gracefully
 
-See Retrying Failed Requests for guidance on backoff and retry behaviour.
+See Retrying Failed Requests for guidance on backoff and retry behavior.
 
 ### Retrying failed requests
 

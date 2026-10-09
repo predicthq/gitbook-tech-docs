@@ -10,11 +10,13 @@ As well as being able to see that an event is recurring, it’s also possible to
 {% hint style="info" %}
 **Example Use Cases**
 
-* **Demand Forecasting**: When analysing previous years transactions or bookings, you can align demand spikes with a recurring event and predict expected demand increases for future years.
+Recurring Events supports use cases such as:
+
+* **Demand Forecasting**: When analyzing previous years transactions or bookings, you can align demand spikes with a recurring event and predict expected demand increases for future years.
 * **Labor Optimization**: Knowing why you were busy last year and planning your resource requirements for the same period next year. What if the event changes location? Recurring Events allows you to get this visibility and plan accordingly.
 {% endhint %}
 
-Recurring Events are represented as an Entity of type `event-group` with recurring info in iCalendar recurring RRULE format.
+The API represents Recurring Events as an Entity of type `event-group` with recurring info in iCalendar recurring RRULE format.
 
 Below is an example event with a recurring `event-group` Entity:
 

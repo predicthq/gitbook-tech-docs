@@ -12,7 +12,7 @@ description: >-
 
 You can create Projects in Bolt to group your notebooks together. To set up a project so every notebook in it follows the same instructions:
 
-1. Create a project for a use case.
+1. For a use case, create a project.
 2. Add your notebooks to the project.
 3. Set the instructions once.
 
@@ -30,7 +30,7 @@ See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for mor
 {% endupdate %}
 
 {% update date="2026-09-09" tags="developer-tools,enhancement" %}
-## MCP Server - General Availability & Listed in Claude's Connectors Directory
+## MCP server - general availability & listed in Claude's connectors directory
 
 PredictHQ's MCP server has moved out of beta. MCP access is available as a trial period. Contact your account manager for details.
 
@@ -42,7 +42,7 @@ See the [PredictHQ MCP documentation](https://docs.predicthq.com/ai/mcp) for mor
 {% update date="2026-08-25" tags="webapp,developer-tools,loop,enhancement" %}
 ## Bolt - Loop Feedback and Individual Card Sharing
 
-Bolt can now send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt generates the details needed, confirms them with you, and submits the feedback on your behalf, returning a link so you can follow the progress.
+Bolt can send missing events and event correction feedback to the PredictHQ team through Loop without you leaving the conversation. Tell Bolt about missing events or flag one that needs correcting and Bolt generates the details needed, confirms them with you, and submits the feedback on your behalf, returning a link so you can follow the progress.
 
 Bolt sharing now supports sharing individual cards, so you can share specific results instead of the whole notebook. Share multiple cards from the same notebook and they build up into one view. Recipients can see the visual previews and data, and copy the integration code straight from the cards.
 {% endupdate %}
@@ -66,7 +66,7 @@ Bolt's interface has also been improved to include an activity pane showing exac
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
 ## Juneteenth - Standardised Holiday Naming
 
-PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardised to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
+PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardized to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
 
 The change covers US states and the US territories of Puerto Rico, the United States Virgin Islands, the Northern Mariana Islands, and American Samoa.
 {% endupdate %}
@@ -176,7 +176,7 @@ If you match UK school holidays and public holidays to a place ID, you get a sin
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}
 ## Include Predicted Events Toggle in Event Trends
 
-Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included predicted events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Synthetic events are excluded from the Events API results shown on the page, matching how they are treated in the Features API.
+Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Synthetic events are excluded from the Events API results shown on the page, matching how they are treated in the Features API.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
@@ -208,7 +208,7 @@ Northern Ireland half-term school holidays are now published as the full week th
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}
 ## Store Closures & Operating Hours in Saved Locations
 
-Saved Locations now support `closed_days` and `operating_hours` fields via the API and WebApp. Beam and the Forecasts API treat closed days as non-demand days, ensuring that forecasts are not distorted by days when a location is not trading. This is particularly relevant for customers with locations that have non-standard trading patterns - seasonal closures, variable hours, or planned shutdowns.
+Saved Locations now support `closed_days` and `operating_hours` fields via the API and WebApp. Beam and the Forecasts API treat closed days as non-demand days, ensuring that forecasts are not distorted by days when a location is not trading. This is particularly relevant if you have locations with non-standard trading patterns - seasonal closures, variable hours, or planned shutdowns.
 {% endupdate %}
 
 {% update date="2026-01-15" tags="enhancement,beam,forecasts-api" %}
@@ -220,6 +220,6 @@ The default Local Rank threshold for the Restaurant and Parking industries is no
 {% update date="2026-01-08" tags="data-quality,enhancement,events-api" %}
 ## MLB Spring Training Labelling
 
-MLB Spring Training fixtures now carry both the `mlb` league label and the `pre-season` label, following the addition of the Spring Training competition to the MLB league mapping. Affected events have been republished.
+MLB Spring Training fixtures now carry both the `mlb` league label and the `pre-season` label, following the addition of the Spring Training competition to the MLB league mapping. We republished the affected events.
 {% endupdate %}
 {% endupdates %}

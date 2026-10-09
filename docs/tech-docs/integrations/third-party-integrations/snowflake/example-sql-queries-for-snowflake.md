@@ -87,6 +87,6 @@ Example Results:
 | BaqF5i5yYxBzFUGFLj | Kill The Noise                                | concerts     |       52      |     { "coordinates": \[ -122.3205827, 47.6137242 ], "type": "Point" }    |
 | HpuMrnfLhdEgcBJu4q | Convent Bonfires, Bonsai Trees, and Good Job. | concerts     |       36      |     { "coordinates": \[ -122.3343786, 47.6005944 ], "type": "Point" }    |
 
-Using the geo field of the events, these can be plotted on a map as shown below.
+Using the geo field of the events, these can be plotted on a map as shown in the results map.
 
 <figure><img src="../../../.gitbook/assets/seattle-polygon-snowflake-results-ex.png" alt="Map of Seattle with the events returned by the polygon query plotted as points inside the polygon area"><figcaption></figcaption></figure>

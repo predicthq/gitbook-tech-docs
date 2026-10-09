@@ -68,7 +68,7 @@ Three decisions determine whether grounded answers are relevant or noisy:
 
 * **Scope with Beam.** Retrieval should return the events that drive demand at the location in question, not every event nearby. Store each location's Beam `analysis_id` results (categories, rank thresholds) and apply them as retrieval filters - the same calibration your forecasting path uses. Without it, the model is grounded in noise.
 * **Filter structurally first.** Location, date window, and category filters do the heavy lifting on structured event data. If you also embed event descriptions for semantic search, apply it after structural filtering, not instead of it.
-* **Return records, not summaries.** Give the model the verified fields (title, category, dates, predicted attendance, venue) and let it reason. Pre-summarized context loses the specifics that make answers explainable, and every claim in a grounded answer should trace back to a specific event record.
+* **Return records, not summaries.** Give the model the verified fields (title, category, dates, Predicted Attendance, venue) and let it reason. Pre-summarized context loses the specifics that make answers explainable, and every claim in a grounded answer should trace back to a specific event record.
 
 ## Freshness
 

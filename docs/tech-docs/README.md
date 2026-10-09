@@ -10,6 +10,8 @@ Everything you need to integrate PredictHQ into your models, pipelines, and AI s
 
 ## Core APIs
 
+The core APIs are:
+
 * [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) - Structured, deduplicated real-world events for discovery, explainability, and building trust in AI-driven decisions
 * [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) - Pre-built, model-ready demand features aggregated from real-world events
 * [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts) - Event-driven demand forecasts without building or maintaining your own model

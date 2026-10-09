@@ -8,7 +8,7 @@ PredictHQ attaches a Placekey to event records that happen at a particular locat
 
 <figure><img src="../../../.gitbook/assets/placekey-example.png" alt="Example Placekey 222-22t@5yv-j89-g6k for The Mirage Theatre in Las Vegas"><figcaption></figcaption></figure>
 
-The format of the Placekey is `What@Where`. Take the above example: `222-22t@5yv-j89-g6k`. For the What component, the first three characters refer to the Address Encoding and the second set of three characters refers to the POI Encoding. The Where part, on the other hand, is made up of three unique character sequences, built upon Uber’s open source H3 grid system. See the [Placekey site ](https://www.placekey.io/how-it-works)for an excellent description of what Placekey is and how it works.
+The format of the Placekey is `What@Where`. Take the Mirage Theatre example: `222-22t@5yv-j89-g6k`. For the What component, the first three characters refer to the Address Encoding and the second set of three characters refers to the POI Encoding. The Where part, on the other hand, is made up of three unique character sequences, built upon Uber’s open source H3 grid system. See the [Placekey site ](https://www.placekey.io/how-it-works)for an excellent description of what Placekey is and how it works.
 
 The reason Placekey is useful for joining datasets is because of the general lack of standardization in POI and address data. Addresses are often formatted in different ways. Connecting data by address is difficult, and often inaccurate, and different companies may have different definitions of the latitude, longitude, and area of a location. Using Placekey provides a standard way of representing POI data and lets you join event data with other data sets that also use Placekey.
 
@@ -57,7 +57,7 @@ Placekey has address support for the United States, United Kingdom, and Canada (
 
 PredictHQ provides Placekey on attended events from 2020 onwards.
 
-For all other countries where Placekey does not support addresses, these events will have the `@Where` part of Placekey. For example, the [Stade Toulousain vs Perpignan](https://events.predicthq.com/events/FYwLVpWzz7k6SRmiZy) event in Toulouse, France has a Placekey of `@7f7-mcy-ndv`. This is very useful and can also be used to find nearby events and to join with POI data.
+For all other countries where Placekey does not support addresses, these events have the `@Where` part of Placekey. For example, the [Stade Toulousain vs Perpignan](https://events.predicthq.com/events/FYwLVpWzz7k6SRmiZy) event in Toulouse, France has a Placekey of `@7f7-mcy-ndv`. This is very useful and can also be used to find nearby events and to join with POI data.
 
 The following image shows the hexagon area covered by `@7f7-mcy-ndv`:
 

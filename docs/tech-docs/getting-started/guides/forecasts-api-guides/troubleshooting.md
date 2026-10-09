@@ -48,7 +48,7 @@ What to try:
 * Filter out extremely low-volume series where demand is often zero or close to zero.
 * Avoid over-segmenting—forecasting too narrowly (e.g. SKU) may not be practical without enough volume.
 
-### Misaligned Seasonality
+### Misaligned seasonality
 
 Some demand patterns repeat consistently each year—others don’t. If your data doesn’t include multiple seasonal cycles, or if the timing of spikes shifts from year to year, the model may struggle to generalize.
 

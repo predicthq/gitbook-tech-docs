@@ -34,11 +34,11 @@ The result: forecast accuracy is stable across horizons.
 
 | Horizon before event | Typical (median) accuracy shift | Tail (80th percentile) accuracy shift |
 | --- | --- | --- |
-| 6 weeks or less | 0 percentage points | 0 percentage points |
-| 7-8 weeks | 0 percentage points | ~0.1-0.3 percentage points |
-| 9-10 weeks | 0 percentage points | ~0.5-0.6 percentage points |
+| Six weeks or less | 0 percentage points | 0 percentage points |
+| Seven to eight weeks | 0 percentage points | ~0.1-0.3 percentage points |
+| Nine to 10 weeks | 0 percentage points | ~0.5-0.6 percentage points |
 
-In other words: at six weeks out or closer, the accuracy you'd measure in a backtest is effectively identical to what today's fully-refined data would show — for the majority of locations, there's no measurable difference at all. A small tail difference only starts to appear beyond seven weeks out, and even then it's modest.
+In other words: at six weeks out or closer, the accuracy you'd measure in a backtest is effectively identical to what today's fully-refined data would show—for the majority of locations, there's no measurable difference at all. A small tail difference only starts to appear beyond seven weeks out, and even then it's modest.
 
 Since the large majority of demand forecasting use cases we see run on horizons of six weeks or less, this means **backtesting results are a reliable guide to production performance for the overwhelming majority of PredictHQ customers.**
 
@@ -46,7 +46,7 @@ Since the large majority of demand forecasting use cases we see run on horizons 
 
 It can still feel counterintuitive that individual events change constantly, yet aggregate forecast accuracy barely moves. The reason comes down to aggregation.
 
-Forecasting models don't consume individual event records directly—they consume features that aggregate many events together for a given location, day, and category (for example, total predicted attendance across all concerts, sports, and festivals happening near a store on a given day). A single event being postponed, cancelled, or having its attendance estimate revised is a small perturbation to one input among many contributing to that aggregate. It rarely shifts the aggregate feature enough to change the resulting forecast in any meaningful way.
+Forecasting models don't consume individual event records directly—they consume features that aggregate many events together for a given location, day, and category (for example, total Predicted Attendance across all concerts, sports, and festivals happening near a store on a given day). A single event being postponed, canceled, or having its attendance estimate revised is a small perturbation to one input among many contributing to that aggregate. It rarely shifts the aggregate feature enough to change the resulting forecast in any meaningful way.
 
 Individual event-level details are genuinely dynamic — that's what real-world context looks like. What our results show is that this dynamism, once rolled up into the aggregated features models actually use, doesn't translate into meaningful forecast accuracy drift within the horizons that matter for real forecasting decisions.
 

@@ -8,7 +8,7 @@ PredictHQ manages delivery, so there is no ELT/ETL pipeline to build or maintain
 
 PredictHQ offers multiple up-to-date event Data Shares on Snowflake's Marketplace. This, bundled up with Snowflake's 30-day trial, offers you a commitment-free opportunity to try PredictHQ's data for free.
 
-The sample Data Shares are not limited in terms of columns or fields making them valuable for business and data science evaluations. However, these data shares are limited to a specific location and restricted time window that might not suit your use case. These samples therefore represent a small fraction of the data we have. We also offer Customized Data Shares which are filtered to match your preferences.
+The sample Data Shares are not limited in terms of columns or fields making them valuable for business and data science evaluations. However, these data shares are limited to a specific location and restricted time window that might not suit your use case. These samples therefore represent a small fraction of the data we have. We also offer Customized Data Shares, which we filter to match your preferences.
 
 {% embed url="https://app.snowflake.com/marketplace/listings/PredictHQ?search=predicthq" %}
 PredictHQ Sample Data Shares on Snowflake Marketplace

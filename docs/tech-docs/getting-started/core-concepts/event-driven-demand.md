@@ -26,7 +26,7 @@ The first problem is defining where events actually matter.
 
 Event impact is not uniform across geography or industry. A fixed radius may be too wide, introducing noise, or too narrow, missing material demand drivers. Scope is practical, not theoretical. It determines which events are even considered candidates for impact.
 
-In dense urban areas, demand effects may be highly localised. In regional or rural contexts, effects may extend much further. Travel behaviour, population density, venue clustering, and industry type all influence how far demand impact travels.
+In dense urban areas, demand effects may be highly localized. In regional or rural contexts, effects may extend much further. Travel behaviour, population density, venue clustering, and industry type all influence how far demand impact travels.
 
 Incorrect scope decisions are easy to make and difficult to unwind. If scope is poorly defined, downstream modeling and feature engineering are compromised.
 

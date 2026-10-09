@@ -35,7 +35,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results is shown below:
+A snippet of the results follows:
 
 ```json
 {
@@ -82,7 +82,7 @@ See the [Placekey documentation ](https://docs.placekey.io/Placekey_Technical_Wh
 
 <figure><img src="../../../../.gitbook/assets/hex-levels-example.png" alt="Map showing smaller H3 hexagons nested inside larger hexagons at lower resolutions"><figcaption></figcaption></figure>
 
-Typically for looking at events around a location, we'd recommend looking at the first 6 to 9 characters of Placekey, depending on how large of an area you want to look at.
+Typically for looking at events around a location, we'd recommend looking at the first six to nine characters of Placekey, depending on how large of an area you want to look at.
 
 For example, the query below looks at events around 40 W 23rd St, New York, NY 10010 using the first 7 characters of the `@Where` part of Placekey:
 
@@ -106,7 +106,7 @@ response = requests.get(
 print(response.json())
 ```
 
-A snippet of the results is shown below:
+A snippet of the results follows:
 
 ```json
 {
