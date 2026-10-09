@@ -61,7 +61,7 @@ See the [OpenAPI spec for the Suggested Radius API](https://api.predicthq.com/do
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [create-a-saved-location.md](../saved-locations/create-a-saved-location.md "mention")
 * [get-impact-area.md](../impact-area/get-impact-area.md "mention")

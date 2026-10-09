@@ -66,8 +66,8 @@ The calendar updates automatically based on the specified parameters. In this ex
 
 You can also [compile](https://observablehq.com/documentation/embeds/advanced#notebooks-as-es-modules) the notebook and download it as a JavaScript module. To do this:
 
-1. Use the notebook menu to select 'Export'.
-2. Then choose 'Download code' for a local copy.
+1. Use the notebook menu to select **Export**.
+2. Then choose **Download code** for a local copy.
 
 ### Extension
 

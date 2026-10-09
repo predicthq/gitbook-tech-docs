@@ -63,7 +63,7 @@ print(response.json())
 
 ## Best practices
 
-See the [ML features by group notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb) for best practices on grouping analyses.
+See the [ML features by group notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb) for best practices on grouping Analyses.
 
 ## OpenAPI spec
 

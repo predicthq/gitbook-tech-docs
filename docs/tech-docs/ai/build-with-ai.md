@@ -18,9 +18,9 @@ Supported clients include Claude, ChatGPT, Claude Code, Cursor, and any other cl
 
 [Set up the MCP server →](mcp.md)
 
-## Agent Skills
+## Agent skills
 
-Agent skills give your AI coding assistant specialised knowledge about how to integrate with PredictHQ correctly - the recommended workflow, API selection guidance, Beam best practices, and common mistakes to avoid. Once installed, your assistant applies the skill automatically when you work on PredictHQ integrations. To install the skills, run:
+Agent skills give your AI coding assistant specialized knowledge about how to integrate with PredictHQ correctly - the recommended workflow, API selection guidance, Beam best practices, and common mistakes to avoid. Once installed, your assistant applies the skill automatically when you work on PredictHQ integrations. To install the skills, run:
 
 ```bash
 npx skills add predicthq/agent-skills
@@ -32,13 +32,13 @@ npx skills add predicthq/agent-skills
 
 Every page in PredictHQ's documentation is available as plain text Markdown - useful for pasting directly into an AI assistant or loading into a coding agent's context.
 
-Add `.md` to the end of any documentation URL to get the plain text version. For example:
+To get the plain text version, add `.md` to the end of any documentation URL. For example:
 
 ```
 https://docs.predicthq.com/api/events/search-events.md
 ```
 
-A full index of all documentation pages is available at [/llms.txt](https://docs.predicthq.com/llms.txt).
+A full index of all documentation pages is available at [llms.txt documentation index](https://docs.predicthq.com/llms.txt).
 
 ## Grounding
 

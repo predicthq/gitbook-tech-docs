@@ -231,7 +231,7 @@ PHQ Rank features cannot be configured further. When requesting `phq_rank_*` fea
 {% endtab %}
 {% endtabs %}
 
-## Feature Response Fields
+## Feature response fields
 
 Other than the date, the structure of each result here depends on how you configured the feature in your request and the type of feature.
 

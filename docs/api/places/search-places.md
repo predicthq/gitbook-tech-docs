@@ -52,7 +52,7 @@ See the [OpenAPI spec for the Places API](https://api.predicthq.com/docs/?urls.p
 
 ## Guides
 
-Below are some guides relevant to this API:
+The following guides are relevant to this API:
 
 * [Understanding place hierarchies](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/understanding-place-hierarchies)
 * [Find events by place ID](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/find-events-by-place-id)

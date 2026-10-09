@@ -61,6 +61,6 @@ Read the [Loop API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryNam
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Integrate with Loop Links](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/integrations/integration-guides/integrate-with-loop-links)

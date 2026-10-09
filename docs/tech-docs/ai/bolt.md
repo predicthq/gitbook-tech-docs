@@ -20,11 +20,11 @@ Bolt is in beta - use the 👍 / 👎 feedback buttons in the interface to help 
 
 **Get guided to the right solution.** Bolt understands PredictHQ's products and how they fit together. Rather than returning a generic answer, it steers you toward the right approach for your use case - running a Beam Analysis before querying features, using Predicted Impact Area rather than a fixed radius, and following the integration patterns that produce the best outcomes.
 
-**Build with the results.** Every card in the notebook includes a production-ready API code snippet alongside the visualisation and raw data. When you find something useful, the code to reproduce it is already there.
+**Build with the results.** Every card in the notebook includes a production-ready API code snippet alongside the visualization and raw data. When you find something useful, the code to reproduce it is already there.
 
 **Work iteratively.** Cards persist across the session and accumulate in the notebook as the conversation progresses. Follow up, refine, and drill down - the notebook becomes an artefact you can revisit and share with your team.
 
-## How It Works
+## How it works
 
 Bolt's interface has two panels that work together.
 
@@ -52,7 +52,7 @@ This means Bolt produces better results out of the box than querying the APIs di
 
 ## Getting Started
 
-Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bolt). Select **Bolt** from the navigation to open the interface.
+Bolt is available inside the [PredictHQ WebApp](https://control.predicthq.com/bolt). In the navigation, select **Bolt** to open the interface.
 
 Start by describing your use case or location - for example:
 

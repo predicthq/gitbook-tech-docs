@@ -40,7 +40,7 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 **Export as JSON**
 
-3. Export Events: Once the events of interest are displayed on our WebApp's Search, click 'Export' on the right-hand side followed by 'Export Events Data'. In the dialog box that appears, select the 'JSONL' tab and then click 'Export'.
+3. Export Events: Once the events of interest are displayed on our WebApp's Search, click **Export** and then **Export Events Data**. In the dialog box that appears, select the **JSONL** tab and then click **Export**.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
 

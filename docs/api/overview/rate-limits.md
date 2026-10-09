@@ -12,7 +12,7 @@ From time-to-time we may introduce additional temporary rate limits to ensure th
 
 ### Concurrent requests
 
-Your rate limit controls how many requests per second your organisation can make, but it does not limit how many of those requests can be in-flight simultaneously. Sending a large number of concurrent requests—even within your rps limit—can cause bursts that exceed your limit, result in `429` errors, and put unnecessary pressure on the API.
+Your rate limit controls how many requests per second your organization can make, but it does not limit how many of those requests can be in-flight simultaneously. Sending a large number of concurrent requests—even within your rps limit—can cause bursts that exceed your limit, result in `429` errors, and put unnecessary pressure on the API.
 
 We recommend limiting the number of concurrent requests your application makes at any one time. A good rule of thumb is to keep concurrent requests well below your rps limit, and to prefer sequential or lightly-concurrent patterns when fetching data in bulk.
 
@@ -24,7 +24,7 @@ If you are building a system that needs to make many requests (for example, fetc
 
 See Retrying Failed Requests for guidance on backoff and retry behaviour.
 
-### Retrying Failed Requests
+### Retrying failed requests
 
 Ensure you are using appropriate retries and exponential backoff's to work within the rate limits. See the following page with advice on retrying failed requests:
 

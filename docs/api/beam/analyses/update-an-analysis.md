@@ -75,6 +75,6 @@ The OpenAPI spec for Beam API is in the [Beam API OpenAPI spec](https://api.pred
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Beam guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)

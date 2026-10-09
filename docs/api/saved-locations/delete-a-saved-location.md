@@ -42,6 +42,6 @@ See the [OpenAPI spec for the Saved Locations API](https://api.predicthq.com/doc
 
 ## Guides
 
-Below are some guides relevant to this API:
+These guides are relevant to this API:
 
 * [Working with location-based subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)

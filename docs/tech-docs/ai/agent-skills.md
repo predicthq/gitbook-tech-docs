@@ -26,7 +26,7 @@ npx skills add predicthq/agent-skills
 
 Works with Claude Code, Cursor, Gemini CLI, GitHub Copilot, and other compatible agents. The skills are open source on [GitHub](https://github.com/predicthq/agent-skills).
 
-## Skills and the MCP server
+## Skills and the PredictHQ MCP server
 
 The two are complementary and often installed together. Agent skills teach your coding assistant how to *build* the integration correctly. The [MCP server](mcp.md) gives assistants and agents live access to PredictHQ data - for exploring while you build, and for [grounding](grounding-with-predicthq.md) AI systems in production.
 
