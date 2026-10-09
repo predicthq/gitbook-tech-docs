@@ -96,7 +96,7 @@ Under **Queries**, right-click the Query and select **Advanced Editor**. The Que
 
 This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that transforms the columns automatically for use in the report.
 
-This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 In the Advanced Editor, paste the Power Query below after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
 
@@ -187,7 +187,7 @@ where val.value:date_local::DATE between '2024-01-01' and '2024-03-31'
 {% endcode %}
 
 This code is performing the data transformation and filtering in code. It filters to the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide) section, and transforms some columns we will be using for ease of use in the report.\
-The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.
+The most important transformed column is the 'impact\_patterns' column which we use to find the attendance spread per day across a multi-day event. See [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information.
 
 This is what it should look like when filled in - with all square bracket placeholder text in the FROM condition replaced.
 
@@ -257,7 +257,7 @@ In order to transform the columns, open Power Query and paste the code below to 
 
 Replace the entire existing Power Query code with the one below. Then change the two lines (Lines 4 and 8) that refer to ‘\[api\_token]’ with the PHQ API Access Token used previously.
 
-This code expands out the 'impact\_patterns' column (see [Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
 If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11 of this code:

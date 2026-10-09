@@ -61,7 +61,7 @@ School holiday events represent the general date range in an area where the scho
 
 **Note**: The School holidays category covers the holiday dates in primary schools and secondary schools. School holidays for higher education institutions are under the [Academic Events](attendance-based-events.md#academic) category.
 
-**Predicted School Holiday events**
+**Predicted school holiday events**
 
 PredictHQ provides global estimates for School Holiday events that are not yet confirmed, predicting events up to three years into the future.
 
@@ -113,9 +113,9 @@ Here are some examples of the school holidays for the United Kingdom:
 * [Cardiff - Summer Holidays for 2019](https://events.predicthq.com/events/3ScDNL4SENDGjxZr5x)
 * [Glasgow - Autumn Half Term Holidays for 2020](https://events.predicthq.com/events/7wVaYTguF8K7qzwyKk)
 
-To find school holidays that impact your location you can use the standard features of our events API - as follows:
+To find school holidays that impact your location you can use the standard features of our Events API - as follows:
 
-* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
+* You can perform a lat/lon and radius search using the within parameter on the API. The location can be a store, hotel, or any other location with a lat/lon. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
 
@@ -148,9 +148,9 @@ Here are some examples of the school holidays for the United States:
 * [Broward County Public Schools - Thanksgiving Break](https://events.predicthq.com/events/J7qZdCiQPGMjCMEkWy)
 * [Prince William County Public Schools - Fall Break](https://events.predicthq.com/events/7bNtEWAe6Mke2eZ7BZ)
 
-To find school holidays that impact your location you can use the standard features of our events API and our WebApp to find events that impact your location - as follows:
+To find school holidays that impact your location you can use the standard features of our Events API and our WebApp to find events that impact your location - as follows:
 
-* You can perform a lat/lon and radius search using the within parameter on the API. For this find the lat/lon of your location such as a store, hotel, or any other location. Search for events around that location - such as 5 kilometers around a location in Leeds.
+* You can perform a lat/lon and radius search using the within parameter on the API. The location can be a store, hotel, or any other location with a lat/lon. Search for events around that location - such as 5 kilometers around a location in Leeds.
 * You can use the places parameter in the Events API to find events impacting a geographic location - for example all events impacting Bristol or all events impacting Kent.
 * You can search in the WebApp for a location (this uses the places parameter behind the scenes) to find school holidays for a location.
 * Alternatively, if you are downloading the data into a data lake you can use our location scopes from the place\_hierarchies field with the [places hierarchy endpoint](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/places/get-place-hierarchies) to retrieve events that impact a geographic location.
@@ -252,7 +252,7 @@ Politics events include the main dates of elections and referendums around the w
 
 **Note** the politics category does not cover physically attended events to do with politics such as rallies and debates.
 
-**LABELS**
+**Labels**
 
 This category is classified into two buckets with the following labels used to identify the type of events:
 
@@ -291,7 +291,7 @@ Politics events have no Predicted Attendance available as the rank/impact only r
 
 Daylight savings is the schedule date when daylight savings start or ends in an area.
 
-**LABELS**
+**Labels**
 
 All daylight savings events are labeled `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
 

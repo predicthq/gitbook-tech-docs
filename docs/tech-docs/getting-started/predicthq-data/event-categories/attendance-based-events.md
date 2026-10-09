@@ -29,7 +29,7 @@ Labels for a sports event provide more information about the type, league, and e
     * `closed-doors`: When the sports game has no physical audience in attendance. This is most commonly due to COVID-19 restrictions.
     * `outdoors`: Where the sports game is held in an outdoor area.
     * `fundraise`: A community-related sports game for fundraising purposes.
-4. **Youth Sports**
+4. **Youth Sports**:
    * These events have the `youth-sport` label
    * These events are defined as any sports event where competitors are younger than adult age, whether children or adolescents. Youth sports include school sports at primary and secondary level, as well as sports played outside the education system, whether informally or organized. They do not include colleague sports which are separate and can be cound with the `NCAA` label.
    * Sports covered are youth basketball, baseball, softball, and soccer
@@ -333,19 +333,19 @@ Note:
 
 The Academic Events category has six main event types affecting students’ activities. PredictHQ retrieves the dates from the official academic calendar and/or estimates them based on the pattern. PredictHQ adds an `estimated` label to the estimated dates. The event types are:
 
-1. **Academic-session**
+1. **Academic-session**:
    * The compulsory academic session for students to graduate upon completion.
    * Session starts on the first day of instruction and ends on the last day of instruction.
    * Orientation, reading days, and exams are not included.
    * PredictHQ labels session events with `academic` and `academic-session`.
    * Intensive session, the optional academic session between the normal sessions for earlier graduation where the compulsory term is not applied, is also included in this event type.
-2. **Exam**
+2. **Exam**:
    * The exam period for the academic session.
    * Exam starts on the first day of the exam period and ends on the last day of the exam period
    * No separate exam period for the intensive session.
    * Reading days are not included.
    * PredictHQ labels exam events with `academic` and `exam`.
-3. **Holiday**
+3. **Holiday**:
    * The break/holiday period between the sessions or within the sessions.
    * Holiday events consist of:
      * Fall break
@@ -358,13 +358,13 @@ The Academic Events category has six main event types affecting students’ acti
    * Holiday events start on the day after the instruction / exam finishes and ends before the following instruction starts.
    * Winter and summer breaks may overlap with intensive sessions as the break will affect the majority of students while the intensive session only affects a few.
    * Holiday events are labeled with `academic` and`holiday`.
-4. **Graduation**
+4. **Graduation**:
    * Graduation (also called commencement) date for undergraduate students.
    * Graduation events may have a specific start time where applicable.
    * Graduation venues may be outside the campus.
    * Graduation events include the institute’s name in the title.
    * PredictHQ labels graduation events with `academic` and `graduation`.
-5. **Social**
+5. **Social**:
    * Social events cover homecoming where alumni come back to the campus to visit.
    * Homecoming events may last up to a week.
    * Parent/family day/weekend may be included in the future.

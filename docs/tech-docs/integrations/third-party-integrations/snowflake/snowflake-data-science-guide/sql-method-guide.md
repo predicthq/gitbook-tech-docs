@@ -155,7 +155,7 @@ LEFT JOIN attendance_group_other ago
 SELECT * FROM phq_attendance_features order by location, date;
 </code></pre>
 
-If metrics other than SUM are desired, use the below code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
+If metrics other than SUM are desired, use the following code as a template for each column. The category name part of the code for each column (in these examples defaulted to ‘community’) changes depending on which PHQ Attendance Feature you want to call. Refer to the column code in the earlier PHQ Attendance Features code block for available Feature categories:
 
 {% code title="Count" fullWidth="true" %}
 ```sql
@@ -363,7 +363,7 @@ SELECT * FROM phq_impact_features order by location, date;
 ```
 {% endcode %}
 
-If metrics other than MAX are desired, use the below code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the column code above for the available weather\_category features.
+If metrics other than MAX are desired, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the column code above for the available weather\_category features.
 
 {% code title="Count" fullWidth="true" %}
 ```sql
