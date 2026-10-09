@@ -45,7 +45,7 @@ Pre-trained time series foundation models consume the same future-dated output a
 PHQ Attendance features provide daily-level aggregated stats based on the number of people who we predict will attend events on a given day. This takes into account complications like distributing attendance across multi-day events.
 
 {% hint style="success" %}
-We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
+We recommend using Predicted Impact Pattern features instead of generic features if you are in one of the supported industries. See [#attended-events-impact-patterns](get-features.md#attended-events-impact-patterns "mention").
 {% endhint %}
 
 **Attended Events Generic Features**
@@ -58,10 +58,10 @@ Use the generic features in this table if you are not in one of the industries c
 
 Predicted Impact Patterns model the impact of leading days (days before the event), lagging days (days after an event), and the days the event occurs. The Features API provides Predicted Impact Patterns as a separate feature for each industry. We have impact pattern features for the accommodation, hospitality (which covers food & beverage including restaurants), and retail industries.
 
-The features above are generic features and the features in the table below are the impact pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
+The features above are generic features and the features in the table below are the Predicted Impact Pattern features per industry. For example, if you were in the accommodation industry and wanted a feature for the conferences category you'd use `phq_attendance_conferences_accommodation`.
 
 {% hint style="success" %}
-We recommend using impact pattern features instead of generic features if you are in one of the supported industries. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
+We recommend using Predicted Impact Patterns features instead of generic features if you are in one of the supported industries. See [Predicted Impact Patterns](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/predicthq-data/impact-patterns)
 {% endhint %}
 
 <table><thead><tr><th width="462">Feature</th><th>Description</th></tr></thead><tbody><tr><td><code>phq_attendance_community_accommodation</code></td><td>Community accommodation impact</td></tr><tr><td><code>phq_attendance_concerts_accommodation</code></td><td>Concerts accommodation impact</td></tr><tr><td><code>phq_attendance_conferences_accommodation</code></td><td>Conferences accommodation impact</td></tr><tr><td><code>phq_attendance_expos_accommodation</code></td><td>Expos accommodation impact</td></tr><tr><td><code>phq_attendance_festivals_accommodation</code></td><td>Festivals accommodation impact</td></tr><tr><td><code>phq_attendance_performing_arts_accommodation</code></td><td>Performing Arts accommodation impact</td></tr><tr><td><code>phq_attendance_sports_accommodation</code></td><td>Sports accommodation impact</td></tr><tr><td><code>phq_attendance_community_hospitality</code></td><td>Community hospitality impact</td></tr><tr><td><code>phq_attendance_concerts_hospitality</code></td><td>Concerts hospitality impact</td></tr><tr><td><code>phq_attendance_conferences_hospitality</code></td><td>Conferences hospitality impact</td></tr><tr><td><code>phq_attendance_expos_hospitality</code></td><td>Expos hospitality impact</td></tr><tr><td><code>phq_attendance_festivals_hospitality</code></td><td>Festivals hospitality impact</td></tr><tr><td><code>phq_attendance_performing_arts_hospitality</code></td><td>Performing Arts hospitality impact</td></tr><tr><td><code>phq_attendance_sports_hospitality</code></td><td>Sports hospitality impact</td></tr><tr><td><code>phq_attendance_community_retail</code></td><td>Community Retail impact</td></tr><tr><td><code>phq_attendance_concerts_retail</code></td><td>Concerts Retail impact</td></tr><tr><td><code>phq_attendance_conferences_retail</code></td><td>Conferences Retail impact</td></tr><tr><td><code>phq_attendance_expos_retail</code></td><td>Expos Retail impact</td></tr><tr><td><code>phq_attendance_festivals_retail</code></td><td>Festivals Retail impact</td></tr><tr><td><code>phq_attendance_performing_arts_retail</code></td><td>Performing Arts Retail impact</td></tr><tr><td><code>phq_attendance_sports_retail</code></td><td>Sports Retail impact</td></tr></tbody></table>
@@ -311,6 +311,8 @@ Other than the date, the structure of each result here depends on how you config
 {% endtabs %}
 
 ## Examples
+
+Each of these examples requests features for a location and date range:
 
 {% tabs %}
 {% tab title="curl" %}

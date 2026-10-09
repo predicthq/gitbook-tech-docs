@@ -12,6 +12,8 @@ description: Create a new Saved Location to begin seeing insights.
 
 ### Create using point and radius
 
+Use this request to create a Saved Location from a point and radius:
+
 {% tabs %}
 {% tab title="curl" %}
 ```bash
