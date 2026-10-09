@@ -101,7 +101,7 @@ Next, Tom plans to use Beam in the [WebApp](https://control.predicthq.com/beam) 
 
 <details>
 
-<summary>Event Impact</summary>
+<summary>Event impact</summary>
 
 Define the event impact for the search:
 
@@ -125,11 +125,11 @@ params={
 
 <details>
 
-<summary>Event State</summary>
+<summary>Event state</summary>
 
 Track events based on their likelihood of occurring:
 
-* **Event State**: Events with the `active` state have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../../predicthq-data/predicted-events.md) as more information becomes available. PredictHQ marks events as `deleted` if they are canceled, postponed, or otherwise removed.
+* **Event state**: Events with the `active` state have confirmed details including start dates and locations, whereas the details of \`predicted\` events are [subject to change](../../predicthq-data/predicted-events.md) as more information becomes available. PredictHQ marks events as `deleted` if they are canceled, postponed, or otherwise removed.
 
 Focusing primarily on `active` and `predicted` event states ensures that only events which are relevant and likely to occur are tracked
 
@@ -245,7 +245,7 @@ After you call the API, the Events API returns a structured JSON response contai
 
 <details>
 
-<summary>Example Response</summary>
+<summary>Example response</summary>
 
 ```json
 {
@@ -432,14 +432,14 @@ The response lists events in the results section, each as a JSON block. The amou
 * `place_hierarchies`: Lists the [place IDs](../geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
 * `country`: Identifies the country where the event takes place.
 
-**Event Descriptors**
+**Event descriptors**
 
 * `title`: The name of the event.
 * `description`: A brief description of what the event entails, if available.
 * `category`: The [type of event](../../predicthq-data/event-categories/), such as concerts or public holidays.
 * `phq_labels`: [Tags](../../predicthq-data/labels.md) that classify the event into common themes or topics. Note, `labels` is a legacy field that isn't maintained.
 
-**Event Impact**
+**Event impact**
 
 * `rank`: The [predicted impact](../../predicthq-data/ranks/phq-rank.md) of the event based on a globally comparable rank index.
 * `local_rank`: The [predicted impact](../../predicthq-data/ranks/local-rank.md) of the event, taking into account the local area.
