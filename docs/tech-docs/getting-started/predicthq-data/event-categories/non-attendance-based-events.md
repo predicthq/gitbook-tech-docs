@@ -167,7 +167,7 @@ These Frequently asked questions apply to district level school holidays (for th
 
 #### Geoscoping
 
-The places hierarchy information for school holidays is geoscoped as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey have a scope for Surrey and a scope for Greater London as they are near Greater London.
+We geoscope the places hierarchy information for school holidays as described in our [geographic info guide](../../guides/geolocation-guides/overview.md). These events can have multiple hierarchies if they are close to a major hierarchy (within a radius of 50km). This means for example school holidays in Surrey have a scope for Surrey and a scope for Greater London as they are near Greater London.
 
 If you use the `place.scope` parameter and query for Greater London in this example you get holidays for Surrey too. To limit your search to only London look for areas within London (below Greater London).
 

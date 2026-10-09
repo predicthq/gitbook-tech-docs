@@ -66,7 +66,10 @@ First, create a new Spreadsheet. Then, to open the data connection options:
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, to include the API Access Token request header, in the connection dialog, select the **Advanced** tab.
+The PredictHQ API uses Bearer token authorization, so the connection needs the API Access Token request header. To set it up:
+
+1. In the connection dialog, click the **Advanced** tab, not the default **Basic** tab.
+2. Add the HTTP request header, using the details that follow.
 
 Add the HTTP request header with the following information:
 

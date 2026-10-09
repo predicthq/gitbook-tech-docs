@@ -60,7 +60,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 
 Bolt notebooks can be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
-Bolt's interface has also been improved to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
+We have also improved Bolt's interface to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
 {% endupdate %}
 
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
@@ -118,7 +118,7 @@ Aviation Rank has been retired, and the `aviation_rank` field is no longer popul
 {% endupdate %}
 
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
-## Denmark School Holidays - Municipality-Level Granularity
+## Denmark school holidays - municipality-level granularity
 
 We expanded school holidays for Denmark from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; historical data has been backfilled to 2016.
 {% endupdate %}
@@ -138,7 +138,7 @@ The PredictHQ MCP server now supports OAuth session management and token refresh
 {% update date="2026-05-04" tags="python-sdk,enhancement" %}
 ## Predicted Impact Area in Python SDK
 
-The Python SDK now includes full support for the Predicted Impact Area endpoint, replacing Suggested Radius as the recommended way to define the geographic area around a location.
+The Python SDK includes full support for the Predicted Impact Area endpoint, replacing Suggested Radius as the recommended way to define the geographic area around a location.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="enhancement,loop" %}
@@ -168,7 +168,7 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
 ## UK Local Authority Boundaries - Updated Polygons
 
-We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighbouring authorities.
+We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
 
 If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}

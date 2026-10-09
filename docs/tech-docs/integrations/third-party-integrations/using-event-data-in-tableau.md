@@ -56,7 +56,11 @@ For guidance on finding the most relevant events for your business, see [filteri
 To load the export file in Tableau:
 
 1. Start Tableau: Open Tableau and under **Connect** select **JSON file**.
-2. Locate File: Navigate to the directory where the export was previously saved. If the JSON lines file isn't listed, change the file extension filter from 'JSON Files (\*.json)' to 'All Files (\*.\*)'. To load the file, click **Open**.
+2. Locate File: In the file dialog, complete these actions:
+
+    1. Navigate to the directory where you saved the export.
+    2. If the JSON lines file isn't listed, change the file extension filter from 'JSON Files (\*.json)' to 'All Files (\*.\*)'.
+    3. To load the file, click **Open**.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau file dialog with the file type options for selecting the JSONL export" width="375"><figcaption><p>File extension options</p></figcaption></figure>
 
@@ -106,7 +110,7 @@ This section guides you through creating a simple dashboard in Tableau, featurin
 To create the chart:
 
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and name it 'Time Series'.
-2. Set Filters: Use filters to refine the data for events of interest only. [Drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf) to the Filters shelf:
+2. Set Filters: Use filters to refine the data for events of interest only. On the Filters shelf, [drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf):
 
 <table data-full-width="false"><thead><tr><th width="174">Folder</th><th width="153">Field</th><th>Dialog Box</th></tr></thead><tbody><tr><td>Event-Export-...</td><td><code>State</code></td><td><p>Filter [State]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>active</code> and <code>predicted</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li>This filter is necessary unless you have already filtered these states in our WebApp Search.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><p>Filter [Category]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>community</code>, <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>festivals</code>, <code>performing-arts</code>, <code>sports</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li>This filter is necessary unless you have already filtered these categories in our WebApp Search.</li></ul></td></tr><tr><td>Predicted Impact Patterns</td><td><code>Vertical</code></td><td><p>Filter [Vertical]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check an industry e.g. <code>accommodation</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Note</p><ul><li><code>Vertical</code> is the industry vertical associated with the impact pattern.</li><li>This tutorial focuses on event day impact, which is the same for all industries.</li><li>Choose any available industry if yours is not available.</li></ul></td></tr><tr><td>Impacts</td><td><code>Date Local</code></td><td><p>Filter Field [Date Local]</p><ul><li>Select <strong>Range of Dates</strong>, and then click <strong>Next</strong>.</li></ul><p>Filter [Date Local]</p><ol><li>Set the minimum and maximum dates to '01/05/2024' and '31/05/2024', respectively.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li><code>Date Local</code> is the date in the local time zone.</li></ul></td></tr><tr><td>Impacts</td><td><code>Position</code></td><td><p>Filter [Position]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check event_day.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li><code>Position</code> categorizes <code>Date</code> Local in relation to when the event takes place, such as before, during, or after the event.</li><li>While this tutorial focuses on the impact during event days, exploring impacts on other days is also encouraged.</li></ul></td></tr></tbody></table>
 
@@ -114,7 +118,7 @@ To create the chart:
 For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
 {% endhint %}
 
-2. Apply Filters Globally: Apply the filters you set earlier to 'all worksheets using this data source' by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
+2. Apply Filters Globally: Apply the filters you set earlier to **All worksheets using this data source** by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. On the Row shelf, drag `Value` from 'Source Measures'.
    2. On the Column shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the **Exact Date** format.
@@ -181,6 +185,8 @@ This connection method involves accessing PredictHQ data through Snowflake’s S
 
 **Snowflake Data Share**
 
+To connect through a Snowflake Data Share:
+
 1. Setup: Coordinate with your Snowflake administrator to set up a Data Share with PredictHQ.
 2. Database:
    1. Create a database from the Data Share.
@@ -197,7 +203,7 @@ For more information on receiving PredictHQ data via Snowflake, see the [Snowfla
 
 For more information on connecting to Snowflake in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
 
-**Filter for Relevant Events in Tableau**
+**Filter for relevant events in Tableau**
 
 5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
@@ -213,6 +219,8 @@ This connection method involves accessing PredictHQ data through AWS Data Exchan
 
 **AWS Data Exchange**
 
+To connect through AWS Data Exchange:
+
 1. Setup: Subscribe to PredictHQ data on AWS Data Exchange
 2. Amazon S3: To access the data from Tableau, copy the data to your specified S3 bucket. Ensure that your AWS IAM user or role has read permissions for this bucket.
 
@@ -227,7 +235,7 @@ For more information on receiving PredictHQ data via AWS Data Exchange, see the 
 
 For more information on connecting to Amazon S3 in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
 
-**Filter for Relevant Events in Tableau**
+**Filter for relevant events in Tableau**
 
 5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
@@ -247,7 +255,7 @@ Some other connectors commonly used with PredictHQ data include the following:
 
 For more information on loading PredictHQ data into data warehouses, see the [guide to loading event data into a data warehouse](../integration-guides/loading-event-data-into-a-data-warehouse.md) which provides an example using Google BigQuery.
 
-See this [article](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm) for all connectors supported by Tableau. Once PredictHQ data is connected to a data warehouse, techniques similar to those described in this guide can be applied for querying data from these sources.
+See the [list of all connectors supported by Tableau](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm). Once PredictHQ data is connected to a data warehouse, techniques similar to those described in this guide can be applied for querying data from these sources.
 
 </details>
 

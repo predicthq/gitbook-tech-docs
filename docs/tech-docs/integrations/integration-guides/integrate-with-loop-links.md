@@ -8,7 +8,7 @@ description: >-
 
 [PredictHQ's Loop tool](https://www.predicthq.com/tools/loop) allows customers to submit feedback on existing events and to submit missing events. PredictHQ has global events data from hundreds of providers, but sometimes our data may not include events such as hyperlocal events. Loop allows customers to report events that appear to be missing. It also allows customers to provide feedback on events if they have updates to details like attendance, times, or location.
 
-Using [Loop ](https://loop.predicthq.com/)requires a PredictHQ login to the WebApp, however, some customers want their users to be able to submit event feedback without needing a PredictHQ login. These customers want a way to integrate the ability to report missing events or event feedback into their product.
+Using [Loop](https://loop.predicthq.com/) requires a PredictHQ login to the WebApp. If you want your users to report missing events or give event feedback without a PredictHQ login, you can integrate Loop Links into your product.
 
 **Loop Links** let you integrate with Loop without your users needing a WebApp login, and enable the following:
 
@@ -102,7 +102,7 @@ The email templates contain the organization at the top of the template. This is
 The following tabs show some example emails:
 
 {% tabs %}
-{% tab title="Approved Submission Email" %}
+{% tab title="Approved submission email" %}
 The following image is an example of the email template for approved events:
 
 <figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt="Example Loop Links email telling a user that the event they submitted was approved"><figcaption></figcaption></figure>
@@ -133,11 +133,11 @@ Support teams typically use this if issues are raised about event feedback and t
 To integrate Loop Links with your application:
 
 1. Using the API, create Loop Links:
-   1. Store links in your system, or
+   1. In your system, store the links, or
    2. Use the link immediately.
 2. To set the name displayed at the top of the Loop pages, in the settings API, update the **`org_name`** field if required
 3. In your application, implement the links.
-When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when the event they submitted is approved or rejected.
+When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when PredictHQ approves or rejects the event they submitted.
 
 ### Types of links
 

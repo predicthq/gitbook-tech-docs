@@ -363,7 +363,7 @@ SELECT * FROM phq_impact_features order by location, date;
 ```
 {% endcode %}
 
-If metrics other than MAX are desired, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) will need to be replaced depending on which feature is intended to be called. Refer to the earlier column code for the available weather\_category features:
+If you want metrics other than MAX, use the following code as a template for each column. The weather\_category name part of the code (in these examples defaulted to ‘air-quality’) changes depending on which feature you want to call. Refer to the earlier column code for the available weather\_category features:
 
 {% code title="Count" fullWidth="true" %}
 ```sql

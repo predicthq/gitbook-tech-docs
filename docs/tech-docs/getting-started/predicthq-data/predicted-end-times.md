@@ -6,7 +6,7 @@ This is usually because end times for a sports game or a concert are recorded af
 
 The end time and duration of an event is a key piece of information for event data. The goal of this feature is to increase our end-time coverage.
 
-The Predicted End Times feature uses machine learning and our intelligent algorithms to predict event end times. The goal is that you can use the predicted end-time value where an actual known end-time is not present.
+The Predicted End Times feature uses machine learning and our intelligent algorithms to predict event end times. The goal is that you can use the Predicted End Time where an actual known end time is not present.
 
 Predicted End Times covers a subset of categories which are [**sports**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#sports)**,** [**concerts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#concerts)**,** and [**performing arts**](https://docs.predicthq.com/getting-started/predicthq-data/event-categories/attendance-based-events#performing-arts).
 

@@ -70,7 +70,7 @@ We recommend using Predicted Impact Patterns features instead of generic feature
 
 You can configure Predicted Attendance features using the options in the following table.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields the API calculates for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
@@ -119,7 +119,7 @@ See [#attended-events-impact-pattern-features](get-features.md#attended-events-i
 
 You can configure Predicted Impact features using the options in the following table.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields the API calculates for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
@@ -155,7 +155,7 @@ You can request industry-specific features which are tuned to one of three poten
 
 You can configure Predicted Event Spend features using the options in the following table.
 
-<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields the API calculates for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
@@ -186,7 +186,7 @@ Predicted Viewership features provide daily-level aggregated stats based on the 
 
 You can configure Predicted Viewership features using the options in the following table.
 
-<table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields are calculated for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
+<table data-full-width="true"><thead><tr><th width="184">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>stats</code><br>object<br>optional</td><td><p>You can optionally configure which fields the API calculates for each of these features by providing the list of <code>stats</code> fields you would like.</p><p>Default fields are <code>count</code> and <code>sum</code>.</p><p>Supported fields are:</p><ul><li><code>count</code></li><li><code>sum</code></li><li><code>min</code></li><li><code>max</code></li><li><code>avg</code></li><li><code>median</code></li><li><code>std_dev</code></li></ul><p>For example:</p><pre class="language-json"><code class="lang-json">{
   "stats": [
     "count",
     "std_dev",
