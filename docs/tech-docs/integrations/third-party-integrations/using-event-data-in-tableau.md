@@ -53,6 +53,8 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 **Connect to File**
 
+To load the export file in Tableau:
+
 1. Start Tableau: Open Tableau and under **Connect** select **JSON file**.
 2. Locate File: Navigate to the directory where the export was previously saved. If the JSON lines file isn't listed, change the file extension filter from 'JSON Files (\*.json)' to 'All Files (\*.\*)'. To load the file, click **Open**.
 
