@@ -285,7 +285,7 @@ To update the code:
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, so the query returns all results. It is an involved process with multiple steps - the following Power Query is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
-If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11 of this code:
+If you renamed the Query to something other than "PredictHQ Connection" as per our earlier steps, also rename the reference in lines 2 and 11 of this code:
 {% endhint %}
 
 {% code lineNumbers="true" fullWidth="true" %}
@@ -372,8 +372,8 @@ In the example, those dates are anything on or after the 1st of January 2024 and
 
 To fill the chart axis:
 
-1. Fill the X-axis with the date\_local field.
-2. Fill the Y-axis with the attendance\_per\_day field (this should default to a SUM which is correct).
+1. Fill the **X-axis** with the date\_local field.
+2. Fill the **Y-axis** with the attendance\_per\_day field (this should default to a SUM which is correct).
 
 For the table, drag these fields over and resize the columns as needed to fit everything:
 
@@ -414,7 +414,7 @@ You can add your own data to this chart to compare peaks and troughs of attendan
 
 ### Example API connection report template
 
-Below is a downloadable Power BI template that automatically creates the example report used throughout this guide, using the API Connection method.
+The following is a downloadable Power BI template that automatically creates the example report used throughout this guide, using the API Connection method.
 
 Upon opening the template, it prompts you to enter an API Access Token. Entering this token enables the report to automatically populate and build according to the parameters set forth in this guide.\
 Wait 10-20 seconds between each step as data populates and data runs in the background.
