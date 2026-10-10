@@ -168,15 +168,15 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
 ## UK local authority boundaries - updated polygons
 
-We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
+We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. We have also refined the UK school holiday polygons so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
 
 If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}
 
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}
-## Include Predicted Events Toggle in Event Trends
+## Include Predicted Events toggle in Event Trends
 
-Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Event Trends excludes synthetic events from the Events API results it shows on the page, matching how they are treated in the Features API.
+Event Trends includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Event Trends excludes synthetic events from the Events API results it shows on the page, matching how they are treated in the Features API.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}

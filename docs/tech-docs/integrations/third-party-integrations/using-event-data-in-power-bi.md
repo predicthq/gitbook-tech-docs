@@ -96,13 +96,16 @@ To transform the CSV export:
 
 <figure><img src="../../.gitbook/assets/CSV Transform Data.png" alt="The Power BI data preview window for the uploaded CSV with the Transform Data button highlighted"><figcaption><p>CSV 'Transform Data'</p></figcaption></figure>
 
-Under **Queries**, right-click the Query and select **Advanced Editor**. The Query is named the same as the uploaded CSV name.
+To open the Advanced Editor:
+
+1. Under **Queries**, right-click the Query, which is named the same as the uploaded CSV.
+2. Click **Advanced Editor**.
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt="The Power BI Queries pane with the context menu of the CSV query open and Advanced Editor highlighted"><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
 This opens up a Power Query window which allows code to transform the data for us. The following Power Query code transforms the columns automatically for use in the report.
 
-This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the following Power Query is the final output of this multi-stage transformation.
 
 In the Advanced Editor, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
 
@@ -162,7 +165,7 @@ To start, navigate to the Snowflake data connection via:
 
 <figure><img src="../../.gitbook/assets/Select Snowflake Database.png" alt="The Power BI Get Data window with Database selected and Snowflake highlighted in the list of connectors"><figcaption><p>Database -> Snowflake</p></figcaption></figure>
 
-Enter the Server and Warehouse info you gathered earlier.\
+Enter the **Server** and **Warehouse** info you gathered earlier.\
 It should look something like the following screenshot, replacing square bracket placeholder variables for your Server and Warehouse info.
 
 <figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt="The Power BI Snowflake connection dialog with the Server and Warehouse fields filled in"><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
@@ -220,7 +223,7 @@ See [loading-event-data-into-a-data-warehouse.md](../integration-guides/loading-
 
 PredictHQ has a few APIs that can be used to build reports, for this example, we will stick to the Events API. Starting this process assumes you have created a PredictHQ API access token by following the [API Quickstart guide](https://docs.predicthq.com/getting-started/api-quickstart).
 
-Power BI connects using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
+Power BI connects using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but you must add query parameters to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
 Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we end up with a URL string like this:
 
@@ -279,7 +282,7 @@ To update the code:
 1. Replace the entire existing Power Query code with the code that follows.
 2. In Lines 4 and 8, replace the text that refers to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.
 
-This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, so the query returns all results. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, so the query returns all results. It is an involved process with multiple steps - the following Power Query is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
 If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11 of this code:
