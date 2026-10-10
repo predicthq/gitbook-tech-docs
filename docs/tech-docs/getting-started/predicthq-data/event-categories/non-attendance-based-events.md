@@ -97,7 +97,7 @@ Our school holidays data goes to a more granular detailed level for the United K
 Our school holidays granularity changed in September 2021 to move from the country level for England, Wales, Scotland, and Northern Ireland to the local council level.
 {% endhint %}
 
-For the granular school holiday data for the United Kingdom we have historic data from September 2017 to the present day. We update school holidays every week.
+For the granular school holiday data for the United Kingdom we have historic data from September 2017 onward. We update school holidays every week.
 
 We have events for 212 school districts in the UK including 157 districts for England. For the UK per year we have the following number of events:
 
@@ -127,7 +127,7 @@ Our school holidays data goes to a more granular detailed level for the United S
 
 There are around 98,469 public schools in the US in around 13,000 school districts. We provide school holidays at a school district level for the US. We have approximately 55,000 - 58,000 school holiday events per year.
 
-For the district school holiday data for the US we have historic data from September 2018 to the present day. We update school holidays every week. For school holidays before September 2018 they are shown at the state level.
+For the district school holiday data for the US we have historic data from September 2018 onward. We update school holidays every week. For school holidays before September 2018 they are shown at the state level.
 
 {% hint style="info" %}
 **Note**
@@ -162,7 +162,7 @@ These Frequently asked questions apply to district level school holidays (for th
 1. **Does the data include private school holidays as well?** The data set does not cover private schools. Private schools select their own calendars and are not necessarily governed by school district dates. That being said, some private schools might follow similar calendars.
 2. **Does the data recognize if school holidays are changed due to covid-based government decisions?** The data recognizes changes as soon as possible. The events have an update date/time on them so we fetched updates based on these dates. We update events weekly.
 3. **What date range does the event signal? Are there start and end times to the school holiday?** The date range is the total length of the event. That being said, if the school holidays start on a Sunday or Monday, the weekend before that school holiday is included in the total event time. The same applies to the end date. We include the weekend after a school holiday if the holiday ends on a Friday or Sunday.
-4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, school holidays in the United States are scoped to the district level which means we have school holidays per district while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf) We scope school holidays in the UK to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
+4. **What location is given to the event?** A school holiday is an area event, it scopes to either locality, county, region, or country level. For example, we scope school holidays in the United States to the district level, which means we have school holidays per district, while we scope school holidays in New Zealand to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays.](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf) We scope school holidays in the UK to the local council level. The latitude and longitude are pointing to the center of the country, region, county, or locality.
 5. **Teacher Only Days -** We do not include teacher-only days.
 
 #### Geoscoping
