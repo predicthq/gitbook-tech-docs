@@ -50,7 +50,7 @@ Bolt sharing supports sharing individual cards, so you can share specific result
 {% update date="2026-08-05" tags="data-quality,enhancement,events-api" %}
 ## Cricket Predicted Attendance - accuracy improvements in the UK & Australia
 
-Predicted Attendance for cricket events in the UK and Australia is more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions now capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
+Predicted Attendance for cricket events in the UK and Australia is more accurate. We've added observed match attendance as a signal for this category, reducing aggregate prediction error by around 65% across a validation sample of UK and Australian cricket events. Predictions capture more of the variation in crowd size between fixtures at the same ground, from marquee internationals through to domestic matches.
 
 If you have locations near cricket grounds, this improves match-day demand forecasts and makes each fixture's expected impact easier to explain.
 {% endupdate %}
@@ -74,7 +74,7 @@ The change covers US states and the US territories of Puerto Rico, the United St
 {% update date="2026-06-19" tags="data-quality,enhancement,places" %}
 ## Region polygons across the Places index
 
-Region-level places in the Places index that did not already have a polygon or multipolygon geometry now have one, sourced from PredictHQ's high-resolution polygon dataset. This was applied across the 3,885 region-level places in the index.
+Region-level places in the Places index that did not already have a polygon or multipolygon geometry now have one, sourced from PredictHQ's high-resolution polygon dataset. We applied this across the 3,885 region-level places in the index.
 {% endupdate %}
 
 {% update date="2026-06-16" tags="enhancement,developer-tools" %}
@@ -124,7 +124,7 @@ We expanded school holidays for Denmark from national-level to municipality-leve
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
-## Restaurant Predicted Impact Patterns - Holiday & Observance Improvements
+## Restaurant Predicted Impact Patterns - Holiday and observance improvements
 
 We updated Predicted Impact Patterns for the Restaurant industry for US public holidays, observances, and school holidays, using data-driven analysis of real restaurant demand data. This improves forecast accuracy if you work in the restaurant and quick-service restaurant sectors, particularly around key holiday periods.
 {% endupdate %}
@@ -218,7 +218,7 @@ The default Local Rank threshold for the Restaurant and Parking industries is no
 {% endupdate %}
 
 {% update date="2026-01-08" tags="data-quality,enhancement,events-api" %}
-## MLB Spring Training Labelling
+## MLB Spring Training Labeling
 
 MLB Spring Training fixtures now carry both the `mlb` league label and the `pre-season` label, following the addition of the Spring Training competition to the MLB league mapping. We republished the affected events.
 {% endupdate %}

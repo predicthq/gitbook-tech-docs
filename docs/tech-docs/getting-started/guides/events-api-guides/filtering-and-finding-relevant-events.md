@@ -10,7 +10,7 @@ Events such as concerts, expos, and public holidays can shift consumer behavior 
 
 This tutorial will walk through the [Events API](https://www.predicthq.com/apis/event-api) while exploring an example involving a pizzeria interested in identifying major upcoming events. The goal is to learn how to effectively define query parameters, make API calls, and interpret responses.
 
-Alternatively, use [Saved Locations](https://www.predicthq.com/tools/webapp/saved-locations) to monitor upcoming events around your stores or locations. In [WebApp](https://control.predicthq.com/location-insights), set up a location to get immediate insights for all created locations. You can also do this securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
+To monitor upcoming events around your stores or locations without writing queries, use [Saved Locations](https://www.predicthq.com/tools/webapp/saved-locations). In [WebApp](https://control.predicthq.com/location-insights), set up a location to get immediate insights for all created locations. You can also do this securely and at scale from your own environment with the [Saved Locations API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations).
 
 ## Getting started
 
@@ -156,7 +156,7 @@ Optimize search results with these parameters:
 
 **Settings for Tom’s Pizzeria**
 
-Tom is interested in the top 50 upcoming events for June 2024 that could impact his business. He sets the search parameters to not only manage the scope of results but also ensure that the most significant events are returned first.
+Tom is interested in the top 50 upcoming events for June 2024 that could impact his business. He sets the search parameters to not only manage the scope of results but also ensure that the most significant events are returned first:
 
 ```python
 params={

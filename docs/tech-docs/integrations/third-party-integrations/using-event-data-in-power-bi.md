@@ -73,7 +73,10 @@ There are several ways to connect PredictHQ data to Power BI or other reporting 
 
 ### CSV upload method
 
-We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and click **Search**.
+We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. To search for the events:
+
+1. Fill in the filters based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
+2. Click **Search**.
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
@@ -98,7 +101,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-In the Advanced Editor, paste the following Power Query after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
+In the Advanced Editor, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -200,7 +203,7 @@ To finish the connection:
 1. Click **OK**.
 2. On the next screen, click **Load Data**.
 
-Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
+Connection settings: We recommend DirectQuery for a constant database connection and Import for a one-off import of data from the database.
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
@@ -252,7 +255,7 @@ The filled-out information should look like this:
 
 After clicking **OK**, the Data Transformation page opens where you can shape the data before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.
+Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. Rename the Query to “PredictHQ Connection”.
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
 
@@ -325,7 +328,7 @@ Using either of the two methods above will get PredictHQ Events data loaded and 
 
 This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
-To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
+To begin, insert a blank chart and table visualization using the **Insert** -> **New Visual** tab options, placing the chart first so it takes up half the screen, and the table second so it fills the other half.
 
 To group the chart and table:
 

@@ -124,7 +124,7 @@ Related resources:
 
 PHQ Rank is PredictHQ’s proprietary global ranking score that quantifies the potential relative impact of an event at a global level. It ranges from 0 to 100. PredictHQ calculates it from a blend of signals such as Predicted Attendance, event type, and contextual features that influence demand.
 
-The score is presented on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
+PredictHQ presents the score on a logarithmic scale, meaning that higher scores represent exponentially more impactful events. For example, an event with a PHQ Rank of 90 is significantly more impactful than one with a score of 80.
 
 Related resources:
 

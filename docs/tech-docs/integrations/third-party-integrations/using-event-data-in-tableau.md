@@ -17,7 +17,7 @@ This tutorial requires access to both Tableau and PredictHQ:
 
 Tableau supports [various methods](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm) for connecting to data sources, including local files and data warehouses. This tutorial focuses on connecting to PredictHQ data via a [JSON file](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
 
-Connecting via a JSON file in Tableau involves downloading a static snapshot of event data through bulk exporting from PredictHQ's WebApp. It is particularly useful for scenarios where real-time data updates are not essential. Ideal for quick testing or one-off analyses, this approach provides an efficient way to get started with event data in Tableau. This is a good way to try PredictHQ's data for the first time and explore how it can be useful in your business.
+Connecting via a JSON file in Tableau involves downloading a static snapshot of event data through bulk exporting from PredictHQ's WebApp. It is particularly useful for scenarios where real-time data updates are not essential. Ideal for testing or one-off analyses, this approach provides an efficient way to get started with event data in Tableau. This is a good way to try PredictHQ's data for the first time and explore how it can be useful in your business.
 
 A JSON file export contains a structured list of events, much like a CSV export, but with better handling of nested data. While Tableau also [supports CSV file connections](https://help.tableau.com/current/pro/desktop/en-us/examples_text.htm), accessing nested data, such as [Predicted Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md), is more challenging. In contrast, Tableau's native support for JSON files simplifies the integration and manipulation of nested information, making it the preferred method for connecting PredictHQ data.
 
@@ -51,7 +51,7 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 ### Connect in Tableau
 
-**Connect to File**
+**Connect to file**
 
 To load the export file in Tableau:
 
@@ -72,7 +72,7 @@ For more information on connecting a local JSON file to Tableau and setting up t
 
 To flatten the nested JSON:
 
-3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. The schema levels can also be modified by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels) to change the schema levels:
+3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. The schema levels can also be modified by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels):
 
     1. Root Level: Typically named after the JSON file e.g. `Events-Export-…`
     2. Predicted Impact Patterns: Includes data related to Predicted Impact Patterns.
@@ -112,7 +112,7 @@ To create the chart:
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and name it 'Time Series'.
 2. Set Filters: Use filters to refine the data for events of interest only. On the Filters shelf, [drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf):
 
-<table data-full-width="false"><thead><tr><th width="174">Folder</th><th width="153">Field</th><th>Dialog Box</th></tr></thead><tbody><tr><td>Event-Export-...</td><td><code>State</code></td><td><p>Filter [State]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>active</code> and <code>predicted</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these states in our WebApp Search.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><p>Filter [Category]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>community</code>, <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>festivals</code>, <code>performing-arts</code>, <code>sports</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li>This filter is necessary unless you have already filtered these categories in our WebApp Search.</li></ul></td></tr><tr><td>Predicted Impact Patterns</td><td><code>Vertical</code></td><td><p>Filter [Vertical]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check an industry e.g. <code>accommodation</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Note</p><ul><li><code>Vertical</code> is the industry vertical associated with the impact pattern.</li><li>This tutorial focuses on event day impact, which is the same for all industries.</li><li>Choose any available industry if yours is not available.</li></ul></td></tr><tr><td>Impacts</td><td><code>Date Local</code></td><td><p>Filter Field [Date Local]</p><ul><li>Select <strong>Range of Dates</strong>, and then click <strong>Next</strong>.</li></ul><p>Filter [Date Local]</p><ol><li>Set the minimum and maximum dates to '01/05/2024' and '31/05/2024', respectively.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li><code>Date Local</code> is the date in the local time zone.</li></ul></td></tr><tr><td>Impacts</td><td><code>Position</code></td><td><p>Filter [Position]</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check event_day.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes</p><ul><li><code>Position</code> categorizes <code>Date</code> Local in relation to when the event takes place, such as before, during, or after the event.</li><li>While this tutorial focuses on the impact during event days, exploring impacts on other days is also encouraged.</li></ul></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="174">Folder</th><th width="153">Field</th><th>Dialog Box</th></tr></thead><tbody><tr><td>Event-Export-...</td><td><code>State</code></td><td><p>Filter [State]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>active</code> and <code>predicted</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these states in our WebApp Search.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><p>Filter [Category]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>community</code>, <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>festivals</code>, <code>performing-arts</code>, <code>sports</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these categories in our WebApp Search.</li></ul></td></tr><tr><td>Predicted Impact Patterns</td><td><code>Vertical</code></td><td><p>Filter [Vertical]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check an industry e.g. <code>accommodation</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Note:</p><ul><li><code>Vertical</code> is the industry vertical associated with the impact pattern.</li><li>This tutorial focuses on event day impact, which is the same for all industries.</li><li>Choose any available industry if yours is not available.</li></ul></td></tr><tr><td>Impacts</td><td><code>Date Local</code></td><td><p>Filter Field [Date Local]:</p><ul><li>Select <strong>Range of Dates</strong>, and then click <strong>Next</strong>.</li></ul><p>Filter [Date Local]:</p><ol><li>Set the minimum and maximum dates to '01/05/2024' and '31/05/2024', respectively.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Date Local</code> is the date in the local time zone.</li></ul></td></tr><tr><td>Impacts</td><td><code>Position</code></td><td><p>Filter [Position]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check event_day.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Position</code> categorizes <code>Date</code> Local in relation to when the event takes place, such as before, during, or after the event.</li><li>While this tutorial focuses on the impact during event days, exploring impacts on other days is also encouraged.</li></ul></td></tr></tbody></table>
 
 {% hint style="info" %}
 For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
@@ -121,7 +121,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 2. Apply Filters Globally: Apply the filters you set earlier to **All worksheets using this data source** by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. On the **Row** shelf, drag **Value** from **Source Measures**.
-   2. On the Column shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the **Exact Date** format.
+   2. On the **Column** shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the **Exact Date** format.
    3. To update the y-axis title, follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
 4. Chart Preview:
 
@@ -293,8 +293,9 @@ To connect with the deprecated connector:
 https://tableau-connector.predicthq.com
 ```
 
-8. Click **Begin** and enter the Access Token you generated.
-9. Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for a full list of fields and parameters.
-10. Click **Get data** to import events into Tableau.
+8. Click **Begin**.
+9. Enter the Access Token you generated.
+10. Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for a full list of fields and parameters.
+11. To import events into Tableau, click **Get data**.
 
 </details>
