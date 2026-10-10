@@ -42,6 +42,8 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 **Export as JSON**
 
+To export the events as a JSON file:
+
 3. Export Events: Once the events of interest are displayed on our WebApp's Search, click **Export** and then **Export Events Data**.
 4. Select Format: In the dialog box that appears, select the **JSONL** tab.
 5. Start Export: In the dialog box, click **Export**.
@@ -61,7 +63,7 @@ To load the export file in Tableau:
 2. Locate File: In the file dialog, complete these actions:
 
     1. Navigate to the directory where you saved the export.
-    2. If the JSON lines file isn't listed, change the file extension filter from 'JSON Files (\*.json)' to 'All Files (\*.\*)'.
+    2. If the JSON lines file isn't listed, change the file extension filter from **JSON Files (\*.json)** to **All Files (\*.\*)**.
     3. To load the file, click **Open**.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau file dialog with the file type options for selecting the JSONL export" width="375"><figcaption><p>File extension options</p></figcaption></figure>
@@ -154,8 +156,8 @@ To build the dashboard:
 1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories):
    * To make the dashboard fit any screen, follow the [steps to set the overall dashboard size](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) and set the size to **Automatic**.
 2. Add Worksheets:
-   1. From the Sheets list, drag the 'Time Series' sheet into the dashboard.
-   2. From the Sheets list, drag the 'Event Info' sheet into the dashboard.
+   1. From the **Sheets** list, drag the 'Time Series' sheet into the dashboard.
+   2. From the **Sheets** list, drag the 'Event Info' sheet into the dashboard.
    3. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
@@ -201,7 +203,7 @@ For more information on receiving PredictHQ data via Snowflake, see the [Snowfla
 3. Connection Details: Before connecting, gather all necessary information including:
    1. [Login credentials](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#before-you-begin) for Snowflake authentication
    2. [Server, Warehouse, Database, and Schema information](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#set-up-the-data-source) to set up the data source.
-4. Start Tableau: Open Tableau and connect to Snowflake by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#make-the-connection-and-set-up-the-data-source).
+4. Start Tableau: Open Tableau and connect to Snowflake by following the [instructions for connecting to Snowflake](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#make-the-connection-and-set-up-the-data-source).
 
 For more information on connecting to Snowflake in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
 

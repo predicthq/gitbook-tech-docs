@@ -162,7 +162,7 @@ Related resources:
 
 Predicted Events are machine-generated event records that have not yet been scheduled or publicly announced, but are predicted to occur based on historical event patterns, demand signals, and venue activity over multiple years. PredictHQ assigns these events a probability-driven occurrence window (time and location) and surfaces them to support long-range planning and forecasting.
 
-Predicted Events have a distinct `state: predicted` and can be queried via the Events API or surfaced in the WebApp using state filters. If a real event is later scheduled that matches the prediction, its state is updated automatically (e.g., to `active`), and additional confirmed details - such as start time - are added. If the predicted event does not materialize, the status may transition to `canceled` or `postponed`.
+Predicted Events have a distinct `state: predicted` and can be queried via the Events API or surfaced in the WebApp using state filters. If a real event is later scheduled that matches the prediction, PredictHQ updates its state automatically (e.g., to `active`) and adds confirmed details, such as start time. If the predicted event does not materialize, the status may transition to `canceled` or `postponed`.
 
 This feature helps prevent gaps in demand models by preemptively accounting for likely-but-unconfirmed events and is particularly useful in high-volume, lead-time-sensitive use cases.
 

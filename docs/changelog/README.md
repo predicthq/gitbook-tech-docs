@@ -58,7 +58,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 {% update date="2026-08-05" tags="developer-tools,webapp,enhancement" %}
 ## Bolt - Notebook sharing and UI enhancements
 
-Bolt notebooks can be shared with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
+You can share Bolt notebooks with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
 We have also improved Bolt's interface to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
 {% endupdate %}
@@ -112,7 +112,7 @@ Two refinements to concert data quality. We now identify and filter out events f
 {% endupdate %}
 
 {% update date="2026-05-25" tags="events-api,features-api,deprecation" %}
-## Aviation Rank Retired
+## Aviation Rank retired
 
 Aviation Rank has been retired, and the `aviation_rank` field is no longer populated.
 {% endupdate %}
@@ -208,7 +208,7 @@ We publish Northern Ireland half-term school holidays as the full week that scho
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}
 ## Store Closures & Operating Hours in Saved Locations
 
-Saved Locations now support `closed_days` and `operating_hours` fields via the API and WebApp. Beam and the Forecasts API treat closed days as non-demand days, ensuring that forecasts are not distorted by days when a location is not trading. This is particularly relevant if you have locations with non-standard trading patterns - seasonal closures, variable hours, or planned shutdowns.
+Saved Locations support `closed_days` and `operating_hours` fields via the API and WebApp. Beam and the Forecasts API treat closed days as non-demand days, ensuring that forecasts are not distorted by days when a location is not trading. This is particularly relevant if you have locations with non-standard trading patterns - seasonal closures, variable hours, or planned shutdowns.
 {% endupdate %}
 
 {% update date="2026-01-15" tags="enhancement,beam,forecasts-api" %}
