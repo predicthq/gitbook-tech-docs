@@ -156,8 +156,8 @@ To build the dashboard:
 1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories):
    * To make the dashboard fit any screen, follow the [steps to set the overall dashboard size](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) and set the size to **Automatic**.
 2. Add Worksheets:
-   1. From the **Sheets** list, drag the 'Time Series' sheet into the dashboard.
-   2. From the **Sheets** list, drag the 'Event Info' sheet into the dashboard.
+   1. From the **Sheets** list, drag the **Time Series** sheet into the dashboard.
+   2. From the **Sheets** list, drag the **Event Info** sheet into the dashboard.
    3. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
