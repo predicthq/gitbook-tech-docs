@@ -6,7 +6,7 @@ description: >-
 
 # Using event data in Power BI
 
-In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that enables users to integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
+In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that lets you integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 
 ## Overview
 
@@ -57,7 +57,7 @@ We find many customers want to know what is happening around a business location
 
 Our customers use this in a variety of ways, for example, an accommodation customer may use a report like this to set their hotel room pricing per day and may increase the price on days with a lot of events happening. A restaurant customer looking at staffing might roster more people when they see a lot of events happening near their location and perhaps reduce staff levels when fewer events are happening. And so on. See our [use case guides](../../getting-started/use-case-guides/) for more examples.
 
-The end result of the exercise will be a report like this:
+The end result of the exercise is a report like this:
 
 <figure><img src="../../.gitbook/assets/Final Result.png" alt="Power BI report with a chart of total event attendance per day in San Francisco and a table of events sorted by highest attendance"><figcaption><p>Final Report Result</p></figcaption></figure>
 
@@ -82,7 +82,10 @@ We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/event
 
 Once the search has completed to get a CSV, click **Export**. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
-In Power BI, create a new report and press **Get Data** -> **Text/CSV**
+To connect the CSV in Power BI:
+
+1. Create a new report.
+2. Click **Get Data** -> **Text/CSV**.
 
 <figure><img src="../../.gitbook/assets/New CSV Connection.png" alt="Power BI Get Data menu with the Text/CSV option selected to create a new CSV connection"><figcaption><p>Get Data -> Text/CSV new connection</p></figcaption></figure>
 
@@ -97,7 +100,7 @@ Under **Queries**, right-click the Query and select **Advanced Editor**. The Que
 
 <figure><img src="../../.gitbook/assets/CSV go to Advanced Editor.png" alt="The Power BI Queries pane with the context menu of the CSV query open and Advanced Editor highlighted"><figcaption><p>right click Query -> Advanced Editor</p></figcaption></figure>
 
-This opens up a Power Query window which allows code to transform the data for us. Below is a Power Query code that transforms the columns automatically for use in the report.
+This opens up a Power Query window which allows code to transform the data for us. The following Power Query code transforms the columns automatically for use in the report.
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
@@ -205,7 +208,7 @@ To finish the connection:
 1. Click **OK**.
 2. On the next screen, click **Load Data**.
 
-Connection settings: We recommend DirectQuery for a constant database connection and Import for a one-off import of data from the database.
+Connection settings: We recommend **DirectQuery** for a constant database connection and **Import** for a one-off import of data from the database.
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
@@ -336,7 +339,12 @@ Using either of the two earlier methods will get PredictHQ Events data loaded an
 
 This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
-To begin, on the **Insert** tab, click **New Visual** to insert a blank chart and a blank table visualization, placing the chart first so it takes up half the screen, and the table second so it fills the other half.
+To begin, insert the blank visuals:
+
+1. On the **Insert** tab, click **New Visual** to insert a blank chart.
+2. Click **New Visual** again to insert a blank table.
+3. Place the chart first so it takes up half the screen.
+4. Place the table second so it fills the other half.
 
 To group the chart and table:
 
@@ -368,7 +376,7 @@ For the table, drag these fields over and resize the columns as needed to fit ev
 
 Table: id, title, category, phq\_attendance, start\_local, end\_local
 
-For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. Use the dropdown in the **Visualizations** column and select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
+For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. In the **Visualizations** column, use the dropdown to select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
 
 <figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt="The date_local field menu with Date Hierarchy turned off"><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 

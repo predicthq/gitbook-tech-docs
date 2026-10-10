@@ -28,7 +28,7 @@ Labels for a public holiday event provide more information about the holiday. Th
 
 <table><thead><tr><th width="224.33333333333331">Date &#x26; Time Fields</th><th width="154" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. A public holiday event is a single-day event. There are no multi-day events under the public-holidays category. The holiday breaks into individual days if it’s celebrated over multiple days, e.g. there are four days off in Japan during the New Year period, the four corresponded records are: <a href="https://events.predicthq.com/events/rxdV0A0GKg16">December 31 Bank Holiday</a>, <a href="https://events.predicthq.com/events/8fuH3RGXNfmVs2UGAm">New Year's Day</a>, <a href="https://events.predicthq.com/events/bwJoHe5AtFZpRHWQ9j">January 2 Bank Holiday</a>, <a href="https://events.predicthq.com/events/M4bAQVNwHuv3qwTsvd">January 3 Bank Holiday</a></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
-Note: datetime is used with the local timezone. E.g. New York is celebrating New Year’s Day on January 1st EST, while San Francisco is also celebrating New Year’s Day on January 1st but in PST.
+Note: We use datetime in the local timezone. E.g. New York is celebrating New Year’s Day on January 1st EST, while San Francisco is also celebrating New Year’s Day on January 1st but in PST.
 
 #### Location
 

@@ -152,7 +152,7 @@ E.g., open the link with /event/ in the URL:
 
 #### Submit event feedback
 
-To **provide feedback on an existing event** - open the /event-feedback/ Loop Link and supply the `event_id` parameter on the URL:
+To **provide feedback on an existing event** - open the /event-feedback/ Loop Link and, on the URL, supply the `event_id` parameter:
 
 `https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
 
