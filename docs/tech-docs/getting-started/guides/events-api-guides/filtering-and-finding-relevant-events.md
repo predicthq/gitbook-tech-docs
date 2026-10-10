@@ -421,25 +421,29 @@ For more comprehensive guidelines on navigating paginated results, refer to [Pag
 
 The response lists events in the results section, each as a JSON block. The amount of information provided for each event can vary depending on the type of event and other factors. A comprehensive guide that covers each available field can be found in [Search events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events "mention"). Common response fields include:
 
-**Dates**
+**Dates**:
+
 
 * `start_local`, `end_local`: Indicates the start and end dates of the event in the local time zone. If an end date is not available, it defaults to the start date. For some events where the end date is not available, a [Predicted End Time](../../predicthq-data/predicted-end-times.md) fills this gap with `predicted_end_local`.
 * `start`, `end`, `predicted_end`: Indicates the start, end, and predicted end dates in UTC.
 
-**Location**
+**Location**:
+
 
 * `geo`: Includes the latitude/longitude coordinates of the event as well as additional location information which is especially useful for events that cover an area rather than a point (see [working with polygons](../geolocation-guides/working-with-polygons.md)), such as parades.
 * `place_hierarchies`: Lists the [place IDs](../geolocation-guides/understanding-place-hierarchies.md) associated with the event location.
 * `country`: Identifies the country where the event takes place.
 
-**Event descriptors**
+**Event descriptors**:
+
 
 * `title`: The name of the event.
 * `description`: A brief description of what the event entails, if available.
 * `category`: The [type of event](../../predicthq-data/event-categories/), such as concerts or public holidays.
 * `phq_labels`: [Tags](../../predicthq-data/labels.md) that classify the event into common themes or topics. Note, `labels` is a legacy field that isn't maintained.
 
-**Event impact**
+**Event impact**:
+
 
 * `rank`: The [predicted impact](../../predicthq-data/ranks/phq-rank.md) of the event based on a globally comparable rank index.
 * `local_rank`: The [predicted impact](../../predicthq-data/ranks/local-rank.md) of the event, taking into account the local area.

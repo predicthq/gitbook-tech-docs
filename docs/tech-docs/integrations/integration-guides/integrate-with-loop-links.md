@@ -80,7 +80,7 @@ When a user submits a missing event:
 
 When a user gives feedback on an event:
 
-1. Review the event details on the page and provide feedback
+1. On the page, review the event details and provide feedback
 2. Pass an event ID to the Loop Link URL
 3. PredictHQ approves or rejects the feedback
 4. Users receive an email if there are any questions about their feedback
@@ -120,7 +120,7 @@ See an example of the email template for rejected events and replies to event fe
 If you have admin access, you can track Loop feedback at [loop.predicthq.com](https://loop.predicthq.com/) :
 
 * Needs a PredictHQ login
-* Shows if Loop submissions are approved or rejected
+* Shows whether PredictHQ approved or rejected Loop submissions
 * Shows details of the discussion about the Loop events with responses from PredictHQ
 * Lets you track the status of events your end users submit
 

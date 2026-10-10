@@ -142,9 +142,9 @@ The Python SDK includes full support for the Predicted Impact Area endpoint, rep
 {% endupdate %}
 
 {% update date="2026-05-04" tags="enhancement,loop" %}
-## Loop Links - Feedback on Predicted, Cancelled, and Postponed Events
+## Loop Links - Feedback on Predicted, Canceled, and Postponed Events
 
-Loop Links now accept feedback on predicted, cancelled, and postponed events, in addition to active events.
+Loop Links accept feedback on predicted, canceled, and postponed events, in addition to active events.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
@@ -186,9 +186,9 @@ Predicted Impact Area is generally available across Events API, Features API, Be
 {% endupdate %}
 
 {% update date="2026-03-13" tags="data-quality,enhancement,events-api" %}
-## Local Public Holidays Scoped to Region
+## Local public holidays scoped to region
 
-Public holidays that are observed locally rather than nationally are now published at region scope rather than country scope. Italian patron saint holidays are a good example - the Feast of Saint Januarius in Naples, the Feast of St Mark in Venice, and the Feast of St John in Florence, Genoa, and Turin are each celebrated in their own city and region rather than nationwide.
+PredictHQ publishes public holidays that people observe locally rather than nationally at region scope rather than country scope. Italian patron saint holidays are a good example - the Feast of Saint Januarius in Naples, the Feast of St Mark in Venice, and the Feast of St John in Florence, Genoa, and Turin are each celebrated in their own city and region rather than nationwide.
 
 You now see these holidays scoped to the places they apply to.
 {% endupdate %}

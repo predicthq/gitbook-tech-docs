@@ -216,7 +216,7 @@ Saved Location is a persistent, user-defined geographic entity consisting of a n
 
 Saved Locations serve as reusable identifiers in PredictHQ’s platform, allowing consistent and simplified access to features, events, and forecasts for specific business locations.
 
-Saved Locations are recommended for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
+PredictHQ recommends Saved Locations for managing location-specific workflows and ensuring consistent geographic definitions across APIs. They eliminate the need to repeatedly supply raw coordinates and help enforce consistency across automated forecasting and feature generation pipelines.
 
 Related resources:
 
