@@ -144,7 +144,7 @@ To apply the transformation:
 
 <figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt="The Power BI Power Query Editor with the Close &#x26; Apply button highlighted"><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
-After completing these steps, we have successfully loaded a CSV extract of PredictHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+After completing these steps, we have successfully loaded a CSV extract of PredictHQ Events data into Power BI ready for use in visuals and reporting. See the [Guide to building the report](using-event-data-in-power-bi.md#guide-to-building-the-report) section later in this guide for the next steps.
 
 ### Snowflake connection method
 
@@ -210,7 +210,7 @@ To finish the connection:
 
 Connection settings: We recommend **DirectQuery** for a constant database connection and **Import** for a one-off import of data from the database.
 
-After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
+After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. See the [Guide to building the report](using-event-data-in-power-bi.md#guide-to-building-the-report) section later in this guide for the next steps.
 
 #### Connecting to other data warehouses
 
@@ -376,7 +376,7 @@ For the table, drag these fields over and resize the columns as needed to fit ev
 
 Table: id, title, category, phq\_attendance, start\_local, end\_local
 
-For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. In the **Visualizations** column, use the dropdown to select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
+For all fields that involve a date (date\_local, start\_local, end\_local), remove the default **Date Hierarchy** format to get the actual date showing. In the **Visualizations** column, use the dropdown to select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
 
 <figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt="The date_local field menu with Date Hierarchy turned off"><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 
