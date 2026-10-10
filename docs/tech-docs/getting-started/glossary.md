@@ -224,7 +224,7 @@ Related resources:
 
 ## Suggested Radius
 
-**Deprecated.** Suggested Radius was a PredictHQ API that returned a recommended search radius around a point location for a given industry. It has been superseded by Predicted Impact Area, which provides a more accurate, data-driven geographic boundary that accounts for real-world geography rather than a fixed circle.
+**Deprecated.** Suggested Radius was a PredictHQ API that returned a recommended search radius around a point location for a given industry. PredictHQ replaced it with Predicted Impact Area, which provides a more accurate, data-driven geographic boundary that accounts for real-world geography rather than a fixed circle.
 
 Existing integrations using Suggested Radius continue to work, but new integrations should use Predicted Impact Area via Saved Locations instead.
 

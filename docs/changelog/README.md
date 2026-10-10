@@ -132,7 +132,7 @@ We updated Predicted Impact Patterns for the Restaurant industry for US public h
 {% update date="2026-05-04" tags="enhancement,developer-tools" %}
 ## MCP server - OAuth & connector improvements
 
-The PredictHQ MCP server now supports OAuth session management and token refresh, and is compatible with Claude connectors (previously only ChatGPT was supported). Event search parameter validation has also been improved. The MCP server allows AI agents and LLMs to query PredictHQ event data directly without building custom API integrations.
+The PredictHQ MCP server now supports OAuth session management and token refresh, and is compatible with Claude connectors (previously only ChatGPT was supported). We also improved event search parameter validation. The MCP server allows AI agents and LLMs to query PredictHQ event data directly without building custom API integrations.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="python-sdk,enhancement" %}
@@ -144,7 +144,7 @@ The Python SDK includes full support for the Predicted Impact Area endpoint, rep
 {% update date="2026-05-04" tags="enhancement,loop" %}
 ## Loop Links - Feedback on Predicted, Canceled, and Postponed Events
 
-Loop Links accept feedback on predicted, canceled, and postponed events, in addition to active events.
+Loop Links accept feedback on Predicted Events, canceled events, and postponed events, in addition to active events.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
@@ -194,7 +194,7 @@ You now see these holidays scoped to the places they apply to.
 {% endupdate %}
 
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}
-## Beam Charts - Independent Axis Scaling
+## Beam charts - independent axis scaling
 
 The demand and Predicted Attendance axes on Beam Analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
 {% endupdate %}
@@ -214,7 +214,7 @@ Saved Locations now support `closed_days` and `operating_hours` fields via the A
 {% update date="2026-01-15" tags="enhancement,beam,forecasts-api" %}
 ## Local Rank Defaults for Restaurant and Parking
 
-The default Local Rank threshold for the Restaurant and Parking industries is now 50 in both the Beam API and the Forecasts API, lowered from 65 for Restaurant and 60 for Parking.
+The default Local Rank threshold for the Restaurant and Parking industries is 50 in both the Beam API and the Forecasts API, lowered from 65 for Restaurant and 60 for Parking.
 {% endupdate %}
 
 {% update date="2026-01-08" tags="data-quality,enhancement,events-api" %}
