@@ -6,7 +6,7 @@ description: >-
 
 # Using event data in Power BI
 
-In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. Power BI is used here as an example of a reporting suite that lets you integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
+In today's data-driven landscape, leveraging powerful analytical tools is essential for making informed decisions and uncovering hidden insights. This step-by-step guide focuses on Power BI as an industry standard robust, user-friendly platform. This guide uses Power BI as an example of a reporting suite that lets you integrate data from various sources, create interactive reports, and share insights across an organization, to leverage PredictHQ data for powerful insights.
 
 ## Overview
 
@@ -263,7 +263,7 @@ The filled-out information should look like this:
 
 After clicking **OK**, the Data Transformation page opens where you can shape the data before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. Rename the Query to “PredictHQ Connection”.
+Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code later in this section. Rename the Query to “PredictHQ Connection”.
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt="The Power Query Editor with the Query renamed to PredictHQ Connection"><figcaption><p>Rename the Query</p></figcaption></figure>
 
@@ -395,7 +395,7 @@ To rename the chart title:
 
 <figure><img src="../../.gitbook/assets/Rename title.png" alt="The Visualizations pane with the chart title set to Event Attendance per day in San Francisco"><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
-To sort by highest to lowest attendance, click the "phq\_attendance" column in the table twice.
+To sort by highest to lowest attendance, click the **phq\_attendance** column in the table twice.
 
 The final result should look like the following:
 

@@ -120,7 +120,7 @@ Aviation Rank has been retired, and the `aviation_rank` field is no longer popul
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
 ## Denmark school holidays - municipality-level granularity
 
-We expanded school holidays for Denmark from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; historical data has been backfilled to 2016.
+We expanded school holidays for Denmark from national-level to municipality-level coverage, reflecting how school holidays are determined locally in Denmark. This applies to all future school holidays and historical data back to 2016, adding 8,900+ events to the dataset. If you use Danish school holiday data, you see increased granularity in event results; we backfilled historical data to 2016.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
@@ -180,7 +180,7 @@ Event Trends includes an **Include Predicted Events** toggle, bringing it in lin
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
-## Predicted Impact Area - General Availability
+## Predicted Impact Area - general availability
 
 Predicted Impact Area is generally available across Events API, Features API, Beam. It replaces Suggested Radius as the recommended approach for defining the geographic catchment area around a business location. Unlike a simple radius, Predicted Impact Area uses a data-driven model to define the area where events actually influence demand - accounting for real-world geography. Predicted Impact Area replaces the Suggested Radius endpoint, which is deprecated.
 {% endupdate %}
@@ -196,7 +196,7 @@ You see these holidays scoped to the places they apply to.
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}
 ## Beam charts - independent axis scaling
 
-The demand and Predicted Attendance axes on Beam Analysis charts now scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
+The demand and Predicted Attendance axes on Beam Analysis charts scale independently of one another. Where one series operates at a much larger magnitude than the other, both curves stay readable at full detail - useful when presenting an analysis and talking through how event attendance tracks against actual demand.
 {% endupdate %}
 
 {% update date="2026-02-19" tags="data-quality,enhancement" %}

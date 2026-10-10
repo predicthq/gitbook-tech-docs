@@ -78,9 +78,9 @@ To flatten the nested JSON:
 
 3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. You can also modify the schema levels by following the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels):
 
-    1. Root Level: Typically named after the JSON file e.g. `Events-Export-…`
-    2. Predicted Impact Patterns: Includes data related to Predicted Impact Patterns.
-    3. Impacts: Details specific impact values for each day.
+    1. **Root Level**: Typically named after the JSON file e.g. `Events-Export-…`
+    2. **Predicted Impact Patterns**: Includes data related to Predicted Impact Patterns.
+    3. **Impacts**: Details specific impact values for each day.
 
     <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdLRxDH6Zq-2jnUoQwltqqWhrpBN2UeamCuAJkjk02RHxx-V_It0GgKe-cl-PKax5O5zPnD6i1QSlyggRFzrsZhBjArKOCHbWJ43Qabi_UUbyy2JJ4YoP2JlMlJVRbEa57SQBiWXlW2dTubdGh2jY1BtE5P?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau dialog for selecting the JSON schema levels to import" width="375"><figcaption><p>Schema levels to select</p></figcaption></figure>
 
@@ -114,7 +114,7 @@ This section guides you through creating a simple dashboard in Tableau, featurin
 To create the chart:
 
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and name it 'Time Series'.
-2. Set Filters: Use filters to refine the data for events of interest only. On the **Filters** shelf, [drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf):
+2. Set Filters: To refine the data for events of interest only, use filters. On the **Filters** shelf, [drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf):
 
 <table data-full-width="false"><thead><tr><th width="174">Folder</th><th width="153">Field</th><th>Dialog Box</th></tr></thead><tbody><tr><td>Event-Export-...</td><td><code>State</code></td><td><p>Filter [State]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>active</code> and <code>predicted</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these states in our WebApp Search.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><p>Filter [Category]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>community</code>, <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>festivals</code>, <code>performing-arts</code>, <code>sports</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these categories in our WebApp Search.</li></ul></td></tr><tr><td>Predicted Impact Patterns</td><td><code>Vertical</code></td><td><p>Filter [Vertical]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check an industry e.g. <code>accommodation</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Note:</p><ul><li><code>Vertical</code> is the industry vertical associated with the Predicted Impact Pattern.</li><li>This tutorial focuses on event day impact, which is the same for all industries.</li><li>Choose any available industry if yours is not available.</li></ul></td></tr><tr><td>Impacts</td><td><code>Date Local</code></td><td><p>Filter Field [Date Local]:</p><ul><li>Select <strong>Range of Dates</strong>, and then click <strong>Next</strong>.</li></ul><p>Filter [Date Local]:</p><ol><li>Set the minimum and maximum dates to '01/05/2024' and '31/05/2024', respectively.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Date Local</code> is the date in the local time zone.</li></ul></td></tr><tr><td>Impacts</td><td><code>Position</code></td><td><p>Filter [Position]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <strong>event_day</strong>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Position</code> categorizes <code>Date</code> Local in relation to when the event takes place, such as before, during, or after the event.</li><li>While this tutorial focuses on the impact during event days, exploring impacts on other days is also encouraged.</li></ul></td></tr></tbody></table>
 
@@ -159,7 +159,7 @@ To build the dashboard:
    1. From the **Sheets** list, drag the **Time Series** sheet into the dashboard.
    2. From the **Sheets** list, drag the **Event Info** sheet into the dashboard.
    3. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
-3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
+3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [steps to add dashboard interactivity](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
 <figure><img src="../../.gitbook/assets/image (92).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
