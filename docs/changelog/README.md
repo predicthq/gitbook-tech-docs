@@ -176,7 +176,7 @@ If you match UK school holidays and public holidays to a place ID, you get a sin
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}
 ## Include Predicted Events Toggle in Event Trends
 
-Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Synthetic events are excluded from the Events API results shown on the page, matching how they are treated in the Features API.
+Event Trends now includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Event Trends excludes synthetic events from the Events API results it shows on the page, matching how they are treated in the Features API.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
@@ -190,7 +190,7 @@ Predicted Impact Area is generally available across Events API, Features API, Be
 
 PredictHQ publishes public holidays that people observe locally rather than nationally at region scope rather than country scope. Italian patron saint holidays are a good example - the Feast of Saint Januarius in Naples, the Feast of St Mark in Venice, and the Feast of St John in Florence, Genoa, and Turin are each celebrated in their own city and region rather than nationwide.
 
-You now see these holidays scoped to the places they apply to.
+You see these holidays scoped to the places they apply to.
 {% endupdate %}
 
 {% update date="2026-03-09" tags="enhancement,beam,webapp" %}
@@ -200,7 +200,7 @@ The demand and Predicted Attendance axes on Beam Analysis charts now scale indep
 {% endupdate %}
 
 {% update date="2026-02-19" tags="data-quality,enhancement" %}
-## Northern Ireland Half-Term Holidays - Full-Week Coverage
+## Northern Ireland half-term holidays - full-week coverage
 
 We publish Northern Ireland half-term school holidays as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
 {% endupdate %}

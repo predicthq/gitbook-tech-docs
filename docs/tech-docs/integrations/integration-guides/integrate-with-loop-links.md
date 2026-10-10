@@ -80,10 +80,11 @@ When a user submits a missing event:
 
 When a user gives feedback on an event:
 
-1. On the page, review the event details and provide feedback
-2. Pass an event ID to the Loop Link URL
-3. PredictHQ approves or rejects the feedback
-4. Users receive an email if there are any questions about their feedback
+1. On the page, review the event details
+2. Provide feedback
+3. Pass an event ID to the Loop Link URL
+4. PredictHQ approves or rejects the feedback
+5. Users receive an email if there are any questions about their feedback
 
 <figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt="The Loop Links page where users review an event's details and provide feedback on it"><figcaption></figcaption></figure>
 

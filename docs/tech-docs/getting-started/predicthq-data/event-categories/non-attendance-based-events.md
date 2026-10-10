@@ -81,7 +81,7 @@ Note: We use datetime in the local timezone.
 
 #### Location
 
-School holiday is an area event, it scopes to either locality, localadmin, county, region, or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). School holidays in the UK are scoped to either region, county, or the local council (localadmin) level.
+School holiday is an area event, it scopes to either locality, localadmin, county, region, or country level, i.e. majority schools in that region commence break in that period. For example, school holidays in the United States are scoped to the county level, e.g. [Clark County School District - Spring Break](https://events.predicthq.com/events/G9dAga9g8vcacTgmB9) while school holidays in New Zealand are scoped to the country level which means we have one school holiday for the entire country, e.g. [Spring School Holidays](https://events.predicthq.com/events/SPVWqTnhTqry2rLDvf). We scope school holidays in the UK to either region, county, or the local council (localadmin) level.
 
 The latitude and longitude is pointing to the center of the region or country.
 

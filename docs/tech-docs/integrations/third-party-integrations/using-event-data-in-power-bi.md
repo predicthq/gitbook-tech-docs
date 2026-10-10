@@ -261,7 +261,13 @@ Rename the Query to something relevant, as it defaults to the connection URL str
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt="The Power Query Editor with the Query renamed to PredictHQ Connection"><figcaption><p>Rename the Query</p></figcaption></figure>
 
-In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query. Under **Queries**, right-click the Query name and click **Advanced Editor**:
+To format and expand some columns for easy use, open the Advanced Editor for this Query:
+
+1. Open Power Query.
+2. Under **Queries**, right-click the Query name.
+3. Click **Advanced Editor**.
+
+The screenshot shows the menu:
 
 <figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt="The right-click menu for the renamed Query with Advanced Editor selected"><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
@@ -270,7 +276,7 @@ To update the code:
 1. Replace the entire existing Power Query code with the code that follows.
 2. In Lines 4 and 8, replace the text that refers to ‘\[api\_token]’ with the PredictHQ API Access Token used previously.
 
-This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, making sure all results are returned. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
+This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also accounts for our API pagination, so the query returns all results. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
 {% hint style="info" %}
 If you renamed the Query to something other than "PredictHQ Connection" as per our steps above, you must also rename the reference in lines 2 and 11 of this code:
@@ -348,7 +354,7 @@ To set the date filter:
 1. Change the drop-down to **Advanced filtering**.
 2. Add the following:
 
-“_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click **Apply filter** in the filter menu.\
+**is on or after** start of the selected date range AND **is before** the day after the date range ends - in the filter menu, click **Apply filter**.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
 
 <figure><img src="../../.gitbook/assets/Filter by date range.png" alt="The Filters on this page pane with an advanced date_local filter set"><figcaption><p>date_local Filter on page</p></figcaption></figure>
@@ -399,7 +405,7 @@ Wait 10-20 seconds between each step as data populates and data runs in the back
 
 <figure><img src="../../.gitbook/assets/Fill variable on template.png" alt="The Power BI template prompt asking for a PredictHQ API Access Token"><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
-Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Select **Anonymous** and click **Connect**.
+Once the data connection has loaded for a bit you might be prompted for a connection method screen, as in the following screenshot. Select **Anonymous** and click **Connect**.
 
 <figure><img src="../../.gitbook/assets/Template Connection.png" alt="The Power BI connection method screen with Anonymous selected"><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 

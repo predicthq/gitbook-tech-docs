@@ -75,7 +75,7 @@ For LLMs and agents, retrieving verified context at inference time is grounding 
 
 ## Local Rank
 
-Local Rank is PredictHQ’s location-sensitive ranking score that measures an event’s impact relative to its surrounding population density. It ranges from 0 to 100 and is presented on a logarithmic scale, meaning higher scores represent exponentially greater local impact.
+Local Rank is PredictHQ’s location-sensitive ranking score that measures an event’s impact relative to its surrounding population density. It ranges from 0 to 100, and PredictHQ presents it on a logarithmic scale, meaning higher scores represent exponentially greater local impact.
 
 Unlike PHQ Rank, which is normalized globally, Local Rank adjusts for how concentrated or sparse a population is in the area surrounding the event. This means that a 5,000-person event in a densely populated city receives a lower Local Rank than a 5,000-person event in a rural or sparsely populated area - because the latter has a proportionally larger impact on local demand and activity.
 
