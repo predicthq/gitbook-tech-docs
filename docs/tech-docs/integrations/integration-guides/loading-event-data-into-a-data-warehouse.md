@@ -555,7 +555,7 @@ Enhance the granularity and relevance of your internal analytics by cross-refere
 
 Customers sometimes use fields like [Placekey ](https://docs.predicthq.com/getting-started/guides/geolocation-guides/join-events-using-placekey)to join events data and other location data.
 
-#### 2. Demand Analysis and Forecasting
+#### 2. Demand analysis and forecasting
 
 PredictHQ data can significantly enhance your demand forecasting models, especially for businesses that are impacted by local events, such as retail, hospitality, and transportation. By understanding when significant events are happening, you can better predict and prepare for attendance surges or declines.
 

@@ -73,7 +73,10 @@ There are several ways to connect PredictHQ data to Power BI or other reporting 
 
 ### CSV upload method
 
-We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. Filter the events based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide). Fill in the parameters and click **Search**.
+We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/events) to get our CSV. To search for the events:
+
+1. Fill in the filters based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
+2. Click **Search**.
 
 <figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
@@ -98,7 +101,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the Power Query below is the final output of this multi-stage transformation.
 
-In the Advanced Editor, paste the following Power Query after the first existing four lines, after the "Changed Type" step, replacing everything from the existing “in” down:
+In the Advanced Editor, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -134,7 +137,7 @@ As you can see we start with a comma to add on to the existing line, its positio
 Click **Done**.\
 Click **Close & Apply** and wait for the data transformation to finish processing.
 
-<figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt=""><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt="The Power BI Power Query Editor with the Close &#x26; Apply button highlighted"><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
 After completing these steps, we have successfully loaded a CSV extract of PredictHQ Events data into Power BI ready for use in visuals and reporting. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
@@ -157,7 +160,7 @@ To start, navigate to the Snowflake data connection via:
 Enter the Server and Warehouse info you gathered earlier.\
 It should look something like the following screenshot, replacing square bracket placeholder variables for your Server and Warehouse info.
 
-<figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt=""><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt="The Power BI Snowflake connection dialog with the Server and Warehouse fields filled in"><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
 
 To enter the query:
 
@@ -193,14 +196,14 @@ The most important transformed column is the 'impact\_patterns' column which we 
 
 This is what it should look like when filled in - with all square bracket placeholder text in the FROM condition replaced.
 
-<figure><img src="../../.gitbook/assets/SQL Statement.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SQL Statement.png" alt="The Snowflake connection advanced options with the SQL statement pasted in"><figcaption></figcaption></figure>
 
 To finish the connection:
 
 1. Click **OK**.
 2. On the next screen, click **Load Data**.
 
-Connection settings: DirectQuery is recommended for constant database connection. Import for one-off import of data from the database.
+Connection settings: We recommend DirectQuery for a constant database connection and Import for a one-off import of data from the database.
 
 After completing these steps, we have successfully connected Events data from Snowflake into Power BI ready for use in visuals and reporting and automatic data refreshes. [See the Building the Report](using-event-data-in-power-bi.md#guide-to-building-the-report) step below for the next steps.
 
@@ -235,7 +238,7 @@ To start the connection:
 1. Start a new report.
 2. Select **Get Data** -> **Web**.
 
-<figure><img src="../../.gitbook/assets/New Web Connection.png" alt=""><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/New Web Connection.png" alt="The Power BI Get Data menu with the Web option selected"><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
 Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
 
@@ -248,17 +251,17 @@ Add the HTTP request header with the following information:
 
 The filled-out information should look like this:
 
-<figure><img src="../../.gitbook/assets/API Connection.png" alt=""><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Connection.png" alt="The Power BI web connection dialog with the Events API URL and Authorization header filled in"><figcaption><p>Web Connection URL and Header</p></figcaption></figure>
 
 After clicking **OK**, the Data Transformation page opens where you can shape the data before building the report.
 
-Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. We recommend the Query be renamed to “PredictHQ Connection”.
+Rename the Query to something relevant, as it defaults to the connection URL string parameters and we need a string to reference in the Power Query code below. Rename the Query to “PredictHQ Connection”.
 
-<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt=""><figcaption><p>Rename the Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt="The Power Query Editor with the Query renamed to PredictHQ Connection"><figcaption><p>Rename the Query</p></figcaption></figure>
 
 In order to transform the columns, open Power Query and paste the code below to format and expand some columns for easy use. To do this, go to the Advanced Editor for this Query. Under **Queries**, right-click the Query name and click **Advanced Editor**:
 
-<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt=""><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt="The right-click menu for the renamed Query with Advanced Editor selected"><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
 
 To update the code:
 
@@ -315,7 +318,7 @@ in
 
 Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt=""><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt="The Power Query Editor with the Close &#x26; Apply button highlighted after the API transformation"><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
 After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
@@ -325,7 +328,7 @@ Using either of the two methods above will get PredictHQ Events data loaded and 
 
 This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
-To begin, insert a blank chart and table visualization using the Insert -> New Visual tab options, with the chart on top taking up half the screen, and the table on the bottom filling the other half.
+To begin, insert a blank chart and table visualization using the **Insert** -> **New Visual** tab options, placing the chart first so it takes up half the screen, and the table second so it fills the other half.
 
 To group the chart and table:
 
@@ -333,7 +336,7 @@ To group the chart and table:
 2. Right-click one of them.
 3. Click **Group** -> **Group**.
 
-<figure><img src="../../.gitbook/assets/Group Visuals.png" alt=""><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Group Visuals.png" alt="A blank chart and table in Power BI grouped together"><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
 drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.
@@ -346,7 +349,7 @@ To set the date filter:
 “_Is on or after_” start of the selected date range AND “_is before_” the day after the date range ends - click **Apply filter** in the filter menu.\
 In the example, those dates are anything on or after the 1st of January 2024 and anything before 1st of April 2024.
 
-<figure><img src="../../.gitbook/assets/Filter by date range.png" alt=""><figcaption><p>date_local Filter on page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Filter by date range.png" alt="The Filters on this page pane with an advanced date_local filter set"><figcaption><p>date_local Filter on page</p></figcaption></figure>
 
 Now fill the chart axis.\
 Fill the X-axis with the date\_local field\
@@ -358,11 +361,11 @@ Table: id, title, category, phq\_attendance, start\_local, end\_local
 
 For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. Use the dropdown in the Visualizations column and select the field name instead of “Date Hierarchy”. If Date Hierarchy is preferred, feel free to leave this as is.
 
-<figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt=""><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt="The date_local field menu with Date Hierarchy turned off"><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 
 For phq\_attendance in the table use the drop down to remove the summary, this summary isn’t actually grouping anything so is an unnecessary default that should be removed. Note that we only want to stop the summarization in the table, leave the chart as is.
 
-<figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt=""><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt="The table field menu with Don't summarize selected"><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
 
 To rename the chart title:
 
@@ -370,13 +373,13 @@ To rename the chart title:
 2. In the **Visualizations** tab, click **General**, and then click **Title**.
 3. Enter “Event Attendance per day in San Francisco”.
 
-<figure><img src="../../.gitbook/assets/Rename title.png" alt=""><figcaption><p>Chart Title Rename</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Rename title.png" alt="The Visualizations pane with the chart title set to Event Attendance per day in San Francisco"><figcaption><p>Chart Title Rename</p></figcaption></figure>
 
 To sort by highest to lowest attendance, click the "phq\_attendance" column in the table twice.
 
 The final result should look like the following:
 
-<figure><img src="../../.gitbook/assets/Final Result (1).png" alt=""><figcaption><p>Final Report Result</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Final Result (1).png" alt="The finished Power BI report with a daily attendance chart and a table of events"><figcaption><p>Final Report Result</p></figcaption></figure>
 
 The final report screenshot shows how this analysis can be used; by clicking a spike (or any period on the chart) the report shows the events active during that period. The table data does not show the attendance per day like the chart, but the overall attendance of the event's full duration.
 
@@ -391,11 +394,11 @@ Below is a downloadable Power BI template that automatically creates the example
 Upon opening the template, it prompts you to enter an API Access Token. Entering this token enables the report to automatically populate and build according to the parameters set forth in this guide.\
 Wait 10-20 seconds between each step as data populates and data runs in the background.
 
-<figure><img src="../../.gitbook/assets/Fill variable on template.png" alt=""><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Fill variable on template.png" alt="The Power BI template prompt asking for a PredictHQ API Access Token"><figcaption><p>Fill PredictHQ API Access Token in the report when prompted</p></figcaption></figure>
 
 Once the data connection has loaded for a bit you might be prompted for a connection method screen like below. Select **Anonymous** and click **Connect**.
 
-<figure><img src="../../.gitbook/assets/Template Connection.png" alt=""><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Template Connection.png" alt="The Power BI connection method screen with Anonymous selected"><figcaption><p>Since the PredictHQ API Access Token has already been entered, select Anonymous here</p></figcaption></figure>
 
 If there are any issues with this template refer to the [API Connection Method](using-event-data-in-power-bi.md#api-connection-method) and ensure all settings match with those steps.
 

@@ -80,7 +80,7 @@ When a user submits a missing event:
 
 When a user gives feedback on an event:
 
-1. User reviews the event details on the page and can provide feedback
+1. Review the event details on the page and provide feedback
 2. Pass an event ID to the Loop Link URL
 3. PredictHQ approves or rejects the feedback
 4. Users receive an email if there are any questions about their feedback
@@ -168,5 +168,5 @@ The Loop forms require a user email address. You can pre-populate the email addr
 Loop Links work as follows:
 
 * You can reuse Loop Links unless you set an expiry date time
-* If an expiry date time is set they can no longer be used after they expire
+* If you set an expiry date time, the link stops working after it expires
 * If no expiry date time is set they can be reused indefinitely

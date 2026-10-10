@@ -98,7 +98,7 @@ To format and expand some columns, paste the following code into the **Advanced 
 1. Under **Queries**, right-click the Query name.
 2. Click **Advanced Editor**.
 
-<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt="The right-click menu for the renamed Query in the Queries pane with Advanced Editor selected"><figcaption><p>Right click renamed Query -> Advanced Editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API go to Advanced Editor.png" alt="The right-click menu for the renamed Query in the Queries pane with Advanced Editor selected"><figcaption><p>Right click renamed Query -> <strong>Advanced Editor</strong></p></figcaption></figure>
 
 To update the Power Query code:
 
