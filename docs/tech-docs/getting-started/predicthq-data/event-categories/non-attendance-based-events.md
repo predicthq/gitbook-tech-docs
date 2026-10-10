@@ -67,7 +67,7 @@ PredictHQ provides global estimates for School Holiday events that are not yet c
 
 We mark these predicted events with a `predicted` value in the event's `state` field, and they always occur in the future.
 
-Predicted School Holiday events contain the same data attributes as confirmed events, which are identified by a `state` value of `active`.
+Predicted School Holiday events contain the same data attributes as confirmed events,  which have a `state` value of `active`.
 
 **Labels**
 

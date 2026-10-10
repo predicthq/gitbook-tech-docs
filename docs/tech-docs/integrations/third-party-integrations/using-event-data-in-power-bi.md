@@ -324,11 +324,11 @@ After this step the data is now ready to start building a report with, as it has
 
 ## Guide to building the report
 
-Using either of the two methods above will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. The Power Query code transforms only the columns this guide uses.
+Using either of the two earlier methods will get PredictHQ Events data loaded and transformed in the same format ready to be used in a report. The Power Query code transforms only the columns this guide uses.
 
 This guide creates a connected chart and table that covers the defined time period and shows the attendance per day in the chosen location - in the example San Francisco city as a whole. The chart breaks up attendance per day for the visualization, but the table shows event details and attendance in full, not split by day. The report shows date results in UTC, use the "\_local" date columns for the local date.
 
-To begin, insert a blank chart and table visualization using the **Insert** -> **New Visual** tab options, placing the chart first so it takes up half the screen, and the table second so it fills the other half.
+To begin, on the **Insert** tab, click **New Visual** to insert a blank chart and a blank table visualization, placing the chart first so it takes up half the screen, and the table second so it fills the other half.
 
 To group the chart and table:
 
@@ -339,7 +339,7 @@ To group the chart and table:
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt="A blank chart and table in Power BI grouped together"><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
-drag the 'date\_local' field from the Data tab on the right to the “Filters on this page” section under Filters.
+drag the 'date\_local' field from the **Data** tab to the **Filters on this page** section under **Filters**.
 
 To set the date filter:
 

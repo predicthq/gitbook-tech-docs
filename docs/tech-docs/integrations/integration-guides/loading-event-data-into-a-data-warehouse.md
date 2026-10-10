@@ -491,7 +491,7 @@ insert_data_with_retry(table_ref, transformed_events_data)
 
 Event data is dynamic and events can change frequently. This happens when events are canceled, posted, or have details updated. Also, PredictHQ’s pipeline is constantly fetching new events so new future events are always being added and can be downloaded via the API.
 
-To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to the [API connection method code](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This extracts all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined above.
+To keep your data updated see [Keep data updated via API](https://docs.predicthq.com/integrations/integration-guides/keep-data-updated-via-api). Use a similar code to the [API connection method code](loading-event-data-into-a-data-warehouse.md#api-connection-method) using the ‘updated’ parameter to filter for recently changed events. This extracts all new events and updates to events. Check for events updated since your last table update using the ‘updated’ timestamp column. You will need to code for updating and replacing the data in BigQuery according to your preferred data update standards, but the structure will be the same as outlined earlier.
 
 We recommend running a daily update process (such as a cron job) that calls the PredictHQ API and updates the data in your data lake.
 
@@ -571,7 +571,7 @@ See [Use Events Data in Power BI](../third-party-integrations/using-event-data-i
 
 Inform your customers about local events that might impact their experience with your service or product. For example, a transportation company could provide passengers with real-time updates about events that might affect travel times or service availability.
 
-#### 5. Event-Driven Marketing
+#### 5. Event-driven marketing
 
 Plan and execute marketing campaigns that align with upcoming events to capitalize on increased foot traffic or digital engagement. This targeted approach can improve marketing ROI by reaching audiences when they are most receptive.
 
