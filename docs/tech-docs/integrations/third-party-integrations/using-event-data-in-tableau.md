@@ -42,12 +42,14 @@ For guidance on finding the most relevant events for your business, see [filteri
 
 **Export as JSON**
 
-3. Export Events: Once the events of interest are displayed on our WebApp's Search, click **Export** and then **Export Events Data**. In the dialog box that appears, select the **JSONL** tab and then click **Export**.
+3. Export Events: Once the events of interest are displayed on our WebApp's Search, click **Export** and then **Export Events Data**.
+4. Select Format: In the dialog box that appears, select the **JSONL** tab.
+5. Start Export: In the dialog box, click **Export**.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="The Export Events dialog box in the WebApp with the JSONL tab and the Export button" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
 
-4. Download Link: When the export is ready, in the dialog box, click the download link. PredictHQ also sends the link by email.
-5. Save Export: Download the file and save it to a directory for later use.
+6. Download Link: When the export is ready, in the dialog box, click the download link. PredictHQ also sends the link by email.
+7. Save Export: Download the file and save it to a directory for later use.
 
 ### Connect in Tableau
 
@@ -118,11 +120,11 @@ To create the chart:
 For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
 {% endhint %}
 
-2. Apply Filters Globally: Apply the filters you set earlier to **All worksheets using this data source** by right-clicking each field in the Filters shelf and following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
+2. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the Filters shelf and follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. On the **Row** shelf, drag **Value** from **Source Measures**.
    2. On the **Column** shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the **Exact Date** format.
-   3. To update the y-axis title, follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
+   3. To update the y-axis title, follow the [steps to change the appearance of an axis](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
 4. Chart Preview:
 
 <figure><img src="../../.gitbook/assets/image (90).png" alt="The Time Series worksheet in Tableau with a chart of daily event day impact by date" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
@@ -133,7 +135,7 @@ To create the table:
 
 1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and call it 'Event Info'.
 2. Create Table:
-   * On the Row shelf, add all relevant fields as **Discrete** pills, which are blue. For this tutorial, the following fields are considered:
+   * On the **Row** shelf, add all relevant fields as **Discrete** pills, which are blue. This tutorial uses the following fields:
 
 <table data-full-width="false"><thead><tr><th width="177">Folder</th><th width="182">Field</th><th>Notes</th></tr></thead><tbody><tr><td>Impacts</td><td><code>Date Local</code></td><td><ul><li>Right-click the pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Id</code></td><td><ul><li>This is the ID of the event.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><ul><li>This is the <a href="../../predicthq-data/event-categories/">event category</a>.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Start Local</code></td><td><ul><li>This is the start date of the event in the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>End Local</code></td><td><ul><li>This is the end date of the event iin the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Timezone</code></td><td><ul><li>The local time zone.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Phq Attendance</code></td><td><ul><li>This is the <a href="../../predicthq-data/predicted-attendance.md">Predicted Attendance</a> for an event.</li><li>Right-click the pill and select the <strong>Discrete</strong> format.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Value</code></td><td><ul><li>This is the <a href="../../predicthq-data/impact-patterns.md">daily impact for an event</a>. For this tutorial, only impact on event days is considered.</li><li>Sort by descending `Value` by following these <a href="https://help.tableau.com/current/reader/desktop/en-us/reader_sort.htm">instructions</a>.</li></ul></td></tr></tbody></table>
 
@@ -149,7 +151,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 To build the dashboard:
 
-1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories).
+1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories):
    * Set the size of the dashboard to **Automatic** by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) to ensure the dashboard adjusts to fit the screen it's being viewed on.
 2. Add Worksheets:
    1. From the Sheets list, drag the 'Time Series' sheet into the dashboard.

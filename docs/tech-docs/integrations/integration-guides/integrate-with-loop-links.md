@@ -117,7 +117,7 @@ See an example of the email template for rejected events and replies to event fe
 
 ## Tracking Loop feedback
 
-If you have admin access, you can track Loop feedback at [loop.predicthq.com](https://loop.predicthq.com/) :
+If you have admin access, you can track Loop feedback at [the Loop website](https://loop.predicthq.com/) :
 
 * Needs a PredictHQ login
 * Shows whether PredictHQ approved or rejected Loop submissions
@@ -169,4 +169,4 @@ Loop Links work as follows:
 
 * You can reuse Loop Links unless you set an expiry date time
 * If you set an expiry date time, the link stops working after it expires
-* If no expiry date time is set they can be reused indefinitely
+* If you don't set an expiry date time, you can reuse them indefinitely

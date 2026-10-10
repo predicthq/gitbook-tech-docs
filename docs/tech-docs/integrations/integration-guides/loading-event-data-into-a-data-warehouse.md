@@ -18,7 +18,7 @@ If you are using Snowflake or AWS Data Exchange (ADX) for your data lake Predict
 
 This guide details the data structure of our Events API within a data warehouse environment and outlines two methodologies for creating an Events data table in GCP.
 
-Throughout this guide, we will use the fictional example from our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md), "Tom’s Pizzeria". This scenario will give us a practical illustration of the methods described and demonstrate how to tailor API queries to specific business needs. For an understanding of how parameters were selected for this example, refer to the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md).
+Throughout this guide, we will use the fictional example from our [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md), "Tom’s Pizzeria". This scenario will give us a practical illustration of the methods described and demonstrate how to tailor API queries to specific business needs. For an understanding of how we selected the parameters for this example, refer to the [Filtering Guide](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md).
 
 **Requirements**:
 
@@ -98,7 +98,7 @@ Regardless of the method chosen for initial data creation and loading, the table
 
 We recommend this method for large data uploads, as it efficiently manages the transfer of large volumes of data better than direct API calls.
 
-### Search Events in the WebApp and Export JSONL
+### Search Events in the WebApp and export JSONL
 
 To locate and export the relevant event data into a JSONL file, we utilize the PredictHQ [WebApp Search](https://control.predicthq.com/search/events). This tool allows for precise querying of events based on specific criteria, ensuring that you retrieve only the most relevant information for your needs.
 
@@ -122,7 +122,7 @@ You can then upload the JSONL file directly to your BigQuery setup, as detailed 
 
 To set up a BigQuery table with a JSONL file, you need the necessary permissions on GCP. Before beginning, ensure you are clear about which dataset will host the data. Here are the steps to create the table once you have found and highlighted the dataset in GCP BigQuery:
 
-1. **Click Create Table**: In the dataset you wish to create the table in, click the **hamburger menu**, and then select **Create table**.
+1. **Click Create table**: In the dataset you wish to create the table in, click the **hamburger menu**, and then select **Create table**.
 
 <figure><img src="../../.gitbook/assets/Create Table.png" alt="The BigQuery dataset menu open with the Create table option highlighted"><figcaption><p>Select destination dataset and use the hamburger menu to create table</p></figcaption></figure>
 

@@ -219,7 +219,7 @@ PredictHQ has a few APIs that can be used to build reports, for this example, we
 
 Power BI connects using the URL from the [Events API](https://docs.predicthq.com/api/events/search-events): `https://api.predicthq.com/v1/events/` but, query parameters must be added to this URL for the Power BI connection, in line with the parameters outlined in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 
-Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we will end up with a URL string like the one below:
+Following these parameters and the [Events API](https://docs.predicthq.com/api/events/search-events) documentation we end up with a URL string like this:
 
 {% code overflow="wrap" fullWidth="true" %}
 ```url
@@ -242,7 +242,7 @@ To start the connection:
 
 <figure><img src="../../.gitbook/assets/New Web Connection.png" alt="The Power BI Get Data menu with the Web option selected"><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API is Bearer token authorized, the Advanced tab must be selected to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API uses Bearer token authorization, select the **Advanced** tab to include the API Access Token request header.
 
 Add the HTTP request header with the following information:
 
@@ -341,7 +341,7 @@ To group the chart and table:
 <figure><img src="../../.gitbook/assets/Group Visuals.png" alt="A blank chart and table in Power BI grouped together"><figcaption><p>Blank chart and table grouped</p></figcaption></figure>
 
 Before the next step of filling in the chart and table, add Filters for the page:\
-drag the 'date\_local' field from the **Data** tab to the **Filters on this page** section under **Filters**.
+in the **Filters on this page** section under **Filters**, drag the 'date\_local' field from the **Data** tab.
 
 To set the date filter:
 
@@ -353,15 +353,16 @@ In the example, those dates are anything on or after the 1st of January 2024 and
 
 <figure><img src="../../.gitbook/assets/Filter by date range.png" alt="The Filters on this page pane with an advanced date_local filter set"><figcaption><p>date_local Filter on page</p></figcaption></figure>
 
-Now fill the chart axis.\
-Fill the X-axis with the date\_local field\
-Fill the Y-axis with the attendance\_per\_day field (this should default to a SUM which is correct)
+To fill the chart axis:
+
+1. Fill the X-axis with the date\_local field.
+2. Fill the Y-axis with the attendance\_per\_day field (this should default to a SUM which is correct).
 
 For the table, drag these fields over and resize the columns as needed to fit everything:
 
 Table: id, title, category, phq\_attendance, start\_local, end\_local
 
-For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. Use the dropdown in the Visualizations column and select the field name instead of “Date Hierarchy”. If Date Hierarchy is preferred, feel free to leave this as is.
+For all fields that involve a date (date\_local, start\_local, end\_local), remove the default Date Hierarchy format to get the actual date showing. Use the dropdown in the **Visualizations** column and select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
 
 <figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt="The date_local field menu with Date Hierarchy turned off"><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 
