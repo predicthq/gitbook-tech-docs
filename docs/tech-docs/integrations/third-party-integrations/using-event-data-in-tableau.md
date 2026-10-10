@@ -72,7 +72,7 @@ For more information on connecting a local JSON file to Tableau and setting up t
 
 To flatten the nested JSON:
 
-3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. You can also modify the schema levels by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels):
+3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. You can also modify the schema levels by following the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels):
 
     1. Root Level: Typically named after the JSON file e.g. `Events-Export-…`
     2. Predicted Impact Patterns: Includes data related to Predicted Impact Patterns.

@@ -134,8 +134,10 @@ As you can see we start with a comma to add on to the existing line, its positio
 
 <figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt="The Power BI Advanced Editor with the transformation Power Query pasted after the existing lines of the CSV query"><figcaption><p>CSV Power Query</p></figcaption></figure>
 
-Click **Done**.\
-Click **Close & Apply** and wait for the data transformation to finish processing.
+To apply the transformation:
+
+1. Click **Done**.
+2. Click **Close & Apply**, and wait for the data transformation to finish processing.
 
 <figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt="The Power BI Power Query Editor with the Close &#x26; Apply button highlighted"><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
