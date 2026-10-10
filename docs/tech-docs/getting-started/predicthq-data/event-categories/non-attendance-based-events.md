@@ -77,7 +77,7 @@ All school holidays events have both `school` and `holiday` labels. Some events 
 
 <table><thead><tr><th width="216.33333333333331">Date &#x26; Time Fields</th><th width="137" align="center">Availability</th><th>Notes</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>We include the weekend before a school holiday if the school holiday starts on a Sunday or Monday</td></tr><tr><td>End date</td><td align="center">Yes</td><td>We include the weekend after a school holiday if the holiday ends on a Friday or Sunday</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
-Note: Datetime is used with the local timezone.
+Note: We use datetime in the local timezone.
 
 #### Location
 
@@ -218,7 +218,7 @@ Labels for an observance event provide more information about the event. The mos
 
 <table><thead><tr><th width="231.33333333333331">Date &#x26; Time Fields</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td></td></tr><tr><td>End date</td><td align="center">No</td><td>Same as the start date. An observance event is a single-day event. There are no multi-day events under the observance category. It breaks into individual days if it’s celebrated over multiple days, e.g. the Saturday in the Easter weekend is recognized as Holy Saturday, with the following Sunday is Easter Sunday in Canada</td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
-Note: Datetime is used with the local timezone E.g. Boston is celebrating Valentine’s Day on February 14th EST, while Los Angeles is also celebrating Valentine’s Day on February 14th but in PST.
+Note: We use datetime in the local timezone E.g. Boston is celebrating Valentine’s Day on February 14th EST, while Los Angeles is also celebrating Valentine’s Day on February 14th but in PST.
 
 #### Location
 
@@ -264,7 +264,7 @@ We classify this category into two buckets, using the following labels to identi
 
 <table><thead><tr><th width="207.33333333333331">Date &#x26; Time Field</th><th width="136" align="center">Availability</th><th>NOTES</th></tr></thead><tbody><tr><td>Start date</td><td align="center">Yes</td><td>Politics events have only a start date available.</td></tr><tr><td>End date</td><td align="center">No</td><td></td></tr><tr><td>Start time</td><td align="center">No</td><td></td></tr><tr><td>End time</td><td align="center">No</td><td></td></tr><tr><td>Timezone</td><td align="center">No</td><td></td></tr></tbody></table>
 
-Note: Datetime is used with the local timezone.
+Note: We use datetime in the local timezone.
 
 #### Location
 
@@ -294,7 +294,7 @@ Daylight savings is the schedule date when daylight savings start or ends in an 
 
 **Labels**
 
-All daylight savings events are labeled `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
+We label all daylight savings events `daylight-savings`. The only two types of daylight savings events are: daylight savings begins and daylight savings ends
 
 #### Date & time
 
