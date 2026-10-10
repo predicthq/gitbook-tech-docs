@@ -218,8 +218,8 @@ The default Local Rank threshold for the Restaurant and Parking industries is 50
 {% endupdate %}
 
 {% update date="2026-01-08" tags="data-quality,enhancement,events-api" %}
-## MLB Spring Training Labeling
+## MLB Spring Training labeling
 
-MLB Spring Training fixtures now carry both the `mlb` league label and the `pre-season` label, following the addition of the Spring Training competition to the MLB league mapping. We republished the affected events.
+MLB Spring Training fixtures carry both the `mlb` league label and the `pre-season` label, following the addition of the Spring Training competition to the MLB league mapping. We republished the affected events.
 {% endupdate %}
 {% endupdates %}

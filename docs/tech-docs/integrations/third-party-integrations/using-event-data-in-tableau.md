@@ -34,7 +34,7 @@ To export events from the WebApp:
 >
 > To view all [attendance-based events](../../getting-started/predicthq-data/event-categories/attendance-based-events.md) in San Francisco scheduled or predicted to take place in May 2024, use the following URL with pre-configured filters:
 >
-> [https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq\_attendance,-start](https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq_attendance,-start\&t=1716862100079)
+> [San Francisco attendance-based events search for May 2024](https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq_attendance,-start\&t=1716862100079)
 
 {% hint style="info" %}
 For guidance on finding the most relevant events for your business, see [filtering-and-finding-relevant-events.md](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md "mention"). For searches around specific locations or stores, we recommend exporting a JSON file from our WebApp [Saved Locations](https://control.predicthq.com/location-insights).
@@ -288,7 +288,7 @@ Tableau workbook
 To connect with the deprecated connector:
 
 1. [Log in](https://control.predicthq.com/) to your PredictHQ account or [sign up](https://signup.predicthq.com/) for a trial if you haven't got an account yet.
-2. In the [API Clients](https://control.predicthq.com/clients) part of the WebApp, create a new API Client.
+2. In the [**API Clients**](https://control.predicthq.com/clients) part of the WebApp, create a new API Client.
 3. Save the Client Secret somewhere safe, because the WebApp doesn't show it again.
 4. Click **Create an access token**.
 5. Select the scopes **Account**, **Events**, and **Places**.

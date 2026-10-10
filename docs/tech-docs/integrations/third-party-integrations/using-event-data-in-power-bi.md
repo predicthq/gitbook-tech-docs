@@ -63,7 +63,7 @@ The end result of the exercise is a report like this:
 
 ## Select an input method
 
-There are several ways to connect PredictHQ data to Power BI or other reporting software. Below are three of the main methods you can use to connect and start creating reports.
+There are several ways to connect PredictHQ data to Power BI or other reporting software. The following are three of the main methods you can use to connect and start creating reports.
 
 [**CSV Upload**](using-event-data-in-power-bi.md#csv-upload-method): This method connects data straight from the PredictHQ WebApp into reporting software. If a static view of data is all you need, this method gets it done fast. This method _does not_ refresh or update the data when it changes. Events are dynamic and get canceled, postponed, move location, and so on. Using a CSV is a good way to do initial modeling but we’d suggest calling the API or connecting to a data warehouse moving forward.
 
@@ -248,7 +248,7 @@ To start the connection:
 
 <figure><img src="../../.gitbook/assets/New Web Connection.png" alt="The Power BI Get Data menu with the Web option selected"><figcaption><p>Get Data -> Web connection</p></figcaption></figure>
 
-Choose the **Advanced** tab, not the **Basic** default. Because the PredictHQ API uses Bearer token authorization, select the **Advanced** tab to include the API Access Token request header.
+Choose the **Advanced** tab, not the **Basic** default. To include the API Access Token request header, select the **Advanced** tab. The PredictHQ API uses Bearer token authorization.
 
 Add the HTTP request header with the following information:
 
@@ -379,7 +379,12 @@ For the table, drag these fields over and resize the columns as needed to fit ev
 
 Table: id, title, category, phq\_attendance, start\_local, end\_local
 
-For all fields that involve a date (date\_local, start\_local, end\_local), remove the default **Date Hierarchy** format to get the actual date showing. In the **Visualizations** column, use the dropdown to select the field name instead of **Date Hierarchy**. If Date Hierarchy is preferred, feel free to leave this as is.
+For all fields that involve a date (date\_local, start\_local, end\_local), remove the default **Date Hierarchy** format to get the actual date showing:
+
+1. In the **Visualizations** column, open the dropdown for the field.
+2. Select the field name instead of **Date Hierarchy**.
+
+If you prefer **Date Hierarchy**, leave this as is.
 
 <figure><img src="../../.gitbook/assets/Remove Date Hierarchy.png" alt="The date_local field menu with Date Hierarchy turned off"><figcaption><p>Remove Date Hierarchy</p></figcaption></figure>
 
