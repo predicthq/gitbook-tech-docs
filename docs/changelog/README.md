@@ -88,7 +88,7 @@ The PredictHQ MCP server includes tools for searching and retrieving PredictHQ's
 
 The PredictHQ MCP server exposes tools across the full public API surface, including Events, Broadcasts, Features, Saved Locations, Beam, Forecasts, Predicted Impact Area, and Places & Geocoding.
 
-Previously limited to event search, the MCP server now supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam Analyses, retrieve ML-ready features, build and train forecast models, and query Predicted Impact Area - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
+Previously limited to event search, the MCP server supports the complete PredictHQ integration workflow through natural language: create Saved Locations, run Beam Analyses, retrieve ML-ready features, build and train forecast models, and query Predicted Impact Area - all without writing API calls directly. Works with any MCP-compatible client including Claude, ChatGPT, Cursor, and Claude Code.
 {% endupdate %}
 
 {% update date="2026-06-03" tags="data-quality,enhancement,events-api" %}
@@ -166,7 +166,7 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% endupdate %}
 
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
-## UK Local Authority Boundaries - Updated Polygons
+## UK local authority boundaries - updated polygons
 
 We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. UK school holiday polygons have also been refined so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
 
@@ -202,7 +202,7 @@ The demand and Predicted Attendance axes on Beam Analysis charts now scale indep
 {% update date="2026-02-19" tags="data-quality,enhancement" %}
 ## Northern Ireland half-term holidays - full-week coverage
 
-We publish Northern Ireland half-term school holidays as the full week that schools take off. Where a half-term starts midweek, the dates are extended back to the previous Saturday; where it finishes midweek, they are extended forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
+We publish Northern Ireland half-term school holidays as the full week that schools take off. Where a half-term starts midweek, we extend the dates back to the previous Saturday; where it finishes midweek, we extend them forward to the following Sunday. If you have locations in Northern Ireland, you get school holiday events that cover the complete break.
 {% endupdate %}
 
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}
