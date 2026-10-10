@@ -122,7 +122,7 @@ To create the chart:
 For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
 {% endhint %}
 
-2. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the **Filters** shelf and follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
+2. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the **Filters** shelf and follow the [steps to apply filters to all worksheets](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. On the **Row** shelf, drag **Value** from **Source Measures**.
    2. On the **Column** shelf, drag `Date Local` from **Impacts**. Then right-click the `Date Local` pill and select the **Exact Date** format.
@@ -209,7 +209,7 @@ For more information on connecting to Snowflake in Tableau and setting up the da
 
 **Filter for relevant events in Tableau**
 
-5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
+5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
 For more information on connecting to a custom SQL query, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
 
@@ -237,13 +237,13 @@ For more information on receiving PredictHQ data via AWS Data Exchange, see the 
 3. Connection Details: Before connecting, gather all [necessary information](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#before-you-begin) including:
    1. AWS IAM access key for the S3 bucket.
    2. The name and AWS region of the S3 bucket.
-4. Start Tableau: Open Tableau and connect to the S3 bucket by following these [instructions](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#make-the-connection-and-set-up-the-data-source).
+4. Start Tableau: Open Tableau and connect to the S3 bucket by following the [steps to connect to Amazon S3](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#make-the-connection-and-set-up-the-data-source).
 
 For more information on connecting to Amazon S3 in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
 
 **Filter for relevant events in Tableau**
 
-5. Configure SQL Query: Use Tableau’s custom SQL query to manage how data is brought in for subsequent analyses. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
+5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
 For more information on connecting to a custom SQL query, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
 

@@ -114,7 +114,7 @@ Two refinements to concert data quality. We now identify and filter out events f
 {% update date="2026-05-25" tags="events-api,features-api,deprecation" %}
 ## Aviation Rank retired
 
-Aviation Rank has been retired, and the `aviation_rank` field is no longer populated.
+We retired Aviation Rank, and the `aviation_rank` field no longer populates.
 {% endupdate %}
 
 {% update date="2026-05-08" tags="data-quality,enhancement" %}
@@ -168,7 +168,7 @@ We added academic events for the 2026–2027 calendar year to PredictHQ's datase
 {% update date="2026-04-02" tags="data-quality,enhancement" %}
 ## UK local authority boundaries - updated polygons
 
-We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries now in place for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. We have also refined the UK school holiday polygons so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
+We updated the UK council polygons to reflect the Cumbria and Northamptonshire local government reorganizations, with dedicated boundaries for Cumberland, Westmorland & Furness, North Northamptonshire, and West Northamptonshire. We have also refined the UK school holiday polygons so each holiday maps cleanly to a single county rather than overlapping neighboring authorities.
 
 If you match UK school holidays and public holidays to a place ID, you get a single, unambiguous match per event, with boundaries that reflect the current local authority map.
 {% endupdate %}
@@ -212,7 +212,7 @@ Saved Locations support `closed_days` and `operating_hours` fields via the API a
 {% endupdate %}
 
 {% update date="2026-01-15" tags="enhancement,beam,forecasts-api" %}
-## Local Rank Defaults for Restaurant and Parking
+## Local Rank defaults for Restaurant and Parking
 
 The default Local Rank threshold for the Restaurant and Parking industries is 50 in both the Beam API and the Forecasts API, lowered from 65 for Restaurant and 60 for Parking.
 {% endupdate %}
