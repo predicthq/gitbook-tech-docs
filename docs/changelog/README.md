@@ -66,7 +66,7 @@ We have also improved Bolt's interface to include an activity pane showing exact
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
 ## Juneteenth - Standardized holiday naming
 
-PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. All variants are now standardized to **Juneteenth**, with substitute observances published as **Juneteenth (substitute)**.
+PredictHQ publishes Juneteenth under a single, consistent title across US states and territories. Individual states chose their own Juneteenth holiday names before the federal government standardized the federal name in 2021, which meant the same day appeared under several different titles depending on the state and year. PredictHQ standardizes all variants to **Juneteenth** and publishes substitute observances as **Juneteenth (substitute)**.
 
 The change covers US states and the US territories of Puerto Rico, the United States Virgin Islands, the Northern Mariana Islands, and American Samoa.
 {% endupdate %}
@@ -132,7 +132,7 @@ We updated Predicted Impact Patterns for the Restaurant industry for US public h
 {% update date="2026-05-04" tags="enhancement,developer-tools" %}
 ## MCP server - OAuth & connector improvements
 
-The PredictHQ MCP server now supports OAuth session management and token refresh, and is compatible with Claude connectors (previously only ChatGPT was supported). We also improved event search parameter validation. The MCP server allows AI agents and LLMs to query PredictHQ event data directly without building custom API integrations.
+The PredictHQ MCP server supports OAuth session management and token refresh, and is compatible with Claude connectors (previously only ChatGPT was supported). We also improved event search parameter validation. The MCP server allows AI agents and LLMs to query PredictHQ event data directly without building custom API integrations.
 {% endupdate %}
 
 {% update date="2026-05-04" tags="python-sdk,enhancement" %}
@@ -206,7 +206,7 @@ We publish Northern Ireland half-term school holidays as the full week that scho
 {% endupdate %}
 
 {% update date="2026-01-30" tags="new-feature,saved-locations" %}
-## Store Closures & Operating Hours in Saved Locations
+## Store closures & operating hours in Saved Locations
 
 Saved Locations support `closed_days` and `operating_hours` fields via the API and WebApp. Beam and the Forecasts API treat closed days as non-demand days, ensuring that forecasts are not distorted by days when a location is not trading. This is particularly relevant if you have locations with non-standard trading patterns - seasonal closures, variable hours, or planned shutdowns.
 {% endupdate %}

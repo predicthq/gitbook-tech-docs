@@ -122,7 +122,7 @@ To create the chart:
 For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
 {% endhint %}
 
-2. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the Filters shelf and follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
+2. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the **Filters** shelf and follow these [instructions](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
 3. Create Chart:
    1. On the **Row** shelf, drag **Value** from **Source Measures**.
    2. On the **Column** shelf, drag `Date Local` from 'Impacts'. Then right-click the `Date Local` pill and select the **Exact Date** format.
@@ -191,7 +191,7 @@ This connection method involves accessing PredictHQ data through Snowflake’s S
 
 To connect through a Snowflake Data Share:
 
-1. Setup: Coordinate with your Snowflake administrator to set up a Data Share with PredictHQ.
+1. Setup: With your Snowflake administrator, set up a Data Share with PredictHQ.
 2. Database:
    1. Create a database from the Data Share.
    2. Grant the necessary permissions to users.
@@ -261,7 +261,7 @@ Some other connectors commonly used with PredictHQ data include the following:
 
 For more information on loading PredictHQ data into data warehouses, see the [guide to loading event data into a data warehouse](../integration-guides/loading-event-data-into-a-data-warehouse.md) which provides an example using Google BigQuery.
 
-See the [list of all connectors supported by Tableau](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm). Once PredictHQ data is connected to a data warehouse, techniques similar to those described in this guide can be applied for querying data from these sources.
+See the [list of all connectors supported by Tableau](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm). Once PredictHQ data is connected to a data warehouse, you can apply techniques similar to those described in this guide to query data from these sources.
 
 </details>
 
