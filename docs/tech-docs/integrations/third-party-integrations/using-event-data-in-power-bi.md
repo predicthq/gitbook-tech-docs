@@ -107,7 +107,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the following Power Query is the final output of this multi-stage transformation.
 
-In the Advanced Editor, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
+In the **Advanced Editor**, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -410,7 +410,7 @@ The final report screenshot shows how this analysis can be used; by clicking a s
 
 A useful addition to this basic view could be a drill down on the table by adding a new table visual to the group that has the 'id', 'date\_local', and 'attendance\_per\_day' columns, showing how the attendance of an event has been spread out over multiple days (if it is a multi-day event). For more understanding of multi-day events, see our [Working with Multi-day Events](https://docs.predicthq.com/getting-started/guides/date-and-time-guides/working-with-multi-day-and-umbrella-events) documentation.
 
-You can add your own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API will only give a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
+You can add your own data to this chart to compare peaks and troughs of attendance vs sales in a basic comparison report. For deeper analysis into these kinds of reports, we suggest using our [Beam](https://docs.predicthq.com/api/beam) functionality to provide a deeper insight as to which types of events impact demand, as the Events API gives only a high-level view of the story without any additional analysis from PredictHQ to provide more in-depth information.
 
 ### Example API connection report template
 
