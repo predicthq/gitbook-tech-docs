@@ -151,7 +151,7 @@ After completing these steps, we have successfully loaded a CSV extract of Predi
 
 ### Snowflake connection method
 
-To connect using Snowflake, gather the following information about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the variables below:
+To connect using Snowflake, gather the following information about your organization's Snowflake environment. Ask your Snowflake Administrators for these settings or refer to Snowflake's official documentation links for the following variables:
 
 1. Server Name: Usually in format <[account\_name](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name)>.snowflakecomputing.com
 2. Warehouse: A [warehouse](https://docs.snowflake.com/en/user-guide/warehouses-overview) is what you use to run queries. See which are available to you using the [SHOW WAREHOUSES](https://docs.snowflake.com/en/sql-reference/sql/show-warehouses) function.
@@ -334,7 +334,7 @@ Click **Close & Apply** and wait for the data transformation to finish processin
 
 <figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt="The Power Query Editor with the Close &#x26; Apply button highlighted after the API transformation"><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
 
-After this step the data is now ready to start building a report with, as it has been successfully loaded and transformed in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
+After this step the data is now ready to start building a report with, as the query has loaded and transformed it in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
 ## Guide to building the report
 

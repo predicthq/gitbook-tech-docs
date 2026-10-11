@@ -60,7 +60,7 @@ If you have locations near cricket grounds, this improves match-day demand forec
 
 You can share Bolt notebooks with other users in your organization. Give your team view access to your notebooks with or without the chat history. Your team can pick up a use case you have already worked through, seeing the visual previews and data exactly as you built them, copying the integration code straight from the cards.
 
-We have also improved Bolt's interface to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or Forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
+We have also improved Bolt's interface to include an activity pane showing exactly which PredictHQ APIs have powered the results in your notebook, live statuses so you know the moment a Beam Analysis or forecast training run finishes, and streaming code generation so you can follow progress. The notebooks page also has improved search and sorting.
 {% endupdate %}
 
 {% update date="2026-06-19" tags="data-quality,enhancement,events-api" %}
@@ -148,7 +148,7 @@ Loop Links accept feedback on Predicted Events, canceled events, and postponed e
 {% endupdate %}
 
 {% update date="2026-05-04" tags="data-quality,enhancement" %}
-## Event Descriptions
+## Event descriptions
 
 We added descriptions at scale to attended events that previously had none - approximately 79% of the catalog. We prioritized higher-ranked events. This improves the usefulness of event data for customers building AI applications, search, and recommendation features where event context matters beyond title and category. More descriptions to come.
 {% endupdate %}
