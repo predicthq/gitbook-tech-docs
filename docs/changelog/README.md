@@ -13,7 +13,7 @@ description: >-
 You can create Projects in Bolt to group your notebooks together. To set up a project so every notebook in it follows the same instructions:
 
 1. For a use case, create a project.
-2. Add your notebooks to the project.
+2. In the project, add your notebooks.
 3. Set the instructions once.
 
 Share a project with anyone in your organization as a viewer or a collaborator, so your team can work together and see each other's notebooks instead of duplicating work or waiting to be unblocked.
@@ -74,7 +74,7 @@ The change covers US states and the US territories of Puerto Rico, the United St
 {% update date="2026-06-19" tags="data-quality,enhancement,places" %}
 ## Region polygons across the Places index
 
-Region-level places in the Places index that did not already have a polygon or multipolygon geometry now have one, sourced from PredictHQ's high-resolution polygon dataset. We applied this across the 3,885 region-level places in the index.
+Region-level places in the Places index that did not already have a polygon or multipolygon geometry have one, sourced from PredictHQ's high-resolution polygon dataset. We applied this across the 3,885 region-level places in the index.
 {% endupdate %}
 
 {% update date="2026-06-16" tags="enhancement,developer-tools" %}
@@ -142,7 +142,7 @@ The Python SDK includes full support for the Predicted Impact Area endpoint, rep
 {% endupdate %}
 
 {% update date="2026-05-04" tags="enhancement,loop" %}
-## Loop Links - Feedback on Predicted, Canceled, and Postponed Events
+## Loop Links - Feedback on Predicted Events, canceled events, and postponed events
 
 Loop Links accept feedback on Predicted Events, canceled events, and postponed events, in addition to active events.
 {% endupdate %}
@@ -176,7 +176,7 @@ If you match UK school holidays and public holidays to a place ID, you get a sin
 {% update date="2026-03-26" tags="enhancement,webapp,features-api" %}
 ## Include Predicted Events toggle in Event Trends
 
-Event Trends includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Event Trends excludes synthetic events from the Events API results it shows on the page, matching how they are treated in the Features API.
+Event Trends includes an **Include Predicted Events** toggle, bringing it in line with the Features API, which has included Predicted Events by default since early 2025. With the toggle off, `predicted_events.exclude` is applied when querying the Features API. Event Trends excludes synthetic events from the Events API results it shows on the page, matching how the Features API treats them.
 {% endupdate %}
 
 {% update date="2026-03-14" tags="new-feature,events-api,features-api,beam,forecasts-api,saved-locations" %}
