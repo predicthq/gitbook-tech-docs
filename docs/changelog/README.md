@@ -108,7 +108,7 @@ Bolt is an AI-native developer environment that guides you through the right Pre
 {% update date="2026-05-27" tags="data-quality,enhancement,events-api" %}
 ## Concert venue and attendance accuracy
 
-Two refinements to concert data quality. We now identify and filter out events from organizers who announce their venue only shortly before the show - where a large default venue stands in until then - so we don't publish intimate gigs with the attendance profile of a large venue. Separately, we also filter out concert records that arrive attached to a sports team entity.
+Two refinements to concert data quality. We identify and filter out events from organizers who announce their venue only shortly before the show - where a large default venue stands in until then - so we don't publish intimate gigs with the attendance profile of a large venue. Separately, we also filter out concert records that arrive attached to a sports team entity.
 {% endupdate %}
 
 {% update date="2026-05-25" tags="events-api,features-api,deprecation" %}
@@ -160,7 +160,7 @@ We updated the password requirements across the PredictHQ WebApp, signup, and ac
 {% endupdate %}
 
 {% update date="2026-04-15" tags="data-quality,enhancement" %}
-## US Academic Events - 2026–2027 Calendar Year
+## US academic events - 2026–2027 calendar year
 
 We added academic events for the 2026–2027 calendar year to PredictHQ's dataset, covering 10,804 events across 958 US institutions.
 {% endupdate %}
