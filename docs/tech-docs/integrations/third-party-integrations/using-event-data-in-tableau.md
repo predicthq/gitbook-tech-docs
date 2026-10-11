@@ -51,7 +51,7 @@ To export the events as a JSON file:
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="The Export Events dialog box in the WebApp with the JSONL tab and the Export button" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
 
 6. Download Link: When the export is ready, in the dialog box, click the download link. PredictHQ also sends the link by email.
-7. Save Export: Download the file and save it to a directory for later use.
+7. Save Export: To use the export later, download the file and save it to a directory.
 
 ### Connect in Tableau
 
@@ -69,7 +69,7 @@ To load the export file in Tableau:
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau file dialog with the file type options for selecting the JSONL export" width="375"><figcaption><p>File extension options</p></figcaption></figure>
 
 {% hint style="info" %}
-For more information on connecting a local JSON file to Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
+For more information on connecting a local JSON file to Tableau and setting up the data source, see the [Tableau guide to connecting a JSON file](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
 {% endhint %}
 
 **Flatten nested JSON**
@@ -85,7 +85,7 @@ To flatten the nested JSON:
     <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdLRxDH6Zq-2jnUoQwltqqWhrpBN2UeamCuAJkjk02RHxx-V_It0GgKe-cl-PKax5O5zPnD6i1QSlyggRFzrsZhBjArKOCHbWJ43Qabi_UUbyy2JJ4YoP2JlMlJVRbEa57SQBiWXlW2dTubdGh2jY1BtE5P?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau dialog for selecting the JSON schema levels to import" width="375"><figcaption><p>Schema levels to select</p></figcaption></figure>
 
 {% hint style="info" %}
-For more information on schema levels, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#select-schema-level).
+For more information on schema levels, see the [Tableau guide to schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#select-schema-level).
 {% endhint %}
 
 **Update data types**
@@ -100,7 +100,7 @@ For more information on schema levels, see this [Tableau article](https://help.t
 | `State`       | String (Geographic Role: None) |
 
 {% hint style="info" %}
-For more information on data types, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm).
+For more information on data types, see the [Tableau guide to data types](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm).
 {% endhint %}
 
 ## Dashboard with event data
@@ -165,7 +165,7 @@ To build the dashboard:
 <figure><img src="../../.gitbook/assets/image (92).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
-For more information on creating dashboards, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).
+For more information on creating dashboards, see the [Tableau guide to creating dashboards](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).
 {% endhint %}
 
 ### Next steps
@@ -205,13 +205,13 @@ For more information on receiving PredictHQ data via Snowflake, see the [Snowfla
    2. [Server, Warehouse, Database, and Schema information](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#set-up-the-data-source) to set up the data source.
 4. Start Tableau: Open Tableau and connect to Snowflake by following the [instructions for connecting to Snowflake](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#make-the-connection-and-set-up-the-data-source).
 
-For more information on connecting to Snowflake in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
+For more information on connecting to Snowflake in Tableau and setting up the data source, see the [Tableau guide to connecting to Snowflake](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
 
 **Filter for relevant events in Tableau**
 
 5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
-For more information on connecting to a custom SQL query, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
+For more information on connecting to a custom SQL query, see the [Tableau guide to custom SQL queries](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
 
 </details>
 
@@ -239,13 +239,13 @@ For more information on receiving PredictHQ data via AWS Data Exchange, see the 
    2. The name and AWS region of the S3 bucket.
 4. Start Tableau: Open Tableau and connect to the S3 bucket by following the [steps to connect to Amazon S3](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#make-the-connection-and-set-up-the-data-source).
 
-For more information on connecting to Amazon S3 in Tableau and setting up the data source, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
+For more information on connecting to Amazon S3 in Tableau and setting up the data source, see the [Tableau guide to connecting to Amazon S3](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
 
 **Filter for relevant events in Tableau**
 
 5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
 
-For more information on connecting to a custom SQL query, see this [Tableau article](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
+For more information on connecting to a custom SQL query, see the [Tableau guide to custom SQL queries](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
 
 </details>
 

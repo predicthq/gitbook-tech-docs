@@ -107,7 +107,7 @@ This opens up a Power Query window which allows code to transform the data for u
 
 This code expands out the 'impact\_patterns' column (see [Predicted Impact Patterns ](https://docs.predicthq.com/getting-started/predicthq-data/impact-patterns)in our technical documentation for more information) and filters it to accommodation and actual attendance distribution. It renames some essential columns. It also transforms some column formats for easier use in reporting. It is an involved process with multiple steps - the following Power Query is the final output of this multi-stage transformation.
 
-In the **Advanced Editor**, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing everything from the existing “in” down:
+In the **Advanced Editor**, after the first existing four lines and the "Changed Type" step, paste the following Power Query, replacing the existing “in” line and everything after it:
 
 {% code lineNumbers="true" fullWidth="true" %}
 ```powerquery
@@ -267,7 +267,7 @@ Rename the Query to something relevant, as it defaults to the connection URL str
 
 <figure><img src="../../.gitbook/assets/API Rename connection Query.png" alt="The Power Query Editor with the Query renamed to PredictHQ Connection"><figcaption><p>Rename the Query</p></figcaption></figure>
 
-To format and expand some columns for easy use, open the Advanced Editor for this Query:
+To format and expand some columns for easy use, open the **Advanced Editor** for this Query:
 
 1. Open Power Query.
 2. Under **Queries**, right-click the Query name.
