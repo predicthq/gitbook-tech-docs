@@ -142,7 +142,7 @@ It's mostly a governance and maintenance question. If context must live inside y
 
 ### Can I use PredictHQ for training and grounding at the same time?
 
-Yes, and the two don't interact: training uses event features to improve your model before it runs, grounding supplies verified context while it runs. See [How to use PredictHQ](../how-to-use-predicthq.md).
+Yes, and the two don't interact: training uses event features to improve your model before it runs, grounding supplies verified context while it runs. See [How to use PredictHQ](../getting-started/how-to-use-predicthq.md).
 
 ## Next steps
 

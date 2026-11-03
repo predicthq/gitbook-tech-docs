@@ -71,6 +71,7 @@ redirects:
     datascience/severe-weather-events: getting-started/data-science-notebooks.md
     getting-started/guides/use-case-guides: getting-started/use-case-guides/README.md
     getting-started/guides/use-case-guides/accommodation-the-proven-path-to-value: getting-started/use-case-guides/accommodation-the-proven-path-to-value.md
+    how-to-use-predicthq: getting-started/how-to-use-predicthq.md
     getting-started/tutorials-by-use-case: getting-started/how-to-use-predicthq.md
     getting-started/tutorials-by-use-case/automated-demand-forecasting-with-ml-models: getting-started/guides/features-api-guides/improving-demand-forecasting-models-with-event-features.md
     getting-started/tutorials-by-use-case/dynamic-pricing: getting-started/how-to-use-predicthq.md

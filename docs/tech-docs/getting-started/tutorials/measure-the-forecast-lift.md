@@ -283,7 +283,7 @@ With your own demand data, the path is identical - one Saved Location and one Be
 
 Continue with these pages:
 
-* [How to use PredictHQ](../../how-to-use-predicthq.md) - the recommended path for your job, from model training to grounding AI systems
+* [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended path for your job, from model training to grounding AI systems
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - the production architecture: local feature storage, refresh cadences, explainability
 * [Which API should I use?](../core-concepts/which-api-should-i-use.md) - per-task API selection
 * [Using event features with time series foundation models](../guides/features-api-guides/using-event-features-with-time-series-foundation-models.md) - if your models are pre-trained rather than trained in-house
