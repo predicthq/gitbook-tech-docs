@@ -1,0 +1,47 @@
+---
+description: Delete an existing Saved Location.
+---
+
+# Delete a Saved Location
+
+{% openapi-operation spec="saved-locations-api" path="/v1/saved-locations/{location_id}" method="delete" %}
+[OpenAPI saved-locations-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/saved-locations-api.yaml)
+{% endopenapi-operation %}
+
+## Examples
+
+The following examples delete a Saved Location by its ID:
+
+{% tabs %}
+{% tab title="curl" %}
+```bash
+curl -X DELETE "https://api.predicthq.com/v1/saved-locations/$LOCATION_ID" \
+     -H "Authorization: Bearer $API_TOKEN"
+```
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import requests
+
+response = requests.delete(
+    url="https://api.predicthq.com/v1/saved-locations/$LOCATION_ID",
+    headers={
+      "Authorization": "Bearer $API_TOKEN"
+    }
+)
+
+print(response.status_code)
+```
+{% endtab %}
+{% endtabs %}
+
+## OpenAPI spec
+
+See the [OpenAPI spec for the Saved Locations API](https://api.predicthq.com/docs/?urls.primaryName=Saved+Locations+API).
+
+## Guides
+
+These guides are relevant to this API:
+
+* [Working with location-based subscriptions](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/geolocation-guides/searching-by-location/working-with-location-based-subscriptions)

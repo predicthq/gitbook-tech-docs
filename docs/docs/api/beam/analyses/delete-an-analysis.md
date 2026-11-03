@@ -1,0 +1,47 @@
+---
+description: Delete an existing Analysis.
+---
+
+# Delete an Analysis
+
+{% openapi-operation spec="beam-api" path="/v1/beam/analyses/{analysis_id}" method="delete" %}
+[OpenAPI beam-api](https://raw.githubusercontent.com/predicthq/api-specs/refs/heads/main/openapi/beam-api.yaml)
+{% endopenapi-operation %}
+
+## Examples
+
+Delete an Analysis with the following requests:
+
+{% tabs %}
+{% tab title="curl" %}
+```bash
+curl -X DELETE "https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID" \
+     -H "Authorization: Bearer $API_TOKEN"
+```
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import requests
+
+response = requests.delete(
+    url="https://api.predicthq.com/v1/beam/analyses/$ANALYSIS_ID",
+    headers={
+      "Authorization": "Bearer $API_TOKEN"
+    }
+)
+
+print(response.status_code)
+```
+{% endtab %}
+{% endtabs %}
+
+## OpenAPI spec
+
+See the [Beam API OpenAPI spec](https://api.predicthq.com/docs/?urls.primaryName=Beam+API).
+
+## Guides
+
+These guides are relevant to this API:
+
+* [Beam guides](https://app.gitbook.com/s/tNhzHETmXsrWeVBndqqJ/getting-started/guides/beam-guides)
