@@ -20,7 +20,7 @@ The core APIs are:
 
 ## How it fits together
 
-Start with [How to use PredictHQ](getting-started/how-to-use-predicthq.md) - the recommended integration paths by job, from model training to grounding AI systems. PredictHQ APIs work as a pipeline, not in isolation: the [Standard integration pattern](integrations/integration-guides/standard-integration-pattern.md) shows the recommended production architecture, from location setup through to forecasting and explainability.
+Start with [How to use PredictHQ](how-to-use-predicthq.md) - the recommended integration paths by job, from model training to grounding AI systems. PredictHQ APIs work as a pipeline, not in isolation: the [Standard integration pattern](integrations/integration-guides/standard-integration-pattern.md) shows the recommended production architecture, from location setup through to forecasting and explainability.
 
 ## Example
 

@@ -78,7 +78,7 @@ We will use PredictHQ [WebApp Search](https://control.predicthq.com/search/event
 1. Fill in the filters based on the parameters laid out in the [Example Parameters for this Guide](using-event-data-in-power-bi.md#example-parameters-for-this-guide).
 2. Click **Search**.
 
-<figure><img src="../../.gitbook/assets/Control Center Filter (1).png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Control Center Filter.png" alt="The PredictHQ WebApp event search page with the example filters filled in"><figcaption><p>WebApp Example Filters</p></figcaption></figure>
 
 Once the search has completed to get a CSV, click **Export**. Once the export has been downloaded, it’s ready for use in Power BI. The filename by default should be “Events-Export-zzzz-on-xxxx” where x is the date of the export and z is the location - feel free to rename this to anything else.
 
@@ -138,14 +138,12 @@ in
 
 As you can see we start with a comma to add on to the existing line, its positioning can be changed to the end of the existing line if you prefer, but its function is the same. The final pasted code should look something like this:
 
-<figure><img src="../../.gitbook/assets/CSV Power Query complete (1).png" alt="The Power BI Advanced Editor with the transformation Power Query pasted after the existing lines of the CSV query"><figcaption><p>CSV Power Query</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CSV Power Query complete.png" alt="The Power BI Advanced Editor with the transformation Power Query pasted after the existing lines of the CSV query"><figcaption><p>CSV Power Query</p></figcaption></figure>
 
 To apply the transformation:
 
 1. Click **Done**.
 2. Click **Close & Apply**, and wait for the data transformation to finish processing.
-
-<figure><img src="../../.gitbook/assets/CSV Close &#x26; Apply.png" alt="The Power BI Power Query Editor with the Close &#x26; Apply button highlighted"><figcaption><p>CSV Close &#x26; Apply</p></figcaption></figure>
 
 After completing these steps, we have successfully loaded a CSV extract of PredictHQ Events data into Power BI ready for use in visuals and reporting. See the [Guide to building the report](using-event-data-in-power-bi.md#guide-to-building-the-report) section later in this guide for the next steps.
 
@@ -168,7 +166,7 @@ To start, navigate to the Snowflake data connection via:
 Enter the **Server** and **Warehouse** info you gathered earlier.\
 It should look something like the following screenshot, replacing square bracket placeholder variables for your Server and Warehouse info.
 
-<figure><img src="../../.gitbook/assets/Server and Warehouse (1).png" alt="The Power BI Snowflake connection dialog with the Server and Warehouse fields filled in"><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Server and Warehouse.png" alt="The Power BI Snowflake connection dialog with the Server and Warehouse fields filled in"><figcaption><p>enter Server and Warehouse info</p></figcaption></figure>
 
 To enter the query:
 
@@ -332,8 +330,6 @@ in
 
 Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt="The Power Query Editor with the Close &#x26; Apply button highlighted after the API transformation"><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
-
 After this step the data is now ready to start building a report with, as the query has loaded and transformed it in Power BI. A template of this API Connection report pre-built is available at the end in the [Example API Connection Report Template](using-event-data-in-power-bi.md#example-api-connection-report-template) section.
 
 ## Guide to building the report
@@ -390,8 +386,6 @@ If you prefer **Date Hierarchy**, leave this as is.
 
 For phq\_attendance in the table use the drop down to remove the summary, this summary isn’t actually grouping anything so is an unnecessary default that should be removed. Note that we only want to stop the summarization in the table, leave the chart as is.
 
-<figure><img src="../../.gitbook/assets/don&#x27;t summarize (1).png" alt="The table field menu with Don't summarize selected"><figcaption><p>Remove Summarization from the Table</p></figcaption></figure>
-
 To rename the chart title:
 
 1. Click the chart.
@@ -429,4 +423,4 @@ If there are any issues with this template refer to the [API Connection Method](
 
 #### Example report:
 
-{% file src="../../.gitbook/assets/PredictHQ API Connection Example Report (1).pbit" %}
+{% file src="../../.gitbook/assets/PredictHQ API Connection Example Report.pbit" %}

@@ -1,8 +1,8 @@
 ---
 description: >-
   What grounding is, how RAG relates to it, how grounding reduces AI
-  hallucinations, and how to ground LLMs and agents in verified real-world
-  event data - in your environment or on demand via MCP.
+  hallucinations, and how to ground LLMs and agents in verified real-world event
+  data - in your environment or on demand via MCP.
 ---
 
 # Grounding with PredictHQ
@@ -19,11 +19,11 @@ Grounding closes the gap at answer time. The model retrieves verified, location-
 
 These three are often conflated. They solve different problems:
 
-| | What it is | When it happens | What changes |
-| --- | --- | --- | --- |
-| **Grounding** | Supplying external facts to a model at answer time | Every inference | The context the model reasons from |
-| **RAG** | A technique for grounding: retrieve relevant content from a prepared corpus (typically a vector store) and add it to the model's input | Every inference | The context the model reasons from |
-| **Fine-tuning** | Additional training that adjusts a model's weights on domain data | Before deployment | The model itself |
+|                 | What it is                                                                                                                             | When it happens   | What changes                       |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ---------------------------------- |
+| **Grounding**   | Supplying external facts to a model at answer time                                                                                     | Every inference   | The context the model reasons from |
+| **RAG**         | A technique for grounding: retrieve relevant content from a prepared corpus (typically a vector store) and add it to the model's input | Every inference   | The context the model reasons from |
+| **Fine-tuning** | Additional training that adjusts a model's weights on domain data                                                                      | Before deployment | The model itself                   |
 
 Grounding is the outcome; RAG is one way to achieve it. Tool calling, where an agent queries an API at answer time, achieves the same outcome and suits live data better than embedding static documents. Fine-tuning is not an alternative: real-world context changes daily, and facts baked into weights are stale on arrival. Ground for facts, fine-tune for behavior.
 
@@ -142,7 +142,7 @@ It's mostly a governance and maintenance question. If context must live inside y
 
 ### Can I use PredictHQ for training and grounding at the same time?
 
-Yes, and the two don't interact: training uses event features to improve your model before it runs, grounding supplies verified context while it runs. See [How to use PredictHQ](../getting-started/how-to-use-predicthq.md).
+Yes, and the two don't interact: training uses event features to improve your model before it runs, grounding supplies verified context while it runs. See [How to use PredictHQ](../how-to-use-predicthq.md).
 
 ## Next steps
 

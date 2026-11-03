@@ -4,17 +4,17 @@ PredictHQ has four core APIs, plus the PredictHQ MCP server for AI assistants an
 
 ## The short answer
 
-| Goal                                                  | API                                                                                                          |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Train or improve a demand forecasting model           | [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) with `beam.analysis_id` |
-| Get event-driven forecasts without building a model   | [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)                           |
-| Understand which events are driving demand            | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) with `beam.analysis_id`    |
-| Augment an existing forecast with event-aware outputs | [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)                           |
-| Build a dashboard showing upcoming events             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
-| Explain a forecast spike to a stakeholder             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                            |
-| Identify which event types drive demand at a location | [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)                                     |
+| Goal                                                  | API                                                                                                                               |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Train or improve a demand forecasting model           | [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features/get-features) with `beam.analysis_id`                      |
+| Get event-driven forecasts without building a model   | [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)                                                |
+| Understand which events are driving demand            | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) with `beam.analysis_id`                         |
+| Augment an existing forecast with event-aware outputs | [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview)                                                |
+| Build a dashboard showing upcoming events             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                                                 |
+| Explain a forecast spike to a stakeholder             | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events)                                                 |
+| Identify which event types drive demand at a location | [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/overview)                                                          |
 | Ground an LLM or agent inside your own environment    | [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) synced to a local store (provisioned grounding) |
-| Give an AI agent on-demand access to verified context | [MCP server](../../ai/mcp.md) (on-demand grounding)                                                           |
+| Give an AI agent on-demand access to verified context | [MCP server](../../ai/mcp.md) (on-demand grounding)                                                                               |
 
 ## Features API - for forecasting and ML
 
@@ -99,7 +99,7 @@ Avoid these common mistakes:
 
 Related pages:
 
-* [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended integration paths, by job
+* [How to use PredictHQ](../../how-to-use-predicthq.md) - the recommended integration paths, by job
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture
 * [API quickstart](../api-quickstart.md) - make your first API call
 * [Glossary](../glossary.md) - definitions for all core concepts

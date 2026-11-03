@@ -125,7 +125,7 @@ for group in response.json()["feature_importance"]:
 
 When we ran this, Beam found eight event groups significant for this location - concerts, conferences, public holidays, performing arts, and severe weather all at p-values of zero - and rejected four. Look at what it rejected:
 
-```text
+```
 sports             p=0.9999   important=False
 ```
 
@@ -251,7 +251,7 @@ for day in response.json()["results"]:
 
 From our run:
 
-```text
+```
 2026-04-25 48119 - Ben Rector with Nashville Symphony
 2026-04-26 43662 - Hayley Williams
 2026-04-27 40102 - Snarky Puppy
@@ -283,7 +283,7 @@ With your own demand data, the path is identical - one Saved Location and one Be
 
 Continue with these pages:
 
-* [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended path for your job, from model training to grounding AI systems
+* [How to use PredictHQ](../../how-to-use-predicthq.md) - the recommended path for your job, from model training to grounding AI systems
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - the production architecture: local feature storage, refresh cadences, explainability
 * [Which API should I use?](../core-concepts/which-api-should-i-use.md) - per-task API selection
 * [Using event features with time series foundation models](../guides/features-api-guides/using-event-features-with-time-series-foundation-models.md) - if your models are pre-trained rather than trained in-house

@@ -64,7 +64,7 @@ First, create a new Spreadsheet. Then, to open the data connection options:
 1. Click the **Data** tab.
 2. On the **Data** tab, click **Get Data**.
 
-<figure><img src="../../.gitbook/assets/image (82).png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt="The Data tab in Microsoft Excel with the Get Data menu open"><figcaption></figcaption></figure>
 
 The PredictHQ API uses Bearer token authorization, so the connection needs the API Access Token request header. To set it up:
 
@@ -78,7 +78,7 @@ Add the HTTP request header with the following information:
    1. For the header name, enter `Authorization`
    2. For the header value, enter `Bearer <api_token>`. where `<api_token>` stands for your PredictHQ API Access Token. Replace `<api_token>` with your actual API Access Token. Leave the ‘Bearer ’ part in. The following screenshot shows the fields once you enter your API key.\
       \
-      ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (83).png>)\\
+      ![The HTTP request header fields in Excel with Authorization in the first field and Bearer followed by the API token in the second field](<../../.gitbook/assets/image (1).png>)\\
 
 The filled-out information should look like this (except that you replace api\_key with your actual api\_key)
 
@@ -156,14 +156,12 @@ in
 
 The code in the Advanced Editor should look like the following screenshot:
 
-<figure><img src="../../.gitbook/assets/API Power Query complete (1).png" alt="The Advanced Editor in Excel showing the complete Power Query code"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API Power Query complete.png" alt="The Advanced Editor in Excel showing the complete Power Query code"><figcaption></figcaption></figure>
 
 Click **Close & Apply** and wait for the data transformation to finish processing through multiple API pages.
 
-<figure><img src="../../.gitbook/assets/API Close &#x26; Apply.png" alt="The Advanced Editor in Excel with the Close &#x26; Apply button highlighted"><figcaption><p>API Close &#x26; Apply</p></figcaption></figure>
-
 After this step the data is now ready to start building a report with, as Excel has successfully loaded and transformed it. You should see a Spreadsheet like the following screenshot:
 
-<figure><img src="../../.gitbook/assets/image (85).png" alt="An Excel spreadsheet populated with PredictHQ event data after the query finishes loading"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt="An Excel spreadsheet populated with PredictHQ event data after the query finishes loading"><figcaption></figcaption></figure>
 
 You now have a connection to the API that you can refresh to get updated data.

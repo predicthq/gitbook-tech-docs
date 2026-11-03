@@ -61,10 +61,9 @@ To load the export file in Tableau:
 
 1. Start Tableau: Open Tableau and under **Connect** select **JSON file**.
 2. Locate File: In the file dialog, complete these actions:
-
-    1. Navigate to the directory where you saved the export.
-    2. If the JSON lines file isn't listed, change the file extension filter from **JSON Files (\*.json)** to **All Files (\*.\*)**.
-    3. To load the file, click **Open**.
+   1. Navigate to the directory where you saved the export.
+   2. If the JSON lines file isn't listed, change the file extension filter from **JSON Files (\*.json)** to **All Files (\*.\*)**.
+   3. To load the file, click **Open**.
 
 <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau file dialog with the file type options for selecting the JSONL export" width="375"><figcaption><p>File extension options</p></figcaption></figure>
 
@@ -131,7 +130,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
    3. To update the y-axis title, follow the [steps to change the appearance of an axis](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
 5. Chart Preview:
 
-<figure><img src="../../.gitbook/assets/image (90).png" alt="The Time Series worksheet in Tableau with a chart of daily event day impact by date" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="The Time Series worksheet in Tableau with a chart of daily event day impact by date" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
 
 **Table**
 
@@ -149,7 +148,7 @@ For more information on PredictHQ event fields, see [Events](https://app.gitbook
 
 3. Table Preview:
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt="The Event Info worksheet in Tableau with a table of events and their daily impact values"><figcaption><p>Event Info worksheet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt="The Event Info worksheet in Tableau with a table of events and their daily impact values"><figcaption><p>Event Info worksheet</p></figcaption></figure>
 
 ### Dashboard
 
@@ -164,7 +163,7 @@ To build the dashboard:
 3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [steps to add dashboard interactivity](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
 4. Dashboard Preview:
 
-<figure><img src="../../.gitbook/assets/image (92).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
 For more information on creating dashboards, see the [Tableau guide to creating dashboards](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).
@@ -273,11 +272,11 @@ This tutorial has demonstrated how to connect PredictHQ data to Tableau and buil
 
 ## **Resources for download**
 
-{% file src="../../.gitbook/assets/Events-Export-San-Francisco-from-20240501-to-20240531 (1).jsonl" %}
+{% file src="../../.gitbook/assets/Events-Export-San-Francisco-from-20240501-to-20240531.jsonl" %}
 JSON file
 {% endfile %}
 
-{% file src="../../.gitbook/assets/PredictHQ Example Dashboard (1).twbx" %}
+{% file src="../../.gitbook/assets/PredictHQ Example Dashboard.twbx" %}
 Tableau workbook
 {% endfile %}
 
