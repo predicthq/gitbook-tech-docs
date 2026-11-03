@@ -1,0 +1,158 @@
+---
+description: Transforming Event Data into ML-Ready Features in Snowflake
+---
+
+# Snowflake data science guide
+
+## This guide and the Features API
+
+This guide shows you how to generate machine learning ready features from PredictHQ's intelligent event data in Snowflake similar to the output of the [Features API](../../../../getting-started/core-concepts/what-is-the-features-api.md), but is not intended to be in parity with the comprehensive results of the Features API. If possible, our primary recommendation is to use the Features API as it provides more comprehensive results. For more information on the Features API, go to the [Features API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) and for a more detailed guide on using the Features API for Machine Learning, see the [Get features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) guide.
+
+If you don't know which is the best for you, [contact sales](https://www.predicthq.com/contact/sales).
+
+## Overview
+
+This guide assumes you have access to PredictHQ’s events data in Snowflake via a [Snowflake data share](https://docs.predicthq.com/integrations/third-party-integrations/snowflake). The guide shows you how to generate aggregations similar to those provided by the Features API documented in the Features API [list of available features](https://docs.predicthq.com/api/features/get-features#available-features). These features provide daily aggregated data which shows the sum of data for all events happening in a location - for example, the amount of people attending events around a location. The goal is to generate aggregated features that can be used in demand forecasting.
+
+Snowflake's ease of use and integration have made it a popular choice as a cloud data warehouse and is one of the ways PredictHQ's intelligent event data can be accessed for various use cases. In this guide, this guide generates machine learning ready daily level aggregated event data on a per-location basis, intended to be similar to the data that the PredictHQ Features API provides and ready to be added to a training set.<br>
+
+**Requirements:**
+
+1\. A list of locations with their respective latitude & longitude.
+
+2\. Access to PredictHQ's intelligent event data via Snowflake
+
+3\. Understanding of SQL & Snowflake's SQL Interface.<br>
+
+**The process to follow:**
+
+1. Get the Predicted Impact Area for Each Location
+2. Create the input table filled with locations
+3. Set the date range that you want to retrieve data for
+4. Choose which method to follow:
+
+   1. [Snowpark Method](snowpark-method-guide.md)
+   2. [SQL Method](sql-method-guide.md)
+5. Use the output in machine learning demand forecasting models or for other applications
+
+## Get the Predicted Impact Area for each location
+
+When querying events at the location level, a common way to retrieve those events is with a latitude, longitude, and radius to get the events within a given area. But, a common gap is knowing what radius to use when searching for events. The Predicted Impact Area API is the recommended approach.&#x20;
+
+The [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area) returns a polygon that defines the optimal area around a location and takes into account a number of different factors like population density, the surrounding street network, and the industry vertical of the location.&#x20;
+
+As a first step, get the Predicted Impact Area for each location before moving forward with the guide. The following example uses `area_type=radius` so the result can be stored directly in the `SAVED_LOCATIONS` table used by the Snowflake SQL later in this guide. For more information visit [Predicted Impact Area API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area).
+
+{% hint style="info" %}
+In a separate environment outside of Snowflake, run this code:
+{% endhint %}
+
+```python
+import httpx
+
+# Copy your access token here or see our Quickstart docs:
+# https://docs.predicthq.com/guides/quickstart/
+API_TOKEN = 'ABC123'
+
+list_of_locations = [
+    {'name': 'store1-chicago', 'latitude': '41.81310', 'longitude': '-87.65860', 'industry': 'retail'},
+    {'name': 'Hyde Park', 'latitude': '51.50736', 'longitude': '-0.16411', 'industry': 'accommodation'},
+    {'name': 'store10-new-york', 'latitude': '40.730610', 'longitude': '-73.935242', 'industry': 'retail'},
+]
+
+for location in list_of_locations:
+    response = httpx.get(
+        "https://api.predicthq.com/v1/impact-area/",
+        headers={
+            "Authorization": f"Bearer {API_TOKEN}",
+            "Accept": "application/json",
+        },
+        params={
+            "location.origin": f"{location['latitude']},{location['longitude']}",
+            "industry": location["industry"],
+            "area_type": "radius",
+            "radius_unit": "mi",
+        },
+    )
+    result = response.json()
+    radius = result["geojson"]["properties"]["radius"]
+    radius_unit = result["geojson"]["properties"]["radius_unit"]
+    print(f"{location['name']} ({location['industry']}): {radius} {radius_unit}")
+```
+
+
+
+## Create input table used in both methods
+
+To be able to reference the locations further in the guide, a table of locations is required as input (called **SAVED\_LOCATIONS**). Fill this table with \
+The **SAVED\_LOCATIONS** input table requires this format:
+
+<table data-full-width="true"><thead><tr><th width="190">location</th><th>latitude</th><th>longitude</th><th data-type="number">radius</th><th>radius_unit</th><th>date_start</th><th>date_end</th></tr></thead><tbody><tr><td>store1-chicago</td><td>41.81310</td><td>-87.65860</td><td>4.11</td><td>mi</td><td>2023-07-01</td><td>2023-12-31</td></tr><tr><td>Hyde Park</td><td>51.50736</td><td>-0.16411</td><td>2.06</td><td>mi</td><td>2024-01-01</td><td>2024-03-31</td></tr><tr><td>store10-new-york</td><td>40.73061</td><td>-73.93524</td><td>null</td><td>...</td><td>...</td><td>...</td></tr></tbody></table>
+
+The columns are:
+
+* **location**: a unique identifier for the location.
+* **latitude**/**longitude**: we recommend including five decimal places.
+* **radius**: the value the Predicted Impact Area API returns.
+* **radius\_unit**: coded for either “km” (kilometers) or “mi” (miles).
+* **date\_start**/**date\_end**: the date range for the data to be returned. Can be changed.
+
+Here is the input table used when running this code, and note the datatypes of each column for the inputs:
+
+{% code fullWidth="true" %}
+```sql
+CREATE OR REPLACE TEMP TABLE saved_locations (
+    location STRING
+    , lat STRING
+    , lon STRING
+    , radius FLOAT
+    , radius_unit STRING
+    , date_start DATE
+    , date_end DATE);
+
+INSERT INTO saved_locations (location, lat, lon, radius, radius_unit, date_start, date_end)
+VALUES ('Hyde Park', '51.5073638', '-0.1641135', 2.06, 'mi'   
+        , DATE_TRUNC('MONTH', DATEADD(MONTH, -3, CURRENT_DATE()))       --Start of 3 months ago
+        , DATEADD(DAY, -1, DATE_TRUNC('MONTH', CURRENT_DATE()))         --End of last month
+        )
+;
+```
+{% endcode %}
+
+By default, the query returns three months of historical data. If you train the model, we recommend, at minimum, two years of historical data, but this can be changed as needed. If you are forecasting for a future period then the date range should reflect the period you are forecasting for - e.g. the next two weeks.
+
+Once the input table matches the earlier format, the following code shapes that table to be in a day-by-day format of the input called **SAVED\_LOCATIONS\_DAILY:**
+
+{% code fullWidth="true" %}
+```sql
+----split the table out into having one day equals one row between the date range.
+CREATE OR REPLACE TEMP TABLE saved_locations_daily AS
+select
+    date(date_start) + value::int as date,
+    s.location,
+    s.lat,
+    s.lon,
+    s.radius,
+    lower(s.radius_unit) as radius_unit        --forcing the lower in case of data entry mistakes
+   from saved_locations s,
+     table(flatten(array_generate_range(0, datediff('day', date_start, date_end) + 1))) t
+;
+```
+{% endcode %}
+
+## Choose which method to use
+
+### 1. [Snowpark method guide](snowpark-method-guide.md)
+
+Call the Features API with Python. Then, in Snowflake, save the output ML features.
+
+### 2. [SQL method guide](sql-method-guide.md)
+
+In Snowflake, use SQL to run over the events table and create the ML Features.
+
+## Integrating PredictHQ Features into your demand forecasting model
+
+The **ML\_FEATURES\_FOR\_LOCATIONS** table offers ready-to-use features for forecasting models. Merge these features with current demand data using the location and date as keys. Train models using historical data from this table and use future data for forecasting.&#x20;
+
+\
+For more information on creating machine learning-ready features from PredictHQ’s intelligent event data, check out the [Get features with the Features API notebook](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb) guide or this blog on [Enhancing Demand Forecasting with PredictHQ and PowerBI: A Technical Exploration](https://www.predicthq.com/blog/enhancing-demand-forecasting-with-predicthq-and-powerbi-a-technical). While these resources discuss the Features API, remember to use the **ML\_FEATURES\_FOR\_LOCATIONS** table instead.

@@ -1,0 +1,153 @@
+# Standard integration pattern
+
+This page describes the recommended architecture for integrating PredictHQ into a production system. It applies to most demand forecasting and operational use cases - staffing, inventory, pricing, scheduling, and similar applications where event-driven features feed into a model or decision system.
+
+## Overview
+
+A PredictHQ integration has four logical components on your side:
+
+1. **Location & Beam Management** creates and maintains Saved Locations and Beam Analyses per location, refreshed monthly
+2. **ML Features Management** - fetches pre-built ML features per location using the Beam Analysis, refreshed daily or weekly
+3. **Events Management** - fetches relevant events per location for explainability and operational context, refreshed daily or weekly
+4. **Forecasting & Decision System**  - consumes  features for model training and inference and surfaces events alongside results for explainability
+
+We recommend working with your PredictHQ Solutions Engineer to scope the right architecture for your use case before implementation
+
+The key principle across all of these: **store a local copy and query that, rather than making live API calls at inference time.** This removes API latency from the critical path and gives you full control over refresh cadence. It applies to forecasting pipelines and training-scale feature retrieval - AI agents that query for context on demand are the deliberate exception, covered in [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
+
+## Architecture diagram
+
+The following diagram is PredictHQ's reference architecture for a standard production integration. It shows the recommended system design for ingesting event-driven ML features and events into a forecasting or decision-making pipeline, covering location setup, Beam Analysis, feature and event management, modeling, and end-user explainability.
+
+Use this as the starting point when designing your integration - your Solutions Engineer can help tailor it to your specific locations, industry, and forecasting setup. The architecture applies across industries and use cases - staffing, inventory, pricing, scheduling, and similar demand forecasting applications. Variations such as bulk data delivery via Snowflake, AWS Data Exchange, or SFTP are noted where applicable in the following diagram:
+
+```mermaid
+---
+config:
+  layout: dagre
+---
+flowchart TB
+ subgraph PredictHQ["**PredictHQ Platform**"]
+        Saved_Locations_API["Saved Locations API"]
+        Beam_API["Beam API"]
+        Features_API["Features API<br>(or Snowflake, ADX, SFTP)"]
+        Events_API["Events API<br>(or Snowflake, ADX, SFTP)"]
+  end
+ subgraph Customer["**Customer Environment**"]
+        Manage_Locations["**Manage Saved Locations &amp; Beam**<br>refresh monthly"]
+        Business_Location["Entry point: Business Location"]
+        Location_Store[("Locations")]
+        Manage_ML_Features["**Manage ML Features**<br>refresh daily / weekly"]
+        Manage_Events["**Manage Events**<br>refresh daily / weekly"]
+        ML_Features[("ML Features")]
+        Forecasting_System["**Forecasting &amp; Modeling**<br>Train on historic<br>Run inference on future"]
+        Forecasts[("Forecast Results")]
+        Decision_System["**Decision System**<br>Display results or<br>automated decisions"]
+        Events[("Events")]
+        End_User(["End User"])
+  end
+    Business_Location --> Manage_Locations
+    Manage_Locations -- origin_geojson --> Saved_Locations_API
+    Saved_Locations_API -- location_id + Predicted Impact Area --> Manage_Locations
+    Manage_Locations -- location_id --> Beam_API
+    Beam_API -- analysis_id + Feature Importance --> Manage_Locations
+    Manage_Locations --> Location_Store
+    Location_Store --> Manage_ML_Features & Manage_Events
+    Manage_ML_Features -- analysis_id --> Features_API
+    Features_API -- ML features --> Manage_ML_Features
+    Manage_ML_Features --> ML_Features
+    Manage_Events -- analysis_id --> Events_API
+    Events_API -- events --> Manage_Events
+    Manage_Events --> Events
+    ML_Features --> Forecasting_System
+    Forecasting_System --> Forecasts
+    Forecasts --> Decision_System
+    Events -- explainability --> Decision_System
+    Decision_System --> End_User
+
+    Business_Location@{ shape: lean-r}
+    style Business_Location fill:#00D09E20
+    style End_User fill:#CCE8F620
+    style PredictHQ fill:#FF236420
+```
+
+## Component detail
+
+### Location & Beam management
+
+**Refresh: monthly**
+
+For each business location:
+
+1. To create a Saved Location, call the Saved Locations API with `origin_geojson` (a lat/lon Point). This also automatically calculates a Predicted Impact Area - an industry and geography-calibrated boundary that determines which events are in scope.
+2. Store the returned `location_id`.
+3. Create a Beam Analysis for the location using the `location_id` and your historical demand data. Beam identifies which event categories materially drive demand at that specific location.
+4. Store the returned `analysis_id` and Feature Importance results (event categories and p-values).
+5. **Monthly refresh:**
+   1. Append new demand data to the existing Beam Analysis - do not delete and recreate it.
+   2. Update your stored Feature Importance results with the latest output.
+
+Saved Locations are also the only way to use polygon-based boundaries with PredictHQ APIs. You store a polygon once against the location and reference it by `location_id` across all subsequent calls.
+
+### ML features management
+
+**Refresh: daily or weekly or other, depending on model cadence**
+
+For each location:
+
+1. To retrieve pre-built ML features, call the Features API with the `analysis_id` from your Location Store.
+2. In your local store, save the results.
+
+The `analysis_id` automatically applies the correct location boundary, event category filters, rank thresholds, and Predicted Impact Patterns for that location - no manual configuration needed. Pull from your local store at training and inference time, not directly from the API.
+
+**Alternative delivery:** PredictHQ can deliver Features API output per Beam Analysis via Snowflake Private Share, AWS Data Exchange, or SFTP. Contact PredictHQ to discuss this option.
+
+### Events management
+
+**Refresh: daily or weekly**
+
+For each location:
+
+1. To retrieve the specific events driving demand, call the Events API with the `analysis_id`.
+2. In your local store, save the results.
+
+You use events for **explainability** - surfacing to end users or downstream systems which events are responsible for a forecast shift on a given day. This is distinct from the ML features used for modeling. Events give human-readable context to model outputs. The same store can also serve as the retrieval corpus for grounding AI systems in your environment - see [Grounding paths for AI systems](#grounding-paths-for-ai-systems).
+
+**Alternative delivery:** PredictHQ can deliver events filtered by Beam Analysis or Saved Location via Snowflake Private Share, AWS Data Exchange, or SFTP. For most production use cases, this is the preferred approach over live Events API calls.
+
+### Forecasting & decision system
+
+The forecasting model pulls ML features from your local store - both historical (for training) and future (for inference). Event features represent demand signal - your model learns the relationship between event magnitude and demand impact at each location.
+
+The decision or end-user system consumes:
+
+* **Forecast results** from the modeling system
+* **Events** from your local Events store, used to explain forecast anomalies or expected demand shifts to operators or end users
+
+## Grounding paths for AI systems
+
+This architecture also supports [grounding](../../getting-started/glossary.md#grounding) - supplying verified real-world context to LLMs and AI agents at the moment they answer, so they respond from facts instead of hallucinating. Grounding sits alongside the forecasting pipeline, not inside it: training improves your model before it runs, grounding supplies verified context while it runs, and the two never mix.
+
+**Provisioned grounding** reuses this architecture as-is. The local Events store is the retrieval corpus: AI systems in your environment query it at answer time, your own access controls govern it, and your refresh cadence sets its freshness. Nothing new to build beyond a retrieval interface over a store you already maintain - see [Provisioned grounding: retrieval inside your environment](provisioned-grounding.md) for the reference architecture.
+
+**On-demand grounding** is the deliberate exception to the store-locally principle. AI agents query the [PredictHQ MCP server](../../ai/mcp.md) live at decision time and hold no copy of anything. The latency trade-off that rules out live calls in a forecasting hot path is acceptable in an agent's tool-calling loop - and always-current context is the point. For more detail, see:
+
+* [Grounding with PredictHQ](../../ai/grounding-with-predicthq.md)
+* [PredictHQ MCP in agentic workflows](../../ai/predicthq-mcp-in-agentic-workflows.md)
+
+## Refresh cadence summary
+
+| Component       | Cadence              | Notes                                                     |
+| --------------- | -------------------- | --------------------------------------------------------- |
+| Saved Locations | Monthly or as needed | Refresh monthly or if the location itself changes         |
+| Beam Analysis   | Monthly              | Append demand data to existing Analysis - do not recreate |
+| ML Features     | Daily or weekly      | Align with model training / inference cycle. Future-dated values are revised continuously - new events are announced, attendance predictions update - so refresh ahead of each forecast run rather than caching |
+| Events          | Daily or weekly      | Align with operational review cadence                     |
+
+***
+
+### Key decisions
+
+**Features API vs. Snowflake / ADX / SFTP** For smaller deployments or early integration, the Features API is the simplest path. For production at scale - particularly when feature freshness and API latency are concerns - talk to PredictHQ about bulk delivery options.
+
+**One Beam Analysis per location** Event impact is location-specific. Do not reuse a single Beam Analysis across multiple locations. For fleet-scale deployments with many similar locations, see [Analysis Groups in Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups).

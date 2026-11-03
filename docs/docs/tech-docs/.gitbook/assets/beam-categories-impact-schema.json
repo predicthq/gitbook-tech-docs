@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/beam-categories-impact-schema.json",
+  "type": "object",
+  "required": [
+    "community",
+    "concerts",
+    "festivals",
+    "performing_arts",
+    "sports",
+    "conferences",
+    "expos",
+    "public_holidays",
+    "school_holidays",
+    "observances"
+  ],
+  "properties": {
+    "community": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "concerts": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "festivals": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "performing_arts": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "sports": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "conferences": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "expos": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "public_holidays": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "school_holidays": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    },
+    "observances": {
+      "$ref": "https://docs.predicthq.com/docs/schema/beam-category-impact-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

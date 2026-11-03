@@ -1,0 +1,282 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/broadcast-schema.json",
+  "type": "object",
+  "properties": {
+    "broadcast_id": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dates": {
+      "$ref": "#/definitions/BroadcastDate"
+    },
+    "location": {
+      "$ref": "#/definitions/BroadcastLocation"
+    },
+    "phq_viewership": {
+      "type": "integer"
+    },
+    "record_status": {
+      "$ref": "#/definitions/BroadcastRecordStatus"
+    },
+    "broadcast_status": {
+      "$ref": "#/definitions/BroadcastStatus"
+    },
+    "event": {
+      "$ref": "#/definitions/Event"
+    },
+    "duplicate_of_id": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "BroadcastDate": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "start_local": {
+          "$ref": "#/definitions/LocalDateTimeType"
+        },
+        "end_local": {
+          "$ref": "#/definitions/LocalDateTimeType"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      },
+      "required": ["start"]
+    },
+    "GeoPoint": {
+      "type": "object",
+      "properties": {
+        "lon": {
+          "type": "number"
+        },
+        "lat": {
+          "type": "number"
+        }
+      },
+      "required": ["lon", "lat"]
+    },
+    "PlaceType": {
+      "enum": ["locality", "county"],
+      "type": "string"
+    },
+    "Place": {
+      "type": "object",
+      "properties": {
+        "place_id": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/PlaceType"
+        },
+        "name": {
+          "type": "string"
+        },
+        "county": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": ["place_id", "type", "name", "county", "region", "country"]
+    },
+    "BroadcastLocation": {
+      "type": "object",
+      "properties": {
+        "geopoint": {
+          "$ref": "#/definitions/GeoPoint"
+        },
+        "place_hierarchies": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "places": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Place"
+          }
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": ["geopoint", "place_hierarchies", "places", "country"]
+    },
+    "BroadcastRecordStatus": {
+      "enum": ["active", "deleted", "duplicate"],
+      "type": "string"
+    },
+    "BroadcastStatus": {
+      "enum": ["cancelled", "predicted", "scheduled"],
+      "type": "string"
+    },
+    "EventCategory": {
+      "enum": [
+        "academic",
+        "airport-delays",
+        "community",
+        "concerts",
+        "conferences",
+        "daylight-savings",
+        "disasters",
+        "expos",
+        "festivals",
+        "health-warnings",
+        "observances",
+        "performing-arts",
+        "politics",
+        "public-holidays",
+        "school-holidays",
+        "severe-weather",
+        "sports",
+        "terror"
+      ],
+      "type": "string"
+    },
+    "EventDates": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "start_local": {
+          "$ref": "#/definitions/LocalDateTimeType"
+        },
+        "end_local": {
+          "$ref": "#/definitions/LocalDateTimeType"
+        },
+        "predicted_end_local": {
+          "$ref": "#/definitions/LocalDateTimeType"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      },
+      "required": ["start", "start_local", "timezone"]
+    },
+    "EventLocation": {
+      "type": "object",
+      "properties": {
+        "geopoint": {
+          "$ref": "#/definitions/GeoPoint"
+        },
+        "place_hierarchies": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": ["geopoint", "place_hierarchies", "country"]
+    },
+    "EntityType": {
+      "enum": ["organisation", "venue"],
+      "type": "string"
+    },
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/EntityType"
+        },
+        "name": {
+          "type": "string"
+        },
+        "formatted_address": {
+          "type": "string"
+        }
+      },
+      "required": ["entity_id", "type", "name"]
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/definitions/EventCategory"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dates": {
+          "$ref": "#/definitions/EventDates"
+        },
+        "location": {
+          "$ref": "#/definitions/EventLocation"
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entity"
+          }
+        },
+        "phq_attendance": {
+          "type": "integer"
+        },
+        "phq_rank": {
+          "type": "integer"
+        },
+        "local_rank": {
+          "type": "integer"
+        },
+        "aviation_rank": {
+          "type": "integer"
+        }
+      },
+      "required": ["event_id", "title", "category", "labels", "dates", "location", "entities"]
+    },
+    "LocalDateTimeType": {
+      "type": "string",
+      "pattern": "^[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]$"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["broadcast_id", "updated", "record_status"]
+}

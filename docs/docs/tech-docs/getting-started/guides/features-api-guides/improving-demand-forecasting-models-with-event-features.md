@@ -1,0 +1,144 @@
+---
+description: >-
+  Learn how to integrate PredictHQ's event features into your demand forecasting
+  model.
+---
+
+# Improving demand forecasting models with event features
+
+Adding PredictHQ event features to a demand forecasting model reduces forecast error in a way you can measure and attribute - and what a point of accuracy is worth is relative to your business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
+
+This tutorial guides you through the process of identifying, retrieving, and integrating relevant, demand-driving event features into a demand forecasting model. Follow along by running the accompanying Jupyter notebooks while referring to the provided links for more technical details. The tutorial concludes with a practical example of a demand forecasting model that incorporates PredictHQ event features.
+
+## Harnessing event signals
+
+### Events driving demand
+
+Events, such as concerts, expos, and public holidays, are known to affect consumer behavior and [drive demand](https://www.predicthq.com/use-cases/demand-forecasting). PredictHQ offers event data across [more than a dozen categories](../../predicthq-data/event-categories/), featuring a [wide range of labels](../../predicthq-data/labels.md). The [powerful data processing pipeline](https://www.predicthq.com/intelligence) ensures the delivery of high-quality, enriched event data that can be seamlessly incorporated as features into any demand forecasting model.
+
+### Integrating event features
+
+Built upon extensive event coverage, PredictHQ’s event features aggregate similar events into predefined groups for specific locations at set intervals, such as daily aggregations. These prebuilt, forecast-ready features can be added directly to machine learning models without further preprocessing. Access to an extensive library of features is available through the [Features API](https://www.predicthq.com/apis/features-api). We recommend starting with the Important Features that the [Beam API](https://www.predicthq.com/beam) identifies.
+
+## How-to guide
+
+The following sections guide you through integrating event features into your demand forecasting models. Follow these instructions and run the accompanying Jupyter notebooks to understand how you can adapt this approach to fit your workflow and improve the accuracy of your models.
+
+### Overview
+
+Adding event features to a demand forecasting model involves two main steps: pulling a list of Important Features from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) and retrieving prebuilt, forecast-ready features from the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) for a store or location.
+
+<figure><img src="https://lh7-us.googleusercontent.com/BxTbjp8PELaPLMrh8664Jzh6W-PzBc73AyL8wvUCmL_7nm3TKIyA5tCMbyH-RmWihWLdi99JKy3RszSsIc0TJPCYeg3YtXUBPkHLclQ_uyRlk1XRa6Rmiz-2h3yLNn9w1K2IOwlrVNBkjHYNoAQjQEM" alt="Diagram of the integration flow: the Beam API supplies a list of Important Features, the Features API returns those features for a store or location, and they feed into a machine learning model."><figcaption><p>An overview of integrating event features into a machine learning model.</p></figcaption></figure>
+
+PredictHQ APIs handle most steps; you provide the following for each store or location:
+
+1. Historical demand data
+2. Latitude and longitude
+3. Industry
+
+### Step 1. Select relevant event features
+
+With countless events taking place globally throughout the year, identifying events that impact demand at your location is crucial. The [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) automatically provides a list of Important Features based on your historical demand data and location. Alternatively, you can access [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam) in our [WebApp](https://control.predicthq.com/beam) and directly [copy the Important Features](https://www.predicthq.com/blog/find-machine-learning-ml-features-to-use-in-forecasting-with-beam) from your browser.
+
+There are two main strategies for determining a list of Important Features for a store or location: Important Features tailored specifically to the store or location, or Important Features based on a group of stores or locations. Review the Important Features by location and Important Features by group of locations sections, and choose the approach that best suits your operational needs.
+
+<details>
+
+<summary>Important Features by location</summary>
+
+If you are able to implement individual models for each store or location, the Beam API’s [Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/get-feature-importance) endpoint is recommended. It provides a list of Important Features tailored specifically to your store or location. Also referred to as Category Importance in our WebApp, Beam identifies these event features (or categories) as having the greatest impact on your demand.
+
+</details>
+
+<details>
+
+<summary>Important Features by group of locations</summary>
+
+If you manage multiple stores or locations and require a unified set of features, the Beam API’s [Aggregated Feature Importance](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups/get-aggregated-feature-importance) endpoint is recommended. It provides a consolidated list of Important Features across all stores or locations within an [Analysis Group](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups) based on aggregating Feature Importance results from contributing stores or locations.
+
+</details>
+
+<details>
+
+<summary>User inputs</summary>
+
+The following sections highlight what you need to provide for determining a list of Important Features. Explore the accompanying Jupyter notebooks to see how this fits together practically.
+
+**Historical demand data**
+
+Ensure you have enough time-series data that meets [Beam’s requirements](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data). Demand can be quantified in any unit relevant to your forecasting model. Common examples include sales in USD for retail stores, number of orders for restaurants, and revPAR for hotels.
+
+**Industry**
+
+Specify your industry as there are several industry-specific settings required in this step such as when using the [Predicted Impact Area API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). If your [industry is not covered](../industry-specific-event-filters.md), use the default `other`.
+
+**Location**
+
+To define the catchment area around your store or location, use [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area). Create a Saved Location with `origin_geojson` and your industry. PredictHQ then calculates and stores the Predicted Impact Area boundary automatically.
+
+**Rank thresholds**
+
+To automatically calibrate rank thresholds for your industry and location, use Beam. Beam identifies which event types and rank levels materially influence your demand - removing the need to set these manually.
+
+</details>
+
+{% hint style="info" %}
+For technical details, visit:
+
+* [Upload demand data](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analyses/upload-demand-data "mention")
+* [Predicted Impact Area](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/impact-area/get-impact-area "mention")
+* [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
+* [Analysis Groups](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam/analysis-groups "mention")
+
+For practical implementation:
+
+* [ML features by location with Beam](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-location-level-features-with-beam-api.ipynb)
+* [ML features by group with Beam Analysis Groups](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/identify-group-level-features-with-beam-api.ipynb)
+{% endhint %}
+
+### Step 2. Get features
+
+The [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) provides access to a library of prebuilt, forecast-ready features ready for direct integration into your machine-learning models. Specify the date range, location, and list of features, all of which can be sourced from the [Beam API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam).
+
+Responses from the Features API vary based on the type of feature. Most come with a suite of statistics that indicates how the Features API aggregates the underlying event data daily for a location, e.g. sum, max, count. For `phq_rank_*` features, the response is the daily number of events for each of the [five rank bands](https://www.predicthq.com/features/rankings/phq-rank). We recommend the following aggregations:
+
+| Feature Type       |     stat    |       other       |
+| ------------------ | :---------: | :---------------: |
+| `phq_attendance_*` |     sum     |    <p><br></p>    |
+| `phq_impact_*`     |     max     |    <p><br></p>    |
+| `phq_rank_*`       | <p><br></p> | rank-weighted sum |
+| `phq_spend_*`      |     sum     |    <p><br></p>    |
+| `phq_viewership_*` |     max     |    <p><br></p>    |
+
+**Predicted Impact Patterns**
+
+Some features consider the additional impact from events before and after scheduled dates, offering a more accurate representation of event impacts on demand. This is known as [Predicted Impact Patterns](https://www.predicthq.com/blog/use-demand-impact-patterns-to-predict-how-events-shape-consumer-behavior), which vary by event category and industry. Features including Predicted Impact Patterns are denoted with an industry suffix, such as `phq_attendance_sports_accommodation` or `phq_impact_severe_weather_air_quality_retail`.
+
+{% hint style="info" %}
+For technical details, visit:
+
+* [Features](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features "mention")
+* [Beam](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/beam "mention")
+
+For practical implementation:
+
+* [Get features with the Features API](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/get-features-with-features-api.ipynb)
+{% endhint %}
+
+### Step 3. ML model and future predictions
+
+Event features provided by the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features) are prebuilt, forecast-ready and ready for immediate use. Merge them into your existing dataset by location ID and date. Incorporating these event features can enhance your model's performance by adding valuable demand-driving event data.
+
+For future predictions, you can access forward-facing data, such as the next two weeks or the upcoming month, by querying the [Features API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/features). To incorporate these new features into your production pipeline, work closely with your engineering team.
+
+{% hint style="info" %}
+For practical implementation:
+
+* [Demand forecasting with event features](https://github.com/predicthq/phq-data-science-docs/blob/master/demand-forecasting-with-events/demand-forecasting-with-event-features.ipynb)
+{% endhint %}
+
+## Conclusion
+
+By following this tutorial, you should now understand how to enhance your demand forecasting models by integrating PredictHQ's event features. As known drivers of demand, incorporating event signals can noticeably improve the accuracy of your forecasts, empowering you to make more informed decisions and strategize more effectively.
+
+To move from this tutorial into a production integration—covering data storage, refresh cadence, and how Saved Locations, Beam, the Features API, and Events API fit together as a pipeline—see the [Standard integration pattern](../../../integrations/integration-guides/standard-integration-pattern.md).

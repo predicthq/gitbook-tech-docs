@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/places-response-schema.json",
+  "type": "object",
+  "required": ["count", "previous", "next", "results"],
+  "properties": {
+    "count": {
+      "type": "integer",
+      "description": "The total number of results.",
+      "minimum": 0
+    },
+    "previous": {
+      "type": ["string", "null"],
+      "description": "A URL to the previous page of results, or `null` if this is the first page."
+    },
+    "next": {
+      "type": ["string", "null"],
+      "description": "A URL to the next page of results, or `null` if this is the last page."
+    },
+    "results": {
+      "type": "array",
+      "description": "An array of records",
+      "items": { "$ref": "https://docs.predicthq.com/docs/schema/place-schema.json" }
+    }
+  },
+  "additionalProperties": false
+}

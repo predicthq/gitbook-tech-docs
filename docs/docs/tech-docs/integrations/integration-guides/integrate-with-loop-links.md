@@ -1,0 +1,173 @@
+---
+description: >-
+  Loop Links let you submit missing events and provide
+  feedback on existing events.
+---
+
+# Integrate with Loop Links
+
+[PredictHQ's Loop tool](https://www.predicthq.com/tools/loop) allows customers to submit feedback on existing events and to submit missing events. PredictHQ has global events data from hundreds of providers, but sometimes our data may not include events such as hyperlocal events. Loop allows customers to report events that appear to be missing. It also allows customers to provide feedback on events if they have updates to details like attendance, times, or location.
+
+Using [Loop](https://loop.predicthq.com/) requires a PredictHQ login to the WebApp. If you want your users to report missing events or give event feedback without a PredictHQ login, you can integrate Loop Links into your product.
+
+**Loop Links** let you integrate with Loop without your users needing a WebApp login, and enable the following:
+
+* You can integrate Loop into your products, such as a web app, mobile app, or other tool
+* You can generate a unique URL to allow your users to submit event feedback and missing event information
+* PredictHQ processes events in the normal way and adds valid events or feedback to its system
+* The Events API returns events that PredictHQ approves via Loop
+
+This means you can allow your users to submit feedback on events but your support team doesn't need to spend time managing this feedback. It goes straight to PredictHQ.
+
+To use Loop Links you need to use the API that creates Loop Links. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details). See also, our [Loop Links API documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/loop) for details on creating Loop Links.
+
+## Overview
+
+Loop Links provide a URL that allows a user to provide event feedback. You create Loop Links URLs via the Loop Links API. You must configure your own URLs before you can integrate Loop Links into your application.
+
+The link does not require authentication. It has customer details embedded. For example:
+
+* **Label**: My First Capture Link
+* **Link**: `https://phq.link/loop/jG5KnDpad5SAUMkUtR` (note: this is not a valid link, just an example)
+
+You can link to the URL from within your application, and feedback goes straight into the Loop system.
+
+The advantage is you don't need to build a UI. The UI is responsive and works on desktop, tablet, and mobile.
+
+## Loop Links integration
+
+You integrate two functions in your application:
+
+* One for submitting missing events
+* Another for feedback on events - link event feedback to a part of your application that displays an event
+
+These buttons link to the screens shown in the following section.
+
+The following image shows a fictitious example app with examples of adding buttons for the two types of Loop Feedback
+
+<figure><img src="../../.gitbook/assets/example-app-with-loop-links.png" alt="A fictitious example app with buttons for submitting a missing event and providing event feedback through Loop Links"><figcaption></figcaption></figure>
+
+The following diagram shows how your app integrates with the Loop Links event pages:
+
+<figure><img src="../../.gitbook/assets/loop-links-integrated-example.png" alt="Diagram showing how the buttons in an app link to the Loop Links pages for submitting a missing event and providing event feedback"><figcaption></figcaption></figure>
+
+The heading at the top of the Loop pages defaults to your organization name in the WebApp. You can update it to change it via the API.
+
+**Missing event link**
+
+Opens a PredictHQ web page where users can enter details of a missing event in the browser.
+
+We recommend you open this in a new window.
+
+**Event feedback link**
+
+Opens a PredictHQ web page where users can provide feedback on an existing event. Requires the public event ID of the event.
+
+In your app, where you display a PredictHQ event, integrate this link. We recommend you open this in a new window.
+
+### Submitting missing events
+
+When a user submits a missing event:
+
+1. Users enter event details
+2. PredictHQ teams review events and approve or reject them
+3. Approved events show as active events in your account
+4. PredictHQ emails users when it approves or rejects an event
+
+<figure><img src="../../.gitbook/assets/loop-submit-missing-event.png" alt="The Loop Links page where users enter details of a missing event"><figcaption></figcaption></figure>
+
+### Providing feedback on events
+
+When a user gives feedback on an event:
+
+1. On the page, review the event details
+2. Provide feedback
+3. Pass an event ID to the Loop Link URL
+4. PredictHQ approves or rejects the feedback
+5. Users receive an email if there are any questions about their feedback
+
+<figure><img src="../../.gitbook/assets/loop-event-feedback.png" alt="The Loop Links page where users review an event's details and provide feedback on it"><figcaption></figcaption></figure>
+
+## Loop Links automated emails
+
+The Loop Links platform sends automated emails in the following cases:
+
+* When PredictHQ approves a submitted event
+* When PredictHQ rejects a submitted event
+* When there is a reply or comment on event feedback
+
+The email templates contain the organization at the top of the template. This is the same organization name that is shown at the top of the the Loop Link pages for submitting missing events and event feedback. You can update it by calling `PUT /v1/loop/settings`. See [**Loop Links Technical Details**](integrate-with-loop-links.md#loop-links-technical-details) for more information.
+
+**Note that users cannot reply to these emails. In order to reply to them you need to use the event feedback page for the event in question and send a response in the feedback.**
+
+The following tabs show some example emails:
+
+{% tabs %}
+{% tab title="Approved submission email" %}
+The following image is an example of the email template for approved events:
+
+<figure><img src="../../.gitbook/assets/approved-event-loop-links-email.png" alt="Example Loop Links email telling a user that the event they submitted was approved"><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="Reply to submission/feedback email" %}
+See an example of the email template for rejected events and replies to event feedback:
+
+<figure><img src="../../.gitbook/assets/reply-event-loop-links-email.png" alt="Example Loop Links email telling a user that PredictHQ replied to their event submission or feedback"><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+## Tracking Loop feedback
+
+If you have admin access, you can track Loop feedback at [the Loop website](https://loop.predicthq.com/) :
+
+* Needs a PredictHQ login
+* Shows whether PredictHQ approved or rejected Loop submissions
+* Shows details of the discussion about the Loop events with responses from PredictHQ
+* Lets you track the status of events your end users submit
+
+Support teams typically use this if issues are raised about event feedback and they want to review the feedback.
+
+## Loop Links technical details
+
+### Integration overview
+
+To integrate Loop Links with your application:
+
+1. Using the API, create Loop Links:
+   1. In your system, store the links, or
+   2. Use the link immediately.
+2. To set the name displayed at the top of the Loop pages, in the settings API, update the **`org_name`** field if required
+3. In your application, implement the links.
+When an end-user clicks a link, the Public Loop UI opens in their browser. No login is needed. The end-user completes the form to submit an event (or feedback, depending on the type of link) and receives an email when PredictHQ approves or rejects the event they submitted.
+
+### Types of links
+
+#### Submit missing event
+
+To **submit a missing event**, from your application, open the Loop Link:
+
+E.g., open the link with /event/ in the URL:
+
+`https://loop.phq.link/event/kt9fJZXpWFGSA5ky1Cunb2` (note: this is not a valid link just an example)
+
+#### Submit event feedback
+
+To **provide feedback on an existing event** - open the /event-feedback/ Loop Link and, on the URL, supply the `event_id` parameter:
+
+`https://loop.phq.link/event-feedback/kt9fJZXpWFGSA5ky1Cunb2?event_id=BzjFubD5eqvrRA7NSw` (note: this is not a valid link just an example)
+
+Note that the event ID to use is the `id` field from the [Events API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events). Users typically provide feedback while you display an event from the PredictHQ API in your application. To let users provide feedback, add a feedback link or icon next to each event.
+
+#### To pre-fill the user's email address
+
+The Loop forms require a user email address. You can pre-populate the email address by passing it in the query string. The name of the parameter is `email`, as in this example:
+
+`https://loop.phq.link/event/kt9fJZXpWFGSA5ky1Cunb2?email=example@example.com` (note: this is not a valid link just an example)
+
+### Loop Link expiration and reuse
+
+Loop Links work as follows:
+
+* You can reuse Loop Links unless you set an expiry date time
+* If you set an expiry date time, the link stops working after it expires
+* If you don't set an expiry date time, you can reuse them indefinitely

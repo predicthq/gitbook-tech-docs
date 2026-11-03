@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://docs.predicthq.com/docs/schema/demand-surge-schema.json",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "phq_attendance_sum": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["date", "phq_attendance_sum"]
+}

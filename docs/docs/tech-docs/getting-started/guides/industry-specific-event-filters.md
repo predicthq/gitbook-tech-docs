@@ -1,0 +1,73 @@
+---
+description: >-
+  How PredictHQ tailors results to your industry, the named industry values,
+  and industry-level default categories and rank thresholds for when Beam
+  can't be used.
+---
+
+# Industry recommendations
+
+PredictHQ applies to any business whose demand is shaped by the real world. For a set of named industries, we have gone further and optimized the product directly: industry-specific Predicted Impact Patterns, thresholds, and catchment radii, tuned to how events affect that sector. Specifying a named industry gives you those optimizations out of the box - and either way, Beam personalizes results using your own demand data, which is more specific than any industry preset.
+
+## Named industries
+
+Use the Industry Value when specifying an industry in an API request. If your business doesn’t map exactly, to find the closest fit, use the Examples / Adjacent column, or use `other` - an unlisted industry doesn't limit which events, features, or APIs you can use.
+
+| Named Industry                         | Industry Value   | Examples / Adjacent Industries                                                       |
+| -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |
+| Accommodation                          | `accommodation`  | Hotels, hostels, co-working spaces with short-term stays.                            |
+| Consumer Packaged Goods (CPG)          | `cpg`            | Packaged food & beverages, household goods.                                          |
+| Leisure, Travel & Tourism              | `tourism`        | Entertainment venues (cinemas, casinos, theme parks), attractions, DMOs, OTAs.       |
+| Marketing and Advertising              | `marketing`      | Agencies, ad networks, campaign platforms.                                           |
+| Parking                                | `parking`        | Car parks, garages.                                                                  |
+| Food and Beverage (Restaurants & Bars) | `restaurants`    | Cafes, pubs, quick service restaurants, hospitality venues.                          |
+| Retail                                 | `retail`         | Supermarkets, fashion, electronics, gyms/fitness centers (if sales-oriented).        |
+| Transportation and Delivery            | `transportation` | Rail, buses, rideshare, delivery services.                                           |
+| Other                                  | `other`          | If your business does not clearly fit into one of the named industries, use `other`. |
+
+## Where industry matters
+
+Our systems use industry to tune how they interpret and model events for your business. This includes areas like Predicted Impact Patterns, thresholds, and catchment radius recommendations:
+
+* **Predicted Impact Area API**\
+  Area recommendations vary by industry, since the catchment area for demand differs across sectors.
+* **Predicted Impact Patterns**\
+  For each event, we calculate its leading and lagging impact per industry. The Features API then uses these patterns to ensure event impacts reflect your sector.
+* **Beam**\
+  Beam builds on these industry-tuned patterns and thresholds, and further personalizes results with your own demand data.
+* **Forecasts API**\
+  Uses industry in the same way as Beam (the Forecasts API passes industry to Beam behind the scenes).
+
+## Beam comes first
+
+The most accurate way to identify which events impact your business is with [Beam](../core-concepts/what-is-beam.md), PredictHQ’s relevancy engine. Beam analyzes your demand data to surface which event categories matter most at each of your locations, so you don’t need to guess.
+
+Without Beam, you’re guessing which events matter. With Beam, your own demand data tells you - so you cut noise, focus on impact, and avoid costly mistakes.
+
+**If you have demand data, always run Beam first.**
+
+## When you can’t use Beam
+
+If demand data isn’t available, we’ve done research to provide industry-level defaults. These include:
+
+* Recommended Feature Groups (categories) per industry
+* Minimum Local Rank thresholds to filter out events too small to matter
+* Create a [Saved Location](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/saved-locations) for each of your business locations: this automatically generates a Predicted Impact Area that defines the geographic scope for event retrieval, so you don't need to manage the boundary manually
+
+These are starting points only. Switch to Beam as soon as you can provide demand data.
+
+## Recommended feature groups / categories
+
+<table><thead><tr><th width="236.2265625">Industry</th><th>Recommended Feature Groups / Categories</th></tr></thead><tbody><tr><td>Accommodation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Parking</td><td>concerts, expos, festivals, observances, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Restaurants</td><td>community, concerts, conferences, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr><tr><td>Retail, CPG</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Transportation</td><td>academic, community, concerts, conferences, expos, festivals, observances, performing-arts, public-holidays, school-holidays, severe-weather, sports</td></tr><tr><td>Tourism, Marketing, and Others</td><td>concerts, expos, festivals, performing-arts, public-holidays, school-holidays, sports</td></tr></tbody></table>
+
+{% hint style="info" %}
+When requesting features from Features API with a Beam ID we automatically configure all the correct settings based on the Beam results. When not using Beam, we recommend using the `sum` stat for all relevant features (based on the industry to category mappings in the Recommended feature groups / categories table) except for severe weather where we recommend using the `max` stat to avoid over representing the impact of severe weather events when multiple are overlapping.
+{% endhint %}
+
+## Minimum Local Rank thresholds
+
+Local Rank is a location-sensitive scale (0-100, logarithmic) that predicts how much impact an event will have in its immediate vicinity - factoring in population density and local characteristics such as how built-up or accessible an area is. For example, a 1,000-person conference may register a Local Rank of 43 in densely populated Hong Kong and 65 in less crowded Dublin - despite having the same PHQ Rank.
+
+**Beam automatically applies Local Rank filtering** when identifying impactful event types for your demand modeling. However, if you’re setting up filters or queries manually, these thresholds offer a smart default to focus your analysis where it matters until you can rely solely on Beam.
+
+<table><thead><tr><th width="242.7578125">Industry</th><th>Minimum Local Rank</th></tr></thead><tbody><tr><td>Accommodation</td><td>50</td></tr><tr><td>Parking</td><td>50</td></tr><tr><td>Restaurants</td><td>50</td></tr><tr><td>Retail</td><td>35</td></tr><tr><td>Others</td><td>35</td></tr></tbody></table>

@@ -1,0 +1,308 @@
+---
+description: Learn how to connect PredictHQ data to Tableau and build an example dashboard.
+---
+
+# Using event data in Tableau
+
+PredictHQ provides verified real-world events that impact key business operations, including demand forecasting and strategic planning. This tutorial shows how to connect PredictHQ to Tableau to visualize how events influence business trends - loading a static event export, and connecting directly to data warehouses where PredictHQ data is stored.
+
+## Getting started
+
+This tutorial requires access to both Tableau and PredictHQ:
+
+1. Tableau: The instructions provided are based on [Tableau Public](https://public.tableau.com/app/discover), but other Tableau products, such as Tableau Desktop, should operate similarly.
+2. PredictHQ: To download a static export of PredictHQ data, a [PredictHQ account](https://signup.predicthq.com/) is required.
+
+## Connection with JSON file
+
+Tableau supports [various methods](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm) for connecting to data sources, including local files and data warehouses. This tutorial focuses on connecting to PredictHQ data via a [JSON file](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
+
+Connecting via a JSON file in Tableau involves downloading a static snapshot of event data through bulk exporting from PredictHQ's WebApp. It is particularly useful for scenarios where real-time data updates are not essential. Ideal for testing or one-off analyses, this approach provides an efficient way to get started with event data in Tableau. This is a good way to try PredictHQ's data for the first time and explore how it can be useful in your business.
+
+A JSON file export contains a structured list of events, much like a CSV export, but with better handling of nested data. While Tableau also [supports CSV file connections](https://help.tableau.com/current/pro/desktop/en-us/examples_text.htm), accessing nested data, such as [Predicted Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md), is more challenging. In contrast, Tableau's native support for JSON files simplifies the integration and manipulation of nested information, making it the preferred method for connecting PredictHQ data.
+
+### Export file
+
+**Search Events**
+
+To export events from the WebApp:
+
+1. Access our WebApp: Log in and navigate to [Search events](https://control.predicthq.com/search/events).
+2. Configure Filters: Set relevant filters, such as those for category, date, and location, and then click **Search**.
+
+> **Example Search**
+>
+> To view all [attendance-based events](../../getting-started/predicthq-data/event-categories/attendance-based-events.md) in San Francisco scheduled or predicted to take place in May 2024, use the following URL with pre-configured filters:
+>
+> [San Francisco attendance-based events search for May 2024](https://control.predicthq.com/search/events?category=conferences,expos,concerts,festivals,performing-arts,community,sports\&place.scope=5391959\&active.gte=2024-05-01\&active.lte=2024-05-31\&state=active,predicted\&sort=phq_attendance,-start\&t=1716862100079)
+
+{% hint style="info" %}
+For guidance on finding the most relevant events for your business, see [filtering-and-finding-relevant-events.md](../../getting-started/guides/events-api-guides/filtering-and-finding-relevant-events.md "mention"). For searches around specific locations or stores, we recommend exporting a JSON file from our WebApp [Saved Locations](https://control.predicthq.com/location-insights).
+{% endhint %}
+
+**Export as JSON**
+
+To export the events as a JSON file:
+
+3. Export Events: Once the events of interest are displayed on our WebApp's Search, click **Export** and then **Export Events Data**.
+4. Select Format: In the dialog box that appears, select the **JSONL** tab.
+5. Start Export: In the dialog box, click **Export**.
+
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcvQzusKN7PGRgRBq2QZ7AMtb-3r3k3B4Y4HRW3TDPYA1AZNt1fqiMprRB-prb9CiL3rTOe-7oH0z7aNEN_1rjPXY1GesmiVng0kjAUP3bC_S1Vg8OSBCsSv7qfvROnQnkHeJ_5RDWXCbm-TOSSK7DPieQ?key=Vi0_07VB32pOkrxgXfeY_A" alt="The Export Events dialog box in the WebApp with the JSONL tab and the Export button" width="375"><figcaption><p>Export Events dialog box</p></figcaption></figure>
+
+6. Download Link: When the export is ready, in the dialog box, click the download link. PredictHQ also sends the link by email.
+7. Save Export: To use the export later, download the file and save it to a directory.
+
+### Connect in Tableau
+
+**Connect to file**
+
+To load the export file in Tableau:
+
+1. Start Tableau: Open Tableau and under **Connect** select **JSON file**.
+2. Locate File: In the file dialog, complete these actions:
+   1. Navigate to the directory where you saved the export.
+   2. If the JSON lines file isn't listed, change the file extension filter from **JSON Files (\*.json)** to **All Files (\*.\*)**.
+   3. To load the file, click **Open**.
+
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeYM6sCSxWnNn4WT6rinrcHl_oqGIeunmUmlT2IgZwwugm0XhASIhcRj1ucG_aoomHbEi3SH0TTjbLeM689xM_C8qRcE4He-BLQiq_VKdKfHXWMswwJnE3vJUaCs5kFV1FBXRPgGPpj1r5daiqa5oB03qxx?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau file dialog with the file type options for selecting the JSONL export" width="375"><figcaption><p>File extension options</p></figcaption></figure>
+
+{% hint style="info" %}
+For more information on connecting a local JSON file to Tableau and setting up the data source, see the [Tableau guide to connecting a JSON file](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm).
+{% endhint %}
+
+**Flatten nested JSON**
+
+To flatten the nested JSON:
+
+3.  Select Schema Levels: When the file is loaded, the **Select Schema Levels** dialog box should automatically appear. You can also modify the schema levels by following the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels). To ensure the data is structured correctly for this tutorial, select the following schema levels or follow the [steps to change schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#change-schema-levels):
+
+    1. **Root Level**: Typically named after the JSON file e.g. `Events-Export-…`
+    2. **Predicted Impact Patterns**: Includes data related to Predicted Impact Patterns.
+    3. **Impacts**: Details specific impact values for each day.
+
+    <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXdLRxDH6Zq-2jnUoQwltqqWhrpBN2UeamCuAJkjk02RHxx-V_It0GgKe-cl-PKax5O5zPnD6i1QSlyggRFzrsZhBjArKOCHbWJ43Qabi_UUbyy2JJ4YoP2JlMlJVRbEa57SQBiWXlW2dTubdGh2jY1BtE5P?key=Vi0_07VB32pOkrxgXfeY_A" alt="Tableau dialog for selecting the JSON schema levels to import" width="375"><figcaption><p>Schema levels to select</p></figcaption></figure>
+
+{% hint style="info" %}
+For more information on schema levels, see the [Tableau guide to schema levels](https://help.tableau.com/current/pro/desktop/en-us/examples_json.htm#select-schema-level).
+{% endhint %}
+
+**Update data types**
+
+To update the data types:
+
+* Check Data Types: Tableau automatically interprets a field's data type but this is not always correct. Review and adjust the data type where necessary by following the [steps to change a field's data type](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm#change-the-data-type-for-a-field-in-the-data-source-page), ensuring the following fields are set correctly for this tutorial:
+
+| Field         | Correct Data Type              |
+| ------------- | ------------------------------ |
+| `End Local`   | Date & Time                    |
+| `Date Local`  | Date                           |
+| `Start Local` | Date & Time                    |
+| `State`       | String (Geographic Role: None) |
+
+{% hint style="info" %}
+For more information on data types, see the [Tableau guide to data types](https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_datatypes.htm).
+{% endhint %}
+
+## Dashboard with event data
+
+This section guides you through creating a simple dashboard in Tableau, featuring a time series chart of daily event impact derived from [Predicted Impact Patterns](../../getting-started/predicthq-data/impact-patterns.md) and a table listing relevant events. You connect PredictHQ data via a JSON file.
+
+### Worksheets
+
+**Chart**
+
+To create the chart:
+
+1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and name it 'Time Series'.
+2. Set Filters: To refine the data for events of interest only, use filters. On the **Filters** shelf, [drag the following fields](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm#drag-dimensions-measures-and-date-fields-to-the-filters-shelf):
+
+<table data-full-width="false"><thead><tr><th width="174">Folder</th><th width="153">Field</th><th>Dialog Box</th></tr></thead><tbody><tr><td>Event-Export-...</td><td><code>State</code></td><td><p>Filter [State]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>active</code> and <code>predicted</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these states in our WebApp Search.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><p>Filter [Category]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <code>community</code>, <code>concerts</code>, <code>conferences</code>, <code>expos</code>, <code>festivals</code>, <code>performing-arts</code>, <code>sports</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li>This filter is necessary unless you have already filtered these categories in our WebApp Search.</li></ul></td></tr><tr><td>Predicted Impact Patterns</td><td><code>Vertical</code></td><td><p>Filter [Vertical]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check an industry e.g. <code>accommodation</code>.</li><li>Click <strong>OK</strong>.</li></ol><p>Note:</p><ul><li><code>Vertical</code> is the industry vertical associated with the Predicted Impact Pattern.</li><li>This tutorial focuses on event day impact, which is the same for all industries.</li><li>Choose any available industry if yours is not available.</li></ul></td></tr><tr><td>Impacts</td><td><code>Date Local</code></td><td><p>Filter Field [Date Local]:</p><ul><li>Select <strong>Range of Dates</strong>, and then click <strong>Next</strong>.</li></ul><p>Filter [Date Local]:</p><ol><li>Set the minimum and maximum dates to '01/05/2024' and '31/05/2024', respectively.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Date Local</code> is the date in the local time zone.</li></ul></td></tr><tr><td>Impacts</td><td><code>Position</code></td><td><p>Filter [Position]:</p><ol><li>Under <strong>General</strong> and <strong>Select from list</strong>, check <strong>event_day</strong>.</li><li>Click <strong>OK</strong>.</li></ol><p>Notes:</p><ul><li><code>Position</code> categorizes <code>Date</code> Local in relation to when the event takes place, such as before, during, or after the event.</li><li>While this tutorial focuses on the impact during event days, exploring impacts on other days is also encouraged.</li></ul></td></tr></tbody></table>
+
+{% hint style="info" %}
+For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
+{% endhint %}
+
+3. Apply Filters Globally: To apply the filters you set earlier to **All worksheets using this data source**, right-click each field in the **Filters** shelf and follow the [steps to apply filters to all worksheets](https://help.tableau.com/current/pro/desktop/en-us/filtering_global.htm#apply-filters-to-all-worksheets-that-use-the-current-primary-data-source). This prevents the need to repeat configurations across multiple worksheets, ensuring consistency in data.
+4. Create Chart:
+   1. On the **Row** shelf, drag **Value** from **Source Measures**.
+   2. On the **Column** shelf, drag **Date Local** from **Impacts**. Then right-click the `Date Local` pill and select the **Exact Date** format.
+   3. To update the y-axis title, follow the [steps to change the appearance of an axis](https://help.tableau.com/current/pro/desktop/en-us/formatting_editaxes.htm#change-the-appearance-of-an-axis) and enter 'Daily Event Day Impact'.
+5. Chart Preview:
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt="The Time Series worksheet in Tableau with a chart of daily event day impact by date" width="563"><figcaption><p>Time Series worksheet</p></figcaption></figure>
+
+**Table**
+
+To create the table:
+
+1. New Worksheet: [Open a new worksheet](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories) and call it 'Event Info'.
+2. Create Table:
+   * On the **Row** shelf, add all relevant fields as **Discrete** pills, which are blue. This tutorial uses the following fields:
+
+<table data-full-width="false"><thead><tr><th width="177">Folder</th><th width="182">Field</th><th>Notes</th></tr></thead><tbody><tr><td>Impacts</td><td><code>Date Local</code></td><td><ul><li>Right-click the pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Id</code></td><td><ul><li>This is the ID of the event.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Category</code></td><td><ul><li>This is the <a href="../../../../tech-docs/predicthq-data/event-categories/">event category</a>.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Start Local</code></td><td><ul><li>This is the start date of the event in the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>End Local</code></td><td><ul><li>This is the end date of the event iin the local time zone.</li><li>Right-click each pill and select the <strong>Exact Date</strong> and <strong>Discrete</strong> formats.</li></ul></td></tr><tr><td>Event-Export-...</td><td><code>Timezone</code></td><td><ul><li>The local time zone.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Phq Attendance</code></td><td><ul><li>This is the <a href="../../../../tech-docs/predicthq-data/predicted-attendance.md">Predicted Attendance</a> for an event.</li><li>Right-click the pill and select the <strong>Discrete</strong> format.</li></ul></td></tr><tr><td>Source Measures</td><td><code>Value</code></td><td><ul><li>This is the <a href="../../../../tech-docs/predicthq-data/impact-patterns.md">daily impact for an event</a>. For this tutorial, only impact on event days is considered.</li><li>Sort by descending `Value` by following these <a href="https://help.tableau.com/current/reader/desktop/en-us/reader_sort.htm">Tableau instructions for sorting data</a>.</li></ul></td></tr></tbody></table>
+
+{% hint style="info" %}
+For more information on PredictHQ event fields, see [Events](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events "mention").
+{% endhint %}
+
+3. Table Preview:
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt="The Event Info worksheet in Tableau with a table of events and their daily impact values"><figcaption><p>Event Info worksheet</p></figcaption></figure>
+
+### Dashboard
+
+To build the dashboard:
+
+1. New Dashboard: [Open a new dashboard](https://help.tableau.com/current/pro/desktop/en-us/environ_workbooksandsheets.htm#create-new-worksheets-dashboards-or-stories):
+   * To make the dashboard fit any screen, follow the [steps to set the overall dashboard size](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#set-overall-dashboard-size) and set the size to **Automatic**.
+2. Add Worksheets:
+   1. From the **Sheets** list, drag the **Time Series** sheet into the dashboard.
+   2. From the **Sheets** list, drag the **Event Info** sheet into the dashboard.
+   3. Resize the [layout containers](https://help.tableau.com/current/pro/desktop/en-us/dashboards_organize_floatingandtiled.htm#layout-container-types) as needed.
+3. Set Filters: Use the Time Series worksheet as an interactive filter by following these [steps to add dashboard interactivity](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm#add-interactivity). This allows you to click specific dates in the chart to dynamically filter the events displayed in the table.
+4. Dashboard Preview:
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt="The Tableau dashboard combining the Time Series chart with the Event Info table"><figcaption><p>Dashboard</p></figcaption></figure>
+
+{% hint style="info" %}
+For more information on creating dashboards, see the [Tableau guide to creating dashboards](https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm).
+{% endhint %}
+
+### Next steps
+
+There are several ways to expand the functionality and relevance of this dashboard to your specific business needs:
+
+1. Incorporate Business Metrics: Integrate key metrics such as sales figures or units sold to gain a comprehensive view of how events influence business performance. Linking event impacts with sales data can help uncover high-level trends and support data-driven decision-making.
+2. Explore Predicted Impact Patterns: While this tutorial focuses on the immediate impacts of events, exploring additional Predicted Impact Patterns could yield deeper insights. For example, examining patterns leading up to and after events might reveal extended influences on consumer behavior or operational demands.
+3. Customize Visualizations: Enhance the dashboard with more complex visualizations like heat maps or geographic visualizations. These can offer spatial insights into where events have the most impact, assisting in regional marketing strategies and resource allocation.
+4. Up-to-date Event Data: Ensure the dashboard reflects the most current data by considering connections like Snowflake or Amazon Data Exchange. These methods (see [other connection methods](using-event-data-in-tableau.md#other-connection-methods) later in this tutorial) offer real-time updates which are essential for accommodating the dynamic nature of event data.
+
+## Other connection methods
+
+While this tutorial primarily focuses on connecting via a JSON file, other connection methods are available for those needing real-time updates or integration with other data services
+
+<details>
+
+<summary>Snowflake</summary>
+
+This connection method involves accessing PredictHQ data through Snowflake’s Secure Data Share and connecting it to Tableau.
+
+**Snowflake Data Share**
+
+To connect through a Snowflake Data Share:
+
+1. Setup: With your Snowflake administrator, set up a Data Share with PredictHQ.
+2. Database:
+   1. Create a database from the Data Share.
+   2. Grant the necessary permissions to users.
+
+For more information on receiving PredictHQ data via Snowflake, see the [Snowflake data share guide](snowflake/).
+
+**Connect to Snowflake in Tableau**
+
+3. Connection Details: Before connecting, gather all necessary information including:
+   1. [Login credentials](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#before-you-begin) for Snowflake authentication
+   2. [Server, Warehouse, Database, and Schema information](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#set-up-the-data-source) to set up the data source.
+4. Start Tableau: Open Tableau and connect to Snowflake by following the [instructions for connecting to Snowflake](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm#make-the-connection-and-set-up-the-data-source).
+
+For more information on connecting to Snowflake in Tableau and setting up the data source, see the [Tableau guide to connecting to Snowflake](https://help.tableau.com/current/pro/desktop/en-us/examples_snowflake.htm).
+
+**Filter for relevant events in Tableau**
+
+5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
+
+For more information on connecting to a custom SQL query, see the [Tableau guide to custom SQL queries](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
+
+</details>
+
+<details>
+
+<summary>Amazon S3</summary>
+
+This connection method involves accessing PredictHQ data through AWS Data Exchange and connecting it to Tableau.
+
+**AWS Data Exchange**
+
+To connect through AWS Data Exchange:
+
+1. Setup: On AWS Data Exchange, subscribe to PredictHQ data
+2. Amazon S3:
+   1. To access the data from Tableau, copy the data to your specified S3 bucket.
+   2. In AWS, confirm that your IAM user or role has read permissions for this bucket.
+
+For more information on receiving PredictHQ data via AWS Data Exchange, see the [AWS Data Exchange guide](aws-data-exchange/).
+
+**Connect to Amazon S3 in Tableau**
+
+3. Connection Details: Before connecting, gather all [necessary information](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#before-you-begin) including:
+   1. AWS IAM access key for the S3 bucket.
+   2. The name and AWS region of the S3 bucket.
+4. Start Tableau: Open Tableau and connect to the S3 bucket by following the [steps to connect to Amazon S3](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm#make-the-connection-and-set-up-the-data-source).
+
+For more information on connecting to Amazon S3 in Tableau and setting up the data source, see the [Tableau guide to connecting to Amazon S3](https://help.tableau.com/current/pro/desktop/en-us/examples_amazons3.htm).
+
+**Filter for relevant events in Tableau**
+
+5. Configure SQL Query: To manage how data is brought in for subsequent analyses, use Tableau’s custom SQL query. For PredictHQ data, this typically involves flattening nested JSON, converting data types, and applying filters, such as category, date, and location, to filter for relevant events. See this [Power BI tutorial](using-event-data-in-power-bi.md) for an example of how this query might be structured.
+
+For more information on connecting to a custom SQL query, see the [Tableau guide to custom SQL queries](https://help.tableau.com/current/pro/desktop/en-us/customsql.htm).
+
+</details>
+
+<details>
+
+<summary>More common connectors</summary>
+
+Some other connectors commonly used with PredictHQ data include the following:
+
+* [Google BigQuery](https://help.tableau.com/current/pro/desktop/en-us/examples_googlebigquery.htm)
+* [Azure SQL Database](https://help.tableau.com/current/pro/desktop/en-us/examples_azure_sql_database.htm)
+* [Amazon Redshift](https://help.tableau.com/current/pro/desktop/en-us/examples_amazonredshift.htm)
+
+For more information on loading PredictHQ data into data warehouses, see the [guide to loading event data into a data warehouse](../integration-guides/loading-event-data-into-a-data-warehouse.md) which provides an example using Google BigQuery.
+
+See the [list of all connectors supported by Tableau](https://help.tableau.com/current/pro/desktop/en-us/exampleconnections_overview.htm). Once PredictHQ data is connected to a data warehouse, you can apply techniques similar to those described in this guide to query data from these sources.
+
+</details>
+
+## Conclusion
+
+This tutorial has demonstrated how to connect PredictHQ data to Tableau and build a functional dashboard. This is just one way to harness the power of event data. Continue to refine and expand your dashboard to align with your business needs, maximizing the insights available and thereby enhancing strategic decision-making processes.
+
+## **Resources for download**
+
+{% file src="../../.gitbook/assets/Events-Export-San-Francisco-from-20240501-to-20240531.jsonl" %}
+JSON file
+{% endfile %}
+
+{% file src="../../.gitbook/assets/PredictHQ Example Dashboard.twbx" %}
+Tableau workbook
+{% endfile %}
+
+## Deprecated Tableau Web Data Connector
+
+<details>
+
+<summary>Deprecated Tableau Connector</summary>
+
+To connect with the deprecated connector:
+
+1. [Log in](https://control.predicthq.com/) to your PredictHQ account or [sign up](https://signup.predicthq.com/) for a trial if you haven't got an account yet.
+2. In the [**API Clients**](https://control.predicthq.com/clients) part of the WebApp, create a new API Client.
+3. Save the Client Secret somewhere safe, because the WebApp doesn't show it again.
+4. Click **Create an access token**.
+5. Select the scopes **Account**, **Events**, and **Places**.
+6. Open Tableau and select **Web Data Connector**.
+7. In the pop-up box, enter the URL:
+
+```
+https://tableau-connector.predicthq.com
+```
+
+8. Click **Begin**.
+9. Enter the Access Token you generated.
+10. Choose the filters and parameters that you wish to explore. Refer to the [Search Events documentation](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/events/search-events) for a full list of fields and parameters.
+11. To import events into Tableau, click **Get data**.
+
+</details>
