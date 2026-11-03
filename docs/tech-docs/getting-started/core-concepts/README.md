@@ -12,4 +12,4 @@ Recommended order:
 
 [Guide to protecting PredictHQ data](guide-to-protecting-predicthq-data.md) covers the obligations that come with using the data.
 
-For the recommended path by job - training, grounding, managed forecasts, or demand analysis - start with [How to use PredictHQ](../../how-to-use-predicthq.md).
+For the recommended path by job - training, grounding, managed forecasts, or demand analysis - start with [How to use PredictHQ](../how-to-use-predicthq.md).

@@ -1,13 +1,13 @@
 # Table of contents
 
 * [Overview](README.md)
-* [How to use PredictHQ](how-to-use-predicthq.md)
 * [Swagger UI](https://api.predicthq.com/docs/)
 * [Loop](https://loop.predicthq.com)
 * [System Status](https://www.predicthqstatus.com)
 
 ## Getting started
 
+* [How to use PredictHQ](getting-started/how-to-use-predicthq.md)
 * [API quickstart](getting-started/api-quickstart.md)
 * [Tutorials](getting-started/tutorials/README.md)
   * [Measure the forecast lift on sample data](getting-started/tutorials/measure-the-forecast-lift.md)

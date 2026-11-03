@@ -99,7 +99,7 @@ Avoid these common mistakes:
 
 Related pages:
 
-* [How to use PredictHQ](../../how-to-use-predicthq.md) - the recommended integration paths, by job
+* [How to use PredictHQ](../how-to-use-predicthq.md) - the recommended integration paths, by job
 * [Standard integration pattern](../../integrations/integration-guides/standard-integration-pattern.md) - how all four APIs fit together in a production architecture
 * [API quickstart](../api-quickstart.md) - make your first API call
 * [Glossary](../glossary.md) - definitions for all core concepts
