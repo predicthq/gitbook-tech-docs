@@ -7,6 +7,35 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-11-12" tags="saved-locations,enhancement" %}
+## Predicted Impact Area - tighter boundaries and venue coverage
+
+We've improved how Predicted Impact Area defines the area around your location.
+
+Travel time calculations exclude motorways, toll roads, and ferries, so areas stay focused on the streets around your location instead of stretching along road corridors or across water.
+
+Areas extend to include significant venues just beyond the boundary, so events there are not missed.
+
+See the [Predicted Impact Area documentation](https://docs.predicthq.com/api/impact-area/get-impact-area) for more details.
+{% endupdate %}
+
+{% update date="2026-11-12" tags="webapp,developer-tools,enhancement" %}
+## Bolt - Project files
+
+You can add files to a project in Bolt. Upload CSV, TXT, JSON, TSV, or XLSX files and Bolt uses them as context across every notebook in the project when they're relevant, so you add your own context once instead of repeating it in each notebook.
+
+To add files to your Bolt project:
+
+1. Open a project.
+2. In the **Files** panel click **+.**
+{% endupdate %}
+
+{% update date="2026-10-29" tags="enhancement,webapp" %}
+## Account lock after repeated incorrect passwords
+
+After several incorrect password attempts, your account is temporarily locked. You can unlock it sooner by resetting your password, or by contacting PredictHQ support.
+{% endupdate %}
+
 {% update date="2026-10-06" tags="webapp,developer-tools,new-feature" %}
 ## Bolt - Projects
 
