@@ -12,6 +12,10 @@ Predicted Impact Area returns a location and industry-specific boundary that ref
 
 Use it as the spatial input for Events API queries, Features API calls, and Beam. Getting scope right at this step improves the quality of everything downstream.
 
+### How the boundary is built
+
+The boundary covers the area from which customers can reach the location within an industry-specific travel time on local roads. Motorways, toll roads, and ferries are excluded from the travel-time calculation. Oceans, lakes, rivers, and impassable land are excluded. Where a large event venue sits just beyond the travel-time area, the boundary extends to include it.
+
 {% hint style="info" %}
 Predicted Impact Area is the successor to the Suggested Radius API. It provides a more accurate representation of event impact than a radius-based approach.
 {% endhint %}
