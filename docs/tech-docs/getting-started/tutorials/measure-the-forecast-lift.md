@@ -170,7 +170,7 @@ Each row is a date with one value per Beam-selected feature: Predicted Attendanc
 
 ## Step 7: Measure what the features are worth
 
-You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can train two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. To train both models, run the following code. It creates a model with `generate_baseline` enabled, uploads the same CSV, and starts training:
+You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can create two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. To create both models, run the following code. It creates a model with `generate_baseline` enabled, uploads the same CSV, and starts a refresh:
 
 ```python
 import csv
@@ -199,12 +199,12 @@ response = requests.post(
 print(response.status_code)  # 201 - demand data stored
 
 response = requests.post(
-    f"https://api.predicthq.com/v1/forecasts/models/{model_id}/train", headers=HEADERS
+    f"https://api.predicthq.com/v1/forecasts/models/{model_id}/refresh", headers=HEADERS
 )
-print(response.status_code)  # 204 - training started
+print(response.status_code)  # 204 - refresh started
 ```
 
-Training takes two to three minutes. Check the model until `readiness.status` prints `ready` (if it prints `failed`, the `readiness` object explains why), then read both models' error metrics:
+A refresh takes two to three minutes. Check the model until `readiness.status` prints `ready` (if it prints `failed`, the `readiness` object explains why), then read both models' error metrics:
 
 ```python
 response = requests.get(

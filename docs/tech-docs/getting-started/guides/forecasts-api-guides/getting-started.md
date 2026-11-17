@@ -57,7 +57,7 @@ title: Initial Setup for Forecasting
 flowchart LR
     A[Create Saved Location] --> B[Define Model]
     B --> C[Upload Initial Demand]
-    C --> D[Train Model]
+    C --> D[Refresh Model]
     D --> E[📈 Forecast]
 ```
 
@@ -149,6 +149,8 @@ print(f"Model ID: {model_id}")
 # Model ID: Oa1D2XvT-IXfFQ_osoTZjQ
 ```
 
+Models for the named industries `restaurants` and `retail` can set `algo` to `phq-foundation-model`, which is in beta.
+
 #### Upload demand data
 
 To upload your demand data, run this code:
@@ -169,23 +171,23 @@ print(f"Demand upload: {'Successful' if response.status_code == 201 else 'Failed
 # Demand upload: Successful
 ```
 
-#### Train the model
+#### Refresh the model
 
-During the training process, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when training your model and when forecasting. To train the model, run this code:
+During a refresh, Beam analyzes the demand to determine what types of events impact your demand. This includes correlation and Feature Importance testing. The API uses the important features (from Features API) when it refreshes your model and when it forecasts. To refresh the model, run this code:
 
 ```python
-# Train model
+# Refresh model
 response = requests.post(
-    url=f"{API_URL}/v1/forecasts/models/{model_id}/train",
+    url=f"{API_URL}/v1/forecasts/models/{model_id}/refresh",
     headers=headers,
 )
 
-print(f"Model training: {'Successful' if response.status_code == 204 else 'Failed'}")
+print(f"Model refresh: {'Successful' if response.status_code == 204 else 'Failed'}")
 
-# Model training: Successful
+# Model refresh: Successful
 ```
 
-Training usually takes a few minutes.
+A refresh usually takes a few minutes.
 
 ### Evaluate the forecast model
 
@@ -253,7 +255,7 @@ Visualize the actual demand we uploaded as well as the forecasted demand we just
 
 ### Ongoing forecasting
 
-After you have trained a model you can keep using that model in your ongoing workflow:
+After you refresh a model, you can keep using that model in your ongoing workflow:
 
 ```mermaid
 ---
@@ -262,7 +264,7 @@ title: Ongoing Forecasting Loop
 flowchart LR
     C[Upload New Demand] --> E[📈 Forecast]
     E -->|More demand arrives| C
-    E -.->|Retrain if model becomes stale| D[Train Model]
+    E -.->|Refresh if model becomes stale| D[Refresh Model]
     D --> E
 ```
 
