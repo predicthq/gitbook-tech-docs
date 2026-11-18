@@ -5,4 +5,4 @@ The forecasting algorithms available to Forecasts API models. Most integrations 
 The Forecasts API has these algorithms:
 
 * `phq-xgboost` is the default algorithm for every industry.
-* `phq-foundation-model` is in beta. It is optimized for the named industries `restaurants` and `retail`, and it accepts only those industries.
+* `phq-cffm` is in beta. It is optimized for the named industries `restaurants` and `retail`, and it accepts only those industries.

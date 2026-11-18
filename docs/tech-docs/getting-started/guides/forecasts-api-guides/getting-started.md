@@ -149,7 +149,7 @@ print(f"Model ID: {model_id}")
 # Model ID: Oa1D2XvT-IXfFQ_osoTZjQ
 ```
 
-Models for the named industries `restaurants` and `retail` can set `algo` to `phq-foundation-model`, which is in beta.
+Models for the named industries `restaurants` and `retail` can set `algo` to `phq-cffm`, which is in beta.
 
 #### Upload demand data
 
