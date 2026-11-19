@@ -26,7 +26,7 @@ You need:
 
 * A PredictHQ account and API token - a free trial account has access to everything this tutorial uses. See the [API quickstart](../api-quickstart.md) to create a token.
 * Python with the `requests` library (any recent version), or the HTTP client of your choice - every step is a plain HTTP call.
-* The retail sample dataset: in your working directory, download [`sample_demand_retail.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/sample-demand-data/sample_demand_retail.csv). It contains 18 months of synthetic daily demand for a fictional retail store, modeled on realistic patterns - including holiday closures and demand spikes. [Sample datasets](../guides/beam-guides/sample-demand-data.md) exist for other industries too; this tutorial uses retail throughout so the responses you see match the ones shown.
+* The retail sample dataset: in your working directory, download [`tutorial_demand_retail.csv`](https://raw.githubusercontent.com/predicthq/gitbook-tech-docs/main/assets/tutorials/measure-the-forecast-lift/tutorial_demand_retail.csv). It contains 18 months of synthetic daily demand for a fictional retail store, modeled on realistic patterns - including holiday closures and demand spikes. This file is fixed for this tutorial so your responses match the ones shown; the [sample datasets](../guides/beam-guides/sample-demand-data.md) for each industry are refreshed regularly, so results from them will differ from this tutorial's.
 
 To use your token in every step, set it once:
 
@@ -83,7 +83,7 @@ print(analysis_id)
 To give Beam the data it correlates against real-world events, upload the CSV to the Analysis:
 
 ```python
-with open("sample_demand_retail.csv", "rb") as f:
+with open("tutorial_demand_retail.csv", "rb") as f:
     response = requests.post(
         f"https://api.predicthq.com/v1/beam/analyses/{analysis_id}/sink",
         headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "text/csv"},
@@ -188,7 +188,7 @@ response = requests.post(
 )
 model_id = response.json()["model_id"]
 
-with open("sample_demand_retail.csv") as f:
+with open("tutorial_demand_retail.csv") as f:
     demand = [{"date": row["date"], "demand": float(row["demand"])} for row in csv.DictReader(f)]
 
 response = requests.post(
@@ -244,9 +244,9 @@ response = requests.get(
     },
 )
 for day in response.json()["results"]:
-    events = day["phq_explainability"]["events"]
-    top = max(events, key=lambda e: e["local_rank"])
-    print(day["date"], round(day["forecast"]), "-", top["title"])
+    events = day.get("phq_explainability", {}).get("events") or []
+    top = max(events, key=lambda e: e.get("local_rank") or 0, default=None)
+    print(day["date"], round(day["forecast"]), "-", top["title"] if top else "no events")
 ```
 
 From our run:
@@ -277,7 +277,7 @@ requests.delete(f"https://api.predicthq.com/v1/saved-locations/{location_id}", h
 
 You ran the recommended integration workflow end to end: a Saved Location with an automatically calibrated Predicted Impact Area, a Beam Analysis that identified which event categories drive this demand (and which don't), the model-ready feature table your own forecasting model would consume, and a measured, like-for-like accuracy comparison. What that measurement is worth is relative to the business: at enterprise scale, even a fraction of a percent less forecast error can mean millions of dollars in better staffing, inventory, and pricing decisions.
 
-With your own demand data, the path is identical - one Saved Location and one Beam Analysis per location, refreshed monthly. To run it again closer to home first, pick [your industry's sample dataset](../guides/beam-guides/sample-demand-data.md) and change the `industry` value in steps 1, 2, and 7.
+With your own demand data, the path is identical - one Saved Location and one Beam Analysis per location, refreshed monthly. To run it again closer to home first, pick [your industry's sample dataset](../guides/beam-guides/sample-demand-data.md) and change the `industry` value (steps 1, 2, and 7), the file name (steps 3 and 7), and the date windows (steps 6 and 8) to fit the dates in your file. Your results will differ from the ones shown here.
 
 ## Where to go next
 
