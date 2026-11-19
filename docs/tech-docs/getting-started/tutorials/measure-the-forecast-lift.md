@@ -244,9 +244,9 @@ response = requests.get(
     },
 )
 for day in response.json()["results"]:
-    events = day["phq_explainability"]["events"]
-    top = max(events, key=lambda e: e["local_rank"])
-    print(day["date"], round(day["forecast"]), "-", top["title"])
+    events = day.get("phq_explainability", {}).get("events") or []
+    top = max(events, key=lambda e: e.get("local_rank") or 0, default=None)
+    print(day["date"], round(day["forecast"]), "-", top["title"] if top else "no events")
 ```
 
 From our run:
