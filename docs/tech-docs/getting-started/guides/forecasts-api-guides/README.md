@@ -4,7 +4,7 @@ Guides for the Forecasts API - event-driven demand forecasts without building or
 
 Recommended order:
 
-1. [Getting started with Forecasts API](getting-started.md) - the full train, forecast, retrain lifecycle
+1. [Getting started with Forecasts API](getting-started.md) - the full create, refresh, and forecast lifecycle
 2. [Understanding forecast accuracy metrics](understanding-forecast-accuracy-metrics.md) - reading MAPE and the baseline comparison, so the lift is measured on your own demand
 3. [Troubleshooting guide for Forecasts API](troubleshooting.md) - when results don't look right
 

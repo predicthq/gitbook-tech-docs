@@ -41,7 +41,7 @@ Related guides:
 
 For teams that want event-driven forecast accuracy with rapid time-to-value, without building or maintaining a forecasting pipeline.
 
-Supply historical demand data to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview) and it trains a model, applies Beam automatically, and returns daily-level forecasts with event impact and explainability built in. A baseline comparison shows the accuracy improvement attributable to PredictHQ data - measured on your own demand.
+Supply historical demand data to the [Forecasts API](https://app.gitbook.com/s/kEFs8urDbSJqBmXUI3Lv/forecasts/overview) and it trains a model, applies Beam automatically, and returns daily-level forecasts with event impact and explainability built in. A baseline comparison shows the accuracy improvement over a `phq-xgboost` baseline model trained without PredictHQ features - measured on your own demand.
 
 The Forecasts API also fits multi-model setups: run it as one candidate in a champion-challenger selection or an ensemble alongside your existing forecasts, and let measured accuracy decide which wins each series. Nothing needs replacing to adopt it.
 

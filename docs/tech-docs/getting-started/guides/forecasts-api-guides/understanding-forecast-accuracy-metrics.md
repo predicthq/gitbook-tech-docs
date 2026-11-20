@@ -60,3 +60,16 @@ Key points about RMSE:
 * Helpful for identifying volatility or occasional large misses.
 * Useful when high-impact outliers matter more than average performance.
 
+## Baseline comparison
+
+When you create a model with `generate_baseline` set to `true`, the Forecasts API also trains a baseline model on the same demand data. The baseline always uses the `phq-xgboost` algorithm without PredictHQ features, whatever the model's `algo`.
+
+After a refresh, the model's `metrics.baseline_comparison` object holds:
+
+* `baseline_mape`, `baseline_wape`, `baseline_mae`, and `baseline_rmse`: the baseline model's errors. Compare them with the same metrics in `metrics.accuracy`.
+* `mape_improvement_pct`: how much lower the model's MAPE is than the baseline's, as a percentage of the baseline MAPE.
+
+What the improvement measures depends on the model's algorithm:
+
+* For a `phq-xgboost` model, the two models differ only in the PredictHQ features. The improvement measures what the event features are worth on your demand.
+* For a `phq-cffm` model, the two models differ in both the algorithm and the features. The improvement measures `phq-cffm` with PredictHQ features against `phq-xgboost` without them.

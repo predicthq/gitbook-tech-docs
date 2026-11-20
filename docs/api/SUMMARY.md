@@ -37,6 +37,7 @@
   * [Delete model](forecasts/models/delete-model.md)
   * [Search models](forecasts/models/search-models.md)
   * [Get model](forecasts/models/get-model.md)
+  * [Refresh model](forecasts/models/refresh-model.md)
   * [Train model](forecasts/models/train-model.md)
 * [Demand data](forecasts/demand-data/README.md)
   * [Upload demand data](forecasts/demand-data/upload-demand-data.md)
