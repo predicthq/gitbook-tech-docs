@@ -170,7 +170,7 @@ Each row is a date with one value per Beam-selected feature: Predicted Attendanc
 
 ## Step 7: Measure what the features are worth
 
-You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can create two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. To create both models, run the following code. It creates a model with `generate_baseline` enabled, uploads the same CSV, and starts a refresh:
+You could stop here and take the feature table into your own model - in production, that's exactly what happens. But you don't need to build a model to measure the lift. The Forecasts API can create two models on your uploaded demand - one enhanced with PredictHQ features, one baseline without them - and report the accuracy difference. The baseline always uses the `phq-xgboost` algorithm, so the request sets `algo` to `phq-xgboost` too: the two models then differ only in the PredictHQ features. To create both models, run the following code. It creates a model with `generate_baseline` enabled, uploads the same CSV, and starts a refresh:
 
 ```python
 import csv
@@ -183,6 +183,7 @@ response = requests.post(
         "location": {"saved_location_id": location_id},
         "demand_type": {"industry": "retail", "interval": "day"},
         "forecast_window": "7d",
+        "algo": "phq-xgboost",
         "generate_baseline": True,
     },
 )

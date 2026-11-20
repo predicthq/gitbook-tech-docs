@@ -149,7 +149,7 @@ print(f"Model ID: {model_id}")
 # Model ID: Oa1D2XvT-IXfFQ_osoTZjQ
 ```
 
-Models for the named industries `restaurants` and `retail` can set `algo` to `phq-cffm`, which is in beta.
+This example sets `algo` to `phq-xgboost`. If you omit `algo`, models for the named industries `restaurants` and `retail` use `phq-cffm`, which is in beta, and models for every other industry use `phq-xgboost`.
 
 #### Upload demand data
 

@@ -2,7 +2,7 @@
 
 The Forecasts API delivers event-driven demand forecasts without you building or maintaining a forecasting model.
 
-You supply historical demand data per location. The API trains a model, applies [Beam](../beam/overview.md) automatically for feature selection, and returns daily-level forecasts with the event impact behind each day available for explainability. A baseline comparison metric shows the accuracy improvement attributable to PredictHQ data, measured on your own demand.
+You supply historical demand data per location. The API trains a model, applies [Beam](../beam/overview.md) automatically for feature selection, and returns daily-level forecasts with the event impact behind each day available for explainability. A baseline comparison metric shows the accuracy improvement over a `phq-xgboost` baseline model trained without PredictHQ features, measured on your own demand.
 
 The workflow maps to the API's resources:
 
