@@ -44,7 +44,7 @@ Related resources:
 
 The Forecasts API delivers event-driven demand forecasts directly, without requiring you to build or maintain your own forecasting models.
 
-You supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PredictHQ feature attribution and explainability outputs. A baseline comparison metric is included so you can measure the MAPE improvement attributable to PredictHQ data.
+You supply historical demand data for a location. The Forecasts API trains a model, applies Beam to identify which event types drive demand at that location, and returns daily-level forecasts enriched with PredictHQ feature attribution and explainability outputs. A baseline comparison metric is included so you can measure the MAPE improvement over a `phq-xgboost` baseline model trained without PredictHQ features.
 
 The Forecasts API is appropriate when rapid time-to-value is the priority, or when a team does not have the capacity to build and maintain a bespoke forecasting pipeline. For teams that require full control over the underlying model, the Features API with a `beam.analysis_id` is the recommended alternative.
 
