@@ -235,7 +235,7 @@ From our run:
 
 The enhanced `phq-cffm` model's error (MAPE 7.39) beat the baseline (12.75) - a 42.0% improvement on the same demand data. That improvement comes from the algorithm and the PredictHQ features together.
 
-Don't read that number as a benchmark. This store sits in a deliberately event-exposed district, and the demand data is synthetic - the result demonstrates the measurement workflow, not a claim about your business. Event exposure is a property of the location, and the lift depends on it. That's the point of measuring instead of assuming - this workflow tells you what events are worth at your locations, on your own demand data.
+Don't read that number as a benchmark. This store sits in a deliberately event-exposed district, and the demand data is synthetic - the result demonstrates the measurement workflow, not a claim about your business. Event exposure is a property of the location, and the lift depends on it. That's the point of measuring instead of assuming - this workflow measures the combined lift from PredictHQ's algorithm and event features against an XGBoost baseline at your locations, on your own demand data.
 
 ## Step 8: See the events behind the forecast
 
