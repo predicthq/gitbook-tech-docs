@@ -7,6 +7,26 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-11-25" tags="forecasts-api" %}
+## Forecasts API - Contextual Forecasting Foundation Model
+
+`phq-cffm`, the Contextual Forecasting Foundation Model, brings real-world context into a time series foundation model. General foundation models learn from history alone, so they miss the real-world context that moves demand. `phq-cffm` accounts for it in every forecast.\
+\
+`phq-cffm` is available in beta in the Forecasts API. It’s the default when you create a model for restaurants or retail, and `phq-xgboost` stays the default for every other industry.\
+\
+`demand_type.industry` is required when you create or replace a model.\
+\
+See <a href="https://docs.predicthq.com/getting-started/guides/forecasts-api-guides/getting-started" target="_blank">Getting started with Forecasts API</a> for more details.
+{% endupdate %}
+
+{% update date="2026-11-25" tags="forecasts-api,deprecation,enhancement" %}
+## Forecasts API - Train model deprecated
+
+`train` is deprecated. Use `refresh` to train, retrain, or refresh a model. `train` still works as an alias of `refresh` and behaves the same way.\
+\
+See <a href="https://docs.predicthq.com/api/forecasts/models/refresh-model" target="_blank">Refresh</a> for more details.
+{% endupdate %}
+
 {% update date="2026-11-12" tags="saved-locations,enhancement" %}
 ## Predicted Impact Area - tighter boundaries and venue coverage
 
