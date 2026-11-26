@@ -7,6 +7,16 @@ description: >-
 # Changelog
 
 {% updates format="full" %}
+{% update date="2026-11-25" tags="events-api,data-quality,enhancement" %}
+## Soccer league and scope labeling
+
+Most soccer events carry a scope label, `domestic` or `international`, based on the competition. Events in 28 top leagues and tournaments also carry a league label, such as `bundesliga` or `uefa-champions-league`.\
+\
+Label weights are split equally across an event’s labels, so existing labels such as `soccer` have lower weights (for example, from 1 to about 0.33). If you use label weights to filter soccer events, review your thresholds.\
+\
+We updated the affected events.
+{% endupdate %}
+
 {% update date="2026-11-25" tags="forecasts-api" %}
 ## Forecasts API - Contextual Forecasting Foundation Model
 
